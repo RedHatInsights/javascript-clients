@@ -15,7 +15,7 @@ export type QuickstartsFiltersGetParams = {
   options?: AxiosRequestConfig
 }
 
-export type QuickstartsFiltersGetReturnType = AxiosPromise<QuickstartsFiltersGet200Response>;
+export type QuickstartsFiltersGetReturnType = QuickstartsFiltersGet200Response;
 
 const isQuickstartsFiltersGetObjectParams = (params: [QuickstartsFiltersGetParams] | unknown[]): params is [QuickstartsFiltersGetParams] => {
   const l = params.length === 1
@@ -31,7 +31,7 @@ const isQuickstartsFiltersGetObjectParams = (params: [QuickstartsFiltersGetParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const quickstartsFiltersGetParamCreator = async (...config: ([QuickstartsFiltersGetParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const quickstartsFiltersGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([QuickstartsFiltersGetParams] | [AxiosRequestConfig])) => {
     const params = isQuickstartsFiltersGetObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as QuickstartsFiltersGetParams;
     const { options = {} } = params;
     const localVarPath = `/quickstarts/filters`;
@@ -46,10 +46,12 @@ export const quickstartsFiltersGetParamCreator = async (...config: ([Quickstarts
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<QuickstartsFiltersGetReturnType>(Promise.resolve(args));
 }
 
 export default quickstartsFiltersGetParamCreator;

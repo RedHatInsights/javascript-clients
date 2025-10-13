@@ -57,7 +57,7 @@ export type HostackListParams = {
   options?: AxiosRequestConfig
 }
 
-export type HostackListReturnType = AxiosPromise<PaginatedHostAckList>;
+export type HostackListReturnType = PaginatedHostAckList;
 
 const isHostackListObjectParams = (params: [HostackListParams] | unknown[]): params is [HostackListParams] => {
   const l = params.length === 1
@@ -72,7 +72,7 @@ const isHostackListObjectParams = (params: [HostackListParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const hostackListParamCreator = async (...config: ([HostackListParams] | [Array<string>, boolean, Array<string>, number, number, Array<string>, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const hostackListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([HostackListParams] | [Array<string>, boolean, Array<string>, number, number, Array<string>, Array<string>, AxiosRequestConfig])) => {
     const params = isHostackListObjectParams(config) ? config[0] : ['filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'limit', 'offset', 'ruleId', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HostackListParams;
     const { filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, ruleId, tags, options = {} } = params;
     const localVarPath = `/api/insights/v1/hostack/`;
@@ -115,7 +115,7 @@ export const hostackListParamCreator = async (...config: ([HostackListParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -127,6 +127,8 @@ export const hostackListParamCreator = async (...config: ([HostackListParams] | 
         }
         ]
     };
+
+    return sendRequest<HostackListReturnType>(Promise.resolve(args));
 }
 
 export default hostackListParamCreator;

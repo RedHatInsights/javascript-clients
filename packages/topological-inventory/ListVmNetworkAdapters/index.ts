@@ -45,7 +45,7 @@ export type ListVmNetworkAdaptersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListVmNetworkAdaptersReturnType = AxiosPromise<NetworkAdaptersCollection>;
+export type ListVmNetworkAdaptersReturnType = NetworkAdaptersCollection;
 
 const isListVmNetworkAdaptersObjectParams = (params: [ListVmNetworkAdaptersParams] | unknown[]): params is [ListVmNetworkAdaptersParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListVmNetworkAdaptersObjectParams = (params: [ListVmNetworkAdaptersParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listVmNetworkAdaptersParamCreator = async (...config: ([ListVmNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listVmNetworkAdaptersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListVmNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListVmNetworkAdaptersObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListVmNetworkAdaptersParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/vms/{id}/network_adapters`
@@ -93,7 +93,7 @@ export const listVmNetworkAdaptersParamCreator = async (...config: ([ListVmNetwo
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listVmNetworkAdaptersParamCreator = async (...config: ([ListVmNetwo
         }
         ]
     };
+
+    return sendRequest<ListVmNetworkAdaptersReturnType>(Promise.resolve(args));
 }
 
 export default listVmNetworkAdaptersParamCreator;

@@ -21,12 +21,12 @@ export type GetResolutionsForIssueParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetResolutionsForIssueReturnType = AxiosPromise<Resolutions>;
+export type GetResolutionsForIssueReturnType = Resolutions;
 
 const isGetResolutionsForIssueObjectParams = (params: [GetResolutionsForIssueParams] | unknown[]): params is [GetResolutionsForIssueParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'issue')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'issue')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isGetResolutionsForIssueObjectParams = (params: [GetResolutionsForIssuePar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getResolutionsForIssueParamCreator = async (...config: ([GetResolutionsForIssueParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getResolutionsForIssueParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetResolutionsForIssueParams] | [string, AxiosRequestConfig])) => {
     const params = isGetResolutionsForIssueObjectParams(config) ? config[0] : ['issue', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetResolutionsForIssueParams;
     const { issue, options = {} } = params;
     const localVarPath = `/resolutions/{issue}`
@@ -53,10 +53,12 @@ export const getResolutionsForIssueParamCreator = async (...config: ([GetResolut
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetResolutionsForIssueReturnType>(Promise.resolve(args));
 }
 
 export default getResolutionsForIssueParamCreator;

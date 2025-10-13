@@ -21,12 +21,12 @@ export type DeletesystemParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeletesystemReturnType = AxiosPromise<void>;
+export type DeletesystemReturnType = void;
 
 const isDeletesystemObjectParams = (params: [DeletesystemParams] | unknown[]): params is [DeletesystemParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isDeletesystemObjectParams = (params: [DeletesystemParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deletesystemParamCreator = async (...config: ([DeletesystemParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deletesystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeletesystemParams] | [string, AxiosRequestConfig])) => {
     const params = isDeletesystemObjectParams(config) ? config[0] : ['inventoryId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeletesystemParams;
     const { inventoryId, options = {} } = params;
     const localVarPath = `/systems/{inventory_id}`
@@ -53,7 +53,7 @@ export const deletesystemParamCreator = async (...config: ([DeletesystemParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -65,6 +65,8 @@ export const deletesystemParamCreator = async (...config: ([DeletesystemParams] 
         }
         ]
     };
+
+    return sendRequest<DeletesystemReturnType>(Promise.resolve(args));
 }
 
 export default deletesystemParamCreator;

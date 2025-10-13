@@ -72,7 +72,7 @@ export const SystemReportsListUpdateMethodEnum = {
 } as const;
 export type SystemReportsListUpdateMethodEnum = typeof SystemReportsListUpdateMethodEnum[keyof typeof SystemReportsListUpdateMethodEnum];
 
-export type SystemReportsListReturnType = AxiosPromise<Array<Report>>;
+export type SystemReportsListReturnType = Array<Report>;
 
 const isSystemReportsListObjectParams = (params: [SystemReportsListParams] | unknown[]): params is [SystemReportsListParams] => {
   const l = params.length === 1
@@ -87,7 +87,7 @@ const isSystemReportsListObjectParams = (params: [SystemReportsListParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemReportsListParamCreator = async (...config: ([SystemReportsListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, Array<string>, Array<SystemReportsListUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemReportsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemReportsListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, Array<string>, Array<SystemReportsListUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isSystemReportsListObjectParams(config) ? config[0] : ['uuid', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'tags', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemReportsListParams;
     const { uuid, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/system/{uuid}/reports/`
@@ -131,7 +131,7 @@ export const systemReportsListParamCreator = async (...config: ([SystemReportsLi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -143,6 +143,8 @@ export const systemReportsListParamCreator = async (...config: ([SystemReportsLi
         }
         ]
     };
+
+    return sendRequest<SystemReportsListReturnType>(Promise.resolve(args));
 }
 
 export default systemReportsListParamCreator;

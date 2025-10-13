@@ -45,7 +45,7 @@ export type ListSourceContainerNodesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceContainerNodesReturnType = AxiosPromise<ContainerNodesCollection>;
+export type ListSourceContainerNodesReturnType = ContainerNodesCollection;
 
 const isListSourceContainerNodesObjectParams = (params: [ListSourceContainerNodesParams] | unknown[]): params is [ListSourceContainerNodesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceContainerNodesObjectParams = (params: [ListSourceContainerNode
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceContainerNodesParamCreator = async (...config: ([ListSourceContainerNodesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceContainerNodesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceContainerNodesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceContainerNodesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceContainerNodesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/container_nodes`
@@ -93,7 +93,7 @@ export const listSourceContainerNodesParamCreator = async (...config: ([ListSour
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceContainerNodesParamCreator = async (...config: ([ListSour
         }
         ]
     };
+
+    return sendRequest<ListSourceContainerNodesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceContainerNodesParamCreator;

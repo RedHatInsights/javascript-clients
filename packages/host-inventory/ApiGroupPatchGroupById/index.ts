@@ -27,7 +27,7 @@ export type ApiGroupPatchGroupByIdParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiGroupPatchGroupByIdReturnType = AxiosPromise<GroupOutWithHostCount>;
+export type ApiGroupPatchGroupByIdReturnType = GroupOutWithHostCount;
 
 const isApiGroupPatchGroupByIdObjectParams = (params: [ApiGroupPatchGroupByIdParams] | unknown[]): params is [ApiGroupPatchGroupByIdParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isApiGroupPatchGroupByIdObjectParams = (params: [ApiGroupPatchGroupByIdPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiGroupPatchGroupByIdParamCreator = async (...config: ([ApiGroupPatchGroupByIdParams] | [string, GroupIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiGroupPatchGroupByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiGroupPatchGroupByIdParams] | [string, GroupIn, AxiosRequestConfig])) => {
     const params = isApiGroupPatchGroupByIdObjectParams(config) ? config[0] : ['groupId', 'groupIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiGroupPatchGroupByIdParams;
     const { groupId, groupIn, options = {} } = params;
     const localVarPath = `/groups/{group_id}`
@@ -61,7 +61,7 @@ export const apiGroupPatchGroupByIdParamCreator = async (...config: ([ApiGroupPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: groupIn,
@@ -74,6 +74,8 @@ export const apiGroupPatchGroupByIdParamCreator = async (...config: ([ApiGroupPa
         }
         ]
     };
+
+    return sendRequest<ApiGroupPatchGroupByIdReturnType>(Promise.resolve(args));
 }
 
 export default apiGroupPatchGroupByIdParamCreator;

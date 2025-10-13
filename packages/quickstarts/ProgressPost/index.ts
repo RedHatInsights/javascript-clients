@@ -21,7 +21,7 @@ export type ProgressPostParams = {
   options?: AxiosRequestConfig
 }
 
-export type ProgressPostReturnType = AxiosPromise<QuickstartProgress>;
+export type ProgressPostReturnType = QuickstartProgress;
 
 const isProgressPostObjectParams = (params: [ProgressPostParams] | unknown[]): params is [ProgressPostParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isProgressPostObjectParams = (params: [ProgressPostParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const progressPostParamCreator = async (...config: ([ProgressPostParams] | [QuickstartProgressRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const progressPostParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ProgressPostParams] | [QuickstartProgressRequest, AxiosRequestConfig])) => {
     const params = isProgressPostObjectParams(config) ? config[0] : ['quickstartProgressRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProgressPostParams;
     const { quickstartProgressRequest, options = {} } = params;
     const localVarPath = `/progress`;
@@ -54,11 +54,13 @@ export const progressPostParamCreator = async (...config: ([ProgressPostParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: quickstartProgressRequest,
     };
+
+    return sendRequest<ProgressPostReturnType>(Promise.resolve(args));
 }
 
 export default progressPostParamCreator;

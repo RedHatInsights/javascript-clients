@@ -63,12 +63,12 @@ export type ReportSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportSystemsReturnType = AxiosPromise<Systems200Response>;
+export type ReportSystemsReturnType = Systems200Response;
 
 const isReportSystemsObjectParams = (params: [ReportSystemsParams] | unknown[]): params is [ReportSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
   }
   return false
 }
@@ -79,7 +79,7 @@ const isReportSystemsObjectParams = (params: [ReportSystemsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportSystemsParamCreator = async (...config: ([ReportSystemsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportSystemsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isReportSystemsObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'tags', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportSystemsParams;
     const { reportId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/reports/{report_id}/systems`
@@ -125,10 +125,12 @@ export const reportSystemsParamCreator = async (...config: ([ReportSystemsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportSystemsReturnType>(Promise.resolve(args));
 }
 
 export default reportSystemsParamCreator;

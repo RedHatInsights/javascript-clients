@@ -82,7 +82,7 @@ export const ApiSystemProfileGetOperatingSystemRegisteredWithEnum = {
 } as const;
 export type ApiSystemProfileGetOperatingSystemRegisteredWithEnum = typeof ApiSystemProfileGetOperatingSystemRegisteredWithEnum[keyof typeof ApiSystemProfileGetOperatingSystemRegisteredWithEnum];
 
-export type ApiSystemProfileGetOperatingSystemReturnType = AxiosPromise<SystemProfileOperatingSystemOut>;
+export type ApiSystemProfileGetOperatingSystemReturnType = SystemProfileOperatingSystemOut;
 
 const isApiSystemProfileGetOperatingSystemObjectParams = (params: [ApiSystemProfileGetOperatingSystemParams] | unknown[]): params is [ApiSystemProfileGetOperatingSystemParams] => {
   const l = params.length === 1
@@ -98,7 +98,7 @@ const isApiSystemProfileGetOperatingSystemObjectParams = (params: [ApiSystemProf
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiSystemProfileGetOperatingSystemParamCreator = async (...config: ([ApiSystemProfileGetOperatingSystemParams] | [Array<string>, number, number, Array<ApiSystemProfileGetOperatingSystemStalenessEnum>, Array<ApiSystemProfileGetOperatingSystemRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiSystemProfileGetOperatingSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiSystemProfileGetOperatingSystemParams] | [Array<string>, number, number, Array<ApiSystemProfileGetOperatingSystemStalenessEnum>, Array<ApiSystemProfileGetOperatingSystemRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
     const params = isApiSystemProfileGetOperatingSystemObjectParams(config) ? config[0] : ['tags', 'perPage', 'page', 'staleness', 'registeredWith', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiSystemProfileGetOperatingSystemParams;
     const { tags, perPage, page, staleness, registeredWith, filter, options = {} } = params;
     const localVarPath = `/system_profile/operating_system`;
@@ -137,7 +137,7 @@ export const apiSystemProfileGetOperatingSystemParamCreator = async (...config: 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -149,6 +149,8 @@ export const apiSystemProfileGetOperatingSystemParamCreator = async (...config: 
         }
         ]
     };
+
+    return sendRequest<ApiSystemProfileGetOperatingSystemReturnType>(Promise.resolve(args));
 }
 
 export default apiSystemProfileGetOperatingSystemParamCreator;

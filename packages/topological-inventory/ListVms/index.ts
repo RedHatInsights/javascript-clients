@@ -39,7 +39,7 @@ export type ListVmsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListVmsReturnType = AxiosPromise<VmsCollection>;
+export type ListVmsReturnType = VmsCollection;
 
 const isListVmsObjectParams = (params: [ListVmsParams] | unknown[]): params is [ListVmsParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListVmsObjectParams = (params: [ListVmsParams] | unknown[]): params is [
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listVmsParamCreator = async (...config: ([ListVmsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listVmsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListVmsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListVmsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListVmsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/vms`;
@@ -86,7 +86,7 @@ export const listVmsParamCreator = async (...config: ([ListVmsParams] | [number,
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listVmsParamCreator = async (...config: ([ListVmsParams] | [number,
         }
         ]
     };
+
+    return sendRequest<ListVmsReturnType>(Promise.resolve(args));
 }
 
 export default listVmsParamCreator;

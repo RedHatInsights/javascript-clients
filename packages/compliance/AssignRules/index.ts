@@ -39,12 +39,12 @@ export type AssignRulesParams = {
   options?: AxiosRequestConfig
 }
 
-export type AssignRulesReturnType = AxiosPromise<Rules200Response>;
+export type AssignRulesReturnType = Rules200Response;
 
 const isAssignRulesObjectParams = (params: [AssignRulesParams] | unknown[]): params is [AssignRulesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
   }
   return false
 }
@@ -56,7 +56,7 @@ const isAssignRulesObjectParams = (params: [AssignRulesParams] | unknown[]): par
 * @deprecated
 * @throws {RequiredError}
 */
-export const assignRulesParamCreator = async (...config: ([AssignRulesParams] | [any, any, any, AssignRulesRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const assignRulesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AssignRulesParams] | [any, any, any, AssignRulesRequest, AxiosRequestConfig])) => {
     const params = isAssignRulesObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'assignRulesRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AssignRulesParams;
     const { policyId, tailoringId, xRHIDENTITY, assignRulesRequest, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules`
@@ -81,11 +81,13 @@ export const assignRulesParamCreator = async (...config: ([AssignRulesParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: assignRulesRequest,
     };
+
+    return sendRequest<AssignRulesReturnType>(Promise.resolve(args));
 }
 
 export default assignRulesParamCreator;

@@ -15,7 +15,7 @@ export type SettingsListParams = {
   options?: AxiosRequestConfig
 }
 
-export type SettingsListReturnType = AxiosPromise<Array<SettingsDDF>>;
+export type SettingsListReturnType = Array<SettingsDDF>;
 
 const isSettingsListObjectParams = (params: [SettingsListParams] | unknown[]): params is [SettingsListParams] => {
   const l = params.length === 1
@@ -30,7 +30,7 @@ const isSettingsListObjectParams = (params: [SettingsListParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const settingsListParamCreator = async (...config: ([SettingsListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const settingsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SettingsListParams] | [AxiosRequestConfig])) => {
     const params = isSettingsListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SettingsListParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/settings/`;
@@ -45,7 +45,7 @@ export const settingsListParamCreator = async (...config: ([SettingsListParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -57,6 +57,8 @@ export const settingsListParamCreator = async (...config: ([SettingsListParams] 
         }
         ]
     };
+
+    return sendRequest<SettingsListReturnType>(Promise.resolve(args));
 }
 
 export default settingsListParamCreator;

@@ -21,7 +21,7 @@ export type HostackDestroyParams = {
   options?: AxiosRequestConfig
 }
 
-export type HostackDestroyReturnType = AxiosPromise<string>;
+export type HostackDestroyReturnType = string;
 
 const isHostackDestroyObjectParams = (params: [HostackDestroyParams] | unknown[]): params is [HostackDestroyParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isHostackDestroyObjectParams = (params: [HostackDestroyParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const hostackDestroyParamCreator = async (...config: ([HostackDestroyParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const hostackDestroyParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([HostackDestroyParams] | [number, AxiosRequestConfig])) => {
     const params = isHostackDestroyObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HostackDestroyParams;
     const { id, options = {} } = params;
     const localVarPath = `/api/insights/v1/hostack/{id}/`
@@ -52,7 +52,7 @@ export const hostackDestroyParamCreator = async (...config: ([HostackDestroyPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const hostackDestroyParamCreator = async (...config: ([HostackDestroyPara
         }
         ]
     };
+
+    return sendRequest<HostackDestroyReturnType>(Promise.resolve(args));
 }
 
 export default hostackDestroyParamCreator;

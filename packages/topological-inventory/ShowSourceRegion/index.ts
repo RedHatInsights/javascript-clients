@@ -21,7 +21,7 @@ export type ShowSourceRegionParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowSourceRegionReturnType = AxiosPromise<SourceRegion>;
+export type ShowSourceRegionReturnType = SourceRegion;
 
 const isShowSourceRegionObjectParams = (params: [ShowSourceRegionParams] | unknown[]): params is [ShowSourceRegionParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowSourceRegionObjectParams = (params: [ShowSourceRegionParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showSourceRegionParamCreator = async (...config: ([ShowSourceRegionParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showSourceRegionParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowSourceRegionParams] | [string, AxiosRequestConfig])) => {
     const params = isShowSourceRegionObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowSourceRegionParams;
     const { id, options = {} } = params;
     const localVarPath = `/source_regions/{id}`
@@ -53,7 +53,7 @@ export const showSourceRegionParamCreator = async (...config: ([ShowSourceRegion
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showSourceRegionParamCreator = async (...config: ([ShowSourceRegion
         }
         ]
     };
+
+    return sendRequest<ShowSourceRegionReturnType>(Promise.resolve(args));
 }
 
 export default showSourceRegionParamCreator;

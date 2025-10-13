@@ -33,12 +33,12 @@ export type TailoringFileTOMLParams = {
   options?: AxiosRequestConfig
 }
 
-export type TailoringFileTOMLReturnType = AxiosPromise<TailoringFileToml>;
+export type TailoringFileTOMLReturnType = TailoringFileToml;
 
 const isTailoringFileTOMLObjectParams = (params: [TailoringFileTOMLParams] | unknown[]): params is [TailoringFileTOMLParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isTailoringFileTOMLObjectParams = (params: [TailoringFileTOMLParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const tailoringFileTOMLParamCreator = async (...config: ([TailoringFileTOMLParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const tailoringFileTOMLParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TailoringFileTOMLParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isTailoringFileTOMLObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringFileTOMLParams;
     const { policyId, tailoringId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/tailoring_file.toml`
@@ -72,10 +72,12 @@ export const tailoringFileTOMLParamCreator = async (...config: ([TailoringFileTO
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<TailoringFileTOMLReturnType>(Promise.resolve(args));
 }
 
 export default tailoringFileTOMLParamCreator;

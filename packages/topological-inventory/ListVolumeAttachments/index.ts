@@ -39,7 +39,7 @@ export type ListVolumeAttachmentsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListVolumeAttachmentsReturnType = AxiosPromise<VolumeAttachmentsCollection>;
+export type ListVolumeAttachmentsReturnType = VolumeAttachmentsCollection;
 
 const isListVolumeAttachmentsObjectParams = (params: [ListVolumeAttachmentsParams] | unknown[]): params is [ListVolumeAttachmentsParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListVolumeAttachmentsObjectParams = (params: [ListVolumeAttachmentsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listVolumeAttachmentsParamCreator = async (...config: ([ListVolumeAttachmentsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listVolumeAttachmentsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListVolumeAttachmentsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListVolumeAttachmentsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListVolumeAttachmentsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/volume_attachments`;
@@ -86,7 +86,7 @@ export const listVolumeAttachmentsParamCreator = async (...config: ([ListVolumeA
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listVolumeAttachmentsParamCreator = async (...config: ([ListVolumeA
         }
         ]
     };
+
+    return sendRequest<ListVolumeAttachmentsReturnType>(Promise.resolve(args));
 }
 
 export default listVolumeAttachmentsParamCreator;

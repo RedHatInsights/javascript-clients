@@ -39,7 +39,7 @@ export type ListServiceOfferingsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceOfferingsReturnType = AxiosPromise<ServiceOfferingsCollection>;
+export type ListServiceOfferingsReturnType = ServiceOfferingsCollection;
 
 const isListServiceOfferingsObjectParams = (params: [ListServiceOfferingsParams] | unknown[]): params is [ListServiceOfferingsParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListServiceOfferingsObjectParams = (params: [ListServiceOfferingsParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceOfferingsParamCreator = async (...config: ([ListServiceOfferingsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceOfferingsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceOfferingsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceOfferingsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceOfferingsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_offerings`;
@@ -86,7 +86,7 @@ export const listServiceOfferingsParamCreator = async (...config: ([ListServiceO
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listServiceOfferingsParamCreator = async (...config: ([ListServiceO
         }
         ]
     };
+
+    return sendRequest<ListServiceOfferingsReturnType>(Promise.resolve(args));
 }
 
 export default listServiceOfferingsParamCreator;

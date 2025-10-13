@@ -27,7 +27,7 @@ export type CreatePolicyParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreatePolicyReturnType = AxiosPromise<CreatePolicy201Response>;
+export type CreatePolicyReturnType = CreatePolicy201Response;
 
 const isCreatePolicyObjectParams = (params: [CreatePolicyParams] | unknown[]): params is [CreatePolicyParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isCreatePolicyObjectParams = (params: [CreatePolicyParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createPolicyParamCreator = async (...config: ([CreatePolicyParams] | [any, Policy, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createPolicyParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreatePolicyParams] | [any, Policy, AxiosRequestConfig])) => {
     const params = isCreatePolicyObjectParams(config) ? config[0] : ['xRHIDENTITY', 'policy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreatePolicyParams;
     const { xRHIDENTITY, policy, options = {} } = params;
     const localVarPath = `/policies`;
@@ -66,11 +66,13 @@ export const createPolicyParamCreator = async (...config: ([CreatePolicyParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: policy,
     };
+
+    return sendRequest<CreatePolicyReturnType>(Promise.resolve(args));
 }
 
 export default createPolicyParamCreator;

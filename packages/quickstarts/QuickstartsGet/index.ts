@@ -81,7 +81,7 @@ export type QuickstartsGetParams = {
   options?: AxiosRequestConfig
 }
 
-export type QuickstartsGetReturnType = AxiosPromise<QuickstartsGet200Response>;
+export type QuickstartsGetReturnType = QuickstartsGet200Response;
 
 const isQuickstartsGetObjectParams = (params: [QuickstartsGetParams] | unknown[]): params is [QuickstartsGetParams] => {
   const l = params.length === 1
@@ -97,7 +97,7 @@ const isQuickstartsGetObjectParams = (params: [QuickstartsGetParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const quickstartsGetParamCreator = async (...config: ([QuickstartsGetParams] | [Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, string, string, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const quickstartsGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([QuickstartsGetParams] | [Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, string, string, number, number, AxiosRequestConfig])) => {
     const params = isQuickstartsGetObjectParams(config) ? config[0] : ['productFamilies', 'content', 'useCase', 'bundle', 'application', 'kind', 'topic', 'name', 'displayName', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as QuickstartsGetParams;
     const { productFamilies, content, useCase, bundle, application, kind, topic, name, displayName, limit, offset, options = {} } = params;
     const localVarPath = `/quickstarts`;
@@ -156,10 +156,12 @@ export const quickstartsGetParamCreator = async (...config: ([QuickstartsGetPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<QuickstartsGetReturnType>(Promise.resolve(args));
 }
 
 export default quickstartsGetParamCreator;

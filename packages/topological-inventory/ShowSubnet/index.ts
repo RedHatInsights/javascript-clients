@@ -21,7 +21,7 @@ export type ShowSubnetParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowSubnetReturnType = AxiosPromise<Subnet>;
+export type ShowSubnetReturnType = Subnet;
 
 const isShowSubnetObjectParams = (params: [ShowSubnetParams] | unknown[]): params is [ShowSubnetParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowSubnetObjectParams = (params: [ShowSubnetParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showSubnetParamCreator = async (...config: ([ShowSubnetParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showSubnetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowSubnetParams] | [string, AxiosRequestConfig])) => {
     const params = isShowSubnetObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowSubnetParams;
     const { id, options = {} } = params;
     const localVarPath = `/subnets/{id}`
@@ -53,7 +53,7 @@ export const showSubnetParamCreator = async (...config: ([ShowSubnetParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showSubnetParamCreator = async (...config: ([ShowSubnetParams] | [s
         }
         ]
     };
+
+    return sendRequest<ShowSubnetReturnType>(Promise.resolve(args));
 }
 
 export default showSubnetParamCreator;

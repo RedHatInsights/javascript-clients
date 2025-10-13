@@ -21,12 +21,12 @@ export type DetailAdvisoryParams = {
   options?: AxiosRequestConfig
 }
 
-export type DetailAdvisoryReturnType = AxiosPromise<ControllersAdvisoryDetailResponse>;
+export type DetailAdvisoryReturnType = ControllersAdvisoryDetailResponse;
 
 const isDetailAdvisoryObjectParams = (params: [DetailAdvisoryParams] | unknown[]): params is [DetailAdvisoryParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isDetailAdvisoryObjectParams = (params: [DetailAdvisoryParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const detailAdvisoryParamCreator = async (...config: ([DetailAdvisoryParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const detailAdvisoryParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DetailAdvisoryParams] | [string, AxiosRequestConfig])) => {
     const params = isDetailAdvisoryObjectParams(config) ? config[0] : ['advisoryId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DetailAdvisoryParams;
     const { advisoryId, options = {} } = params;
     const localVarPath = `/advisories/{advisory_id}`
@@ -53,7 +53,7 @@ export const detailAdvisoryParamCreator = async (...config: ([DetailAdvisoryPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -65,6 +65,8 @@ export const detailAdvisoryParamCreator = async (...config: ([DetailAdvisoryPara
         }
         ]
     };
+
+    return sendRequest<DetailAdvisoryReturnType>(Promise.resolve(args));
 }
 
 export default detailAdvisoryParamCreator;

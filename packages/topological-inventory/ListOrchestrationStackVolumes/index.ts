@@ -45,7 +45,7 @@ export type ListOrchestrationStackVolumesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackVolumesReturnType = AxiosPromise<VolumesCollection>;
+export type ListOrchestrationStackVolumesReturnType = VolumesCollection;
 
 const isListOrchestrationStackVolumesObjectParams = (params: [ListOrchestrationStackVolumesParams] | unknown[]): params is [ListOrchestrationStackVolumesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListOrchestrationStackVolumesObjectParams = (params: [ListOrchestrationS
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackVolumesParamCreator = async (...config: ([ListOrchestrationStackVolumesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackVolumesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackVolumesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackVolumesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackVolumesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/volumes`
@@ -93,7 +93,7 @@ export const listOrchestrationStackVolumesParamCreator = async (...config: ([Lis
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listOrchestrationStackVolumesParamCreator = async (...config: ([Lis
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackVolumesReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackVolumesParamCreator;

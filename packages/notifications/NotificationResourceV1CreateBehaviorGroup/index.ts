@@ -21,7 +21,7 @@ export type NotificationResourceV1CreateBehaviorGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1CreateBehaviorGroupReturnType = AxiosPromise<CreateBehaviorGroupResponse>;
+export type NotificationResourceV1CreateBehaviorGroupReturnType = CreateBehaviorGroupResponse;
 
 const isNotificationResourceV1CreateBehaviorGroupObjectParams = (params: [NotificationResourceV1CreateBehaviorGroupParams] | unknown[]): params is [NotificationResourceV1CreateBehaviorGroupParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isNotificationResourceV1CreateBehaviorGroupObjectParams = (params: [Notifi
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1CreateBehaviorGroupParamCreator = async (...config: ([NotificationResourceV1CreateBehaviorGroupParams] | [CreateBehaviorGroupRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1CreateBehaviorGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1CreateBehaviorGroupParams] | [CreateBehaviorGroupRequest, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1CreateBehaviorGroupObjectParams(config) ? config[0] : ['createBehaviorGroupRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1CreateBehaviorGroupParams;
     const { createBehaviorGroupRequest, options = {} } = params;
     const localVarPath = `/notifications/behaviorGroups`;
@@ -54,11 +54,13 @@ export const notificationResourceV1CreateBehaviorGroupParamCreator = async (...c
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: createBehaviorGroupRequest,
     };
+
+    return sendRequest<NotificationResourceV1CreateBehaviorGroupReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1CreateBehaviorGroupParamCreator;

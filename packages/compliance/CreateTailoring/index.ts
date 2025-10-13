@@ -33,12 +33,12 @@ export type CreateTailoringParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateTailoringReturnType = AxiosPromise<CreateTailoring201Response>;
+export type CreateTailoringReturnType = CreateTailoring201Response;
 
 const isCreateTailoringObjectParams = (params: [CreateTailoringParams] | unknown[]): params is [CreateTailoringParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
   }
   return false
 }
@@ -50,7 +50,7 @@ const isCreateTailoringObjectParams = (params: [CreateTailoringParams] | unknown
 * @deprecated
 * @throws {RequiredError}
 */
-export const createTailoringParamCreator = async (...config: ([CreateTailoringParams] | [any, any, TailoringCreate, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createTailoringParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreateTailoringParams] | [any, any, TailoringCreate, AxiosRequestConfig])) => {
     const params = isCreateTailoringObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'tailoringCreate', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateTailoringParams;
     const { policyId, xRHIDENTITY, tailoringCreate, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings`
@@ -74,11 +74,13 @@ export const createTailoringParamCreator = async (...config: ([CreateTailoringPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: tailoringCreate,
     };
+
+    return sendRequest<CreateTailoringReturnType>(Promise.resolve(args));
 }
 
 export default createTailoringParamCreator;

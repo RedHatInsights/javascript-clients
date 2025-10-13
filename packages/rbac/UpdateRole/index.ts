@@ -27,7 +27,7 @@ export type UpdateRoleParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateRoleReturnType = AxiosPromise<void>;
+export type UpdateRoleReturnType = void;
 
 const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): params is [UpdateRoleParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [string, RolePut, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateRoleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateRoleParams] | [string, RolePut, AxiosRequestConfig])) => {
     const params = isUpdateRoleObjectParams(config) ? config[0] : ['uuid', 'rolePut', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateRoleParams;
     const { uuid, rolePut, options = {} } = params;
     const localVarPath = `/roles/{uuid}/`
@@ -61,7 +61,7 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: rolePut,
@@ -73,6 +73,8 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
         }
         ]
     };
+
+    return sendRequest<UpdateRoleReturnType>(Promise.resolve(args));
 }
 
 export default updateRoleParamCreator;

@@ -125,12 +125,12 @@ export const ListTemplateSystemsSortEnum = {
 } as const;
 export type ListTemplateSystemsSortEnum = typeof ListTemplateSystemsSortEnum[keyof typeof ListTemplateSystemsSortEnum];
 
-export type ListTemplateSystemsReturnType = AxiosPromise<ControllersTemplateSystemsResponse>;
+export type ListTemplateSystemsReturnType = ControllersTemplateSystemsResponse;
 
 const isListTemplateSystemsObjectParams = (params: [ListTemplateSystemsParams] | unknown[]): params is [ListTemplateSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'templateId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'templateId')
   }
   return false
 }
@@ -141,7 +141,7 @@ const isListTemplateSystemsObjectParams = (params: [ListTemplateSystemsParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTemplateSystemsParamCreator = async (...config: ([ListTemplateSystemsParams] | [string, number, number, ListTemplateSystemsSortEnum, string, string, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTemplateSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTemplateSystemsParams] | [string, number, number, ListTemplateSystemsSortEnum, string, string, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isListTemplateSystemsObjectParams(config) ? config[0] : ['templateId', 'limit', 'offset', 'sort', 'search', 'filterDisplayName', 'filterOs', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTemplateSystemsParams;
     const { templateId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/templates/{template_id}/systems`
@@ -213,7 +213,7 @@ export const listTemplateSystemsParamCreator = async (...config: ([ListTemplateS
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -225,6 +225,8 @@ export const listTemplateSystemsParamCreator = async (...config: ([ListTemplateS
         }
         ]
     };
+
+    return sendRequest<ListTemplateSystemsReturnType>(Promise.resolve(args));
 }
 
 export default listTemplateSystemsParamCreator;

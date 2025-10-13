@@ -45,7 +45,7 @@ export type ListSourceServicePlansParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceServicePlansReturnType = AxiosPromise<ServicePlansCollection>;
+export type ListSourceServicePlansReturnType = ServicePlansCollection;
 
 const isListSourceServicePlansObjectParams = (params: [ListSourceServicePlansParams] | unknown[]): params is [ListSourceServicePlansParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceServicePlansObjectParams = (params: [ListSourceServicePlansPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceServicePlansParamCreator = async (...config: ([ListSourceServicePlansParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceServicePlansParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceServicePlansParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceServicePlansObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceServicePlansParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/service_plans`
@@ -93,7 +93,7 @@ export const listSourceServicePlansParamCreator = async (...config: ([ListSource
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceServicePlansParamCreator = async (...config: ([ListSource
         }
         ]
     };
+
+    return sendRequest<ListSourceServicePlansReturnType>(Promise.resolve(args));
 }
 
 export default listSourceServicePlansParamCreator;

@@ -33,12 +33,12 @@ export type PutPoliciesByPolicyIdParams = {
   options?: AxiosRequestConfig
 }
 
-export type PutPoliciesByPolicyIdReturnType = AxiosPromise<Policy>;
+export type PutPoliciesByPolicyIdReturnType = Policy;
 
 const isPutPoliciesByPolicyIdObjectParams = (params: [PutPoliciesByPolicyIdParams] | unknown[]): params is [PutPoliciesByPolicyIdParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'policy')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'policy')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isPutPoliciesByPolicyIdObjectParams = (params: [PutPoliciesByPolicyIdParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const putPoliciesByPolicyIdParamCreator = async (...config: ([PutPoliciesByPolicyIdParams] | [string, Policy, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const putPoliciesByPolicyIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PutPoliciesByPolicyIdParams] | [string, Policy, boolean, AxiosRequestConfig])) => {
     const params = isPutPoliciesByPolicyIdObjectParams(config) ? config[0] : ['policyId', 'policy', 'dry', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PutPoliciesByPolicyIdParams;
     const { policyId, policy, dry, options = {} } = params;
     const localVarPath = `/policies/{policyId}`
@@ -71,11 +71,13 @@ export const putPoliciesByPolicyIdParamCreator = async (...config: ([PutPolicies
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: policy,
     };
+
+    return sendRequest<PutPoliciesByPolicyIdReturnType>(Promise.resolve(args));
 }
 
 export default putPoliciesByPolicyIdParamCreator;

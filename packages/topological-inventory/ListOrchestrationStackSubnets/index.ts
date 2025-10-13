@@ -45,7 +45,7 @@ export type ListOrchestrationStackSubnetsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackSubnetsReturnType = AxiosPromise<SubnetsCollection>;
+export type ListOrchestrationStackSubnetsReturnType = SubnetsCollection;
 
 const isListOrchestrationStackSubnetsObjectParams = (params: [ListOrchestrationStackSubnetsParams] | unknown[]): params is [ListOrchestrationStackSubnetsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListOrchestrationStackSubnetsObjectParams = (params: [ListOrchestrationS
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackSubnetsParamCreator = async (...config: ([ListOrchestrationStackSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackSubnetsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackSubnetsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackSubnetsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/subnets`
@@ -93,7 +93,7 @@ export const listOrchestrationStackSubnetsParamCreator = async (...config: ([Lis
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listOrchestrationStackSubnetsParamCreator = async (...config: ([Lis
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackSubnetsReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackSubnetsParamCreator;

@@ -57,12 +57,12 @@ export type RuleGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleGroupsReturnType = AxiosPromise<RuleGroups200Response>;
+export type RuleGroupsReturnType = RuleGroups200Response;
 
 const isRuleGroupsObjectParams = (params: [RuleGroupsParams] | unknown[]): params is [RuleGroupsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId')
   }
   return false
 }
@@ -73,7 +73,7 @@ const isRuleGroupsObjectParams = (params: [RuleGroupsParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleGroupsParamCreator = async (...config: ([RuleGroupsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleGroupsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isRuleGroupsObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleGroupsParams;
     const { securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/rule_groups`
@@ -115,10 +115,12 @@ export const ruleGroupsParamCreator = async (...config: ([RuleGroupsParams] | [a
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<RuleGroupsReturnType>(Promise.resolve(args));
 }
 
 export default ruleGroupsParamCreator;

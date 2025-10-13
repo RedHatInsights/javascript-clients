@@ -33,7 +33,7 @@ export type RuleJustificationsListParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleJustificationsListReturnType = AxiosPromise<PaginatedJustificationCountList>;
+export type RuleJustificationsListReturnType = PaginatedJustificationCountList;
 
 const isRuleJustificationsListObjectParams = (params: [RuleJustificationsListParams] | unknown[]): params is [RuleJustificationsListParams] => {
   const l = params.length === 1
@@ -48,7 +48,7 @@ const isRuleJustificationsListObjectParams = (params: [RuleJustificationsListPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleJustificationsListParamCreator = async (...config: ([RuleJustificationsListParams] | [string, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleJustificationsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleJustificationsListParams] | [string, number, number, AxiosRequestConfig])) => {
     const params = isRuleJustificationsListObjectParams(config) ? config[0] : ['ruleId', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleJustificationsListParams;
     const { ruleId, limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/justifications/`
@@ -72,7 +72,7 @@ export const ruleJustificationsListParamCreator = async (...config: ([RuleJustif
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -84,6 +84,8 @@ export const ruleJustificationsListParamCreator = async (...config: ([RuleJustif
         }
         ]
     };
+
+    return sendRequest<RuleJustificationsListReturnType>(Promise.resolve(args));
 }
 
 export default ruleJustificationsListParamCreator;

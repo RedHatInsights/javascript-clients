@@ -21,7 +21,7 @@ export type ShowNetworkParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowNetworkReturnType = AxiosPromise<Network>;
+export type ShowNetworkReturnType = Network;
 
 const isShowNetworkObjectParams = (params: [ShowNetworkParams] | unknown[]): params is [ShowNetworkParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowNetworkObjectParams = (params: [ShowNetworkParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showNetworkParamCreator = async (...config: ([ShowNetworkParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showNetworkParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowNetworkParams] | [string, AxiosRequestConfig])) => {
     const params = isShowNetworkObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowNetworkParams;
     const { id, options = {} } = params;
     const localVarPath = `/networks/{id}`
@@ -53,7 +53,7 @@ export const showNetworkParamCreator = async (...config: ([ShowNetworkParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showNetworkParamCreator = async (...config: ([ShowNetworkParams] | 
         }
         ]
     };
+
+    return sendRequest<ShowNetworkReturnType>(Promise.resolve(args));
 }
 
 export default showNetworkParamCreator;

@@ -27,7 +27,7 @@ export type EndpointResourceV1UpdateEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1UpdateEndpointReturnType = AxiosPromise<any>;
+export type EndpointResourceV1UpdateEndpointReturnType = any;
 
 const isEndpointResourceV1UpdateEndpointObjectParams = (params: [EndpointResourceV1UpdateEndpointParams] | unknown[]): params is [EndpointResourceV1UpdateEndpointParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isEndpointResourceV1UpdateEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1UpdateEndpointParamCreator = async (...config: ([EndpointResourceV1UpdateEndpointParams] | [any, Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1UpdateEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1UpdateEndpointParams] | [any, Endpoint, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1UpdateEndpointObjectParams(config) ? config[0] : ['id', 'endpoint', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1UpdateEndpointParams;
     const { id, endpoint, options = {} } = params;
     const localVarPath = `/endpoints/{id}`
@@ -61,11 +61,13 @@ export const endpointResourceV1UpdateEndpointParamCreator = async (...config: ([
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: endpoint,
     };
+
+    return sendRequest<EndpointResourceV1UpdateEndpointReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1UpdateEndpointParamCreator;

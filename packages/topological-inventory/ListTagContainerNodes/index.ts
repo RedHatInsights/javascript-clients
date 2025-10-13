@@ -45,7 +45,7 @@ export type ListTagContainerNodesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagContainerNodesReturnType = AxiosPromise<ContainerNodesCollection>;
+export type ListTagContainerNodesReturnType = ContainerNodesCollection;
 
 const isListTagContainerNodesObjectParams = (params: [ListTagContainerNodesParams] | unknown[]): params is [ListTagContainerNodesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListTagContainerNodesObjectParams = (params: [ListTagContainerNodesParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagContainerNodesParamCreator = async (...config: ([ListTagContainerNodesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagContainerNodesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagContainerNodesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagContainerNodesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagContainerNodesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/container_nodes`
@@ -93,7 +93,7 @@ export const listTagContainerNodesParamCreator = async (...config: ([ListTagCont
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listTagContainerNodesParamCreator = async (...config: ([ListTagCont
         }
         ]
     };
+
+    return sendRequest<ListTagContainerNodesReturnType>(Promise.resolve(args));
 }
 
 export default listTagContainerNodesParamCreator;

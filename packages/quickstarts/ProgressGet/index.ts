@@ -27,12 +27,12 @@ export type ProgressGetParams = {
   options?: AxiosRequestConfig
 }
 
-export type ProgressGetReturnType = AxiosPromise<ProgressGet200Response>;
+export type ProgressGetReturnType = ProgressGet200Response;
 
 const isProgressGetObjectParams = (params: [ProgressGetParams] | unknown[]): params is [ProgressGetParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'account')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'account')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isProgressGetObjectParams = (params: [ProgressGetParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const progressGetParamCreator = async (...config: ([ProgressGetParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const progressGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ProgressGetParams] | [string, string, AxiosRequestConfig])) => {
     const params = isProgressGetObjectParams(config) ? config[0] : ['account', 'quickstart', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProgressGetParams;
     const { account, quickstart, options = {} } = params;
     const localVarPath = `/progress`;
@@ -66,10 +66,12 @@ export const progressGetParamCreator = async (...config: ([ProgressGetParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ProgressGetReturnType>(Promise.resolve(args));
 }
 
 export default progressGetParamCreator;

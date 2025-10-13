@@ -39,12 +39,12 @@ export type AssignRuleParams = {
   options?: AxiosRequestConfig
 }
 
-export type AssignRuleReturnType = AxiosPromise<void>;
+export type AssignRuleReturnType = void;
 
 const isAssignRuleObjectParams = (params: [AssignRuleParams] | unknown[]): params is [AssignRuleParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
   }
   return false
 }
@@ -55,7 +55,7 @@ const isAssignRuleObjectParams = (params: [AssignRuleParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const assignRuleParamCreator = async (...config: ([AssignRuleParams] | [any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const assignRuleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AssignRuleParams] | [any, any, any, any, AxiosRequestConfig])) => {
     const params = isAssignRuleObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'ruleId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AssignRuleParams;
     const { policyId, tailoringId, ruleId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules/{rule_id}`
@@ -79,10 +79,12 @@ export const assignRuleParamCreator = async (...config: ([AssignRuleParams] | [a
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<AssignRuleReturnType>(Promise.resolve(args));
 }
 
 export default assignRuleParamCreator;

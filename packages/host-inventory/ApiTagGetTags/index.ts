@@ -205,7 +205,7 @@ export const ApiTagGetTagsSystemTypeEnum = {
 } as const;
 export type ApiTagGetTagsSystemTypeEnum = typeof ApiTagGetTagsSystemTypeEnum[keyof typeof ApiTagGetTagsSystemTypeEnum];
 
-export type ApiTagGetTagsReturnType = AxiosPromise<ActiveTags>;
+export type ApiTagGetTagsReturnType = ActiveTags;
 
 const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]): params is [ApiTagGetTagsParams] => {
   const l = params.length === 1
@@ -221,7 +221,7 @@ const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, string, string, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, Array<ApiTagGetTagsSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiTagGetTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, string, string, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, Array<ApiTagGetTagsSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
     const params = isApiTagGetTagsObjectParams(config) ? config[0] : ['tags', 'orderBy', 'orderHow', 'perPage', 'page', 'staleness', 'search', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'registeredWith', 'systemType', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiTagGetTagsParams;
     const { tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, registeredWith, systemType, filter, options = {} } = params;
     const localVarPath = `/tags`;
@@ -328,7 +328,7 @@ export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -340,6 +340,8 @@ export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams
         }
         ]
     };
+
+    return sendRequest<ApiTagGetTagsReturnType>(Promise.resolve(args));
 }
 
 export default apiTagGetTagsParamCreator;

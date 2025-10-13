@@ -15,7 +15,7 @@ export type AckAllListParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckAllListReturnType = AxiosPromise<Array<AllAck>>;
+export type AckAllListReturnType = Array<AllAck>;
 
 const isAckAllListObjectParams = (params: [AckAllListParams] | unknown[]): params is [AckAllListParams] => {
   const l = params.length === 1
@@ -30,7 +30,7 @@ const isAckAllListObjectParams = (params: [AckAllListParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackAllListParamCreator = async (...config: ([AckAllListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackAllListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckAllListParams] | [AxiosRequestConfig])) => {
     const params = isAckAllListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckAllListParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/ack/all/`;
@@ -45,7 +45,7 @@ export const ackAllListParamCreator = async (...config: ([AckAllListParams] | [A
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -57,6 +57,8 @@ export const ackAllListParamCreator = async (...config: ([AckAllListParams] | [A
         }
         ]
     };
+
+    return sendRequest<AckAllListReturnType>(Promise.resolve(args));
 }
 
 export default ackAllListParamCreator;

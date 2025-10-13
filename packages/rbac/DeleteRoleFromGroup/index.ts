@@ -27,7 +27,7 @@ export type DeleteRoleFromGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteRoleFromGroupReturnType = AxiosPromise<void>;
+export type DeleteRoleFromGroupReturnType = void;
 
 const isDeleteRoleFromGroupObjectParams = (params: [DeleteRoleFromGroupParams] | unknown[]): params is [DeleteRoleFromGroupParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isDeleteRoleFromGroupObjectParams = (params: [DeleteRoleFromGroupParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRoleFromGroupParamCreator = async (...config: ([DeleteRoleFromGroupParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRoleFromGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRoleFromGroupParams] | [string, string, AxiosRequestConfig])) => {
     const params = isDeleteRoleFromGroupObjectParams(config) ? config[0] : ['uuid', 'roles', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRoleFromGroupParams;
     const { uuid, roles, options = {} } = params;
     const localVarPath = `/groups/{uuid}/roles/`
@@ -63,7 +63,7 @@ export const deleteRoleFromGroupParamCreator = async (...config: ([DeleteRoleFro
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -74,6 +74,8 @@ export const deleteRoleFromGroupParamCreator = async (...config: ([DeleteRoleFro
         }
         ]
     };
+
+    return sendRequest<DeleteRoleFromGroupReturnType>(Promise.resolve(args));
 }
 
 export default deleteRoleFromGroupParamCreator;

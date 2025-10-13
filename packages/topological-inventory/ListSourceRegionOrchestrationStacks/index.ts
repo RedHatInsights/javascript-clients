@@ -45,7 +45,7 @@ export type ListSourceRegionOrchestrationStacksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionOrchestrationStacksReturnType = AxiosPromise<OrchestrationStacksCollection>;
+export type ListSourceRegionOrchestrationStacksReturnType = OrchestrationStacksCollection;
 
 const isListSourceRegionOrchestrationStacksObjectParams = (params: [ListSourceRegionOrchestrationStacksParams] | unknown[]): params is [ListSourceRegionOrchestrationStacksParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceRegionOrchestrationStacksObjectParams = (params: [ListSourceRe
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionOrchestrationStacksParamCreator = async (...config: ([ListSourceRegionOrchestrationStacksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionOrchestrationStacksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionOrchestrationStacksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionOrchestrationStacksObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionOrchestrationStacksParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions/{id}/orchestration_stacks`
@@ -93,7 +93,7 @@ export const listSourceRegionOrchestrationStacksParamCreator = async (...config:
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceRegionOrchestrationStacksParamCreator = async (...config:
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionOrchestrationStacksReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionOrchestrationStacksParamCreator;

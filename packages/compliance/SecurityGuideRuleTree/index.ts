@@ -27,12 +27,12 @@ export type SecurityGuideRuleTreeParams = {
   options?: AxiosRequestConfig
 }
 
-export type SecurityGuideRuleTreeReturnType = AxiosPromise<any>;
+export type SecurityGuideRuleTreeReturnType = any;
 
 const isSecurityGuideRuleTreeObjectParams = (params: [SecurityGuideRuleTreeParams] | unknown[]): params is [SecurityGuideRuleTreeParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId')
   }
   return false
 }
@@ -44,7 +44,7 @@ const isSecurityGuideRuleTreeObjectParams = (params: [SecurityGuideRuleTreeParam
 * @deprecated
 * @throws {RequiredError}
 */
-export const securityGuideRuleTreeParamCreator = async (...config: ([SecurityGuideRuleTreeParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const securityGuideRuleTreeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SecurityGuideRuleTreeParams] | [any, any, AxiosRequestConfig])) => {
     const params = isSecurityGuideRuleTreeObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuideRuleTreeParams;
     const { securityGuideId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/rule_tree`
@@ -66,10 +66,12 @@ export const securityGuideRuleTreeParamCreator = async (...config: ([SecurityGui
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SecurityGuideRuleTreeReturnType>(Promise.resolve(args));
 }
 
 export default securityGuideRuleTreeParamCreator;

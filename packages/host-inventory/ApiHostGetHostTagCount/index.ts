@@ -57,7 +57,7 @@ export const ApiHostGetHostTagCountOrderByEnum = {
 } as const;
 export type ApiHostGetHostTagCountOrderByEnum = typeof ApiHostGetHostTagCountOrderByEnum[keyof typeof ApiHostGetHostTagCountOrderByEnum];
 
-export type ApiHostGetHostTagCountReturnType = AxiosPromise<TagCountOut>;
+export type ApiHostGetHostTagCountReturnType = TagCountOut;
 
 const isApiHostGetHostTagCountObjectParams = (params: [ApiHostGetHostTagCountParams] | unknown[]): params is [ApiHostGetHostTagCountParams] => {
   const l = params.length === 1
@@ -73,7 +73,7 @@ const isApiHostGetHostTagCountObjectParams = (params: [ApiHostGetHostTagCountPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostTagCountParamCreator = async (...config: ([ApiHostGetHostTagCountParams] | [Array<string>, number, number, ApiHostGetHostTagCountOrderByEnum, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostTagCountParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostTagCountParams] | [Array<string>, number, number, ApiHostGetHostTagCountOrderByEnum, string, AxiosRequestConfig])) => {
     const params = isApiHostGetHostTagCountObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostTagCountParams;
     const { hostIdList, perPage, page, orderBy, orderHow, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/tags/count`
@@ -105,7 +105,7 @@ export const apiHostGetHostTagCountParamCreator = async (...config: ([ApiHostGet
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -117,6 +117,8 @@ export const apiHostGetHostTagCountParamCreator = async (...config: ([ApiHostGet
         }
         ]
     };
+
+    return sendRequest<ApiHostGetHostTagCountReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGetHostTagCountParamCreator;

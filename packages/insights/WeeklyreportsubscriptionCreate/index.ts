@@ -21,7 +21,7 @@ export type WeeklyreportsubscriptionCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type WeeklyreportsubscriptionCreateReturnType = AxiosPromise<WeeklyReportSubscription>;
+export type WeeklyreportsubscriptionCreateReturnType = WeeklyReportSubscription;
 
 const isWeeklyreportsubscriptionCreateObjectParams = (params: [WeeklyreportsubscriptionCreateParams] | unknown[]): params is [WeeklyreportsubscriptionCreateParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isWeeklyreportsubscriptionCreateObjectParams = (params: [Weeklyreportsubsc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const weeklyreportsubscriptionCreateParamCreator = async (...config: ([WeeklyreportsubscriptionCreateParams] | [WeeklyReportSubscription, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const weeklyreportsubscriptionCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WeeklyreportsubscriptionCreateParams] | [WeeklyReportSubscription, AxiosRequestConfig])) => {
     const params = isWeeklyreportsubscriptionCreateObjectParams(config) ? config[0] : ['weeklyReportSubscription', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WeeklyreportsubscriptionCreateParams;
     const { weeklyReportSubscription, options = {} } = params;
     const localVarPath = `/api/insights/v1/weeklyreportsubscription/`;
@@ -53,7 +53,7 @@ export const weeklyreportsubscriptionCreateParamCreator = async (...config: ([We
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: weeklyReportSubscription,
@@ -66,6 +66,8 @@ export const weeklyreportsubscriptionCreateParamCreator = async (...config: ([We
         }
         ]
     };
+
+    return sendRequest<WeeklyreportsubscriptionCreateReturnType>(Promise.resolve(args));
 }
 
 export default weeklyreportsubscriptionCreateParamCreator;

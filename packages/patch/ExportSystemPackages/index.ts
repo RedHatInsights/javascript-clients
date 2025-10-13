@@ -57,12 +57,12 @@ export type ExportSystemPackagesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ExportSystemPackagesReturnType = AxiosPromise<Array<ControllersSystemPackageInline>>;
+export type ExportSystemPackagesReturnType = Array<ControllersSystemPackageInline>;
 
 const isExportSystemPackagesObjectParams = (params: [ExportSystemPackagesParams] | unknown[]): params is [ExportSystemPackagesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
   }
   return false
 }
@@ -73,7 +73,7 @@ const isExportSystemPackagesObjectParams = (params: [ExportSystemPackagesParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportSystemPackagesParamCreator = async (...config: ([ExportSystemPackagesParams] | [string, string, string, string, string, string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportSystemPackagesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportSystemPackagesParams] | [string, string, string, string, string, string, boolean, AxiosRequestConfig])) => {
     const params = isExportSystemPackagesObjectParams(config) ? config[0] : ['inventoryId', 'search', 'filterName', 'filterDescription', 'filterEvra', 'filterSummary', 'filterUpdatable', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportSystemPackagesParams;
     const { inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options = {} } = params;
     const localVarPath = `/export/systems/{inventory_id}/packages`
@@ -113,7 +113,7 @@ export const exportSystemPackagesParamCreator = async (...config: ([ExportSystem
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -125,6 +125,8 @@ export const exportSystemPackagesParamCreator = async (...config: ([ExportSystem
         }
         ]
     };
+
+    return sendRequest<ExportSystemPackagesReturnType>(Promise.resolve(args));
 }
 
 export default exportSystemPackagesParamCreator;

@@ -21,7 +21,7 @@ export type WorkspacesDeleteParams = {
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesDeleteReturnType = AxiosPromise<void>;
+export type WorkspacesDeleteReturnType = void;
 
 const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unknown[]): params is [WorkspacesDeleteParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesDeleteParamCreator = async (...config: ([WorkspacesDeleteParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const workspacesDeleteParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesDeleteParams] | [string, AxiosRequestConfig])) => {
     const params = isWorkspacesDeleteObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesDeleteParams;
     const { id, options = {} } = params;
     const localVarPath = `/workspaces/{id}/`
@@ -53,10 +53,12 @@ export const workspacesDeleteParamCreator = async (...config: ([WorkspacesDelete
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<WorkspacesDeleteReturnType>(Promise.resolve(args));
 }
 
 export default workspacesDeleteParamCreator;

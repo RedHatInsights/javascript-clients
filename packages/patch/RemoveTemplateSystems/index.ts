@@ -21,12 +21,12 @@ export type RemoveTemplateSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type RemoveTemplateSystemsReturnType = AxiosPromise<void>;
+export type RemoveTemplateSystemsReturnType = void;
 
 const isRemoveTemplateSystemsObjectParams = (params: [RemoveTemplateSystemsParams] | unknown[]): params is [RemoveTemplateSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'body')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'body')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isRemoveTemplateSystemsObjectParams = (params: [RemoveTemplateSystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const removeTemplateSystemsParamCreator = async (...config: ([RemoveTemplateSystemsParams] | [ControllersTemplateSystemsUpdateRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const removeTemplateSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RemoveTemplateSystemsParams] | [ControllersTemplateSystemsUpdateRequest, AxiosRequestConfig])) => {
     const params = isRemoveTemplateSystemsObjectParams(config) ? config[0] : ['body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RemoveTemplateSystemsParams;
     const { body, options = {} } = params;
     const localVarPath = `/templates/systems`;
@@ -54,7 +54,7 @@ export const removeTemplateSystemsParamCreator = async (...config: ([RemoveTempl
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
@@ -67,6 +67,8 @@ export const removeTemplateSystemsParamCreator = async (...config: ([RemoveTempl
         }
         ]
     };
+
+    return sendRequest<RemoveTemplateSystemsReturnType>(Promise.resolve(args));
 }
 
 export default removeTemplateSystemsParamCreator;

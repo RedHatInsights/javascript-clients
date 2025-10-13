@@ -27,7 +27,7 @@ export type AppliedInventoriesForServiceOfferingParams = {
   options?: AxiosRequestConfig
 }
 
-export type AppliedInventoriesForServiceOfferingReturnType = AxiosPromise<AppliedInventoriesForServiceOffering200Response>;
+export type AppliedInventoriesForServiceOfferingReturnType = AppliedInventoriesForServiceOffering200Response;
 
 const isAppliedInventoriesForServiceOfferingObjectParams = (params: [AppliedInventoriesForServiceOfferingParams] | unknown[]): params is [AppliedInventoriesForServiceOfferingParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isAppliedInventoriesForServiceOfferingObjectParams = (params: [AppliedInve
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const appliedInventoriesForServiceOfferingParamCreator = async (...config: ([AppliedInventoriesForServiceOfferingParams] | [string, AppliedInventoriesParametersServicePlan, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const appliedInventoriesForServiceOfferingParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AppliedInventoriesForServiceOfferingParams] | [string, AppliedInventoriesParametersServicePlan, AxiosRequestConfig])) => {
     const params = isAppliedInventoriesForServiceOfferingObjectParams(config) ? config[0] : ['id', 'appliedInventoriesParametersServicePlan', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AppliedInventoriesForServiceOfferingParams;
     const { id, appliedInventoriesParametersServicePlan, options = {} } = params;
     const localVarPath = `/service_offerings/{id}/applied_inventories`
@@ -61,7 +61,7 @@ export const appliedInventoriesForServiceOfferingParamCreator = async (...config
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: appliedInventoriesParametersServicePlan,
@@ -73,6 +73,8 @@ export const appliedInventoriesForServiceOfferingParamCreator = async (...config
         }
         ]
     };
+
+    return sendRequest<AppliedInventoriesForServiceOfferingReturnType>(Promise.resolve(args));
 }
 
 export default appliedInventoriesForServiceOfferingParamCreator;

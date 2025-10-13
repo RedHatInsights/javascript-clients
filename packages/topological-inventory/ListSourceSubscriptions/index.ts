@@ -45,7 +45,7 @@ export type ListSourceSubscriptionsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceSubscriptionsReturnType = AxiosPromise<SubscriptionsCollection>;
+export type ListSourceSubscriptionsReturnType = SubscriptionsCollection;
 
 const isListSourceSubscriptionsObjectParams = (params: [ListSourceSubscriptionsParams] | unknown[]): params is [ListSourceSubscriptionsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceSubscriptionsObjectParams = (params: [ListSourceSubscriptionsP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceSubscriptionsParamCreator = async (...config: ([ListSourceSubscriptionsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceSubscriptionsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceSubscriptionsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceSubscriptionsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceSubscriptionsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/subscriptions`
@@ -93,7 +93,7 @@ export const listSourceSubscriptionsParamCreator = async (...config: ([ListSourc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceSubscriptionsParamCreator = async (...config: ([ListSourc
         }
         ]
     };
+
+    return sendRequest<ListSourceSubscriptionsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceSubscriptionsParamCreator;

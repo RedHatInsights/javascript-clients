@@ -21,7 +21,7 @@ export type RatingCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type RatingCreateReturnType = AxiosPromise<RuleRating>;
+export type RatingCreateReturnType = RuleRating;
 
 const isRatingCreateObjectParams = (params: [RatingCreateParams] | unknown[]): params is [RatingCreateParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isRatingCreateObjectParams = (params: [RatingCreateParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ratingCreateParamCreator = async (...config: ([RatingCreateParams] | [RuleRating, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ratingCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RatingCreateParams] | [RuleRating, AxiosRequestConfig])) => {
     const params = isRatingCreateObjectParams(config) ? config[0] : ['ruleRating', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RatingCreateParams;
     const { ruleRating, options = {} } = params;
     const localVarPath = `/api/insights/v1/rating/`;
@@ -53,7 +53,7 @@ export const ratingCreateParamCreator = async (...config: ([RatingCreateParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: ruleRating,
@@ -66,6 +66,8 @@ export const ratingCreateParamCreator = async (...config: ([RatingCreateParams] 
         }
         ]
     };
+
+    return sendRequest<RatingCreateReturnType>(Promise.resolve(args));
 }
 
 export default ratingCreateParamCreator;

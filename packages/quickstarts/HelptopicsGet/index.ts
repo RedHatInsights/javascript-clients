@@ -33,7 +33,7 @@ export type HelptopicsGetParams = {
   options?: AxiosRequestConfig
 }
 
-export type HelptopicsGetReturnType = AxiosPromise<HelptopicsGet200Response>;
+export type HelptopicsGetReturnType = HelptopicsGet200Response;
 
 const isHelptopicsGetObjectParams = (params: [HelptopicsGetParams] | unknown[]): params is [HelptopicsGetParams] => {
   const l = params.length === 1
@@ -49,7 +49,7 @@ const isHelptopicsGetObjectParams = (params: [HelptopicsGetParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const helptopicsGetParamCreator = async (...config: ([HelptopicsGetParams] | [Array<string>, Array<string>, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const helptopicsGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([HelptopicsGetParams] | [Array<string>, Array<string>, Array<string>, AxiosRequestConfig])) => {
     const params = isHelptopicsGetObjectParams(config) ? config[0] : ['bundle', 'application', 'name', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HelptopicsGetParams;
     const { bundle, application, name, options = {} } = params;
     const localVarPath = `/helptopics`;
@@ -76,10 +76,12 @@ export const helptopicsGetParamCreator = async (...config: ([HelptopicsGetParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<HelptopicsGetReturnType>(Promise.resolve(args));
 }
 
 export default helptopicsGetParamCreator;

@@ -45,7 +45,7 @@ export type ListTagServiceInventoriesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagServiceInventoriesReturnType = AxiosPromise<ServiceInventoriesCollection>;
+export type ListTagServiceInventoriesReturnType = ServiceInventoriesCollection;
 
 const isListTagServiceInventoriesObjectParams = (params: [ListTagServiceInventoriesParams] | unknown[]): params is [ListTagServiceInventoriesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListTagServiceInventoriesObjectParams = (params: [ListTagServiceInventor
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagServiceInventoriesParamCreator = async (...config: ([ListTagServiceInventoriesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagServiceInventoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagServiceInventoriesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagServiceInventoriesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagServiceInventoriesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/service_inventories`
@@ -93,7 +93,7 @@ export const listTagServiceInventoriesParamCreator = async (...config: ([ListTag
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listTagServiceInventoriesParamCreator = async (...config: ([ListTag
         }
         ]
     };
+
+    return sendRequest<ListTagServiceInventoriesReturnType>(Promise.resolve(args));
 }
 
 export default listTagServiceInventoriesParamCreator;

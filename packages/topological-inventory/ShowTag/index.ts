@@ -21,7 +21,7 @@ export type ShowTagParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowTagReturnType = AxiosPromise<Tag>;
+export type ShowTagReturnType = Tag;
 
 const isShowTagObjectParams = (params: [ShowTagParams] | unknown[]): params is [ShowTagParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowTagObjectParams = (params: [ShowTagParams] | unknown[]): params is [
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showTagParamCreator = async (...config: ([ShowTagParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showTagParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowTagParams] | [string, AxiosRequestConfig])) => {
     const params = isShowTagObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowTagParams;
     const { id, options = {} } = params;
     const localVarPath = `/tags/{id}`
@@ -53,7 +53,7 @@ export const showTagParamCreator = async (...config: ([ShowTagParams] | [string,
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showTagParamCreator = async (...config: ([ShowTagParams] | [string,
         }
         ]
     };
+
+    return sendRequest<ShowTagReturnType>(Promise.resolve(args));
 }
 
 export default showTagParamCreator;

@@ -27,7 +27,7 @@ export type AddRoleToGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type AddRoleToGroupReturnType = AxiosPromise<AddRoleToGroup200Response>;
+export type AddRoleToGroupReturnType = AddRoleToGroup200Response;
 
 const isAddRoleToGroupObjectParams = (params: [AddRoleToGroupParams] | unknown[]): params is [AddRoleToGroupParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isAddRoleToGroupObjectParams = (params: [AddRoleToGroupParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const addRoleToGroupParamCreator = async (...config: ([AddRoleToGroupParams] | [string, GroupRoleIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const addRoleToGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AddRoleToGroupParams] | [string, GroupRoleIn, AxiosRequestConfig])) => {
     const params = isAddRoleToGroupObjectParams(config) ? config[0] : ['uuid', 'groupRoleIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AddRoleToGroupParams;
     const { uuid, groupRoleIn, options = {} } = params;
     const localVarPath = `/groups/{uuid}/roles/`
@@ -61,7 +61,7 @@ export const addRoleToGroupParamCreator = async (...config: ([AddRoleToGroupPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: groupRoleIn,
@@ -73,6 +73,8 @@ export const addRoleToGroupParamCreator = async (...config: ([AddRoleToGroupPara
         }
         ]
     };
+
+    return sendRequest<AddRoleToGroupReturnType>(Promise.resolve(args));
 }
 
 export default addRoleToGroupParamCreator;

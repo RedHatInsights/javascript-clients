@@ -45,7 +45,7 @@ export type ListSubscriptionServicePlansParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSubscriptionServicePlansReturnType = AxiosPromise<ServicePlansCollection>;
+export type ListSubscriptionServicePlansReturnType = ServicePlansCollection;
 
 const isListSubscriptionServicePlansObjectParams = (params: [ListSubscriptionServicePlansParams] | unknown[]): params is [ListSubscriptionServicePlansParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSubscriptionServicePlansObjectParams = (params: [ListSubscriptionSer
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSubscriptionServicePlansParamCreator = async (...config: ([ListSubscriptionServicePlansParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSubscriptionServicePlansParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSubscriptionServicePlansParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSubscriptionServicePlansObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSubscriptionServicePlansParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/subscriptions/{id}/service_plans`
@@ -93,7 +93,7 @@ export const listSubscriptionServicePlansParamCreator = async (...config: ([List
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSubscriptionServicePlansParamCreator = async (...config: ([List
         }
         ]
     };
+
+    return sendRequest<ListSubscriptionServicePlansReturnType>(Promise.resolve(args));
 }
 
 export default listSubscriptionServicePlansParamCreator;

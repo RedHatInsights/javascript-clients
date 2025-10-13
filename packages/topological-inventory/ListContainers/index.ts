@@ -39,7 +39,7 @@ export type ListContainersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainersReturnType = AxiosPromise<ContainersCollection>;
+export type ListContainersReturnType = ContainersCollection;
 
 const isListContainersObjectParams = (params: [ListContainersParams] | unknown[]): params is [ListContainersParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListContainersObjectParams = (params: [ListContainersParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainersParamCreator = async (...config: ([ListContainersParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainersParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainersObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainersParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/containers`;
@@ -86,7 +86,7 @@ export const listContainersParamCreator = async (...config: ([ListContainersPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listContainersParamCreator = async (...config: ([ListContainersPara
         }
         ]
     };
+
+    return sendRequest<ListContainersReturnType>(Promise.resolve(args));
 }
 
 export default listContainersParamCreator;

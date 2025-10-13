@@ -21,7 +21,7 @@ export type ShowServiceInventoryParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowServiceInventoryReturnType = AxiosPromise<ServiceInventory>;
+export type ShowServiceInventoryReturnType = ServiceInventory;
 
 const isShowServiceInventoryObjectParams = (params: [ShowServiceInventoryParams] | unknown[]): params is [ShowServiceInventoryParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowServiceInventoryObjectParams = (params: [ShowServiceInventoryParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showServiceInventoryParamCreator = async (...config: ([ShowServiceInventoryParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showServiceInventoryParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowServiceInventoryParams] | [string, AxiosRequestConfig])) => {
     const params = isShowServiceInventoryObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowServiceInventoryParams;
     const { id, options = {} } = params;
     const localVarPath = `/service_inventories/{id}`
@@ -53,7 +53,7 @@ export const showServiceInventoryParamCreator = async (...config: ([ShowServiceI
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showServiceInventoryParamCreator = async (...config: ([ShowServiceI
         }
         ]
     };
+
+    return sendRequest<ShowServiceInventoryReturnType>(Promise.resolve(args));
 }
 
 export default showServiceInventoryParamCreator;

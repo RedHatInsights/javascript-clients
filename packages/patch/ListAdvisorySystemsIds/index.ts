@@ -231,12 +231,12 @@ export const ListAdvisorySystemsIdsSortEnum = {
 } as const;
 export type ListAdvisorySystemsIdsSortEnum = typeof ListAdvisorySystemsIdsSortEnum[keyof typeof ListAdvisorySystemsIdsSortEnum];
 
-export type ListAdvisorySystemsIdsReturnType = AxiosPromise<ControllersIDsStatusResponse>;
+export type ListAdvisorySystemsIdsReturnType = ControllersIDsStatusResponse;
 
 const isListAdvisorySystemsIdsObjectParams = (params: [ListAdvisorySystemsIdsParams] | unknown[]): params is [ListAdvisorySystemsIdsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
   }
   return false
 }
@@ -247,7 +247,7 @@ const isListAdvisorySystemsIdsObjectParams = (params: [ListAdvisorySystemsIdsPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listAdvisorySystemsIdsParamCreator = async (...config: ([ListAdvisorySystemsIdsParams] | [string, number, number, ListAdvisorySystemsIdsSortEnum, string, string, string, string, string, string, number, number, number, number, boolean, boolean, string, string, string, string, string, string, string, string, boolean, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listAdvisorySystemsIdsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAdvisorySystemsIdsParams] | [string, number, number, ListAdvisorySystemsIdsSortEnum, string, string, string, string, string, string, number, number, number, number, boolean, boolean, string, string, string, string, string, string, string, string, boolean, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isListAdvisorySystemsIdsObjectParams(config) ? config[0] : ['advisoryId', 'limit', 'offset', 'sort', 'search', 'filterId', 'filterInsightsId', 'filterDisplayName', 'filterLastEvaluation', 'filterLastUpload', 'filterRhsaCount', 'filterRhbaCount', 'filterRheaCount', 'filterOtherCount', 'filterSatelliteManaged', 'filterStale', 'filterStaleTimestamp', 'filterStaleWarningTimestamp', 'filterCulledTimestamp', 'filterCreated', 'filterOsname', 'filterOsminor', 'filterOsmajor', 'filterOs', 'filterBuiltPkgcache', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAdvisorySystemsIdsParams;
     const { advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/ids/advisories/{advisory_id}/systems`
@@ -391,7 +391,7 @@ export const listAdvisorySystemsIdsParamCreator = async (...config: ([ListAdviso
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -403,6 +403,8 @@ export const listAdvisorySystemsIdsParamCreator = async (...config: ([ListAdviso
         }
         ]
     };
+
+    return sendRequest<ListAdvisorySystemsIdsReturnType>(Promise.resolve(args));
 }
 
 export default listAdvisorySystemsIdsParamCreator;

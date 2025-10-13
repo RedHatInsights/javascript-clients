@@ -45,7 +45,7 @@ export type ListContainerProjectContainerTemplatesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerProjectContainerTemplatesReturnType = AxiosPromise<ContainerTemplatesCollection>;
+export type ListContainerProjectContainerTemplatesReturnType = ContainerTemplatesCollection;
 
 const isListContainerProjectContainerTemplatesObjectParams = (params: [ListContainerProjectContainerTemplatesParams] | unknown[]): params is [ListContainerProjectContainerTemplatesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListContainerProjectContainerTemplatesObjectParams = (params: [ListConta
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerProjectContainerTemplatesParamCreator = async (...config: ([ListContainerProjectContainerTemplatesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerProjectContainerTemplatesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerProjectContainerTemplatesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerProjectContainerTemplatesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerProjectContainerTemplatesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_projects/{id}/container_templates`
@@ -93,7 +93,7 @@ export const listContainerProjectContainerTemplatesParamCreator = async (...conf
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listContainerProjectContainerTemplatesParamCreator = async (...conf
         }
         ]
     };
+
+    return sendRequest<ListContainerProjectContainerTemplatesReturnType>(Promise.resolve(args));
 }
 
 export default listContainerProjectContainerTemplatesParamCreator;

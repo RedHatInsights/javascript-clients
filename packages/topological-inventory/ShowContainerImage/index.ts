@@ -21,7 +21,7 @@ export type ShowContainerImageParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowContainerImageReturnType = AxiosPromise<ContainerImage>;
+export type ShowContainerImageReturnType = ContainerImage;
 
 const isShowContainerImageObjectParams = (params: [ShowContainerImageParams] | unknown[]): params is [ShowContainerImageParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowContainerImageObjectParams = (params: [ShowContainerImageParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showContainerImageParamCreator = async (...config: ([ShowContainerImageParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showContainerImageParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowContainerImageParams] | [string, AxiosRequestConfig])) => {
     const params = isShowContainerImageObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowContainerImageParams;
     const { id, options = {} } = params;
     const localVarPath = `/container_images/{id}`
@@ -53,7 +53,7 @@ export const showContainerImageParamCreator = async (...config: ([ShowContainerI
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showContainerImageParamCreator = async (...config: ([ShowContainerI
         }
         ]
     };
+
+    return sendRequest<ShowContainerImageReturnType>(Promise.resolve(args));
 }
 
 export default showContainerImageParamCreator;

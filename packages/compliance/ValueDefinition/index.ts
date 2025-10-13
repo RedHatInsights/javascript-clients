@@ -33,12 +33,12 @@ export type ValueDefinitionParams = {
   options?: AxiosRequestConfig
 }
 
-export type ValueDefinitionReturnType = AxiosPromise<ValueDefinition200Response>;
+export type ValueDefinitionReturnType = ValueDefinition200Response;
 
 const isValueDefinitionObjectParams = (params: [ValueDefinitionParams] | unknown[]): params is [ValueDefinitionParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'valueDefinitionId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'valueDefinitionId')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isValueDefinitionObjectParams = (params: [ValueDefinitionParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const valueDefinitionParamCreator = async (...config: ([ValueDefinitionParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const valueDefinitionParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ValueDefinitionParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isValueDefinitionObjectParams(config) ? config[0] : ['securityGuideId', 'valueDefinitionId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ValueDefinitionParams;
     const { securityGuideId, valueDefinitionId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/value_definitions/{value_definition_id}`
@@ -72,10 +72,12 @@ export const valueDefinitionParamCreator = async (...config: ([ValueDefinitionPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ValueDefinitionReturnType>(Promise.resolve(args));
 }
 
 export default valueDefinitionParamCreator;

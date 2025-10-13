@@ -39,7 +39,7 @@ export type ListClustersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListClustersReturnType = AxiosPromise<ClustersCollection>;
+export type ListClustersReturnType = ClustersCollection;
 
 const isListClustersObjectParams = (params: [ListClustersParams] | unknown[]): params is [ListClustersParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListClustersObjectParams = (params: [ListClustersParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listClustersParamCreator = async (...config: ([ListClustersParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listClustersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListClustersParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListClustersObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListClustersParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/clusters`;
@@ -86,7 +86,7 @@ export const listClustersParamCreator = async (...config: ([ListClustersParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listClustersParamCreator = async (...config: ([ListClustersParams] 
         }
         ]
     };
+
+    return sendRequest<ListClustersReturnType>(Promise.resolve(args));
 }
 
 export default listClustersParamCreator;

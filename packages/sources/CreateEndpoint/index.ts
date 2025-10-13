@@ -21,12 +21,12 @@ export type CreateEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateEndpointReturnType = AxiosPromise<Endpoint>;
+export type CreateEndpointReturnType = Endpoint;
 
 const isCreateEndpointObjectParams = (params: [CreateEndpointParams] | unknown[]): params is [CreateEndpointParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'endpoint')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'endpoint')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isCreateEndpointObjectParams = (params: [CreateEndpointParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createEndpointParamCreator = async (...config: ([CreateEndpointParams] | [Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreateEndpointParams] | [Endpoint, AxiosRequestConfig])) => {
     const params = isCreateEndpointObjectParams(config) ? config[0] : ['endpoint', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateEndpointParams;
     const { endpoint, options = {} } = params;
     const localVarPath = `/endpoints`;
@@ -54,7 +54,7 @@ export const createEndpointParamCreator = async (...config: ([CreateEndpointPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: endpoint,
@@ -66,6 +66,8 @@ export const createEndpointParamCreator = async (...config: ([CreateEndpointPara
         }
         ]
     };
+
+    return sendRequest<CreateEndpointReturnType>(Promise.resolve(args));
 }
 
 export default createEndpointParamCreator;

@@ -76,7 +76,7 @@ export const ExportAdvisoriesFilterAdvisoryTypeNameEnum = {
 } as const;
 export type ExportAdvisoriesFilterAdvisoryTypeNameEnum = typeof ExportAdvisoriesFilterAdvisoryTypeNameEnum[keyof typeof ExportAdvisoriesFilterAdvisoryTypeNameEnum];
 
-export type ExportAdvisoriesReturnType = AxiosPromise<Array<ControllersAdvisoriesDBLookup>>;
+export type ExportAdvisoriesReturnType = Array<ControllersAdvisoriesDBLookup>;
 
 const isExportAdvisoriesObjectParams = (params: [ExportAdvisoriesParams] | unknown[]): params is [ExportAdvisoriesParams] => {
   const l = params.length === 1
@@ -92,7 +92,7 @@ const isExportAdvisoriesObjectParams = (params: [ExportAdvisoriesParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportAdvisoriesParamCreator = async (...config: ([ExportAdvisoriesParams] | [string, string, string, string, string, ExportAdvisoriesFilterAdvisoryTypeNameEnum, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportAdvisoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportAdvisoriesParams] | [string, string, string, string, string, ExportAdvisoriesFilterAdvisoryTypeNameEnum, number, number, AxiosRequestConfig])) => {
     const params = isExportAdvisoriesObjectParams(config) ? config[0] : ['search', 'filterId', 'filterDescription', 'filterPublicDate', 'filterSynopsis', 'filterAdvisoryTypeName', 'filterSeverity', 'filterApplicableSystems', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportAdvisoriesParams;
     const { search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options = {} } = params;
     const localVarPath = `/export/advisories`;
@@ -139,7 +139,7 @@ export const exportAdvisoriesParamCreator = async (...config: ([ExportAdvisories
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -151,6 +151,8 @@ export const exportAdvisoriesParamCreator = async (...config: ([ExportAdvisories
         }
         ]
     };
+
+    return sendRequest<ExportAdvisoriesReturnType>(Promise.resolve(args));
 }
 
 export default exportAdvisoriesParamCreator;

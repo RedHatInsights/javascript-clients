@@ -21,12 +21,12 @@ export type PostGraphQLParams = {
   options?: AxiosRequestConfig
 }
 
-export type PostGraphQLReturnType = AxiosPromise<GraphQLResponse>;
+export type PostGraphQLReturnType = GraphQLResponse;
 
 const isPostGraphQLObjectParams = (params: [PostGraphQLParams] | unknown[]): params is [PostGraphQLParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'graphQLRequest')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'graphQLRequest')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isPostGraphQLObjectParams = (params: [PostGraphQLParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const postGraphQLParamCreator = async (...config: ([PostGraphQLParams] | [GraphQLRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const postGraphQLParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PostGraphQLParams] | [GraphQLRequest, AxiosRequestConfig])) => {
     const params = isPostGraphQLObjectParams(config) ? config[0] : ['graphQLRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PostGraphQLParams;
     const { graphQLRequest, options = {} } = params;
     const localVarPath = `/graphql`;
@@ -54,7 +54,7 @@ export const postGraphQLParamCreator = async (...config: ([PostGraphQLParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: graphQLRequest,
@@ -66,6 +66,8 @@ export const postGraphQLParamCreator = async (...config: ([PostGraphQLParams] | 
         }
         ]
     };
+
+    return sendRequest<PostGraphQLReturnType>(Promise.resolve(args));
 }
 
 export default postGraphQLParamCreator;

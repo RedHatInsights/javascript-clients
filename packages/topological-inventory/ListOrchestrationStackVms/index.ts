@@ -45,7 +45,7 @@ export type ListOrchestrationStackVmsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackVmsReturnType = AxiosPromise<VmsCollection>;
+export type ListOrchestrationStackVmsReturnType = VmsCollection;
 
 const isListOrchestrationStackVmsObjectParams = (params: [ListOrchestrationStackVmsParams] | unknown[]): params is [ListOrchestrationStackVmsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListOrchestrationStackVmsObjectParams = (params: [ListOrchestrationStack
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackVmsParamCreator = async (...config: ([ListOrchestrationStackVmsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackVmsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackVmsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackVmsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackVmsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/vms`
@@ -93,7 +93,7 @@ export const listOrchestrationStackVmsParamCreator = async (...config: ([ListOrc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listOrchestrationStackVmsParamCreator = async (...config: ([ListOrc
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackVmsReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackVmsParamCreator;

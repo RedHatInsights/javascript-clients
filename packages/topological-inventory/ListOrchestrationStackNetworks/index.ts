@@ -45,7 +45,7 @@ export type ListOrchestrationStackNetworksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackNetworksReturnType = AxiosPromise<NetworksCollection>;
+export type ListOrchestrationStackNetworksReturnType = NetworksCollection;
 
 const isListOrchestrationStackNetworksObjectParams = (params: [ListOrchestrationStackNetworksParams] | unknown[]): params is [ListOrchestrationStackNetworksParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListOrchestrationStackNetworksObjectParams = (params: [ListOrchestration
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackNetworksParamCreator = async (...config: ([ListOrchestrationStackNetworksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackNetworksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackNetworksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackNetworksObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackNetworksParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/networks`
@@ -93,7 +93,7 @@ export const listOrchestrationStackNetworksParamCreator = async (...config: ([Li
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listOrchestrationStackNetworksParamCreator = async (...config: ([Li
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackNetworksReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackNetworksParamCreator;

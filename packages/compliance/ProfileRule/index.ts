@@ -39,12 +39,12 @@ export type ProfileRuleParams = {
   options?: AxiosRequestConfig
 }
 
-export type ProfileRuleReturnType = AxiosPromise<Rule200Response>;
+export type ProfileRuleReturnType = Rule200Response;
 
 const isProfileRuleObjectParams = (params: [ProfileRuleParams] | unknown[]): params is [ProfileRuleParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'profileId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'profileId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
   }
   return false
 }
@@ -55,7 +55,7 @@ const isProfileRuleObjectParams = (params: [ProfileRuleParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const profileRuleParamCreator = async (...config: ([ProfileRuleParams] | [any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const profileRuleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ProfileRuleParams] | [any, any, any, any, AxiosRequestConfig])) => {
     const params = isProfileRuleObjectParams(config) ? config[0] : ['securityGuideId', 'profileId', 'ruleId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfileRuleParams;
     const { securityGuideId, profileId, ruleId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/profiles/{profile_id}/rules/{rule_id}`
@@ -79,10 +79,12 @@ export const profileRuleParamCreator = async (...config: ([ProfileRuleParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ProfileRuleReturnType>(Promise.resolve(args));
 }
 
 export default profileRuleParamCreator;

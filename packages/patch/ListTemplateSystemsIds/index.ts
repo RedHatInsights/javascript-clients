@@ -82,12 +82,12 @@ export const ListTemplateSystemsIdsSortEnum = {
 } as const;
 export type ListTemplateSystemsIdsSortEnum = typeof ListTemplateSystemsIdsSortEnum[keyof typeof ListTemplateSystemsIdsSortEnum];
 
-export type ListTemplateSystemsIdsReturnType = AxiosPromise<ControllersIDsPlainResponse>;
+export type ListTemplateSystemsIdsReturnType = ControllersIDsPlainResponse;
 
 const isListTemplateSystemsIdsObjectParams = (params: [ListTemplateSystemsIdsParams] | unknown[]): params is [ListTemplateSystemsIdsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'templateId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'templateId')
   }
   return false
 }
@@ -98,7 +98,7 @@ const isListTemplateSystemsIdsObjectParams = (params: [ListTemplateSystemsIdsPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTemplateSystemsIdsParamCreator = async (...config: ([ListTemplateSystemsIdsParams] | [string, number, number, ListTemplateSystemsIdsSortEnum, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTemplateSystemsIdsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTemplateSystemsIdsParams] | [string, number, number, ListTemplateSystemsIdsSortEnum, string, string, string, Array<string>, AxiosRequestConfig])) => {
     const params = isListTemplateSystemsIdsObjectParams(config) ? config[0] : ['templateId', 'limit', 'offset', 'sort', 'search', 'filterDisplayName', 'filterOs', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTemplateSystemsIdsParams;
     const { templateId, limit, offset, sort, search, filterDisplayName, filterOs, tags, options = {} } = params;
     const localVarPath = `/ids/templates/{template_id}/systems`
@@ -142,7 +142,7 @@ export const listTemplateSystemsIdsParamCreator = async (...config: ([ListTempla
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -154,6 +154,8 @@ export const listTemplateSystemsIdsParamCreator = async (...config: ([ListTempla
         }
         ]
     };
+
+    return sendRequest<ListTemplateSystemsIdsReturnType>(Promise.resolve(args));
 }
 
 export default listTemplateSystemsIdsParamCreator;

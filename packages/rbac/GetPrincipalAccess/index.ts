@@ -71,7 +71,7 @@ export const GetPrincipalAccessStatusEnum = {
 } as const;
 export type GetPrincipalAccessStatusEnum = typeof GetPrincipalAccessStatusEnum[keyof typeof GetPrincipalAccessStatusEnum];
 
-export type GetPrincipalAccessReturnType = AxiosPromise<AccessPagination>;
+export type GetPrincipalAccessReturnType = AccessPagination;
 
 const isGetPrincipalAccessObjectParams = (params: [GetPrincipalAccessParams] | unknown[]): params is [GetPrincipalAccessParams] => {
   const l = params.length === 1
@@ -87,7 +87,7 @@ const isGetPrincipalAccessObjectParams = (params: [GetPrincipalAccessParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPrincipalAccessParamCreator = async (...config: ([GetPrincipalAccessParams] | [string, string, GetPrincipalAccessOrderByEnum, GetPrincipalAccessStatusEnum, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPrincipalAccessParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetPrincipalAccessParams] | [string, string, GetPrincipalAccessOrderByEnum, GetPrincipalAccessStatusEnum, number, number, AxiosRequestConfig])) => {
     const params = isGetPrincipalAccessObjectParams(config) ? config[0] : ['application', 'username', 'orderBy', 'status', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPrincipalAccessParams;
     const { application, username, orderBy, status, limit, offset, options = {} } = params;
     const localVarPath = `/access/`;
@@ -126,7 +126,7 @@ export const getPrincipalAccessParamCreator = async (...config: ([GetPrincipalAc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -137,6 +137,8 @@ export const getPrincipalAccessParamCreator = async (...config: ([GetPrincipalAc
         }
         ]
     };
+
+    return sendRequest<GetPrincipalAccessReturnType>(Promise.resolve(args));
 }
 
 export default getPrincipalAccessParamCreator;

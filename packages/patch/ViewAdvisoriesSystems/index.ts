@@ -81,12 +81,12 @@ export type ViewAdvisoriesSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ViewAdvisoriesSystemsReturnType = AxiosPromise<ControllersAdvisoriesSystemsResponse>;
+export type ViewAdvisoriesSystemsReturnType = ControllersAdvisoriesSystemsResponse;
 
 const isViewAdvisoriesSystemsObjectParams = (params: [ViewAdvisoriesSystemsParams] | unknown[]): params is [ViewAdvisoriesSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'body')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'body')
   }
   return false
 }
@@ -97,7 +97,7 @@ const isViewAdvisoriesSystemsObjectParams = (params: [ViewAdvisoriesSystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const viewAdvisoriesSystemsParamCreator = async (...config: ([ViewAdvisoriesSystemsParams] | [ControllersSystemsAdvisoriesRequest, number, number, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const viewAdvisoriesSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ViewAdvisoriesSystemsParams] | [ControllersSystemsAdvisoriesRequest, number, number, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isViewAdvisoriesSystemsObjectParams(config) ? config[0] : ['body', 'limit', 'offset', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ViewAdvisoriesSystemsParams;
     const { body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/views/advisories/systems`;
@@ -154,7 +154,7 @@ export const viewAdvisoriesSystemsParamCreator = async (...config: ([ViewAdvisor
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
@@ -167,6 +167,8 @@ export const viewAdvisoriesSystemsParamCreator = async (...config: ([ViewAdvisor
         }
         ]
     };
+
+    return sendRequest<ViewAdvisoriesSystemsReturnType>(Promise.resolve(args));
 }
 
 export default viewAdvisoriesSystemsParamCreator;

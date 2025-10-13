@@ -76,7 +76,7 @@ export const GetPoliciesIdsFilterIsEnabledEnum = {
 } as const;
 export type GetPoliciesIdsFilterIsEnabledEnum = typeof GetPoliciesIdsFilterIsEnabledEnum[keyof typeof GetPoliciesIdsFilterIsEnabledEnum];
 
-export type GetPoliciesIdsReturnType = AxiosPromise<Array<string>>;
+export type GetPoliciesIdsReturnType = Array<string>;
 
 const isGetPoliciesIdsObjectParams = (params: [GetPoliciesIdsParams] | unknown[]): params is [GetPoliciesIdsParams] => {
   const l = params.length === 1
@@ -92,7 +92,7 @@ const isGetPoliciesIdsObjectParams = (params: [GetPoliciesIdsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPoliciesIdsParamCreator = async (...config: ([GetPoliciesIdsParams] | [string, GetPoliciesIdsFilteropNameEnum, string, GetPoliciesIdsFilteropDescriptionEnum, GetPoliciesIdsFilterIsEnabledEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPoliciesIdsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetPoliciesIdsParams] | [string, GetPoliciesIdsFilteropNameEnum, string, GetPoliciesIdsFilteropDescriptionEnum, GetPoliciesIdsFilterIsEnabledEnum, AxiosRequestConfig])) => {
     const params = isGetPoliciesIdsObjectParams(config) ? config[0] : ['filterName', 'filteropName', 'filterDescription', 'filteropDescription', 'filterIsEnabled', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPoliciesIdsParams;
     const { filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options = {} } = params;
     const localVarPath = `/policies/ids`;
@@ -127,10 +127,12 @@ export const getPoliciesIdsParamCreator = async (...config: ([GetPoliciesIdsPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetPoliciesIdsReturnType>(Promise.resolve(args));
 }
 
 export default getPoliciesIdsParamCreator;

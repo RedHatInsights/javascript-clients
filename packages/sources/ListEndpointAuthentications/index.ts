@@ -45,12 +45,12 @@ export type ListEndpointAuthenticationsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListEndpointAuthenticationsReturnType = AxiosPromise<AuthenticationsCollection>;
+export type ListEndpointAuthenticationsReturnType = AuthenticationsCollection;
 
 const isListEndpointAuthenticationsObjectParams = (params: [ListEndpointAuthenticationsParams] | unknown[]): params is [ListEndpointAuthenticationsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -61,7 +61,7 @@ const isListEndpointAuthenticationsObjectParams = (params: [ListEndpointAuthenti
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listEndpointAuthenticationsParamCreator = async (...config: ([ListEndpointAuthenticationsParams] | [string, number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listEndpointAuthenticationsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListEndpointAuthenticationsParams] | [string, number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListEndpointAuthenticationsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListEndpointAuthenticationsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/endpoints/{id}/authentications`
@@ -93,7 +93,7 @@ export const listEndpointAuthenticationsParamCreator = async (...config: ([ListE
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listEndpointAuthenticationsParamCreator = async (...config: ([ListE
         }
         ]
     };
+
+    return sendRequest<ListEndpointAuthenticationsReturnType>(Promise.resolve(args));
 }
 
 export default listEndpointAuthenticationsParamCreator;

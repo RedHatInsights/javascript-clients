@@ -21,12 +21,12 @@ export type FavoritesGetParams = {
   options?: AxiosRequestConfig
 }
 
-export type FavoritesGetReturnType = AxiosPromise<FavoritesGet200Response>;
+export type FavoritesGetReturnType = FavoritesGet200Response;
 
 const isFavoritesGetObjectParams = (params: [FavoritesGetParams] | unknown[]): params is [FavoritesGetParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'account')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'account')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isFavoritesGetObjectParams = (params: [FavoritesGetParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const favoritesGetParamCreator = async (...config: ([FavoritesGetParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const favoritesGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([FavoritesGetParams] | [string, AxiosRequestConfig])) => {
     const params = isFavoritesGetObjectParams(config) ? config[0] : ['account', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as FavoritesGetParams;
     const { account, options = {} } = params;
     const localVarPath = `/favorites`;
@@ -56,10 +56,12 @@ export const favoritesGetParamCreator = async (...config: ([FavoritesGetParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<FavoritesGetReturnType>(Promise.resolve(args));
 }
 
 export default favoritesGetParamCreator;

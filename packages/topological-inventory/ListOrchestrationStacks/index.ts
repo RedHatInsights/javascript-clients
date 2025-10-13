@@ -39,7 +39,7 @@ export type ListOrchestrationStacksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStacksReturnType = AxiosPromise<OrchestrationStacksCollection>;
+export type ListOrchestrationStacksReturnType = OrchestrationStacksCollection;
 
 const isListOrchestrationStacksObjectParams = (params: [ListOrchestrationStacksParams] | unknown[]): params is [ListOrchestrationStacksParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListOrchestrationStacksObjectParams = (params: [ListOrchestrationStacksP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStacksParamCreator = async (...config: ([ListOrchestrationStacksParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStacksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStacksParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStacksObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStacksParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks`;
@@ -86,7 +86,7 @@ export const listOrchestrationStacksParamCreator = async (...config: ([ListOrche
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listOrchestrationStacksParamCreator = async (...config: ([ListOrche
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStacksReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStacksParamCreator;

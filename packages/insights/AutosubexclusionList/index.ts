@@ -27,7 +27,7 @@ export type AutosubexclusionListParams = {
   options?: AxiosRequestConfig
 }
 
-export type AutosubexclusionListReturnType = AxiosPromise<PaginatedSubscriptionExcludedAccountList>;
+export type AutosubexclusionListReturnType = PaginatedSubscriptionExcludedAccountList;
 
 const isAutosubexclusionListObjectParams = (params: [AutosubexclusionListParams] | unknown[]): params is [AutosubexclusionListParams] => {
   const l = params.length === 1
@@ -42,7 +42,7 @@ const isAutosubexclusionListObjectParams = (params: [AutosubexclusionListParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const autosubexclusionListParamCreator = async (...config: ([AutosubexclusionListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const autosubexclusionListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AutosubexclusionListParams] | [number, number, AxiosRequestConfig])) => {
     const params = isAutosubexclusionListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AutosubexclusionListParams;
     const { limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/autosubexclusion/`;
@@ -65,7 +65,7 @@ export const autosubexclusionListParamCreator = async (...config: ([Autosubexclu
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -77,6 +77,8 @@ export const autosubexclusionListParamCreator = async (...config: ([Autosubexclu
         }
         ]
     };
+
+    return sendRequest<AutosubexclusionListReturnType>(Promise.resolve(args));
 }
 
 export default autosubexclusionListParamCreator;

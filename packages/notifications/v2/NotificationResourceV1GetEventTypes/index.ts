@@ -69,7 +69,7 @@ export type NotificationResourceV1GetEventTypesParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetEventTypesReturnType = AxiosPromise<PageEventType>;
+export type NotificationResourceV1GetEventTypesReturnType = PageEventType;
 
 const isNotificationResourceV1GetEventTypesObjectParams = (params: [NotificationResourceV1GetEventTypesParams] | unknown[]): params is [NotificationResourceV1GetEventTypesParams] => {
   const l = params.length === 1
@@ -85,7 +85,7 @@ const isNotificationResourceV1GetEventTypesObjectParams = (params: [Notification
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetEventTypesParamCreator = async (...config: ([NotificationResourceV1GetEventTypesParams] | [any, any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetEventTypesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1GetEventTypesParams] | [any, any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1GetEventTypesObjectParams(config) ? config[0] : ['applicationIds', 'bundleId', 'eventTypeName', 'excludeMutedTypes', 'limit', 'offset', 'pageNumber', 'sortBy', 'sortBy2', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetEventTypesParams;
     const { applicationIds, bundleId, eventTypeName, excludeMutedTypes, limit, offset, pageNumber, sortBy, sortBy2, options = {} } = params;
     const localVarPath = `/notifications/eventTypes`;
@@ -136,10 +136,12 @@ export const notificationResourceV1GetEventTypesParamCreator = async (...config:
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1GetEventTypesReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1GetEventTypesParamCreator;

@@ -45,7 +45,7 @@ export type ListSourceSourceRegionsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceSourceRegionsReturnType = AxiosPromise<SourceRegionsCollection>;
+export type ListSourceSourceRegionsReturnType = SourceRegionsCollection;
 
 const isListSourceSourceRegionsObjectParams = (params: [ListSourceSourceRegionsParams] | unknown[]): params is [ListSourceSourceRegionsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceSourceRegionsObjectParams = (params: [ListSourceSourceRegionsP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceSourceRegionsParamCreator = async (...config: ([ListSourceSourceRegionsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceSourceRegionsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceSourceRegionsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceSourceRegionsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceSourceRegionsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/source_regions`
@@ -93,7 +93,7 @@ export const listSourceSourceRegionsParamCreator = async (...config: ([ListSourc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceSourceRegionsParamCreator = async (...config: ([ListSourc
         }
         ]
     };
+
+    return sendRequest<ListSourceSourceRegionsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceSourceRegionsParamCreator;

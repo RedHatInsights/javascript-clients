@@ -45,7 +45,7 @@ export type ListSubscriptionServiceInstancesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSubscriptionServiceInstancesReturnType = AxiosPromise<ServiceInstancesCollection>;
+export type ListSubscriptionServiceInstancesReturnType = ServiceInstancesCollection;
 
 const isListSubscriptionServiceInstancesObjectParams = (params: [ListSubscriptionServiceInstancesParams] | unknown[]): params is [ListSubscriptionServiceInstancesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSubscriptionServiceInstancesObjectParams = (params: [ListSubscriptio
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSubscriptionServiceInstancesParamCreator = async (...config: ([ListSubscriptionServiceInstancesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSubscriptionServiceInstancesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSubscriptionServiceInstancesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSubscriptionServiceInstancesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSubscriptionServiceInstancesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/subscriptions/{id}/service_instances`
@@ -93,7 +93,7 @@ export const listSubscriptionServiceInstancesParamCreator = async (...config: ([
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSubscriptionServiceInstancesParamCreator = async (...config: ([
         }
         ]
     };
+
+    return sendRequest<ListSubscriptionServiceInstancesReturnType>(Promise.resolve(args));
 }
 
 export default listSubscriptionServiceInstancesParamCreator;

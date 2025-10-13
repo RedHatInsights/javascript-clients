@@ -21,7 +21,7 @@ export type ShowServiceInstanceNodeParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowServiceInstanceNodeReturnType = AxiosPromise<ServiceInstanceNode>;
+export type ShowServiceInstanceNodeReturnType = ServiceInstanceNode;
 
 const isShowServiceInstanceNodeObjectParams = (params: [ShowServiceInstanceNodeParams] | unknown[]): params is [ShowServiceInstanceNodeParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowServiceInstanceNodeObjectParams = (params: [ShowServiceInstanceNodeP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showServiceInstanceNodeParamCreator = async (...config: ([ShowServiceInstanceNodeParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showServiceInstanceNodeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowServiceInstanceNodeParams] | [string, AxiosRequestConfig])) => {
     const params = isShowServiceInstanceNodeObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowServiceInstanceNodeParams;
     const { id, options = {} } = params;
     const localVarPath = `/service_instance_nodes/{id}`
@@ -53,7 +53,7 @@ export const showServiceInstanceNodeParamCreator = async (...config: ([ShowServi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showServiceInstanceNodeParamCreator = async (...config: ([ShowServi
         }
         ]
     };
+
+    return sendRequest<ShowServiceInstanceNodeReturnType>(Promise.resolve(args));
 }
 
 export default showServiceInstanceNodeParamCreator;

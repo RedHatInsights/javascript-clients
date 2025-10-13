@@ -27,7 +27,7 @@ export type NotificationResourceV1GetApplicationByNameAndBundleNameParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetApplicationByNameAndBundleNameReturnType = AxiosPromise<Application>;
+export type NotificationResourceV1GetApplicationByNameAndBundleNameReturnType = Application;
 
 const isNotificationResourceV1GetApplicationByNameAndBundleNameObjectParams = (params: [NotificationResourceV1GetApplicationByNameAndBundleNameParams] | unknown[]): params is [NotificationResourceV1GetApplicationByNameAndBundleNameParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isNotificationResourceV1GetApplicationByNameAndBundleNameObjectParams = (p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetApplicationByNameAndBundleNameParamCreator = async (...config: ([NotificationResourceV1GetApplicationByNameAndBundleNameParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetApplicationByNameAndBundleNameParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1GetApplicationByNameAndBundleNameParams] | [any, any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1GetApplicationByNameAndBundleNameObjectParams(config) ? config[0] : ['applicationName', 'bundleName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetApplicationByNameAndBundleNameParams;
     const { applicationName, bundleName, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleName}/applications/{applicationName}`
@@ -60,10 +60,12 @@ export const notificationResourceV1GetApplicationByNameAndBundleNameParamCreator
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1GetApplicationByNameAndBundleNameReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1GetApplicationByNameAndBundleNameParamCreator;

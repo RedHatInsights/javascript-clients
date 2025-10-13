@@ -45,7 +45,7 @@ export type ListSourceServiceInventoriesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceServiceInventoriesReturnType = AxiosPromise<ServiceInventoriesCollection>;
+export type ListSourceServiceInventoriesReturnType = ServiceInventoriesCollection;
 
 const isListSourceServiceInventoriesObjectParams = (params: [ListSourceServiceInventoriesParams] | unknown[]): params is [ListSourceServiceInventoriesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceServiceInventoriesObjectParams = (params: [ListSourceServiceIn
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceServiceInventoriesParamCreator = async (...config: ([ListSourceServiceInventoriesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceServiceInventoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceServiceInventoriesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceServiceInventoriesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceServiceInventoriesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/service_inventories`
@@ -93,7 +93,7 @@ export const listSourceServiceInventoriesParamCreator = async (...config: ([List
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceServiceInventoriesParamCreator = async (...config: ([List
         }
         ]
     };
+
+    return sendRequest<ListSourceServiceInventoriesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceServiceInventoriesParamCreator;

@@ -21,7 +21,7 @@ export type NotificationResourceV1DeleteBehaviorGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1DeleteBehaviorGroupReturnType = AxiosPromise<any>;
+export type NotificationResourceV1DeleteBehaviorGroupReturnType = any;
 
 const isNotificationResourceV1DeleteBehaviorGroupObjectParams = (params: [NotificationResourceV1DeleteBehaviorGroupParams] | unknown[]): params is [NotificationResourceV1DeleteBehaviorGroupParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isNotificationResourceV1DeleteBehaviorGroupObjectParams = (params: [Notifi
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1DeleteBehaviorGroupParamCreator = async (...config: ([NotificationResourceV1DeleteBehaviorGroupParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1DeleteBehaviorGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1DeleteBehaviorGroupParams] | [any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1DeleteBehaviorGroupObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1DeleteBehaviorGroupParams;
     const { id, options = {} } = params;
     const localVarPath = `/notifications/behaviorGroups/{id}`
@@ -53,10 +53,12 @@ export const notificationResourceV1DeleteBehaviorGroupParamCreator = async (...c
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1DeleteBehaviorGroupReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1DeleteBehaviorGroupParamCreator;

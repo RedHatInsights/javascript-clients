@@ -15,7 +15,7 @@ export type OrgConfigResourceV1GetDailyDigestTimePreferenceParams = {
   options?: AxiosRequestConfig
 }
 
-export type OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType = AxiosPromise<any>;
+export type OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType = any;
 
 const isOrgConfigResourceV1GetDailyDigestTimePreferenceObjectParams = (params: [OrgConfigResourceV1GetDailyDigestTimePreferenceParams] | unknown[]): params is [OrgConfigResourceV1GetDailyDigestTimePreferenceParams] => {
   const l = params.length === 1
@@ -31,7 +31,7 @@ const isOrgConfigResourceV1GetDailyDigestTimePreferenceObjectParams = (params: [
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const orgConfigResourceV1GetDailyDigestTimePreferenceParamCreator = async (...config: ([OrgConfigResourceV1GetDailyDigestTimePreferenceParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const orgConfigResourceV1GetDailyDigestTimePreferenceParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([OrgConfigResourceV1GetDailyDigestTimePreferenceParams] | [AxiosRequestConfig])) => {
     const params = isOrgConfigResourceV1GetDailyDigestTimePreferenceObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as OrgConfigResourceV1GetDailyDigestTimePreferenceParams;
     const { options = {} } = params;
     const localVarPath = `/org-config/daily-digest/time-preference`;
@@ -46,10 +46,12 @@ export const orgConfigResourceV1GetDailyDigestTimePreferenceParamCreator = async
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType>(Promise.resolve(args));
 }
 
 export default orgConfigResourceV1GetDailyDigestTimePreferenceParamCreator;

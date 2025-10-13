@@ -33,12 +33,12 @@ export type ReportTestResultParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportTestResultReturnType = AxiosPromise<System200Response>;
+export type ReportTestResultReturnType = System200Response;
 
 const isReportTestResultObjectParams = (params: [ReportTestResultParams] | unknown[]): params is [ReportTestResultParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'testResultId') && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'testResultId') && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isReportTestResultObjectParams = (params: [ReportTestResultParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportTestResultParamCreator = async (...config: ([ReportTestResultParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportTestResultParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportTestResultParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isReportTestResultObjectParams(config) ? config[0] : ['testResultId', 'reportId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportTestResultParams;
     const { testResultId, reportId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/reports/{report_id}/test_results/{test_result_id}`
@@ -72,10 +72,12 @@ export const reportTestResultParamCreator = async (...config: ([ReportTestResult
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportTestResultReturnType>(Promise.resolve(args));
 }
 
 export default reportTestResultParamCreator;

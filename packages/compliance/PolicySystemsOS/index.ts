@@ -33,12 +33,12 @@ export type PolicySystemsOSParams = {
   options?: AxiosRequestConfig
 }
 
-export type PolicySystemsOSReturnType = AxiosPromise<any>;
+export type PolicySystemsOSReturnType = any;
 
 const isPolicySystemsOSObjectParams = (params: [PolicySystemsOSParams] | unknown[]): params is [PolicySystemsOSParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
   }
   return false
 }
@@ -50,7 +50,7 @@ const isPolicySystemsOSObjectParams = (params: [PolicySystemsOSParams] | unknown
 * @deprecated
 * @throws {RequiredError}
 */
-export const policySystemsOSParamCreator = async (...config: ([PolicySystemsOSParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const policySystemsOSParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PolicySystemsOSParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isPolicySystemsOSObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PolicySystemsOSParams;
     const { policyId, xRHIDENTITY, filter, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/systems/os_versions`
@@ -76,10 +76,12 @@ export const policySystemsOSParamCreator = async (...config: ([PolicySystemsOSPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<PolicySystemsOSReturnType>(Promise.resolve(args));
 }
 
 export default policySystemsOSParamCreator;

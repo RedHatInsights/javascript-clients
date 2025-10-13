@@ -21,7 +21,7 @@ export type NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointPa
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType = AxiosPromise<any>;
+export type NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType = any;
 
 const isNotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointObjectParams = (params: [NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams] | unknown[]): params is [NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isNotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointObject
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParamCreator = async (...config: ([NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams] | [any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointObjectParams(config) ? config[0] : ['endpointId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams;
     const { endpointId, options = {} } = params;
     const localVarPath = `/notifications/behaviorGroups/affectedByRemovalOfEndpoint/{endpointId}`
@@ -53,10 +53,12 @@ export const notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointP
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParamCreator;

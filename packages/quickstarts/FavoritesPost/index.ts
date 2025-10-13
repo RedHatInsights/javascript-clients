@@ -27,12 +27,12 @@ export type FavoritesPostParams = {
   options?: AxiosRequestConfig
 }
 
-export type FavoritesPostReturnType = AxiosPromise<FavoriteQuickstart>;
+export type FavoritesPostReturnType = FavoriteQuickstart;
 
 const isFavoritesPostObjectParams = (params: [FavoritesPostParams] | unknown[]): params is [FavoritesPostParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'account')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'account')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isFavoritesPostObjectParams = (params: [FavoritesPostParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const favoritesPostParamCreator = async (...config: ([FavoritesPostParams] | [string, FavoriteQuickstart, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const favoritesPostParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([FavoritesPostParams] | [string, FavoriteQuickstart, AxiosRequestConfig])) => {
     const params = isFavoritesPostObjectParams(config) ? config[0] : ['account', 'favoriteQuickstart', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as FavoritesPostParams;
     const { account, favoriteQuickstart, options = {} } = params;
     const localVarPath = `/favorites`;
@@ -64,11 +64,13 @@ export const favoritesPostParamCreator = async (...config: ([FavoritesPostParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: favoriteQuickstart,
     };
+
+    return sendRequest<FavoritesPostReturnType>(Promise.resolve(args));
 }
 
 export default favoritesPostParamCreator;

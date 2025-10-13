@@ -39,7 +39,7 @@ export type ListServiceInventoriesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceInventoriesReturnType = AxiosPromise<ServiceInventoriesCollection>;
+export type ListServiceInventoriesReturnType = ServiceInventoriesCollection;
 
 const isListServiceInventoriesObjectParams = (params: [ListServiceInventoriesParams] | unknown[]): params is [ListServiceInventoriesParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListServiceInventoriesObjectParams = (params: [ListServiceInventoriesPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceInventoriesParamCreator = async (...config: ([ListServiceInventoriesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceInventoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceInventoriesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceInventoriesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceInventoriesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_inventories`;
@@ -86,7 +86,7 @@ export const listServiceInventoriesParamCreator = async (...config: ([ListServic
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listServiceInventoriesParamCreator = async (...config: ([ListServic
         }
         ]
     };
+
+    return sendRequest<ListServiceInventoriesReturnType>(Promise.resolve(args));
 }
 
 export default listServiceInventoriesParamCreator;

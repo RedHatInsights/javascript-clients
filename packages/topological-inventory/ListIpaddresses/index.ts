@@ -39,7 +39,7 @@ export type ListIpaddressesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
+export type ListIpaddressesReturnType = IpaddressesCollection;
 
 const isListIpaddressesObjectParams = (params: [ListIpaddressesParams] | unknown[]): params is [ListIpaddressesParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListIpaddressesObjectParams = (params: [ListIpaddressesParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listIpaddressesParamCreator = async (...config: ([ListIpaddressesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listIpaddressesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListIpaddressesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListIpaddressesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListIpaddressesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/ipaddresses`;
@@ -86,7 +86,7 @@ export const listIpaddressesParamCreator = async (...config: ([ListIpaddressesPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listIpaddressesParamCreator = async (...config: ([ListIpaddressesPa
         }
         ]
     };
+
+    return sendRequest<ListIpaddressesReturnType>(Promise.resolve(args));
 }
 
 export default listIpaddressesParamCreator;

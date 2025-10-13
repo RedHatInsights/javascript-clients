@@ -21,7 +21,7 @@ export type HostackRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type HostackRetrieveReturnType = AxiosPromise<HostAck>;
+export type HostackRetrieveReturnType = HostAck;
 
 const isHostackRetrieveObjectParams = (params: [HostackRetrieveParams] | unknown[]): params is [HostackRetrieveParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isHostackRetrieveObjectParams = (params: [HostackRetrieveParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const hostackRetrieveParamCreator = async (...config: ([HostackRetrieveParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const hostackRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([HostackRetrieveParams] | [number, AxiosRequestConfig])) => {
     const params = isHostackRetrieveObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HostackRetrieveParams;
     const { id, options = {} } = params;
     const localVarPath = `/api/insights/v1/hostack/{id}/`
@@ -53,7 +53,7 @@ export const hostackRetrieveParamCreator = async (...config: ([HostackRetrievePa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -65,6 +65,8 @@ export const hostackRetrieveParamCreator = async (...config: ([HostackRetrievePa
         }
         ]
     };
+
+    return sendRequest<HostackRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default hostackRetrieveParamCreator;

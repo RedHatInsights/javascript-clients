@@ -21,7 +21,7 @@ export type ApiGroupCreateGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiGroupCreateGroupReturnType = AxiosPromise<GroupOutWithHostCount>;
+export type ApiGroupCreateGroupReturnType = GroupOutWithHostCount;
 
 const isApiGroupCreateGroupObjectParams = (params: [ApiGroupCreateGroupParams] | unknown[]): params is [ApiGroupCreateGroupParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isApiGroupCreateGroupObjectParams = (params: [ApiGroupCreateGroupParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiGroupCreateGroupParamCreator = async (...config: ([ApiGroupCreateGroupParams] | [GroupIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiGroupCreateGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiGroupCreateGroupParams] | [GroupIn, AxiosRequestConfig])) => {
     const params = isApiGroupCreateGroupObjectParams(config) ? config[0] : ['groupIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiGroupCreateGroupParams;
     const { groupIn, options = {} } = params;
     const localVarPath = `/groups`;
@@ -54,7 +54,7 @@ export const apiGroupCreateGroupParamCreator = async (...config: ([ApiGroupCreat
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: groupIn,
@@ -72,6 +72,8 @@ export const apiGroupCreateGroupParamCreator = async (...config: ([ApiGroupCreat
         }
         ]
     };
+
+    return sendRequest<ApiGroupCreateGroupReturnType>(Promise.resolve(args));
 }
 
 export default apiGroupCreateGroupParamCreator;

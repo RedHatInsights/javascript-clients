@@ -1,43 +1,42 @@
 /* tslint:disable */
 /* eslint-disable */
-import type { AxiosStatic } from 'axios'
 import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
-    checkAvailabilitySource,CheckAvailabilitySourceReturnType,
-    createApplication,CreateApplicationReturnType,
-    createAuthentication,CreateAuthenticationReturnType,
-    createEndpoint,CreateEndpointReturnType,
-    createSource,CreateSourceReturnType,
-    deleteApplication,DeleteApplicationReturnType,
-    deleteAuthentication,DeleteAuthenticationReturnType,
-    deleteEndpoint,DeleteEndpointReturnType,
-    deleteSource,DeleteSourceReturnType,
-    getDocumentation,GetDocumentationReturnType,
-    listApplicationTypeSources,ListApplicationTypeSourcesReturnType,
-    listApplicationTypes,ListApplicationTypesReturnType,
-    listApplications,ListApplicationsReturnType,
-    listAuthentications,ListAuthenticationsReturnType,
-    listEndpointAuthentications,ListEndpointAuthenticationsReturnType,
-    listEndpoints,ListEndpointsReturnType,
-    listSourceApplicationTypes,ListSourceApplicationTypesReturnType,
-    listSourceApplications,ListSourceApplicationsReturnType,
-    listSourceAuthentications,ListSourceAuthenticationsReturnType,
-    listSourceEndpoints,ListSourceEndpointsReturnType,
-    listSourceTypeSources,ListSourceTypeSourcesReturnType,
-    listSourceTypes,ListSourceTypesReturnType,
-    listSources,ListSourcesReturnType,
-    postGraphQL,PostGraphQLReturnType,
-    showApplication,ShowApplicationReturnType,
-    showApplicationType,ShowApplicationTypeReturnType,
-    showAuthentication,ShowAuthenticationReturnType,
-    showEndpoint,ShowEndpointReturnType,
-    showSource,ShowSourceReturnType,
-    showSourceType,ShowSourceTypeReturnType,
-    updateApplication,UpdateApplicationReturnType,
-    updateAuthentication,UpdateAuthenticationReturnType,
-    updateEndpoint,UpdateEndpointReturnType,
-    updateSource,UpdateSourceReturnType,
+    checkAvailabilitySource,
+    createApplication,
+    createAuthentication,
+    createEndpoint,
+    createSource,
+    deleteApplication,
+    deleteAuthentication,
+    deleteEndpoint,
+    deleteSource,
+    getDocumentation,
+    listApplicationTypeSources,
+    listApplicationTypes,
+    listApplications,
+    listAuthentications,
+    listEndpointAuthentications,
+    listEndpoints,
+    listSourceApplicationTypes,
+    listSourceApplications,
+    listSourceAuthentications,
+    listSourceEndpoints,
+    listSourceTypeSources,
+    listSourceTypes,
+    listSources,
+    postGraphQL,
+    showApplication,
+    showApplicationType,
+    showAuthentication,
+    showEndpoint,
+    showSource,
+    showSourceType,
+    updateApplication,
+    updateAuthentication,
+    updateEndpoint,
+    updateSource,
 
   } from './index';
 
@@ -80,47 +79,8 @@ const endpointList = {
 
 };
 
-type endpointReturnTypes = {
-      checkAvailabilitySource: CheckAvailabilitySourceReturnType,
-    createApplication: CreateApplicationReturnType,
-    createAuthentication: CreateAuthenticationReturnType,
-    createEndpoint: CreateEndpointReturnType,
-    createSource: CreateSourceReturnType,
-    deleteApplication: DeleteApplicationReturnType,
-    deleteAuthentication: DeleteAuthenticationReturnType,
-    deleteEndpoint: DeleteEndpointReturnType,
-    deleteSource: DeleteSourceReturnType,
-    getDocumentation: GetDocumentationReturnType,
-    listApplicationTypeSources: ListApplicationTypeSourcesReturnType,
-    listApplicationTypes: ListApplicationTypesReturnType,
-    listApplications: ListApplicationsReturnType,
-    listAuthentications: ListAuthenticationsReturnType,
-    listEndpointAuthentications: ListEndpointAuthenticationsReturnType,
-    listEndpoints: ListEndpointsReturnType,
-    listSourceApplicationTypes: ListSourceApplicationTypesReturnType,
-    listSourceApplications: ListSourceApplicationsReturnType,
-    listSourceAuthentications: ListSourceAuthenticationsReturnType,
-    listSourceEndpoints: ListSourceEndpointsReturnType,
-    listSourceTypeSources: ListSourceTypeSourcesReturnType,
-    listSourceTypes: ListSourceTypesReturnType,
-    listSources: ListSourcesReturnType,
-    postGraphQL: PostGraphQLReturnType,
-    showApplication: ShowApplicationReturnType,
-    showApplicationType: ShowApplicationTypeReturnType,
-    showAuthentication: ShowAuthenticationReturnType,
-    showEndpoint: ShowEndpointReturnType,
-    showSource: ShowSourceReturnType,
-    showSourceType: ShowSourceTypeReturnType,
-    updateApplication: UpdateApplicationReturnType,
-    updateAuthentication: UpdateAuthenticationReturnType,
-    updateEndpoint: UpdateEndpointReturnType,
-    updateSource: UpdateSourceReturnType,
-
-
-};
-
 export const SourcesClient = (BASE_PATH: string, instance?: ApiConfig) => {
-  return APIFactory<typeof endpointList, endpointReturnTypes>(BASE_PATH, endpointList, instance);
+  return APIFactory(BASE_PATH, endpointList, instance);
 }
 
 export default SourcesClient;

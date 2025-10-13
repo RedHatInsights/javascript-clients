@@ -27,7 +27,7 @@ export type NotificationResourceV1AppendBehaviorGroupToEventTypeParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType = AxiosPromise<void>;
+export type NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType = void;
 
 const isNotificationResourceV1AppendBehaviorGroupToEventTypeObjectParams = (params: [NotificationResourceV1AppendBehaviorGroupToEventTypeParams] | unknown[]): params is [NotificationResourceV1AppendBehaviorGroupToEventTypeParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isNotificationResourceV1AppendBehaviorGroupToEventTypeObjectParams = (para
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1AppendBehaviorGroupToEventTypeParamCreator = async (...config: ([NotificationResourceV1AppendBehaviorGroupToEventTypeParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1AppendBehaviorGroupToEventTypeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1AppendBehaviorGroupToEventTypeParams] | [any, any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1AppendBehaviorGroupToEventTypeObjectParams(config) ? config[0] : ['behaviorGroupUuid', 'eventTypeUuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1AppendBehaviorGroupToEventTypeParams;
     const { behaviorGroupUuid, eventTypeUuid, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeUuid}/behaviorGroups/{behaviorGroupUuid}`
@@ -60,10 +60,12 @@ export const notificationResourceV1AppendBehaviorGroupToEventTypeParamCreator = 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1AppendBehaviorGroupToEventTypeParamCreator;

@@ -21,7 +21,7 @@ export type ShowContainerParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowContainerReturnType = AxiosPromise<Container>;
+export type ShowContainerReturnType = Container;
 
 const isShowContainerObjectParams = (params: [ShowContainerParams] | unknown[]): params is [ShowContainerParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowContainerObjectParams = (params: [ShowContainerParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showContainerParamCreator = async (...config: ([ShowContainerParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showContainerParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowContainerParams] | [string, AxiosRequestConfig])) => {
     const params = isShowContainerObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowContainerParams;
     const { id, options = {} } = params;
     const localVarPath = `/containers/{id}`
@@ -53,7 +53,7 @@ export const showContainerParamCreator = async (...config: ([ShowContainerParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showContainerParamCreator = async (...config: ([ShowContainerParams
         }
         ]
     };
+
+    return sendRequest<ShowContainerReturnType>(Promise.resolve(args));
 }
 
 export default showContainerParamCreator;

@@ -21,12 +21,12 @@ export type GetResolutionsForIssuesParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetResolutionsForIssuesReturnType = AxiosPromise<{ [key: string]: ResolutionsBatchValue; }>;
+export type GetResolutionsForIssuesReturnType = { [key: string]: ResolutionsBatchValue; };
 
 const isGetResolutionsForIssuesObjectParams = (params: [GetResolutionsForIssuesParams] | unknown[]): params is [GetResolutionsForIssuesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'resolutionsBatchInput')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'resolutionsBatchInput')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isGetResolutionsForIssuesObjectParams = (params: [GetResolutionsForIssuesP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getResolutionsForIssuesParamCreator = async (...config: ([GetResolutionsForIssuesParams] | [ResolutionsBatchInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getResolutionsForIssuesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetResolutionsForIssuesParams] | [ResolutionsBatchInput, AxiosRequestConfig])) => {
     const params = isGetResolutionsForIssuesObjectParams(config) ? config[0] : ['resolutionsBatchInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetResolutionsForIssuesParams;
     const { resolutionsBatchInput, options = {} } = params;
     const localVarPath = `/resolutions`;
@@ -54,11 +54,13 @@ export const getResolutionsForIssuesParamCreator = async (...config: ([GetResolu
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: resolutionsBatchInput,
     };
+
+    return sendRequest<GetResolutionsForIssuesReturnType>(Promise.resolve(args));
 }
 
 export default getResolutionsForIssuesParamCreator;

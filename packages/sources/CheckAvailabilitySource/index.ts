@@ -21,12 +21,12 @@ export type CheckAvailabilitySourceParams = {
   options?: AxiosRequestConfig
 }
 
-export type CheckAvailabilitySourceReturnType = AxiosPromise<void>;
+export type CheckAvailabilitySourceReturnType = void;
 
 const isCheckAvailabilitySourceObjectParams = (params: [CheckAvailabilitySourceParams] | unknown[]): params is [CheckAvailabilitySourceParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isCheckAvailabilitySourceObjectParams = (params: [CheckAvailabilitySourceP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const checkAvailabilitySourceParamCreator = async (...config: ([CheckAvailabilitySourceParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const checkAvailabilitySourceParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CheckAvailabilitySourceParams] | [string, AxiosRequestConfig])) => {
     const params = isCheckAvailabilitySourceObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CheckAvailabilitySourceParams;
     const { id, options = {} } = params;
     const localVarPath = `/sources/{id}/check_availability`
@@ -53,7 +53,7 @@ export const checkAvailabilitySourceParamCreator = async (...config: ([CheckAvai
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const checkAvailabilitySourceParamCreator = async (...config: ([CheckAvai
         }
         ]
     };
+
+    return sendRequest<CheckAvailabilitySourceReturnType>(Promise.resolve(args));
 }
 
 export default checkAvailabilitySourceParamCreator;

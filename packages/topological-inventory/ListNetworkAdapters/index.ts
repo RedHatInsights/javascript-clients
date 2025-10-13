@@ -39,7 +39,7 @@ export type ListNetworkAdaptersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListNetworkAdaptersReturnType = AxiosPromise<NetworkAdaptersCollection>;
+export type ListNetworkAdaptersReturnType = NetworkAdaptersCollection;
 
 const isListNetworkAdaptersObjectParams = (params: [ListNetworkAdaptersParams] | unknown[]): params is [ListNetworkAdaptersParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListNetworkAdaptersObjectParams = (params: [ListNetworkAdaptersParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listNetworkAdaptersParamCreator = async (...config: ([ListNetworkAdaptersParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listNetworkAdaptersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListNetworkAdaptersParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListNetworkAdaptersObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListNetworkAdaptersParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/network_adapters`;
@@ -86,7 +86,7 @@ export const listNetworkAdaptersParamCreator = async (...config: ([ListNetworkAd
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listNetworkAdaptersParamCreator = async (...config: ([ListNetworkAd
         }
         ]
     };
+
+    return sendRequest<ListNetworkAdaptersReturnType>(Promise.resolve(args));
 }
 
 export default listNetworkAdaptersParamCreator;

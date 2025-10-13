@@ -39,7 +39,7 @@ export type StatsReportsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type StatsReportsRetrieveReturnType = AxiosPromise<Stats>;
+export type StatsReportsRetrieveReturnType = Stats;
 
 const isStatsReportsRetrieveObjectParams = (params: [StatsReportsRetrieveParams] | unknown[]): params is [StatsReportsRetrieveParams] => {
   const l = params.length === 1
@@ -54,7 +54,7 @@ const isStatsReportsRetrieveObjectParams = (params: [StatsReportsRetrieveParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const statsReportsRetrieveParamCreator = async (...config: ([StatsReportsRetrieveParams] | [Array<string>, Array<string>, boolean, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const statsReportsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([StatsReportsRetrieveParams] | [Array<string>, Array<string>, boolean, Array<string>, AxiosRequestConfig])) => {
     const params = isStatsReportsRetrieveObjectParams(config) ? config[0] : ['tags', 'groups', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSidsContains', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as StatsReportsRetrieveParams;
     const { tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options = {} } = params;
     const localVarPath = `/api/insights/v1/stats/reports/`;
@@ -85,7 +85,7 @@ export const statsReportsRetrieveParamCreator = async (...config: ([StatsReports
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const statsReportsRetrieveParamCreator = async (...config: ([StatsReports
         }
         ]
     };
+
+    return sendRequest<StatsReportsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default statsReportsRetrieveParamCreator;

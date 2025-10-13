@@ -21,7 +21,7 @@ export type EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointReturnType = AxiosPromise<Endpoint>;
+export type EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointReturnType = Endpoint;
 
 const isEndpointResourceV1GetOrCreateDrawerSubscriptionEndpointObjectParams = (params: [EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams] | unknown[]): params is [EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isEndpointResourceV1GetOrCreateDrawerSubscriptionEndpointObjectParams = (p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1GetOrCreateDrawerSubscriptionEndpointParamCreator = async (...config: ([EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams] | [RequestSystemSubscriptionProperties, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1GetOrCreateDrawerSubscriptionEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams] | [RequestSystemSubscriptionProperties, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1GetOrCreateDrawerSubscriptionEndpointObjectParams(config) ? config[0] : ['requestSystemSubscriptionProperties', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams;
     const { requestSystemSubscriptionProperties, options = {} } = params;
     const localVarPath = `/endpoints/system/drawer_subscription`;
@@ -54,11 +54,13 @@ export const endpointResourceV1GetOrCreateDrawerSubscriptionEndpointParamCreator
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: requestSystemSubscriptionProperties,
     };
+
+    return sendRequest<EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1GetOrCreateDrawerSubscriptionEndpointParamCreator;

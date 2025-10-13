@@ -45,12 +45,12 @@ export type ListSourceEndpointsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceEndpointsReturnType = AxiosPromise<EndpointsCollection>;
+export type ListSourceEndpointsReturnType = EndpointsCollection;
 
 const isListSourceEndpointsObjectParams = (params: [ListSourceEndpointsParams] | unknown[]): params is [ListSourceEndpointsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -61,7 +61,7 @@ const isListSourceEndpointsObjectParams = (params: [ListSourceEndpointsParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceEndpointsParamCreator = async (...config: ([ListSourceEndpointsParams] | [string, number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceEndpointsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceEndpointsParams] | [string, number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceEndpointsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceEndpointsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/endpoints`
@@ -93,7 +93,7 @@ export const listSourceEndpointsParamCreator = async (...config: ([ListSourceEnd
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceEndpointsParamCreator = async (...config: ([ListSourceEnd
         }
         ]
     };
+
+    return sendRequest<ListSourceEndpointsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceEndpointsParamCreator;

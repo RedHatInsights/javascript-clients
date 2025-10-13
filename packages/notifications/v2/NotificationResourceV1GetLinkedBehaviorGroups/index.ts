@@ -51,7 +51,7 @@ export type NotificationResourceV1GetLinkedBehaviorGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetLinkedBehaviorGroupsReturnType = AxiosPromise<any>;
+export type NotificationResourceV1GetLinkedBehaviorGroupsReturnType = any;
 
 const isNotificationResourceV1GetLinkedBehaviorGroupsObjectParams = (params: [NotificationResourceV1GetLinkedBehaviorGroupsParams] | unknown[]): params is [NotificationResourceV1GetLinkedBehaviorGroupsParams] => {
   const l = params.length === 1
@@ -67,7 +67,7 @@ const isNotificationResourceV1GetLinkedBehaviorGroupsObjectParams = (params: [No
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetLinkedBehaviorGroupsParamCreator = async (...config: ([NotificationResourceV1GetLinkedBehaviorGroupsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetLinkedBehaviorGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1GetLinkedBehaviorGroupsParams] | [any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1GetLinkedBehaviorGroupsObjectParams(config) ? config[0] : ['eventTypeId', 'limit', 'offset', 'pageNumber', 'sortBy', 'sortBy2', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetLinkedBehaviorGroupsParams;
     const { eventTypeId, limit, offset, pageNumber, sortBy, sortBy2, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeId}/behaviorGroups`
@@ -103,10 +103,12 @@ export const notificationResourceV1GetLinkedBehaviorGroupsParamCreator = async (
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1GetLinkedBehaviorGroupsReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1GetLinkedBehaviorGroupsParamCreator;

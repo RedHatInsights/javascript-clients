@@ -45,7 +45,7 @@ export type ListSourceContainerGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceContainerGroupsReturnType = AxiosPromise<ContainerGroupsCollection>;
+export type ListSourceContainerGroupsReturnType = ContainerGroupsCollection;
 
 const isListSourceContainerGroupsObjectParams = (params: [ListSourceContainerGroupsParams] | unknown[]): params is [ListSourceContainerGroupsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceContainerGroupsObjectParams = (params: [ListSourceContainerGro
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceContainerGroupsParamCreator = async (...config: ([ListSourceContainerGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceContainerGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceContainerGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceContainerGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceContainerGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/container_groups`
@@ -93,7 +93,7 @@ export const listSourceContainerGroupsParamCreator = async (...config: ([ListSou
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceContainerGroupsParamCreator = async (...config: ([ListSou
         }
         ]
     };
+
+    return sendRequest<ListSourceContainerGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceContainerGroupsParamCreator;

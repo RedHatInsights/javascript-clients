@@ -105,7 +105,7 @@ export const ListCrossAccountRequestsOrderByEnum = {
 } as const;
 export type ListCrossAccountRequestsOrderByEnum = typeof ListCrossAccountRequestsOrderByEnum[keyof typeof ListCrossAccountRequestsOrderByEnum];
 
-export type ListCrossAccountRequestsReturnType = AxiosPromise<CrossAccountRequestPagination>;
+export type ListCrossAccountRequestsReturnType = CrossAccountRequestPagination;
 
 const isListCrossAccountRequestsObjectParams = (params: [ListCrossAccountRequestsParams] | unknown[]): params is [ListCrossAccountRequestsParams] => {
   const l = params.length === 1
@@ -121,7 +121,7 @@ const isListCrossAccountRequestsObjectParams = (params: [ListCrossAccountRequest
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listCrossAccountRequestsParamCreator = async (...config: ([ListCrossAccountRequestsParams] | [number, number, ListCrossAccountRequestsQueryByEnum, string, string, ListCrossAccountRequestsApprovedOnlyEnum, ListCrossAccountRequestsStatusEnum, ListCrossAccountRequestsOrderByEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listCrossAccountRequestsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListCrossAccountRequestsParams] | [number, number, ListCrossAccountRequestsQueryByEnum, string, string, ListCrossAccountRequestsApprovedOnlyEnum, ListCrossAccountRequestsStatusEnum, ListCrossAccountRequestsOrderByEnum, AxiosRequestConfig])) => {
     const params = isListCrossAccountRequestsObjectParams(config) ? config[0] : ['limit', 'offset', 'queryBy', 'account', 'orgId', 'approvedOnly', 'status', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListCrossAccountRequestsParams;
     const { limit, offset, queryBy, account, orgId, approvedOnly, status, orderBy, options = {} } = params;
     const localVarPath = `/cross-account-requests/`;
@@ -168,7 +168,7 @@ export const listCrossAccountRequestsParamCreator = async (...config: ([ListCros
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -179,6 +179,8 @@ export const listCrossAccountRequestsParamCreator = async (...config: ([ListCros
         }
         ]
     };
+
+    return sendRequest<ListCrossAccountRequestsReturnType>(Promise.resolve(args));
 }
 
 export default listCrossAccountRequestsParamCreator;

@@ -211,7 +211,7 @@ export const SystemListUpdateMethodEnum = {
 } as const;
 export type SystemListUpdateMethodEnum = typeof SystemListUpdateMethodEnum[keyof typeof SystemListUpdateMethodEnum];
 
-export type SystemListReturnType = AxiosPromise<PaginatedSystemList>;
+export type SystemListReturnType = PaginatedSystemList;
 
 const isSystemListObjectParams = (params: [SystemListParams] | unknown[]): params is [SystemListParams] => {
   const l = params.length === 1
@@ -226,7 +226,7 @@ const isSystemListObjectParams = (params: [SystemListParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemListParamCreator = async (...config: ([SystemListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, boolean, Array<SystemListHitsEnum>, boolean, number, number, string, Array<SystemListRhelVersionEnum>, SystemListSortEnum, Array<string>, Array<SystemListUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, boolean, Array<SystemListHitsEnum>, boolean, number, number, string, Array<SystemListRhelVersionEnum>, SystemListSortEnum, Array<string>, Array<SystemListUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isSystemListObjectParams(config) ? config[0] : ['displayName', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasDisabledRecommendation', 'hits', 'incident', 'limit', 'offset', 'pathway', 'rhelVersion', 'sort', 'tags', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemListParams;
     const { displayName, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasDisabledRecommendation, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/system/`;
@@ -305,7 +305,7 @@ export const systemListParamCreator = async (...config: ([SystemListParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -317,6 +317,8 @@ export const systemListParamCreator = async (...config: ([SystemListParams] | [s
         }
         ]
     };
+
+    return sendRequest<SystemListReturnType>(Promise.resolve(args));
 }
 
 export default systemListParamCreator;

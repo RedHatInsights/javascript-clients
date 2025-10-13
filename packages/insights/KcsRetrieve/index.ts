@@ -21,7 +21,7 @@ export type KcsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type KcsRetrieveReturnType = AxiosPromise<Array<string>>;
+export type KcsRetrieveReturnType = Array<string>;
 
 const isKcsRetrieveObjectParams = (params: [KcsRetrieveParams] | unknown[]): params is [KcsRetrieveParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isKcsRetrieveObjectParams = (params: [KcsRetrieveParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const kcsRetrieveParamCreator = async (...config: ([KcsRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const kcsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([KcsRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isKcsRetrieveObjectParams(config) ? config[0] : ['nodeId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as KcsRetrieveParams;
     const { nodeId, options = {} } = params;
     const localVarPath = `/api/insights/v1/kcs/{node_id}/`
@@ -52,10 +52,12 @@ export const kcsRetrieveParamCreator = async (...config: ([KcsRetrieveParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<KcsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default kcsRetrieveParamCreator;

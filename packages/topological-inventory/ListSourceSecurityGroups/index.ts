@@ -45,7 +45,7 @@ export type ListSourceSecurityGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceSecurityGroupsReturnType = AxiosPromise<SecurityGroupsCollection>;
+export type ListSourceSecurityGroupsReturnType = SecurityGroupsCollection;
 
 const isListSourceSecurityGroupsObjectParams = (params: [ListSourceSecurityGroupsParams] | unknown[]): params is [ListSourceSecurityGroupsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceSecurityGroupsObjectParams = (params: [ListSourceSecurityGroup
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceSecurityGroupsParamCreator = async (...config: ([ListSourceSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceSecurityGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceSecurityGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceSecurityGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/security_groups`
@@ -93,7 +93,7 @@ export const listSourceSecurityGroupsParamCreator = async (...config: ([ListSour
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceSecurityGroupsParamCreator = async (...config: ([ListSour
         }
         ]
     };
+
+    return sendRequest<ListSourceSecurityGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceSecurityGroupsParamCreator;

@@ -21,7 +21,7 @@ export type ShowServiceOfferingParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowServiceOfferingReturnType = AxiosPromise<ServiceOffering>;
+export type ShowServiceOfferingReturnType = ServiceOffering;
 
 const isShowServiceOfferingObjectParams = (params: [ShowServiceOfferingParams] | unknown[]): params is [ShowServiceOfferingParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowServiceOfferingObjectParams = (params: [ShowServiceOfferingParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showServiceOfferingParamCreator = async (...config: ([ShowServiceOfferingParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showServiceOfferingParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowServiceOfferingParams] | [string, AxiosRequestConfig])) => {
     const params = isShowServiceOfferingObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowServiceOfferingParams;
     const { id, options = {} } = params;
     const localVarPath = `/service_offerings/{id}`
@@ -53,7 +53,7 @@ export const showServiceOfferingParamCreator = async (...config: ([ShowServiceOf
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showServiceOfferingParamCreator = async (...config: ([ShowServiceOf
         }
         ]
     };
+
+    return sendRequest<ShowServiceOfferingReturnType>(Promise.resolve(args));
 }
 
 export default showServiceOfferingParamCreator;

@@ -21,7 +21,7 @@ export type ShowContainerResourceQuotaParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowContainerResourceQuotaReturnType = AxiosPromise<ContainerResourceQuota>;
+export type ShowContainerResourceQuotaReturnType = ContainerResourceQuota;
 
 const isShowContainerResourceQuotaObjectParams = (params: [ShowContainerResourceQuotaParams] | unknown[]): params is [ShowContainerResourceQuotaParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowContainerResourceQuotaObjectParams = (params: [ShowContainerResource
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showContainerResourceQuotaParamCreator = async (...config: ([ShowContainerResourceQuotaParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showContainerResourceQuotaParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowContainerResourceQuotaParams] | [string, AxiosRequestConfig])) => {
     const params = isShowContainerResourceQuotaObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowContainerResourceQuotaParams;
     const { id, options = {} } = params;
     const localVarPath = `/container_resource_quotas/{id}`
@@ -53,7 +53,7 @@ export const showContainerResourceQuotaParamCreator = async (...config: ([ShowCo
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showContainerResourceQuotaParamCreator = async (...config: ([ShowCo
         }
         ]
     };
+
+    return sendRequest<ShowContainerResourceQuotaReturnType>(Promise.resolve(args));
 }
 
 export default showContainerResourceQuotaParamCreator;

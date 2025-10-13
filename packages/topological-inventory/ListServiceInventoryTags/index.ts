@@ -45,7 +45,7 @@ export type ListServiceInventoryTagsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceInventoryTagsReturnType = AxiosPromise<TagsCollection>;
+export type ListServiceInventoryTagsReturnType = TagsCollection;
 
 const isListServiceInventoryTagsObjectParams = (params: [ListServiceInventoryTagsParams] | unknown[]): params is [ListServiceInventoryTagsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListServiceInventoryTagsObjectParams = (params: [ListServiceInventoryTag
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceInventoryTagsParamCreator = async (...config: ([ListServiceInventoryTagsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceInventoryTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceInventoryTagsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceInventoryTagsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceInventoryTagsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_inventories/{id}/tags`
@@ -93,7 +93,7 @@ export const listServiceInventoryTagsParamCreator = async (...config: ([ListServ
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listServiceInventoryTagsParamCreator = async (...config: ([ListServ
         }
         ]
     };
+
+    return sendRequest<ListServiceInventoryTagsReturnType>(Promise.resolve(args));
 }
 
 export default listServiceInventoryTagsParamCreator;

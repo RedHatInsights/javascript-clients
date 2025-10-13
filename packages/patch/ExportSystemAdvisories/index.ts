@@ -76,12 +76,12 @@ export const ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum = {
 } as const;
 export type ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum = typeof ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum[keyof typeof ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum];
 
-export type ExportSystemAdvisoriesReturnType = AxiosPromise<Array<ControllersSystemAdvisoriesDBLookup>>;
+export type ExportSystemAdvisoriesReturnType = Array<ControllersSystemAdvisoriesDBLookup>;
 
 const isExportSystemAdvisoriesObjectParams = (params: [ExportSystemAdvisoriesParams] | unknown[]): params is [ExportSystemAdvisoriesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
   }
   return false
 }
@@ -92,7 +92,7 @@ const isExportSystemAdvisoriesObjectParams = (params: [ExportSystemAdvisoriesPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportSystemAdvisoriesParamCreator = async (...config: ([ExportSystemAdvisoriesParams] | [string, string, string, string, string, string, ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportSystemAdvisoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportSystemAdvisoriesParams] | [string, string, string, string, string, string, ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum, number, AxiosRequestConfig])) => {
     const params = isExportSystemAdvisoriesObjectParams(config) ? config[0] : ['inventoryId', 'search', 'filterId', 'filterDescription', 'filterPublicDate', 'filterSynopsis', 'filterAdvisoryTypeName', 'filterSeverity', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportSystemAdvisoriesParams;
     const { inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, options = {} } = params;
     const localVarPath = `/export/systems/{inventory_id}/advisories`
@@ -136,7 +136,7 @@ export const exportSystemAdvisoriesParamCreator = async (...config: ([ExportSyst
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -148,6 +148,8 @@ export const exportSystemAdvisoriesParamCreator = async (...config: ([ExportSyst
         }
         ]
     };
+
+    return sendRequest<ExportSystemAdvisoriesReturnType>(Promise.resolve(args));
 }
 
 export default exportSystemAdvisoriesParamCreator;

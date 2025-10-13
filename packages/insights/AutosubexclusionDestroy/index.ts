@@ -21,7 +21,7 @@ export type AutosubexclusionDestroyParams = {
   options?: AxiosRequestConfig
 }
 
-export type AutosubexclusionDestroyReturnType = AxiosPromise<string>;
+export type AutosubexclusionDestroyReturnType = string;
 
 const isAutosubexclusionDestroyObjectParams = (params: [AutosubexclusionDestroyParams] | unknown[]): params is [AutosubexclusionDestroyParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isAutosubexclusionDestroyObjectParams = (params: [AutosubexclusionDestroyP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const autosubexclusionDestroyParamCreator = async (...config: ([AutosubexclusionDestroyParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const autosubexclusionDestroyParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AutosubexclusionDestroyParams] | [string, AxiosRequestConfig])) => {
     const params = isAutosubexclusionDestroyObjectParams(config) ? config[0] : ['orgId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AutosubexclusionDestroyParams;
     const { orgId, options = {} } = params;
     const localVarPath = `/api/insights/v1/autosubexclusion/{org_id}/`
@@ -52,7 +52,7 @@ export const autosubexclusionDestroyParamCreator = async (...config: ([Autosubex
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const autosubexclusionDestroyParamCreator = async (...config: ([Autosubex
         }
         ]
     };
+
+    return sendRequest<AutosubexclusionDestroyReturnType>(Promise.resolve(args));
 }
 
 export default autosubexclusionDestroyParamCreator;

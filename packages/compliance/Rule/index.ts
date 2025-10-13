@@ -33,12 +33,12 @@ export type RuleParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleReturnType = AxiosPromise<Rule200Response>;
+export type RuleReturnType = Rule200Response;
 
 const isRuleObjectParams = (params: [RuleParams] | unknown[]): params is [RuleParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isRuleObjectParams = (params: [RuleParams] | unknown[]): params is [RulePa
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleParamCreator = async (...config: ([RuleParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isRuleObjectParams(config) ? config[0] : ['securityGuideId', 'ruleId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleParams;
     const { securityGuideId, ruleId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/rules/{rule_id}`
@@ -72,10 +72,12 @@ export const ruleParamCreator = async (...config: ([RuleParams] | [any, any, any
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<RuleReturnType>(Promise.resolve(args));
 }
 
 export default ruleParamCreator;

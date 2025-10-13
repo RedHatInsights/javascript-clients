@@ -45,7 +45,7 @@ export type ListSubscriptionOrchestrationStacksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSubscriptionOrchestrationStacksReturnType = AxiosPromise<OrchestrationStacksCollection>;
+export type ListSubscriptionOrchestrationStacksReturnType = OrchestrationStacksCollection;
 
 const isListSubscriptionOrchestrationStacksObjectParams = (params: [ListSubscriptionOrchestrationStacksParams] | unknown[]): params is [ListSubscriptionOrchestrationStacksParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSubscriptionOrchestrationStacksObjectParams = (params: [ListSubscrip
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSubscriptionOrchestrationStacksParamCreator = async (...config: ([ListSubscriptionOrchestrationStacksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSubscriptionOrchestrationStacksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSubscriptionOrchestrationStacksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSubscriptionOrchestrationStacksObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSubscriptionOrchestrationStacksParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/subscriptions/{id}/orchestration_stacks`
@@ -93,7 +93,7 @@ export const listSubscriptionOrchestrationStacksParamCreator = async (...config:
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSubscriptionOrchestrationStacksParamCreator = async (...config:
         }
         ]
     };
+
+    return sendRequest<ListSubscriptionOrchestrationStacksReturnType>(Promise.resolve(args));
 }
 
 export default listSubscriptionOrchestrationStacksParamCreator;

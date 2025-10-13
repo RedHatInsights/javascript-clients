@@ -166,7 +166,7 @@ export const RuleSystemsDetailListSortEnum = {
 } as const;
 export type RuleSystemsDetailListSortEnum = typeof RuleSystemsDetailListSortEnum[keyof typeof RuleSystemsDetailListSortEnum];
 
-export type RuleSystemsDetailListReturnType = AxiosPromise<PaginatedSystemsDetailList>;
+export type RuleSystemsDetailListReturnType = PaginatedSystemsDetailList;
 
 const isRuleSystemsDetailListObjectParams = (params: [RuleSystemsDetailListParams] | unknown[]): params is [RuleSystemsDetailListParams] => {
   const l = params.length === 1
@@ -181,7 +181,7 @@ const isRuleSystemsDetailListObjectParams = (params: [RuleSystemsDetailListParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleSystemsDetailListParamCreator = async (...config: ([RuleSystemsDetailListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, number, string, number, Array<RuleSystemsDetailListRhelVersionEnum>, RuleSystemsDetailListSortEnum, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleSystemsDetailListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleSystemsDetailListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, number, string, number, Array<RuleSystemsDetailListRhelVersionEnum>, RuleSystemsDetailListSortEnum, Array<string>, AxiosRequestConfig])) => {
     const params = isRuleSystemsDetailListObjectParams(config) ? config[0] : ['ruleId', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'limit', 'name', 'offset', 'rhelVersion', 'sort', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleSystemsDetailListParams;
     const { ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, name, offset, rhelVersion, sort, tags, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/systems_detail/`
@@ -241,7 +241,7 @@ export const ruleSystemsDetailListParamCreator = async (...config: ([RuleSystems
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -253,6 +253,8 @@ export const ruleSystemsDetailListParamCreator = async (...config: ([RuleSystems
         }
         ]
     };
+
+    return sendRequest<RuleSystemsDetailListReturnType>(Promise.resolve(args));
 }
 
 export default ruleSystemsDetailListParamCreator;

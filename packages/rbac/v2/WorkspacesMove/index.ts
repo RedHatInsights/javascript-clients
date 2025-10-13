@@ -27,7 +27,7 @@ export type WorkspacesMoveParams = {
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesMoveReturnType = AxiosPromise<WorkspacesMoveWorkspaceResponse>;
+export type WorkspacesMoveReturnType = WorkspacesMoveWorkspaceResponse;
 
 const isWorkspacesMoveObjectParams = (params: [WorkspacesMoveParams] | unknown[]): params is [WorkspacesMoveParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isWorkspacesMoveObjectParams = (params: [WorkspacesMoveParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesMoveParamCreator = async (...config: ([WorkspacesMoveParams] | [string, WorkspacesMoveWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const workspacesMoveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesMoveParams] | [string, WorkspacesMoveWorkspaceRequest, AxiosRequestConfig])) => {
     const params = isWorkspacesMoveObjectParams(config) ? config[0] : ['id', 'workspacesMoveWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesMoveParams;
     const { id, workspacesMoveWorkspaceRequest, options = {} } = params;
     const localVarPath = `/workspaces/{id}/move/`
@@ -61,11 +61,13 @@ export const workspacesMoveParamCreator = async (...config: ([WorkspacesMovePara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: workspacesMoveWorkspaceRequest,
     };
+
+    return sendRequest<WorkspacesMoveReturnType>(Promise.resolve(args));
 }
 
 export default workspacesMoveParamCreator;

@@ -33,12 +33,12 @@ export type AssignSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type AssignSystemsReturnType = AxiosPromise<Systems200Response>;
+export type AssignSystemsReturnType = Systems200Response;
 
 const isAssignSystemsObjectParams = (params: [AssignSystemsParams] | unknown[]): params is [AssignSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
   }
   return false
 }
@@ -50,7 +50,7 @@ const isAssignSystemsObjectParams = (params: [AssignSystemsParams] | unknown[]):
 * @deprecated
 * @throws {RequiredError}
 */
-export const assignSystemsParamCreator = async (...config: ([AssignSystemsParams] | [any, any, AssignRulesRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const assignSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AssignSystemsParams] | [any, any, AssignRulesRequest, AxiosRequestConfig])) => {
     const params = isAssignSystemsObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'assignRulesRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AssignSystemsParams;
     const { policyId, xRHIDENTITY, assignRulesRequest, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/systems`
@@ -74,11 +74,13 @@ export const assignSystemsParamCreator = async (...config: ([AssignSystemsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: assignRulesRequest,
     };
+
+    return sendRequest<AssignSystemsReturnType>(Promise.resolve(args));
 }
 
 export default assignSystemsParamCreator;

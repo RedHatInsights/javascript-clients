@@ -39,7 +39,7 @@ export type ListNetworksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListNetworksReturnType = AxiosPromise<NetworksCollection>;
+export type ListNetworksReturnType = NetworksCollection;
 
 const isListNetworksObjectParams = (params: [ListNetworksParams] | unknown[]): params is [ListNetworksParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListNetworksObjectParams = (params: [ListNetworksParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listNetworksParamCreator = async (...config: ([ListNetworksParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listNetworksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListNetworksParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListNetworksObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListNetworksParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/networks`;
@@ -86,7 +86,7 @@ export const listNetworksParamCreator = async (...config: ([ListNetworksParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listNetworksParamCreator = async (...config: ([ListNetworksParams] 
         }
         ]
     };
+
+    return sendRequest<ListNetworksReturnType>(Promise.resolve(args));
 }
 
 export default listNetworksParamCreator;

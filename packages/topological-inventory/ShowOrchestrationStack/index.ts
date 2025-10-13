@@ -21,7 +21,7 @@ export type ShowOrchestrationStackParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowOrchestrationStackReturnType = AxiosPromise<OrchestrationStack>;
+export type ShowOrchestrationStackReturnType = OrchestrationStack;
 
 const isShowOrchestrationStackObjectParams = (params: [ShowOrchestrationStackParams] | unknown[]): params is [ShowOrchestrationStackParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowOrchestrationStackObjectParams = (params: [ShowOrchestrationStackPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showOrchestrationStackParamCreator = async (...config: ([ShowOrchestrationStackParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showOrchestrationStackParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowOrchestrationStackParams] | [string, AxiosRequestConfig])) => {
     const params = isShowOrchestrationStackObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowOrchestrationStackParams;
     const { id, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}`
@@ -53,7 +53,7 @@ export const showOrchestrationStackParamCreator = async (...config: ([ShowOrches
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showOrchestrationStackParamCreator = async (...config: ([ShowOrches
         }
         ]
     };
+
+    return sendRequest<ShowOrchestrationStackReturnType>(Promise.resolve(args));
 }
 
 export default showOrchestrationStackParamCreator;

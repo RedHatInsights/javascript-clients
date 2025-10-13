@@ -27,7 +27,7 @@ export type RatingStatsListParams = {
   options?: AxiosRequestConfig
 }
 
-export type RatingStatsListReturnType = AxiosPromise<PaginatedRuleRatingStatsList>;
+export type RatingStatsListReturnType = PaginatedRuleRatingStatsList;
 
 const isRatingStatsListObjectParams = (params: [RatingStatsListParams] | unknown[]): params is [RatingStatsListParams] => {
   const l = params.length === 1
@@ -42,7 +42,7 @@ const isRatingStatsListObjectParams = (params: [RatingStatsListParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ratingStatsListParamCreator = async (...config: ([RatingStatsListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ratingStatsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RatingStatsListParams] | [number, number, AxiosRequestConfig])) => {
     const params = isRatingStatsListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RatingStatsListParams;
     const { limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/rating/stats/`;
@@ -65,7 +65,7 @@ export const ratingStatsListParamCreator = async (...config: ([RatingStatsListPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -77,6 +77,8 @@ export const ratingStatsListParamCreator = async (...config: ([RatingStatsListPa
         }
         ]
     };
+
+    return sendRequest<RatingStatsListReturnType>(Promise.resolve(args));
 }
 
 export default ratingStatsListParamCreator;

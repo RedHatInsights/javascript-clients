@@ -21,7 +21,7 @@ export type WeeklyreportautosubscribeCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type WeeklyreportautosubscribeCreateReturnType = AxiosPromise<AutoSubscribe>;
+export type WeeklyreportautosubscribeCreateReturnType = AutoSubscribe;
 
 const isWeeklyreportautosubscribeCreateObjectParams = (params: [WeeklyreportautosubscribeCreateParams] | unknown[]): params is [WeeklyreportautosubscribeCreateParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isWeeklyreportautosubscribeCreateObjectParams = (params: [Weeklyreportauto
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const weeklyreportautosubscribeCreateParamCreator = async (...config: ([WeeklyreportautosubscribeCreateParams] | [AutoSubscribeInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const weeklyreportautosubscribeCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WeeklyreportautosubscribeCreateParams] | [AutoSubscribeInput, AxiosRequestConfig])) => {
     const params = isWeeklyreportautosubscribeCreateObjectParams(config) ? config[0] : ['autoSubscribeInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WeeklyreportautosubscribeCreateParams;
     const { autoSubscribeInput, options = {} } = params;
     const localVarPath = `/api/insights/v1/weeklyreportautosubscribe/`;
@@ -53,7 +53,7 @@ export const weeklyreportautosubscribeCreateParamCreator = async (...config: ([W
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: autoSubscribeInput,
@@ -66,6 +66,8 @@ export const weeklyreportautosubscribeCreateParamCreator = async (...config: ([W
         }
         ]
     };
+
+    return sendRequest<WeeklyreportautosubscribeCreateReturnType>(Promise.resolve(args));
 }
 
 export default weeklyreportautosubscribeCreateParamCreator;

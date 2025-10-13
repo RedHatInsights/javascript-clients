@@ -174,7 +174,7 @@ export const RuleSystemsRetrieveUpdateMethodEnum = {
 } as const;
 export type RuleSystemsRetrieveUpdateMethodEnum = typeof RuleSystemsRetrieveUpdateMethodEnum[keyof typeof RuleSystemsRetrieveUpdateMethodEnum];
 
-export type RuleSystemsRetrieveReturnType = AxiosPromise<SystemsForRule>;
+export type RuleSystemsRetrieveReturnType = SystemsForRule;
 
 const isRuleSystemsRetrieveObjectParams = (params: [RuleSystemsRetrieveParams] | unknown[]): params is [RuleSystemsRetrieveParams] => {
   const l = params.length === 1
@@ -189,7 +189,7 @@ const isRuleSystemsRetrieveObjectParams = (params: [RuleSystemsRetrieveParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleSystemsRetrieveParamCreator = async (...config: ([RuleSystemsRetrieveParams] | [string, boolean, boolean, Array<string>, boolean, RuleSystemsRetrieveFormatEnum, Array<string>, string, Array<RuleSystemsRetrieveRhelVersionEnum>, Array<RuleSystemsRetrieveSortEnum>, Array<string>, Array<RuleSystemsRetrieveUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleSystemsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleSystemsRetrieveParams] | [string, boolean, boolean, Array<string>, boolean, RuleSystemsRetrieveFormatEnum, Array<string>, string, Array<RuleSystemsRetrieveRhelVersionEnum>, Array<RuleSystemsRetrieveSortEnum>, Array<string>, Array<RuleSystemsRetrieveUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isRuleSystemsRetrieveObjectParams(config) ? config[0] : ['ruleId', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'format', 'groups', 'name', 'rhelVersion', 'sort', 'tags', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleSystemsRetrieveParams;
     const { ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, name, rhelVersion, sort, tags, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/systems/`
@@ -249,7 +249,7 @@ export const ruleSystemsRetrieveParamCreator = async (...config: ([RuleSystemsRe
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -261,6 +261,8 @@ export const ruleSystemsRetrieveParamCreator = async (...config: ([RuleSystemsRe
         }
         ]
     };
+
+    return sendRequest<RuleSystemsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default ruleSystemsRetrieveParamCreator;

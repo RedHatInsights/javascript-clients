@@ -45,7 +45,7 @@ export type ListServiceInstanceServiceInstanceNodesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceInstanceServiceInstanceNodesReturnType = AxiosPromise<ServiceInstanceNodesCollection>;
+export type ListServiceInstanceServiceInstanceNodesReturnType = ServiceInstanceNodesCollection;
 
 const isListServiceInstanceServiceInstanceNodesObjectParams = (params: [ListServiceInstanceServiceInstanceNodesParams] | unknown[]): params is [ListServiceInstanceServiceInstanceNodesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListServiceInstanceServiceInstanceNodesObjectParams = (params: [ListServ
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceInstanceServiceInstanceNodesParamCreator = async (...config: ([ListServiceInstanceServiceInstanceNodesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceInstanceServiceInstanceNodesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceInstanceServiceInstanceNodesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceInstanceServiceInstanceNodesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceInstanceServiceInstanceNodesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_instances/{id}/service_instance_nodes`
@@ -93,7 +93,7 @@ export const listServiceInstanceServiceInstanceNodesParamCreator = async (...con
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listServiceInstanceServiceInstanceNodesParamCreator = async (...con
         }
         ]
     };
+
+    return sendRequest<ListServiceInstanceServiceInstanceNodesReturnType>(Promise.resolve(args));
 }
 
 export default listServiceInstanceServiceInstanceNodesParamCreator;

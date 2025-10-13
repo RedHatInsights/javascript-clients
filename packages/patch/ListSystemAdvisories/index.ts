@@ -106,12 +106,12 @@ export const ListSystemAdvisoriesFilterAdvisoryTypeNameEnum = {
 } as const;
 export type ListSystemAdvisoriesFilterAdvisoryTypeNameEnum = typeof ListSystemAdvisoriesFilterAdvisoryTypeNameEnum[keyof typeof ListSystemAdvisoriesFilterAdvisoryTypeNameEnum];
 
-export type ListSystemAdvisoriesReturnType = AxiosPromise<ControllersSystemAdvisoriesResponse>;
+export type ListSystemAdvisoriesReturnType = ControllersSystemAdvisoriesResponse;
 
 const isListSystemAdvisoriesObjectParams = (params: [ListSystemAdvisoriesParams] | unknown[]): params is [ListSystemAdvisoriesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
   }
   return false
 }
@@ -122,7 +122,7 @@ const isListSystemAdvisoriesObjectParams = (params: [ListSystemAdvisoriesParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSystemAdvisoriesParamCreator = async (...config: ([ListSystemAdvisoriesParams] | [string, number, number, ListSystemAdvisoriesSortEnum, string, string, string, string, string, ListSystemAdvisoriesFilterAdvisoryTypeNameEnum, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSystemAdvisoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSystemAdvisoriesParams] | [string, number, number, ListSystemAdvisoriesSortEnum, string, string, string, string, string, ListSystemAdvisoriesFilterAdvisoryTypeNameEnum, number, AxiosRequestConfig])) => {
     const params = isListSystemAdvisoriesObjectParams(config) ? config[0] : ['inventoryId', 'limit', 'offset', 'sort', 'search', 'filterId', 'filterDescription', 'filterPublicDate', 'filterSynopsis', 'filterAdvisoryTypeName', 'filterSeverity', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSystemAdvisoriesParams;
     const { inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, options = {} } = params;
     const localVarPath = `/systems/{inventory_id}/advisories`
@@ -178,7 +178,7 @@ export const listSystemAdvisoriesParamCreator = async (...config: ([ListSystemAd
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -190,6 +190,8 @@ export const listSystemAdvisoriesParamCreator = async (...config: ([ListSystemAd
         }
         ]
     };
+
+    return sendRequest<ListSystemAdvisoriesReturnType>(Promise.resolve(args));
 }
 
 export default listSystemAdvisoriesParamCreator;

@@ -121,7 +121,7 @@ export const GetPoliciesFilterIsEnabledEnum = {
 } as const;
 export type GetPoliciesFilterIsEnabledEnum = typeof GetPoliciesFilterIsEnabledEnum[keyof typeof GetPoliciesFilterIsEnabledEnum];
 
-export type GetPoliciesReturnType = AxiosPromise<PagedResponseOfPolicy>;
+export type GetPoliciesReturnType = PagedResponseOfPolicy;
 
 const isGetPoliciesObjectParams = (params: [GetPoliciesParams] | unknown[]): params is [GetPoliciesParams] => {
   const l = params.length === 1
@@ -137,7 +137,7 @@ const isGetPoliciesObjectParams = (params: [GetPoliciesParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPoliciesParamCreator = async (...config: ([GetPoliciesParams] | [number, number, GetPoliciesSortColumnEnum, GetPoliciesSortDirectionEnum, string, GetPoliciesFilteropNameEnum, string, GetPoliciesFilteropDescriptionEnum, GetPoliciesFilterIsEnabledEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPoliciesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetPoliciesParams] | [number, number, GetPoliciesSortColumnEnum, GetPoliciesSortDirectionEnum, string, GetPoliciesFilteropNameEnum, string, GetPoliciesFilteropDescriptionEnum, GetPoliciesFilterIsEnabledEnum, AxiosRequestConfig])) => {
     const params = isGetPoliciesObjectParams(config) ? config[0] : ['offset', 'limit', 'sortColumn', 'sortDirection', 'filterName', 'filteropName', 'filterDescription', 'filteropDescription', 'filterIsEnabled', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPoliciesParams;
     const { offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options = {} } = params;
     const localVarPath = `/policies`;
@@ -188,10 +188,12 @@ export const getPoliciesParamCreator = async (...config: ([GetPoliciesParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetPoliciesReturnType>(Promise.resolve(args));
 }
 
 export default getPoliciesParamCreator;

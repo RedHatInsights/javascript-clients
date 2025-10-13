@@ -33,12 +33,12 @@ export type DeleteRemediationIssueSystemParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteRemediationIssueSystemReturnType = AxiosPromise<void>;
+export type DeleteRemediationIssueSystemReturnType = void;
 
 const isDeleteRemediationIssueSystemObjectParams = (params: [DeleteRemediationIssueSystemParams] | unknown[]): params is [DeleteRemediationIssueSystemParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue') && Object.prototype.hasOwnProperty.call(params[0], 'system')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue') && Object.prototype.hasOwnProperty.call(params[0], 'system')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isDeleteRemediationIssueSystemObjectParams = (params: [DeleteRemediationIs
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRemediationIssueSystemParamCreator = async (...config: ([DeleteRemediationIssueSystemParams] | [string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRemediationIssueSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRemediationIssueSystemParams] | [string, string, string, AxiosRequestConfig])) => {
     const params = isDeleteRemediationIssueSystemObjectParams(config) ? config[0] : ['id', 'issue', 'system', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationIssueSystemParams;
     const { id, issue, system, options = {} } = params;
     const localVarPath = `/remediations/{id}/issues/{issue}/systems/{system}`
@@ -67,10 +67,12 @@ export const deleteRemediationIssueSystemParamCreator = async (...config: ([Dele
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<DeleteRemediationIssueSystemReturnType>(Promise.resolve(args));
 }
 
 export default deleteRemediationIssueSystemParamCreator;

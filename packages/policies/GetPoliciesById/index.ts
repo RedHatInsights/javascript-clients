@@ -21,12 +21,12 @@ export type GetPoliciesByIdParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetPoliciesByIdReturnType = AxiosPromise<Policy>;
+export type GetPoliciesByIdReturnType = Policy;
 
 const isGetPoliciesByIdObjectParams = (params: [GetPoliciesByIdParams] | unknown[]): params is [GetPoliciesByIdParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isGetPoliciesByIdObjectParams = (params: [GetPoliciesByIdParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPoliciesByIdParamCreator = async (...config: ([GetPoliciesByIdParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPoliciesByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetPoliciesByIdParams] | [string, AxiosRequestConfig])) => {
     const params = isGetPoliciesByIdObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPoliciesByIdParams;
     const { id, options = {} } = params;
     const localVarPath = `/policies/{id}`
@@ -53,10 +53,12 @@ export const getPoliciesByIdParamCreator = async (...config: ([GetPoliciesByIdPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetPoliciesByIdReturnType>(Promise.resolve(args));
 }
 
 export default getPoliciesByIdParamCreator;

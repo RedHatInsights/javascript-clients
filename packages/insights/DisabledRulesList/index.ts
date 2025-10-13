@@ -27,7 +27,7 @@ export type DisabledRulesListParams = {
   options?: AxiosRequestConfig
 }
 
-export type DisabledRulesListReturnType = AxiosPromise<PaginatedDisabledRulesList>;
+export type DisabledRulesListReturnType = PaginatedDisabledRulesList;
 
 const isDisabledRulesListObjectParams = (params: [DisabledRulesListParams] | unknown[]): params is [DisabledRulesListParams] => {
   const l = params.length === 1
@@ -42,7 +42,7 @@ const isDisabledRulesListObjectParams = (params: [DisabledRulesListParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const disabledRulesListParamCreator = async (...config: ([DisabledRulesListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const disabledRulesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DisabledRulesListParams] | [number, number, AxiosRequestConfig])) => {
     const params = isDisabledRulesListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DisabledRulesListParams;
     const { limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/disabled-rules/`;
@@ -65,7 +65,7 @@ export const disabledRulesListParamCreator = async (...config: ([DisabledRulesLi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -77,6 +77,8 @@ export const disabledRulesListParamCreator = async (...config: ([DisabledRulesLi
         }
         ]
     };
+
+    return sendRequest<DisabledRulesListReturnType>(Promise.resolve(args));
 }
 
 export default disabledRulesListParamCreator;

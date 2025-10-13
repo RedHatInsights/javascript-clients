@@ -33,12 +33,12 @@ export type TailoringFileJSONParams = {
   options?: AxiosRequestConfig
 }
 
-export type TailoringFileJSONReturnType = AxiosPromise<TailoringFileJson>;
+export type TailoringFileJSONReturnType = TailoringFileJson;
 
 const isTailoringFileJSONObjectParams = (params: [TailoringFileJSONParams] | unknown[]): params is [TailoringFileJSONParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isTailoringFileJSONObjectParams = (params: [TailoringFileJSONParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const tailoringFileJSONParamCreator = async (...config: ([TailoringFileJSONParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const tailoringFileJSONParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TailoringFileJSONParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isTailoringFileJSONObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringFileJSONParams;
     const { policyId, tailoringId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/tailoring_file.json`
@@ -72,10 +72,12 @@ export const tailoringFileJSONParamCreator = async (...config: ([TailoringFileJS
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<TailoringFileJSONReturnType>(Promise.resolve(args));
 }
 
 export default tailoringFileJSONParamCreator;

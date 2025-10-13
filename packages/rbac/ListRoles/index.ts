@@ -132,7 +132,7 @@ export const ListRolesAddFieldsEnum = {
 } as const;
 export type ListRolesAddFieldsEnum = typeof ListRolesAddFieldsEnum[keyof typeof ListRolesAddFieldsEnum];
 
-export type ListRolesReturnType = AxiosPromise<RolePaginationDynamic>;
+export type ListRolesReturnType = RolePaginationDynamic;
 
 const isListRolesObjectParams = (params: [ListRolesParams] | unknown[]): params is [ListRolesParams] => {
   const l = params.length === 1
@@ -148,7 +148,7 @@ const isListRolesObjectParams = (params: [ListRolesParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listRolesParamCreator = async (...config: ([ListRolesParams] | [number, number, string, boolean, string, ListRolesNameMatchEnum, ListRolesScopeEnum, ListRolesOrderByEnum, Array<ListRolesAddFieldsEnum>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listRolesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListRolesParams] | [number, number, string, boolean, string, ListRolesNameMatchEnum, ListRolesScopeEnum, ListRolesOrderByEnum, Array<ListRolesAddFieldsEnum>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isListRolesObjectParams(config) ? config[0] : ['limit', 'offset', 'name', 'system', 'displayName', 'nameMatch', 'scope', 'orderBy', 'addFields', 'username', 'application', 'permission', 'externalTenant', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListRolesParams;
     const { limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, externalTenant, options = {} } = params;
     const localVarPath = `/roles/`;
@@ -215,7 +215,7 @@ export const listRolesParamCreator = async (...config: ([ListRolesParams] | [num
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -226,6 +226,8 @@ export const listRolesParamCreator = async (...config: ([ListRolesParams] | [num
         }
         ]
     };
+
+    return sendRequest<ListRolesReturnType>(Promise.resolve(args));
 }
 
 export default listRolesParamCreator;

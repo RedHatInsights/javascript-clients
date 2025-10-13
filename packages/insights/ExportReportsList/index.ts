@@ -175,7 +175,7 @@ export const ExportReportsListUpdateMethodEnum = {
 } as const;
 export type ExportReportsListUpdateMethodEnum = typeof ExportReportsListUpdateMethodEnum[keyof typeof ExportReportsListUpdateMethodEnum];
 
-export type ExportReportsListReturnType = AxiosPromise<Array<ReportExport>>;
+export type ExportReportsListReturnType = Array<ReportExport>;
 
 const isExportReportsListObjectParams = (params: [ExportReportsListParams] | unknown[]): params is [ExportReportsListParams] => {
   const l = params.length === 1
@@ -190,7 +190,7 @@ const isExportReportsListObjectParams = (params: [ExportReportsListParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportReportsListParamCreator = async (...config: ([ExportReportsListParams] | [Array<ExportReportsListCategoryEnum>, string, Array<string>, boolean, Array<string>, boolean, Array<ExportReportsListImpactEnum>, boolean, Array<ExportReportsListLikelihoodEnum>, boolean, Array<ExportReportsListResRiskEnum>, Array<string>, string, Array<ExportReportsListTotalRiskEnum>, Array<ExportReportsListUpdateMethodEnum>, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportReportsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportReportsListParams] | [Array<ExportReportsListCategoryEnum>, string, Array<string>, boolean, Array<string>, boolean, Array<ExportReportsListImpactEnum>, boolean, Array<ExportReportsListLikelihoodEnum>, boolean, Array<ExportReportsListResRiskEnum>, Array<string>, string, Array<ExportReportsListTotalRiskEnum>, Array<ExportReportsListUpdateMethodEnum>, string, AxiosRequestConfig])) => {
     const params = isExportReportsListObjectParams(config) ? config[0] : ['category', 'displayName', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasPlaybook', 'impact', 'incident', 'likelihood', 'reboot', 'resRisk', 'tags', 'text', 'totalRisk', 'updateMethod', 'uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportReportsListParams;
     const { category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options = {} } = params;
     const localVarPath = `/api/insights/v1/export/reports/`;
@@ -269,7 +269,7 @@ export const exportReportsListParamCreator = async (...config: ([ExportReportsLi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -281,6 +281,8 @@ export const exportReportsListParamCreator = async (...config: ([ExportReportsLi
         }
         ]
     };
+
+    return sendRequest<ExportReportsListReturnType>(Promise.resolve(args));
 }
 
 export default exportReportsListParamCreator;

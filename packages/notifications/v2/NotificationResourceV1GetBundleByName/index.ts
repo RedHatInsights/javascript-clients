@@ -21,7 +21,7 @@ export type NotificationResourceV1GetBundleByNameParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetBundleByNameReturnType = AxiosPromise<Bundle>;
+export type NotificationResourceV1GetBundleByNameReturnType = Bundle;
 
 const isNotificationResourceV1GetBundleByNameObjectParams = (params: [NotificationResourceV1GetBundleByNameParams] | unknown[]): params is [NotificationResourceV1GetBundleByNameParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isNotificationResourceV1GetBundleByNameObjectParams = (params: [Notificati
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetBundleByNameParamCreator = async (...config: ([NotificationResourceV1GetBundleByNameParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetBundleByNameParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1GetBundleByNameParams] | [any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1GetBundleByNameObjectParams(config) ? config[0] : ['bundleName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetBundleByNameParams;
     const { bundleName, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleName}`
@@ -53,10 +53,12 @@ export const notificationResourceV1GetBundleByNameParamCreator = async (...confi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1GetBundleByNameReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1GetBundleByNameParamCreator;

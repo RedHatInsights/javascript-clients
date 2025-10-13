@@ -45,7 +45,7 @@ export type ListVmVolumeAttachmentsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListVmVolumeAttachmentsReturnType = AxiosPromise<VolumeAttachmentsCollection>;
+export type ListVmVolumeAttachmentsReturnType = VolumeAttachmentsCollection;
 
 const isListVmVolumeAttachmentsObjectParams = (params: [ListVmVolumeAttachmentsParams] | unknown[]): params is [ListVmVolumeAttachmentsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListVmVolumeAttachmentsObjectParams = (params: [ListVmVolumeAttachmentsP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listVmVolumeAttachmentsParamCreator = async (...config: ([ListVmVolumeAttachmentsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listVmVolumeAttachmentsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListVmVolumeAttachmentsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListVmVolumeAttachmentsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListVmVolumeAttachmentsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/vms/{id}/volume_attachments`
@@ -93,7 +93,7 @@ export const listVmVolumeAttachmentsParamCreator = async (...config: ([ListVmVol
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listVmVolumeAttachmentsParamCreator = async (...config: ([ListVmVol
         }
         ]
     };
+
+    return sendRequest<ListVmVolumeAttachmentsReturnType>(Promise.resolve(args));
 }
 
 export default listVmVolumeAttachmentsParamCreator;

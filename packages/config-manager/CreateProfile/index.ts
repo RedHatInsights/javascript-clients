@@ -21,12 +21,12 @@ export type CreateProfileParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateProfileReturnType = AxiosPromise<Profile>;
+export type CreateProfileReturnType = Profile;
 
 const isCreateProfileObjectParams = (params: [CreateProfileParams] | unknown[]): params is [CreateProfileParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'createProfileRequest')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'createProfileRequest')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isCreateProfileObjectParams = (params: [CreateProfileParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createProfileParamCreator = async (...config: ([CreateProfileParams] | [CreateProfileRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createProfileParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreateProfileParams] | [CreateProfileRequest, AxiosRequestConfig])) => {
     const params = isCreateProfileObjectParams(config) ? config[0] : ['createProfileRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateProfileParams;
     const { createProfileRequest, options = {} } = params;
     const localVarPath = `/profiles`;
@@ -54,11 +54,13 @@ export const createProfileParamCreator = async (...config: ([CreateProfileParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: createProfileRequest,
     };
+
+    return sendRequest<CreateProfileReturnType>(Promise.resolve(args));
 }
 
 export default createProfileParamCreator;

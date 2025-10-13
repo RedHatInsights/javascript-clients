@@ -21,7 +21,7 @@ export type ShowFlavorParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowFlavorReturnType = AxiosPromise<Flavor>;
+export type ShowFlavorReturnType = Flavor;
 
 const isShowFlavorObjectParams = (params: [ShowFlavorParams] | unknown[]): params is [ShowFlavorParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowFlavorObjectParams = (params: [ShowFlavorParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showFlavorParamCreator = async (...config: ([ShowFlavorParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showFlavorParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowFlavorParams] | [string, AxiosRequestConfig])) => {
     const params = isShowFlavorObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowFlavorParams;
     const { id, options = {} } = params;
     const localVarPath = `/flavors/{id}`
@@ -53,7 +53,7 @@ export const showFlavorParamCreator = async (...config: ([ShowFlavorParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showFlavorParamCreator = async (...config: ([ShowFlavorParams] | [s
         }
         ]
     };
+
+    return sendRequest<ShowFlavorReturnType>(Promise.resolve(args));
 }
 
 export default showFlavorParamCreator;

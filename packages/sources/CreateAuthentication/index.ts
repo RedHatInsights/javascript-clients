@@ -21,12 +21,12 @@ export type CreateAuthenticationParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateAuthenticationReturnType = AxiosPromise<Authentication>;
+export type CreateAuthenticationReturnType = Authentication;
 
 const isCreateAuthenticationObjectParams = (params: [CreateAuthenticationParams] | unknown[]): params is [CreateAuthenticationParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'authentication')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'authentication')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isCreateAuthenticationObjectParams = (params: [CreateAuthenticationParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createAuthenticationParamCreator = async (...config: ([CreateAuthenticationParams] | [Authentication, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createAuthenticationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreateAuthenticationParams] | [Authentication, AxiosRequestConfig])) => {
     const params = isCreateAuthenticationObjectParams(config) ? config[0] : ['authentication', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateAuthenticationParams;
     const { authentication, options = {} } = params;
     const localVarPath = `/authentications`;
@@ -54,7 +54,7 @@ export const createAuthenticationParamCreator = async (...config: ([CreateAuthen
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: authentication,
@@ -66,6 +66,8 @@ export const createAuthenticationParamCreator = async (...config: ([CreateAuthen
         }
         ]
     };
+
+    return sendRequest<CreateAuthenticationReturnType>(Promise.resolve(args));
 }
 
 export default createAuthenticationParamCreator;

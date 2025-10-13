@@ -91,7 +91,7 @@ export const ListPermissionOptionsAllowedOnlyEnum = {
 } as const;
 export type ListPermissionOptionsAllowedOnlyEnum = typeof ListPermissionOptionsAllowedOnlyEnum[keyof typeof ListPermissionOptionsAllowedOnlyEnum];
 
-export type ListPermissionOptionsReturnType = AxiosPromise<PermissionOptionsPagination>;
+export type ListPermissionOptionsReturnType = PermissionOptionsPagination;
 
 const isListPermissionOptionsObjectParams = (params: [ListPermissionOptionsParams] | unknown[]): params is [ListPermissionOptionsParams] => {
   const l = params.length === 1
@@ -107,7 +107,7 @@ const isListPermissionOptionsObjectParams = (params: [ListPermissionOptionsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listPermissionOptionsParamCreator = async (...config: ([ListPermissionOptionsParams] | [ListPermissionOptionsFieldEnum, number, number, string, string, string, ListPermissionOptionsExcludeGlobalsEnum, ListPermissionOptionsAllowedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listPermissionOptionsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListPermissionOptionsParams] | [ListPermissionOptionsFieldEnum, number, number, string, string, string, ListPermissionOptionsExcludeGlobalsEnum, ListPermissionOptionsAllowedOnlyEnum, AxiosRequestConfig])) => {
     const params = isListPermissionOptionsObjectParams(config) ? config[0] : ['field', 'limit', 'offset', 'application', 'resourceType', 'verb', 'excludeGlobals', 'allowedOnly', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPermissionOptionsParams;
     const { field, limit, offset, application, resourceType, verb, excludeGlobals, allowedOnly, options = {} } = params;
     const localVarPath = `/permissions/options/`;
@@ -154,7 +154,7 @@ export const listPermissionOptionsParamCreator = async (...config: ([ListPermiss
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -165,6 +165,8 @@ export const listPermissionOptionsParamCreator = async (...config: ([ListPermiss
         }
         ]
     };
+
+    return sendRequest<ListPermissionOptionsReturnType>(Promise.resolve(args));
 }
 
 export default listPermissionOptionsParamCreator;

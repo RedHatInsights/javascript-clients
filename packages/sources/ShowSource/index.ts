@@ -21,12 +21,12 @@ export type ShowSourceParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowSourceReturnType = AxiosPromise<Source>;
+export type ShowSourceReturnType = Source;
 
 const isShowSourceObjectParams = (params: [ShowSourceParams] | unknown[]): params is [ShowSourceParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isShowSourceObjectParams = (params: [ShowSourceParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showSourceParamCreator = async (...config: ([ShowSourceParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showSourceParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowSourceParams] | [string, AxiosRequestConfig])) => {
     const params = isShowSourceObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowSourceParams;
     const { id, options = {} } = params;
     const localVarPath = `/sources/{id}`
@@ -53,7 +53,7 @@ export const showSourceParamCreator = async (...config: ([ShowSourceParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showSourceParamCreator = async (...config: ([ShowSourceParams] | [s
         }
         ]
     };
+
+    return sendRequest<ShowSourceReturnType>(Promise.resolve(args));
 }
 
 export default showSourceParamCreator;

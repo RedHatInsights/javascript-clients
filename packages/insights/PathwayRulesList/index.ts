@@ -56,7 +56,7 @@ export const PathwayRulesListCategoryEnum = {
 } as const;
 export type PathwayRulesListCategoryEnum = typeof PathwayRulesListCategoryEnum[keyof typeof PathwayRulesListCategoryEnum];
 
-export type PathwayRulesListReturnType = AxiosPromise<PaginatedRuleForAccountList>;
+export type PathwayRulesListReturnType = PaginatedRuleForAccountList;
 
 const isPathwayRulesListObjectParams = (params: [PathwayRulesListParams] | unknown[]): params is [PathwayRulesListParams] => {
   const l = params.length === 1
@@ -72,7 +72,7 @@ const isPathwayRulesListObjectParams = (params: [PathwayRulesListParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const pathwayRulesListParamCreator = async (...config: ([PathwayRulesListParams] | [string, Array<PathwayRulesListCategoryEnum>, number, number, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const pathwayRulesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PathwayRulesListParams] | [string, Array<PathwayRulesListCategoryEnum>, number, number, string, AxiosRequestConfig])) => {
     const params = isPathwayRulesListObjectParams(config) ? config[0] : ['slug', 'category', 'limit', 'offset', 'text', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PathwayRulesListParams;
     const { slug, category, limit, offset, text, options = {} } = params;
     const localVarPath = `/api/insights/v1/pathway/{slug}/rules/`
@@ -104,7 +104,7 @@ export const pathwayRulesListParamCreator = async (...config: ([PathwayRulesList
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -116,6 +116,8 @@ export const pathwayRulesListParamCreator = async (...config: ([PathwayRulesList
         }
         ]
     };
+
+    return sendRequest<PathwayRulesListReturnType>(Promise.resolve(args));
 }
 
 export default pathwayRulesListParamCreator;

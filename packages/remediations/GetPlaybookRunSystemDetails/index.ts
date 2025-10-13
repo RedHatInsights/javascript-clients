@@ -33,12 +33,12 @@ export type GetPlaybookRunSystemDetailsParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetPlaybookRunSystemDetailsReturnType = AxiosPromise<PlaybookRunSystemDetails>;
+export type GetPlaybookRunSystemDetailsReturnType = PlaybookRunSystemDetails;
 
 const isGetPlaybookRunSystemDetailsObjectParams = (params: [GetPlaybookRunSystemDetailsParams] | unknown[]): params is [GetPlaybookRunSystemDetailsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'playbookRunId') && Object.prototype.hasOwnProperty.call(params[0], 'system')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'playbookRunId') && Object.prototype.hasOwnProperty.call(params[0], 'system')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isGetPlaybookRunSystemDetailsObjectParams = (params: [GetPlaybookRunSystem
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPlaybookRunSystemDetailsParamCreator = async (...config: ([GetPlaybookRunSystemDetailsParams] | [string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPlaybookRunSystemDetailsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetPlaybookRunSystemDetailsParams] | [string, string, string, AxiosRequestConfig])) => {
     const params = isGetPlaybookRunSystemDetailsObjectParams(config) ? config[0] : ['id', 'playbookRunId', 'system', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPlaybookRunSystemDetailsParams;
     const { id, playbookRunId, system, options = {} } = params;
     const localVarPath = `/remediations/{id}/playbook_runs/{playbook_run_id}/systems/{system}`
@@ -67,10 +67,12 @@ export const getPlaybookRunSystemDetailsParamCreator = async (...config: ([GetPl
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetPlaybookRunSystemDetailsReturnType>(Promise.resolve(args));
 }
 
 export default getPlaybookRunSystemDetailsParamCreator;

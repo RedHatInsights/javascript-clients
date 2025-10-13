@@ -21,7 +21,7 @@ export type SystemRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemRetrieveReturnType = AxiosPromise<System>;
+export type SystemRetrieveReturnType = System;
 
 const isSystemRetrieveObjectParams = (params: [SystemRetrieveParams] | unknown[]): params is [SystemRetrieveParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isSystemRetrieveObjectParams = (params: [SystemRetrieveParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemRetrieveParamCreator = async (...config: ([SystemRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isSystemRetrieveObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemRetrieveParams;
     const { uuid, options = {} } = params;
     const localVarPath = `/api/insights/v1/system/{uuid}/`
@@ -53,7 +53,7 @@ export const systemRetrieveParamCreator = async (...config: ([SystemRetrievePara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -65,6 +65,8 @@ export const systemRetrieveParamCreator = async (...config: ([SystemRetrievePara
         }
         ]
     };
+
+    return sendRequest<SystemRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default systemRetrieveParamCreator;

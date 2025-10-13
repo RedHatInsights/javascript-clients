@@ -21,12 +21,12 @@ export type ShowAuthenticationParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowAuthenticationReturnType = AxiosPromise<Authentication>;
+export type ShowAuthenticationReturnType = Authentication;
 
 const isShowAuthenticationObjectParams = (params: [ShowAuthenticationParams] | unknown[]): params is [ShowAuthenticationParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isShowAuthenticationObjectParams = (params: [ShowAuthenticationParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showAuthenticationParamCreator = async (...config: ([ShowAuthenticationParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showAuthenticationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowAuthenticationParams] | [string, AxiosRequestConfig])) => {
     const params = isShowAuthenticationObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowAuthenticationParams;
     const { id, options = {} } = params;
     const localVarPath = `/authentications/{id}`
@@ -53,7 +53,7 @@ export const showAuthenticationParamCreator = async (...config: ([ShowAuthentica
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showAuthenticationParamCreator = async (...config: ([ShowAuthentica
         }
         ]
     };
+
+    return sendRequest<ShowAuthenticationReturnType>(Promise.resolve(args));
 }
 
 export default showAuthenticationParamCreator;

@@ -54,12 +54,12 @@ export const GetRemediationIssueSystemsSortEnum = {
 } as const;
 export type GetRemediationIssueSystemsSortEnum = typeof GetRemediationIssueSystemsSortEnum[keyof typeof GetRemediationIssueSystemsSortEnum];
 
-export type GetRemediationIssueSystemsReturnType = AxiosPromise<RemediationIssueSystemList>;
+export type GetRemediationIssueSystemsReturnType = RemediationIssueSystemList;
 
 const isGetRemediationIssueSystemsObjectParams = (params: [GetRemediationIssueSystemsParams] | unknown[]): params is [GetRemediationIssueSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue')
   }
   return false
 }
@@ -70,7 +70,7 @@ const isGetRemediationIssueSystemsObjectParams = (params: [GetRemediationIssueSy
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationIssueSystemsParamCreator = async (...config: ([GetRemediationIssueSystemsParams] | [string, string, number, number, GetRemediationIssueSystemsSortEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRemediationIssueSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationIssueSystemsParams] | [string, string, number, number, GetRemediationIssueSystemsSortEnum, AxiosRequestConfig])) => {
     const params = isGetRemediationIssueSystemsObjectParams(config) ? config[0] : ['id', 'issue', 'limit', 'offset', 'sort', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationIssueSystemsParams;
     const { id, issue, limit, offset, sort, options = {} } = params;
     const localVarPath = `/remediations/{id}/issues/{issue}/systems`
@@ -99,10 +99,12 @@ export const getRemediationIssueSystemsParamCreator = async (...config: ([GetRem
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetRemediationIssueSystemsReturnType>(Promise.resolve(args));
 }
 
 export default getRemediationIssueSystemsParamCreator;

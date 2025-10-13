@@ -45,7 +45,7 @@ export type ListSourceRegionNetworkAdaptersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionNetworkAdaptersReturnType = AxiosPromise<NetworkAdaptersCollection>;
+export type ListSourceRegionNetworkAdaptersReturnType = NetworkAdaptersCollection;
 
 const isListSourceRegionNetworkAdaptersObjectParams = (params: [ListSourceRegionNetworkAdaptersParams] | unknown[]): params is [ListSourceRegionNetworkAdaptersParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceRegionNetworkAdaptersObjectParams = (params: [ListSourceRegion
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionNetworkAdaptersParamCreator = async (...config: ([ListSourceRegionNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionNetworkAdaptersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionNetworkAdaptersObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionNetworkAdaptersParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions/{id}/network_adapters`
@@ -93,7 +93,7 @@ export const listSourceRegionNetworkAdaptersParamCreator = async (...config: ([L
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceRegionNetworkAdaptersParamCreator = async (...config: ([L
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionNetworkAdaptersReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionNetworkAdaptersParamCreator;

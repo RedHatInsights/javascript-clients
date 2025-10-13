@@ -45,7 +45,7 @@ export type ListSourceRegionSecurityGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionSecurityGroupsReturnType = AxiosPromise<SecurityGroupsCollection>;
+export type ListSourceRegionSecurityGroupsReturnType = SecurityGroupsCollection;
 
 const isListSourceRegionSecurityGroupsObjectParams = (params: [ListSourceRegionSecurityGroupsParams] | unknown[]): params is [ListSourceRegionSecurityGroupsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceRegionSecurityGroupsObjectParams = (params: [ListSourceRegionS
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionSecurityGroupsParamCreator = async (...config: ([ListSourceRegionSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionSecurityGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionSecurityGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionSecurityGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions/{id}/security_groups`
@@ -93,7 +93,7 @@ export const listSourceRegionSecurityGroupsParamCreator = async (...config: ([Li
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceRegionSecurityGroupsParamCreator = async (...config: ([Li
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionSecurityGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionSecurityGroupsParamCreator;

@@ -86,7 +86,7 @@ export const ListRolesForGroupOrderByEnum = {
 } as const;
 export type ListRolesForGroupOrderByEnum = typeof ListRolesForGroupOrderByEnum[keyof typeof ListRolesForGroupOrderByEnum];
 
-export type ListRolesForGroupReturnType = AxiosPromise<GroupRolesPagination>;
+export type ListRolesForGroupReturnType = GroupRolesPagination;
 
 const isListRolesForGroupObjectParams = (params: [ListRolesForGroupParams] | unknown[]): params is [ListRolesForGroupParams] => {
   const l = params.length === 1
@@ -102,7 +102,7 @@ const isListRolesForGroupObjectParams = (params: [ListRolesForGroupParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listRolesForGroupParamCreator = async (...config: ([ListRolesForGroupParams] | [string, boolean, string, string, string, boolean, string, number, number, ListRolesForGroupOrderByEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listRolesForGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListRolesForGroupParams] | [string, boolean, string, string, string, boolean, string, number, number, ListRolesForGroupOrderByEnum, AxiosRequestConfig])) => {
     const params = isListRolesForGroupObjectParams(config) ? config[0] : ['uuid', 'exclude', 'roleName', 'roleDisplayName', 'roleDescription', 'roleSystem', 'roleExternalTenant', 'limit', 'offset', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListRolesForGroupParams;
     const { uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, roleExternalTenant, limit, offset, orderBy, options = {} } = params;
     const localVarPath = `/groups/{uuid}/roles/`
@@ -154,7 +154,7 @@ export const listRolesForGroupParamCreator = async (...config: ([ListRolesForGro
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -165,6 +165,8 @@ export const listRolesForGroupParamCreator = async (...config: ([ListRolesForGro
         }
         ]
     };
+
+    return sendRequest<ListRolesForGroupReturnType>(Promise.resolve(args));
 }
 
 export default listRolesForGroupParamCreator;

@@ -45,7 +45,7 @@ export type ListVmVolumesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListVmVolumesReturnType = AxiosPromise<VolumesCollection>;
+export type ListVmVolumesReturnType = VolumesCollection;
 
 const isListVmVolumesObjectParams = (params: [ListVmVolumesParams] | unknown[]): params is [ListVmVolumesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListVmVolumesObjectParams = (params: [ListVmVolumesParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listVmVolumesParamCreator = async (...config: ([ListVmVolumesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listVmVolumesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListVmVolumesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListVmVolumesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListVmVolumesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/vms/{id}/volumes`
@@ -93,7 +93,7 @@ export const listVmVolumesParamCreator = async (...config: ([ListVmVolumesParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listVmVolumesParamCreator = async (...config: ([ListVmVolumesParams
         }
         ]
     };
+
+    return sendRequest<ListVmVolumesReturnType>(Promise.resolve(args));
 }
 
 export default listVmVolumesParamCreator;

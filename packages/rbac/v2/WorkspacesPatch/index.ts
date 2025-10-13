@@ -27,7 +27,7 @@ export type WorkspacesPatchParams = {
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesPatchReturnType = AxiosPromise<WorkspacesPatchWorkspaceResponse>;
+export type WorkspacesPatchReturnType = WorkspacesPatchWorkspaceResponse;
 
 const isWorkspacesPatchObjectParams = (params: [WorkspacesPatchParams] | unknown[]): params is [WorkspacesPatchParams] => {
   const l = params.length === 1
@@ -42,7 +42,7 @@ const isWorkspacesPatchObjectParams = (params: [WorkspacesPatchParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesPatchParamCreator = async (...config: ([WorkspacesPatchParams] | [string, WorkspacesPatchWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const workspacesPatchParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesPatchParams] | [string, WorkspacesPatchWorkspaceRequest, AxiosRequestConfig])) => {
     const params = isWorkspacesPatchObjectParams(config) ? config[0] : ['id', 'workspacesPatchWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesPatchParams;
     const { id, workspacesPatchWorkspaceRequest, options = {} } = params;
     const localVarPath = `/workspaces/{id}/`
@@ -60,11 +60,13 @@ export const workspacesPatchParamCreator = async (...config: ([WorkspacesPatchPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: workspacesPatchWorkspaceRequest,
     };
+
+    return sendRequest<WorkspacesPatchReturnType>(Promise.resolve(args));
 }
 
 export default workspacesPatchParamCreator;

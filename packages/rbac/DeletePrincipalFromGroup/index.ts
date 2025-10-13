@@ -33,7 +33,7 @@ export type DeletePrincipalFromGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeletePrincipalFromGroupReturnType = AxiosPromise<void>;
+export type DeletePrincipalFromGroupReturnType = void;
 
 const isDeletePrincipalFromGroupObjectParams = (params: [DeletePrincipalFromGroupParams] | unknown[]): params is [DeletePrincipalFromGroupParams] => {
   const l = params.length === 1
@@ -49,7 +49,7 @@ const isDeletePrincipalFromGroupObjectParams = (params: [DeletePrincipalFromGrou
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deletePrincipalFromGroupParamCreator = async (...config: ([DeletePrincipalFromGroupParams] | [string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deletePrincipalFromGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeletePrincipalFromGroupParams] | [string, string, string, AxiosRequestConfig])) => {
     const params = isDeletePrincipalFromGroupObjectParams(config) ? config[0] : ['uuid', 'usernames', 'serviceAccounts', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeletePrincipalFromGroupParams;
     const { uuid, usernames, serviceAccounts, options = {} } = params;
     const localVarPath = `/groups/{uuid}/principals/`
@@ -73,7 +73,7 @@ export const deletePrincipalFromGroupParamCreator = async (...config: ([DeletePr
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -84,6 +84,8 @@ export const deletePrincipalFromGroupParamCreator = async (...config: ([DeletePr
         }
         ]
     };
+
+    return sendRequest<DeletePrincipalFromGroupReturnType>(Promise.resolve(args));
 }
 
 export default deletePrincipalFromGroupParamCreator;

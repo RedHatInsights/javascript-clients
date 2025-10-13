@@ -27,12 +27,12 @@ export type UpdateTemplateSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateTemplateSystemsReturnType = AxiosPromise<void>;
+export type UpdateTemplateSystemsReturnType = void;
 
 const isUpdateTemplateSystemsObjectParams = (params: [UpdateTemplateSystemsParams] | unknown[]): params is [UpdateTemplateSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'templateId') && Object.prototype.hasOwnProperty.call(params[0], 'body')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'templateId') && Object.prototype.hasOwnProperty.call(params[0], 'body')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isUpdateTemplateSystemsObjectParams = (params: [UpdateTemplateSystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateTemplateSystemsParamCreator = async (...config: ([UpdateTemplateSystemsParams] | [string, ControllersTemplateSystemsUpdateRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateTemplateSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateTemplateSystemsParams] | [string, ControllersTemplateSystemsUpdateRequest, AxiosRequestConfig])) => {
     const params = isUpdateTemplateSystemsObjectParams(config) ? config[0] : ['templateId', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateTemplateSystemsParams;
     const { templateId, body, options = {} } = params;
     const localVarPath = `/templates/{template_id}/systems`
@@ -61,7 +61,7 @@ export const updateTemplateSystemsParamCreator = async (...config: ([UpdateTempl
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
@@ -74,6 +74,8 @@ export const updateTemplateSystemsParamCreator = async (...config: ([UpdateTempl
         }
         ]
     };
+
+    return sendRequest<UpdateTemplateSystemsReturnType>(Promise.resolve(args));
 }
 
 export default updateTemplateSystemsParamCreator;

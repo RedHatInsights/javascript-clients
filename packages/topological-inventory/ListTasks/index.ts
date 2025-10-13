@@ -39,7 +39,7 @@ export type ListTasksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTasksReturnType = AxiosPromise<TasksCollection>;
+export type ListTasksReturnType = TasksCollection;
 
 const isListTasksObjectParams = (params: [ListTasksParams] | unknown[]): params is [ListTasksParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListTasksObjectParams = (params: [ListTasksParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTasksParamCreator = async (...config: ([ListTasksParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTasksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTasksParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTasksObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTasksParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tasks`;
@@ -86,7 +86,7 @@ export const listTasksParamCreator = async (...config: ([ListTasksParams] | [num
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listTasksParamCreator = async (...config: ([ListTasksParams] | [num
         }
         ]
     };
+
+    return sendRequest<ListTasksReturnType>(Promise.resolve(args));
 }
 
 export default listTasksParamCreator;

@@ -21,7 +21,7 @@ export type RulecategoryRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type RulecategoryRetrieveReturnType = AxiosPromise<RuleCategory>;
+export type RulecategoryRetrieveReturnType = RuleCategory;
 
 const isRulecategoryRetrieveObjectParams = (params: [RulecategoryRetrieveParams] | unknown[]): params is [RulecategoryRetrieveParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isRulecategoryRetrieveObjectParams = (params: [RulecategoryRetrieveParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const rulecategoryRetrieveParamCreator = async (...config: ([RulecategoryRetrieveParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const rulecategoryRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RulecategoryRetrieveParams] | [number, AxiosRequestConfig])) => {
     const params = isRulecategoryRetrieveObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RulecategoryRetrieveParams;
     const { id, options = {} } = params;
     const localVarPath = `/api/insights/v1/rulecategory/{id}/`
@@ -52,10 +52,12 @@ export const rulecategoryRetrieveParamCreator = async (...config: ([Rulecategory
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<RulecategoryRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default rulecategoryRetrieveParamCreator;

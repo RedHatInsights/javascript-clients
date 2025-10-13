@@ -21,12 +21,12 @@ export type ShowApplicationParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowApplicationReturnType = AxiosPromise<Application>;
+export type ShowApplicationReturnType = Application;
 
 const isShowApplicationObjectParams = (params: [ShowApplicationParams] | unknown[]): params is [ShowApplicationParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isShowApplicationObjectParams = (params: [ShowApplicationParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showApplicationParamCreator = async (...config: ([ShowApplicationParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showApplicationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowApplicationParams] | [string, AxiosRequestConfig])) => {
     const params = isShowApplicationObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowApplicationParams;
     const { id, options = {} } = params;
     const localVarPath = `/applications/{id}`
@@ -53,7 +53,7 @@ export const showApplicationParamCreator = async (...config: ([ShowApplicationPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showApplicationParamCreator = async (...config: ([ShowApplicationPa
         }
         ]
     };
+
+    return sendRequest<ShowApplicationReturnType>(Promise.resolve(args));
 }
 
 export default showApplicationParamCreator;

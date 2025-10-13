@@ -45,7 +45,7 @@ export type ListContainerNodeContainerGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerNodeContainerGroupsReturnType = AxiosPromise<ContainerGroupsCollection>;
+export type ListContainerNodeContainerGroupsReturnType = ContainerGroupsCollection;
 
 const isListContainerNodeContainerGroupsObjectParams = (params: [ListContainerNodeContainerGroupsParams] | unknown[]): params is [ListContainerNodeContainerGroupsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListContainerNodeContainerGroupsObjectParams = (params: [ListContainerNo
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerNodeContainerGroupsParamCreator = async (...config: ([ListContainerNodeContainerGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerNodeContainerGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerNodeContainerGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerNodeContainerGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerNodeContainerGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_nodes/{id}/container_groups`
@@ -93,7 +93,7 @@ export const listContainerNodeContainerGroupsParamCreator = async (...config: ([
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listContainerNodeContainerGroupsParamCreator = async (...config: ([
         }
         ]
     };
+
+    return sendRequest<ListContainerNodeContainerGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listContainerNodeContainerGroupsParamCreator;

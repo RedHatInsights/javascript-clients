@@ -21,7 +21,7 @@ export type AutosubexclusionRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type AutosubexclusionRetrieveReturnType = AxiosPromise<SubscriptionExcludedAccount>;
+export type AutosubexclusionRetrieveReturnType = SubscriptionExcludedAccount;
 
 const isAutosubexclusionRetrieveObjectParams = (params: [AutosubexclusionRetrieveParams] | unknown[]): params is [AutosubexclusionRetrieveParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isAutosubexclusionRetrieveObjectParams = (params: [AutosubexclusionRetriev
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const autosubexclusionRetrieveParamCreator = async (...config: ([AutosubexclusionRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const autosubexclusionRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AutosubexclusionRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isAutosubexclusionRetrieveObjectParams(config) ? config[0] : ['orgId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AutosubexclusionRetrieveParams;
     const { orgId, options = {} } = params;
     const localVarPath = `/api/insights/v1/autosubexclusion/{org_id}/`
@@ -52,7 +52,7 @@ export const autosubexclusionRetrieveParamCreator = async (...config: ([Autosube
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const autosubexclusionRetrieveParamCreator = async (...config: ([Autosube
         }
         ]
     };
+
+    return sendRequest<AutosubexclusionRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default autosubexclusionRetrieveParamCreator;

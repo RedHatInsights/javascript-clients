@@ -45,7 +45,7 @@ export type ListVmSecurityGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListVmSecurityGroupsReturnType = AxiosPromise<SecurityGroupsCollection>;
+export type ListVmSecurityGroupsReturnType = SecurityGroupsCollection;
 
 const isListVmSecurityGroupsObjectParams = (params: [ListVmSecurityGroupsParams] | unknown[]): params is [ListVmSecurityGroupsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListVmSecurityGroupsObjectParams = (params: [ListVmSecurityGroupsParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listVmSecurityGroupsParamCreator = async (...config: ([ListVmSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listVmSecurityGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListVmSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListVmSecurityGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListVmSecurityGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/vms/{id}/security_groups`
@@ -93,7 +93,7 @@ export const listVmSecurityGroupsParamCreator = async (...config: ([ListVmSecuri
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listVmSecurityGroupsParamCreator = async (...config: ([ListVmSecuri
         }
         ]
     };
+
+    return sendRequest<ListVmSecurityGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listVmSecurityGroupsParamCreator;

@@ -27,12 +27,12 @@ export type SystemParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemReturnType = AxiosPromise<System200Response>;
+export type SystemReturnType = System200Response;
 
 const isSystemObjectParams = (params: [SystemParams] | unknown[]): params is [SystemParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'systemId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'systemId')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isSystemObjectParams = (params: [SystemParams] | unknown[]): params is [Sy
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemParamCreator = async (...config: ([SystemParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemParams] | [any, any, AxiosRequestConfig])) => {
     const params = isSystemObjectParams(config) ? config[0] : ['systemId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemParams;
     const { systemId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/systems/{system_id}`
@@ -65,10 +65,12 @@ export const systemParamCreator = async (...config: ([SystemParams] | [any, any,
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SystemReturnType>(Promise.resolve(args));
 }
 
 export default systemParamCreator;

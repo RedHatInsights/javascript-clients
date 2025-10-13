@@ -15,7 +15,7 @@ export type ApiStalenessGetDefaultStalenessParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiStalenessGetDefaultStalenessReturnType = AxiosPromise<StalenessOutput>;
+export type ApiStalenessGetDefaultStalenessReturnType = StalenessOutput;
 
 const isApiStalenessGetDefaultStalenessObjectParams = (params: [ApiStalenessGetDefaultStalenessParams] | unknown[]): params is [ApiStalenessGetDefaultStalenessParams] => {
   const l = params.length === 1
@@ -31,7 +31,7 @@ const isApiStalenessGetDefaultStalenessObjectParams = (params: [ApiStalenessGetD
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiStalenessGetDefaultStalenessParamCreator = async (...config: ([ApiStalenessGetDefaultStalenessParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiStalenessGetDefaultStalenessParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiStalenessGetDefaultStalenessParams] | [AxiosRequestConfig])) => {
     const params = isApiStalenessGetDefaultStalenessObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiStalenessGetDefaultStalenessParams;
     const { options = {} } = params;
     const localVarPath = `/account/staleness/defaults`;
@@ -46,7 +46,7 @@ export const apiStalenessGetDefaultStalenessParamCreator = async (...config: ([A
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -63,6 +63,8 @@ export const apiStalenessGetDefaultStalenessParamCreator = async (...config: ([A
         }
         ]
     };
+
+    return sendRequest<ApiStalenessGetDefaultStalenessReturnType>(Promise.resolve(args));
 }
 
 export default apiStalenessGetDefaultStalenessParamCreator;

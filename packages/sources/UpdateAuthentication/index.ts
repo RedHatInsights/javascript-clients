@@ -27,12 +27,12 @@ export type UpdateAuthenticationParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateAuthenticationReturnType = AxiosPromise<void>;
+export type UpdateAuthenticationReturnType = void;
 
 const isUpdateAuthenticationObjectParams = (params: [UpdateAuthenticationParams] | unknown[]): params is [UpdateAuthenticationParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'authentication')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'authentication')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isUpdateAuthenticationObjectParams = (params: [UpdateAuthenticationParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateAuthenticationParamCreator = async (...config: ([UpdateAuthenticationParams] | [string, Authentication, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateAuthenticationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateAuthenticationParams] | [string, Authentication, AxiosRequestConfig])) => {
     const params = isUpdateAuthenticationObjectParams(config) ? config[0] : ['id', 'authentication', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateAuthenticationParams;
     const { id, authentication, options = {} } = params;
     const localVarPath = `/authentications/{id}`
@@ -61,7 +61,7 @@ export const updateAuthenticationParamCreator = async (...config: ([UpdateAuthen
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: authentication,
@@ -73,6 +73,8 @@ export const updateAuthenticationParamCreator = async (...config: ([UpdateAuthen
         }
         ]
     };
+
+    return sendRequest<UpdateAuthenticationReturnType>(Promise.resolve(args));
 }
 
 export default updateAuthenticationParamCreator;

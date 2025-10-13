@@ -33,7 +33,7 @@ export type ApiHostPatchHostByIdParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostPatchHostByIdReturnType = AxiosPromise<void>;
+export type ApiHostPatchHostByIdReturnType = void;
 
 const isApiHostPatchHostByIdObjectParams = (params: [ApiHostPatchHostByIdParams] | unknown[]): params is [ApiHostPatchHostByIdParams] => {
   const l = params.length === 1
@@ -49,7 +49,7 @@ const isApiHostPatchHostByIdObjectParams = (params: [ApiHostPatchHostByIdParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostPatchHostByIdParamCreator = async (...config: ([ApiHostPatchHostByIdParams] | [Array<string>, PatchHostIn, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostPatchHostByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostPatchHostByIdParams] | [Array<string>, PatchHostIn, string, AxiosRequestConfig])) => {
     const params = isApiHostPatchHostByIdObjectParams(config) ? config[0] : ['hostIdList', 'patchHostIn', 'branchId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostPatchHostByIdParams;
     const { hostIdList, patchHostIn, branchId, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}`
@@ -71,7 +71,7 @@ export const apiHostPatchHostByIdParamCreator = async (...config: ([ApiHostPatch
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: patchHostIn,
@@ -84,6 +84,8 @@ export const apiHostPatchHostByIdParamCreator = async (...config: ([ApiHostPatch
         }
         ]
     };
+
+    return sendRequest<ApiHostPatchHostByIdReturnType>(Promise.resolve(args));
 }
 
 export default apiHostPatchHostByIdParamCreator;

@@ -27,7 +27,7 @@ export type PatchCrossAccountRequestParams = {
   options?: AxiosRequestConfig
 }
 
-export type PatchCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
+export type PatchCrossAccountRequestReturnType = CrossAccountRequestDetail;
 
 const isPatchCrossAccountRequestObjectParams = (params: [PatchCrossAccountRequestParams] | unknown[]): params is [PatchCrossAccountRequestParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isPatchCrossAccountRequestObjectParams = (params: [PatchCrossAccountReques
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const patchCrossAccountRequestParamCreator = async (...config: ([PatchCrossAccountRequestParams] | [string, CrossAccountRequestPatch, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const patchCrossAccountRequestParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PatchCrossAccountRequestParams] | [string, CrossAccountRequestPatch, AxiosRequestConfig])) => {
     const params = isPatchCrossAccountRequestObjectParams(config) ? config[0] : ['uuid', 'crossAccountRequestPatch', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PatchCrossAccountRequestParams;
     const { uuid, crossAccountRequestPatch, options = {} } = params;
     const localVarPath = `/cross-account-requests/{uuid}/`
@@ -61,7 +61,7 @@ export const patchCrossAccountRequestParamCreator = async (...config: ([PatchCro
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: crossAccountRequestPatch,
@@ -73,6 +73,8 @@ export const patchCrossAccountRequestParamCreator = async (...config: ([PatchCro
         }
         ]
     };
+
+    return sendRequest<PatchCrossAccountRequestReturnType>(Promise.resolve(args));
 }
 
 export default patchCrossAccountRequestParamCreator;

@@ -54,12 +54,12 @@ export const GetRemediationIssuesSortEnum = {
 } as const;
 export type GetRemediationIssuesSortEnum = typeof GetRemediationIssuesSortEnum[keyof typeof GetRemediationIssuesSortEnum];
 
-export type GetRemediationIssuesReturnType = AxiosPromise<RemediationIssueList>;
+export type GetRemediationIssuesReturnType = RemediationIssueList;
 
 const isGetRemediationIssuesObjectParams = (params: [GetRemediationIssuesParams] | unknown[]): params is [GetRemediationIssuesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -70,7 +70,7 @@ const isGetRemediationIssuesObjectParams = (params: [GetRemediationIssuesParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationIssuesParamCreator = async (...config: ([GetRemediationIssuesParams] | [string, number, number, GetRemediationIssuesFilterParameter, GetRemediationIssuesSortEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRemediationIssuesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationIssuesParams] | [string, number, number, GetRemediationIssuesFilterParameter, GetRemediationIssuesSortEnum, AxiosRequestConfig])) => {
     const params = isGetRemediationIssuesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sort', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationIssuesParams;
     const { id, limit, offset, filter, sort, options = {} } = params;
     const localVarPath = `/remediations/{id}/issues`
@@ -102,10 +102,12 @@ export const getRemediationIssuesParamCreator = async (...config: ([GetRemediati
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetRemediationIssuesReturnType>(Promise.resolve(args));
 }
 
 export default getRemediationIssuesParamCreator;

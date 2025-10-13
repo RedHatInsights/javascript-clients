@@ -88,7 +88,7 @@ export const ApiSystemProfileGetSapSidsRegisteredWithEnum = {
 } as const;
 export type ApiSystemProfileGetSapSidsRegisteredWithEnum = typeof ApiSystemProfileGetSapSidsRegisteredWithEnum[keyof typeof ApiSystemProfileGetSapSidsRegisteredWithEnum];
 
-export type ApiSystemProfileGetSapSidsReturnType = AxiosPromise<SystemProfileSapSystemOut>;
+export type ApiSystemProfileGetSapSidsReturnType = SystemProfileSapSystemOut;
 
 const isApiSystemProfileGetSapSidsObjectParams = (params: [ApiSystemProfileGetSapSidsParams] | unknown[]): params is [ApiSystemProfileGetSapSidsParams] => {
   const l = params.length === 1
@@ -104,7 +104,7 @@ const isApiSystemProfileGetSapSidsObjectParams = (params: [ApiSystemProfileGetSa
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiSystemProfileGetSapSidsParamCreator = async (...config: ([ApiSystemProfileGetSapSidsParams] | [string, Array<string>, number, number, Array<ApiSystemProfileGetSapSidsStalenessEnum>, Array<ApiSystemProfileGetSapSidsRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiSystemProfileGetSapSidsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiSystemProfileGetSapSidsParams] | [string, Array<string>, number, number, Array<ApiSystemProfileGetSapSidsStalenessEnum>, Array<ApiSystemProfileGetSapSidsRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
     const params = isApiSystemProfileGetSapSidsObjectParams(config) ? config[0] : ['search', 'tags', 'perPage', 'page', 'staleness', 'registeredWith', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiSystemProfileGetSapSidsParams;
     const { search, tags, perPage, page, staleness, registeredWith, filter, options = {} } = params;
     const localVarPath = `/system_profile/sap_sids`;
@@ -147,7 +147,7 @@ export const apiSystemProfileGetSapSidsParamCreator = async (...config: ([ApiSys
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -159,6 +159,8 @@ export const apiSystemProfileGetSapSidsParamCreator = async (...config: ([ApiSys
         }
         ]
     };
+
+    return sendRequest<ApiSystemProfileGetSapSidsReturnType>(Promise.resolve(args));
 }
 
 export default apiSystemProfileGetSapSidsParamCreator;

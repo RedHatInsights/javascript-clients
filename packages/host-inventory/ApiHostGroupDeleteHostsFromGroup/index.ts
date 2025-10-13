@@ -27,7 +27,7 @@ export type ApiHostGroupDeleteHostsFromGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostGroupDeleteHostsFromGroupReturnType = AxiosPromise<void>;
+export type ApiHostGroupDeleteHostsFromGroupReturnType = void;
 
 const isApiHostGroupDeleteHostsFromGroupObjectParams = (params: [ApiHostGroupDeleteHostsFromGroupParams] | unknown[]): params is [ApiHostGroupDeleteHostsFromGroupParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isApiHostGroupDeleteHostsFromGroupObjectParams = (params: [ApiHostGroupDel
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGroupDeleteHostsFromGroupParamCreator = async (...config: ([ApiHostGroupDeleteHostsFromGroupParams] | [string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGroupDeleteHostsFromGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGroupDeleteHostsFromGroupParams] | [string, Array<string>, AxiosRequestConfig])) => {
     const params = isApiHostGroupDeleteHostsFromGroupObjectParams(config) ? config[0] : ['groupId', 'hostIdList', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGroupDeleteHostsFromGroupParams;
     const { groupId, hostIdList, options = {} } = params;
     const localVarPath = `/groups/{group_id}/hosts/{host_id_list}`
@@ -60,7 +60,7 @@ export const apiHostGroupDeleteHostsFromGroupParamCreator = async (...config: ([
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -72,6 +72,8 @@ export const apiHostGroupDeleteHostsFromGroupParamCreator = async (...config: ([
         }
         ]
     };
+
+    return sendRequest<ApiHostGroupDeleteHostsFromGroupReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGroupDeleteHostsFromGroupParamCreator;

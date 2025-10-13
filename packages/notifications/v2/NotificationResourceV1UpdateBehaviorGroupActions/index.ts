@@ -27,7 +27,7 @@ export type NotificationResourceV1UpdateBehaviorGroupActionsParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1UpdateBehaviorGroupActionsReturnType = AxiosPromise<any>;
+export type NotificationResourceV1UpdateBehaviorGroupActionsReturnType = any;
 
 const isNotificationResourceV1UpdateBehaviorGroupActionsObjectParams = (params: [NotificationResourceV1UpdateBehaviorGroupActionsParams] | unknown[]): params is [NotificationResourceV1UpdateBehaviorGroupActionsParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isNotificationResourceV1UpdateBehaviorGroupActionsObjectParams = (params: 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1UpdateBehaviorGroupActionsParamCreator = async (...config: ([NotificationResourceV1UpdateBehaviorGroupActionsParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1UpdateBehaviorGroupActionsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1UpdateBehaviorGroupActionsParams] | [any, any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1UpdateBehaviorGroupActionsObjectParams(config) ? config[0] : ['behaviorGroupId', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1UpdateBehaviorGroupActionsParams;
     const { behaviorGroupId, body, options = {} } = params;
     const localVarPath = `/notifications/behaviorGroups/{behaviorGroupId}/actions`
@@ -61,11 +61,13 @@ export const notificationResourceV1UpdateBehaviorGroupActionsParamCreator = asyn
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
     };
+
+    return sendRequest<NotificationResourceV1UpdateBehaviorGroupActionsReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1UpdateBehaviorGroupActionsParamCreator;

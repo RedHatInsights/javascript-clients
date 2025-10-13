@@ -45,7 +45,7 @@ export type ListSourceRegionServicePlansParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionServicePlansReturnType = AxiosPromise<ServicePlansCollection>;
+export type ListSourceRegionServicePlansReturnType = ServicePlansCollection;
 
 const isListSourceRegionServicePlansObjectParams = (params: [ListSourceRegionServicePlansParams] | unknown[]): params is [ListSourceRegionServicePlansParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceRegionServicePlansObjectParams = (params: [ListSourceRegionSer
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionServicePlansParamCreator = async (...config: ([ListSourceRegionServicePlansParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionServicePlansParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionServicePlansParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionServicePlansObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionServicePlansParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions/{id}/service_plans`
@@ -93,7 +93,7 @@ export const listSourceRegionServicePlansParamCreator = async (...config: ([List
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceRegionServicePlansParamCreator = async (...config: ([List
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionServicePlansReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionServicePlansParamCreator;

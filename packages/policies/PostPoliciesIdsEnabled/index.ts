@@ -27,12 +27,12 @@ export type PostPoliciesIdsEnabledParams = {
   options?: AxiosRequestConfig
 }
 
-export type PostPoliciesIdsEnabledReturnType = AxiosPromise<Array<string>>;
+export type PostPoliciesIdsEnabledReturnType = Array<string>;
 
 const isPostPoliciesIdsEnabledObjectParams = (params: [PostPoliciesIdsEnabledParams] | unknown[]): params is [PostPoliciesIdsEnabledParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'requestBody')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'requestBody')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isPostPoliciesIdsEnabledObjectParams = (params: [PostPoliciesIdsEnabledPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const postPoliciesIdsEnabledParamCreator = async (...config: ([PostPoliciesIdsEnabledParams] | [Array<string>, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const postPoliciesIdsEnabledParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PostPoliciesIdsEnabledParams] | [Array<string>, boolean, AxiosRequestConfig])) => {
     const params = isPostPoliciesIdsEnabledObjectParams(config) ? config[0] : ['requestBody', 'enabled', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PostPoliciesIdsEnabledParams;
     const { requestBody, enabled, options = {} } = params;
     const localVarPath = `/policies/ids/enabled`;
@@ -64,11 +64,13 @@ export const postPoliciesIdsEnabledParamCreator = async (...config: ([PostPolici
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: requestBody,
     };
+
+    return sendRequest<PostPoliciesIdsEnabledReturnType>(Promise.resolve(args));
 }
 
 export default postPoliciesIdsEnabledParamCreator;

@@ -123,7 +123,7 @@ export const PathwayListSortEnum = {
 } as const;
 export type PathwayListSortEnum = typeof PathwayListSortEnum[keyof typeof PathwayListSortEnum];
 
-export type PathwayListReturnType = AxiosPromise<PaginatedPathwayList>;
+export type PathwayListReturnType = PaginatedPathwayList;
 
 const isPathwayListObjectParams = (params: [PathwayListParams] | unknown[]): params is [PathwayListParams] => {
   const l = params.length === 1
@@ -139,7 +139,7 @@ const isPathwayListObjectParams = (params: [PathwayListParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const pathwayListParamCreator = async (...config: ([PathwayListParams] | [Array<PathwayListCategoryEnum>, boolean, boolean, Array<string>, boolean, Array<string>, boolean, boolean, number, number, boolean, PathwayListSortEnum, Array<string>, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const pathwayListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PathwayListParams] | [Array<PathwayListCategoryEnum>, boolean, boolean, Array<string>, boolean, Array<string>, boolean, boolean, number, number, boolean, PathwayListSortEnum, Array<string>, string, AxiosRequestConfig])) => {
     const params = isPathwayListObjectParams(config) ? config[0] : ['category', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasIncident', 'impacting', 'limit', 'offset', 'rebootRequired', 'sort', 'tags', 'text', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PathwayListParams;
     const { category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasIncident, impacting, limit, offset, rebootRequired, sort, tags, text, options = {} } = params;
     const localVarPath = `/api/insights/v1/pathway/`;
@@ -210,7 +210,7 @@ export const pathwayListParamCreator = async (...config: ([PathwayListParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -222,6 +222,8 @@ export const pathwayListParamCreator = async (...config: ([PathwayListParams] | 
         }
         ]
     };
+
+    return sendRequest<PathwayListReturnType>(Promise.resolve(args));
 }
 
 export default pathwayListParamCreator;

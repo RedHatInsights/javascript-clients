@@ -137,7 +137,7 @@ export const ListGroupsOrderByEnum = {
 } as const;
 export type ListGroupsOrderByEnum = typeof ListGroupsOrderByEnum[keyof typeof ListGroupsOrderByEnum];
 
-export type ListGroupsReturnType = AxiosPromise<GroupPagination>;
+export type ListGroupsReturnType = GroupPagination;
 
 const isListGroupsObjectParams = (params: [ListGroupsParams] | unknown[]): params is [ListGroupsParams] => {
   const l = params.length === 1
@@ -153,7 +153,7 @@ const isListGroupsObjectParams = (params: [ListGroupsParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listGroupsParamCreator = async (...config: ([ListGroupsParams] | [number, number, string, ListGroupsNameMatchEnum, ListGroupsScopeEnum, string, string, Array<string>, Array<string>, ListGroupsRoleDiscriminatorEnum, ListGroupsOrderByEnum, boolean, boolean, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListGroupsParams] | [number, number, string, ListGroupsNameMatchEnum, ListGroupsScopeEnum, string, string, Array<string>, Array<string>, ListGroupsRoleDiscriminatorEnum, ListGroupsOrderByEnum, boolean, boolean, boolean, AxiosRequestConfig])) => {
     const params = isListGroupsObjectParams(config) ? config[0] : ['limit', 'offset', 'name', 'nameMatch', 'scope', 'username', 'excludeUsername', 'uuid', 'roleNames', 'roleDiscriminator', 'orderBy', 'platformDefault', 'adminDefault', 'system', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListGroupsParams;
     const { limit, offset, name, nameMatch, scope, username, excludeUsername, uuid, roleNames, roleDiscriminator, orderBy, platformDefault, adminDefault, system, options = {} } = params;
     const localVarPath = `/groups/`;
@@ -224,7 +224,7 @@ export const listGroupsParamCreator = async (...config: ([ListGroupsParams] | [n
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -235,6 +235,8 @@ export const listGroupsParamCreator = async (...config: ([ListGroupsParams] | [n
         }
         ]
     };
+
+    return sendRequest<ListGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listGroupsParamCreator;

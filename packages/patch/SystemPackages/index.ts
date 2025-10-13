@@ -75,12 +75,12 @@ export type SystemPackagesParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemPackagesReturnType = AxiosPromise<ControllersSystemPackageResponse>;
+export type SystemPackagesReturnType = ControllersSystemPackageResponse;
 
 const isSystemPackagesObjectParams = (params: [SystemPackagesParams] | unknown[]): params is [SystemPackagesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
   }
   return false
 }
@@ -91,7 +91,7 @@ const isSystemPackagesObjectParams = (params: [SystemPackagesParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemPackagesParamCreator = async (...config: ([SystemPackagesParams] | [string, number, number, string, string, string, string, string, boolean, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemPackagesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemPackagesParams] | [string, number, number, string, string, string, string, string, boolean, string, AxiosRequestConfig])) => {
     const params = isSystemPackagesObjectParams(config) ? config[0] : ['inventoryId', 'limit', 'offset', 'search', 'filterName', 'filterDescription', 'filterEvra', 'filterSummary', 'filterUpdatable', 'filterUpdateStatus', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemPackagesParams;
     const { inventoryId, limit, offset, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, filterUpdateStatus, options = {} } = params;
     const localVarPath = `/systems/{inventory_id}/packages`
@@ -143,7 +143,7 @@ export const systemPackagesParamCreator = async (...config: ([SystemPackagesPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -155,6 +155,8 @@ export const systemPackagesParamCreator = async (...config: ([SystemPackagesPara
         }
         ]
     };
+
+    return sendRequest<SystemPackagesReturnType>(Promise.resolve(args));
 }
 
 export default systemPackagesParamCreator;

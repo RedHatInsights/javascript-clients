@@ -80,7 +80,7 @@ export const PathwayRetrieveCategoryEnum = {
 } as const;
 export type PathwayRetrieveCategoryEnum = typeof PathwayRetrieveCategoryEnum[keyof typeof PathwayRetrieveCategoryEnum];
 
-export type PathwayRetrieveReturnType = AxiosPromise<Pathway>;
+export type PathwayRetrieveReturnType = Pathway;
 
 const isPathwayRetrieveObjectParams = (params: [PathwayRetrieveParams] | unknown[]): params is [PathwayRetrieveParams] => {
   const l = params.length === 1
@@ -96,7 +96,7 @@ const isPathwayRetrieveObjectParams = (params: [PathwayRetrieveParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const pathwayRetrieveParamCreator = async (...config: ([PathwayRetrieveParams] | [string, Array<PathwayRetrieveCategoryEnum>, boolean, boolean, Array<string>, boolean, Array<string>, Array<string>, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const pathwayRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PathwayRetrieveParams] | [string, Array<PathwayRetrieveCategoryEnum>, boolean, boolean, Array<string>, boolean, Array<string>, Array<string>, string, AxiosRequestConfig])) => {
     const params = isPathwayRetrieveObjectParams(config) ? config[0] : ['slug', 'category', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'tags', 'text', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PathwayRetrieveParams;
     const { slug, category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options = {} } = params;
     const localVarPath = `/api/insights/v1/pathway/{slug}/`
@@ -144,7 +144,7 @@ export const pathwayRetrieveParamCreator = async (...config: ([PathwayRetrievePa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -156,6 +156,8 @@ export const pathwayRetrieveParamCreator = async (...config: ([PathwayRetrievePa
         }
         ]
     };
+
+    return sendRequest<PathwayRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default pathwayRetrieveParamCreator;

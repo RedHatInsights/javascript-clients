@@ -45,7 +45,7 @@ export type ListOrchestrationStackNetworkAdaptersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackNetworkAdaptersReturnType = AxiosPromise<NetworkAdaptersCollection>;
+export type ListOrchestrationStackNetworkAdaptersReturnType = NetworkAdaptersCollection;
 
 const isListOrchestrationStackNetworkAdaptersObjectParams = (params: [ListOrchestrationStackNetworkAdaptersParams] | unknown[]): params is [ListOrchestrationStackNetworkAdaptersParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListOrchestrationStackNetworkAdaptersObjectParams = (params: [ListOrches
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackNetworkAdaptersParamCreator = async (...config: ([ListOrchestrationStackNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackNetworkAdaptersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackNetworkAdaptersObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackNetworkAdaptersParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/network_adapters`
@@ -93,7 +93,7 @@ export const listOrchestrationStackNetworkAdaptersParamCreator = async (...confi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listOrchestrationStackNetworkAdaptersParamCreator = async (...confi
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackNetworkAdaptersReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackNetworkAdaptersParamCreator;

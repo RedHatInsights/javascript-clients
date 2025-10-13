@@ -45,7 +45,7 @@ export type ListContainerTemplateTagsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerTemplateTagsReturnType = AxiosPromise<TagsCollection>;
+export type ListContainerTemplateTagsReturnType = TagsCollection;
 
 const isListContainerTemplateTagsObjectParams = (params: [ListContainerTemplateTagsParams] | unknown[]): params is [ListContainerTemplateTagsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListContainerTemplateTagsObjectParams = (params: [ListContainerTemplateT
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerTemplateTagsParamCreator = async (...config: ([ListContainerTemplateTagsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerTemplateTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerTemplateTagsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerTemplateTagsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerTemplateTagsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_templates/{id}/tags`
@@ -93,7 +93,7 @@ export const listContainerTemplateTagsParamCreator = async (...config: ([ListCon
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listContainerTemplateTagsParamCreator = async (...config: ([ListCon
         }
         ]
     };
+
+    return sendRequest<ListContainerTemplateTagsReturnType>(Promise.resolve(args));
 }
 
 export default listContainerTemplateTagsParamCreator;

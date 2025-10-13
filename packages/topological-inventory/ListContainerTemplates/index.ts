@@ -39,7 +39,7 @@ export type ListContainerTemplatesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerTemplatesReturnType = AxiosPromise<ContainerTemplatesCollection>;
+export type ListContainerTemplatesReturnType = ContainerTemplatesCollection;
 
 const isListContainerTemplatesObjectParams = (params: [ListContainerTemplatesParams] | unknown[]): params is [ListContainerTemplatesParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListContainerTemplatesObjectParams = (params: [ListContainerTemplatesPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerTemplatesParamCreator = async (...config: ([ListContainerTemplatesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerTemplatesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerTemplatesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerTemplatesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerTemplatesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_templates`;
@@ -86,7 +86,7 @@ export const listContainerTemplatesParamCreator = async (...config: ([ListContai
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listContainerTemplatesParamCreator = async (...config: ([ListContai
         }
         ]
     };
+
+    return sendRequest<ListContainerTemplatesReturnType>(Promise.resolve(args));
 }
 
 export default listContainerTemplatesParamCreator;

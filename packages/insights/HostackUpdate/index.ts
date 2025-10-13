@@ -27,7 +27,7 @@ export type HostackUpdateParams = {
   options?: AxiosRequestConfig
 }
 
-export type HostackUpdateReturnType = AxiosPromise<HostAckJustification>;
+export type HostackUpdateReturnType = HostAckJustification;
 
 const isHostackUpdateObjectParams = (params: [HostackUpdateParams] | unknown[]): params is [HostackUpdateParams] => {
   const l = params.length === 1
@@ -42,7 +42,7 @@ const isHostackUpdateObjectParams = (params: [HostackUpdateParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const hostackUpdateParamCreator = async (...config: ([HostackUpdateParams] | [number, HostAckJustification, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const hostackUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([HostackUpdateParams] | [number, HostAckJustification, AxiosRequestConfig])) => {
     const params = isHostackUpdateObjectParams(config) ? config[0] : ['id', 'hostAckJustification', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HostackUpdateParams;
     const { id, hostAckJustification, options = {} } = params;
     const localVarPath = `/api/insights/v1/hostack/{id}/`
@@ -60,7 +60,7 @@ export const hostackUpdateParamCreator = async (...config: ([HostackUpdateParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: hostAckJustification,
@@ -73,6 +73,8 @@ export const hostackUpdateParamCreator = async (...config: ([HostackUpdateParams
         }
         ]
     };
+
+    return sendRequest<HostackUpdateReturnType>(Promise.resolve(args));
 }
 
 export default hostackUpdateParamCreator;

@@ -27,12 +27,12 @@ export type UpdateApplicationParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateApplicationReturnType = AxiosPromise<void>;
+export type UpdateApplicationReturnType = void;
 
 const isUpdateApplicationObjectParams = (params: [UpdateApplicationParams] | unknown[]): params is [UpdateApplicationParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'application')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'application')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isUpdateApplicationObjectParams = (params: [UpdateApplicationParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateApplicationParamCreator = async (...config: ([UpdateApplicationParams] | [string, Application, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateApplicationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateApplicationParams] | [string, Application, AxiosRequestConfig])) => {
     const params = isUpdateApplicationObjectParams(config) ? config[0] : ['id', 'application', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateApplicationParams;
     const { id, application, options = {} } = params;
     const localVarPath = `/applications/{id}`
@@ -61,7 +61,7 @@ export const updateApplicationParamCreator = async (...config: ([UpdateApplicati
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: application,
@@ -73,6 +73,8 @@ export const updateApplicationParamCreator = async (...config: ([UpdateApplicati
         }
         ]
     };
+
+    return sendRequest<UpdateApplicationReturnType>(Promise.resolve(args));
 }
 
 export default updateApplicationParamCreator;

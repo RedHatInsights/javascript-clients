@@ -27,7 +27,7 @@ export type RuleAckHostsCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleAckHostsCreateReturnType = AxiosPromise<MultiAckResponse>;
+export type RuleAckHostsCreateReturnType = MultiAckResponse;
 
 const isRuleAckHostsCreateObjectParams = (params: [RuleAckHostsCreateParams] | unknown[]): params is [RuleAckHostsCreateParams] => {
   const l = params.length === 1
@@ -42,7 +42,7 @@ const isRuleAckHostsCreateObjectParams = (params: [RuleAckHostsCreateParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleAckHostsCreateParamCreator = async (...config: ([RuleAckHostsCreateParams] | [string, MultiHostAck, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleAckHostsCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleAckHostsCreateParams] | [string, MultiHostAck, AxiosRequestConfig])) => {
     const params = isRuleAckHostsCreateObjectParams(config) ? config[0] : ['ruleId', 'multiHostAck', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleAckHostsCreateParams;
     const { ruleId, multiHostAck, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/ack_hosts/`
@@ -60,7 +60,7 @@ export const ruleAckHostsCreateParamCreator = async (...config: ([RuleAckHostsCr
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: multiHostAck,
@@ -73,6 +73,8 @@ export const ruleAckHostsCreateParamCreator = async (...config: ([RuleAckHostsCr
         }
         ]
     };
+
+    return sendRequest<RuleAckHostsCreateReturnType>(Promise.resolve(args));
 }
 
 export default ruleAckHostsCreateParamCreator;

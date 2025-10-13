@@ -21,12 +21,12 @@ export type SystemYumUpdatesParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemYumUpdatesReturnType = AxiosPromise<ControllersSystemYumUpdatesResponse>;
+export type SystemYumUpdatesReturnType = ControllersSystemYumUpdatesResponse;
 
 const isSystemYumUpdatesObjectParams = (params: [SystemYumUpdatesParams] | unknown[]): params is [SystemYumUpdatesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isSystemYumUpdatesObjectParams = (params: [SystemYumUpdatesParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemYumUpdatesParamCreator = async (...config: ([SystemYumUpdatesParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemYumUpdatesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemYumUpdatesParams] | [string, AxiosRequestConfig])) => {
     const params = isSystemYumUpdatesObjectParams(config) ? config[0] : ['inventoryId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemYumUpdatesParams;
     const { inventoryId, options = {} } = params;
     const localVarPath = `/systems/{inventory_id}/yum_updates`
@@ -53,7 +53,7 @@ export const systemYumUpdatesParamCreator = async (...config: ([SystemYumUpdates
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -65,6 +65,8 @@ export const systemYumUpdatesParamCreator = async (...config: ([SystemYumUpdates
         }
         ]
     };
+
+    return sendRequest<SystemYumUpdatesReturnType>(Promise.resolve(args));
 }
 
 export default systemYumUpdatesParamCreator;

@@ -39,7 +39,7 @@ export type ListSubnetsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSubnetsReturnType = AxiosPromise<SubnetsCollection>;
+export type ListSubnetsReturnType = SubnetsCollection;
 
 const isListSubnetsObjectParams = (params: [ListSubnetsParams] | unknown[]): params is [ListSubnetsParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListSubnetsObjectParams = (params: [ListSubnetsParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSubnetsParamCreator = async (...config: ([ListSubnetsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSubnetsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSubnetsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSubnetsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSubnetsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/subnets`;
@@ -86,7 +86,7 @@ export const listSubnetsParamCreator = async (...config: ([ListSubnetsParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listSubnetsParamCreator = async (...config: ([ListSubnetsParams] | 
         }
         ]
     };
+
+    return sendRequest<ListSubnetsReturnType>(Promise.resolve(args));
 }
 
 export default listSubnetsParamCreator;

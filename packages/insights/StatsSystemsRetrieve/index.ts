@@ -39,7 +39,7 @@ export type StatsSystemsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type StatsSystemsRetrieveReturnType = AxiosPromise<Stats>;
+export type StatsSystemsRetrieveReturnType = Stats;
 
 const isStatsSystemsRetrieveObjectParams = (params: [StatsSystemsRetrieveParams] | unknown[]): params is [StatsSystemsRetrieveParams] => {
   const l = params.length === 1
@@ -54,7 +54,7 @@ const isStatsSystemsRetrieveObjectParams = (params: [StatsSystemsRetrieveParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const statsSystemsRetrieveParamCreator = async (...config: ([StatsSystemsRetrieveParams] | [Array<string>, Array<string>, boolean, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const statsSystemsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([StatsSystemsRetrieveParams] | [Array<string>, Array<string>, boolean, Array<string>, AxiosRequestConfig])) => {
     const params = isStatsSystemsRetrieveObjectParams(config) ? config[0] : ['tags', 'groups', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSidsContains', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as StatsSystemsRetrieveParams;
     const { tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options = {} } = params;
     const localVarPath = `/api/insights/v1/stats/systems/`;
@@ -85,7 +85,7 @@ export const statsSystemsRetrieveParamCreator = async (...config: ([StatsSystems
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const statsSystemsRetrieveParamCreator = async (...config: ([StatsSystems
         }
         ]
     };
+
+    return sendRequest<StatsSystemsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default statsSystemsRetrieveParamCreator;

@@ -27,7 +27,7 @@ export type OrderServiceOfferingParams = {
   options?: AxiosRequestConfig
 }
 
-export type OrderServiceOfferingReturnType = AxiosPromise<AppliedInventoriesForServiceOffering200Response>;
+export type OrderServiceOfferingReturnType = AppliedInventoriesForServiceOffering200Response;
 
 const isOrderServiceOfferingObjectParams = (params: [OrderServiceOfferingParams] | unknown[]): params is [OrderServiceOfferingParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isOrderServiceOfferingObjectParams = (params: [OrderServiceOfferingParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const orderServiceOfferingParamCreator = async (...config: ([OrderServiceOfferingParams] | [string, OrderParametersServiceOffering, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const orderServiceOfferingParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([OrderServiceOfferingParams] | [string, OrderParametersServiceOffering, AxiosRequestConfig])) => {
     const params = isOrderServiceOfferingObjectParams(config) ? config[0] : ['id', 'orderParametersServiceOffering', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as OrderServiceOfferingParams;
     const { id, orderParametersServiceOffering, options = {} } = params;
     const localVarPath = `/service_offerings/{id}/order`
@@ -61,7 +61,7 @@ export const orderServiceOfferingParamCreator = async (...config: ([OrderService
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: orderParametersServiceOffering,
@@ -73,6 +73,8 @@ export const orderServiceOfferingParamCreator = async (...config: ([OrderService
         }
         ]
     };
+
+    return sendRequest<OrderServiceOfferingReturnType>(Promise.resolve(args));
 }
 
 export default orderServiceOfferingParamCreator;

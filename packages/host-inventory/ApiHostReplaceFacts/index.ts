@@ -39,7 +39,7 @@ export type ApiHostReplaceFactsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostReplaceFactsReturnType = AxiosPromise<void>;
+export type ApiHostReplaceFactsReturnType = void;
 
 const isApiHostReplaceFactsObjectParams = (params: [ApiHostReplaceFactsParams] | unknown[]): params is [ApiHostReplaceFactsParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isApiHostReplaceFactsObjectParams = (params: [ApiHostReplaceFactsParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostReplaceFactsParamCreator = async (...config: ([ApiHostReplaceFactsParams] | [Array<string>, string, object, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostReplaceFactsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostReplaceFactsParams] | [Array<string>, string, object, string, AxiosRequestConfig])) => {
     const params = isApiHostReplaceFactsObjectParams(config) ? config[0] : ['hostIdList', 'namespace', 'body', 'branchId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostReplaceFactsParams;
     const { hostIdList, namespace, body, branchId, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/facts/{namespace}`
@@ -78,7 +78,7 @@ export const apiHostReplaceFactsParamCreator = async (...config: ([ApiHostReplac
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
@@ -91,6 +91,8 @@ export const apiHostReplaceFactsParamCreator = async (...config: ([ApiHostReplac
         }
         ]
     };
+
+    return sendRequest<ApiHostReplaceFactsReturnType>(Promise.resolve(args));
 }
 
 export default apiHostReplaceFactsParamCreator;

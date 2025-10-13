@@ -93,12 +93,12 @@ export type PackageSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type PackageSystemsReturnType = AxiosPromise<ControllersPackageSystemsResponse>;
+export type PackageSystemsReturnType = ControllersPackageSystemsResponse;
 
 const isPackageSystemsObjectParams = (params: [PackageSystemsParams] | unknown[]): params is [PackageSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'packageName')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'packageName')
   }
   return false
 }
@@ -109,7 +109,7 @@ const isPackageSystemsObjectParams = (params: [PackageSystemsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const packageSystemsParamCreator = async (...config: ([PackageSystemsParams] | [string, number, number, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const packageSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PackageSystemsParams] | [string, number, number, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, string, boolean, AxiosRequestConfig])) => {
     const params = isPackageSystemsObjectParams(config) ? config[0] : ['packageName', 'limit', 'offset', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'filterSatelliteManaged', 'filterUpdatable', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PackageSystemsParams;
     const { packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, filterUpdatable, options = {} } = params;
     const localVarPath = `/packages/{package_name}/systems`
@@ -173,7 +173,7 @@ export const packageSystemsParamCreator = async (...config: ([PackageSystemsPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -185,6 +185,8 @@ export const packageSystemsParamCreator = async (...config: ([PackageSystemsPara
         }
         ]
     };
+
+    return sendRequest<PackageSystemsReturnType>(Promise.resolve(args));
 }
 
 export default packageSystemsParamCreator;

@@ -27,7 +27,7 @@ export type ApiHostGroupAddHostListToGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostGroupAddHostListToGroupReturnType = AxiosPromise<GroupOutWithHostCount>;
+export type ApiHostGroupAddHostListToGroupReturnType = GroupOutWithHostCount;
 
 const isApiHostGroupAddHostListToGroupObjectParams = (params: [ApiHostGroupAddHostListToGroupParams] | unknown[]): params is [ApiHostGroupAddHostListToGroupParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isApiHostGroupAddHostListToGroupObjectParams = (params: [ApiHostGroupAddHo
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGroupAddHostListToGroupParamCreator = async (...config: ([ApiHostGroupAddHostListToGroupParams] | [string, Array<string> | null, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGroupAddHostListToGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGroupAddHostListToGroupParams] | [string, Array<string> | null, AxiosRequestConfig])) => {
     const params = isApiHostGroupAddHostListToGroupObjectParams(config) ? config[0] : ['groupId', 'requestBody', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGroupAddHostListToGroupParams;
     const { groupId, requestBody, options = {} } = params;
     const localVarPath = `/groups/{group_id}/hosts`
@@ -61,7 +61,7 @@ export const apiHostGroupAddHostListToGroupParamCreator = async (...config: ([Ap
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: requestBody,
@@ -74,6 +74,8 @@ export const apiHostGroupAddHostListToGroupParamCreator = async (...config: ([Ap
         }
         ]
     };
+
+    return sendRequest<ApiHostGroupAddHostListToGroupReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGroupAddHostListToGroupParamCreator;

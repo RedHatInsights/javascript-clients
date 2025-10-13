@@ -45,7 +45,7 @@ export type ListSubscriptionVolumesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSubscriptionVolumesReturnType = AxiosPromise<VolumesCollection>;
+export type ListSubscriptionVolumesReturnType = VolumesCollection;
 
 const isListSubscriptionVolumesObjectParams = (params: [ListSubscriptionVolumesParams] | unknown[]): params is [ListSubscriptionVolumesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSubscriptionVolumesObjectParams = (params: [ListSubscriptionVolumesP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSubscriptionVolumesParamCreator = async (...config: ([ListSubscriptionVolumesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSubscriptionVolumesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSubscriptionVolumesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSubscriptionVolumesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSubscriptionVolumesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/subscriptions/{id}/volumes`
@@ -93,7 +93,7 @@ export const listSubscriptionVolumesParamCreator = async (...config: ([ListSubsc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSubscriptionVolumesParamCreator = async (...config: ([ListSubsc
         }
         ]
     };
+
+    return sendRequest<ListSubscriptionVolumesReturnType>(Promise.resolve(args));
 }
 
 export default listSubscriptionVolumesParamCreator;

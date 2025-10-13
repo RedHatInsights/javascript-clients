@@ -27,12 +27,12 @@ export type ReportParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportReturnType = AxiosPromise<Report200Response>;
+export type ReportReturnType = Report200Response;
 
 const isReportObjectParams = (params: [ReportParams] | unknown[]): params is [ReportParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isReportObjectParams = (params: [ReportParams] | unknown[]): params is [Re
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportParamCreator = async (...config: ([ReportParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportParams] | [any, any, AxiosRequestConfig])) => {
     const params = isReportObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportParams;
     const { reportId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/reports/{report_id}`
@@ -65,10 +65,12 @@ export const reportParamCreator = async (...config: ([ReportParams] | [any, any,
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportReturnType>(Promise.resolve(args));
 }
 
 export default reportParamCreator;

@@ -45,7 +45,7 @@ export type ListTagSubnetsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagSubnetsReturnType = AxiosPromise<SubnetsCollection>;
+export type ListTagSubnetsReturnType = SubnetsCollection;
 
 const isListTagSubnetsObjectParams = (params: [ListTagSubnetsParams] | unknown[]): params is [ListTagSubnetsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListTagSubnetsObjectParams = (params: [ListTagSubnetsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagSubnetsParamCreator = async (...config: ([ListTagSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagSubnetsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagSubnetsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagSubnetsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/subnets`
@@ -93,7 +93,7 @@ export const listTagSubnetsParamCreator = async (...config: ([ListTagSubnetsPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listTagSubnetsParamCreator = async (...config: ([ListTagSubnetsPara
         }
         ]
     };
+
+    return sendRequest<ListTagSubnetsReturnType>(Promise.resolve(args));
 }
 
 export default listTagSubnetsParamCreator;

@@ -39,7 +39,7 @@ export type ListServiceOfferingNodesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceOfferingNodesReturnType = AxiosPromise<ServiceOfferingNodesCollection>;
+export type ListServiceOfferingNodesReturnType = ServiceOfferingNodesCollection;
 
 const isListServiceOfferingNodesObjectParams = (params: [ListServiceOfferingNodesParams] | unknown[]): params is [ListServiceOfferingNodesParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListServiceOfferingNodesObjectParams = (params: [ListServiceOfferingNode
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceOfferingNodesParamCreator = async (...config: ([ListServiceOfferingNodesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceOfferingNodesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceOfferingNodesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceOfferingNodesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceOfferingNodesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_offering_nodes`;
@@ -86,7 +86,7 @@ export const listServiceOfferingNodesParamCreator = async (...config: ([ListServ
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listServiceOfferingNodesParamCreator = async (...config: ([ListServ
         }
         ]
     };
+
+    return sendRequest<ListServiceOfferingNodesReturnType>(Promise.resolve(args));
 }
 
 export default listServiceOfferingNodesParamCreator;

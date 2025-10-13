@@ -45,7 +45,7 @@ export type ListSecurityGroupVmsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSecurityGroupVmsReturnType = AxiosPromise<VmsCollection>;
+export type ListSecurityGroupVmsReturnType = VmsCollection;
 
 const isListSecurityGroupVmsObjectParams = (params: [ListSecurityGroupVmsParams] | unknown[]): params is [ListSecurityGroupVmsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSecurityGroupVmsObjectParams = (params: [ListSecurityGroupVmsParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSecurityGroupVmsParamCreator = async (...config: ([ListSecurityGroupVmsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSecurityGroupVmsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSecurityGroupVmsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSecurityGroupVmsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSecurityGroupVmsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/security_groups/{id}/vms`
@@ -93,7 +93,7 @@ export const listSecurityGroupVmsParamCreator = async (...config: ([ListSecurity
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSecurityGroupVmsParamCreator = async (...config: ([ListSecurity
         }
         ]
     };
+
+    return sendRequest<ListSecurityGroupVmsReturnType>(Promise.resolve(args));
 }
 
 export default listSecurityGroupVmsParamCreator;

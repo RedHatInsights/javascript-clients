@@ -39,7 +39,7 @@ export type ListApplicationTypesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListApplicationTypesReturnType = AxiosPromise<ApplicationTypesCollection>;
+export type ListApplicationTypesReturnType = ApplicationTypesCollection;
 
 const isListApplicationTypesObjectParams = (params: [ListApplicationTypesParams] | unknown[]): params is [ListApplicationTypesParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListApplicationTypesObjectParams = (params: [ListApplicationTypesParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listApplicationTypesParamCreator = async (...config: ([ListApplicationTypesParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listApplicationTypesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListApplicationTypesParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListApplicationTypesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListApplicationTypesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/application_types`;
@@ -86,7 +86,7 @@ export const listApplicationTypesParamCreator = async (...config: ([ListApplicat
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listApplicationTypesParamCreator = async (...config: ([ListApplicat
         }
         ]
     };
+
+    return sendRequest<ListApplicationTypesReturnType>(Promise.resolve(args));
 }
 
 export default listApplicationTypesParamCreator;

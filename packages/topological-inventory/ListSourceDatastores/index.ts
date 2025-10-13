@@ -45,7 +45,7 @@ export type ListSourceDatastoresParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceDatastoresReturnType = AxiosPromise<DatastoresCollection>;
+export type ListSourceDatastoresReturnType = DatastoresCollection;
 
 const isListSourceDatastoresObjectParams = (params: [ListSourceDatastoresParams] | unknown[]): params is [ListSourceDatastoresParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceDatastoresObjectParams = (params: [ListSourceDatastoresParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceDatastoresParamCreator = async (...config: ([ListSourceDatastoresParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceDatastoresParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceDatastoresParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceDatastoresObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceDatastoresParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/datastores`
@@ -93,7 +93,7 @@ export const listSourceDatastoresParamCreator = async (...config: ([ListSourceDa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceDatastoresParamCreator = async (...config: ([ListSourceDa
         }
         ]
     };
+
+    return sendRequest<ListSourceDatastoresReturnType>(Promise.resolve(args));
 }
 
 export default listSourceDatastoresParamCreator;

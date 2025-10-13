@@ -33,7 +33,7 @@ export type NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameReturnType = AxiosPromise<EventType>;
+export type NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameReturnType = EventType;
 
 const isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObjectParams = (params: [NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] | unknown[]): params is [NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] => {
   const l = params.length === 1
@@ -49,7 +49,7 @@ const isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObje
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParamCreator = async (...config: ([NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObjectParams(config) ? config[0] : ['applicationName', 'bundleName', 'eventTypeName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams;
     const { applicationName, bundleName, eventTypeName, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleName}/applications/{applicationName}/eventTypes/{eventTypeName}`
@@ -67,10 +67,12 @@ export const notificationResourceV1GetEventTypesByNameAndBundleAndApplicationNam
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParamCreator;

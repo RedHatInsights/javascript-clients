@@ -21,7 +21,7 @@ export type SystemtypeRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemtypeRetrieveReturnType = AxiosPromise<SystemType>;
+export type SystemtypeRetrieveReturnType = SystemType;
 
 const isSystemtypeRetrieveObjectParams = (params: [SystemtypeRetrieveParams] | unknown[]): params is [SystemtypeRetrieveParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isSystemtypeRetrieveObjectParams = (params: [SystemtypeRetrieveParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemtypeRetrieveParamCreator = async (...config: ([SystemtypeRetrieveParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemtypeRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemtypeRetrieveParams] | [number, AxiosRequestConfig])) => {
     const params = isSystemtypeRetrieveObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemtypeRetrieveParams;
     const { id, options = {} } = params;
     const localVarPath = `/api/insights/v1/systemtype/{id}/`
@@ -53,10 +53,12 @@ export const systemtypeRetrieveParamCreator = async (...config: ([SystemtypeRetr
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SystemtypeRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default systemtypeRetrieveParamCreator;

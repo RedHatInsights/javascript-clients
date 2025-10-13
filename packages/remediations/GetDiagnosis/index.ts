@@ -33,12 +33,12 @@ export type GetDiagnosisParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetDiagnosisReturnType = AxiosPromise<Diagnosis>;
+export type GetDiagnosisReturnType = Diagnosis;
 
 const isGetDiagnosisObjectParams = (params: [GetDiagnosisParams] | unknown[]): params is [GetDiagnosisParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'system')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'system')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isGetDiagnosisObjectParams = (params: [GetDiagnosisParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getDiagnosisParamCreator = async (...config: ([GetDiagnosisParams] | [string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getDiagnosisParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetDiagnosisParams] | [string, string, string, AxiosRequestConfig])) => {
     const params = isGetDiagnosisObjectParams(config) ? config[0] : ['system', 'remediation', 'branchId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetDiagnosisParams;
     const { system, remediation, branchId, options = {} } = params;
     const localVarPath = `/diagnosis/{system}`
@@ -73,10 +73,12 @@ export const getDiagnosisParamCreator = async (...config: ([GetDiagnosisParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetDiagnosisReturnType>(Promise.resolve(args));
 }
 
 export default getDiagnosisParamCreator;

@@ -45,7 +45,7 @@ export type ListSourceIpaddressesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
+export type ListSourceIpaddressesReturnType = IpaddressesCollection;
 
 const isListSourceIpaddressesObjectParams = (params: [ListSourceIpaddressesParams] | unknown[]): params is [ListSourceIpaddressesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceIpaddressesObjectParams = (params: [ListSourceIpaddressesParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceIpaddressesParamCreator = async (...config: ([ListSourceIpaddressesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceIpaddressesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceIpaddressesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceIpaddressesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceIpaddressesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/ipaddresses`
@@ -93,7 +93,7 @@ export const listSourceIpaddressesParamCreator = async (...config: ([ListSourceI
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceIpaddressesParamCreator = async (...config: ([ListSourceI
         }
         ]
     };
+
+    return sendRequest<ListSourceIpaddressesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceIpaddressesParamCreator;

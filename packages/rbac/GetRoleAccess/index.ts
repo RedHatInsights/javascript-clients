@@ -33,7 +33,7 @@ export type GetRoleAccessParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetRoleAccessReturnType = AxiosPromise<AccessPagination>;
+export type GetRoleAccessReturnType = AccessPagination;
 
 const isGetRoleAccessObjectParams = (params: [GetRoleAccessParams] | unknown[]): params is [GetRoleAccessParams] => {
   const l = params.length === 1
@@ -49,7 +49,7 @@ const isGetRoleAccessObjectParams = (params: [GetRoleAccessParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRoleAccessParamCreator = async (...config: ([GetRoleAccessParams] | [string, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRoleAccessParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRoleAccessParams] | [string, number, number, AxiosRequestConfig])) => {
     const params = isGetRoleAccessObjectParams(config) ? config[0] : ['uuid', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRoleAccessParams;
     const { uuid, limit, offset, options = {} } = params;
     const localVarPath = `/roles/{uuid}/access/`
@@ -73,7 +73,7 @@ export const getRoleAccessParamCreator = async (...config: ([GetRoleAccessParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -84,6 +84,8 @@ export const getRoleAccessParamCreator = async (...config: ([GetRoleAccessParams
         }
         ]
     };
+
+    return sendRequest<GetRoleAccessReturnType>(Promise.resolve(args));
 }
 
 export default getRoleAccessParamCreator;

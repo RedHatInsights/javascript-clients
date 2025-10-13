@@ -21,7 +21,7 @@ export type WorkspacesCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesCreateReturnType = AxiosPromise<WorkspacesCreateWorkspaceResponse>;
+export type WorkspacesCreateReturnType = WorkspacesCreateWorkspaceResponse;
 
 const isWorkspacesCreateObjectParams = (params: [WorkspacesCreateParams] | unknown[]): params is [WorkspacesCreateParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isWorkspacesCreateObjectParams = (params: [WorkspacesCreateParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesCreateParamCreator = async (...config: ([WorkspacesCreateParams] | [WorkspacesCreateWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const workspacesCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesCreateParams] | [WorkspacesCreateWorkspaceRequest, AxiosRequestConfig])) => {
     const params = isWorkspacesCreateObjectParams(config) ? config[0] : ['workspacesCreateWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesCreateParams;
     const { workspacesCreateWorkspaceRequest, options = {} } = params;
     const localVarPath = `/workspaces/`;
@@ -54,11 +54,13 @@ export const workspacesCreateParamCreator = async (...config: ([WorkspacesCreate
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: workspacesCreateWorkspaceRequest,
     };
+
+    return sendRequest<WorkspacesCreateReturnType>(Promise.resolve(args));
 }
 
 export default workspacesCreateParamCreator;

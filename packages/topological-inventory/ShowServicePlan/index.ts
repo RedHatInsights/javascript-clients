@@ -21,7 +21,7 @@ export type ShowServicePlanParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowServicePlanReturnType = AxiosPromise<ServicePlan>;
+export type ShowServicePlanReturnType = ServicePlan;
 
 const isShowServicePlanObjectParams = (params: [ShowServicePlanParams] | unknown[]): params is [ShowServicePlanParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowServicePlanObjectParams = (params: [ShowServicePlanParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showServicePlanParamCreator = async (...config: ([ShowServicePlanParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showServicePlanParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowServicePlanParams] | [string, AxiosRequestConfig])) => {
     const params = isShowServicePlanObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowServicePlanParams;
     const { id, options = {} } = params;
     const localVarPath = `/service_plans/{id}`
@@ -53,7 +53,7 @@ export const showServicePlanParamCreator = async (...config: ([ShowServicePlanPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showServicePlanParamCreator = async (...config: ([ShowServicePlanPa
         }
         ]
     };
+
+    return sendRequest<ShowServicePlanReturnType>(Promise.resolve(args));
 }
 
 export default showServicePlanParamCreator;

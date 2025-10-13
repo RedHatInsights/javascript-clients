@@ -21,7 +21,7 @@ export type ApiHostHostCheckinParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostHostCheckinReturnType = AxiosPromise<HostOut>;
+export type ApiHostHostCheckinReturnType = HostOut;
 
 const isApiHostHostCheckinObjectParams = (params: [ApiHostHostCheckinParams] | unknown[]): params is [ApiHostHostCheckinParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isApiHostHostCheckinObjectParams = (params: [ApiHostHostCheckinParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostHostCheckinParamCreator = async (...config: ([ApiHostHostCheckinParams] | [CreateCheckIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostHostCheckinParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostHostCheckinParams] | [CreateCheckIn, AxiosRequestConfig])) => {
     const params = isApiHostHostCheckinObjectParams(config) ? config[0] : ['createCheckIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostHostCheckinParams;
     const { createCheckIn, options = {} } = params;
     const localVarPath = `/hosts/checkin`;
@@ -54,7 +54,7 @@ export const apiHostHostCheckinParamCreator = async (...config: ([ApiHostHostChe
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: createCheckIn,
@@ -72,6 +72,8 @@ export const apiHostHostCheckinParamCreator = async (...config: ([ApiHostHostChe
         }
         ]
     };
+
+    return sendRequest<ApiHostHostCheckinReturnType>(Promise.resolve(args));
 }
 
 export default apiHostHostCheckinParamCreator;

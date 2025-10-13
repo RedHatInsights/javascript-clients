@@ -45,7 +45,7 @@ export type ListSourceRegionSubnetsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionSubnetsReturnType = AxiosPromise<SubnetsCollection>;
+export type ListSourceRegionSubnetsReturnType = SubnetsCollection;
 
 const isListSourceRegionSubnetsObjectParams = (params: [ListSourceRegionSubnetsParams] | unknown[]): params is [ListSourceRegionSubnetsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceRegionSubnetsObjectParams = (params: [ListSourceRegionSubnetsP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionSubnetsParamCreator = async (...config: ([ListSourceRegionSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionSubnetsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionSubnetsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionSubnetsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions/{id}/subnets`
@@ -93,7 +93,7 @@ export const listSourceRegionSubnetsParamCreator = async (...config: ([ListSourc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceRegionSubnetsParamCreator = async (...config: ([ListSourc
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionSubnetsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionSubnetsParamCreator;

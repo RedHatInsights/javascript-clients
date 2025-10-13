@@ -27,12 +27,12 @@ export type CancelPlaybookRunsParams = {
   options?: AxiosRequestConfig
 }
 
-export type CancelPlaybookRunsReturnType = AxiosPromise<object>;
+export type CancelPlaybookRunsReturnType = object;
 
 const isCancelPlaybookRunsObjectParams = (params: [CancelPlaybookRunsParams] | unknown[]): params is [CancelPlaybookRunsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'playbookRunId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'playbookRunId')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isCancelPlaybookRunsObjectParams = (params: [CancelPlaybookRunsParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const cancelPlaybookRunsParamCreator = async (...config: ([CancelPlaybookRunsParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const cancelPlaybookRunsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CancelPlaybookRunsParams] | [string, string, AxiosRequestConfig])) => {
     const params = isCancelPlaybookRunsObjectParams(config) ? config[0] : ['id', 'playbookRunId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CancelPlaybookRunsParams;
     const { id, playbookRunId, options = {} } = params;
     const localVarPath = `/remediations/{id}/playbook_runs/{playbook_run_id}/cancel`
@@ -60,10 +60,12 @@ export const cancelPlaybookRunsParamCreator = async (...config: ([CancelPlaybook
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<CancelPlaybookRunsReturnType>(Promise.resolve(args));
 }
 
 export default cancelPlaybookRunsParamCreator;

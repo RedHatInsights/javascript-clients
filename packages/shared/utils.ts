@@ -6,53 +6,77 @@ function isAxiosConfigObject(arg: any): arg is ApiConfig {
   return arg && typeof arg === 'object' && 'axios' in arg;
 }
 
-function isActionConfigObject(arg: any): arg is Record<string, ActionType> {
-  return arg && typeof arg === 'object';
-}
-
-export type APIFactoryResponse<J extends Record<string, ActionType>, L extends { [K in keyof J]: unknown }> = {
-  [K in keyof J]: (...args: J[K] extends (...args: infer A) => any ? A : never) => L[K];
+export type APIFactoryResponse<J extends Record<string, (...args: any[]) => any>, L extends { [K in keyof J]: unknown }> = {
+  [K in keyof J]: (...args: J[K] extends (first: any, ...args: infer A) => any ? A : never) => L[K];
 };
 
-export function APIFactory<T extends Record<string, ActionType>, S extends { [K in keyof T]: unknown }>(
+export function APIFactory<T extends Record<string, (...args: any[]) => any>>(
   basePath: string,
   actions: T,
   config?: ApiConfig,
-): BaseAPI & APIFactoryResponse<T, S>;
-export function APIFactory<T extends Record<string, ActionType>, S extends { [K in keyof T]: unknown }>(
+): BaseAPI & APIFactoryResponse<T, { [K in keyof T]: ReturnType<T[K]> }>;
+export function APIFactory<T extends Record<string, (...args: any[]) => any>>(
   actions: T,
   config?: ApiConfig,
-): BaseAPI & APIFactoryResponse<T, S>;
-export function APIFactory<T extends Record<string, ActionType>, S extends { [K in keyof T]: unknown }>(...args: unknown[]) {
-  const [a, b, c] = args;
+): BaseAPI & APIFactoryResponse<T, { [K in keyof T]: ReturnType<T[K]> }>;
+export function APIFactory<T extends Record<string, (...args: any[]) => any>>(
+  basePathOrActions: string | T,
+  actionsOrConfig?: T | ApiConfig,
+  config?: ApiConfig,
+): BaseAPI & APIFactoryResponse<T, { [K in keyof T]: ReturnType<T[K]> }> {
   let basePath: string | undefined = undefined;
-  let actions: Record<string, ActionType> = {};
-  let config: ApiConfig = { axios: globalAxios };
-  if (typeof a === 'string' && isActionConfigObject(b)) {
-    basePath = a;
-    actions = b;
-    if (isAxiosConfigObject(c)) {
-      config = c;
-    }
-  } else if (isActionConfigObject(a)) {
-    actions = a;
-    if (isAxiosConfigObject(b)) {
-      config = b;
+  let actions: T;
+  let apiConfig: ApiConfig = { axios: globalAxios };
+
+  if (typeof basePathOrActions === 'string') {
+    basePath = basePathOrActions;
+    actions = actionsOrConfig as T;
+    if (config) {
+      apiConfig = config;
     }
   } else {
-    throw new Error('Invalid API Factory arguments');
+    actions = basePathOrActions;
+    if (actionsOrConfig && isAxiosConfigObject(actionsOrConfig)) {
+      apiConfig = actionsOrConfig;
+    }
   }
 
-  const api = new BaseAPI(basePath, config);
+  const api = new BaseAPI(basePath, apiConfig);
   for (const key of Object.keys(actions)) {
     const method = actions[key];
+    console.log({ key, method });
     Object.assign(api, {
       [key]: (...args: unknown[]) => {
-        const request: Promise<RequestArgs> = method(...(args as any));
-        return api.sendRequest(request);
+        return method(api.sendRequest.bind(api), ...(args as any));
       },
     });
   }
 
-  return api as BaseAPI & APIFactoryResponse<T, S>;
+  return api as BaseAPI & APIFactoryResponse<T, { [K in keyof T]: ReturnType<T[K]> }>;
 }
+
+
+
+function AF<J extends Record<string, (...args: any[]) => any>>(actions: J) {
+  const api = {}
+  for (const key of Object.keys(actions)) {
+    const method = actions[key];
+    Object.assign(api, {
+      [key]: (...args: unknown[]) => {
+        return Promise.resolve(method(...(args as any)));
+      },
+    });
+  }
+  return api as BaseAPI & APIFactoryResponse<J, { [K in keyof J]: ReturnType<J[K]> }>;
+}
+
+
+const x = AF({
+  sum: () => Promise.resolve('')
+})
+
+const a = x.sum()
+
+const foo = () => '123'
+
+type A = ReturnType<typeof foo>;

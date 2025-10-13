@@ -45,7 +45,7 @@ export type ListSourceNetworkAdaptersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceNetworkAdaptersReturnType = AxiosPromise<NetworkAdaptersCollection>;
+export type ListSourceNetworkAdaptersReturnType = NetworkAdaptersCollection;
 
 const isListSourceNetworkAdaptersObjectParams = (params: [ListSourceNetworkAdaptersParams] | unknown[]): params is [ListSourceNetworkAdaptersParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceNetworkAdaptersObjectParams = (params: [ListSourceNetworkAdapt
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceNetworkAdaptersParamCreator = async (...config: ([ListSourceNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceNetworkAdaptersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceNetworkAdaptersObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceNetworkAdaptersParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/network_adapters`
@@ -93,7 +93,7 @@ export const listSourceNetworkAdaptersParamCreator = async (...config: ([ListSou
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceNetworkAdaptersParamCreator = async (...config: ([ListSou
         }
         ]
     };
+
+    return sendRequest<ListSourceNetworkAdaptersReturnType>(Promise.resolve(args));
 }
 
 export default listSourceNetworkAdaptersParamCreator;

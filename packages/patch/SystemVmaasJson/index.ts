@@ -21,12 +21,12 @@ export type SystemVmaasJsonParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemVmaasJsonReturnType = AxiosPromise<ControllersSystemVmaasJSONResponse>;
+export type SystemVmaasJsonReturnType = ControllersSystemVmaasJSONResponse;
 
 const isSystemVmaasJsonObjectParams = (params: [SystemVmaasJsonParams] | unknown[]): params is [SystemVmaasJsonParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isSystemVmaasJsonObjectParams = (params: [SystemVmaasJsonParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemVmaasJsonParamCreator = async (...config: ([SystemVmaasJsonParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemVmaasJsonParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemVmaasJsonParams] | [string, AxiosRequestConfig])) => {
     const params = isSystemVmaasJsonObjectParams(config) ? config[0] : ['inventoryId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemVmaasJsonParams;
     const { inventoryId, options = {} } = params;
     const localVarPath = `/systems/{inventory_id}/vmaas_json`
@@ -53,7 +53,7 @@ export const systemVmaasJsonParamCreator = async (...config: ([SystemVmaasJsonPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -65,6 +65,8 @@ export const systemVmaasJsonParamCreator = async (...config: ([SystemVmaasJsonPa
         }
         ]
     };
+
+    return sendRequest<SystemVmaasJsonReturnType>(Promise.resolve(args));
 }
 
 export default systemVmaasJsonParamCreator;

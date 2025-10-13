@@ -27,12 +27,12 @@ export type PostPoliciesParams = {
   options?: AxiosRequestConfig
 }
 
-export type PostPoliciesReturnType = AxiosPromise<void>;
+export type PostPoliciesReturnType = void;
 
 const isPostPoliciesObjectParams = (params: [PostPoliciesParams] | unknown[]): params is [PostPoliciesParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policy')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policy')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isPostPoliciesObjectParams = (params: [PostPoliciesParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const postPoliciesParamCreator = async (...config: ([PostPoliciesParams] | [Policy, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const postPoliciesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PostPoliciesParams] | [Policy, boolean, AxiosRequestConfig])) => {
     const params = isPostPoliciesObjectParams(config) ? config[0] : ['policy', 'alsoStore', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PostPoliciesParams;
     const { policy, alsoStore, options = {} } = params;
     const localVarPath = `/policies`;
@@ -64,11 +64,13 @@ export const postPoliciesParamCreator = async (...config: ([PostPoliciesParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: policy,
     };
+
+    return sendRequest<PostPoliciesReturnType>(Promise.resolve(args));
 }
 
 export default postPoliciesParamCreator;

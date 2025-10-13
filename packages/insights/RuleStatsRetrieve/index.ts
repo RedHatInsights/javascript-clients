@@ -21,7 +21,7 @@ export type RuleStatsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleStatsRetrieveReturnType = AxiosPromise<RuleUsageStats>;
+export type RuleStatsRetrieveReturnType = RuleUsageStats;
 
 const isRuleStatsRetrieveObjectParams = (params: [RuleStatsRetrieveParams] | unknown[]): params is [RuleStatsRetrieveParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isRuleStatsRetrieveObjectParams = (params: [RuleStatsRetrieveParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleStatsRetrieveParamCreator = async (...config: ([RuleStatsRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleStatsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleStatsRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isRuleStatsRetrieveObjectParams(config) ? config[0] : ['ruleId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleStatsRetrieveParams;
     const { ruleId, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/stats/`
@@ -52,7 +52,7 @@ export const ruleStatsRetrieveParamCreator = async (...config: ([RuleStatsRetrie
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const ruleStatsRetrieveParamCreator = async (...config: ([RuleStatsRetrie
         }
         ]
     };
+
+    return sendRequest<RuleStatsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default ruleStatsRetrieveParamCreator;

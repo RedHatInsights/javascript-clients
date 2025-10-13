@@ -27,7 +27,7 @@ export type SystemsOSParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemsOSReturnType = AxiosPromise<any>;
+export type SystemsOSReturnType = any;
 
 const isSystemsOSObjectParams = (params: [SystemsOSParams] | unknown[]): params is [SystemsOSParams] => {
   const l = params.length === 1
@@ -44,7 +44,7 @@ const isSystemsOSObjectParams = (params: [SystemsOSParams] | unknown[]): params 
 * @deprecated
 * @throws {RequiredError}
 */
-export const systemsOSParamCreator = async (...config: ([SystemsOSParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemsOSParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemsOSParams] | [any, any, AxiosRequestConfig])) => {
     const params = isSystemsOSObjectParams(config) ? config[0] : ['xRHIDENTITY', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemsOSParams;
     const { xRHIDENTITY, filter, options = {} } = params;
     const localVarPath = `/systems/os_versions`;
@@ -69,10 +69,12 @@ export const systemsOSParamCreator = async (...config: ([SystemsOSParams] | [any
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SystemsOSReturnType>(Promise.resolve(args));
 }
 
 export default systemsOSParamCreator;

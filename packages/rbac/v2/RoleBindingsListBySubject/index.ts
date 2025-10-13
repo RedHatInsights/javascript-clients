@@ -69,7 +69,7 @@ export type RoleBindingsListBySubjectParams = {
   options?: AxiosRequestConfig
 }
 
-export type RoleBindingsListBySubjectReturnType = AxiosPromise<RoleBindingsRoleBindingBySubjectListResponse>;
+export type RoleBindingsListBySubjectReturnType = RoleBindingsRoleBindingBySubjectListResponse;
 
 const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubjectParams] | unknown[]): params is [RoleBindingsListBySubjectParams] => {
   const l = params.length === 1
@@ -85,7 +85,7 @@ const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubj
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsListBySubjectParamCreator = async (...config: ([RoleBindingsListBySubjectParams] | [string, string, number, string, string, string, boolean, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, string, number, string, string, string, boolean, string, string, AxiosRequestConfig])) => {
     const params = isRoleBindingsListBySubjectObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'limit', 'cursor', 'subjectType', 'subjectId', 'parentRoleBindings', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListBySubjectParams;
     const { resourceId, resourceType, limit, cursor, subjectType, subjectId, parentRoleBindings, fields, orderBy, options = {} } = params;
     const localVarPath = `/role-bindings/by-subject`;
@@ -136,10 +136,12 @@ export const roleBindingsListBySubjectParamCreator = async (...config: ([RoleBin
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<RoleBindingsListBySubjectReturnType>(Promise.resolve(args));
 }
 
 export default roleBindingsListBySubjectParamCreator;

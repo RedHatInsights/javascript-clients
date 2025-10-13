@@ -45,7 +45,7 @@ export type ListSourceRegionServiceInstancesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionServiceInstancesReturnType = AxiosPromise<ServiceInstancesCollection>;
+export type ListSourceRegionServiceInstancesReturnType = ServiceInstancesCollection;
 
 const isListSourceRegionServiceInstancesObjectParams = (params: [ListSourceRegionServiceInstancesParams] | unknown[]): params is [ListSourceRegionServiceInstancesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceRegionServiceInstancesObjectParams = (params: [ListSourceRegio
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionServiceInstancesParamCreator = async (...config: ([ListSourceRegionServiceInstancesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionServiceInstancesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionServiceInstancesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionServiceInstancesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionServiceInstancesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions/{id}/service_instances`
@@ -93,7 +93,7 @@ export const listSourceRegionServiceInstancesParamCreator = async (...config: ([
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceRegionServiceInstancesParamCreator = async (...config: ([
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionServiceInstancesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionServiceInstancesParamCreator;

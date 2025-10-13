@@ -45,7 +45,7 @@ export type ListTagContainerGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagContainerGroupsReturnType = AxiosPromise<ContainerGroupsCollection>;
+export type ListTagContainerGroupsReturnType = ContainerGroupsCollection;
 
 const isListTagContainerGroupsObjectParams = (params: [ListTagContainerGroupsParams] | unknown[]): params is [ListTagContainerGroupsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListTagContainerGroupsObjectParams = (params: [ListTagContainerGroupsPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagContainerGroupsParamCreator = async (...config: ([ListTagContainerGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagContainerGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagContainerGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagContainerGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagContainerGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/container_groups`
@@ -93,7 +93,7 @@ export const listTagContainerGroupsParamCreator = async (...config: ([ListTagCon
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listTagContainerGroupsParamCreator = async (...config: ([ListTagCon
         }
         ]
     };
+
+    return sendRequest<ListTagContainerGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listTagContainerGroupsParamCreator;

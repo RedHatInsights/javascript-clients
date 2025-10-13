@@ -45,7 +45,7 @@ export type ListTagSecurityGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagSecurityGroupsReturnType = AxiosPromise<SecurityGroupsCollection>;
+export type ListTagSecurityGroupsReturnType = SecurityGroupsCollection;
 
 const isListTagSecurityGroupsObjectParams = (params: [ListTagSecurityGroupsParams] | unknown[]): params is [ListTagSecurityGroupsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListTagSecurityGroupsObjectParams = (params: [ListTagSecurityGroupsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagSecurityGroupsParamCreator = async (...config: ([ListTagSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagSecurityGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagSecurityGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagSecurityGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/security_groups`
@@ -93,7 +93,7 @@ export const listTagSecurityGroupsParamCreator = async (...config: ([ListTagSecu
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listTagSecurityGroupsParamCreator = async (...config: ([ListTagSecu
         }
         ]
     };
+
+    return sendRequest<ListTagSecurityGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listTagSecurityGroupsParamCreator;

@@ -15,7 +15,7 @@ export type WeeklyreportautosubscribeListParams = {
   options?: AxiosRequestConfig
 }
 
-export type WeeklyreportautosubscribeListReturnType = AxiosPromise<Array<AutoSubscribe>>;
+export type WeeklyreportautosubscribeListReturnType = Array<AutoSubscribe>;
 
 const isWeeklyreportautosubscribeListObjectParams = (params: [WeeklyreportautosubscribeListParams] | unknown[]): params is [WeeklyreportautosubscribeListParams] => {
   const l = params.length === 1
@@ -30,7 +30,7 @@ const isWeeklyreportautosubscribeListObjectParams = (params: [Weeklyreportautosu
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const weeklyreportautosubscribeListParamCreator = async (...config: ([WeeklyreportautosubscribeListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const weeklyreportautosubscribeListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WeeklyreportautosubscribeListParams] | [AxiosRequestConfig])) => {
     const params = isWeeklyreportautosubscribeListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WeeklyreportautosubscribeListParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/weeklyreportautosubscribe/`;
@@ -45,7 +45,7 @@ export const weeklyreportautosubscribeListParamCreator = async (...config: ([Wee
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -57,6 +57,8 @@ export const weeklyreportautosubscribeListParamCreator = async (...config: ([Wee
         }
         ]
     };
+
+    return sendRequest<WeeklyreportautosubscribeListReturnType>(Promise.resolve(args));
 }
 
 export default weeklyreportautosubscribeListParamCreator;

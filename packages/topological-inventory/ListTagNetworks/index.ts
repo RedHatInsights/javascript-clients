@@ -45,7 +45,7 @@ export type ListTagNetworksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagNetworksReturnType = AxiosPromise<NetworksCollection>;
+export type ListTagNetworksReturnType = NetworksCollection;
 
 const isListTagNetworksObjectParams = (params: [ListTagNetworksParams] | unknown[]): params is [ListTagNetworksParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListTagNetworksObjectParams = (params: [ListTagNetworksParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagNetworksParamCreator = async (...config: ([ListTagNetworksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagNetworksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagNetworksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagNetworksObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagNetworksParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/networks`
@@ -93,7 +93,7 @@ export const listTagNetworksParamCreator = async (...config: ([ListTagNetworksPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listTagNetworksParamCreator = async (...config: ([ListTagNetworksPa
         }
         ]
     };
+
+    return sendRequest<ListTagNetworksReturnType>(Promise.resolve(args));
 }
 
 export default listTagNetworksParamCreator;

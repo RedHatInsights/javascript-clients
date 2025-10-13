@@ -310,7 +310,7 @@ export const ListSystemsIdsSortEnum = {
 } as const;
 export type ListSystemsIdsSortEnum = typeof ListSystemsIdsSortEnum[keyof typeof ListSystemsIdsSortEnum];
 
-export type ListSystemsIdsReturnType = AxiosPromise<ControllersIDsSatelliteManagedResponse>;
+export type ListSystemsIdsReturnType = ControllersIDsSatelliteManagedResponse;
 
 const isListSystemsIdsObjectParams = (params: [ListSystemsIdsParams] | unknown[]): params is [ListSystemsIdsParams] => {
   const l = params.length === 1
@@ -326,7 +326,7 @@ const isListSystemsIdsObjectParams = (params: [ListSystemsIdsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSystemsIdsParamCreator = async (...config: ([ListSystemsIdsParams] | [number, number, ListSystemsIdsSortEnum, string, string, string, string, string, number, number, number, number, number, number, number, number, number, number, number, number, boolean, number, number, number, string, string, string, string, string, string, string, string, string, string, string, boolean, boolean, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSystemsIdsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSystemsIdsParams] | [number, number, ListSystemsIdsSortEnum, string, string, string, string, string, number, number, number, number, number, number, number, number, number, number, number, number, boolean, number, number, number, string, string, string, string, string, string, string, string, string, string, string, boolean, boolean, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isListSystemsIdsObjectParams(config) ? config[0] : ['limit', 'offset', 'sort', 'search', 'filterId', 'filterDisplayName', 'filterLastEvaluation', 'filterLastUpload', 'filterRhsaCount', 'filterRhbaCount', 'filterRheaCount', 'filterOtherCount', 'filterInstallableRhsaCount', 'filterInstallableRhbaCount', 'filterInstallableRheaCount', 'filterInstallableOtherCount', 'filterApplicableRhsaCount', 'filterApplicableRhbaCount', 'filterApplicableRheaCount', 'filterApplicableOtherCount', 'filterStale', 'filterPackagesInstalled', 'filterPackagesInstallable', 'filterPackagesApplicable', 'filterStaleTimestamp', 'filterStaleWarningTimestamp', 'filterCulledTimestamp', 'filterCreated', 'filterBaselineName', 'filterTemplateName', 'filterTemplateUuid', 'filterOs', 'filterOsname', 'filterOsmajor', 'filterOsminor', 'filterSatelliteManaged', 'filterBuiltPkgcache', 'filterArch', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSystemsIdsParams;
     const { limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterTemplateName, filterTemplateUuid, filterOs, filterOsname, filterOsmajor, filterOsminor, filterSatelliteManaged, filterBuiltPkgcache, filterArch, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/ids/systems`;
@@ -525,7 +525,7 @@ export const listSystemsIdsParamCreator = async (...config: ([ListSystemsIdsPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -537,6 +537,8 @@ export const listSystemsIdsParamCreator = async (...config: ([ListSystemsIdsPara
         }
         ]
     };
+
+    return sendRequest<ListSystemsIdsReturnType>(Promise.resolve(args));
 }
 
 export default listSystemsIdsParamCreator;

@@ -51,7 +51,7 @@ export type SecurityGuidesParams = {
   options?: AxiosRequestConfig
 }
 
-export type SecurityGuidesReturnType = AxiosPromise<SecurityGuides200Response>;
+export type SecurityGuidesReturnType = SecurityGuides200Response;
 
 const isSecurityGuidesObjectParams = (params: [SecurityGuidesParams] | unknown[]): params is [SecurityGuidesParams] => {
   const l = params.length === 1
@@ -67,7 +67,7 @@ const isSecurityGuidesObjectParams = (params: [SecurityGuidesParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const securityGuidesParamCreator = async (...config: ([SecurityGuidesParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const securityGuidesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SecurityGuidesParams] | [any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isSecurityGuidesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuidesParams;
     const { xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides`;
@@ -108,10 +108,12 @@ export const securityGuidesParamCreator = async (...config: ([SecurityGuidesPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SecurityGuidesReturnType>(Promise.resolve(args));
 }
 
 export default securityGuidesParamCreator;

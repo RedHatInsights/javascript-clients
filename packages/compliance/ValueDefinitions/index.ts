@@ -57,12 +57,12 @@ export type ValueDefinitionsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ValueDefinitionsReturnType = AxiosPromise<ValueDefinitions200Response>;
+export type ValueDefinitionsReturnType = ValueDefinitions200Response;
 
 const isValueDefinitionsObjectParams = (params: [ValueDefinitionsParams] | unknown[]): params is [ValueDefinitionsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId')
   }
   return false
 }
@@ -73,7 +73,7 @@ const isValueDefinitionsObjectParams = (params: [ValueDefinitionsParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const valueDefinitionsParamCreator = async (...config: ([ValueDefinitionsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const valueDefinitionsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ValueDefinitionsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isValueDefinitionsObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ValueDefinitionsParams;
     const { securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/value_definitions`
@@ -115,10 +115,12 @@ export const valueDefinitionsParamCreator = async (...config: ([ValueDefinitions
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ValueDefinitionsReturnType>(Promise.resolve(args));
 }
 
 export default valueDefinitionsParamCreator;

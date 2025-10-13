@@ -45,7 +45,7 @@ export type ListServiceOfferingServiceOfferingNodesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceOfferingServiceOfferingNodesReturnType = AxiosPromise<ServiceOfferingNodesCollection>;
+export type ListServiceOfferingServiceOfferingNodesReturnType = ServiceOfferingNodesCollection;
 
 const isListServiceOfferingServiceOfferingNodesObjectParams = (params: [ListServiceOfferingServiceOfferingNodesParams] | unknown[]): params is [ListServiceOfferingServiceOfferingNodesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListServiceOfferingServiceOfferingNodesObjectParams = (params: [ListServ
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceOfferingServiceOfferingNodesParamCreator = async (...config: ([ListServiceOfferingServiceOfferingNodesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceOfferingServiceOfferingNodesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceOfferingServiceOfferingNodesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceOfferingServiceOfferingNodesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceOfferingServiceOfferingNodesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_offerings/{id}/service_offering_nodes`
@@ -93,7 +93,7 @@ export const listServiceOfferingServiceOfferingNodesParamCreator = async (...con
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listServiceOfferingServiceOfferingNodesParamCreator = async (...con
         }
         ]
     };
+
+    return sendRequest<ListServiceOfferingServiceOfferingNodesReturnType>(Promise.resolve(args));
 }
 
 export default listServiceOfferingServiceOfferingNodesParamCreator;

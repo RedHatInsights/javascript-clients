@@ -45,7 +45,7 @@ export type ListSourceVolumeTypesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceVolumeTypesReturnType = AxiosPromise<VolumeTypesCollection>;
+export type ListSourceVolumeTypesReturnType = VolumeTypesCollection;
 
 const isListSourceVolumeTypesObjectParams = (params: [ListSourceVolumeTypesParams] | unknown[]): params is [ListSourceVolumeTypesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceVolumeTypesObjectParams = (params: [ListSourceVolumeTypesParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceVolumeTypesParamCreator = async (...config: ([ListSourceVolumeTypesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceVolumeTypesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceVolumeTypesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceVolumeTypesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceVolumeTypesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/volume_types`
@@ -93,7 +93,7 @@ export const listSourceVolumeTypesParamCreator = async (...config: ([ListSourceV
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceVolumeTypesParamCreator = async (...config: ([ListSourceV
         }
         ]
     };
+
+    return sendRequest<ListSourceVolumeTypesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceVolumeTypesParamCreator;

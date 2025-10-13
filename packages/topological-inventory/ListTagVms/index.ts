@@ -45,7 +45,7 @@ export type ListTagVmsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagVmsReturnType = AxiosPromise<VmsCollection>;
+export type ListTagVmsReturnType = VmsCollection;
 
 const isListTagVmsObjectParams = (params: [ListTagVmsParams] | unknown[]): params is [ListTagVmsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListTagVmsObjectParams = (params: [ListTagVmsParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagVmsParamCreator = async (...config: ([ListTagVmsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagVmsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagVmsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagVmsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagVmsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/vms`
@@ -93,7 +93,7 @@ export const listTagVmsParamCreator = async (...config: ([ListTagVmsParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listTagVmsParamCreator = async (...config: ([ListTagVmsParams] | [s
         }
         ]
     };
+
+    return sendRequest<ListTagVmsReturnType>(Promise.resolve(args));
 }
 
 export default listTagVmsParamCreator;

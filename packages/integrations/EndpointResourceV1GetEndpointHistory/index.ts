@@ -57,7 +57,7 @@ export type EndpointResourceV1GetEndpointHistoryParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1GetEndpointHistoryReturnType = AxiosPromise<any>;
+export type EndpointResourceV1GetEndpointHistoryReturnType = any;
 
 const isEndpointResourceV1GetEndpointHistoryObjectParams = (params: [EndpointResourceV1GetEndpointHistoryParams] | unknown[]): params is [EndpointResourceV1GetEndpointHistoryParams] => {
   const l = params.length === 1
@@ -72,7 +72,7 @@ const isEndpointResourceV1GetEndpointHistoryObjectParams = (params: [EndpointRes
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1GetEndpointHistoryParamCreator = async (...config: ([EndpointResourceV1GetEndpointHistoryParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1GetEndpointHistoryParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1GetEndpointHistoryParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1GetEndpointHistoryObjectParams(config) ? config[0] : ['id', 'limit', 'pageNumber', 'includeDetail', 'offset', 'sortBy', 'sortBy2', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1GetEndpointHistoryParams;
     const { id, limit, pageNumber, includeDetail, offset, sortBy, sortBy2, options = {} } = params;
     const localVarPath = `/endpoints/{id}/history`
@@ -112,10 +112,12 @@ export const endpointResourceV1GetEndpointHistoryParamCreator = async (...config
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<EndpointResourceV1GetEndpointHistoryReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1GetEndpointHistoryParamCreator;

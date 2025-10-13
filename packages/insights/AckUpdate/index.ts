@@ -27,7 +27,7 @@ export type AckUpdateParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckUpdateReturnType = AxiosPromise<Ack>;
+export type AckUpdateReturnType = Ack;
 
 const isAckUpdateObjectParams = (params: [AckUpdateParams] | unknown[]): params is [AckUpdateParams] => {
   const l = params.length === 1
@@ -42,7 +42,7 @@ const isAckUpdateObjectParams = (params: [AckUpdateParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackUpdateParamCreator = async (...config: ([AckUpdateParams] | [string, AckJustification, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckUpdateParams] | [string, AckJustification, AxiosRequestConfig])) => {
     const params = isAckUpdateObjectParams(config) ? config[0] : ['ruleId', 'ackJustification', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckUpdateParams;
     const { ruleId, ackJustification, options = {} } = params;
     const localVarPath = `/api/insights/v1/ack/{rule_id}/`
@@ -60,7 +60,7 @@ export const ackUpdateParamCreator = async (...config: ([AckUpdateParams] | [str
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: ackJustification,
@@ -73,6 +73,8 @@ export const ackUpdateParamCreator = async (...config: ([AckUpdateParams] | [str
         }
         ]
     };
+
+    return sendRequest<AckUpdateReturnType>(Promise.resolve(args));
 }
 
 export default ackUpdateParamCreator;

@@ -21,7 +21,7 @@ export type ShowSubscriptionParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowSubscriptionReturnType = AxiosPromise<Subscription>;
+export type ShowSubscriptionReturnType = Subscription;
 
 const isShowSubscriptionObjectParams = (params: [ShowSubscriptionParams] | unknown[]): params is [ShowSubscriptionParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowSubscriptionObjectParams = (params: [ShowSubscriptionParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showSubscriptionParamCreator = async (...config: ([ShowSubscriptionParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showSubscriptionParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowSubscriptionParams] | [string, AxiosRequestConfig])) => {
     const params = isShowSubscriptionObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowSubscriptionParams;
     const { id, options = {} } = params;
     const localVarPath = `/subscriptions/{id}`
@@ -53,7 +53,7 @@ export const showSubscriptionParamCreator = async (...config: ([ShowSubscription
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showSubscriptionParamCreator = async (...config: ([ShowSubscription
         }
         ]
     };
+
+    return sendRequest<ShowSubscriptionReturnType>(Promise.resolve(args));
 }
 
 export default showSubscriptionParamCreator;

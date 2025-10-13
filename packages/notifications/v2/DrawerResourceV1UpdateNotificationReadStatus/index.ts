@@ -21,7 +21,7 @@ export type DrawerResourceV1UpdateNotificationReadStatusParams = {
   options?: AxiosRequestConfig
 }
 
-export type DrawerResourceV1UpdateNotificationReadStatusReturnType = AxiosPromise<any>;
+export type DrawerResourceV1UpdateNotificationReadStatusReturnType = any;
 
 const isDrawerResourceV1UpdateNotificationReadStatusObjectParams = (params: [DrawerResourceV1UpdateNotificationReadStatusParams] | unknown[]): params is [DrawerResourceV1UpdateNotificationReadStatusParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isDrawerResourceV1UpdateNotificationReadStatusObjectParams = (params: [Dra
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const drawerResourceV1UpdateNotificationReadStatusParamCreator = async (...config: ([DrawerResourceV1UpdateNotificationReadStatusParams] | [UpdateNotificationDrawerStatus, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const drawerResourceV1UpdateNotificationReadStatusParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DrawerResourceV1UpdateNotificationReadStatusParams] | [UpdateNotificationDrawerStatus, AxiosRequestConfig])) => {
     const params = isDrawerResourceV1UpdateNotificationReadStatusObjectParams(config) ? config[0] : ['updateNotificationDrawerStatus', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DrawerResourceV1UpdateNotificationReadStatusParams;
     const { updateNotificationDrawerStatus, options = {} } = params;
     const localVarPath = `/notifications/drawer/read`;
@@ -54,11 +54,13 @@ export const drawerResourceV1UpdateNotificationReadStatusParamCreator = async (.
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: updateNotificationDrawerStatus,
     };
+
+    return sendRequest<DrawerResourceV1UpdateNotificationReadStatusReturnType>(Promise.resolve(args));
 }
 
 export default drawerResourceV1UpdateNotificationReadStatusParamCreator;

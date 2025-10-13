@@ -27,7 +27,7 @@ export type NotificationResourceV1UpdateEventTypeEndpointsParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1UpdateEventTypeEndpointsReturnType = AxiosPromise<any>;
+export type NotificationResourceV1UpdateEventTypeEndpointsReturnType = any;
 
 const isNotificationResourceV1UpdateEventTypeEndpointsObjectParams = (params: [NotificationResourceV1UpdateEventTypeEndpointsParams] | unknown[]): params is [NotificationResourceV1UpdateEventTypeEndpointsParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isNotificationResourceV1UpdateEventTypeEndpointsObjectParams = (params: [N
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1UpdateEventTypeEndpointsParamCreator = async (...config: ([NotificationResourceV1UpdateEventTypeEndpointsParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1UpdateEventTypeEndpointsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1UpdateEventTypeEndpointsParams] | [any, any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1UpdateEventTypeEndpointsObjectParams(config) ? config[0] : ['eventTypeId', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1UpdateEventTypeEndpointsParams;
     const { eventTypeId, body, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeId}/endpoints`
@@ -61,11 +61,13 @@ export const notificationResourceV1UpdateEventTypeEndpointsParamCreator = async 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
     };
+
+    return sendRequest<NotificationResourceV1UpdateEventTypeEndpointsReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1UpdateEventTypeEndpointsParamCreator;

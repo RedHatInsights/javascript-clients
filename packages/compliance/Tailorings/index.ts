@@ -57,12 +57,12 @@ export type TailoringsParams = {
   options?: AxiosRequestConfig
 }
 
-export type TailoringsReturnType = AxiosPromise<Tailorings200Response>;
+export type TailoringsReturnType = Tailorings200Response;
 
 const isTailoringsObjectParams = (params: [TailoringsParams] | unknown[]): params is [TailoringsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
   }
   return false
 }
@@ -73,7 +73,7 @@ const isTailoringsObjectParams = (params: [TailoringsParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const tailoringsParamCreator = async (...config: ([TailoringsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const tailoringsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TailoringsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isTailoringsObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringsParams;
     const { policyId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings`
@@ -115,10 +115,12 @@ export const tailoringsParamCreator = async (...config: ([TailoringsParams] | [a
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<TailoringsReturnType>(Promise.resolve(args));
 }
 
 export default tailoringsParamCreator;

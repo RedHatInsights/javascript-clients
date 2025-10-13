@@ -45,7 +45,7 @@ export type ListSourceContainerImagesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceContainerImagesReturnType = AxiosPromise<ContainerImagesCollection>;
+export type ListSourceContainerImagesReturnType = ContainerImagesCollection;
 
 const isListSourceContainerImagesObjectParams = (params: [ListSourceContainerImagesParams] | unknown[]): params is [ListSourceContainerImagesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceContainerImagesObjectParams = (params: [ListSourceContainerIma
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceContainerImagesParamCreator = async (...config: ([ListSourceContainerImagesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceContainerImagesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceContainerImagesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceContainerImagesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceContainerImagesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/container_images`
@@ -93,7 +93,7 @@ export const listSourceContainerImagesParamCreator = async (...config: ([ListSou
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceContainerImagesParamCreator = async (...config: ([ListSou
         }
         ]
     };
+
+    return sendRequest<ListSourceContainerImagesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceContainerImagesParamCreator;

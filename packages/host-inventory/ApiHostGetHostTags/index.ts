@@ -63,7 +63,7 @@ export const ApiHostGetHostTagsOrderByEnum = {
 } as const;
 export type ApiHostGetHostTagsOrderByEnum = typeof ApiHostGetHostTagsOrderByEnum[keyof typeof ApiHostGetHostTagsOrderByEnum];
 
-export type ApiHostGetHostTagsReturnType = AxiosPromise<TagsOut>;
+export type ApiHostGetHostTagsReturnType = TagsOut;
 
 const isApiHostGetHostTagsObjectParams = (params: [ApiHostGetHostTagsParams] | unknown[]): params is [ApiHostGetHostTagsParams] => {
   const l = params.length === 1
@@ -79,7 +79,7 @@ const isApiHostGetHostTagsObjectParams = (params: [ApiHostGetHostTagsParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostTagsParamCreator = async (...config: ([ApiHostGetHostTagsParams] | [Array<string>, number, number, ApiHostGetHostTagsOrderByEnum, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostTagsParams] | [Array<string>, number, number, ApiHostGetHostTagsOrderByEnum, string, string, AxiosRequestConfig])) => {
     const params = isApiHostGetHostTagsObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'search', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostTagsParams;
     const { hostIdList, perPage, page, orderBy, orderHow, search, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/tags`
@@ -115,7 +115,7 @@ export const apiHostGetHostTagsParamCreator = async (...config: ([ApiHostGetHost
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -127,6 +127,8 @@ export const apiHostGetHostTagsParamCreator = async (...config: ([ApiHostGetHost
         }
         ]
     };
+
+    return sendRequest<ApiHostGetHostTagsReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGetHostTagsParamCreator;

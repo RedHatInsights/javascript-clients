@@ -21,12 +21,12 @@ export type DeleteAuthenticationParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteAuthenticationReturnType = AxiosPromise<void>;
+export type DeleteAuthenticationReturnType = void;
 
 const isDeleteAuthenticationObjectParams = (params: [DeleteAuthenticationParams] | unknown[]): params is [DeleteAuthenticationParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isDeleteAuthenticationObjectParams = (params: [DeleteAuthenticationParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteAuthenticationParamCreator = async (...config: ([DeleteAuthenticationParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteAuthenticationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteAuthenticationParams] | [string, AxiosRequestConfig])) => {
     const params = isDeleteAuthenticationObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteAuthenticationParams;
     const { id, options = {} } = params;
     const localVarPath = `/authentications/{id}`
@@ -53,7 +53,7 @@ export const deleteAuthenticationParamCreator = async (...config: ([DeleteAuthen
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const deleteAuthenticationParamCreator = async (...config: ([DeleteAuthen
         }
         ]
     };
+
+    return sendRequest<DeleteAuthenticationReturnType>(Promise.resolve(args));
 }
 
 export default deleteAuthenticationParamCreator;

@@ -33,12 +33,12 @@ export type RuleGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleGroupReturnType = AxiosPromise<RuleGroup200Response>;
+export type RuleGroupReturnType = RuleGroup200Response;
 
 const isRuleGroupObjectParams = (params: [RuleGroupParams] | unknown[]): params is [RuleGroupParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleGroupId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleGroupId')
   }
   return false
 }
@@ -49,7 +49,7 @@ const isRuleGroupObjectParams = (params: [RuleGroupParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleGroupParamCreator = async (...config: ([RuleGroupParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleGroupParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isRuleGroupObjectParams(config) ? config[0] : ['securityGuideId', 'ruleGroupId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleGroupParams;
     const { securityGuideId, ruleGroupId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/rule_groups/{rule_group_id}`
@@ -72,10 +72,12 @@ export const ruleGroupParamCreator = async (...config: ([RuleGroupParams] | [any
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<RuleGroupReturnType>(Promise.resolve(args));
 }
 
 export default ruleGroupParamCreator;

@@ -45,7 +45,7 @@ export type ListOrchestrationStackIpaddressesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
+export type ListOrchestrationStackIpaddressesReturnType = IpaddressesCollection;
 
 const isListOrchestrationStackIpaddressesObjectParams = (params: [ListOrchestrationStackIpaddressesParams] | unknown[]): params is [ListOrchestrationStackIpaddressesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListOrchestrationStackIpaddressesObjectParams = (params: [ListOrchestrat
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackIpaddressesParamCreator = async (...config: ([ListOrchestrationStackIpaddressesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackIpaddressesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackIpaddressesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackIpaddressesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackIpaddressesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/ipaddresses`
@@ -93,7 +93,7 @@ export const listOrchestrationStackIpaddressesParamCreator = async (...config: (
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listOrchestrationStackIpaddressesParamCreator = async (...config: (
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackIpaddressesReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackIpaddressesParamCreator;

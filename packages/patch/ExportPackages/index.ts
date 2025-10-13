@@ -69,7 +69,7 @@ export const ExportPackagesSortEnum = {
 } as const;
 export type ExportPackagesSortEnum = typeof ExportPackagesSortEnum[keyof typeof ExportPackagesSortEnum];
 
-export type ExportPackagesReturnType = AxiosPromise<Array<ControllersPackageItem>>;
+export type ExportPackagesReturnType = Array<ControllersPackageItem>;
 
 const isExportPackagesObjectParams = (params: [ExportPackagesParams] | unknown[]): params is [ExportPackagesParams] => {
   const l = params.length === 1
@@ -85,7 +85,7 @@ const isExportPackagesObjectParams = (params: [ExportPackagesParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportPackagesParamCreator = async (...config: ([ExportPackagesParams] | [ExportPackagesSortEnum, string, string, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportPackagesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportPackagesParams] | [ExportPackagesSortEnum, string, string, string, string, string, string, AxiosRequestConfig])) => {
     const params = isExportPackagesObjectParams(config) ? config[0] : ['sort', 'search', 'filterName', 'filterSystemsInstalled', 'filterSystemsInstallable', 'filterSystemsApplicable', 'filterSummary', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportPackagesParams;
     const { sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, options = {} } = params;
     const localVarPath = `/export/packages`;
@@ -128,7 +128,7 @@ export const exportPackagesParamCreator = async (...config: ([ExportPackagesPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -140,6 +140,8 @@ export const exportPackagesParamCreator = async (...config: ([ExportPackagesPara
         }
         ]
     };
+
+    return sendRequest<ExportPackagesReturnType>(Promise.resolve(args));
 }
 
 export default exportPackagesParamCreator;

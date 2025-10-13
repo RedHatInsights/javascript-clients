@@ -39,7 +39,7 @@ export type ApiSystemProfileValidateSchemaParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiSystemProfileValidateSchemaReturnType = AxiosPromise<void>;
+export type ApiSystemProfileValidateSchemaReturnType = void;
 
 const isApiSystemProfileValidateSchemaObjectParams = (params: [ApiSystemProfileValidateSchemaParams] | unknown[]): params is [ApiSystemProfileValidateSchemaParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isApiSystemProfileValidateSchemaObjectParams = (params: [ApiSystemProfileV
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiSystemProfileValidateSchemaParamCreator = async (...config: ([ApiSystemProfileValidateSchemaParams] | [string, string, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiSystemProfileValidateSchemaParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiSystemProfileValidateSchemaParams] | [string, string, number, number, AxiosRequestConfig])) => {
     const params = isApiSystemProfileValidateSchemaObjectParams(config) ? config[0] : ['repoBranch', 'repoFork', 'days', 'maxMessages', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiSystemProfileValidateSchemaParams;
     const { repoBranch, repoFork, days, maxMessages, options = {} } = params;
     const localVarPath = `/system_profile/validate_schema`;
@@ -86,7 +86,7 @@ export const apiSystemProfileValidateSchemaParamCreator = async (...config: ([Ap
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -98,6 +98,8 @@ export const apiSystemProfileValidateSchemaParamCreator = async (...config: ([Ap
         }
         ]
     };
+
+    return sendRequest<ApiSystemProfileValidateSchemaReturnType>(Promise.resolve(args));
 }
 
 export default apiSystemProfileValidateSchemaParamCreator;

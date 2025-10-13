@@ -27,12 +27,12 @@ export type DeleteRemediationSystemParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteRemediationSystemReturnType = AxiosPromise<void>;
+export type DeleteRemediationSystemReturnType = void;
 
 const isDeleteRemediationSystemObjectParams = (params: [DeleteRemediationSystemParams] | unknown[]): params is [DeleteRemediationSystemParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'system')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'system')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isDeleteRemediationSystemObjectParams = (params: [DeleteRemediationSystemP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRemediationSystemParamCreator = async (...config: ([DeleteRemediationSystemParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRemediationSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRemediationSystemParams] | [string, string, AxiosRequestConfig])) => {
     const params = isDeleteRemediationSystemObjectParams(config) ? config[0] : ['id', 'system', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationSystemParams;
     const { id, system, options = {} } = params;
     const localVarPath = `/remediations/{id}/systems/{system}`
@@ -60,10 +60,12 @@ export const deleteRemediationSystemParamCreator = async (...config: ([DeleteRem
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<DeleteRemediationSystemReturnType>(Promise.resolve(args));
 }
 
 export default deleteRemediationSystemParamCreator;

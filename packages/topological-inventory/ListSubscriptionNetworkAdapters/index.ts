@@ -45,7 +45,7 @@ export type ListSubscriptionNetworkAdaptersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSubscriptionNetworkAdaptersReturnType = AxiosPromise<NetworkAdaptersCollection>;
+export type ListSubscriptionNetworkAdaptersReturnType = NetworkAdaptersCollection;
 
 const isListSubscriptionNetworkAdaptersObjectParams = (params: [ListSubscriptionNetworkAdaptersParams] | unknown[]): params is [ListSubscriptionNetworkAdaptersParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSubscriptionNetworkAdaptersObjectParams = (params: [ListSubscription
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSubscriptionNetworkAdaptersParamCreator = async (...config: ([ListSubscriptionNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSubscriptionNetworkAdaptersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSubscriptionNetworkAdaptersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSubscriptionNetworkAdaptersObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSubscriptionNetworkAdaptersParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/subscriptions/{id}/network_adapters`
@@ -93,7 +93,7 @@ export const listSubscriptionNetworkAdaptersParamCreator = async (...config: ([L
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSubscriptionNetworkAdaptersParamCreator = async (...config: ([L
         }
         ]
     };
+
+    return sendRequest<ListSubscriptionNetworkAdaptersReturnType>(Promise.resolve(args));
 }
 
 export default listSubscriptionNetworkAdaptersParamCreator;

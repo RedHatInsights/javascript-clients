@@ -87,7 +87,7 @@ export const GetRemediationsFieldsDataEnum = {
 } as const;
 export type GetRemediationsFieldsDataEnum = typeof GetRemediationsFieldsDataEnum[keyof typeof GetRemediationsFieldsDataEnum];
 
-export type GetRemediationsReturnType = AxiosPromise<GetRemediations200Response>;
+export type GetRemediationsReturnType = GetRemediations200Response;
 
 const isGetRemediationsObjectParams = (params: [GetRemediationsParams] | unknown[]): params is [GetRemediationsParams] => {
   const l = params.length === 1
@@ -103,7 +103,7 @@ const isGetRemediationsObjectParams = (params: [GetRemediationsParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationsParamCreator = async (...config: ([GetRemediationsParams] | [GetRemediationsSortEnum, GetRemediationsFilterParameter, number, number, string, boolean, Array<GetRemediationsFieldsDataEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRemediationsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationsParams] | [GetRemediationsSortEnum, GetRemediationsFilterParameter, number, number, string, boolean, Array<GetRemediationsFieldsDataEnum>, AxiosRequestConfig])) => {
     const params = isGetRemediationsObjectParams(config) ? config[0] : ['sort', 'filter', 'limit', 'offset', 'system', 'hideArchived', 'fieldsData', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationsParams;
     const { sort, filter, limit, offset, system, hideArchived, fieldsData, options = {} } = params;
     const localVarPath = `/remediations`;
@@ -146,10 +146,12 @@ export const getRemediationsParamCreator = async (...config: ([GetRemediationsPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetRemediationsReturnType>(Promise.resolve(args));
 }
 
 export default getRemediationsParamCreator;

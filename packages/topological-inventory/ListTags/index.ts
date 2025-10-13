@@ -39,7 +39,7 @@ export type ListTagsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagsReturnType = AxiosPromise<TagsCollection>;
+export type ListTagsReturnType = TagsCollection;
 
 const isListTagsObjectParams = (params: [ListTagsParams] | unknown[]): params is [ListTagsParams] => {
   const l = params.length === 1
@@ -55,7 +55,7 @@ const isListTagsObjectParams = (params: [ListTagsParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagsParamCreator = async (...config: ([ListTagsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags`;
@@ -86,7 +86,7 @@ export const listTagsParamCreator = async (...config: ([ListTagsParams] | [numbe
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -97,6 +97,8 @@ export const listTagsParamCreator = async (...config: ([ListTagsParams] | [numbe
         }
         ]
     };
+
+    return sendRequest<ListTagsReturnType>(Promise.resolve(args));
 }
 
 export default listTagsParamCreator;

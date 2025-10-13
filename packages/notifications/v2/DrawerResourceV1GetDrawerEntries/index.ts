@@ -81,7 +81,7 @@ export type DrawerResourceV1GetDrawerEntriesParams = {
   options?: AxiosRequestConfig
 }
 
-export type DrawerResourceV1GetDrawerEntriesReturnType = AxiosPromise<PageDrawerEntryPayload>;
+export type DrawerResourceV1GetDrawerEntriesReturnType = PageDrawerEntryPayload;
 
 const isDrawerResourceV1GetDrawerEntriesObjectParams = (params: [DrawerResourceV1GetDrawerEntriesParams] | unknown[]): params is [DrawerResourceV1GetDrawerEntriesParams] => {
   const l = params.length === 1
@@ -97,7 +97,7 @@ const isDrawerResourceV1GetDrawerEntriesObjectParams = (params: [DrawerResourceV
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const drawerResourceV1GetDrawerEntriesParamCreator = async (...config: ([DrawerResourceV1GetDrawerEntriesParams] | [any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const drawerResourceV1GetDrawerEntriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DrawerResourceV1GetDrawerEntriesParams] | [any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isDrawerResourceV1GetDrawerEntriesObjectParams(config) ? config[0] : ['appIds', 'bundleIds', 'endDate', 'eventTypeIds', 'limit', 'offset', 'pageNumber', 'readStatus', 'sortBy', 'sortBy2', 'startDate', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DrawerResourceV1GetDrawerEntriesParams;
     const { appIds, bundleIds, endDate, eventTypeIds, limit, offset, pageNumber, readStatus, sortBy, sortBy2, startDate, options = {} } = params;
     const localVarPath = `/notifications/drawer`;
@@ -156,10 +156,12 @@ export const drawerResourceV1GetDrawerEntriesParamCreator = async (...config: ([
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<DrawerResourceV1GetDrawerEntriesReturnType>(Promise.resolve(args));
 }
 
 export default drawerResourceV1GetDrawerEntriesParamCreator;

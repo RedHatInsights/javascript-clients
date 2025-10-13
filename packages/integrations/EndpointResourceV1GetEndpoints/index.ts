@@ -63,7 +63,7 @@ export type EndpointResourceV1GetEndpointsParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1GetEndpointsReturnType = AxiosPromise<EndpointPage>;
+export type EndpointResourceV1GetEndpointsReturnType = EndpointPage;
 
 const isEndpointResourceV1GetEndpointsObjectParams = (params: [EndpointResourceV1GetEndpointsParams] | unknown[]): params is [EndpointResourceV1GetEndpointsParams] => {
   const l = params.length === 1
@@ -79,7 +79,7 @@ const isEndpointResourceV1GetEndpointsObjectParams = (params: [EndpointResourceV
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1GetEndpointsParamCreator = async (...config: ([EndpointResourceV1GetEndpointsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1GetEndpointsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1GetEndpointsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1GetEndpointsObjectParams(config) ? config[0] : ['limit', 'pageNumber', 'active', 'name', 'offset', 'sortBy', 'sortBy2', 'type', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1GetEndpointsParams;
     const { limit, pageNumber, active, name, offset, sortBy, sortBy2, type, options = {} } = params;
     const localVarPath = `/endpoints`;
@@ -126,10 +126,12 @@ export const endpointResourceV1GetEndpointsParamCreator = async (...config: ([En
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<EndpointResourceV1GetEndpointsReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1GetEndpointsParamCreator;

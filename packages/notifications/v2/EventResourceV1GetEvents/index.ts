@@ -111,7 +111,7 @@ export type EventResourceV1GetEventsParams = {
   options?: AxiosRequestConfig
 }
 
-export type EventResourceV1GetEventsReturnType = AxiosPromise<PageEventLogEntry>;
+export type EventResourceV1GetEventsReturnType = PageEventLogEntry;
 
 const isEventResourceV1GetEventsObjectParams = (params: [EventResourceV1GetEventsParams] | unknown[]): params is [EventResourceV1GetEventsParams] => {
   const l = params.length === 1
@@ -127,7 +127,7 @@ const isEventResourceV1GetEventsObjectParams = (params: [EventResourceV1GetEvent
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const eventResourceV1GetEventsParamCreator = async (...config: ([EventResourceV1GetEventsParams] | [any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EventResourceV1GetEventsParams] | [any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isEventResourceV1GetEventsObjectParams(config) ? config[0] : ['appIds', 'bundleIds', 'endDate', 'endpointTypes', 'eventTypeDisplayName', 'includeActions', 'includeDetails', 'includePayload', 'invocationResults', 'limit', 'offset', 'pageNumber', 'sortBy', 'sortBy2', 'startDate', 'status', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EventResourceV1GetEventsParams;
     const { appIds, bundleIds, endDate, endpointTypes, eventTypeDisplayName, includeActions, includeDetails, includePayload, invocationResults, limit, offset, pageNumber, sortBy, sortBy2, startDate, status, options = {} } = params;
     const localVarPath = `/notifications/events`;
@@ -206,10 +206,12 @@ export const eventResourceV1GetEventsParamCreator = async (...config: ([EventRes
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<EventResourceV1GetEventsReturnType>(Promise.resolve(args));
 }
 
 export default eventResourceV1GetEventsParamCreator;

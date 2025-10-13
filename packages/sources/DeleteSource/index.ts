@@ -21,12 +21,12 @@ export type DeleteSourceParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteSourceReturnType = AxiosPromise<void>;
+export type DeleteSourceReturnType = void;
 
 const isDeleteSourceObjectParams = (params: [DeleteSourceParams] | unknown[]): params is [DeleteSourceParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isDeleteSourceObjectParams = (params: [DeleteSourceParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteSourceParamCreator = async (...config: ([DeleteSourceParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteSourceParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteSourceParams] | [string, AxiosRequestConfig])) => {
     const params = isDeleteSourceObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteSourceParams;
     const { id, options = {} } = params;
     const localVarPath = `/sources/{id}`
@@ -53,7 +53,7 @@ export const deleteSourceParamCreator = async (...config: ([DeleteSourceParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const deleteSourceParamCreator = async (...config: ([DeleteSourceParams] 
         }
         ]
     };
+
+    return sendRequest<DeleteSourceReturnType>(Promise.resolve(args));
 }
 
 export default deleteSourceParamCreator;

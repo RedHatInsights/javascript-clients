@@ -15,7 +15,7 @@ export type StatusLiveRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type StatusLiveRetrieveReturnType = AxiosPromise<void>;
+export type StatusLiveRetrieveReturnType = void;
 
 const isStatusLiveRetrieveObjectParams = (params: [StatusLiveRetrieveParams] | unknown[]): params is [StatusLiveRetrieveParams] => {
   const l = params.length === 1
@@ -30,7 +30,7 @@ const isStatusLiveRetrieveObjectParams = (params: [StatusLiveRetrieveParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const statusLiveRetrieveParamCreator = async (...config: ([StatusLiveRetrieveParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const statusLiveRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([StatusLiveRetrieveParams] | [AxiosRequestConfig])) => {
     const params = isStatusLiveRetrieveObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as StatusLiveRetrieveParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/status/live/`;
@@ -45,10 +45,12 @@ export const statusLiveRetrieveParamCreator = async (...config: ([StatusLiveRetr
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<StatusLiveRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default statusLiveRetrieveParamCreator;

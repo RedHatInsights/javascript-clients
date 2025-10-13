@@ -27,7 +27,7 @@ export type TopicPartialUpdateParams = {
   options?: AxiosRequestConfig
 }
 
-export type TopicPartialUpdateReturnType = AxiosPromise<TopicEdit>;
+export type TopicPartialUpdateReturnType = TopicEdit;
 
 const isTopicPartialUpdateObjectParams = (params: [TopicPartialUpdateParams] | unknown[]): params is [TopicPartialUpdateParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isTopicPartialUpdateObjectParams = (params: [TopicPartialUpdateParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const topicPartialUpdateParamCreator = async (...config: ([TopicPartialUpdateParams] | [string, PatchedTopicEdit, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const topicPartialUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TopicPartialUpdateParams] | [string, PatchedTopicEdit, AxiosRequestConfig])) => {
     const params = isTopicPartialUpdateObjectParams(config) ? config[0] : ['slug', 'patchedTopicEdit', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TopicPartialUpdateParams;
     const { slug, patchedTopicEdit, options = {} } = params;
     const localVarPath = `/api/insights/v1/topic/{slug}/`
@@ -61,7 +61,7 @@ export const topicPartialUpdateParamCreator = async (...config: ([TopicPartialUp
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: patchedTopicEdit,
@@ -74,6 +74,8 @@ export const topicPartialUpdateParamCreator = async (...config: ([TopicPartialUp
         }
         ]
     };
+
+    return sendRequest<TopicPartialUpdateReturnType>(Promise.resolve(args));
 }
 
 export default topicPartialUpdateParamCreator;

@@ -21,7 +21,7 @@ export type ShowDatastoreParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowDatastoreReturnType = AxiosPromise<Datastore>;
+export type ShowDatastoreReturnType = Datastore;
 
 const isShowDatastoreObjectParams = (params: [ShowDatastoreParams] | unknown[]): params is [ShowDatastoreParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowDatastoreObjectParams = (params: [ShowDatastoreParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showDatastoreParamCreator = async (...config: ([ShowDatastoreParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showDatastoreParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowDatastoreParams] | [string, AxiosRequestConfig])) => {
     const params = isShowDatastoreObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowDatastoreParams;
     const { id, options = {} } = params;
     const localVarPath = `/datastores/{id}`
@@ -53,7 +53,7 @@ export const showDatastoreParamCreator = async (...config: ([ShowDatastoreParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showDatastoreParamCreator = async (...config: ([ShowDatastoreParams
         }
         ]
     };
+
+    return sendRequest<ShowDatastoreReturnType>(Promise.resolve(args));
 }
 
 export default showDatastoreParamCreator;

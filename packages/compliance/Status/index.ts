@@ -15,7 +15,7 @@ export type StatusParams = {
   options?: AxiosRequestConfig
 }
 
-export type StatusReturnType = AxiosPromise<Status200Response>;
+export type StatusReturnType = Status200Response;
 
 const isStatusObjectParams = (params: [StatusParams] | unknown[]): params is [StatusParams] => {
   const l = params.length === 1
@@ -31,7 +31,7 @@ const isStatusObjectParams = (params: [StatusParams] | unknown[]): params is [St
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const statusParamCreator = async (...config: ([StatusParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const statusParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([StatusParams] | [AxiosRequestConfig])) => {
     const params = isStatusObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as StatusParams;
     const { options = {} } = params;
     const localVarPath = `/status`;
@@ -46,10 +46,12 @@ export const statusParamCreator = async (...config: ([StatusParams] | [AxiosRequ
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<StatusReturnType>(Promise.resolve(args));
 }
 
 export default statusParamCreator;

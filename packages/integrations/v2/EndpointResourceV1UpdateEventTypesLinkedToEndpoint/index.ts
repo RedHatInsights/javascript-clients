@@ -27,7 +27,7 @@ export type EndpointResourceV1UpdateEventTypesLinkedToEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1UpdateEventTypesLinkedToEndpointReturnType = AxiosPromise<any>;
+export type EndpointResourceV1UpdateEventTypesLinkedToEndpointReturnType = any;
 
 const isEndpointResourceV1UpdateEventTypesLinkedToEndpointObjectParams = (params: [EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] | unknown[]): params is [EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isEndpointResourceV1UpdateEventTypesLinkedToEndpointObjectParams = (params
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1UpdateEventTypesLinkedToEndpointParamCreator = async (...config: ([EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1UpdateEventTypesLinkedToEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] | [any, any, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1UpdateEventTypesLinkedToEndpointObjectParams(config) ? config[0] : ['endpointId', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1UpdateEventTypesLinkedToEndpointParams;
     const { endpointId, body, options = {} } = params;
     const localVarPath = `/endpoints/{endpointId}/eventTypes`
@@ -61,11 +61,13 @@ export const endpointResourceV1UpdateEventTypesLinkedToEndpointParamCreator = as
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
     };
+
+    return sendRequest<EndpointResourceV1UpdateEventTypesLinkedToEndpointReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1UpdateEventTypesLinkedToEndpointParamCreator;

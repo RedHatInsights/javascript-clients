@@ -21,7 +21,7 @@ export type UserPreferencesCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type UserPreferencesCreateReturnType = AxiosPromise<PreferencesInput>;
+export type UserPreferencesCreateReturnType = PreferencesInput;
 
 const isUserPreferencesCreateObjectParams = (params: [UserPreferencesCreateParams] | unknown[]): params is [UserPreferencesCreateParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isUserPreferencesCreateObjectParams = (params: [UserPreferencesCreateParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const userPreferencesCreateParamCreator = async (...config: ([UserPreferencesCreateParams] | [PreferencesInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const userPreferencesCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UserPreferencesCreateParams] | [PreferencesInput, AxiosRequestConfig])) => {
     const params = isUserPreferencesCreateObjectParams(config) ? config[0] : ['preferencesInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UserPreferencesCreateParams;
     const { preferencesInput, options = {} } = params;
     const localVarPath = `/api/insights/v1/user-preferences/`;
@@ -53,7 +53,7 @@ export const userPreferencesCreateParamCreator = async (...config: ([UserPrefere
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: preferencesInput,
@@ -66,6 +66,8 @@ export const userPreferencesCreateParamCreator = async (...config: ([UserPrefere
         }
         ]
     };
+
+    return sendRequest<UserPreferencesCreateReturnType>(Promise.resolve(args));
 }
 
 export default userPreferencesCreateParamCreator;

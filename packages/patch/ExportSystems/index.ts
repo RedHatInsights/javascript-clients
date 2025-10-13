@@ -237,7 +237,7 @@ export type ExportSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ExportSystemsReturnType = AxiosPromise<Array<ControllersSystemDBLookup>>;
+export type ExportSystemsReturnType = Array<ControllersSystemDBLookup>;
 
 const isExportSystemsObjectParams = (params: [ExportSystemsParams] | unknown[]): params is [ExportSystemsParams] => {
   const l = params.length === 1
@@ -253,7 +253,7 @@ const isExportSystemsObjectParams = (params: [ExportSystemsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportSystemsParamCreator = async (...config: ([ExportSystemsParams] | [string, string, string, string, string, number, number, number, number, number, number, number, number, number, number, number, number, boolean, number, number, number, Array<string>, boolean, Array<string>, string, string, string, string, string, string, string, string, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportSystemsParams] | [string, string, string, string, string, number, number, number, number, number, number, number, number, number, number, number, number, boolean, number, number, number, Array<string>, boolean, Array<string>, string, string, string, string, string, string, string, string, string, string, string, string, Array<string>, AxiosRequestConfig])) => {
     const params = isExportSystemsObjectParams(config) ? config[0] : ['search', 'filterId', 'filterDisplayName', 'filterLastEvaluation', 'filterLastUpload', 'filterRhsaCount', 'filterRhbaCount', 'filterRheaCount', 'filterOtherCount', 'filterInstallableRhsaCount', 'filterInstallableRhbaCount', 'filterInstallableRheaCount', 'filterInstallableOtherCount', 'filterApplicableRhsaCount', 'filterApplicableRhbaCount', 'filterApplicableRheaCount', 'filterApplicableOtherCount', 'filterStale', 'filterPackagesInstalled', 'filterPackagesInstallable', 'filterPackagesApplicable', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'filterBaselineName', 'filterTemplateName', 'filterTemplateUuid', 'filterArch', 'filterOs', 'filterOsname', 'filterOsmajor', 'filterOsminor', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportSystemsParams;
     const { search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterBaselineName, filterTemplateName, filterTemplateUuid, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, options = {} } = params;
     const localVarPath = `/export/systems`;
@@ -416,7 +416,7 @@ export const exportSystemsParamCreator = async (...config: ([ExportSystemsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -428,6 +428,8 @@ export const exportSystemsParamCreator = async (...config: ([ExportSystemsParams
         }
         ]
     };
+
+    return sendRequest<ExportSystemsReturnType>(Promise.resolve(args));
 }
 
 export default exportSystemsParamCreator;

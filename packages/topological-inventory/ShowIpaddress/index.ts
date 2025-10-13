@@ -21,7 +21,7 @@ export type ShowIpaddressParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowIpaddressReturnType = AxiosPromise<Ipaddress>;
+export type ShowIpaddressReturnType = Ipaddress;
 
 const isShowIpaddressObjectParams = (params: [ShowIpaddressParams] | unknown[]): params is [ShowIpaddressParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowIpaddressObjectParams = (params: [ShowIpaddressParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showIpaddressParamCreator = async (...config: ([ShowIpaddressParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showIpaddressParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowIpaddressParams] | [string, AxiosRequestConfig])) => {
     const params = isShowIpaddressObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowIpaddressParams;
     const { id, options = {} } = params;
     const localVarPath = `/ipaddresses/{id}`
@@ -53,7 +53,7 @@ export const showIpaddressParamCreator = async (...config: ([ShowIpaddressParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showIpaddressParamCreator = async (...config: ([ShowIpaddressParams
         }
         ]
     };
+
+    return sendRequest<ShowIpaddressReturnType>(Promise.resolve(args));
 }
 
 export default showIpaddressParamCreator;

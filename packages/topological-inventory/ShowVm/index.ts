@@ -21,7 +21,7 @@ export type ShowVmParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowVmReturnType = AxiosPromise<Vm>;
+export type ShowVmReturnType = Vm;
 
 const isShowVmObjectParams = (params: [ShowVmParams] | unknown[]): params is [ShowVmParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowVmObjectParams = (params: [ShowVmParams] | unknown[]): params is [Sh
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showVmParamCreator = async (...config: ([ShowVmParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showVmParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowVmParams] | [string, AxiosRequestConfig])) => {
     const params = isShowVmObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowVmParams;
     const { id, options = {} } = params;
     const localVarPath = `/vms/{id}`
@@ -53,7 +53,7 @@ export const showVmParamCreator = async (...config: ([ShowVmParams] | [string, A
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showVmParamCreator = async (...config: ([ShowVmParams] | [string, A
         }
         ]
     };
+
+    return sendRequest<ShowVmReturnType>(Promise.resolve(args));
 }
 
 export default showVmParamCreator;

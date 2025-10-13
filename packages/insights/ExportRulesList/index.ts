@@ -175,7 +175,7 @@ export const ExportRulesListUpdateMethodEnum = {
 } as const;
 export type ExportRulesListUpdateMethodEnum = typeof ExportRulesListUpdateMethodEnum[keyof typeof ExportRulesListUpdateMethodEnum];
 
-export type ExportRulesListReturnType = AxiosPromise<Array<RuleExport>>;
+export type ExportRulesListReturnType = Array<RuleExport>;
 
 const isExportRulesListObjectParams = (params: [ExportRulesListParams] | unknown[]): params is [ExportRulesListParams] => {
   const l = params.length === 1
@@ -190,7 +190,7 @@ const isExportRulesListObjectParams = (params: [ExportRulesListParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportRulesListParamCreator = async (...config: ([ExportRulesListParams] | [Array<ExportRulesListCategoryEnum>, string, Array<string>, boolean, Array<string>, boolean, Array<ExportRulesListImpactEnum>, boolean, Array<ExportRulesListLikelihoodEnum>, boolean, Array<ExportRulesListResRiskEnum>, Array<string>, string, Array<ExportRulesListTotalRiskEnum>, Array<ExportRulesListUpdateMethodEnum>, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportRulesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportRulesListParams] | [Array<ExportRulesListCategoryEnum>, string, Array<string>, boolean, Array<string>, boolean, Array<ExportRulesListImpactEnum>, boolean, Array<ExportRulesListLikelihoodEnum>, boolean, Array<ExportRulesListResRiskEnum>, Array<string>, string, Array<ExportRulesListTotalRiskEnum>, Array<ExportRulesListUpdateMethodEnum>, string, AxiosRequestConfig])) => {
     const params = isExportRulesListObjectParams(config) ? config[0] : ['category', 'displayName', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasPlaybook', 'impact', 'incident', 'likelihood', 'reboot', 'resRisk', 'tags', 'text', 'totalRisk', 'updateMethod', 'uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportRulesListParams;
     const { category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options = {} } = params;
     const localVarPath = `/api/insights/v1/export/rules/`;
@@ -269,7 +269,7 @@ export const exportRulesListParamCreator = async (...config: ([ExportRulesListPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -281,6 +281,8 @@ export const exportRulesListParamCreator = async (...config: ([ExportRulesListPa
         }
         ]
     };
+
+    return sendRequest<ExportRulesListReturnType>(Promise.resolve(args));
 }
 
 export default exportRulesListParamCreator;

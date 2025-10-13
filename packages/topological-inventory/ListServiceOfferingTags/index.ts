@@ -45,7 +45,7 @@ export type ListServiceOfferingTagsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceOfferingTagsReturnType = AxiosPromise<TagsCollection>;
+export type ListServiceOfferingTagsReturnType = TagsCollection;
 
 const isListServiceOfferingTagsObjectParams = (params: [ListServiceOfferingTagsParams] | unknown[]): params is [ListServiceOfferingTagsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListServiceOfferingTagsObjectParams = (params: [ListServiceOfferingTagsP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceOfferingTagsParamCreator = async (...config: ([ListServiceOfferingTagsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceOfferingTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceOfferingTagsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceOfferingTagsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceOfferingTagsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_offerings/{id}/tags`
@@ -93,7 +93,7 @@ export const listServiceOfferingTagsParamCreator = async (...config: ([ListServi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listServiceOfferingTagsParamCreator = async (...config: ([ListServi
         }
         ]
     };
+
+    return sendRequest<ListServiceOfferingTagsReturnType>(Promise.resolve(args));
 }
 
 export default listServiceOfferingTagsParamCreator;

@@ -45,7 +45,7 @@ export type ListSourceRegionIpaddressesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
+export type ListSourceRegionIpaddressesReturnType = IpaddressesCollection;
 
 const isListSourceRegionIpaddressesObjectParams = (params: [ListSourceRegionIpaddressesParams] | unknown[]): params is [ListSourceRegionIpaddressesParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceRegionIpaddressesObjectParams = (params: [ListSourceRegionIpad
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionIpaddressesParamCreator = async (...config: ([ListSourceRegionIpaddressesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionIpaddressesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionIpaddressesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionIpaddressesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionIpaddressesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions/{id}/ipaddresses`
@@ -93,7 +93,7 @@ export const listSourceRegionIpaddressesParamCreator = async (...config: ([ListS
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceRegionIpaddressesParamCreator = async (...config: ([ListS
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionIpaddressesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionIpaddressesParamCreator;

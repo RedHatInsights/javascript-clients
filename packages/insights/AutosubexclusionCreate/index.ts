@@ -21,7 +21,7 @@ export type AutosubexclusionCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type AutosubexclusionCreateReturnType = AxiosPromise<SubscriptionExcludedAccount>;
+export type AutosubexclusionCreateReturnType = SubscriptionExcludedAccount;
 
 const isAutosubexclusionCreateObjectParams = (params: [AutosubexclusionCreateParams] | unknown[]): params is [AutosubexclusionCreateParams] => {
   const l = params.length === 1
@@ -36,7 +36,7 @@ const isAutosubexclusionCreateObjectParams = (params: [AutosubexclusionCreatePar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const autosubexclusionCreateParamCreator = async (...config: ([AutosubexclusionCreateParams] | [SubscriptionExcludedAccount, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const autosubexclusionCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AutosubexclusionCreateParams] | [SubscriptionExcludedAccount, AxiosRequestConfig])) => {
     const params = isAutosubexclusionCreateObjectParams(config) ? config[0] : ['subscriptionExcludedAccount', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AutosubexclusionCreateParams;
     const { subscriptionExcludedAccount, options = {} } = params;
     const localVarPath = `/api/insights/v1/autosubexclusion/`;
@@ -53,7 +53,7 @@ export const autosubexclusionCreateParamCreator = async (...config: ([Autosubexc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: subscriptionExcludedAccount,
@@ -66,6 +66,8 @@ export const autosubexclusionCreateParamCreator = async (...config: ([Autosubexc
         }
         ]
     };
+
+    return sendRequest<AutosubexclusionCreateReturnType>(Promise.resolve(args));
 }
 
 export default autosubexclusionCreateParamCreator;

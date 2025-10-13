@@ -45,7 +45,7 @@ export type ListSourceContainerProjectsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceContainerProjectsReturnType = AxiosPromise<ContainerProjectsCollection>;
+export type ListSourceContainerProjectsReturnType = ContainerProjectsCollection;
 
 const isListSourceContainerProjectsObjectParams = (params: [ListSourceContainerProjectsParams] | unknown[]): params is [ListSourceContainerProjectsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceContainerProjectsObjectParams = (params: [ListSourceContainerP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceContainerProjectsParamCreator = async (...config: ([ListSourceContainerProjectsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceContainerProjectsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceContainerProjectsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceContainerProjectsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceContainerProjectsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/container_projects`
@@ -93,7 +93,7 @@ export const listSourceContainerProjectsParamCreator = async (...config: ([ListS
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceContainerProjectsParamCreator = async (...config: ([ListS
         }
         ]
     };
+
+    return sendRequest<ListSourceContainerProjectsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceContainerProjectsParamCreator;

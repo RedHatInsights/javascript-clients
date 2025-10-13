@@ -15,7 +15,7 @@ export type ServicesGetParams = {
   options?: AxiosRequestConfig
 }
 
-export type ServicesGetReturnType = AxiosPromise<{ [key: string]: ServiceDetails; }>;
+export type ServicesGetReturnType = { [key: string]: ServiceDetails; };
 
 const isServicesGetObjectParams = (params: [ServicesGetParams] | unknown[]): params is [ServicesGetParams] => {
   const l = params.length === 1
@@ -31,7 +31,7 @@ const isServicesGetObjectParams = (params: [ServicesGetParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const servicesGetParamCreator = async (...config: ([ServicesGetParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const servicesGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ServicesGetParams] | [AxiosRequestConfig])) => {
     const params = isServicesGetObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ServicesGetParams;
     const { options = {} } = params;
     const localVarPath = `/services`;
@@ -46,10 +46,12 @@ export const servicesGetParamCreator = async (...config: ([ServicesGetParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ServicesGetReturnType>(Promise.resolve(args));
 }
 
 export default servicesGetParamCreator;

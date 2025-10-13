@@ -69,7 +69,7 @@ export const ApiHostGetHostSystemProfileByIdOrderByEnum = {
 } as const;
 export type ApiHostGetHostSystemProfileByIdOrderByEnum = typeof ApiHostGetHostSystemProfileByIdOrderByEnum[keyof typeof ApiHostGetHostSystemProfileByIdOrderByEnum];
 
-export type ApiHostGetHostSystemProfileByIdReturnType = AxiosPromise<SystemProfileByHostOut>;
+export type ApiHostGetHostSystemProfileByIdReturnType = SystemProfileByHostOut;
 
 const isApiHostGetHostSystemProfileByIdObjectParams = (params: [ApiHostGetHostSystemProfileByIdParams] | unknown[]): params is [ApiHostGetHostSystemProfileByIdParams] => {
   const l = params.length === 1
@@ -85,7 +85,7 @@ const isApiHostGetHostSystemProfileByIdObjectParams = (params: [ApiHostGetHostSy
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostSystemProfileByIdParamCreator = async (...config: ([ApiHostGetHostSystemProfileByIdParams] | [Array<string>, number, number, ApiHostGetHostSystemProfileByIdOrderByEnum, string, string, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostSystemProfileByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostSystemProfileByIdParams] | [Array<string>, number, number, ApiHostGetHostSystemProfileByIdOrderByEnum, string, string, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
     const params = isApiHostGetHostSystemProfileByIdObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'branchId', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostSystemProfileByIdParams;
     const { hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/system_profile`
@@ -125,7 +125,7 @@ export const apiHostGetHostSystemProfileByIdParamCreator = async (...config: ([A
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -137,6 +137,8 @@ export const apiHostGetHostSystemProfileByIdParamCreator = async (...config: ([A
         }
         ]
     };
+
+    return sendRequest<ApiHostGetHostSystemProfileByIdReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGetHostSystemProfileByIdParamCreator;

@@ -99,12 +99,12 @@ export type ExportAdvisorySystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ExportAdvisorySystemsReturnType = AxiosPromise<Array<ControllersAdvisorySystemDBLookup>>;
+export type ExportAdvisorySystemsReturnType = Array<ControllersAdvisorySystemDBLookup>;
 
 const isExportAdvisorySystemsObjectParams = (params: [ExportAdvisorySystemsParams] | unknown[]): params is [ExportAdvisorySystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
   }
   return false
 }
@@ -115,7 +115,7 @@ const isExportAdvisorySystemsObjectParams = (params: [ExportAdvisorySystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportAdvisorySystemsParamCreator = async (...config: ([ExportAdvisorySystemsParams] | [string, string, string, string, string, Array<string>, boolean, Array<string>, string, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportAdvisorySystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportAdvisorySystemsParams] | [string, string, string, string, string, Array<string>, boolean, Array<string>, string, string, string, string, string, Array<string>, AxiosRequestConfig])) => {
     const params = isExportAdvisorySystemsObjectParams(config) ? config[0] : ['advisoryId', 'search', 'filterId', 'filterDisplayName', 'filterStale', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'filterOs', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportAdvisorySystemsParams;
     const { advisoryId, search, filterId, filterDisplayName, filterStale, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterOs, tags, options = {} } = params;
     const localVarPath = `/export/advisories/{advisory_id}/systems`
@@ -183,7 +183,7 @@ export const exportAdvisorySystemsParamCreator = async (...config: ([ExportAdvis
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -195,6 +195,8 @@ export const exportAdvisorySystemsParamCreator = async (...config: ([ExportAdvis
         }
         ]
     };
+
+    return sendRequest<ExportAdvisorySystemsReturnType>(Promise.resolve(args));
 }
 
 export default exportAdvisorySystemsParamCreator;

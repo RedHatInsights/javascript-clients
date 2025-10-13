@@ -21,7 +21,7 @@ export type EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1GetOrCreateEmailSubscriptionEndpointReturnType = AxiosPromise<Endpoint>;
+export type EndpointResourceV1GetOrCreateEmailSubscriptionEndpointReturnType = Endpoint;
 
 const isEndpointResourceV1GetOrCreateEmailSubscriptionEndpointObjectParams = (params: [EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams] | unknown[]): params is [EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isEndpointResourceV1GetOrCreateEmailSubscriptionEndpointObjectParams = (pa
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamCreator = async (...config: ([EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams] | [RequestSystemSubscriptionProperties, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams] | [RequestSystemSubscriptionProperties, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1GetOrCreateEmailSubscriptionEndpointObjectParams(config) ? config[0] : ['requestSystemSubscriptionProperties', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams;
     const { requestSystemSubscriptionProperties, options = {} } = params;
     const localVarPath = `/endpoints/system/email_subscription`;
@@ -54,11 +54,13 @@ export const endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamCreator 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: requestSystemSubscriptionProperties,
     };
+
+    return sendRequest<EndpointResourceV1GetOrCreateEmailSubscriptionEndpointReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamCreator;

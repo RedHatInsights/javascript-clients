@@ -21,7 +21,7 @@ export type NotificationResourceV1FindBehaviorGroupsByBundleIdParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1FindBehaviorGroupsByBundleIdReturnType = AxiosPromise<any>;
+export type NotificationResourceV1FindBehaviorGroupsByBundleIdReturnType = any;
 
 const isNotificationResourceV1FindBehaviorGroupsByBundleIdObjectParams = (params: [NotificationResourceV1FindBehaviorGroupsByBundleIdParams] | unknown[]): params is [NotificationResourceV1FindBehaviorGroupsByBundleIdParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isNotificationResourceV1FindBehaviorGroupsByBundleIdObjectParams = (params
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1FindBehaviorGroupsByBundleIdParamCreator = async (...config: ([NotificationResourceV1FindBehaviorGroupsByBundleIdParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1FindBehaviorGroupsByBundleIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1FindBehaviorGroupsByBundleIdParams] | [any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1FindBehaviorGroupsByBundleIdObjectParams(config) ? config[0] : ['bundleId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1FindBehaviorGroupsByBundleIdParams;
     const { bundleId, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleId}/behaviorGroups`
@@ -53,10 +53,12 @@ export const notificationResourceV1FindBehaviorGroupsByBundleIdParamCreator = as
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1FindBehaviorGroupsByBundleIdReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1FindBehaviorGroupsByBundleIdParamCreator;

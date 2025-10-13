@@ -63,12 +63,12 @@ export type PolicySystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type PolicySystemsReturnType = AxiosPromise<Systems200Response>;
+export type PolicySystemsReturnType = Systems200Response;
 
 const isPolicySystemsObjectParams = (params: [PolicySystemsParams] | unknown[]): params is [PolicySystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
   }
   return false
 }
@@ -79,7 +79,7 @@ const isPolicySystemsObjectParams = (params: [PolicySystemsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const policySystemsParamCreator = async (...config: ([PolicySystemsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const policySystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PolicySystemsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isPolicySystemsObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'tags', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PolicySystemsParams;
     const { policyId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/systems`
@@ -125,10 +125,12 @@ export const policySystemsParamCreator = async (...config: ([PolicySystemsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<PolicySystemsReturnType>(Promise.resolve(args));
 }
 
 export default policySystemsParamCreator;

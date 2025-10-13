@@ -21,12 +21,12 @@ export type ShowApplicationTypeParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowApplicationTypeReturnType = AxiosPromise<ApplicationType>;
+export type ShowApplicationTypeReturnType = ApplicationType;
 
 const isShowApplicationTypeObjectParams = (params: [ShowApplicationTypeParams] | unknown[]): params is [ShowApplicationTypeParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isShowApplicationTypeObjectParams = (params: [ShowApplicationTypeParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showApplicationTypeParamCreator = async (...config: ([ShowApplicationTypeParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showApplicationTypeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowApplicationTypeParams] | [string, AxiosRequestConfig])) => {
     const params = isShowApplicationTypeObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowApplicationTypeParams;
     const { id, options = {} } = params;
     const localVarPath = `/application_types/{id}`
@@ -53,7 +53,7 @@ export const showApplicationTypeParamCreator = async (...config: ([ShowApplicati
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showApplicationTypeParamCreator = async (...config: ([ShowApplicati
         }
         ]
     };
+
+    return sendRequest<ShowApplicationTypeReturnType>(Promise.resolve(args));
 }
 
 export default showApplicationTypeParamCreator;

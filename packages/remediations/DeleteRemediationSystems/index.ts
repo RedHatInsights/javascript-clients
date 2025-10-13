@@ -27,12 +27,12 @@ export type DeleteRemediationSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteRemediationSystemsReturnType = AxiosPromise<MultipleDelete>;
+export type DeleteRemediationSystemsReturnType = MultipleDelete;
 
 const isDeleteRemediationSystemsObjectParams = (params: [DeleteRemediationSystemsParams] | unknown[]): params is [DeleteRemediationSystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'systemsList')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'systemsList')
   }
   return false
 }
@@ -43,7 +43,7 @@ const isDeleteRemediationSystemsObjectParams = (params: [DeleteRemediationSystem
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRemediationSystemsParamCreator = async (...config: ([DeleteRemediationSystemsParams] | [string, SystemsList, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRemediationSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRemediationSystemsParams] | [string, SystemsList, AxiosRequestConfig])) => {
     const params = isDeleteRemediationSystemsObjectParams(config) ? config[0] : ['id', 'systemsList', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationSystemsParams;
     const { id, systemsList, options = {} } = params;
     const localVarPath = `/remediations/{id}/systems/{system}/issues`
@@ -61,11 +61,13 @@ export const deleteRemediationSystemsParamCreator = async (...config: ([DeleteRe
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: systemsList,
     };
+
+    return sendRequest<DeleteRemediationSystemsReturnType>(Promise.resolve(args));
 }
 
 export default deleteRemediationSystemsParamCreator;

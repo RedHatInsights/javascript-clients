@@ -15,7 +15,7 @@ export type StatusReadyRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type StatusReadyRetrieveReturnType = AxiosPromise<void>;
+export type StatusReadyRetrieveReturnType = void;
 
 const isStatusReadyRetrieveObjectParams = (params: [StatusReadyRetrieveParams] | unknown[]): params is [StatusReadyRetrieveParams] => {
   const l = params.length === 1
@@ -30,7 +30,7 @@ const isStatusReadyRetrieveObjectParams = (params: [StatusReadyRetrieveParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const statusReadyRetrieveParamCreator = async (...config: ([StatusReadyRetrieveParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const statusReadyRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([StatusReadyRetrieveParams] | [AxiosRequestConfig])) => {
     const params = isStatusReadyRetrieveObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as StatusReadyRetrieveParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/status/ready/`;
@@ -45,10 +45,12 @@ export const statusReadyRetrieveParamCreator = async (...config: ([StatusReadyRe
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<StatusReadyRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default statusReadyRetrieveParamCreator;

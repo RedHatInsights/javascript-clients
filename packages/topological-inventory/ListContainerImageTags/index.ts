@@ -45,7 +45,7 @@ export type ListContainerImageTagsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerImageTagsReturnType = AxiosPromise<TagsCollection>;
+export type ListContainerImageTagsReturnType = TagsCollection;
 
 const isListContainerImageTagsObjectParams = (params: [ListContainerImageTagsParams] | unknown[]): params is [ListContainerImageTagsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListContainerImageTagsObjectParams = (params: [ListContainerImageTagsPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerImageTagsParamCreator = async (...config: ([ListContainerImageTagsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerImageTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerImageTagsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerImageTagsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerImageTagsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_images/{id}/tags`
@@ -93,7 +93,7 @@ export const listContainerImageTagsParamCreator = async (...config: ([ListContai
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listContainerImageTagsParamCreator = async (...config: ([ListContai
         }
         ]
     };
+
+    return sendRequest<ListContainerImageTagsReturnType>(Promise.resolve(args));
 }
 
 export default listContainerImageTagsParamCreator;

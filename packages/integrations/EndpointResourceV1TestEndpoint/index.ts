@@ -27,7 +27,7 @@ export type EndpointResourceV1TestEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1TestEndpointReturnType = AxiosPromise<void>;
+export type EndpointResourceV1TestEndpointReturnType = void;
 
 const isEndpointResourceV1TestEndpointObjectParams = (params: [EndpointResourceV1TestEndpointParams] | unknown[]): params is [EndpointResourceV1TestEndpointParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isEndpointResourceV1TestEndpointObjectParams = (params: [EndpointResourceV
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1TestEndpointParamCreator = async (...config: ([EndpointResourceV1TestEndpointParams] | [any, EndpointTestRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1TestEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1TestEndpointParams] | [any, EndpointTestRequest, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1TestEndpointObjectParams(config) ? config[0] : ['uuid', 'endpointTestRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1TestEndpointParams;
     const { uuid, endpointTestRequest, options = {} } = params;
     const localVarPath = `/endpoints/{uuid}/test`
@@ -61,11 +61,13 @@ export const endpointResourceV1TestEndpointParamCreator = async (...config: ([En
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: endpointTestRequest,
     };
+
+    return sendRequest<EndpointResourceV1TestEndpointReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1TestEndpointParamCreator;

@@ -21,7 +21,7 @@ export type OrgConfigResourceV1SaveDailyDigestTimePreferenceParams = {
   options?: AxiosRequestConfig
 }
 
-export type OrgConfigResourceV1SaveDailyDigestTimePreferenceReturnType = AxiosPromise<void>;
+export type OrgConfigResourceV1SaveDailyDigestTimePreferenceReturnType = void;
 
 const isOrgConfigResourceV1SaveDailyDigestTimePreferenceObjectParams = (params: [OrgConfigResourceV1SaveDailyDigestTimePreferenceParams] | unknown[]): params is [OrgConfigResourceV1SaveDailyDigestTimePreferenceParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isOrgConfigResourceV1SaveDailyDigestTimePreferenceObjectParams = (params: 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator = async (...config: ([OrgConfigResourceV1SaveDailyDigestTimePreferenceParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([OrgConfigResourceV1SaveDailyDigestTimePreferenceParams] | [any, AxiosRequestConfig])) => {
     const params = isOrgConfigResourceV1SaveDailyDigestTimePreferenceObjectParams(config) ? config[0] : ['body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as OrgConfigResourceV1SaveDailyDigestTimePreferenceParams;
     const { body, options = {} } = params;
     const localVarPath = `/org-config/daily-digest/time-preference`;
@@ -54,11 +54,13 @@ export const orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator = asyn
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
     };
+
+    return sendRequest<OrgConfigResourceV1SaveDailyDigestTimePreferenceReturnType>(Promise.resolve(args));
 }
 
 export default orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator;

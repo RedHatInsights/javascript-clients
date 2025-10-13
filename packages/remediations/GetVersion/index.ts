@@ -15,7 +15,7 @@ export type GetVersionParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetVersionReturnType = AxiosPromise<GetVersion200Response>;
+export type GetVersionReturnType = GetVersion200Response;
 
 const isGetVersionObjectParams = (params: [GetVersionParams] | unknown[]): params is [GetVersionParams] => {
   const l = params.length === 1
@@ -31,7 +31,7 @@ const isGetVersionObjectParams = (params: [GetVersionParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getVersionParamCreator = async (...config: ([GetVersionParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getVersionParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetVersionParams] | [AxiosRequestConfig])) => {
     const params = isGetVersionObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetVersionParams;
     const { options = {} } = params;
     const localVarPath = `/version`;
@@ -46,10 +46,12 @@ export const getVersionParamCreator = async (...config: ([GetVersionParams] | [A
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetVersionReturnType>(Promise.resolve(args));
 }
 
 export default getVersionParamCreator;

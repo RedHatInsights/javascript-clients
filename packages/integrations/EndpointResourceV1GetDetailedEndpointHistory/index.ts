@@ -27,7 +27,7 @@ export type EndpointResourceV1GetDetailedEndpointHistoryParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1GetDetailedEndpointHistoryReturnType = AxiosPromise<any>;
+export type EndpointResourceV1GetDetailedEndpointHistoryReturnType = any;
 
 const isEndpointResourceV1GetDetailedEndpointHistoryObjectParams = (params: [EndpointResourceV1GetDetailedEndpointHistoryParams] | unknown[]): params is [EndpointResourceV1GetDetailedEndpointHistoryParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isEndpointResourceV1GetDetailedEndpointHistoryObjectParams = (params: [End
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1GetDetailedEndpointHistoryParamCreator = async (...config: ([EndpointResourceV1GetDetailedEndpointHistoryParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1GetDetailedEndpointHistoryParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1GetDetailedEndpointHistoryParams] | [any, any, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1GetDetailedEndpointHistoryObjectParams(config) ? config[0] : ['historyId', 'id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1GetDetailedEndpointHistoryParams;
     const { historyId, id, options = {} } = params;
     const localVarPath = `/endpoints/{id}/history/{history_id}/details`
@@ -60,10 +60,12 @@ export const endpointResourceV1GetDetailedEndpointHistoryParamCreator = async (.
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<EndpointResourceV1GetDetailedEndpointHistoryReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1GetDetailedEndpointHistoryParamCreator;

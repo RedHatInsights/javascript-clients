@@ -21,7 +21,7 @@ export type EndpointResourceV1DeleteEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1DeleteEndpointReturnType = AxiosPromise<void>;
+export type EndpointResourceV1DeleteEndpointReturnType = void;
 
 const isEndpointResourceV1DeleteEndpointObjectParams = (params: [EndpointResourceV1DeleteEndpointParams] | unknown[]): params is [EndpointResourceV1DeleteEndpointParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isEndpointResourceV1DeleteEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1DeleteEndpointParamCreator = async (...config: ([EndpointResourceV1DeleteEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1DeleteEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV1DeleteEndpointParams] | [any, AxiosRequestConfig])) => {
     const params = isEndpointResourceV1DeleteEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1DeleteEndpointParams;
     const { id, options = {} } = params;
     const localVarPath = `/endpoints/{id}`
@@ -53,10 +53,12 @@ export const endpointResourceV1DeleteEndpointParamCreator = async (...config: ([
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<EndpointResourceV1DeleteEndpointReturnType>(Promise.resolve(args));
 }
 
 export default endpointResourceV1DeleteEndpointParamCreator;

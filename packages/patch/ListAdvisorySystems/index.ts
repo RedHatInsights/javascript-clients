@@ -158,12 +158,12 @@ export const ListAdvisorySystemsSortEnum = {
 } as const;
 export type ListAdvisorySystemsSortEnum = typeof ListAdvisorySystemsSortEnum[keyof typeof ListAdvisorySystemsSortEnum];
 
-export type ListAdvisorySystemsReturnType = AxiosPromise<ControllersAdvisorySystemsResponse>;
+export type ListAdvisorySystemsReturnType = ControllersAdvisorySystemsResponse;
 
 const isListAdvisorySystemsObjectParams = (params: [ListAdvisorySystemsParams] | unknown[]): params is [ListAdvisorySystemsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
   }
   return false
 }
@@ -174,7 +174,7 @@ const isListAdvisorySystemsObjectParams = (params: [ListAdvisorySystemsParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listAdvisorySystemsParamCreator = async (...config: ([ListAdvisorySystemsParams] | [string, number, number, ListAdvisorySystemsSortEnum, string, string, string, string, string, string, string, boolean, boolean, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listAdvisorySystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAdvisorySystemsParams] | [string, number, number, ListAdvisorySystemsSortEnum, string, string, string, string, string, string, string, boolean, boolean, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isListAdvisorySystemsObjectParams(config) ? config[0] : ['advisoryId', 'limit', 'offset', 'sort', 'search', 'filterId', 'filterDisplayName', 'filterStale', 'filterStatus', 'filterTemplate', 'filterOs', 'filterSatelliteManaged', 'filterBuiltPkgcache', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAdvisorySystemsParams;
     const { advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterStale, filterStatus, filterTemplate, filterOs, filterSatelliteManaged, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/advisories/{advisory_id}/systems`
@@ -270,7 +270,7 @@ export const listAdvisorySystemsParamCreator = async (...config: ([ListAdvisoryS
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -282,6 +282,8 @@ export const listAdvisorySystemsParamCreator = async (...config: ([ListAdvisoryS
         }
         ]
     };
+
+    return sendRequest<ListAdvisorySystemsReturnType>(Promise.resolve(args));
 }
 
 export default listAdvisorySystemsParamCreator;

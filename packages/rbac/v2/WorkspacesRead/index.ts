@@ -27,7 +27,7 @@ export type WorkspacesReadParams = {
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesReadReturnType = AxiosPromise<WorkspacesRead200Response>;
+export type WorkspacesReadReturnType = WorkspacesRead200Response;
 
 const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]): params is [WorkspacesReadParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesReadParamCreator = async (...config: ([WorkspacesReadParams] | [string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const workspacesReadParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesReadParams] | [string, boolean, AxiosRequestConfig])) => {
     const params = isWorkspacesReadObjectParams(config) ? config[0] : ['id', 'includeAncestry', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesReadParams;
     const { id, includeAncestry, options = {} } = params;
     const localVarPath = `/workspaces/{id}/`
@@ -63,10 +63,12 @@ export const workspacesReadParamCreator = async (...config: ([WorkspacesReadPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<WorkspacesReadReturnType>(Promise.resolve(args));
 }
 
 export default workspacesReadParamCreator;

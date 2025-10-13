@@ -21,12 +21,12 @@ export type QuickstartsIdGetParams = {
   options?: AxiosRequestConfig
 }
 
-export type QuickstartsIdGetReturnType = AxiosPromise<Quickstart>;
+export type QuickstartsIdGetReturnType = Quickstart;
 
 const isQuickstartsIdGetObjectParams = (params: [QuickstartsIdGetParams] | unknown[]): params is [QuickstartsIdGetParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
   }
   return false
 }
@@ -37,7 +37,7 @@ const isQuickstartsIdGetObjectParams = (params: [QuickstartsIdGetParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const quickstartsIdGetParamCreator = async (...config: ([QuickstartsIdGetParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const quickstartsIdGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([QuickstartsIdGetParams] | [number, AxiosRequestConfig])) => {
     const params = isQuickstartsIdGetObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as QuickstartsIdGetParams;
     const { id, options = {} } = params;
     const localVarPath = `/quickstarts/{id}`
@@ -53,10 +53,12 @@ export const quickstartsIdGetParamCreator = async (...config: ([QuickstartsIdGet
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<QuickstartsIdGetReturnType>(Promise.resolve(args));
 }
 
 export default quickstartsIdGetParamCreator;

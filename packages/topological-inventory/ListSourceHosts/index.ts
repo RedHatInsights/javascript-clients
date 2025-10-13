@@ -45,7 +45,7 @@ export type ListSourceHostsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceHostsReturnType = AxiosPromise<HostsCollection>;
+export type ListSourceHostsReturnType = HostsCollection;
 
 const isListSourceHostsObjectParams = (params: [ListSourceHostsParams] | unknown[]): params is [ListSourceHostsParams] => {
   const l = params.length === 1
@@ -61,7 +61,7 @@ const isListSourceHostsObjectParams = (params: [ListSourceHostsParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceHostsParamCreator = async (...config: ([ListSourceHostsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceHostsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceHostsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceHostsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceHostsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/hosts`
@@ -93,7 +93,7 @@ export const listSourceHostsParamCreator = async (...config: ([ListSourceHostsPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -104,6 +104,8 @@ export const listSourceHostsParamCreator = async (...config: ([ListSourceHostsPa
         }
         ]
     };
+
+    return sendRequest<ListSourceHostsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceHostsParamCreator;

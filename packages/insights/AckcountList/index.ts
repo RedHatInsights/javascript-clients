@@ -27,7 +27,7 @@ export type AckcountListParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckcountListReturnType = AxiosPromise<PaginatedAckCountList>;
+export type AckcountListReturnType = PaginatedAckCountList;
 
 const isAckcountListObjectParams = (params: [AckcountListParams] | unknown[]): params is [AckcountListParams] => {
   const l = params.length === 1
@@ -42,7 +42,7 @@ const isAckcountListObjectParams = (params: [AckcountListParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackcountListParamCreator = async (...config: ([AckcountListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackcountListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckcountListParams] | [number, number, AxiosRequestConfig])) => {
     const params = isAckcountListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckcountListParams;
     const { limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/ackcount/`;
@@ -65,7 +65,7 @@ export const ackcountListParamCreator = async (...config: ([AckcountListParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -77,6 +77,8 @@ export const ackcountListParamCreator = async (...config: ([AckcountListParams] 
         }
         ]
     };
+
+    return sendRequest<AckcountListReturnType>(Promise.resolve(args));
 }
 
 export default ackcountListParamCreator;

@@ -21,7 +21,7 @@ export type ShowVolumeAttachmentParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowVolumeAttachmentReturnType = AxiosPromise<VolumeAttachment>;
+export type ShowVolumeAttachmentReturnType = VolumeAttachment;
 
 const isShowVolumeAttachmentObjectParams = (params: [ShowVolumeAttachmentParams] | unknown[]): params is [ShowVolumeAttachmentParams] => {
   const l = params.length === 1
@@ -37,7 +37,7 @@ const isShowVolumeAttachmentObjectParams = (params: [ShowVolumeAttachmentParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showVolumeAttachmentParamCreator = async (...config: ([ShowVolumeAttachmentParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showVolumeAttachmentParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowVolumeAttachmentParams] | [string, AxiosRequestConfig])) => {
     const params = isShowVolumeAttachmentObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowVolumeAttachmentParams;
     const { id, options = {} } = params;
     const localVarPath = `/volume_attachments/{id}`
@@ -53,7 +53,7 @@ export const showVolumeAttachmentParamCreator = async (...config: ([ShowVolumeAt
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +64,8 @@ export const showVolumeAttachmentParamCreator = async (...config: ([ShowVolumeAt
         }
         ]
     };
+
+    return sendRequest<ShowVolumeAttachmentReturnType>(Promise.resolve(args));
 }
 
 export default showVolumeAttachmentParamCreator;

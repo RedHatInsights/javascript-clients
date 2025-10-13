@@ -27,7 +27,7 @@ export type NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1DeleteBehaviorGroupFromEventTypeReturnType = AxiosPromise<void>;
+export type NotificationResourceV1DeleteBehaviorGroupFromEventTypeReturnType = void;
 
 const isNotificationResourceV1DeleteBehaviorGroupFromEventTypeObjectParams = (params: [NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams] | unknown[]): params is [NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isNotificationResourceV1DeleteBehaviorGroupFromEventTypeObjectParams = (pa
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1DeleteBehaviorGroupFromEventTypeParamCreator = async (...config: ([NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1DeleteBehaviorGroupFromEventTypeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams] | [any, any, AxiosRequestConfig])) => {
     const params = isNotificationResourceV1DeleteBehaviorGroupFromEventTypeObjectParams(config) ? config[0] : ['behaviorGroupId', 'eventTypeId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams;
     const { behaviorGroupId, eventTypeId, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeId}/behaviorGroups/{behaviorGroupId}`
@@ -60,10 +60,12 @@ export const notificationResourceV1DeleteBehaviorGroupFromEventTypeParamCreator 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<NotificationResourceV1DeleteBehaviorGroupFromEventTypeReturnType>(Promise.resolve(args));
 }
 
 export default notificationResourceV1DeleteBehaviorGroupFromEventTypeParamCreator;

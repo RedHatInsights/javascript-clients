@@ -27,7 +27,7 @@ export type UpdateGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateGroupReturnType = AxiosPromise<GroupOut>;
+export type UpdateGroupReturnType = GroupOut;
 
 const isUpdateGroupObjectParams = (params: [UpdateGroupParams] | unknown[]): params is [UpdateGroupParams] => {
   const l = params.length === 1
@@ -43,7 +43,7 @@ const isUpdateGroupObjectParams = (params: [UpdateGroupParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateGroupParamCreator = async (...config: ([UpdateGroupParams] | [string, Group, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateGroupParams] | [string, Group, AxiosRequestConfig])) => {
     const params = isUpdateGroupObjectParams(config) ? config[0] : ['uuid', 'group', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateGroupParams;
     const { uuid, group, options = {} } = params;
     const localVarPath = `/groups/{uuid}/`
@@ -61,7 +61,7 @@ export const updateGroupParamCreator = async (...config: ([UpdateGroupParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: group,
@@ -73,6 +73,8 @@ export const updateGroupParamCreator = async (...config: ([UpdateGroupParams] | 
         }
         ]
     };
+
+    return sendRequest<UpdateGroupReturnType>(Promise.resolve(args));
 }
 
 export default updateGroupParamCreator;
