@@ -1,31 +1,36 @@
 import styled from '@emotion/styled';
 import {APIFactory} from '@redhat-cloud-services/javascript-clients-shared'
 import {getPrincipalAccess} from '@redhat-cloud-services/rbac-client'
-import {apiTagGetTags, apiHostMergeFacts} from '@redhat-cloud-services/host-inventory-client'
-import { Route, Routes, Link } from 'react-router-dom';
+import {apiTagGetTags, apiHostMergeFacts, apiHostHostCheckin} from '@redhat-cloud-services/host-inventory-client'
 import { useEffect } from 'react';
+import axios from 'axios';
 
 const StyledApp = styled.div`
 `;
 
-const RbacClient = APIFactory({
+const RbacClient = APIFactory('http://localhost:3000', {
   getPrincipalAccess,
   apiTagGetTags,
-  apiHostMergeFacts
+  apiHostMergeFacts,
+  apiHostHostCheckin
+}, {
+  axios: axios.create()
 })
+
 
 export function App() {
   useEffect(() => {
-    
-        RbacClient.getPrincipalAccess({ application: 'my-app', limit: 5 })
-        // RbacClient.getPrincipalAccess('my-app', '2', 'application', 'enabled', 5, 0)
-        // @ts-ignore
-        RbacClient.apiTagGetTags('foo', 'tag')
-        RbacClient.apiHostMergeFacts({
-          body: { foo: 'bar' },
-          hostIdList: ['123', '456'],
-          namespace: 'my-namespace'
-        })
+        const f = async() => {
+          const d = await RbacClient.getPrincipalAccess({ application: 'my-app', limit: 5 })
+          const foo = await RbacClient.apiHostHostCheckin({
+            createCheckIn: {
+              bios_uuid: '1234',
+              insights_id: '5678'
+            }
+          })
+          
+        }
+        f()
   }, []);
   return (
     <StyledApp>
