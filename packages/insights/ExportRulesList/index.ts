@@ -178,7 +178,11 @@ export type ExportRulesListUpdateMethodEnum = typeof ExportRulesListUpdateMethod
 export type ExportRulesListReturnType = AxiosPromise<Array<RuleExport>>;
 
 const isExportRulesListObjectParams = (params: [ExportRulesListParams] | unknown[]): params is [ExportRulesListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.

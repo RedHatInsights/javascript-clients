@@ -24,10 +24,15 @@ export type HostackRetrieveParams = {
 export type HostackRetrieveReturnType = AxiosPromise<HostAck>;
 
 const isHostackRetrieveObjectParams = (params: [HostackRetrieveParams] | unknown[]): params is [HostackRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
-* HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  This view handles listing, retrieving, creating and deleting hostacks.
+*          Display who disabled a rule on a system, when, and their justification         for disabling it.  Host acks are selected by their ID number.
+* @summary Display a specific acknowledgement (disabling) of a rule on a system
 * @param {HostackRetrieveParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

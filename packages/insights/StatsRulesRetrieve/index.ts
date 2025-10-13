@@ -42,7 +42,11 @@ export type StatsRulesRetrieveParams = {
 export type StatsRulesRetrieveReturnType = AxiosPromise<Stats>;
 
 const isStatsRulesRetrieveObjectParams = (params: [StatsRulesRetrieveParams] | unknown[]): params is [StatsRulesRetrieveParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show statistics of rule usage across categories and risks.  Only current reports are considered.

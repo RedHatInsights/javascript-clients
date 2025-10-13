@@ -30,7 +30,11 @@ export type RatingListParams = {
 export type RatingListReturnType = AxiosPromise<PaginatedRuleRatingList>;
 
 const isRatingListObjectParams = (params: [RatingListParams] | unknown[]): params is [RatingListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List all rules rated by the current user  Only the current user\'s ratings are listed here.

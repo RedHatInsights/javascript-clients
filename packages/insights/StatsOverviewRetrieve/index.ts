@@ -42,7 +42,11 @@ export type StatsOverviewRetrieveParams = {
 export type StatsOverviewRetrieveReturnType = AxiosPromise<Stats>;
 
 const isStatsOverviewRetrieveObjectParams = (params: [StatsOverviewRetrieveParams] | unknown[]): params is [StatsOverviewRetrieveParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show overview statistics for this user  This gives the number of pathways, and incident, critical and important recommendations, affecting systems that the user can see.

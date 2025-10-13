@@ -72,7 +72,11 @@ export type ApiHostGetHostByIdOrderByEnum = typeof ApiHostGetHostByIdOrderByEnum
 export type ApiHostGetHostByIdReturnType = AxiosPromise<HostQueryOutput>;
 
 const isApiHostGetHostByIdObjectParams = (params: [ApiHostGetHostByIdParams] | unknown[]): params is [ApiHostGetHostByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read

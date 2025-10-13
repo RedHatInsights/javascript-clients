@@ -140,7 +140,11 @@ export type ListGroupsOrderByEnum = typeof ListGroupsOrderByEnum[keyof typeof Li
 export type ListGroupsReturnType = AxiosPromise<GroupPagination>;
 
 const isListGroupsObjectParams = (params: [ListGroupsParams] | unknown[]): params is [ListGroupsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by group name

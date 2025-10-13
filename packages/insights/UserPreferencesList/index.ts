@@ -18,7 +18,11 @@ export type UserPreferencesListParams = {
 export type UserPreferencesListReturnType = AxiosPromise<Array<SettingsDDF>>;
 
 const isUserPreferencesListObjectParams = (params: [UserPreferencesListParams] | unknown[]): params is [UserPreferencesListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.

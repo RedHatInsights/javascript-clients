@@ -85,7 +85,11 @@ export type ListTemplateSystemsIdsSortEnum = typeof ListTemplateSystemsIdsSortEn
 export type ListTemplateSystemsIdsReturnType = AxiosPromise<ControllersIDsPlainResponse>;
 
 const isListTemplateSystemsIdsObjectParams = (params: [ListTemplateSystemsIdsParams] | unknown[]): params is [ListTemplateSystemsIdsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'templateId') && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'templateId')
+  }
+  return false
 }
 /**
 * Show me all systems applicable to a template

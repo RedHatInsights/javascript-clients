@@ -24,7 +24,11 @@ export type ApiHostHostCheckinParams = {
 export type ApiHostHostCheckinReturnType = AxiosPromise<HostOut>;
 
 const isApiHostHostCheckinObjectParams = (params: [ApiHostHostCheckinParams] | unknown[]): params is [ApiHostHostCheckinParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'createCheckIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'createCheckIn')
+  }
+  return false
 }
 /**
 * Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write

@@ -24,7 +24,11 @@ export type AutosubexclusionCreateParams = {
 export type AutosubexclusionCreateReturnType = AxiosPromise<SubscriptionExcludedAccount>;
 
 const isAutosubexclusionCreateObjectParams = (params: [AutosubexclusionCreateParams] | unknown[]): params is [AutosubexclusionCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'subscriptionExcludedAccount')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'subscriptionExcludedAccount')
+  }
+  return false
 }
 /**
 * Create a new subscription exclusion for an account.  This creates a new subscription exclusion for an account. This should contain an org_id and account. Only org_id is required. Account is optional.

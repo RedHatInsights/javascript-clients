@@ -135,7 +135,11 @@ export type ListRolesAddFieldsEnum = typeof ListRolesAddFieldsEnum[keyof typeof 
 export type ListRolesReturnType = AxiosPromise<RolePaginationDynamic>;
 
 const isListRolesObjectParams = (params: [ListRolesParams] | unknown[]): params is [ListRolesParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by role name

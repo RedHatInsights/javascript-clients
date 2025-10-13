@@ -18,7 +18,11 @@ export type GetVersionParams = {
 export type GetVersionReturnType = AxiosPromise<GetVersion200Response>;
 
 const isGetVersionObjectParams = (params: [GetVersionParams] | unknown[]): params is [GetVersionParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Provides information about the version of the service

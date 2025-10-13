@@ -30,7 +30,11 @@ export type SecurityGuidesOSParams = {
 export type SecurityGuidesOSReturnType = AxiosPromise<any>;
 
 const isSecurityGuidesOSObjectParams = (params: [SecurityGuidesOSParams] | unknown[]): params is [SecurityGuidesOSParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * This feature is exclusively used by the frontend

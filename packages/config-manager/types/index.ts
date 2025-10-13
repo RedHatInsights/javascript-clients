@@ -32,43 +32,6 @@ export interface CreateProfileRequest {
 /**
  *
  * @export
- * @interface GetProfiles200Response
- */
-export interface GetProfiles200Response {
-    /**
-     *
-     * @type {number}
-     * @memberof GetProfiles200Response
-     */
-    'total': number;
-    /**
-     *
-     * @type {number}
-     * @memberof GetProfiles200Response
-     */
-    'count': number;
-    /**
-     *
-     * @type {number}
-     * @memberof GetProfiles200Response
-     */
-    'limit': number;
-    /**
-     *
-     * @type {number}
-     * @memberof GetProfiles200Response
-     */
-    'offset': number;
-    /**
-     *
-     * @type {Array<Profile>}
-     * @memberof GetProfiles200Response
-     */
-    'results': Array<Profile>;
-}
-/**
- *
- * @export
  * @interface Profile
  */
 export interface Profile {

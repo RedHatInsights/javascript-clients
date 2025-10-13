@@ -30,7 +30,11 @@ export type RatingAllRatingsListParams = {
 export type RatingAllRatingsListReturnType = AxiosPromise<PaginatedAllRuleRatingsList>;
 
 const isRatingAllRatingsListObjectParams = (params: [RatingAllRatingsListParams] | unknown[]): params is [RatingAllRatingsListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show all ratings.  Available only to internal users.

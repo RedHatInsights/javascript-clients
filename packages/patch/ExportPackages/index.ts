@@ -72,7 +72,11 @@ export type ExportPackagesSortEnum = typeof ExportPackagesSortEnum[keyof typeof 
 export type ExportPackagesReturnType = AxiosPromise<Array<ControllersPackageItem>>;
 
 const isExportPackagesObjectParams = (params: [ExportPackagesParams] | unknown[]): params is [ExportPackagesParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show me all installed packages across my systems. Export endpoints are not paginated.

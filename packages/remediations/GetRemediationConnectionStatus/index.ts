@@ -24,7 +24,11 @@ export type GetRemediationConnectionStatusParams = {
 export type GetRemediationConnectionStatusReturnType = AxiosPromise<RemediationConnectionStatus>;
 
 const isGetRemediationConnectionStatusObjectParams = (params: [GetRemediationConnectionStatusParams] | unknown[]): params is [GetRemediationConnectionStatusParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc

@@ -24,7 +24,11 @@ export type DeleteEndpointParams = {
 export type DeleteEndpointReturnType = AxiosPromise<void>;
 
 const isDeleteEndpointObjectParams = (params: [DeleteEndpointParams] | unknown[]): params is [DeleteEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Deletes a Endpoint object

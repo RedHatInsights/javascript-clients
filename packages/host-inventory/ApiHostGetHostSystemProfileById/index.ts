@@ -72,7 +72,11 @@ export type ApiHostGetHostSystemProfileByIdOrderByEnum = typeof ApiHostGetHostSy
 export type ApiHostGetHostSystemProfileByIdReturnType = AxiosPromise<SystemProfileByHostOut>;
 
 const isApiHostGetHostSystemProfileByIdObjectParams = (params: [ApiHostGetHostSystemProfileByIdParams] | unknown[]): params is [ApiHostGetHostSystemProfileByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read

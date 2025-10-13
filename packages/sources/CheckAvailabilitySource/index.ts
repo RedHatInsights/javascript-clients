@@ -24,7 +24,11 @@ export type CheckAvailabilitySourceParams = {
 export type CheckAvailabilitySourceReturnType = AxiosPromise<void>;
 
 const isCheckAvailabilitySourceObjectParams = (params: [CheckAvailabilitySourceParams] | unknown[]): params is [CheckAvailabilitySourceParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Checks Availability of a Source

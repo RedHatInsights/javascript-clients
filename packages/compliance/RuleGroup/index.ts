@@ -36,10 +36,14 @@ export type RuleGroupParams = {
 export type RuleGroupReturnType = AxiosPromise<RuleGroup200Response>;
 
 const isRuleGroupObjectParams = (params: [RuleGroupParams] | unknown[]): params is [RuleGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'ruleGroupId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleGroupId')
+  }
+  return false
 }
 /**
-* Returns a Rule Group
+* Retrieve a specific rule group.
 * @summary Request a Rule Group
 * @param {RuleGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

@@ -30,7 +30,11 @@ export type RatingStatsListParams = {
 export type RatingStatsListReturnType = AxiosPromise<PaginatedRuleRatingStatsList>;
 
 const isRatingStatsListObjectParams = (params: [RatingStatsListParams] | unknown[]): params is [RatingStatsListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Summarise the ratings for a rule.  This summarises the statistics for each rule.  Available only to internal users.

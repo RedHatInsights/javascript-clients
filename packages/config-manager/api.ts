@@ -5,26 +5,20 @@ import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dis
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
     createProfile,CreateProfileReturnType,
-    getPlaybook,GetPlaybookReturnType,
     getProfile,GetProfileReturnType,
-    getProfiles,GetProfilesReturnType,
 
   } from './index';
 
 const endpointList = {
       createProfile,
-    getPlaybook,
     getProfile,
-    getProfiles,
 
 
 };
 
 type endpointReturnTypes = {
       createProfile: CreateProfileReturnType,
-    getPlaybook: GetPlaybookReturnType,
     getProfile: GetProfileReturnType,
-    getProfiles: GetProfilesReturnType,
 
 
 };

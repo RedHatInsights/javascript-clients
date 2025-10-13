@@ -42,7 +42,11 @@ export type ListApplicationTypesParams = {
 export type ListApplicationTypesReturnType = AxiosPromise<ApplicationTypesCollection>;
 
 const isListApplicationTypesObjectParams = (params: [ListApplicationTypesParams] | unknown[]): params is [ListApplicationTypesParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of ApplicationType objects

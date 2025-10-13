@@ -60,7 +60,11 @@ export type ApiHostGetHostTagCountOrderByEnum = typeof ApiHostGetHostTagCountOrd
 export type ApiHostGetHostTagCountReturnType = AxiosPromise<TagCountOut>;
 
 const isApiHostGetHostTagCountObjectParams = (params: [ApiHostGetHostTagCountParams] | unknown[]): params is [ApiHostGetHostTagCountParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read

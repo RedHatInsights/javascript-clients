@@ -24,7 +24,11 @@ export type HostackCreateParams = {
 export type HostackCreateReturnType = AxiosPromise<HostAck>;
 
 const isHostackCreateObjectParams = (params: [HostackCreateParams] | unknown[]): params is [HostackCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostAckInput')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostAckInput')
+  }
+  return false
 }
 /**
 * Add an acknowledgement for a rule, by rule ID, system, and account.  Return the new hostack.  If there\'s already an acknowledgement of this rule by this account for a system, then return that.  This does not take an \'id\' number.

@@ -89,7 +89,11 @@ export type ListRolesForGroupOrderByEnum = typeof ListRolesForGroupOrderByEnum[k
 export type ListRolesForGroupReturnType = AxiosPromise<GroupRolesPagination>;
 
 const isListRolesForGroupObjectParams = (params: [ListRolesForGroupParams] | unknown[]): params is [ListRolesForGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by role name

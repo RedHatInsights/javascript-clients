@@ -24,7 +24,11 @@ export type ApiHostDeleteAllHostsParams = {
 export type ApiHostDeleteAllHostsReturnType = AxiosPromise<void>;
 
 const isApiHostDeleteAllHostsObjectParams = (params: [ApiHostDeleteAllHostsParams] | unknown[]): params is [ApiHostDeleteAllHostsParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write

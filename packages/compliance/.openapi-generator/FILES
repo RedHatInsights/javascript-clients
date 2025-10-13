@@ -37,6 +37,7 @@ SecurityGuide/index.ts
 SecurityGuideRuleTree/index.ts
 SecurityGuides/index.ts
 SecurityGuidesOS/index.ts
+Status/index.ts
 SupportedProfiles/index.ts
 System/index.ts
 SystemReports/index.ts
@@ -44,7 +45,8 @@ Systems/index.ts
 SystemsOS/index.ts
 SystemsPolicies/index.ts
 Tailoring/index.ts
-TailoringFile/index.ts
+TailoringFileJSON/index.ts
+TailoringFileTOML/index.ts
 TailoringRuleTree/index.ts
 TailoringRules/index.ts
 Tailorings/index.ts

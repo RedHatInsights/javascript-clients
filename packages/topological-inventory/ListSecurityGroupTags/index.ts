@@ -48,7 +48,11 @@ export type ListSecurityGroupTagsParams = {
 export type ListSecurityGroupTagsReturnType = AxiosPromise<TagsCollection>;
 
 const isListSecurityGroupTagsObjectParams = (params: [ListSecurityGroupTagsParams] | unknown[]): params is [ListSecurityGroupTagsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Tag objects

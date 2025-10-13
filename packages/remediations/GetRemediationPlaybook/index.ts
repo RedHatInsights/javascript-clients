@@ -42,7 +42,11 @@ export type GetRemediationPlaybookParams = {
 export type GetRemediationPlaybookReturnType = AxiosPromise<string>;
 
 const isGetRemediationPlaybookObjectParams = (params: [GetRemediationPlaybookParams] | unknown[]): params is [GetRemediationPlaybookParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Provides Ansible Playbook, RBAC permission {remediations:remediation:read}

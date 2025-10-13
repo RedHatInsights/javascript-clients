@@ -18,7 +18,11 @@ export type StatsListParams = {
 export type StatsListReturnType = AxiosPromise<Array<Array<string>>>;
 
 const isStatsListObjectParams = (params: [StatsListParams] | unknown[]): params is [StatsListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Provide a simple list of URLs contained here.  A list of statistics views.

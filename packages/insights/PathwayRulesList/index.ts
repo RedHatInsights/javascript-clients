@@ -59,7 +59,11 @@ export type PathwayRulesListCategoryEnum = typeof PathwayRulesListCategoryEnum[k
 export type PathwayRulesListReturnType = AxiosPromise<PaginatedRuleForAccountList>;
 
 const isPathwayRulesListObjectParams = (params: [PathwayRulesListParams] | unknown[]): params is [PathwayRulesListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug

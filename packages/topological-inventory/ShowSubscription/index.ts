@@ -24,7 +24,11 @@ export type ShowSubscriptionParams = {
 export type ShowSubscriptionReturnType = AxiosPromise<Subscription>;
 
 const isShowSubscriptionObjectParams = (params: [ShowSubscriptionParams] | unknown[]): params is [ShowSubscriptionParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a Subscription object

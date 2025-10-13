@@ -18,7 +18,11 @@ export type ApiStalenessGetDefaultStalenessParams = {
 export type ApiStalenessGetDefaultStalenessReturnType = AxiosPromise<StalenessOutput>;
 
 const isApiStalenessGetDefaultStalenessObjectParams = (params: [ApiStalenessGetDefaultStalenessParams] | unknown[]): params is [ApiStalenessGetDefaultStalenessParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read

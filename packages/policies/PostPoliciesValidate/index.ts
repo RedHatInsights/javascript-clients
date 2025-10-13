@@ -17,14 +17,18 @@ export type PostPoliciesValidateParams = {
   * @type { Policy }
   * @memberof PostPoliciesValidateApi
   */
-  policy?: Policy,
+  policy: Policy,
   options?: AxiosRequestConfig
 }
 
 export type PostPoliciesValidateReturnType = AxiosPromise<Msg>;
 
 const isPostPoliciesValidateObjectParams = (params: [PostPoliciesValidateParams] | unknown[]): params is [PostPoliciesValidateParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policy')
+  }
+  return false
 }
 /**
 *

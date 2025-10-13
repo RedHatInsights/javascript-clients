@@ -45,7 +45,11 @@ export type ListSystemTagsSortEnum = typeof ListSystemTagsSortEnum[keyof typeof 
 export type ListSystemTagsReturnType = AxiosPromise<ControllersSystemTagsResponse>;
 
 const isListSystemTagsObjectParams = (params: [ListSystemTagsParams] | unknown[]): params is [ListSystemTagsParams] => {
-  return params.length === 1 && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show me systems tags applicable to this application

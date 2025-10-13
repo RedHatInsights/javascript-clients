@@ -68,10 +68,10 @@ export type ListTemplateSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ListTemplateSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -128,7 +128,11 @@ export type ListTemplateSystemsSortEnum = typeof ListTemplateSystemsSortEnum[key
 export type ListTemplateSystemsReturnType = AxiosPromise<ControllersTemplateSystemsResponse>;
 
 const isListTemplateSystemsObjectParams = (params: [ListTemplateSystemsParams] | unknown[]): params is [ListTemplateSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'templateId') && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'templateId')
+  }
+  return false
 }
 /**
 * Show me all systems applicable to a template
@@ -137,7 +141,7 @@ const isListTemplateSystemsObjectParams = (params: [ListTemplateSystemsParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTemplateSystemsParamCreator = async (...config: ([ListTemplateSystemsParams] | [string, number, number, ListTemplateSystemsSortEnum, string, string, string, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTemplateSystemsParamCreator = async (...config: ([ListTemplateSystemsParams] | [string, number, number, ListTemplateSystemsSortEnum, string, string, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isListTemplateSystemsObjectParams(config) ? config[0] : ['templateId', 'limit', 'offset', 'sort', 'search', 'filterDisplayName', 'filterOs', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTemplateSystemsParams;
     const { templateId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/templates/{template_id}/systems`

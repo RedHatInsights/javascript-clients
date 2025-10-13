@@ -24,7 +24,11 @@ export type SystemYumUpdatesParams = {
 export type SystemYumUpdatesReturnType = AxiosPromise<ControllersSystemYumUpdatesResponse>;
 
 const isSystemYumUpdatesObjectParams = (params: [SystemYumUpdatesParams] | unknown[]): params is [SystemYumUpdatesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'inventoryId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+  }
+  return false
 }
 /**
 * Show me system\'s yum_updates (client side evaluation data)

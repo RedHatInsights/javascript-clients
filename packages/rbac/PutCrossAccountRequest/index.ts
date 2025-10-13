@@ -30,7 +30,11 @@ export type PutCrossAccountRequestParams = {
 export type PutCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
 
 const isPutCrossAccountRequestObjectParams = (params: [PutCrossAccountRequestParams] | unknown[]): params is [PutCrossAccountRequestParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestUpdateIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'crossAccountRequestUpdateIn')
+  }
+  return false
 }
 /**
 * For TAM requestor to update the start_date/end_date/roles of an existing cross account request.

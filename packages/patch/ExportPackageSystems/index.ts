@@ -26,10 +26,10 @@ export type ExportPackageSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ExportPackageSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -72,7 +72,11 @@ export type ExportPackageSystemsParams = {
 export type ExportPackageSystemsReturnType = AxiosPromise<Array<ControllersPackageSystemItem>>;
 
 const isExportPackageSystemsObjectParams = (params: [ExportPackageSystemsParams] | unknown[]): params is [ExportPackageSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'packageName') && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'packageName')
+  }
+  return false
 }
 /**
 * Show me all my systems which have a package installed. Export endpoints are not paginated.
@@ -81,7 +85,7 @@ const isExportPackageSystemsObjectParams = (params: [ExportPackageSystemsParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportPackageSystemsParamCreator = async (...config: ([ExportPackageSystemsParams] | [string, Array<string>, string, Array<string>, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportPackageSystemsParamCreator = async (...config: ([ExportPackageSystemsParams] | [string, Array<string>, boolean, Array<string>, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isExportPackageSystemsObjectParams(config) ? config[0] : ['packageName', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportPackageSystemsParams;
     const { packageName, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, tags, options = {} } = params;
     const localVarPath = `/export/packages/{package_name}/systems`

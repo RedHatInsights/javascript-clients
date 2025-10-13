@@ -36,7 +36,11 @@ export type DeleteRemediationIssueSystemParams = {
 export type DeleteRemediationIssueSystemReturnType = AxiosPromise<void>;
 
 const isDeleteRemediationIssueSystemObjectParams = (params: [DeleteRemediationIssueSystemParams] | unknown[]): params is [DeleteRemediationIssueSystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'issue') && Object.prototype.hasOwnProperty.call(params, 'system')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue') && Object.prototype.hasOwnProperty.call(params[0], 'system')
+  }
+  return false
 }
 /**
 * Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}

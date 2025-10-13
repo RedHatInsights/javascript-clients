@@ -24,7 +24,11 @@ export type PostGraphQLParams = {
 export type PostGraphQLReturnType = AxiosPromise<GraphQLResponse>;
 
 const isPostGraphQLObjectParams = (params: [PostGraphQLParams] | unknown[]): params is [PostGraphQLParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'graphQLRequest')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'graphQLRequest')
+  }
+  return false
 }
 /**
 * Performs a GraphQL Query

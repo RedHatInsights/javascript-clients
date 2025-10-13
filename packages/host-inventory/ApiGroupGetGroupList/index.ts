@@ -74,7 +74,11 @@ export type ApiGroupGetGroupListGroupTypeEnum = typeof ApiGroupGetGroupListGroup
 export type ApiGroupGetGroupListReturnType = AxiosPromise<GroupQueryOutput>;
 
 const isApiGroupGetGroupListObjectParams = (params: [ApiGroupGetGroupListParams] | unknown[]): params is [ApiGroupGetGroupListParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read

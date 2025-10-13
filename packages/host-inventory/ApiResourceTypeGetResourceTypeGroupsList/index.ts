@@ -36,7 +36,11 @@ export type ApiResourceTypeGetResourceTypeGroupsListParams = {
 export type ApiResourceTypeGetResourceTypeGroupsListReturnType = AxiosPromise<ResourceTypesGroupsQueryOutput>;
 
 const isApiResourceTypeGetResourceTypeGroupsListObjectParams = (params: [ApiResourceTypeGetResourceTypeGroupsListParams] | unknown[]): params is [ApiResourceTypeGetResourceTypeGroupsListParams] => {
-  return params.length === 1 && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*

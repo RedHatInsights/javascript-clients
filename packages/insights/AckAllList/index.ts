@@ -18,7 +18,11 @@ export type AckAllListParams = {
 export type AckAllListReturnType = AxiosPromise<Array<AllAck>>;
 
 const isAckAllListObjectParams = (params: [AckAllListParams] | unknown[]): params is [AckAllListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List acks from all accounts, with org_id.  Has no pagination.

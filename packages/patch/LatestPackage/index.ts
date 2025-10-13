@@ -24,7 +24,11 @@ export type LatestPackageParams = {
 export type LatestPackageReturnType = AxiosPromise<ControllersPackageDetailResponse>;
 
 const isLatestPackageObjectParams = (params: [LatestPackageParams] | unknown[]): params is [LatestPackageParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'packageName')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'packageName')
+  }
+  return false
 }
 /**
 * Show me metadata of selected package

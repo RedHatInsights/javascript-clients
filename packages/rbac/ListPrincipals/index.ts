@@ -153,7 +153,11 @@ export type ListPrincipalsTypeEnum = typeof ListPrincipalsTypeEnum[keyof typeof 
 export type ListPrincipalsReturnType = AxiosPromise<ListPrincipals200Response>;
 
 const isListPrincipalsObjectParams = (params: [ListPrincipalsParams] | unknown[]): params is [ListPrincipalsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by username

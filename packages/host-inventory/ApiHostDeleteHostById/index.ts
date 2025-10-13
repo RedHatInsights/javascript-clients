@@ -30,7 +30,11 @@ export type ApiHostDeleteHostByIdParams = {
 export type ApiHostDeleteHostByIdReturnType = AxiosPromise<void>;
 
 const isApiHostDeleteHostByIdObjectParams = (params: [ApiHostDeleteHostByIdParams] | unknown[]): params is [ApiHostDeleteHostByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write

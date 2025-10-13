@@ -24,7 +24,11 @@ export type SystemtypeRetrieveParams = {
 export type SystemtypeRetrieveReturnType = AxiosPromise<SystemType>;
 
 const isSystemtypeRetrieveObjectParams = (params: [SystemtypeRetrieveParams] | unknown[]): params is [SystemtypeRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Retrieve details of a single system type

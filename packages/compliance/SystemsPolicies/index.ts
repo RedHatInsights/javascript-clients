@@ -60,10 +60,14 @@ export type SystemsPoliciesParams = {
 export type SystemsPoliciesReturnType = AxiosPromise<Policies200Response>;
 
 const isSystemsPoliciesObjectParams = (params: [SystemsPoliciesParams] | unknown[]): params is [SystemsPoliciesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'systemId')
+  }
+  return false
 }
 /**
-* Lists Policies under a System
+* List all policies assigned to a single system.
 * @summary Request Policies assigned to a System
 * @param {SystemsPoliciesParams} config with all available params.
 * @param {*} [options] Override http request option.

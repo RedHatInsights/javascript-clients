@@ -97,7 +97,11 @@ export type ExportSystemsListUpdateMethodEnum = typeof ExportSystemsListUpdateMe
 export type ExportSystemsListReturnType = AxiosPromise<Array<System>>;
 
 const isExportSystemsListObjectParams = (params: [ExportSystemsListParams] | unknown[]): params is [ExportSystemsListParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.

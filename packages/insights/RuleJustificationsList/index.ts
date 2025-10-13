@@ -36,7 +36,11 @@ export type RuleJustificationsListParams = {
 export type RuleJustificationsListReturnType = AxiosPromise<PaginatedJustificationCountList>;
 
 const isRuleJustificationsListObjectParams = (params: [RuleJustificationsListParams] | unknown[]): params is [RuleJustificationsListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.

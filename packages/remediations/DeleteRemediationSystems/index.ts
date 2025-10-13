@@ -30,7 +30,11 @@ export type DeleteRemediationSystemsParams = {
 export type DeleteRemediationSystemsReturnType = AxiosPromise<MultipleDelete>;
 
 const isDeleteRemediationSystemsObjectParams = (params: [DeleteRemediationSystemsParams] | unknown[]): params is [DeleteRemediationSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'systemsList')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'systemsList')
+  }
+  return false
 }
 /**
 * Removes the given list of systems from the specified remediation plan.  Request is rejected if indicated remediation plan is not found.  Duplicate or missing system IDs are ignored.
@@ -42,7 +46,7 @@ const isDeleteRemediationSystemsObjectParams = (params: [DeleteRemediationSystem
 export const deleteRemediationSystemsParamCreator = async (...config: ([DeleteRemediationSystemsParams] | [string, SystemsList, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isDeleteRemediationSystemsObjectParams(config) ? config[0] : ['id', 'systemsList', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationSystemsParams;
     const { id, systemsList, options = {} } = params;
-    const localVarPath = `/remediations/{id}/systems`
+    const localVarPath = `/remediations/{id}/systems/{system}/issues`
         .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

@@ -24,7 +24,11 @@ export type DeletesystemParams = {
 export type DeletesystemReturnType = AxiosPromise<void>;
 
 const isDeletesystemObjectParams = (params: [DeletesystemParams] | unknown[]): params is [DeletesystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'inventoryId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+  }
+  return false
 }
 /**
 * Delete system by inventory id

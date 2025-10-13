@@ -14,6 +14,8 @@ export { default as deleteRemediationIssueSystem, DeleteRemediationIssueSystemRe
 
 export { default as deleteRemediationIssues, DeleteRemediationIssuesReturnType } from './DeleteRemediationIssues'
 
+export { default as deleteRemediationSystem, DeleteRemediationSystemReturnType } from './DeleteRemediationSystem'
+
 export { default as deleteRemediationSystems, DeleteRemediationSystemsReturnType } from './DeleteRemediationSystems'
 
 export { default as deleteRemediations, DeleteRemediationsReturnType } from './DeleteRemediations'
@@ -39,6 +41,8 @@ export { default as getRemediationIssueSystems, GetRemediationIssueSystemsReturn
 export { default as getRemediationIssues, GetRemediationIssuesReturnType } from './GetRemediationIssues'
 
 export { default as getRemediationPlaybook, GetRemediationPlaybookReturnType } from './GetRemediationPlaybook'
+
+export { default as getRemediationSystemIssues, GetRemediationSystemIssuesReturnType } from './GetRemediationSystemIssues'
 
 export { default as getRemediationSystems, GetRemediationSystemsReturnType } from './GetRemediationSystems'
 

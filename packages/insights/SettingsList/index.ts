@@ -18,7 +18,11 @@ export type SettingsListParams = {
 export type SettingsListReturnType = AxiosPromise<Array<SettingsDDF>>;
 
 const isSettingsListObjectParams = (params: [SettingsListParams] | unknown[]): params is [SettingsListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.

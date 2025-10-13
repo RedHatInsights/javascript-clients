@@ -24,7 +24,11 @@ export type SystemVmaasJsonParams = {
 export type SystemVmaasJsonReturnType = AxiosPromise<ControllersSystemVmaasJSONResponse>;
 
 const isSystemVmaasJsonObjectParams = (params: [SystemVmaasJsonParams] | unknown[]): params is [SystemVmaasJsonParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'inventoryId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+  }
+  return false
 }
 /**
 * Show me system\'s json request for VMaaS

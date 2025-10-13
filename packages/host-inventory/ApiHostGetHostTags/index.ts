@@ -66,7 +66,11 @@ export type ApiHostGetHostTagsOrderByEnum = typeof ApiHostGetHostTagsOrderByEnum
 export type ApiHostGetHostTagsReturnType = AxiosPromise<TagsOut>;
 
 const isApiHostGetHostTagsObjectParams = (params: [ApiHostGetHostTagsParams] | unknown[]): params is [ApiHostGetHostTagsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read

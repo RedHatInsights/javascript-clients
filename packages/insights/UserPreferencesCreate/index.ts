@@ -24,7 +24,11 @@ export type UserPreferencesCreateParams = {
 export type UserPreferencesCreateReturnType = AxiosPromise<PreferencesInput>;
 
 const isUserPreferencesCreateObjectParams = (params: [UserPreferencesCreateParams] | unknown[]): params is [UserPreferencesCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'preferencesInput')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'preferencesInput')
+  }
+  return false
 }
 /**
 * Accept the settings as input, and adjust the actual models accordingly.  The current account settings will be updated, or one will be created, with the

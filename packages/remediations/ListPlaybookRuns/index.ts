@@ -51,7 +51,11 @@ export type ListPlaybookRunsSortEnum = typeof ListPlaybookRunsSortEnum[keyof typ
 export type ListPlaybookRunsReturnType = AxiosPromise<PlaybookRunsList>;
 
 const isListPlaybookRunsObjectParams = (params: [ListPlaybookRunsParams] | unknown[]): params is [ListPlaybookRunsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * List of executions of this remediation

@@ -24,7 +24,11 @@ export type KcsListParams = {
 export type KcsListReturnType = AxiosPromise<Array<Kcs>>;
 
 const isKcsListObjectParams = (params: [KcsListParams] | unknown[]): params is [KcsListParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Looks for all active rules with KCS solutions  Returns a list of dicts of the C.R.C rule URL and its KCS solution number

@@ -130,6 +130,8 @@ export type SystemListHitsEnum = typeof SystemListHitsEnum[keyof typeof SystemLi
   */
 export const SystemListRhelVersionEnum = {
     _100: '10.0',
+    _101: '10.1',
+    _102: '10.2',
     _60: '6.0',
     _61: '6.1',
     _610: '6.10',
@@ -169,7 +171,9 @@ export const SystemListRhelVersionEnum = {
     _93: '9.3',
     _94: '9.4',
     _95: '9.5',
-    _96: '9.6'
+    _96: '9.6',
+    _97: '9.7',
+    _98: '9.8'
 } as const;
 export type SystemListRhelVersionEnum = typeof SystemListRhelVersionEnum[keyof typeof SystemListRhelVersionEnum];
 /**
@@ -210,7 +214,11 @@ export type SystemListUpdateMethodEnum = typeof SystemListUpdateMethodEnum[keyof
 export type SystemListReturnType = AxiosPromise<PaginatedSystemList>;
 
 const isSystemListObjectParams = (params: [SystemListParams] | unknown[]): params is [SystemListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits

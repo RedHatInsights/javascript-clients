@@ -60,10 +60,14 @@ export type HostackListParams = {
 export type HostackListReturnType = AxiosPromise<PaginatedHostAckList>;
 
 const isHostackListObjectParams = (params: [HostackListParams] | unknown[]): params is [HostackListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* List host acks from this account for a system where the rule is active.  Hostacks are retrieved, edited and deleted by the \'id\' field.
+* HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  Hostacks are retrieved, edited and deleted by the \'id\' field.
 * @param {HostackListParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

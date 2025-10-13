@@ -24,7 +24,11 @@ export type GetResolutionsForIssuesParams = {
 export type GetResolutionsForIssuesReturnType = AxiosPromise<{ [key: string]: ResolutionsBatchValue; }>;
 
 const isGetResolutionsForIssuesObjectParams = (params: [GetResolutionsForIssuesParams] | unknown[]): params is [GetResolutionsForIssuesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'resolutionsBatchInput')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'resolutionsBatchInput')
+  }
+  return false
 }
 /**
 * Provides information about resolutions available for the given issues

@@ -80,7 +80,11 @@ export type PathwayReportsRetrieveUpdateMethodEnum = typeof PathwayReportsRetrie
 export type PathwayReportsRetrieveReturnType = AxiosPromise<RuleSystemsExport>;
 
 const isPathwayReportsRetrieveObjectParams = (params: [PathwayReportsRetrieveParams] | unknown[]): params is [PathwayReportsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.

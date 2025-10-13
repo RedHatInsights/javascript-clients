@@ -30,7 +30,11 @@ export type PatchCrossAccountRequestParams = {
 export type PatchCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
 
 const isPatchCrossAccountRequestObjectParams = (params: [PatchCrossAccountRequestParams] | unknown[]): params is [PatchCrossAccountRequestParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestPatch')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'crossAccountRequestPatch')
+  }
+  return false
 }
 /**
 * Patch the start_date/end_date/roles of an existing request. Could be used by TAM requestor to cancel request or target account admin to approve/deny request.

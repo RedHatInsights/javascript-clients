@@ -24,7 +24,11 @@ export type ApiGroupCreateGroupParams = {
 export type ApiGroupCreateGroupReturnType = AxiosPromise<GroupOutWithHostCount>;
 
 const isApiGroupCreateGroupObjectParams = (params: [ApiGroupCreateGroupParams] | unknown[]): params is [ApiGroupCreateGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'groupIn')
+  }
+  return false
 }
 /**
 * Creates a new group containing the hosts associated with the host IDs provided. <br /><br /> Required permissions: inventory:groups:write

@@ -30,7 +30,11 @@ export type WorkspacesMoveParams = {
 export type WorkspacesMoveReturnType = AxiosPromise<WorkspacesMoveWorkspaceResponse>;
 
 const isWorkspacesMoveObjectParams = (params: [WorkspacesMoveParams] | unknown[]): params is [WorkspacesMoveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'workspacesMoveWorkspaceRequest')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'workspacesMoveWorkspaceRequest')
+  }
+  return false
 }
 /**
 * Move a workspace to a new parent.

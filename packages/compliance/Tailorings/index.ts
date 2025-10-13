@@ -60,10 +60,14 @@ export type TailoringsParams = {
 export type TailoringsReturnType = AxiosPromise<Tailorings200Response>;
 
 const isTailoringsObjectParams = (params: [TailoringsParams] | unknown[]): params is [TailoringsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+  }
+  return false
 }
 /**
-* Lists Tailorings
+* Retrieve a list of all tailorings.
 * @summary Request Tailorings
 * @param {TailoringsParams} config with all available params.
 * @param {*} [options] Override http request option.

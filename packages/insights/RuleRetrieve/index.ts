@@ -36,7 +36,11 @@ export type RuleRetrieveParams = {
 export type RuleRetrieveReturnType = AxiosPromise<RuleForAccount>;
 
 const isRuleRetrieveObjectParams = (params: [RuleRetrieveParams] | unknown[]): params is [RuleRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.

@@ -18,7 +18,11 @@ export type GetDocumentationParams = {
 export type GetDocumentationReturnType = AxiosPromise<object>;
 
 const isGetDocumentationObjectParams = (params: [GetDocumentationParams] | unknown[]): params is [GetDocumentationParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 *

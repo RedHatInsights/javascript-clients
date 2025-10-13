@@ -30,7 +30,11 @@ export type RunRemediationParams = {
 export type RunRemediationReturnType = AxiosPromise<ExecuteRemediation>;
 
 const isRunRemediationObjectParams = (params: [RunRemediationParams] | unknown[]): params is [RunRemediationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Execute remediation, RBAC permission {remediations:remediation:execute}

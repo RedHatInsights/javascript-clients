@@ -42,7 +42,11 @@ export type ListSourcesParams = {
 export type ListSourcesReturnType = AxiosPromise<SourcesCollection>;
 
 const isListSourcesObjectParams = (params: [ListSourcesParams] | unknown[]): params is [ListSourcesParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Source objects

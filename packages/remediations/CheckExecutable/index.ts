@@ -24,7 +24,11 @@ export type CheckExecutableParams = {
 export type CheckExecutableReturnType = AxiosPromise<void>;
 
 const isCheckExecutableObjectParams = (params: [CheckExecutableParams] | unknown[]): params is [CheckExecutableParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Checks remediation for the existence of smart_managment flaged systems

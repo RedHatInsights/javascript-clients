@@ -126,7 +126,11 @@ export type PathwayListSortEnum = typeof PathwayListSortEnum[keyof typeof Pathwa
 export type PathwayListReturnType = AxiosPromise<PaginatedPathwayList>;
 
 const isPathwayListObjectParams = (params: [PathwayListParams] | unknown[]): params is [PathwayListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.

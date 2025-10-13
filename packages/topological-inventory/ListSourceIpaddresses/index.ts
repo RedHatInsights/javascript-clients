@@ -48,7 +48,11 @@ export type ListSourceIpaddressesParams = {
 export type ListSourceIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
 
 const isListSourceIpaddressesObjectParams = (params: [ListSourceIpaddressesParams] | unknown[]): params is [ListSourceIpaddressesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Ipaddress objects

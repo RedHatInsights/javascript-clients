@@ -30,7 +30,11 @@ export type DeleteRemediationIssuesParams = {
 export type DeleteRemediationIssuesReturnType = AxiosPromise<MultipleDelete>;
 
 const isDeleteRemediationIssuesObjectParams = (params: [DeleteRemediationIssuesParams] | unknown[]): params is [DeleteRemediationIssuesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'issuesList')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issuesList')
+  }
+  return false
 }
 /**
 * Removes the given list of issues from the specified remediation plan.  Requests containing missing remediation plan ID are rejected.  Duplicate or missing issue IDs are ignored.

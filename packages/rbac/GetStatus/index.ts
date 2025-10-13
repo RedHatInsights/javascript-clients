@@ -18,7 +18,11 @@ export type GetStatusParams = {
 export type GetStatusReturnType = AxiosPromise<Status>;
 
 const isGetStatusObjectParams = (params: [GetStatusParams] | unknown[]): params is [GetStatusParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 *

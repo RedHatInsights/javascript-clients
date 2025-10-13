@@ -24,7 +24,11 @@ export type CreateCrossAccountRequestsParams = {
 export type CreateCrossAccountRequestsReturnType = AxiosPromise<CrossAccountRequestOut>;
 
 const isCreateCrossAccountRequestsObjectParams = (params: [CreateCrossAccountRequestsParams] | unknown[]): params is [CreateCrossAccountRequestsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'crossAccountRequestIn')
+  }
+  return false
 }
 /**
 *

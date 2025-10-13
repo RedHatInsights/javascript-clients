@@ -17,14 +17,18 @@ export type DeletePoliciesIdsParams = {
   * @type { Array<string> }
   * @memberof DeletePoliciesIdsApi
   */
-  requestBody?: Array<string>,
+  requestBody: Array<string>,
   options?: AxiosRequestConfig
 }
 
 export type DeletePoliciesIdsReturnType = AxiosPromise<Array<string>>;
 
 const isDeletePoliciesIdsObjectParams = (params: [DeletePoliciesIdsParams] | unknown[]): params is [DeletePoliciesIdsParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'requestBody')
+  }
+  return false
 }
 /**
 *

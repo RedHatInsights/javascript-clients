@@ -30,10 +30,14 @@ export type CreatePolicyParams = {
 export type CreatePolicyReturnType = AxiosPromise<CreatePolicy201Response>;
 
 const isCreatePolicyObjectParams = (params: [CreatePolicyParams] | unknown[]): params is [CreatePolicyParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* Create a Policy with the provided attributes
+* Create a new security policy.
 * @summary Create a Policy
 * @param {CreatePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.

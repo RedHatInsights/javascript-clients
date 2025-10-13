@@ -124,7 +124,11 @@ export type GetPoliciesFilterIsEnabledEnum = typeof GetPoliciesFilterIsEnabledEn
 export type GetPoliciesReturnType = AxiosPromise<PagedResponseOfPolicy>;
 
 const isGetPoliciesObjectParams = (params: [GetPoliciesParams] | unknown[]): params is [GetPoliciesParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 *

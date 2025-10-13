@@ -54,10 +54,14 @@ export type SecurityGuidesParams = {
 export type SecurityGuidesReturnType = AxiosPromise<SecurityGuides200Response>;
 
 const isSecurityGuidesObjectParams = (params: [SecurityGuidesParams] | unknown[]): params is [SecurityGuidesParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* Lists Security Guides
+* Retrieve a list of all SCAP security guides.
 * @summary Request Security Guides
 * @param {SecurityGuidesParams} config with all available params.
 * @param {*} [options] Override http request option.

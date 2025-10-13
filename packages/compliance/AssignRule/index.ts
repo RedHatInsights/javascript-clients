@@ -42,10 +42,14 @@ export type AssignRuleParams = {
 export type AssignRuleReturnType = AxiosPromise<void>;
 
 const isAssignRuleObjectParams = (params: [AssignRuleParams] | unknown[]): params is [AssignRuleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
-* Assigns a Rule to a Tailoring
+* Add a rule to a specific tailoring.
 * @summary Assign a Rule to a Tailoring
 * @param {AssignRuleParams} config with all available params.
 * @param {*} [options] Override http request option.

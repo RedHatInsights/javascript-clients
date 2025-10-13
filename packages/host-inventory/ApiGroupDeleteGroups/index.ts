@@ -24,7 +24,11 @@ export type ApiGroupDeleteGroupsParams = {
 export type ApiGroupDeleteGroupsReturnType = AxiosPromise<void>;
 
 const isApiGroupDeleteGroupsObjectParams = (params: [ApiGroupDeleteGroupsParams] | unknown[]): params is [ApiGroupDeleteGroupsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupIdList')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'groupIdList')
+  }
+  return false
 }
 /**
 * Delete a list of groups. <br /><br /> Required permissions: inventory:groups:write

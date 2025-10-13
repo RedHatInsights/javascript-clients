@@ -8,17 +8,33 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { AckCount } from '../types';
+import type { PaginatedAckCountList } from '../types';
 
 
 export type AckcountListParams = {
+  /**
+  * Number of results to return per page.
+  * @type { number }
+  * @memberof AckcountListApi
+  */
+  limit?: number,
+  /**
+  * The initial index from which to return the results.
+  * @type { number }
+  * @memberof AckcountListApi
+  */
+  offset?: number,
   options?: AxiosRequestConfig
 }
 
-export type AckcountListReturnType = AxiosPromise<Array<AckCount>>;
+export type AckcountListReturnType = AxiosPromise<PaginatedAckCountList>;
 
 const isAckcountListObjectParams = (params: [AckcountListParams] | unknown[]): params is [AckcountListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Get the ack counts for all active rules  Return a list of rule_ids and their ack counts
@@ -26,15 +42,23 @@ const isAckcountListObjectParams = (params: [AckcountListParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackcountListParamCreator = async (...config: ([AckcountListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isAckcountListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckcountListParams;
-    const { options = {} } = params;
+export const ackcountListParamCreator = async (...config: ([AckcountListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isAckcountListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckcountListParams;
+    const { limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/ackcount/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
+
+    if (limit !== undefined) {
+        localVarQueryParameter['limit'] = limit;
+    }
+
+    if (offset !== undefined) {
+        localVarQueryParameter['offset'] = offset;
+    }
 
 
 

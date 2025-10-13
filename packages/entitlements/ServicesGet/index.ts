@@ -18,7 +18,11 @@ export type ServicesGetParams = {
 export type ServicesGetReturnType = AxiosPromise<{ [key: string]: ServiceDetails; }>;
 
 const isServicesGetObjectParams = (params: [ServicesGetParams] | unknown[]): params is [ServicesGetParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 *

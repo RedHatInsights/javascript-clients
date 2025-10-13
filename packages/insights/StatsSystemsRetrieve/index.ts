@@ -42,7 +42,11 @@ export type StatsSystemsRetrieveParams = {
 export type StatsSystemsRetrieveReturnType = AxiosPromise<Stats>;
 
 const isStatsSystemsRetrieveObjectParams = (params: [StatsSystemsRetrieveParams] | unknown[]): params is [StatsSystemsRetrieveParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show statistics of systems being impacted across categories and risks.  Only current reports are considered.

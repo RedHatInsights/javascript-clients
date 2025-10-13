@@ -30,7 +30,11 @@ export type AutosubexclusionListParams = {
 export type AutosubexclusionListReturnType = AxiosPromise<PaginatedSubscriptionExcludedAccountList>;
 
 const isAutosubexclusionListObjectParams = (params: [AutosubexclusionListParams] | unknown[]): params is [AutosubexclusionListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns all subscription exclusions for accounts  This returns a list of all subscription exclusions. This contains exclusions and their account and org_id. These are all accounts that are excluded from the autosub subscription path for weekly report subscriptions.

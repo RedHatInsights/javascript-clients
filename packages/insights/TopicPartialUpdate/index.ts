@@ -30,7 +30,11 @@ export type TopicPartialUpdateParams = {
 export type TopicPartialUpdateReturnType = AxiosPromise<TopicEdit>;
 
 const isTopicPartialUpdateObjectParams = (params: [TopicPartialUpdateParams] | unknown[]): params is [TopicPartialUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * Update an existing rule topic.  Only the fields being changed need to be supplied

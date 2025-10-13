@@ -24,10 +24,15 @@ export type AckRetrieveParams = {
 export type AckRetrieveReturnType = AxiosPromise<Ack>;
 
 const isAckRetrieveObjectParams = (params: [AckRetrieveParams] | unknown[]): params is [AckRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
-* Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
+*          Display who disabled a rule in this account, when, and their         justification for disabling it.
+* @summary Display a specific acknowledgement (disabling) of a rule
 * @param {AckRetrieveParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

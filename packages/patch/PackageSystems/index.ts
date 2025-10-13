@@ -44,10 +44,10 @@ export type PackageSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof PackageSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -96,7 +96,11 @@ export type PackageSystemsParams = {
 export type PackageSystemsReturnType = AxiosPromise<ControllersPackageSystemsResponse>;
 
 const isPackageSystemsObjectParams = (params: [PackageSystemsParams] | unknown[]): params is [PackageSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'packageName') && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'packageName')
+  }
+  return false
 }
 /**
 * Show me all my systems which have a package installed
@@ -105,7 +109,7 @@ const isPackageSystemsObjectParams = (params: [PackageSystemsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const packageSystemsParamCreator = async (...config: ([PackageSystemsParams] | [string, number, number, Array<string>, Array<string>, string, Array<string>, string, string, string, string, string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const packageSystemsParamCreator = async (...config: ([PackageSystemsParams] | [string, number, number, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isPackageSystemsObjectParams(config) ? config[0] : ['packageName', 'limit', 'offset', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'filterSatelliteManaged', 'filterUpdatable', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PackageSystemsParams;
     const { packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, filterUpdatable, options = {} } = params;
     const localVarPath = `/packages/{package_name}/systems`

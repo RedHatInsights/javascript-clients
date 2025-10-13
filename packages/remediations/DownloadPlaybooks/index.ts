@@ -24,7 +24,11 @@ export type DownloadPlaybooksParams = {
 export type DownloadPlaybooksReturnType = AxiosPromise<File>;
 
 const isDownloadPlaybooksObjectParams = (params: [DownloadPlaybooksParams] | unknown[]): params is [DownloadPlaybooksParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}

@@ -42,7 +42,11 @@ export type ListServiceOfferingIconsParams = {
 export type ListServiceOfferingIconsReturnType = AxiosPromise<ServiceOfferingIconsCollection>;
 
 const isListServiceOfferingIconsObjectParams = (params: [ListServiceOfferingIconsParams] | unknown[]): params is [ListServiceOfferingIconsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of ServiceOfferingIcon objects

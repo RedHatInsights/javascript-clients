@@ -18,7 +18,11 @@ export type SystemtypeListParams = {
 export type SystemtypeListReturnType = AxiosPromise<Array<SystemType>>;
 
 const isSystemtypeListObjectParams = (params: [SystemtypeListParams] | unknown[]): params is [SystemtypeListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List all system types by role and product code

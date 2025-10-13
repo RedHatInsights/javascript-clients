@@ -55,7 +55,7 @@ export type TailoringRulesParams = {
   */
   sortBy?: any,
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rules are searchable using attributes `title`, `severity`, `remediation_available`, and `rule_group_id`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rules are searchable using attributes `title`, `severity`, `remediation_available`, `rule_group_id`, and `identifier_label`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof TailoringRulesApi
   */
@@ -66,10 +66,14 @@ export type TailoringRulesParams = {
 export type TailoringRulesReturnType = AxiosPromise<Rules200Response>;
 
 const isTailoringRulesObjectParams = (params: [TailoringRulesParams] | unknown[]): params is [TailoringRulesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
+  }
+  return false
 }
 /**
-* Lists Rules assigned to a Tailoring
+* Retrieve a list of rules relating to specific tailorings.
 * @summary Request Rules assigned to a Tailoring
 * @param {TailoringRulesParams} config with all available params.
 * @param {*} [options] Override http request option.

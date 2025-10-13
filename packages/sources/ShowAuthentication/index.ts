@@ -24,7 +24,11 @@ export type ShowAuthenticationParams = {
 export type ShowAuthenticationReturnType = AxiosPromise<Authentication>;
 
 const isShowAuthenticationObjectParams = (params: [ShowAuthenticationParams] | unknown[]): params is [ShowAuthenticationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a Authentication object

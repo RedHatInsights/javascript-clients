@@ -30,7 +30,11 @@ export type AckUpdateParams = {
 export type AckUpdateReturnType = AxiosPromise<Ack>;
 
 const isAckUpdateObjectParams = (params: [AckUpdateParams] | unknown[]): params is [AckUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.

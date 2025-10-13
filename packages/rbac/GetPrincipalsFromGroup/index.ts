@@ -102,7 +102,11 @@ export type GetPrincipalsFromGroupPrincipalTypeEnum = typeof GetPrincipalsFromGr
 export type GetPrincipalsFromGroupReturnType = AxiosPromise<GetPrincipalsFromGroup200Response>;
 
 const isGetPrincipalsFromGroupObjectParams = (params: [GetPrincipalsFromGroupParams] | unknown[]): params is [GetPrincipalsFromGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by username

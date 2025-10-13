@@ -36,10 +36,14 @@ export type ValueDefinitionParams = {
 export type ValueDefinitionReturnType = AxiosPromise<ValueDefinition200Response>;
 
 const isValueDefinitionObjectParams = (params: [ValueDefinitionParams] | unknown[]): params is [ValueDefinitionParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'valueDefinitionId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'valueDefinitionId')
+  }
+  return false
 }
 /**
-* Returns a Value Definition
+* Retrieve a specific value definition.
 * @summary Request a Value Definition
 * @param {ValueDefinitionParams} config with all available params.
 * @param {*} [options] Override http request option.

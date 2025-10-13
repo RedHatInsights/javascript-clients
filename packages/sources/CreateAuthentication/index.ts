@@ -24,7 +24,11 @@ export type CreateAuthenticationParams = {
 export type CreateAuthenticationReturnType = AxiosPromise<Authentication>;
 
 const isCreateAuthenticationObjectParams = (params: [CreateAuthenticationParams] | unknown[]): params is [CreateAuthenticationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'authentication')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'authentication')
+  }
+  return false
 }
 /**
 * Creates a Authentication object

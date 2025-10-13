@@ -75,7 +75,11 @@ export type SystemReportsListUpdateMethodEnum = typeof SystemReportsListUpdateMe
 export type SystemReportsListReturnType = AxiosPromise<Array<Report>>;
 
 const isSystemReportsListObjectParams = (params: [SystemReportsListParams] | unknown[]): params is [SystemReportsListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
+  }
+  return false
 }
 /**
 * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.

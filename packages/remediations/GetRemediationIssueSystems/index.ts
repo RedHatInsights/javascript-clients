@@ -57,7 +57,11 @@ export type GetRemediationIssueSystemsSortEnum = typeof GetRemediationIssueSyste
 export type GetRemediationIssueSystemsReturnType = AxiosPromise<RemediationIssueSystemList>;
 
 const isGetRemediationIssueSystemsObjectParams = (params: [GetRemediationIssueSystemsParams] | unknown[]): params is [GetRemediationIssueSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'issue') && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue')
+  }
+  return false
 }
 /**
 * Get a paginated list of systems from a given issue, RBAC permission {remediations:remediation:read}

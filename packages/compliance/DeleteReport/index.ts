@@ -30,10 +30,14 @@ export type DeleteReportParams = {
 export type DeleteReportReturnType = AxiosPromise<void>;
 
 const isDeleteReportObjectParams = (params: [DeleteReportParams] | unknown[]): params is [DeleteReportParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+  }
+  return false
 }
 /**
-* Deletes Report\'s test results
+* Delete test results for a specific report.
 * @summary Delete a Report results
 * @param {DeleteReportParams} config with all available params.
 * @param {*} [options] Override http request option.

@@ -193,7 +193,11 @@ export type ExportHitsListUpdateMethodEnum = typeof ExportHitsListUpdateMethodEn
 export type ExportHitsListReturnType = AxiosPromise<Array<ExportHits>>;
 
 const isExportHitsListObjectParams = (params: [ExportHitsListParams] | unknown[]): params is [ExportHitsListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Get each host and all rules currently affecting it.  We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.

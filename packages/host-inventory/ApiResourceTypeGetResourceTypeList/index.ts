@@ -30,7 +30,11 @@ export type ApiResourceTypeGetResourceTypeListParams = {
 export type ApiResourceTypeGetResourceTypeListReturnType = AxiosPromise<ResourceTypesQueryOutput>;
 
 const isApiResourceTypeGetResourceTypeListObjectParams = (params: [ApiResourceTypeGetResourceTypeListParams] | unknown[]): params is [ApiResourceTypeGetResourceTypeListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*

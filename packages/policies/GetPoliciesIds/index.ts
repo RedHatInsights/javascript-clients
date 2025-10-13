@@ -79,7 +79,11 @@ export type GetPoliciesIdsFilterIsEnabledEnum = typeof GetPoliciesIdsFilterIsEna
 export type GetPoliciesIdsReturnType = AxiosPromise<Array<string>>;
 
 const isGetPoliciesIdsObjectParams = (params: [GetPoliciesIdsParams] | unknown[]): params is [GetPoliciesIdsParams] => {
-  return params.length === 1 && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 *

@@ -12,13 +12,23 @@ import type { BadRequest, HelptopicsNameGet200Response, NotFound } from '../type
 
 
 export type HelptopicsNameGetParams = {
+  /**
+  * identifier
+  * @type { string }
+  * @memberof HelptopicsNameGetApi
+  */
+  name: string,
   options?: AxiosRequestConfig
 }
 
 export type HelptopicsNameGetReturnType = AxiosPromise<HelptopicsNameGet200Response>;
 
 const isHelptopicsNameGetObjectParams = (params: [HelptopicsNameGetParams] | unknown[]): params is [HelptopicsNameGetParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'name')
+  }
+  return false
 }
 /**
 *
@@ -27,10 +37,11 @@ const isHelptopicsNameGetObjectParams = (params: [HelptopicsNameGetParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const helptopicsNameGetParamCreator = async (...config: ([HelptopicsNameGetParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isHelptopicsNameGetObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HelptopicsNameGetParams;
-    const { options = {} } = params;
-    const localVarPath = `/helptopics/{name}`;
+export const helptopicsNameGetParamCreator = async (...config: ([HelptopicsNameGetParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isHelptopicsNameGetObjectParams(config) ? config[0] : ['name', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HelptopicsNameGetParams;
+    const { name, options = {} } = params;
+    const localVarPath = `/helptopics/{name}`
+        .replace(`{${"name"}}`, encodeURIComponent(String(name)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};

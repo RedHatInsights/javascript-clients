@@ -54,10 +54,14 @@ export type SupportedProfilesParams = {
 export type SupportedProfilesReturnType = AxiosPromise<SupportedProfiles200Response>;
 
 const isSupportedProfilesObjectParams = (params: [SupportedProfilesParams] | unknown[]): params is [SupportedProfilesParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* Lists Supported Profiles
+* Retrieve the list of profiles supported by particular RHEL versions.
 * @summary Request Supported Profiles
 * @param {SupportedProfilesParams} config with all available params.
 * @param {*} [options] Override http request option.

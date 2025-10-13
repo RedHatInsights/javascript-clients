@@ -58,7 +58,11 @@ export type ApiGroupGetGroupsByIdOrderByEnum = typeof ApiGroupGetGroupsByIdOrder
 export type ApiGroupGetGroupsByIdReturnType = AxiosPromise<GroupQueryOutput>;
 
 const isApiGroupGetGroupsByIdObjectParams = (params: [ApiGroupGetGroupsByIdParams] | unknown[]): params is [ApiGroupGetGroupsByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupIdList') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'groupIdList')
+  }
+  return false
 }
 /**
 * Find one or more groups by their IDs. <br /><br /> Required permissions: inventory:groups:read

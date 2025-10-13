@@ -108,7 +108,11 @@ export type ListCrossAccountRequestsOrderByEnum = typeof ListCrossAccountRequest
 export type ListCrossAccountRequestsReturnType = AxiosPromise<CrossAccountRequestPagination>;
 
 const isListCrossAccountRequestsObjectParams = (params: [ListCrossAccountRequestsParams] | unknown[]): params is [ListCrossAccountRequestsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by created_at

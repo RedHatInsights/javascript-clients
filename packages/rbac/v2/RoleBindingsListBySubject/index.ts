@@ -72,7 +72,11 @@ export type RoleBindingsListBySubjectParams = {
 export type RoleBindingsListBySubjectReturnType = AxiosPromise<RoleBindingsRoleBindingBySubjectListResponse>;
 
 const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubjectParams] | unknown[]): params is [RoleBindingsListBySubjectParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'resourceId') && Object.prototype.hasOwnProperty.call(params, 'resourceType') && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'resourceId') && Object.prototype.hasOwnProperty.call(params[0], 'resourceType')
+  }
+  return false
 }
 /**
 * List role bindings grouped by subject

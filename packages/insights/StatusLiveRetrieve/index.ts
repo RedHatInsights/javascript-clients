@@ -18,7 +18,11 @@ export type StatusLiveRetrieveParams = {
 export type StatusLiveRetrieveReturnType = AxiosPromise<void>;
 
 const isStatusLiveRetrieveObjectParams = (params: [StatusLiveRetrieveParams] | unknown[]): params is [StatusLiveRetrieveParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Is the Advisor API live and serving requests?  This returns a dictionary with properties defining the status of the components Advisor relies on.  At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.

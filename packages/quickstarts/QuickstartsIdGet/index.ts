@@ -8,17 +8,27 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { BadRequest, NotFound, V1Quickstart } from '../types';
+import type { BadRequest, NotFound, Quickstart } from '../types';
 
 
 export type QuickstartsIdGetParams = {
+  /**
+  * identifier
+  * @type { number }
+  * @memberof QuickstartsIdGetApi
+  */
+  id: number,
   options?: AxiosRequestConfig
 }
 
-export type QuickstartsIdGetReturnType = AxiosPromise<V1Quickstart>;
+export type QuickstartsIdGetReturnType = AxiosPromise<Quickstart>;
 
 const isQuickstartsIdGetObjectParams = (params: [QuickstartsIdGetParams] | unknown[]): params is [QuickstartsIdGetParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 *
@@ -27,10 +37,11 @@ const isQuickstartsIdGetObjectParams = (params: [QuickstartsIdGetParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const quickstartsIdGetParamCreator = async (...config: ([QuickstartsIdGetParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isQuickstartsIdGetObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as QuickstartsIdGetParams;
-    const { options = {} } = params;
-    const localVarPath = `/quickstarts/{id}`;
+export const quickstartsIdGetParamCreator = async (...config: ([QuickstartsIdGetParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isQuickstartsIdGetObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as QuickstartsIdGetParams;
+    const { id, options = {} } = params;
+    const localVarPath = `/quickstarts/{id}`
+        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};

@@ -36,7 +36,11 @@ export type GetDiagnosisParams = {
 export type GetDiagnosisReturnType = AxiosPromise<Diagnosis>;
 
 const isGetDiagnosisObjectParams = (params: [GetDiagnosisParams] | unknown[]): params is [GetDiagnosisParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'system') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'system')
+  }
+  return false
 }
 /**
 * Provides host-specific diagnosis information

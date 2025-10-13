@@ -1,20 +1,14 @@
-export { default as baselineDelete, BaselineDeleteReturnType } from './BaselineDelete'
-
-export { default as createBaseline, CreateBaselineReturnType } from './CreateBaseline'
+export { default as addTemplateSubscribedSystem, AddTemplateSubscribedSystemReturnType } from './AddTemplateSubscribedSystem'
 
 export { default as deletesystem, DeletesystemReturnType } from './Deletesystem'
 
 export { default as detailAdvisory, DetailAdvisoryReturnType } from './DetailAdvisory'
-
-export { default as detailBaseline, DetailBaselineReturnType } from './DetailBaseline'
 
 export { default as detailSystem, DetailSystemReturnType } from './DetailSystem'
 
 export { default as exportAdvisories, ExportAdvisoriesReturnType } from './ExportAdvisories'
 
 export { default as exportAdvisorySystems, ExportAdvisorySystemsReturnType } from './ExportAdvisorySystems'
-
-export { default as exportBaselineSystems, ExportBaselineSystemsReturnType } from './ExportBaselineSystems'
 
 export { default as exportPackageSystems, ExportPackageSystemsReturnType } from './ExportPackageSystems'
 
@@ -37,12 +31,6 @@ export { default as listAdvisoriesIds, ListAdvisoriesIdsReturnType } from './Lis
 export { default as listAdvisorySystems, ListAdvisorySystemsReturnType } from './ListAdvisorySystems'
 
 export { default as listAdvisorySystemsIds, ListAdvisorySystemsIdsReturnType } from './ListAdvisorySystemsIds'
-
-export { default as listBaseline, ListBaselineReturnType } from './ListBaseline'
-
-export { default as listBaselineSystems, ListBaselineSystemsReturnType } from './ListBaselineSystems'
-
-export { default as listBaselineSystemsIds, ListBaselineSystemsIdsReturnType } from './ListBaselineSystemsIds'
 
 export { default as listPackages, ListPackagesReturnType } from './ListPackages'
 
@@ -68,8 +56,6 @@ export { default as packageSystemsIds, PackageSystemsIdsReturnType } from './Pac
 
 export { default as packageVersions, PackageVersionsReturnType } from './PackageVersions'
 
-export { default as removeBaselineSystems, RemoveBaselineSystemsReturnType } from './RemoveBaselineSystems'
-
 export { default as removeTemplateSystems, RemoveTemplateSystemsReturnType } from './RemoveTemplateSystems'
 
 export { default as systemPackages, SystemPackagesReturnType } from './SystemPackages'
@@ -77,8 +63,6 @@ export { default as systemPackages, SystemPackagesReturnType } from './SystemPac
 export { default as systemVmaasJson, SystemVmaasJsonReturnType } from './SystemVmaasJson'
 
 export { default as systemYumUpdates, SystemYumUpdatesReturnType } from './SystemYumUpdates'
-
-export { default as updateBaseline, UpdateBaselineReturnType } from './UpdateBaseline'
 
 export { default as updateTemplateSystems, UpdateTemplateSystemsReturnType } from './UpdateTemplateSystems'
 

@@ -8,6 +8,10 @@ import {
     favoritesPost,FavoritesPostReturnType,
     helptopicsGet,HelptopicsGetReturnType,
     helptopicsNameGet,HelptopicsNameGetReturnType,
+    progressGet,ProgressGetReturnType,
+    progressIdDelete,ProgressIdDeleteReturnType,
+    progressPost,ProgressPostReturnType,
+    quickstartsFiltersGet,QuickstartsFiltersGetReturnType,
     quickstartsGet,QuickstartsGetReturnType,
     quickstartsIdGet,QuickstartsIdGetReturnType,
 
@@ -18,6 +22,10 @@ const endpointList = {
     favoritesPost,
     helptopicsGet,
     helptopicsNameGet,
+    progressGet,
+    progressIdDelete,
+    progressPost,
+    quickstartsFiltersGet,
     quickstartsGet,
     quickstartsIdGet,
 
@@ -29,6 +37,10 @@ type endpointReturnTypes = {
     favoritesPost: FavoritesPostReturnType,
     helptopicsGet: HelptopicsGetReturnType,
     helptopicsNameGet: HelptopicsNameGetReturnType,
+    progressGet: ProgressGetReturnType,
+    progressIdDelete: ProgressIdDeleteReturnType,
+    progressPost: ProgressPostReturnType,
+    quickstartsFiltersGet: QuickstartsFiltersGetReturnType,
     quickstartsGet: QuickstartsGetReturnType,
     quickstartsIdGet: QuickstartsIdGetReturnType,
 

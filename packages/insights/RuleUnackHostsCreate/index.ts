@@ -30,7 +30,11 @@ export type RuleUnackHostsCreateParams = {
 export type RuleUnackHostsCreateReturnType = AxiosPromise<MultiAckResponse>;
 
 const isRuleUnackHostsCreateObjectParams = (params: [RuleUnackHostsCreateParams] | unknown[]): params is [RuleUnackHostsCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && Object.prototype.hasOwnProperty.call(params, 'multiHostUnAck')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId') && Object.prototype.hasOwnProperty.call(params[0], 'multiHostUnAck')
+  }
+  return false
 }
 /**
 * Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.

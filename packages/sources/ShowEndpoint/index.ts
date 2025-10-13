@@ -24,7 +24,11 @@ export type ShowEndpointParams = {
 export type ShowEndpointReturnType = AxiosPromise<Endpoint>;
 
 const isShowEndpointObjectParams = (params: [ShowEndpointParams] | unknown[]): params is [ShowEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a Endpoint object

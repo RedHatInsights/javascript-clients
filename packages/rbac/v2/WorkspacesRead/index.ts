@@ -30,7 +30,11 @@ export type WorkspacesReadParams = {
 export type WorkspacesReadReturnType = AxiosPromise<WorkspacesRead200Response>;
 
 const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]): params is [WorkspacesReadParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Get a workspace in tenant

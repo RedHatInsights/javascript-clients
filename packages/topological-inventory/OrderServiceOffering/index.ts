@@ -30,7 +30,11 @@ export type OrderServiceOfferingParams = {
 export type OrderServiceOfferingReturnType = AxiosPromise<AppliedInventoriesForServiceOffering200Response>;
 
 const isOrderServiceOfferingObjectParams = (params: [OrderServiceOfferingParams] | unknown[]): params is [OrderServiceOfferingParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'orderParametersServiceOffering')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'orderParametersServiceOffering')
+  }
+  return false
 }
 /**
 * Returns a Task id

@@ -24,7 +24,11 @@ export type RulecategoryRetrieveParams = {
 export type RulecategoryRetrieveReturnType = AxiosPromise<RuleCategory>;
 
 const isRulecategoryRetrieveObjectParams = (params: [RulecategoryRetrieveParams] | unknown[]): params is [RulecategoryRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.

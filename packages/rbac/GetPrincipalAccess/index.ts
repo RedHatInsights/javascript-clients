@@ -74,7 +74,11 @@ export type GetPrincipalAccessStatusEnum = typeof GetPrincipalAccessStatusEnum[k
 export type GetPrincipalAccessReturnType = AxiosPromise<AccessPagination>;
 
 const isGetPrincipalAccessObjectParams = (params: [GetPrincipalAccessParams] | unknown[]): params is [GetPrincipalAccessParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'application') && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'application')
+  }
+  return false
 }
 /**
 * Access responses are sorted in ascending order by an ID internal to the database

@@ -94,7 +94,11 @@ export type ListPermissionOptionsAllowedOnlyEnum = typeof ListPermissionOptionsA
 export type ListPermissionOptionsReturnType = AxiosPromise<PermissionOptionsPagination>;
 
 const isListPermissionOptionsObjectParams = (params: [ListPermissionOptionsParams] | unknown[]): params is [ListPermissionOptionsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'field') && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'field')
+  }
+  return false
 }
 /**
 * By default, options of application is returned. And could be resource_type or verb on demand.

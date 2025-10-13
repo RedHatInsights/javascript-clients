@@ -24,7 +24,11 @@ export type CreateApplicationParams = {
 export type CreateApplicationReturnType = AxiosPromise<Application>;
 
 const isCreateApplicationObjectParams = (params: [CreateApplicationParams] | unknown[]): params is [CreateApplicationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'application')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'application')
+  }
+  return false
 }
 /**
 * Creates a Application object

@@ -63,7 +63,11 @@ export type TopicListUpdateMethodEnum = typeof TopicListUpdateMethodEnum[keyof t
 export type TopicListReturnType = AxiosPromise<Array<Topic>>;
 
 const isTopicListObjectParams = (params: [TopicListParams] | unknown[]): params is [TopicListParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.

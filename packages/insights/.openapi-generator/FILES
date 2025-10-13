@@ -1,8 +1,5 @@
 .gitignore
 .npmignore
-AccountHostsRetrieve/index.ts
-AccountList/index.ts
-AccountRetrieve/index.ts
 AckAllList/index.ts
 AckCreate/index.ts
 AckDestroy/index.ts
@@ -15,6 +12,8 @@ AutosubexclusionCreate/index.ts
 AutosubexclusionDestroy/index.ts
 AutosubexclusionList/index.ts
 AutosubexclusionRetrieve/index.ts
+DisabledRulesList/index.ts
+DisabledRulesRetrieve/index.ts
 ExportHitsList/index.ts
 ExportReportsList/index.ts
 ExportRulesList/index.ts
@@ -26,14 +25,11 @@ HostackRetrieve/index.ts
 HostackUpdate/index.ts
 KcsList/index.ts
 KcsRetrieve/index.ts
-PathwayCreate/index.ts
-PathwayDestroy/index.ts
 PathwayList/index.ts
 PathwayReportsRetrieve/index.ts
 PathwayRetrieve/index.ts
 PathwayRulesList/index.ts
 PathwaySystemsList/index.ts
-PathwayUpdate/index.ts
 RatingAllRatingsList/index.ts
 RatingCreate/index.ts
 RatingList/index.ts
@@ -59,7 +55,6 @@ StatusLiveRetrieve/index.ts
 StatusReadyRetrieve/index.ts
 StatusRetrieve/index.ts
 SystemList/index.ts
-SystemRenderedReportsList/index.ts
 SystemReportsList/index.ts
 SystemRetrieve/index.ts
 SystemtypeList/index.ts
@@ -72,7 +67,6 @@ TopicRetrieve/index.ts
 TopicRulesWithTagList/index.ts
 TopicSystemsRetrieve/index.ts
 TopicUpdate/index.ts
-UsageList/index.ts
 UserPreferencesCreate/index.ts
 UserPreferencesList/index.ts
 WeeklyreportautosubscribeCreate/index.ts

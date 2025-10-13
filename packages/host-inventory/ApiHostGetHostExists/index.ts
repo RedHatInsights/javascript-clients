@@ -24,7 +24,11 @@ export type ApiHostGetHostExistsParams = {
 export type ApiHostGetHostExistsReturnType = AxiosPromise<HostIdOut>;
 
 const isApiHostGetHostExistsObjectParams = (params: [ApiHostGetHostExistsParams] | unknown[]): params is [ApiHostGetHostExistsParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Find one host by insights_id, if it exists. <br /><br /> Required permissions: inventory:hosts:read

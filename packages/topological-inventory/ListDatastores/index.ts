@@ -42,7 +42,11 @@ export type ListDatastoresParams = {
 export type ListDatastoresReturnType = AxiosPromise<DatastoresCollection>;
 
 const isListDatastoresObjectParams = (params: [ListDatastoresParams] | unknown[]): params is [ListDatastoresParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Datastore objects

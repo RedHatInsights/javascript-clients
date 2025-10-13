@@ -72,6 +72,8 @@ export { default as securityGuides, SecurityGuidesReturnType } from './SecurityG
 
 export { default as securityGuidesOS, SecurityGuidesOSReturnType } from './SecurityGuidesOS'
 
+export { default as status, StatusReturnType } from './Status'
+
 export { default as supportedProfiles, SupportedProfilesReturnType } from './SupportedProfiles'
 
 export { default as system, SystemReturnType } from './System'
@@ -86,7 +88,9 @@ export { default as systemsPolicies, SystemsPoliciesReturnType } from './Systems
 
 export { default as tailoring, TailoringReturnType } from './Tailoring'
 
-export { default as tailoringFile, TailoringFileReturnType } from './TailoringFile'
+export { default as tailoringFileJSON, TailoringFileJSONReturnType } from './TailoringFileJSON'
+
+export { default as tailoringFileTOML, TailoringFileTOMLReturnType } from './TailoringFileTOML'
 
 export { default as tailoringRuleTree, TailoringRuleTreeReturnType } from './TailoringRuleTree'
 

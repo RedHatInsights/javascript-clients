@@ -44,7 +44,11 @@ export type GetAuditlogsOrderByEnum = typeof GetAuditlogsOrderByEnum[keyof typeo
 export type GetAuditlogsReturnType = AxiosPromise<AuditLogPagination>;
 
 const isGetAuditlogsObjectParams = (params: [GetAuditlogsParams] | unknown[]): params is [GetAuditlogsParams] => {
-  return params.length === 1 && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * A list of all of the Admin User\'s actions logged in Audit Logs

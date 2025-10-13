@@ -30,7 +30,11 @@ export type UpdateTemplateSystemsParams = {
 export type UpdateTemplateSystemsReturnType = AxiosPromise<void>;
 
 const isUpdateTemplateSystemsObjectParams = (params: [UpdateTemplateSystemsParams] | unknown[]): params is [UpdateTemplateSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'templateId') && Object.prototype.hasOwnProperty.call(params, 'body')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'templateId') && Object.prototype.hasOwnProperty.call(params[0], 'body')
+  }
+  return false
 }
 /**
 * Add systems to a template
@@ -46,7 +50,7 @@ export const updateTemplateSystemsParamCreator = async (...config: ([UpdateTempl
         .replace(`{${"template_id"}}`, encodeURIComponent(String(templateId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PUT' as Method, ...options};
+    const localVarRequestOptions = { method: 'PATCH' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 

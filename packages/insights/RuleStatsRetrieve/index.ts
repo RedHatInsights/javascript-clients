@@ -24,7 +24,11 @@ export type RuleStatsRetrieveParams = {
 export type RuleStatsRetrieveReturnType = AxiosPromise<RuleUsageStats>;
 
 const isRuleStatsRetrieveObjectParams = (params: [RuleStatsRetrieveParams] | unknown[]): params is [RuleStatsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.

@@ -42,7 +42,11 @@ export type WorkspacesListParams = {
 export type WorkspacesListReturnType = AxiosPromise<WorkspacesWorkspaceListResponse>;
 
 const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]): params is [WorkspacesListParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List workspaces in a tenant

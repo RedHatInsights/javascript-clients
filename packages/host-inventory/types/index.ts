@@ -1473,7 +1473,8 @@ export const SystemProfileSelinuxCurrentModeEnum = {
 
 export type SystemProfileSelinuxCurrentModeEnum = typeof SystemProfileSelinuxCurrentModeEnum[keyof typeof SystemProfileSelinuxCurrentModeEnum];
 export const SystemProfileHostTypeEnum = {
-    Edge: 'edge'
+    Edge: 'edge',
+    Cluster: 'cluster'
 } as const;
 
 export type SystemProfileHostTypeEnum = typeof SystemProfileHostTypeEnum[keyof typeof SystemProfileHostTypeEnum];

@@ -30,7 +30,11 @@ export type ApiGroupPatchGroupByIdParams = {
 export type ApiGroupPatchGroupByIdReturnType = AxiosPromise<GroupOutWithHostCount>;
 
 const isApiGroupPatchGroupByIdObjectParams = (params: [ApiGroupPatchGroupByIdParams] | unknown[]): params is [ApiGroupPatchGroupByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupId') && Object.prototype.hasOwnProperty.call(params, 'groupIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'groupId') && Object.prototype.hasOwnProperty.call(params[0], 'groupIn')
+  }
+  return false
 }
 /**
 * Update group information, removing any existing host associations from the group. <br /><br /> Required permissions: inventory:groups:write

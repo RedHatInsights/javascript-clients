@@ -30,7 +30,11 @@ export type UpdateTaskParams = {
 export type UpdateTaskReturnType = AxiosPromise<void>;
 
 const isUpdateTaskObjectParams = (params: [UpdateTaskParams] | unknown[]): params is [UpdateTaskParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'task')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'task')
+  }
+  return false
 }
 /**
 * Updates a Task object

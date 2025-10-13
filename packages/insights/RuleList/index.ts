@@ -270,7 +270,11 @@ export type RuleListUpdateMethodEnum = typeof RuleListUpdateMethodEnum[keyof typ
 export type RuleListReturnType = AxiosPromise<PaginatedRuleForAccountList>;
 
 const isRuleListObjectParams = (params: [RuleListParams] | unknown[]): params is [RuleListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.

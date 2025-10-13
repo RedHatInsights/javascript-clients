@@ -42,7 +42,11 @@ export type ListVolumeAttachmentsParams = {
 export type ListVolumeAttachmentsReturnType = AxiosPromise<VolumeAttachmentsCollection>;
 
 const isListVolumeAttachmentsObjectParams = (params: [ListVolumeAttachmentsParams] | unknown[]): params is [ListVolumeAttachmentsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of VolumeAttachment objects

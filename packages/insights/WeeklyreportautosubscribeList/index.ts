@@ -18,7 +18,11 @@ export type WeeklyreportautosubscribeListParams = {
 export type WeeklyreportautosubscribeListReturnType = AxiosPromise<Array<AutoSubscribe>>;
 
 const isWeeklyreportautosubscribeListObjectParams = (params: [WeeklyreportautosubscribeListParams] | unknown[]): params is [WeeklyreportautosubscribeListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.

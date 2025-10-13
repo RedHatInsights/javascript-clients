@@ -69,7 +69,11 @@ export type GetPlaybookRunSystemsSortEnum = typeof GetPlaybookRunSystemsSortEnum
 export type GetPlaybookRunSystemsReturnType = AxiosPromise<PlaybookRunSystemList>;
 
 const isGetPlaybookRunSystemsObjectParams = (params: [GetPlaybookRunSystemsParams] | unknown[]): params is [GetPlaybookRunSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'playbookRunId') && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'playbookRunId')
+  }
+  return false
 }
 /**
 * Get details on systems being executed on in specific playbook run

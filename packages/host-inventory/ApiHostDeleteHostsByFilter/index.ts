@@ -103,7 +103,7 @@ export type ApiHostDeleteHostsByFilterParams = {
   */
   tags?: Array<string>,
   /**
-  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
+  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"workloads\": {\"sap\": {\"sap_system\": {\"eq\": \"true\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
   * @type { { [key: string]: SystemProfileNestedObjectValue; } }
   * @memberof ApiHostDeleteHostsByFilterApi
   */
@@ -156,7 +156,8 @@ export type ApiHostDeleteHostsByFilterRegisteredWithEnum = typeof ApiHostDeleteH
 export const ApiHostDeleteHostsByFilterSystemTypeEnum = {
     Conventional: 'conventional',
     Bootc: 'bootc',
-    Edge: 'edge'
+    Edge: 'edge',
+    Cluster: 'cluster'
 } as const;
 export type ApiHostDeleteHostsByFilterSystemTypeEnum = typeof ApiHostDeleteHostsByFilterSystemTypeEnum[keyof typeof ApiHostDeleteHostsByFilterSystemTypeEnum];
 /**
@@ -174,7 +175,11 @@ export type ApiHostDeleteHostsByFilterStalenessEnum = typeof ApiHostDeleteHostsB
 export type ApiHostDeleteHostsByFilterReturnType = AxiosPromise<void>;
 
 const isApiHostDeleteHostsByFilterObjectParams = (params: [ApiHostDeleteHostsByFilterParams] | unknown[]): params is [ApiHostDeleteHostsByFilterParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write

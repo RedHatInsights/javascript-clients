@@ -1084,6 +1084,45 @@ export interface SecurityGuides200Response {
 /**
  *
  * @export
+ * @interface Status
+ */
+export interface Status {
+    /**
+     *
+     * @type {StatusData}
+     * @memberof Status
+     */
+    'data'?: StatusData;
+}
+/**
+ *
+ * @export
+ * @interface Status200Response
+ */
+export interface Status200Response {
+    /**
+     *
+     * @type {Status}
+     * @memberof Status200Response
+     */
+    'data'?: Status;
+}
+/**
+ *
+ * @export
+ * @interface StatusData
+ */
+export interface StatusData {
+    /**
+     *
+     * @type {any}
+     * @memberof StatusData
+     */
+    'api'?: any;
+}
+/**
+ *
+ * @export
  * @interface SupportedProfile
  */
 export interface SupportedProfile {
@@ -1210,6 +1249,12 @@ export interface System {
      * @memberof System
      */
     'culled_timestamp'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof System
+     */
+    'last_check_in'?: any;
     /**
      *
      * @type {any}
@@ -1390,22 +1435,43 @@ export interface TailoringCreate {
      * @type {any}
      * @memberof TailoringCreate
      */
-    'os_minor_version'?: any;
+    'os_minor_version': any;
 }
 /**
  * Defines customizations of rules and variables for a set of profiles
  * @export
- * @interface TailoringFile
+ * @interface TailoringFileJson
  */
-export interface TailoringFile {
+export interface TailoringFileJson {
     [key: string]: any;
 
     /**
      *
      * @type {any}
-     * @memberof TailoringFile
+     * @memberof TailoringFileJson
      */
     'profiles'?: any;
+}
+/**
+ * Incomplete schema inspired by content of https://github.com/osbuild/blueprint-schema/blob/993ad4c66cdeb043417012bf2238806002d8be95/testdata/all-fields2.in.toml
+ * @export
+ * @interface TailoringFileToml
+ */
+export interface TailoringFileToml {
+    [key: string]: any;
+
+    /**
+     * Name of the blueprint
+     * @type {any}
+     * @memberof TailoringFileToml
+     */
+    'name'?: any;
+    /**
+     * Description of the blueprint
+     * @type {any}
+     * @memberof TailoringFileToml
+     */
+    'description'?: any;
 }
 /**
  *
@@ -1505,7 +1571,7 @@ export interface TestResult {
      */
     'supported'?: any;
     /**
-     * Number of failed rules in the Test Result
+     * Number of failures, errors and unknown states for rules in the Test Result.
      * @type {any}
      * @memberof TestResult
      */

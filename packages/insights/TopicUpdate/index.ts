@@ -30,7 +30,11 @@ export type TopicUpdateParams = {
 export type TopicUpdateReturnType = AxiosPromise<TopicEdit>;
 
 const isTopicUpdateObjectParams = (params: [TopicUpdateParams] | unknown[]): params is [TopicUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && Object.prototype.hasOwnProperty.call(params, 'topicEdit')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug') && Object.prototype.hasOwnProperty.call(params[0], 'topicEdit')
+  }
+  return false
 }
 /**
 * Update an existing rule topic.  All fields need to be supplied

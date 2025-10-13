@@ -110,7 +110,11 @@ export type PathwaySystemsListUpdateMethodEnum = typeof PathwaySystemsListUpdate
 export type PathwaySystemsListReturnType = AxiosPromise<PaginatedSystemList>;
 
 const isPathwaySystemsListObjectParams = (params: [PathwaySystemsListParams] | unknown[]): params is [PathwaySystemsListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.

@@ -30,7 +30,11 @@ export type ReportsOSParams = {
 export type ReportsOSReturnType = AxiosPromise<any>;
 
 const isReportsOSObjectParams = (params: [ReportsOSParams] | unknown[]): params is [ReportsOSParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * This feature is exclusively used by the frontend

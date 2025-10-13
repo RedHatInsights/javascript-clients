@@ -24,7 +24,11 @@ export type DetailAdvisoryParams = {
 export type DetailAdvisoryReturnType = AxiosPromise<ControllersAdvisoryDetailResponse>;
 
 const isDetailAdvisoryObjectParams = (params: [DetailAdvisoryParams] | unknown[]): params is [DetailAdvisoryParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'advisoryId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true  && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId')
+  }
+  return false
 }
 /**
 * Show me details an advisory by given advisory name

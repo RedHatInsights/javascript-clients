@@ -24,7 +24,11 @@ export type ApiStalenessUpdateStalenessParams = {
 export type ApiStalenessUpdateStalenessReturnType = AxiosPromise<StalenessOutput>;
 
 const isApiStalenessUpdateStalenessObjectParams = (params: [ApiStalenessUpdateStalenessParams] | unknown[]): params is [ApiStalenessUpdateStalenessParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'stalenessIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'stalenessIn')
+  }
+  return false
 }
 /**
 * Update account staleness record. Required permissions: staleness:staleness:write

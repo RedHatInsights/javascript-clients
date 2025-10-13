@@ -18,7 +18,11 @@ export type StatusReadyRetrieveParams = {
 export type StatusReadyRetrieveReturnType = AxiosPromise<void>;
 
 const isStatusReadyRetrieveObjectParams = (params: [StatusReadyRetrieveParams] | unknown[]): params is [StatusReadyRetrieveParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Is the Advisor API ready to serve requests?  This returns a dictionary with properties defining the status of the components Advisor relies on.  * \'django\' should always be True.  If Django isn\'t ready, you can\'t   get this information :-) * \'database\' is True when a database access returns successfully with   valid information. * \'rbac\' is True when we can make a request to the RBAC API and get   a valid response. * \'advisor\' is True if all of the above are True.
