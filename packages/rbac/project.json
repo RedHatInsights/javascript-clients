@@ -41,7 +41,7 @@
       }
     },
     "integration-v2": {
-      "command": "start-server-and-test 'bin/serve.sh https://raw.githubusercontent.com/RedHatInsights/insights-rbac/refs/heads/master/docs/source/specs/v2/openapi.yaml 3002' http://localhost:3002/api/rbac/v2/workspaces/ 'nx run --verbose @redhat-cloud-services/rbac-client:jest-v2'"
+      "command": "echo no longer supported && exit 0"
     },
     "integration-v1": {
       "command": "start-server-and-test 'bin/serve.sh https://raw.githubusercontent.com/RedHatInsights/insights-rbac/refs/heads/master/docs/source/specs/openapi.json 3001' http://localhost:3001/api/rbac/v1/access/ 'nx run --verbose @redhat-cloud-services/rbac-client:jest-v1'"

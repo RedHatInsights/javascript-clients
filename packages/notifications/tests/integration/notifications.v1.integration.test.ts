@@ -47,7 +47,7 @@ describe('Notifications API (v1)', () => {
       updateNotificationDrawerStatus: {
         notification_ids: ['1', '2'],
         read_status: true,
-      }
+      },
     };
     const resp = await client.drawerResourceV1UpdateNotificationReadStatus(params);
     expect(resp.status).toBe(200);
@@ -100,7 +100,7 @@ describe('Notifications API (v1)', () => {
   test('update behavior group actions', async () => {
     const params: NotificationResourceV1UpdateBehaviorGroupActionsParams = {
       behaviorGroupId: 'behaviorGroupId',
-      body: ''
+      body: '',
     };
     const resp = await client.notificationResourceV1UpdateBehaviorGroupActions(params);
     expect(resp.status).toBe(200);
@@ -120,7 +120,7 @@ describe('Notifications API (v1)', () => {
 
   test('org config - save daily digest time pref', async () => {
     const params: OrgConfigResourceV1SaveDailyDigestTimePreferenceParams = {
-      body: ''
+      body: '',
     };
     const resp = await client.orgConfigResourceV1SaveDailyDigestTimePreference(params);
     expect(resp.status).toBe(204);
@@ -151,7 +151,7 @@ describe('Notifications API (v1)', () => {
   test('update event type behaviors', async () => {
     const params: NotificationResourceV1UpdateEventTypeBehaviorsParams = {
       eventTypeId: 'eventTypeId',
-      body: ''
+      body: '',
     };
     const resp = await client.notificationResourceV1UpdateEventTypeBehaviors(params);
     expect(resp.status).toBe(200);

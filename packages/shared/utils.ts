@@ -54,29 +54,3 @@ export function APIFactory<T extends Record<string, (...args: any[]) => any>>(
 
   return api as BaseAPI & APIFactoryResponse<T, { [K in keyof T]: ReturnType<T[K]> }>;
 }
-
-
-
-function AF<J extends Record<string, (...args: any[]) => any>>(actions: J) {
-  const api = {}
-  for (const key of Object.keys(actions)) {
-    const method = actions[key];
-    Object.assign(api, {
-      [key]: (...args: unknown[]) => {
-        return Promise.resolve(method(...(args as any)));
-      },
-    });
-  }
-  return api as BaseAPI & APIFactoryResponse<J, { [K in keyof J]: ReturnType<J[K]> }>;
-}
-
-
-const x = AF({
-  sum: () => Promise.resolve('')
-})
-
-const a = x.sum()
-
-const foo = () => '123'
-
-type A = ReturnType<typeof foo>;

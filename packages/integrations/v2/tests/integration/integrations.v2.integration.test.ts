@@ -119,7 +119,7 @@ describe('Integrations API (v2)', () => {
   test('update event types linked to endpoint', async () => {
     const params: EndpointResourceV1UpdateEventTypesLinkedToEndpointParams = {
       endpointId: placeHolder,
-      body: ''
+      body: '',
     };
     const resp = await client.endpointResourceV1UpdateEventTypesLinkedToEndpoint(params);
     expect(resp.status).toEqual(204);
