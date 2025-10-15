@@ -125,7 +125,6 @@ export const setOAuthToObject = async function (object: any, name: string, scope
 
 function setFlattenedQueryParams(urlSearchParams: URLSearchParams, parameter: any, key: string = ""): void {
     if (parameter == null) return;
-    console.log({parameter, key});
     if (typeof parameter === "object") {
         if (Array.isArray(parameter)) {
             (parameter as any[]).forEach(item => setFlattenedQueryParams(urlSearchParams, item, key));
@@ -152,7 +151,6 @@ function setFlattenedQueryParams(urlSearchParams: URLSearchParams, parameter: an
  */
 export const setSearchParams = function (url: URL, ...objects: any[]) {
     const searchParams = new URLSearchParams(url.search);
-    console.log({searchParams, url})
     setFlattenedQueryParams(searchParams, objects);
     url.search = searchParams.toString();
 }

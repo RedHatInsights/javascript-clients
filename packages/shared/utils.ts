@@ -44,7 +44,6 @@ export function APIFactory<T extends Record<string, (...args: any[]) => any>>(
   const api = new BaseAPI(basePath, apiConfig);
   for (const key of Object.keys(actions)) {
     const method = actions[key];
-    console.log({ key, method });
     Object.assign(api, {
       [key]: (...args: unknown[]) => {
         return method(api.sendRequest.bind(api), ...(args as any));
