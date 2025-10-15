@@ -43,9 +43,6 @@
     "integration-v1": {
       "command": "start-server-and-test 'bin/serve.sh https://console.redhat.com/api/integrations/v1.0/openapi.json 3001' http://localhost:3001/api/integrations/v1.0/endpoints/ 'nx run --verbose @redhat-cloud-services/integrations-client:jest-v1'"
     },
-    "integration-v2": {
-      "command": "start-server-and-test 'bin/serve.sh https://console.redhat.com/api/integrations/v2.0/openapi.json 3002' http://localhost:3002/api/integrations/v2.0/endpoints/ 'nx run --verbose @redhat-cloud-services/integrations-client:jest-v2'"
-    },
     "jest-v1": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
