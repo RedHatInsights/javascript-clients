@@ -39,10 +39,14 @@ export type ListContainerImagesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerImagesReturnType = AxiosPromise<ContainerImagesCollection>;
+export type ListContainerImagesReturnType = ContainerImagesCollection;
 
 const isListContainerImagesObjectParams = (params: [ListContainerImagesParams] | unknown[]): params is [ListContainerImagesParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of ContainerImage objects
@@ -51,7 +55,7 @@ const isListContainerImagesObjectParams = (params: [ListContainerImagesParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerImagesParamCreator = async (...config: ([ListContainerImagesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerImagesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerImagesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerImagesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerImagesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_images`;
@@ -82,7 +86,7 @@ export const listContainerImagesParamCreator = async (...config: ([ListContainer
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listContainerImagesParamCreator = async (...config: ([ListContainer
         }
         ]
     };
+
+    return sendRequest<ListContainerImagesReturnType>(Promise.resolve(args));
 }
 
 export default listContainerImagesParamCreator;

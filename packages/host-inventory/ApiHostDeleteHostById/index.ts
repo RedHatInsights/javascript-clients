@@ -27,10 +27,14 @@ export type ApiHostDeleteHostByIdParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostDeleteHostByIdReturnType = AxiosPromise<void>;
+export type ApiHostDeleteHostByIdReturnType = void;
 
 const isApiHostDeleteHostByIdObjectParams = (params: [ApiHostDeleteHostByIdParams] | unknown[]): params is [ApiHostDeleteHostByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
@@ -39,7 +43,7 @@ const isApiHostDeleteHostByIdObjectParams = (params: [ApiHostDeleteHostByIdParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostDeleteHostByIdParamCreator = async (...config: ([ApiHostDeleteHostByIdParams] | [Array<string>, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostDeleteHostByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostDeleteHostByIdParams] | [Array<string>, string, AxiosRequestConfig])) => {
     const params = isApiHostDeleteHostByIdObjectParams(config) ? config[0] : ['hostIdList', 'branchId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostDeleteHostByIdParams;
     const { hostIdList, branchId, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}`
@@ -59,7 +63,7 @@ export const apiHostDeleteHostByIdParamCreator = async (...config: ([ApiHostDele
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -71,6 +75,8 @@ export const apiHostDeleteHostByIdParamCreator = async (...config: ([ApiHostDele
         }
         ]
     };
+
+    return sendRequest<ApiHostDeleteHostByIdReturnType>(Promise.resolve(args));
 }
 
 export default apiHostDeleteHostByIdParamCreator;

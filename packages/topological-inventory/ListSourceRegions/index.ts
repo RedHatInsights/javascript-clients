@@ -39,10 +39,14 @@ export type ListSourceRegionsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionsReturnType = AxiosPromise<SourceRegionsCollection>;
+export type ListSourceRegionsReturnType = SourceRegionsCollection;
 
 const isListSourceRegionsObjectParams = (params: [ListSourceRegionsParams] | unknown[]): params is [ListSourceRegionsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of SourceRegion objects
@@ -51,7 +55,7 @@ const isListSourceRegionsObjectParams = (params: [ListSourceRegionsParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionsParamCreator = async (...config: ([ListSourceRegionsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions`;
@@ -82,7 +86,7 @@ export const listSourceRegionsParamCreator = async (...config: ([ListSourceRegio
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listSourceRegionsParamCreator = async (...config: ([ListSourceRegio
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionsParamCreator;

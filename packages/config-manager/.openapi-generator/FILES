@@ -1,9 +1,7 @@
 .gitignore
 .npmignore
 CreateProfile/index.ts
-GetPlaybook/index.ts
 GetProfile/index.ts
-GetProfiles/index.ts
 api.ts
 git_push.sh
 index.ts

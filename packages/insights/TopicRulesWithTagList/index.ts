@@ -21,10 +21,14 @@ export type TopicRulesWithTagListParams = {
   options?: AxiosRequestConfig
 }
 
-export type TopicRulesWithTagListReturnType = AxiosPromise<Array<Rule>>;
+export type TopicRulesWithTagListReturnType = Array<Rule>;
 
 const isTopicRulesWithTagListObjectParams = (params: [TopicRulesWithTagListParams] | unknown[]): params is [TopicRulesWithTagListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * Lists the available rules that have this tag.  This shows the rule information for rules with this tag.
@@ -32,7 +36,7 @@ const isTopicRulesWithTagListObjectParams = (params: [TopicRulesWithTagListParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const topicRulesWithTagListParamCreator = async (...config: ([TopicRulesWithTagListParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const topicRulesWithTagListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TopicRulesWithTagListParams] | [string, AxiosRequestConfig])) => {
     const params = isTopicRulesWithTagListObjectParams(config) ? config[0] : ['slug', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TopicRulesWithTagListParams;
     const { slug, options = {} } = params;
     const localVarPath = `/api/insights/v1/topic/{slug}/rules_with_tag/`
@@ -48,7 +52,7 @@ export const topicRulesWithTagListParamCreator = async (...config: ([TopicRulesW
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const topicRulesWithTagListParamCreator = async (...config: ([TopicRulesW
         }
         ]
     };
+
+    return sendRequest<TopicRulesWithTagListReturnType>(Promise.resolve(args));
 }
 
 export default topicRulesWithTagListParamCreator;

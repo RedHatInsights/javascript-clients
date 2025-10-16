@@ -107,10 +107,14 @@ export const GetPoliciesByIdHistoryTriggerSortDirectionEnum = {
 } as const;
 export type GetPoliciesByIdHistoryTriggerSortDirectionEnum = typeof GetPoliciesByIdHistoryTriggerSortDirectionEnum[keyof typeof GetPoliciesByIdHistoryTriggerSortDirectionEnum];
 
-export type GetPoliciesByIdHistoryTriggerReturnType = AxiosPromise<PagedResponseOfHistoryItem>;
+export type GetPoliciesByIdHistoryTriggerReturnType = PagedResponseOfHistoryItem;
 
 const isGetPoliciesByIdHistoryTriggerObjectParams = (params: [GetPoliciesByIdHistoryTriggerParams] | unknown[]): params is [GetPoliciesByIdHistoryTriggerParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 *
@@ -119,7 +123,7 @@ const isGetPoliciesByIdHistoryTriggerObjectParams = (params: [GetPoliciesByIdHis
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPoliciesByIdHistoryTriggerParamCreator = async (...config: ([GetPoliciesByIdHistoryTriggerParams] | [string, number, number, string, GetPoliciesByIdHistoryTriggerFilteropNameEnum, string, GetPoliciesByIdHistoryTriggerFilteropIdEnum, GetPoliciesByIdHistoryTriggerSortColumnEnum, GetPoliciesByIdHistoryTriggerSortDirectionEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPoliciesByIdHistoryTriggerParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetPoliciesByIdHistoryTriggerParams] | [string, number, number, string, GetPoliciesByIdHistoryTriggerFilteropNameEnum, string, GetPoliciesByIdHistoryTriggerFilteropIdEnum, GetPoliciesByIdHistoryTriggerSortColumnEnum, GetPoliciesByIdHistoryTriggerSortDirectionEnum, AxiosRequestConfig])) => {
     const params = isGetPoliciesByIdHistoryTriggerObjectParams(config) ? config[0] : ['id', 'offset', 'limit', 'filterName', 'filteropName', 'filterId', 'filteropId', 'sortColumn', 'sortDirection', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPoliciesByIdHistoryTriggerParams;
     const { id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options = {} } = params;
     const localVarPath = `/policies/{id}/history/trigger`
@@ -167,10 +171,12 @@ export const getPoliciesByIdHistoryTriggerParamCreator = async (...config: ([Get
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetPoliciesByIdHistoryTriggerReturnType>(Promise.resolve(args));
 }
 
 export default getPoliciesByIdHistoryTriggerParamCreator;

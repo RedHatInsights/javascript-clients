@@ -33,19 +33,23 @@ export type UnassignSystemParams = {
   options?: AxiosRequestConfig
 }
 
-export type UnassignSystemReturnType = AxiosPromise<System200Response>;
+export type UnassignSystemReturnType = System200Response;
 
 const isUnassignSystemObjectParams = (params: [UnassignSystemParams] | unknown[]): params is [UnassignSystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'systemId') && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+  }
+  return false
 }
 /**
-* Unassigns a System from a Policy
+* Remove a specific system from a specific policy.
 * @summary Unassign a System from a Policy
 * @param {UnassignSystemParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const unassignSystemParamCreator = async (...config: ([UnassignSystemParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const unassignSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UnassignSystemParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isUnassignSystemObjectParams(config) ? config[0] : ['systemId', 'policyId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UnassignSystemParams;
     const { systemId, policyId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/systems/{system_id}`
@@ -68,10 +72,12 @@ export const unassignSystemParamCreator = async (...config: ([UnassignSystemPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<UnassignSystemReturnType>(Promise.resolve(args));
 }
 
 export default unassignSystemParamCreator;

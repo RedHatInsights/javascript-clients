@@ -21,10 +21,14 @@ export type CheckExecutableParams = {
   options?: AxiosRequestConfig
 }
 
-export type CheckExecutableReturnType = AxiosPromise<void>;
+export type CheckExecutableReturnType = void;
 
 const isCheckExecutableObjectParams = (params: [CheckExecutableParams] | unknown[]): params is [CheckExecutableParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Checks remediation for the existence of smart_managment flaged systems
@@ -33,7 +37,7 @@ const isCheckExecutableObjectParams = (params: [CheckExecutableParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const checkExecutableParamCreator = async (...config: ([CheckExecutableParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const checkExecutableParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CheckExecutableParams] | [string, AxiosRequestConfig])) => {
     const params = isCheckExecutableObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CheckExecutableParams;
     const { id, options = {} } = params;
     const localVarPath = `/remediations/{id}/executable`
@@ -49,10 +53,12 @@ export const checkExecutableParamCreator = async (...config: ([CheckExecutablePa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<CheckExecutableReturnType>(Promise.resolve(args));
 }
 
 export default checkExecutableParamCreator;

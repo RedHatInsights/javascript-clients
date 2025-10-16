@@ -45,10 +45,14 @@ export type ListContainerGroupContainersParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerGroupContainersReturnType = AxiosPromise<ContainersCollection>;
+export type ListContainerGroupContainersReturnType = ContainersCollection;
 
 const isListContainerGroupContainersObjectParams = (params: [ListContainerGroupContainersParams] | unknown[]): params is [ListContainerGroupContainersParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Container objects
@@ -57,7 +61,7 @@ const isListContainerGroupContainersObjectParams = (params: [ListContainerGroupC
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerGroupContainersParamCreator = async (...config: ([ListContainerGroupContainersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerGroupContainersParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerGroupContainersParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerGroupContainersObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerGroupContainersParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_groups/{id}/containers`
@@ -89,7 +93,7 @@ export const listContainerGroupContainersParamCreator = async (...config: ([List
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listContainerGroupContainersParamCreator = async (...config: ([List
         }
         ]
     };
+
+    return sendRequest<ListContainerGroupContainersReturnType>(Promise.resolve(args));
 }
 
 export default listContainerGroupContainersParamCreator;

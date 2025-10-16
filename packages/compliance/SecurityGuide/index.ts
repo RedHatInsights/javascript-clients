@@ -27,19 +27,23 @@ export type SecurityGuideParams = {
   options?: AxiosRequestConfig
 }
 
-export type SecurityGuideReturnType = AxiosPromise<SecurityGuide200Response>;
+export type SecurityGuideReturnType = SecurityGuide200Response;
 
 const isSecurityGuideObjectParams = (params: [SecurityGuideParams] | unknown[]): params is [SecurityGuideParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId')
+  }
+  return false
 }
 /**
-* Returns a Security Guide
+* Retrieve a specific security guide.
 * @summary Request a Security Guide
 * @param {SecurityGuideParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const securityGuideParamCreator = async (...config: ([SecurityGuideParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const securityGuideParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SecurityGuideParams] | [any, any, AxiosRequestConfig])) => {
     const params = isSecurityGuideObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuideParams;
     const { securityGuideId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}`
@@ -61,10 +65,12 @@ export const securityGuideParamCreator = async (...config: ([SecurityGuideParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SecurityGuideReturnType>(Promise.resolve(args));
 }
 
 export default securityGuideParamCreator;

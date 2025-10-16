@@ -17,14 +17,18 @@ export type PostPoliciesValidateParams = {
   * @type { Policy }
   * @memberof PostPoliciesValidateApi
   */
-  policy?: Policy,
+  policy: Policy,
   options?: AxiosRequestConfig
 }
 
-export type PostPoliciesValidateReturnType = AxiosPromise<Msg>;
+export type PostPoliciesValidateReturnType = Msg;
 
 const isPostPoliciesValidateObjectParams = (params: [PostPoliciesValidateParams] | unknown[]): params is [PostPoliciesValidateParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policy')
+  }
+  return false
 }
 /**
 *
@@ -33,7 +37,7 @@ const isPostPoliciesValidateObjectParams = (params: [PostPoliciesValidateParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const postPoliciesValidateParamCreator = async (...config: ([PostPoliciesValidateParams] | [Policy, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const postPoliciesValidateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PostPoliciesValidateParams] | [Policy, AxiosRequestConfig])) => {
     const params = isPostPoliciesValidateObjectParams(config) ? config[0] : ['policy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PostPoliciesValidateParams;
     const { policy, options = {} } = params;
     const localVarPath = `/policies/validate`;
@@ -50,11 +54,13 @@ export const postPoliciesValidateParamCreator = async (...config: ([PostPolicies
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: policy,
     };
+
+    return sendRequest<PostPoliciesValidateReturnType>(Promise.resolve(args));
 }
 
 export default postPoliciesValidateParamCreator;

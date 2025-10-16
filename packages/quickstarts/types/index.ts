@@ -14,15 +14,119 @@ export interface BadRequest {
 /**
  *
  * @export
+ * @interface FavoriteQuickstart
+ */
+export interface FavoriteQuickstart {
+    /**
+     *
+     * @type {string}
+     * @memberof FavoriteQuickstart
+     */
+    'accountId'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof FavoriteQuickstart
+     */
+    'createdAt'?: string;
+    /**
+     *
+     * @type {any}
+     * @memberof FavoriteQuickstart
+     */
+    'deletedAt'?: any;
+    /**
+     *
+     * @type {boolean}
+     * @memberof FavoriteQuickstart
+     */
+    'favorite'?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof FavoriteQuickstart
+     */
+    'id'?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof FavoriteQuickstart
+     */
+    'quickstartName'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof FavoriteQuickstart
+     */
+    'updatedAt'?: string;
+}
+/**
+ *
+ * @export
  * @interface FavoritesGet200Response
  */
 export interface FavoritesGet200Response {
     /**
      *
-     * @type {Array<V1FavoriteQuickstart>}
+     * @type {Array<FavoriteQuickstart>}
      * @memberof FavoritesGet200Response
      */
-    'data'?: Array<V1FavoriteQuickstart>;
+    'data'?: Array<FavoriteQuickstart>;
+}
+/**
+ *
+ * @export
+ * @interface HelpTopic
+ */
+export interface HelpTopic {
+    /**
+     *
+     * @type {object}
+     * @memberof HelpTopic
+     */
+    'content'?: object;
+    /**
+     *
+     * @type {string}
+     * @memberof HelpTopic
+     */
+    'createdAt'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof HelpTopic
+     */
+    'deletedAt'?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof HelpTopic
+     */
+    'groupName'?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof HelpTopic
+     */
+    'id'?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof HelpTopic
+     */
+    'name'?: string;
+    /**
+     *
+     * @type {Array<Tag>}
+     * @memberof HelpTopic
+     */
+    'tags'?: Array<Tag>;
+    /**
+     *
+     * @type {string}
+     * @memberof HelpTopic
+     */
+    'updatedAt'?: string;
 }
 /**
  *
@@ -32,10 +136,10 @@ export interface FavoritesGet200Response {
 export interface HelptopicsGet200Response {
     /**
      *
-     * @type {Array<V1HelpTopic>}
+     * @type {Array<HelpTopic>}
      * @memberof HelptopicsGet200Response
      */
-    'data'?: Array<V1HelpTopic>;
+    'data'?: Array<HelpTopic>;
 }
 /**
  *
@@ -45,10 +149,10 @@ export interface HelptopicsGet200Response {
 export interface HelptopicsNameGet200Response {
     /**
      *
-     * @type {V1HelpTopic}
+     * @type {HelpTopic}
      * @memberof HelptopicsNameGet200Response
      */
-    'data'?: V1HelpTopic;
+    'data'?: HelpTopic;
 }
 /**
  *
@@ -66,289 +170,187 @@ export interface NotFound {
 /**
  *
  * @export
+ * @interface ProgressGet200Response
+ */
+export interface ProgressGet200Response {
+    /**
+     *
+     * @type {Array<QuickstartProgress>}
+     * @memberof ProgressGet200Response
+     */
+    'data'?: Array<QuickstartProgress>;
+}
+/**
+ *
+ * @export
+ * @interface Quickstart
+ */
+export interface Quickstart {
+    /**
+     *
+     * @type {object}
+     * @memberof Quickstart
+     */
+    'content'?: object;
+    /**
+     *
+     * @type {string}
+     * @memberof Quickstart
+     */
+    'createdAt'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Quickstart
+     */
+    'deletedAt'?: string | null;
+    /**
+     *
+     * @type {Array<FavoriteQuickstart>}
+     * @memberof Quickstart
+     */
+    'favoriteQuickstart'?: Array<FavoriteQuickstart>;
+    /**
+     *
+     * @type {number}
+     * @memberof Quickstart
+     */
+    'id'?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof Quickstart
+     */
+    'name'?: string;
+    /**
+     *
+     * @type {Array<Tag>}
+     * @memberof Quickstart
+     */
+    'tags'?: Array<Tag>;
+    /**
+     *
+     * @type {string}
+     * @memberof Quickstart
+     */
+    'updatedAt'?: string;
+}
+/**
+ *
+ * @export
+ * @interface QuickstartProgress
+ */
+export interface QuickstartProgress {
+    /**
+     *
+     * @type {number}
+     * @memberof QuickstartProgress
+     */
+    'accountId'?: number;
+    /**
+     *
+     * @type {{ [key: string]: any; }}
+     * @memberof QuickstartProgress
+     */
+    'progress'?: { [key: string]: any; };
+    /**
+     *
+     * @type {string}
+     * @memberof QuickstartProgress
+     */
+    'quickstartName'?: string;
+}
+/**
+ *
+ * @export
+ * @interface QuickstartProgressRequest
+ */
+export interface QuickstartProgressRequest {
+    /**
+     *
+     * @type {number}
+     * @memberof QuickstartProgressRequest
+     */
+    'accountId': number;
+    /**
+     *
+     * @type {{ [key: string]: any; }}
+     * @memberof QuickstartProgressRequest
+     */
+    'progress'?: { [key: string]: any; };
+    /**
+     *
+     * @type {string}
+     * @memberof QuickstartProgressRequest
+     */
+    'quickstartName': string;
+}
+/**
+ *
+ * @export
+ * @interface QuickstartsFiltersGet200Response
+ */
+export interface QuickstartsFiltersGet200Response {
+    /**
+     *
+     * @type {{ [key: string]: any; }}
+     * @memberof QuickstartsFiltersGet200Response
+     */
+    'data'?: { [key: string]: any; };
+}
+/**
+ *
+ * @export
  * @interface QuickstartsGet200Response
  */
 export interface QuickstartsGet200Response {
     /**
      *
-     * @type {Array<V1Quickstart>}
+     * @type {Array<Quickstart>}
      * @memberof QuickstartsGet200Response
      */
-    'data'?: Array<V1Quickstart>;
+    'data'?: Array<Quickstart>;
 }
 /**
  *
  * @export
- * @interface V1FavoriteQuickstart
+ * @interface Tag
  */
-export interface V1FavoriteQuickstart {
+export interface Tag {
     /**
      *
      * @type {string}
-     * @memberof V1FavoriteQuickstart
-     */
-    'accountId'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof V1FavoriteQuickstart
-     */
-    'createdAt'?: string;
-    /**
-     *
-     * @type {any}
-     * @memberof V1FavoriteQuickstart
-     */
-    'deletedAt'?: any;
-    /**
-     *
-     * @type {boolean}
-     * @memberof V1FavoriteQuickstart
-     */
-    'favorite'?: boolean;
-    /**
-     *
-     * @type {number}
-     * @memberof V1FavoriteQuickstart
-     */
-    'id'?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof V1FavoriteQuickstart
-     */
-    'quickstartName'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof V1FavoriteQuickstart
-     */
-    'updatedAt'?: string;
-}
-/**
- *
- * @export
- * @interface V1HelpTopic
- */
-export interface V1HelpTopic {
-    /**
-     *
-     * @type {object}
-     * @memberof V1HelpTopic
-     */
-    'content'?: object;
-    /**
-     *
-     * @type {string}
-     * @memberof V1HelpTopic
+     * @memberof Tag
      */
     'createdAt'?: string;
     /**
      *
      * @type {string}
-     * @memberof V1HelpTopic
-     */
-    'deletedAt'?: string | null;
-    /**
-     *
-     * @type {string}
-     * @memberof V1HelpTopic
-     */
-    'groupName'?: string;
-    /**
-     *
-     * @type {number}
-     * @memberof V1HelpTopic
-     */
-    'id'?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof V1HelpTopic
-     */
-    'name'?: string;
-    /**
-     *
-     * @type {Array<V1HelpTopicTagsInner>}
-     * @memberof V1HelpTopic
-     */
-    'tags'?: Array<V1HelpTopicTagsInner>;
-    /**
-     *
-     * @type {string}
-     * @memberof V1HelpTopic
-     */
-    'updatedAt'?: string;
-}
-/**
- *
- * @export
- * @interface V1HelpTopicTagsInner
- */
-export interface V1HelpTopicTagsInner {
-    /**
-     *
-     * @type {string}
-     * @memberof V1HelpTopicTagsInner
-     */
-    'createdAt'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof V1HelpTopicTagsInner
+     * @memberof Tag
      */
     'deletedAt'?: string | null;
     /**
      *
      * @type {number}
-     * @memberof V1HelpTopicTagsInner
+     * @memberof Tag
      */
     'id'?: number;
     /**
      *
      * @type {string}
-     * @memberof V1HelpTopicTagsInner
+     * @memberof Tag
      */
     'type'?: string;
     /**
      *
      * @type {string}
-     * @memberof V1HelpTopicTagsInner
+     * @memberof Tag
      */
     'updatedAt'?: string;
     /**
      *
      * @type {string}
-     * @memberof V1HelpTopicTagsInner
+     * @memberof Tag
      */
     'value'?: string;
-}
-/**
- *
- * @export
- * @interface V1Quickstart
- */
-export interface V1Quickstart {
-    /**
-     *
-     * @type {object}
-     * @memberof V1Quickstart
-     */
-    'content'?: object;
-    /**
-     *
-     * @type {string}
-     * @memberof V1Quickstart
-     */
-    'createdAt'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof V1Quickstart
-     */
-    'deletedAt'?: string | null;
-    /**
-     *
-     * @type {Array<V1QuickstartFavoriteQuickstartInner>}
-     * @memberof V1Quickstart
-     */
-    'favoriteQuickstart'?: Array<V1QuickstartFavoriteQuickstartInner>;
-    /**
-     *
-     * @type {number}
-     * @memberof V1Quickstart
-     */
-    'id'?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof V1Quickstart
-     */
-    'name'?: string;
-    /**
-     *
-     * @type {Array<V1HelpTopicTagsInner>}
-     * @memberof V1Quickstart
-     */
-    'tags'?: Array<V1HelpTopicTagsInner>;
-    /**
-     *
-     * @type {string}
-     * @memberof V1Quickstart
-     */
-    'updatedAt'?: string;
-}
-/**
- *
- * @export
- * @interface V1QuickstartFavoriteQuickstartInner
- */
-export interface V1QuickstartFavoriteQuickstartInner {
-    /**
-     *
-     * @type {string}
-     * @memberof V1QuickstartFavoriteQuickstartInner
-     */
-    'accountId'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof V1QuickstartFavoriteQuickstartInner
-     */
-    'createdAt'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof V1QuickstartFavoriteQuickstartInner
-     */
-    'deletedAt'?: string | null;
-    /**
-     *
-     * @type {boolean}
-     * @memberof V1QuickstartFavoriteQuickstartInner
-     */
-    'favorite'?: boolean;
-    /**
-     *
-     * @type {number}
-     * @memberof V1QuickstartFavoriteQuickstartInner
-     */
-    'id'?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof V1QuickstartFavoriteQuickstartInner
-     */
-    'quickstartName'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof V1QuickstartFavoriteQuickstartInner
-     */
-    'updatedAt'?: string;
-}
-/**
- *
- * @export
- * @interface V1QuickstartProgress
- */
-export interface V1QuickstartProgress {
-    /**
-     *
-     * @type {number}
-     * @memberof V1QuickstartProgress
-     */
-    'accountId'?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof V1QuickstartProgress
-     */
-    'progress'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof V1QuickstartProgress
-     */
-    'quickstartName'?: string;
 }

@@ -44,22 +44,22 @@ export type ListPackagesParams = {
   filterName?: string,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListPackagesApi
   */
-  filterSystemsInstalled?: string,
+  filterSystemsInstalled?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListPackagesApi
   */
-  filterSystemsInstallable?: string,
+  filterSystemsInstallable?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListPackagesApi
   */
-  filterSystemsApplicable?: string,
+  filterSystemsApplicable?: number,
   /**
   * Filter
   * @type { string }
@@ -80,10 +80,10 @@ export type ListPackagesParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ListPackagesApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -129,10 +129,14 @@ export const ListPackagesSortEnum = {
 } as const;
 export type ListPackagesSortEnum = typeof ListPackagesSortEnum[keyof typeof ListPackagesSortEnum];
 
-export type ListPackagesReturnType = AxiosPromise<ControllersPackagesResponse>;
+export type ListPackagesReturnType = ControllersPackagesResponse;
 
 const isListPackagesObjectParams = (params: [ListPackagesParams] | unknown[]): params is [ListPackagesParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show me all installed packages across my systems
@@ -141,7 +145,7 @@ const isListPackagesObjectParams = (params: [ListPackagesParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listPackagesParamCreator = async (...config: ([ListPackagesParams] | [number, number, ListPackagesSortEnum, string, string, string, string, string, string, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listPackagesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListPackagesParams] | [number, number, ListPackagesSortEnum, string, string, number, number, number, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isListPackagesObjectParams(config) ? config[0] : ['limit', 'offset', 'sort', 'search', 'filterName', 'filterSystemsInstalled', 'filterSystemsInstallable', 'filterSystemsApplicable', 'filterSummary', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPackagesParams;
     const { limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/packages/`;
@@ -224,7 +228,7 @@ export const listPackagesParamCreator = async (...config: ([ListPackagesParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -236,6 +240,8 @@ export const listPackagesParamCreator = async (...config: ([ListPackagesParams] 
         }
         ]
     };
+
+    return sendRequest<ListPackagesReturnType>(Promise.resolve(args));
 }
 
 export default listPackagesParamCreator;

@@ -45,10 +45,14 @@ export type ListTagContainerTemplatesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagContainerTemplatesReturnType = AxiosPromise<ContainerTemplatesCollection>;
+export type ListTagContainerTemplatesReturnType = ContainerTemplatesCollection;
 
 const isListTagContainerTemplatesObjectParams = (params: [ListTagContainerTemplatesParams] | unknown[]): params is [ListTagContainerTemplatesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of ContainerTemplate objects
@@ -57,7 +61,7 @@ const isListTagContainerTemplatesObjectParams = (params: [ListTagContainerTempla
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagContainerTemplatesParamCreator = async (...config: ([ListTagContainerTemplatesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagContainerTemplatesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagContainerTemplatesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagContainerTemplatesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagContainerTemplatesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/container_templates`
@@ -89,7 +93,7 @@ export const listTagContainerTemplatesParamCreator = async (...config: ([ListTag
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listTagContainerTemplatesParamCreator = async (...config: ([ListTag
         }
         ]
     };
+
+    return sendRequest<ListTagContainerTemplatesReturnType>(Promise.resolve(args));
 }
 
 export default listTagContainerTemplatesParamCreator;

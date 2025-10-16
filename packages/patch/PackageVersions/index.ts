@@ -33,10 +33,14 @@ export type PackageVersionsParams = {
   options?: AxiosRequestConfig
 }
 
-export type PackageVersionsReturnType = AxiosPromise<ControllersPackageVersionsResponse>;
+export type PackageVersionsReturnType = ControllersPackageVersionsResponse;
 
 const isPackageVersionsObjectParams = (params: [PackageVersionsParams] | unknown[]): params is [PackageVersionsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'packageName') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'packageName')
+  }
+  return false
 }
 /**
 * Show me all package versions installed on some system
@@ -45,7 +49,7 @@ const isPackageVersionsObjectParams = (params: [PackageVersionsParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const packageVersionsParamCreator = async (...config: ([PackageVersionsParams] | [string, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const packageVersionsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PackageVersionsParams] | [string, number, number, AxiosRequestConfig])) => {
     const params = isPackageVersionsObjectParams(config) ? config[0] : ['packageName', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PackageVersionsParams;
     const { packageName, limit, offset, options = {} } = params;
     const localVarPath = `/packages/{package_name}/versions`
@@ -69,7 +73,7 @@ export const packageVersionsParamCreator = async (...config: ([PackageVersionsPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -81,6 +85,8 @@ export const packageVersionsParamCreator = async (...config: ([PackageVersionsPa
         }
         ]
     };
+
+    return sendRequest<PackageVersionsReturnType>(Promise.resolve(args));
 }
 
 export default packageVersionsParamCreator;

@@ -39,10 +39,14 @@ export type ListEndpointsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListEndpointsReturnType = AxiosPromise<EndpointsCollection>;
+export type ListEndpointsReturnType = EndpointsCollection;
 
 const isListEndpointsObjectParams = (params: [ListEndpointsParams] | unknown[]): params is [ListEndpointsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Endpoint objects
@@ -51,7 +55,7 @@ const isListEndpointsObjectParams = (params: [ListEndpointsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listEndpointsParamCreator = async (...config: ([ListEndpointsParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listEndpointsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListEndpointsParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListEndpointsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListEndpointsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/endpoints`;
@@ -82,7 +86,7 @@ export const listEndpointsParamCreator = async (...config: ([ListEndpointsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listEndpointsParamCreator = async (...config: ([ListEndpointsParams
         }
         ]
     };
+
+    return sendRequest<ListEndpointsReturnType>(Promise.resolve(args));
 }
 
 export default listEndpointsParamCreator;

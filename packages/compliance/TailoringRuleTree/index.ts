@@ -33,19 +33,24 @@ export type TailoringRuleTreeParams = {
   options?: AxiosRequestConfig
 }
 
-export type TailoringRuleTreeReturnType = AxiosPromise<any>;
+export type TailoringRuleTreeReturnType = any;
 
 const isTailoringRuleTreeObjectParams = (params: [TailoringRuleTreeParams] | unknown[]): params is [TailoringRuleTreeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
+  }
+  return false
 }
 /**
-* Returns the Rule Tree of a Tailoring
+* Returns rule tree of a tailoring.
 * @summary Request the Rule Tree of a Tailoring
 * @param {TailoringRuleTreeParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
-export const tailoringRuleTreeParamCreator = async (...config: ([TailoringRuleTreeParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const tailoringRuleTreeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TailoringRuleTreeParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isTailoringRuleTreeObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringRuleTreeParams;
     const { policyId, tailoringId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rule_tree`
@@ -68,10 +73,12 @@ export const tailoringRuleTreeParamCreator = async (...config: ([TailoringRuleTr
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<TailoringRuleTreeReturnType>(Promise.resolve(args));
 }
 
 export default tailoringRuleTreeParamCreator;

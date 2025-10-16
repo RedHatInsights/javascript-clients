@@ -62,100 +62,100 @@ export type ListSystemsParams = {
   filterLastUpload?: string,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterRhsaCount?: string,
+  filterRhsaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterRhbaCount?: string,
+  filterRhbaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterRheaCount?: string,
+  filterRheaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterOtherCount?: string,
+  filterOtherCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterInstallableRhsaCount?: string,
+  filterInstallableRhsaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterInstallableRhbaCount?: string,
+  filterInstallableRhbaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterInstallableRheaCount?: string,
+  filterInstallableRheaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterInstallableOtherCount?: string,
+  filterInstallableOtherCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterApplicableRhsaCount?: string,
+  filterApplicableRhsaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterApplicableRhbaCount?: string,
+  filterApplicableRhbaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterApplicableRheaCount?: string,
+  filterApplicableRheaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterApplicableOtherCount?: string,
+  filterApplicableOtherCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { boolean }
   * @memberof ListSystemsApi
   */
-  filterStale?: string,
+  filterStale?: boolean,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterPackagesInstalled?: string,
+  filterPackagesInstalled?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterPackagesInstallable?: string,
+  filterPackagesInstallable?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListSystemsApi
   */
-  filterPackagesApplicable?: string,
+  filterPackagesApplicable?: number,
   /**
   * Filter
   * @type { string }
@@ -200,16 +200,16 @@ export type ListSystemsParams = {
   filterTemplateUuid?: string,
   /**
   * Filter
-  * @type { string }
+  * @type { boolean }
   * @memberof ListSystemsApi
   */
-  filterSatelliteManaged?: string,
+  filterSatelliteManaged?: boolean,
   /**
   * Filter
-  * @type { string }
+  * @type { boolean }
   * @memberof ListSystemsApi
   */
-  filterBuiltPkgcache?: string,
+  filterBuiltPkgcache?: boolean,
   /**
   * Filter
   * @type { string }
@@ -254,10 +254,10 @@ export type ListSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ListSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -311,10 +311,14 @@ export const ListSystemsSortEnum = {
 } as const;
 export type ListSystemsSortEnum = typeof ListSystemsSortEnum[keyof typeof ListSystemsSortEnum];
 
-export type ListSystemsReturnType = AxiosPromise<ControllersSystemsResponse>;
+export type ListSystemsReturnType = ControllersSystemsResponse;
 
 const isListSystemsObjectParams = (params: [ListSystemsParams] | unknown[]): params is [ListSystemsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show me all my systems
@@ -323,7 +327,7 @@ const isListSystemsObjectParams = (params: [ListSystemsParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSystemsParamCreator = async (...config: ([ListSystemsParams] | [number, number, ListSystemsSortEnum, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSystemsParams] | [number, number, ListSystemsSortEnum, string, string, string, string, string, number, number, number, number, number, number, number, number, number, number, number, number, boolean, number, number, number, string, string, string, string, string, string, string, boolean, boolean, string, string, string, string, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isListSystemsObjectParams(config) ? config[0] : ['limit', 'offset', 'sort', 'search', 'filterId', 'filterDisplayName', 'filterLastEvaluation', 'filterLastUpload', 'filterRhsaCount', 'filterRhbaCount', 'filterRheaCount', 'filterOtherCount', 'filterInstallableRhsaCount', 'filterInstallableRhbaCount', 'filterInstallableRheaCount', 'filterInstallableOtherCount', 'filterApplicableRhsaCount', 'filterApplicableRhbaCount', 'filterApplicableRheaCount', 'filterApplicableOtherCount', 'filterStale', 'filterPackagesInstalled', 'filterPackagesInstallable', 'filterPackagesApplicable', 'filterStaleTimestamp', 'filterStaleWarningTimestamp', 'filterCulledTimestamp', 'filterCreated', 'filterBaselineName', 'filterTemplateName', 'filterTemplateUuid', 'filterSatelliteManaged', 'filterBuiltPkgcache', 'filterArch', 'filterOs', 'filterOsname', 'filterOsmajor', 'filterOsminor', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSystemsParams;
     const { limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterTemplateName, filterTemplateUuid, filterSatelliteManaged, filterBuiltPkgcache, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/systems`;
@@ -522,7 +526,7 @@ export const listSystemsParamCreator = async (...config: ([ListSystemsParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -534,6 +538,8 @@ export const listSystemsParamCreator = async (...config: ([ListSystemsParams] | 
         }
         ]
     };
+
+    return sendRequest<ListSystemsReturnType>(Promise.resolve(args));
 }
 
 export default listSystemsParamCreator;

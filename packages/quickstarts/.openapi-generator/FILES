@@ -4,6 +4,10 @@ FavoritesGet/index.ts
 FavoritesPost/index.ts
 HelptopicsGet/index.ts
 HelptopicsNameGet/index.ts
+ProgressGet/index.ts
+ProgressIdDelete/index.ts
+ProgressPost/index.ts
+QuickstartsFiltersGet/index.ts
 QuickstartsGet/index.ts
 QuickstartsIdGet/index.ts
 api.ts

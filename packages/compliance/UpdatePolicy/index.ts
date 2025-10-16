@@ -33,19 +33,23 @@ export type UpdatePolicyParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdatePolicyReturnType = AxiosPromise<CreatePolicy201Response>;
+export type UpdatePolicyReturnType = CreatePolicy201Response;
 
 const isUpdatePolicyObjectParams = (params: [UpdatePolicyParams] | unknown[]): params is [UpdatePolicyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+  }
+  return false
 }
 /**
-* Updates a Policy with the provided attributes
+* Edit or update an existing policy.
 * @summary Update a Policy
 * @param {UpdatePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updatePolicyParamCreator = async (...config: ([UpdatePolicyParams] | [any, any, PolicyUpdate, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updatePolicyParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdatePolicyParams] | [any, any, PolicyUpdate, AxiosRequestConfig])) => {
     const params = isUpdatePolicyObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'policyUpdate', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdatePolicyParams;
     const { policyId, xRHIDENTITY, policyUpdate, options = {} } = params;
     const localVarPath = `/policies/{policy_id}`
@@ -69,11 +73,13 @@ export const updatePolicyParamCreator = async (...config: ([UpdatePolicyParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: policyUpdate,
     };
+
+    return sendRequest<UpdatePolicyReturnType>(Promise.resolve(args));
 }
 
 export default updatePolicyParamCreator;

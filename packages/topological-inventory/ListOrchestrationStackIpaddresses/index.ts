@@ -45,10 +45,14 @@ export type ListOrchestrationStackIpaddressesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
+export type ListOrchestrationStackIpaddressesReturnType = IpaddressesCollection;
 
 const isListOrchestrationStackIpaddressesObjectParams = (params: [ListOrchestrationStackIpaddressesParams] | unknown[]): params is [ListOrchestrationStackIpaddressesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Ipaddress objects
@@ -57,7 +61,7 @@ const isListOrchestrationStackIpaddressesObjectParams = (params: [ListOrchestrat
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackIpaddressesParamCreator = async (...config: ([ListOrchestrationStackIpaddressesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackIpaddressesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackIpaddressesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackIpaddressesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackIpaddressesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/ipaddresses`
@@ -89,7 +93,7 @@ export const listOrchestrationStackIpaddressesParamCreator = async (...config: (
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listOrchestrationStackIpaddressesParamCreator = async (...config: (
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackIpaddressesReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackIpaddressesParamCreator;

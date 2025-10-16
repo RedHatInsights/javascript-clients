@@ -21,10 +21,14 @@ export type ShowContainerGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowContainerGroupReturnType = AxiosPromise<ContainerGroup>;
+export type ShowContainerGroupReturnType = ContainerGroup;
 
 const isShowContainerGroupObjectParams = (params: [ShowContainerGroupParams] | unknown[]): params is [ShowContainerGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a ContainerGroup object
@@ -33,7 +37,7 @@ const isShowContainerGroupObjectParams = (params: [ShowContainerGroupParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showContainerGroupParamCreator = async (...config: ([ShowContainerGroupParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showContainerGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowContainerGroupParams] | [string, AxiosRequestConfig])) => {
     const params = isShowContainerGroupObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowContainerGroupParams;
     const { id, options = {} } = params;
     const localVarPath = `/container_groups/{id}`
@@ -49,7 +53,7 @@ export const showContainerGroupParamCreator = async (...config: ([ShowContainerG
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showContainerGroupParamCreator = async (...config: ([ShowContainerG
         }
         ]
     };
+
+    return sendRequest<ShowContainerGroupReturnType>(Promise.resolve(args));
 }
 
 export default showContainerGroupParamCreator;

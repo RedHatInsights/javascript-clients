@@ -33,19 +33,23 @@ export type ReportSystemParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportSystemReturnType = AxiosPromise<System200Response>;
+export type ReportSystemReturnType = System200Response;
 
 const isReportSystemObjectParams = (params: [ReportSystemParams] | unknown[]): params is [ReportSystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'systemId') && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+  }
+  return false
 }
 /**
-* Returns a System under a Report
+* Retrieve a specific system from a specific report.
 * @summary Request a System
 * @param {ReportSystemParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportSystemParamCreator = async (...config: ([ReportSystemParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportSystemParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isReportSystemObjectParams(config) ? config[0] : ['systemId', 'reportId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportSystemParams;
     const { systemId, reportId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/reports/{report_id}/systems/{system_id}`
@@ -68,10 +72,12 @@ export const reportSystemParamCreator = async (...config: ([ReportSystemParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportSystemReturnType>(Promise.resolve(args));
 }
 
 export default reportSystemParamCreator;

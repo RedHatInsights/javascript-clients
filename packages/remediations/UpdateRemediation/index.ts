@@ -27,10 +27,14 @@ export type UpdateRemediationParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateRemediationReturnType = AxiosPromise<void>;
+export type UpdateRemediationReturnType = void;
 
 const isUpdateRemediationObjectParams = (params: [UpdateRemediationParams] | unknown[]): params is [UpdateRemediationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'remediationInput')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'remediationInput')
+  }
+  return false
 }
 /**
 * Updates the given Remediation, RBAC permission {remediations:remediation:write}
@@ -39,7 +43,7 @@ const isUpdateRemediationObjectParams = (params: [UpdateRemediationParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateRemediationParamCreator = async (...config: ([UpdateRemediationParams] | [string, RemediationInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateRemediationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateRemediationParams] | [string, RemediationInput, AxiosRequestConfig])) => {
     const params = isUpdateRemediationObjectParams(config) ? config[0] : ['id', 'remediationInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateRemediationParams;
     const { id, remediationInput, options = {} } = params;
     const localVarPath = `/remediations/{id}`
@@ -57,11 +61,13 @@ export const updateRemediationParamCreator = async (...config: ([UpdateRemediati
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: remediationInput,
     };
+
+    return sendRequest<UpdateRemediationReturnType>(Promise.resolve(args));
 }
 
 export default updateRemediationParamCreator;

@@ -21,10 +21,14 @@ export type KcsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type KcsRetrieveReturnType = AxiosPromise<Array<string>>;
+export type KcsRetrieveReturnType = Array<string>;
 
 const isKcsRetrieveObjectParams = (params: [KcsRetrieveParams] | unknown[]): params is [KcsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'nodeId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'nodeId')
+  }
+  return false
 }
 /**
 * Gets active rule(s) for a particular KCS solution (node_id)  Returns a list of C.R.C rule url(s) for that KCS solution
@@ -32,7 +36,7 @@ const isKcsRetrieveObjectParams = (params: [KcsRetrieveParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const kcsRetrieveParamCreator = async (...config: ([KcsRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const kcsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([KcsRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isKcsRetrieveObjectParams(config) ? config[0] : ['nodeId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as KcsRetrieveParams;
     const { nodeId, options = {} } = params;
     const localVarPath = `/api/insights/v1/kcs/{node_id}/`
@@ -48,10 +52,12 @@ export const kcsRetrieveParamCreator = async (...config: ([KcsRetrieveParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<KcsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default kcsRetrieveParamCreator;

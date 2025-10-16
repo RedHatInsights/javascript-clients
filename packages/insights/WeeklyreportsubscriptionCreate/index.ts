@@ -21,10 +21,14 @@ export type WeeklyreportsubscriptionCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type WeeklyreportsubscriptionCreateReturnType = AxiosPromise<WeeklyReportSubscription>;
+export type WeeklyreportsubscriptionCreateReturnType = WeeklyReportSubscription;
 
 const isWeeklyreportsubscriptionCreateObjectParams = (params: [WeeklyreportsubscriptionCreateParams] | unknown[]): params is [WeeklyreportsubscriptionCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'weeklyReportSubscription')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'weeklyReportSubscription')
+  }
+  return false
 }
 /**
 * Set the subscription status of the current user to the supplied `is_subscribed` value.  If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
@@ -32,7 +36,7 @@ const isWeeklyreportsubscriptionCreateObjectParams = (params: [Weeklyreportsubsc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const weeklyreportsubscriptionCreateParamCreator = async (...config: ([WeeklyreportsubscriptionCreateParams] | [WeeklyReportSubscription, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const weeklyreportsubscriptionCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WeeklyreportsubscriptionCreateParams] | [WeeklyReportSubscription, AxiosRequestConfig])) => {
     const params = isWeeklyreportsubscriptionCreateObjectParams(config) ? config[0] : ['weeklyReportSubscription', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WeeklyreportsubscriptionCreateParams;
     const { weeklyReportSubscription, options = {} } = params;
     const localVarPath = `/api/insights/v1/weeklyreportsubscription/`;
@@ -49,7 +53,7 @@ export const weeklyreportsubscriptionCreateParamCreator = async (...config: ([We
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: weeklyReportSubscription,
@@ -62,6 +66,8 @@ export const weeklyreportsubscriptionCreateParamCreator = async (...config: ([We
         }
         ]
     };
+
+    return sendRequest<WeeklyreportsubscriptionCreateReturnType>(Promise.resolve(args));
 }
 
 export default weeklyreportsubscriptionCreateParamCreator;

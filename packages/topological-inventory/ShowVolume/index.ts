@@ -21,10 +21,14 @@ export type ShowVolumeParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowVolumeReturnType = AxiosPromise<Volume>;
+export type ShowVolumeReturnType = Volume;
 
 const isShowVolumeObjectParams = (params: [ShowVolumeParams] | unknown[]): params is [ShowVolumeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a Volume object
@@ -33,7 +37,7 @@ const isShowVolumeObjectParams = (params: [ShowVolumeParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showVolumeParamCreator = async (...config: ([ShowVolumeParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showVolumeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowVolumeParams] | [string, AxiosRequestConfig])) => {
     const params = isShowVolumeObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowVolumeParams;
     const { id, options = {} } = params;
     const localVarPath = `/volumes/{id}`
@@ -49,7 +53,7 @@ export const showVolumeParamCreator = async (...config: ([ShowVolumeParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showVolumeParamCreator = async (...config: ([ShowVolumeParams] | [s
         }
         ]
     };
+
+    return sendRequest<ShowVolumeReturnType>(Promise.resolve(args));
 }
 
 export default showVolumeParamCreator;

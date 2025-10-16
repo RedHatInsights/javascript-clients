@@ -45,10 +45,14 @@ export type ListSourceVolumeTypesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceVolumeTypesReturnType = AxiosPromise<VolumeTypesCollection>;
+export type ListSourceVolumeTypesReturnType = VolumeTypesCollection;
 
 const isListSourceVolumeTypesObjectParams = (params: [ListSourceVolumeTypesParams] | unknown[]): params is [ListSourceVolumeTypesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of VolumeType objects
@@ -57,7 +61,7 @@ const isListSourceVolumeTypesObjectParams = (params: [ListSourceVolumeTypesParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceVolumeTypesParamCreator = async (...config: ([ListSourceVolumeTypesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceVolumeTypesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceVolumeTypesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceVolumeTypesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceVolumeTypesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/volume_types`
@@ -89,7 +93,7 @@ export const listSourceVolumeTypesParamCreator = async (...config: ([ListSourceV
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listSourceVolumeTypesParamCreator = async (...config: ([ListSourceV
         }
         ]
     };
+
+    return sendRequest<ListSourceVolumeTypesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceVolumeTypesParamCreator;

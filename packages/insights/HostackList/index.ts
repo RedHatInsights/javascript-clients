@@ -57,18 +57,22 @@ export type HostackListParams = {
   options?: AxiosRequestConfig
 }
 
-export type HostackListReturnType = AxiosPromise<PaginatedHostAckList>;
+export type HostackListReturnType = PaginatedHostAckList;
 
 const isHostackListObjectParams = (params: [HostackListParams] | unknown[]): params is [HostackListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* List host acks from this account for a system where the rule is active.  Hostacks are retrieved, edited and deleted by the \'id\' field.
+* HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  Hostacks are retrieved, edited and deleted by the \'id\' field.
 * @param {HostackListParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const hostackListParamCreator = async (...config: ([HostackListParams] | [Array<string>, boolean, Array<string>, number, number, Array<string>, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const hostackListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([HostackListParams] | [Array<string>, boolean, Array<string>, number, number, Array<string>, Array<string>, AxiosRequestConfig])) => {
     const params = isHostackListObjectParams(config) ? config[0] : ['filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'limit', 'offset', 'ruleId', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HostackListParams;
     const { filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, ruleId, tags, options = {} } = params;
     const localVarPath = `/api/insights/v1/hostack/`;
@@ -111,7 +115,7 @@ export const hostackListParamCreator = async (...config: ([HostackListParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -123,6 +127,8 @@ export const hostackListParamCreator = async (...config: ([HostackListParams] | 
         }
         ]
     };
+
+    return sendRequest<HostackListReturnType>(Promise.resolve(args));
 }
 
 export default hostackListParamCreator;

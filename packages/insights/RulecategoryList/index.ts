@@ -15,10 +15,14 @@ export type RulecategoryListParams = {
   options?: AxiosRequestConfig
 }
 
-export type RulecategoryListReturnType = AxiosPromise<Array<RuleCategory>>;
+export type RulecategoryListReturnType = Array<RuleCategory>;
 
 const isRulecategoryListObjectParams = (params: [RulecategoryListParams] | unknown[]): params is [RulecategoryListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
@@ -26,7 +30,7 @@ const isRulecategoryListObjectParams = (params: [RulecategoryListParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const rulecategoryListParamCreator = async (...config: ([RulecategoryListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const rulecategoryListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RulecategoryListParams] | [AxiosRequestConfig])) => {
     const params = isRulecategoryListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RulecategoryListParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/rulecategory/`;
@@ -41,10 +45,12 @@ export const rulecategoryListParamCreator = async (...config: ([RulecategoryList
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<RulecategoryListReturnType>(Promise.resolve(args));
 }
 
 export default rulecategoryListParamCreator;

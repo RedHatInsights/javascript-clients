@@ -15,10 +15,14 @@ export type GetStatusParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetStatusReturnType = AxiosPromise<Status>;
+export type GetStatusReturnType = Status;
 
 const isGetStatusObjectParams = (params: [GetStatusParams] | unknown[]): params is [GetStatusParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 *
@@ -27,7 +31,7 @@ const isGetStatusObjectParams = (params: [GetStatusParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getStatusParamCreator = async (...config: ([GetStatusParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getStatusParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetStatusParams] | [AxiosRequestConfig])) => {
     const params = isGetStatusObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetStatusParams;
     const { options = {} } = params;
     const localVarPath = `/status/`;
@@ -42,7 +46,7 @@ export const getStatusParamCreator = async (...config: ([GetStatusParams] | [Axi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -53,6 +57,8 @@ export const getStatusParamCreator = async (...config: ([GetStatusParams] | [Axi
         }
         ]
     };
+
+    return sendRequest<GetStatusReturnType>(Promise.resolve(args));
 }
 
 export default getStatusParamCreator;

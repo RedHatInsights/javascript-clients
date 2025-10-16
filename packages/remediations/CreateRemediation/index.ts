@@ -21,10 +21,14 @@ export type CreateRemediationParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateRemediationReturnType = AxiosPromise<RemediationCreated>;
+export type CreateRemediationReturnType = RemediationCreated;
 
 const isCreateRemediationObjectParams = (params: [CreateRemediationParams] | unknown[]): params is [CreateRemediationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'remediationInput')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'remediationInput')
+  }
+  return false
 }
 /**
 * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
@@ -33,7 +37,7 @@ const isCreateRemediationObjectParams = (params: [CreateRemediationParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createRemediationParamCreator = async (...config: ([CreateRemediationParams] | [RemediationInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createRemediationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreateRemediationParams] | [RemediationInput, AxiosRequestConfig])) => {
     const params = isCreateRemediationObjectParams(config) ? config[0] : ['remediationInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateRemediationParams;
     const { remediationInput, options = {} } = params;
     const localVarPath = `/remediations`;
@@ -50,11 +54,13 @@ export const createRemediationParamCreator = async (...config: ([CreateRemediati
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: remediationInput,
     };
+
+    return sendRequest<CreateRemediationReturnType>(Promise.resolve(args));
 }
 
 export default createRemediationParamCreator;

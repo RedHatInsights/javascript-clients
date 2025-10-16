@@ -39,10 +39,14 @@ export type ListSourcesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourcesReturnType = AxiosPromise<SourcesCollection>;
+export type ListSourcesReturnType = SourcesCollection;
 
 const isListSourcesObjectParams = (params: [ListSourcesParams] | unknown[]): params is [ListSourcesParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Source objects
@@ -51,7 +55,7 @@ const isListSourcesObjectParams = (params: [ListSourcesParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourcesParamCreator = async (...config: ([ListSourcesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourcesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourcesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourcesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourcesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources`;
@@ -82,7 +86,7 @@ export const listSourcesParamCreator = async (...config: ([ListSourcesParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listSourcesParamCreator = async (...config: ([ListSourcesParams] | 
         }
         ]
     };
+
+    return sendRequest<ListSourcesReturnType>(Promise.resolve(args));
 }
 
 export default listSourcesParamCreator;

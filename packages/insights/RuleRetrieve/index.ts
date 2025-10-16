@@ -33,10 +33,14 @@ export type RuleRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleRetrieveReturnType = AxiosPromise<RuleForAccount>;
+export type RuleRetrieveReturnType = RuleForAccount;
 
 const isRuleRetrieveObjectParams = (params: [RuleRetrieveParams] | unknown[]): params is [RuleRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
@@ -44,7 +48,7 @@ const isRuleRetrieveObjectParams = (params: [RuleRetrieveParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleRetrieveParamCreator = async (...config: ([RuleRetrieveParams] | [string, Array<string>, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleRetrieveParams] | [string, Array<string>, Array<string>, AxiosRequestConfig])) => {
     const params = isRuleRetrieveObjectParams(config) ? config[0] : ['ruleId', 'groups', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleRetrieveParams;
     const { ruleId, groups, tags, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/`
@@ -68,7 +72,7 @@ export const ruleRetrieveParamCreator = async (...config: ([RuleRetrieveParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -80,6 +84,8 @@ export const ruleRetrieveParamCreator = async (...config: ([RuleRetrieveParams] 
         }
         ]
     };
+
+    return sendRequest<RuleRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default ruleRetrieveParamCreator;

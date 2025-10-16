@@ -17,14 +17,18 @@ export type DeletePoliciesIdsParams = {
   * @type { Array<string> }
   * @memberof DeletePoliciesIdsApi
   */
-  requestBody?: Array<string>,
+  requestBody: Array<string>,
   options?: AxiosRequestConfig
 }
 
-export type DeletePoliciesIdsReturnType = AxiosPromise<Array<string>>;
+export type DeletePoliciesIdsReturnType = Array<string>;
 
 const isDeletePoliciesIdsObjectParams = (params: [DeletePoliciesIdsParams] | unknown[]): params is [DeletePoliciesIdsParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'requestBody')
+  }
+  return false
 }
 /**
 *
@@ -33,7 +37,7 @@ const isDeletePoliciesIdsObjectParams = (params: [DeletePoliciesIdsParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deletePoliciesIdsParamCreator = async (...config: ([DeletePoliciesIdsParams] | [Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deletePoliciesIdsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeletePoliciesIdsParams] | [Array<string>, AxiosRequestConfig])) => {
     const params = isDeletePoliciesIdsObjectParams(config) ? config[0] : ['requestBody', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeletePoliciesIdsParams;
     const { requestBody, options = {} } = params;
     const localVarPath = `/policies/ids`;
@@ -50,11 +54,13 @@ export const deletePoliciesIdsParamCreator = async (...config: ([DeletePoliciesI
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: requestBody,
     };
+
+    return sendRequest<DeletePoliciesIdsReturnType>(Promise.resolve(args));
 }
 
 export default deletePoliciesIdsParamCreator;

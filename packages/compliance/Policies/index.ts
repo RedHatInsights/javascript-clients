@@ -51,19 +51,23 @@ export type PoliciesParams = {
   options?: AxiosRequestConfig
 }
 
-export type PoliciesReturnType = AxiosPromise<Policies200Response>;
+export type PoliciesReturnType = Policies200Response;
 
 const isPoliciesObjectParams = (params: [PoliciesParams] | unknown[]): params is [PoliciesParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* Lists Policies
+* Retrieve the list of policies that have been created to test the compliance of your registered systems.
 * @summary Request Policies
 * @param {PoliciesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const policiesParamCreator = async (...config: ([PoliciesParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const policiesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PoliciesParams] | [any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isPoliciesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PoliciesParams;
     const { xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/policies`;
@@ -104,10 +108,12 @@ export const policiesParamCreator = async (...config: ([PoliciesParams] | [any, 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<PoliciesReturnType>(Promise.resolve(args));
 }
 
 export default policiesParamCreator;

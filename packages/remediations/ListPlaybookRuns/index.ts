@@ -48,10 +48,14 @@ export const ListPlaybookRunsSortEnum = {
 } as const;
 export type ListPlaybookRunsSortEnum = typeof ListPlaybookRunsSortEnum[keyof typeof ListPlaybookRunsSortEnum];
 
-export type ListPlaybookRunsReturnType = AxiosPromise<PlaybookRunsList>;
+export type ListPlaybookRunsReturnType = PlaybookRunsList;
 
 const isListPlaybookRunsObjectParams = (params: [ListPlaybookRunsParams] | unknown[]): params is [ListPlaybookRunsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * List of executions of this remediation
@@ -60,7 +64,7 @@ const isListPlaybookRunsObjectParams = (params: [ListPlaybookRunsParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listPlaybookRunsParamCreator = async (...config: ([ListPlaybookRunsParams] | [string, number, number, ListPlaybookRunsSortEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listPlaybookRunsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListPlaybookRunsParams] | [string, number, number, ListPlaybookRunsSortEnum, AxiosRequestConfig])) => {
     const params = isListPlaybookRunsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'sort', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPlaybookRunsParams;
     const { id, limit, offset, sort, options = {} } = params;
     const localVarPath = `/remediations/{id}/playbook_runs`
@@ -88,10 +92,12 @@ export const listPlaybookRunsParamCreator = async (...config: ([ListPlaybookRuns
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ListPlaybookRunsReturnType>(Promise.resolve(args));
 }
 
 export default listPlaybookRunsParamCreator;

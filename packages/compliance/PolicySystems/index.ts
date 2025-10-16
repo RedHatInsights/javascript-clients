@@ -55,7 +55,7 @@ export type PolicySystemsParams = {
   */
   sortBy?: any,
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_version`, `os_minor_version`, and `group_name`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_minor_version`, and `group_name`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof PolicySystemsApi
   */
@@ -63,19 +63,23 @@ export type PolicySystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type PolicySystemsReturnType = AxiosPromise<Systems200Response>;
+export type PolicySystemsReturnType = Systems200Response;
 
 const isPolicySystemsObjectParams = (params: [PolicySystemsParams] | unknown[]): params is [PolicySystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId')
+  }
+  return false
 }
 /**
-* Lists Systems assigned to a Policy
+* Retrieve all of the systems assigned to a specific policy.
 * @summary Request Systems assigned to a Policy
 * @param {PolicySystemsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const policySystemsParamCreator = async (...config: ([PolicySystemsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const policySystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PolicySystemsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isPolicySystemsObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'tags', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PolicySystemsParams;
     const { policyId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/systems`
@@ -121,10 +125,12 @@ export const policySystemsParamCreator = async (...config: ([PolicySystemsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<PolicySystemsReturnType>(Promise.resolve(args));
 }
 
 export default policySystemsParamCreator;

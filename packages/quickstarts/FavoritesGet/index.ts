@@ -12,13 +12,23 @@ import type { BadRequest, FavoritesGet200Response } from '../types';
 
 
 export type FavoritesGetParams = {
+  /**
+  * Account number
+  * @type { string }
+  * @memberof FavoritesGetApi
+  */
+  account: string,
   options?: AxiosRequestConfig
 }
 
-export type FavoritesGetReturnType = AxiosPromise<FavoritesGet200Response>;
+export type FavoritesGetReturnType = FavoritesGet200Response;
 
 const isFavoritesGetObjectParams = (params: [FavoritesGetParams] | unknown[]): params is [FavoritesGetParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'account')
+  }
+  return false
 }
 /**
 *
@@ -27,9 +37,9 @@ const isFavoritesGetObjectParams = (params: [FavoritesGetParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const favoritesGetParamCreator = async (...config: ([FavoritesGetParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isFavoritesGetObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as FavoritesGetParams;
-    const { options = {} } = params;
+export const favoritesGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([FavoritesGetParams] | [string, AxiosRequestConfig])) => {
+    const params = isFavoritesGetObjectParams(config) ? config[0] : ['account', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as FavoritesGetParams;
+    const { account, options = {} } = params;
     const localVarPath = `/favorites`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -37,15 +47,21 @@ export const favoritesGetParamCreator = async (...config: ([FavoritesGetParams] 
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
+    if (account !== undefined) {
+        localVarQueryParameter['account'] = account;
+    }
+
 
 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<FavoritesGetReturnType>(Promise.resolve(args));
 }
 
 export default favoritesGetParamCreator;

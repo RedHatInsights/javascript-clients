@@ -62,28 +62,28 @@ export type ListAdvisoriesParams = {
   filterSynopsis?: string,
   /**
   * Filter
-  * @type { string }
+  * @type { ListAdvisoriesFilterAdvisoryTypeNameEnum }
   * @memberof ListAdvisoriesApi
   */
-  filterAdvisoryTypeName?: string,
+  filterAdvisoryTypeName?: ListAdvisoriesFilterAdvisoryTypeNameEnum,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListAdvisoriesApi
   */
-  filterSeverity?: string,
+  filterSeverity?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListAdvisoriesApi
   */
-  filterInstallableSystems?: string,
+  filterInstallableSystems?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListAdvisoriesApi
   */
-  filterApplicableSystems?: string,
+  filterApplicableSystems?: number,
   /**
   * Tag filter
   * @type { Array<string> }
@@ -98,10 +98,10 @@ export type ListAdvisoriesParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ListAdvisoriesApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -148,11 +148,28 @@ export const ListAdvisoriesSortEnum = {
     ApplicableSystems: 'applicable_systems'
 } as const;
 export type ListAdvisoriesSortEnum = typeof ListAdvisoriesSortEnum[keyof typeof ListAdvisoriesSortEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const ListAdvisoriesFilterAdvisoryTypeNameEnum = {
+    Unknown: 'unknown',
+    Unspecified: 'unspecified',
+    Other: 'other',
+    Enhancement: 'enhancement',
+    Bugfix: 'bugfix',
+    Security: 'security'
+} as const;
+export type ListAdvisoriesFilterAdvisoryTypeNameEnum = typeof ListAdvisoriesFilterAdvisoryTypeNameEnum[keyof typeof ListAdvisoriesFilterAdvisoryTypeNameEnum];
 
-export type ListAdvisoriesReturnType = AxiosPromise<ControllersAdvisoriesResponse>;
+export type ListAdvisoriesReturnType = ControllersAdvisoriesResponse;
 
 const isListAdvisoriesObjectParams = (params: [ListAdvisoriesParams] | unknown[]): params is [ListAdvisoriesParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show me all applicable advisories for all my systems
@@ -161,7 +178,7 @@ const isListAdvisoriesObjectParams = (params: [ListAdvisoriesParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listAdvisoriesParamCreator = async (...config: ([ListAdvisoriesParams] | [number, number, ListAdvisoriesSortEnum, string, string, string, string, string, string, string, string, string, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listAdvisoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAdvisoriesParams] | [number, number, ListAdvisoriesSortEnum, string, string, string, string, string, ListAdvisoriesFilterAdvisoryTypeNameEnum, number, number, number, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isListAdvisoriesObjectParams(config) ? config[0] : ['limit', 'offset', 'sort', 'search', 'filterId', 'filterDescription', 'filterPublicDate', 'filterSynopsis', 'filterAdvisoryTypeName', 'filterSeverity', 'filterInstallableSystems', 'filterApplicableSystems', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAdvisoriesParams;
     const { limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/advisories`;
@@ -256,7 +273,7 @@ export const listAdvisoriesParamCreator = async (...config: ([ListAdvisoriesPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -268,6 +285,8 @@ export const listAdvisoriesParamCreator = async (...config: ([ListAdvisoriesPara
         }
         ]
     };
+
+    return sendRequest<ListAdvisoriesReturnType>(Promise.resolve(args));
 }
 
 export default listAdvisoriesParamCreator;

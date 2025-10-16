@@ -27,10 +27,14 @@ export type RuleAckHostsCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleAckHostsCreateReturnType = AxiosPromise<MultiAckResponse>;
+export type RuleAckHostsCreateReturnType = MultiAckResponse;
 
 const isRuleAckHostsCreateObjectParams = (params: [RuleAckHostsCreateParams] | unknown[]): params is [RuleAckHostsCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && Object.prototype.hasOwnProperty.call(params, 'multiHostAck')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId') && Object.prototype.hasOwnProperty.call(params[0], 'multiHostAck')
+  }
+  return false
 }
 /**
 * Add acknowledgements for one or more hosts to this rule.  Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
@@ -38,7 +42,7 @@ const isRuleAckHostsCreateObjectParams = (params: [RuleAckHostsCreateParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleAckHostsCreateParamCreator = async (...config: ([RuleAckHostsCreateParams] | [string, MultiHostAck, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleAckHostsCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleAckHostsCreateParams] | [string, MultiHostAck, AxiosRequestConfig])) => {
     const params = isRuleAckHostsCreateObjectParams(config) ? config[0] : ['ruleId', 'multiHostAck', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleAckHostsCreateParams;
     const { ruleId, multiHostAck, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/ack_hosts/`
@@ -56,7 +60,7 @@ export const ruleAckHostsCreateParamCreator = async (...config: ([RuleAckHostsCr
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: multiHostAck,
@@ -69,6 +73,8 @@ export const ruleAckHostsCreateParamCreator = async (...config: ([RuleAckHostsCr
         }
         ]
     };
+
+    return sendRequest<RuleAckHostsCreateReturnType>(Promise.resolve(args));
 }
 
 export default ruleAckHostsCreateParamCreator;

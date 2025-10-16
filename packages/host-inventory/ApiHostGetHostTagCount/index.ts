@@ -57,10 +57,14 @@ export const ApiHostGetHostTagCountOrderByEnum = {
 } as const;
 export type ApiHostGetHostTagCountOrderByEnum = typeof ApiHostGetHostTagCountOrderByEnum[keyof typeof ApiHostGetHostTagCountOrderByEnum];
 
-export type ApiHostGetHostTagCountReturnType = AxiosPromise<TagCountOut>;
+export type ApiHostGetHostTagCountReturnType = TagCountOut;
 
 const isApiHostGetHostTagCountObjectParams = (params: [ApiHostGetHostTagCountParams] | unknown[]): params is [ApiHostGetHostTagCountParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read
@@ -69,7 +73,7 @@ const isApiHostGetHostTagCountObjectParams = (params: [ApiHostGetHostTagCountPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostTagCountParamCreator = async (...config: ([ApiHostGetHostTagCountParams] | [Array<string>, number, number, ApiHostGetHostTagCountOrderByEnum, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostTagCountParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostTagCountParams] | [Array<string>, number, number, ApiHostGetHostTagCountOrderByEnum, string, AxiosRequestConfig])) => {
     const params = isApiHostGetHostTagCountObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostTagCountParams;
     const { hostIdList, perPage, page, orderBy, orderHow, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/tags/count`
@@ -101,7 +105,7 @@ export const apiHostGetHostTagCountParamCreator = async (...config: ([ApiHostGet
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -113,6 +117,8 @@ export const apiHostGetHostTagCountParamCreator = async (...config: ([ApiHostGet
         }
         ]
     };
+
+    return sendRequest<ApiHostGetHostTagCountReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGetHostTagCountParamCreator;

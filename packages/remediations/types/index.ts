@@ -89,6 +89,25 @@ export interface GetRemediationIssuesFilterParameter {
 /**
  *
  * @export
+ * @interface GetRemediationSystemIssuesFilterParameter
+ */
+export interface GetRemediationSystemIssuesFilterParameter {
+    /**
+     * Filter by issue id (allows partial match)
+     * @type {string}
+     * @memberof GetRemediationSystemIssuesFilterParameter
+     */
+    'id'?: string;
+    /**
+     * Selected resolution type (e.g., fix)
+     * @type {string}
+     * @memberof GetRemediationSystemIssuesFilterParameter
+     */
+    'resolution.id'?: string;
+}
+/**
+ *
+ * @export
  * @interface GetRemediationSystemsFilterParameter
  */
 export interface GetRemediationSystemsFilterParameter {
@@ -155,7 +174,7 @@ export interface GetRemediationsFilterParameter {
      */
     'last_run_after'?: GetRemediationsFilterParameterAnyOfLastRunAfter;
     /**
-     * Filter remediations created on or after this timestamp (ISO 8601 format)
+     * Filter remediations created on or after this timestamp (ISO 8601 format) Must be a valid ISO 8601 date-time string. Precision should be to the nearest second or millisecond. Example: \'2024-09-11T12:00:00Z\' or \'2024-09-11T12:00:00.123Z\'
      * @type {string}
      * @memberof GetRemediationsFilterParameter
      */
@@ -167,7 +186,7 @@ export interface GetRemediationsFilterParameter {
      */
     'status'?: GetRemediationsFilterParameterStatusEnum;
     /**
-     * Filter remediations updated on or after this timestamp (ISO 8601 format)
+     * Filter remediations updated on or after this timestamp (ISO 8601 format) Must be a valid ISO 8601 date-time string. Precision should be to the nearest second or millisecond. Example: \'2024-09-11T12:00:00Z\' or \'2024-09-11T12:00:00.123Z\'
      * @type {string}
      * @memberof GetRemediationsFilterParameter
      */
@@ -201,7 +220,7 @@ export interface GetRemediationsFilterParameterAnyOf {
      */
     'last_run_after'?: GetRemediationsFilterParameterAnyOfLastRunAfter;
     /**
-     * Filter remediations created on or after this timestamp (ISO 8601 format)
+     * Filter remediations created on or after this timestamp (ISO 8601 format) Must be a valid ISO 8601 date-time string. Precision should be to the nearest second or millisecond. Example: \'2024-09-11T12:00:00Z\' or \'2024-09-11T12:00:00.123Z\'
      * @type {string}
      * @memberof GetRemediationsFilterParameterAnyOf
      */
@@ -213,7 +232,7 @@ export interface GetRemediationsFilterParameterAnyOf {
      */
     'status'?: GetRemediationsFilterParameterAnyOfStatusEnum;
     /**
-     * Filter remediations updated on or after this timestamp (ISO 8601 format)
+     * Filter remediations updated on or after this timestamp (ISO 8601 format) Must be a valid ISO 8601 date-time string. Precision should be to the nearest second or millisecond. Example: \'2024-09-11T12:00:00Z\' or \'2024-09-11T12:00:00.123Z\'
      * @type {string}
      * @memberof GetRemediationsFilterParameterAnyOf
      */
@@ -1239,16 +1258,16 @@ export interface RemediationIssueSummary {
 export interface RemediationIssueSystemList {
     /**
      *
-     * @type {Array<SystemOut>}
-     * @memberof RemediationIssueSystemList
-     */
-    'data': Array<SystemOut>;
-    /**
-     *
      * @type {Meta}
      * @memberof RemediationIssueSystemList
      */
     'meta': Meta;
+    /**
+     *
+     * @type {Array<SystemOut>}
+     * @memberof RemediationIssueSystemList
+     */
+    'data': Array<SystemOut>;
 }
 /**
  *
@@ -1576,6 +1595,93 @@ export interface ResolutionsResolutionsInner {
 }
 
 
+/**
+ *
+ * @export
+ * @interface SystemIssueOut
+ */
+export interface SystemIssueOut {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemIssueOut
+     */
+    'id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemIssueOut
+     */
+    'description': string;
+    /**
+     *
+     * @type {SystemIssueOutResolution}
+     * @memberof SystemIssueOut
+     */
+    'resolution': SystemIssueOutResolution;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemIssueOut
+     */
+    'resolutions_available': number;
+}
+/**
+ *
+ * @export
+ * @interface SystemIssueOutResolution
+ */
+export interface SystemIssueOutResolution {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemIssueOutResolution
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemIssueOutResolution
+     */
+    'description'?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemIssueOutResolution
+     */
+    'resolution_risk'?: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemIssueOutResolution
+     */
+    'needs_reboot'?: boolean;
+}
+/**
+ *
+ * @export
+ * @interface SystemIssuesList
+ */
+export interface SystemIssuesList {
+    /**
+     *
+     * @type {Meta}
+     * @memberof SystemIssuesList
+     */
+    'meta': Meta;
+    /**
+     *
+     * @type {Links}
+     * @memberof SystemIssuesList
+     */
+    'links'?: Links;
+    /**
+     *
+     * @type {Array<SystemIssueOut>}
+     * @memberof SystemIssuesList
+     */
+    'data': Array<SystemIssueOut>;
+}
 /**
  *
  * @export

@@ -21,10 +21,14 @@ export type TopicCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type TopicCreateReturnType = AxiosPromise<TopicEdit>;
+export type TopicCreateReturnType = TopicEdit;
 
 const isTopicCreateObjectParams = (params: [TopicCreateParams] | unknown[]): params is [TopicCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'topicEdit')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'topicEdit')
+  }
+  return false
 }
 /**
 * Create a new rule topic, along with its association to a rule tag
@@ -33,7 +37,7 @@ const isTopicCreateObjectParams = (params: [TopicCreateParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const topicCreateParamCreator = async (...config: ([TopicCreateParams] | [TopicEdit, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const topicCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TopicCreateParams] | [TopicEdit, AxiosRequestConfig])) => {
     const params = isTopicCreateObjectParams(config) ? config[0] : ['topicEdit', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TopicCreateParams;
     const { topicEdit, options = {} } = params;
     const localVarPath = `/api/insights/v1/topic/`;
@@ -50,7 +54,7 @@ export const topicCreateParamCreator = async (...config: ([TopicCreateParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: topicEdit,
@@ -63,6 +67,8 @@ export const topicCreateParamCreator = async (...config: ([TopicCreateParams] | 
         }
         ]
     };
+
+    return sendRequest<TopicCreateReturnType>(Promise.resolve(args));
 }
 
 export default topicCreateParamCreator;

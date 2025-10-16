@@ -27,10 +27,14 @@ export type UpdateGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateGroupReturnType = AxiosPromise<GroupOut>;
+export type UpdateGroupReturnType = GroupOut;
 
 const isUpdateGroupObjectParams = (params: [UpdateGroupParams] | unknown[]): params is [UpdateGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'group')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'group')
+  }
+  return false
 }
 /**
 *
@@ -39,7 +43,7 @@ const isUpdateGroupObjectParams = (params: [UpdateGroupParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateGroupParamCreator = async (...config: ([UpdateGroupParams] | [string, Group, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateGroupParams] | [string, Group, AxiosRequestConfig])) => {
     const params = isUpdateGroupObjectParams(config) ? config[0] : ['uuid', 'group', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateGroupParams;
     const { uuid, group, options = {} } = params;
     const localVarPath = `/groups/{uuid}/`
@@ -57,7 +61,7 @@ export const updateGroupParamCreator = async (...config: ([UpdateGroupParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: group,
@@ -69,6 +73,8 @@ export const updateGroupParamCreator = async (...config: ([UpdateGroupParams] | 
         }
         ]
     };
+
+    return sendRequest<UpdateGroupReturnType>(Promise.resolve(args));
 }
 
 export default updateGroupParamCreator;

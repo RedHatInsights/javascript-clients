@@ -27,10 +27,14 @@ export type DeleteRemediationIssueParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteRemediationIssueReturnType = AxiosPromise<void>;
+export type DeleteRemediationIssueReturnType = void;
 
 const isDeleteRemediationIssueObjectParams = (params: [DeleteRemediationIssueParams] | unknown[]): params is [DeleteRemediationIssueParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'issue')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue')
+  }
+  return false
 }
 /**
 * Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
@@ -39,7 +43,7 @@ const isDeleteRemediationIssueObjectParams = (params: [DeleteRemediationIssuePar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRemediationIssueParamCreator = async (...config: ([DeleteRemediationIssueParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRemediationIssueParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRemediationIssueParams] | [string, string, AxiosRequestConfig])) => {
     const params = isDeleteRemediationIssueObjectParams(config) ? config[0] : ['id', 'issue', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationIssueParams;
     const { id, issue, options = {} } = params;
     const localVarPath = `/remediations/{id}/issues/{issue}`
@@ -56,10 +60,12 @@ export const deleteRemediationIssueParamCreator = async (...config: ([DeleteReme
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<DeleteRemediationIssueReturnType>(Promise.resolve(args));
 }
 
 export default deleteRemediationIssueParamCreator;

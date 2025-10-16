@@ -21,10 +21,14 @@ export type ShowTaskParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowTaskReturnType = AxiosPromise<Task>;
+export type ShowTaskReturnType = Task;
 
 const isShowTaskObjectParams = (params: [ShowTaskParams] | unknown[]): params is [ShowTaskParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a Task object
@@ -33,7 +37,7 @@ const isShowTaskObjectParams = (params: [ShowTaskParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showTaskParamCreator = async (...config: ([ShowTaskParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showTaskParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowTaskParams] | [string, AxiosRequestConfig])) => {
     const params = isShowTaskObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowTaskParams;
     const { id, options = {} } = params;
     const localVarPath = `/tasks/{id}`
@@ -49,7 +53,7 @@ export const showTaskParamCreator = async (...config: ([ShowTaskParams] | [strin
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showTaskParamCreator = async (...config: ([ShowTaskParams] | [strin
         }
         ]
     };
+
+    return sendRequest<ShowTaskReturnType>(Promise.resolve(args));
 }
 
 export default showTaskParamCreator;

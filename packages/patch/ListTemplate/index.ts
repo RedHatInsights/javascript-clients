@@ -75,10 +75,14 @@ export const ListTemplateSortEnum = {
 } as const;
 export type ListTemplateSortEnum = typeof ListTemplateSortEnum[keyof typeof ListTemplateSortEnum];
 
-export type ListTemplateReturnType = AxiosPromise<ControllersTemplatesResponse>;
+export type ListTemplateReturnType = ControllersTemplatesResponse;
 
 const isListTemplateObjectParams = (params: [ListTemplateParams] | unknown[]): params is [ListTemplateParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show all templates for an account
@@ -87,7 +91,7 @@ const isListTemplateObjectParams = (params: [ListTemplateParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTemplateParamCreator = async (...config: ([ListTemplateParams] | [number, number, ListTemplateSortEnum, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTemplateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTemplateParams] | [number, number, ListTemplateSortEnum, string, string, string, string, Array<string>, AxiosRequestConfig])) => {
     const params = isListTemplateObjectParams(config) ? config[0] : ['limit', 'offset', 'sort', 'search', 'filterId', 'filterName', 'filterSystems', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTemplateParams;
     const { limit, offset, sort, search, filterId, filterName, filterSystems, tags, options = {} } = params;
     const localVarPath = `/templates`;
@@ -134,7 +138,7 @@ export const listTemplateParamCreator = async (...config: ([ListTemplateParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -146,6 +150,8 @@ export const listTemplateParamCreator = async (...config: ([ListTemplateParams] 
         }
         ]
     };
+
+    return sendRequest<ListTemplateReturnType>(Promise.resolve(args));
 }
 
 export default listTemplateParamCreator;

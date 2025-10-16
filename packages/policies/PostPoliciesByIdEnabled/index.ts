@@ -27,10 +27,14 @@ export type PostPoliciesByIdEnabledParams = {
   options?: AxiosRequestConfig
 }
 
-export type PostPoliciesByIdEnabledReturnType = AxiosPromise<void>;
+export type PostPoliciesByIdEnabledReturnType = void;
 
 const isPostPoliciesByIdEnabledObjectParams = (params: [PostPoliciesByIdEnabledParams] | unknown[]): params is [PostPoliciesByIdEnabledParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 *
@@ -39,7 +43,7 @@ const isPostPoliciesByIdEnabledObjectParams = (params: [PostPoliciesByIdEnabledP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const postPoliciesByIdEnabledParamCreator = async (...config: ([PostPoliciesByIdEnabledParams] | [string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const postPoliciesByIdEnabledParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PostPoliciesByIdEnabledParams] | [string, boolean, AxiosRequestConfig])) => {
     const params = isPostPoliciesByIdEnabledObjectParams(config) ? config[0] : ['id', 'enabled', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PostPoliciesByIdEnabledParams;
     const { id, enabled, options = {} } = params;
     const localVarPath = `/policies/{id}/enabled`
@@ -59,10 +63,12 @@ export const postPoliciesByIdEnabledParamCreator = async (...config: ([PostPolic
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<PostPoliciesByIdEnabledReturnType>(Promise.resolve(args));
 }
 
 export default postPoliciesByIdEnabledParamCreator;

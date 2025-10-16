@@ -15,10 +15,14 @@ export type ApiStalenessDeleteStalenessParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiStalenessDeleteStalenessReturnType = AxiosPromise<void>;
+export type ApiStalenessDeleteStalenessReturnType = void;
 
 const isApiStalenessDeleteStalenessObjectParams = (params: [ApiStalenessDeleteStalenessParams] | unknown[]): params is [ApiStalenessDeleteStalenessParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Delete an account staleness <br /><br /> Required permissions: staleness:staleness:write
@@ -27,7 +31,7 @@ const isApiStalenessDeleteStalenessObjectParams = (params: [ApiStalenessDeleteSt
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiStalenessDeleteStalenessParamCreator = async (...config: ([ApiStalenessDeleteStalenessParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiStalenessDeleteStalenessParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiStalenessDeleteStalenessParams] | [AxiosRequestConfig])) => {
     const params = isApiStalenessDeleteStalenessObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiStalenessDeleteStalenessParams;
     const { options = {} } = params;
     const localVarPath = `/account/staleness`;
@@ -42,7 +46,7 @@ export const apiStalenessDeleteStalenessParamCreator = async (...config: ([ApiSt
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -59,6 +63,8 @@ export const apiStalenessDeleteStalenessParamCreator = async (...config: ([ApiSt
         }
         ]
     };
+
+    return sendRequest<ApiStalenessDeleteStalenessReturnType>(Promise.resolve(args));
 }
 
 export default apiStalenessDeleteStalenessParamCreator;

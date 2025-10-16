@@ -21,10 +21,14 @@ export type DownloadPlaybooksParams = {
   options?: AxiosRequestConfig
 }
 
-export type DownloadPlaybooksReturnType = AxiosPromise<File>;
+export type DownloadPlaybooksReturnType = File;
 
 const isDownloadPlaybooksObjectParams = (params: [DownloadPlaybooksParams] | unknown[]): params is [DownloadPlaybooksParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
@@ -33,7 +37,7 @@ const isDownloadPlaybooksObjectParams = (params: [DownloadPlaybooksParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const downloadPlaybooksParamCreator = async (...config: ([DownloadPlaybooksParams] | [Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const downloadPlaybooksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DownloadPlaybooksParams] | [Array<string>, AxiosRequestConfig])) => {
     const params = isDownloadPlaybooksObjectParams(config) ? config[0] : ['selectedRemediations', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DownloadPlaybooksParams;
     const { selectedRemediations, options = {} } = params;
     const localVarPath = `/remediations/download`;
@@ -52,10 +56,12 @@ export const downloadPlaybooksParamCreator = async (...config: ([DownloadPlayboo
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<DownloadPlaybooksReturnType>(Promise.resolve(args));
 }
 
 export default downloadPlaybooksParamCreator;

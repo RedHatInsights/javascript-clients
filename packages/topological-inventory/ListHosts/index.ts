@@ -39,10 +39,14 @@ export type ListHostsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListHostsReturnType = AxiosPromise<HostsCollection>;
+export type ListHostsReturnType = HostsCollection;
 
 const isListHostsObjectParams = (params: [ListHostsParams] | unknown[]): params is [ListHostsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Host objects
@@ -51,7 +55,7 @@ const isListHostsObjectParams = (params: [ListHostsParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listHostsParamCreator = async (...config: ([ListHostsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listHostsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListHostsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListHostsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListHostsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/hosts`;
@@ -82,7 +86,7 @@ export const listHostsParamCreator = async (...config: ([ListHostsParams] | [num
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listHostsParamCreator = async (...config: ([ListHostsParams] | [num
         }
         ]
     };
+
+    return sendRequest<ListHostsReturnType>(Promise.resolve(args));
 }
 
 export default listHostsParamCreator;

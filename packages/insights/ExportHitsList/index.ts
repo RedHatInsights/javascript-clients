@@ -190,10 +190,14 @@ export const ExportHitsListUpdateMethodEnum = {
 } as const;
 export type ExportHitsListUpdateMethodEnum = typeof ExportHitsListUpdateMethodEnum[keyof typeof ExportHitsListUpdateMethodEnum];
 
-export type ExportHitsListReturnType = AxiosPromise<Array<ExportHits>>;
+export type ExportHitsListReturnType = Array<ExportHits>;
 
 const isExportHitsListObjectParams = (params: [ExportHitsListParams] | unknown[]): params is [ExportHitsListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Get each host and all rules currently affecting it.  We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
@@ -201,7 +205,7 @@ const isExportHitsListObjectParams = (params: [ExportHitsListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportHitsListParamCreator = async (...config: ([ExportHitsListParams] | [Array<ExportHitsListCategoryEnum>, string, Array<string>, boolean, ExportHitsListFormatEnum, Array<string>, boolean, Array<ExportHitsListImpactEnum>, boolean, Array<ExportHitsListLikelihoodEnum>, boolean, Array<ExportHitsListResRiskEnum>, Array<string>, string, Array<ExportHitsListTotalRiskEnum>, Array<ExportHitsListUpdateMethodEnum>, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportHitsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportHitsListParams] | [Array<ExportHitsListCategoryEnum>, string, Array<string>, boolean, ExportHitsListFormatEnum, Array<string>, boolean, Array<ExportHitsListImpactEnum>, boolean, Array<ExportHitsListLikelihoodEnum>, boolean, Array<ExportHitsListResRiskEnum>, Array<string>, string, Array<ExportHitsListTotalRiskEnum>, Array<ExportHitsListUpdateMethodEnum>, string, AxiosRequestConfig])) => {
     const params = isExportHitsListObjectParams(config) ? config[0] : ['category', 'displayName', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'format', 'groups', 'hasPlaybook', 'impact', 'incident', 'likelihood', 'reboot', 'resRisk', 'tags', 'text', 'totalRisk', 'updateMethod', 'uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportHitsListParams;
     const { category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options = {} } = params;
     const localVarPath = `/api/insights/v1/export/hits/`;
@@ -284,7 +288,7 @@ export const exportHitsListParamCreator = async (...config: ([ExportHitsListPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -296,6 +300,8 @@ export const exportHitsListParamCreator = async (...config: ([ExportHitsListPara
         }
         ]
     };
+
+    return sendRequest<ExportHitsListReturnType>(Promise.resolve(args));
 }
 
 export default exportHitsListParamCreator;

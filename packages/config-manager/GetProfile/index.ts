@@ -21,10 +21,14 @@ export type GetProfileParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetProfileReturnType = AxiosPromise<Profile>;
+export type GetProfileReturnType = Profile;
 
 const isGetProfileObjectParams = (params: [GetProfileParams] | unknown[]): params is [GetProfileParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Retrieve a specific profile identified by the \'id\' path parameter for the identified account. If the special value \"current\" is used for the \'id\' path parameter, the most recent profile is retrieved instead.
@@ -33,7 +37,7 @@ const isGetProfileObjectParams = (params: [GetProfileParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getProfileParamCreator = async (...config: ([GetProfileParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getProfileParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetProfileParams] | [string, AxiosRequestConfig])) => {
     const params = isGetProfileObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetProfileParams;
     const { id, options = {} } = params;
     const localVarPath = `/profiles/{id}`
@@ -49,10 +53,12 @@ export const getProfileParamCreator = async (...config: ([GetProfileParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetProfileReturnType>(Promise.resolve(args));
 }
 
 export default getProfileParamCreator;

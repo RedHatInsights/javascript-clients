@@ -21,10 +21,14 @@ export type DeleteRemediationParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteRemediationReturnType = AxiosPromise<void>;
+export type DeleteRemediationReturnType = void;
 
 const isDeleteRemediationObjectParams = (params: [DeleteRemediationParams] | unknown[]): params is [DeleteRemediationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Removes the given Remediation, RBAC permission {remediations:remediation:write}
@@ -33,7 +37,7 @@ const isDeleteRemediationObjectParams = (params: [DeleteRemediationParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRemediationParamCreator = async (...config: ([DeleteRemediationParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRemediationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRemediationParams] | [string, AxiosRequestConfig])) => {
     const params = isDeleteRemediationObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationParams;
     const { id, options = {} } = params;
     const localVarPath = `/remediations/{id}`
@@ -49,10 +53,12 @@ export const deleteRemediationParamCreator = async (...config: ([DeleteRemediati
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<DeleteRemediationReturnType>(Promise.resolve(args));
 }
 
 export default deleteRemediationParamCreator;

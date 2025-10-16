@@ -39,10 +39,14 @@ export type StatsOverviewRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type StatsOverviewRetrieveReturnType = AxiosPromise<Stats>;
+export type StatsOverviewRetrieveReturnType = Stats;
 
 const isStatsOverviewRetrieveObjectParams = (params: [StatsOverviewRetrieveParams] | unknown[]): params is [StatsOverviewRetrieveParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show overview statistics for this user  This gives the number of pathways, and incident, critical and important recommendations, affecting systems that the user can see.
@@ -50,7 +54,7 @@ const isStatsOverviewRetrieveObjectParams = (params: [StatsOverviewRetrieveParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const statsOverviewRetrieveParamCreator = async (...config: ([StatsOverviewRetrieveParams] | [Array<string>, Array<string>, boolean, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const statsOverviewRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([StatsOverviewRetrieveParams] | [Array<string>, Array<string>, boolean, Array<string>, AxiosRequestConfig])) => {
     const params = isStatsOverviewRetrieveObjectParams(config) ? config[0] : ['tags', 'groups', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSidsContains', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as StatsOverviewRetrieveParams;
     const { tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options = {} } = params;
     const localVarPath = `/api/insights/v1/stats/overview/`;
@@ -81,7 +85,7 @@ export const statsOverviewRetrieveParamCreator = async (...config: ([StatsOvervi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const statsOverviewRetrieveParamCreator = async (...config: ([StatsOvervi
         }
         ]
     };
+
+    return sendRequest<StatsOverviewRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default statsOverviewRetrieveParamCreator;

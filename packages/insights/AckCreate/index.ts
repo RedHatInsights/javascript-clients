@@ -21,10 +21,14 @@ export type AckCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckCreateReturnType = AxiosPromise<Ack>;
+export type AckCreateReturnType = Ack;
 
 const isAckCreateObjectParams = (params: [AckCreateParams] | unknown[]): params is [AckCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ackInput')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ackInput')
+  }
+  return false
 }
 /**
 * Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.
@@ -32,7 +36,7 @@ const isAckCreateObjectParams = (params: [AckCreateParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackCreateParamCreator = async (...config: ([AckCreateParams] | [AckInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckCreateParams] | [AckInput, AxiosRequestConfig])) => {
     const params = isAckCreateObjectParams(config) ? config[0] : ['ackInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckCreateParams;
     const { ackInput, options = {} } = params;
     const localVarPath = `/api/insights/v1/ack/`;
@@ -49,7 +53,7 @@ export const ackCreateParamCreator = async (...config: ([AckCreateParams] | [Ack
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: ackInput,
@@ -62,6 +66,8 @@ export const ackCreateParamCreator = async (...config: ([AckCreateParams] | [Ack
         }
         ]
     };
+
+    return sendRequest<AckCreateReturnType>(Promise.resolve(args));
 }
 
 export default ackCreateParamCreator;

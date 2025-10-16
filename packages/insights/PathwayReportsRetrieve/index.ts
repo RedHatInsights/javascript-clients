@@ -77,10 +77,14 @@ export const PathwayReportsRetrieveUpdateMethodEnum = {
 } as const;
 export type PathwayReportsRetrieveUpdateMethodEnum = typeof PathwayReportsRetrieveUpdateMethodEnum[keyof typeof PathwayReportsRetrieveUpdateMethodEnum];
 
-export type PathwayReportsRetrieveReturnType = AxiosPromise<RuleSystemsExport>;
+export type PathwayReportsRetrieveReturnType = RuleSystemsExport;
 
 const isPathwayReportsRetrieveObjectParams = (params: [PathwayReportsRetrieveParams] | unknown[]): params is [PathwayReportsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
@@ -89,7 +93,7 @@ const isPathwayReportsRetrieveObjectParams = (params: [PathwayReportsRetrievePar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const pathwayReportsRetrieveParamCreator = async (...config: ([PathwayReportsRetrieveParams] | [string, Array<PathwayReportsRetrieveCategoryEnum>, Array<string>, Array<string>, Array<string>, string, Array<PathwayReportsRetrieveUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const pathwayReportsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PathwayReportsRetrieveParams] | [string, Array<PathwayReportsRetrieveCategoryEnum>, Array<string>, Array<string>, Array<string>, string, Array<PathwayReportsRetrieveUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isPathwayReportsRetrieveObjectParams(config) ? config[0] : ['slug', 'category', 'groups', 'hostId', 'ruleId', 'text', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PathwayReportsRetrieveParams;
     const { slug, category, groups, hostId, ruleId, text, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/pathway/{slug}/reports/`
@@ -129,7 +133,7 @@ export const pathwayReportsRetrieveParamCreator = async (...config: ([PathwayRep
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -141,6 +145,8 @@ export const pathwayReportsRetrieveParamCreator = async (...config: ([PathwayRep
         }
         ]
     };
+
+    return sendRequest<PathwayReportsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default pathwayReportsRetrieveParamCreator;

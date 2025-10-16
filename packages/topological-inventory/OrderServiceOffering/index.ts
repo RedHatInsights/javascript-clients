@@ -27,10 +27,14 @@ export type OrderServiceOfferingParams = {
   options?: AxiosRequestConfig
 }
 
-export type OrderServiceOfferingReturnType = AxiosPromise<AppliedInventoriesForServiceOffering200Response>;
+export type OrderServiceOfferingReturnType = AppliedInventoriesForServiceOffering200Response;
 
 const isOrderServiceOfferingObjectParams = (params: [OrderServiceOfferingParams] | unknown[]): params is [OrderServiceOfferingParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'orderParametersServiceOffering')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'orderParametersServiceOffering')
+  }
+  return false
 }
 /**
 * Returns a Task id
@@ -39,7 +43,7 @@ const isOrderServiceOfferingObjectParams = (params: [OrderServiceOfferingParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const orderServiceOfferingParamCreator = async (...config: ([OrderServiceOfferingParams] | [string, OrderParametersServiceOffering, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const orderServiceOfferingParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([OrderServiceOfferingParams] | [string, OrderParametersServiceOffering, AxiosRequestConfig])) => {
     const params = isOrderServiceOfferingObjectParams(config) ? config[0] : ['id', 'orderParametersServiceOffering', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as OrderServiceOfferingParams;
     const { id, orderParametersServiceOffering, options = {} } = params;
     const localVarPath = `/service_offerings/{id}/order`
@@ -57,7 +61,7 @@ export const orderServiceOfferingParamCreator = async (...config: ([OrderService
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: orderParametersServiceOffering,
@@ -69,6 +73,8 @@ export const orderServiceOfferingParamCreator = async (...config: ([OrderService
         }
         ]
     };
+
+    return sendRequest<OrderServiceOfferingReturnType>(Promise.resolve(args));
 }
 
 export default orderServiceOfferingParamCreator;

@@ -63,10 +63,14 @@ export const ApiHostGetHostTagsOrderByEnum = {
 } as const;
 export type ApiHostGetHostTagsOrderByEnum = typeof ApiHostGetHostTagsOrderByEnum[keyof typeof ApiHostGetHostTagsOrderByEnum];
 
-export type ApiHostGetHostTagsReturnType = AxiosPromise<TagsOut>;
+export type ApiHostGetHostTagsReturnType = TagsOut;
 
 const isApiHostGetHostTagsObjectParams = (params: [ApiHostGetHostTagsParams] | unknown[]): params is [ApiHostGetHostTagsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
@@ -75,7 +79,7 @@ const isApiHostGetHostTagsObjectParams = (params: [ApiHostGetHostTagsParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostTagsParamCreator = async (...config: ([ApiHostGetHostTagsParams] | [Array<string>, number, number, ApiHostGetHostTagsOrderByEnum, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostTagsParams] | [Array<string>, number, number, ApiHostGetHostTagsOrderByEnum, string, string, AxiosRequestConfig])) => {
     const params = isApiHostGetHostTagsObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'search', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostTagsParams;
     const { hostIdList, perPage, page, orderBy, orderHow, search, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/tags`
@@ -111,7 +115,7 @@ export const apiHostGetHostTagsParamCreator = async (...config: ([ApiHostGetHost
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -123,6 +127,8 @@ export const apiHostGetHostTagsParamCreator = async (...config: ([ApiHostGetHost
         }
         ]
     };
+
+    return sendRequest<ApiHostGetHostTagsReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGetHostTagsParamCreator;

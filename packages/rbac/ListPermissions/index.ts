@@ -104,10 +104,14 @@ export const ListPermissionsAllowedOnlyEnum = {
 } as const;
 export type ListPermissionsAllowedOnlyEnum = typeof ListPermissionsAllowedOnlyEnum[keyof typeof ListPermissionsAllowedOnlyEnum];
 
-export type ListPermissionsReturnType = AxiosPromise<PermissionPagination>;
+export type ListPermissionsReturnType = PermissionPagination;
 
 const isListPermissionsObjectParams = (params: [ListPermissionsParams] | unknown[]): params is [ListPermissionsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by permission application.
@@ -116,7 +120,7 @@ const isListPermissionsObjectParams = (params: [ListPermissionsParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listPermissionsParamCreator = async (...config: ([ListPermissionsParams] | [number, number, ListPermissionsOrderByEnum, string, string, string, string, ListPermissionsExcludeGlobalsEnum, string, ListPermissionsAllowedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listPermissionsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListPermissionsParams] | [number, number, ListPermissionsOrderByEnum, string, string, string, string, ListPermissionsExcludeGlobalsEnum, string, ListPermissionsAllowedOnlyEnum, AxiosRequestConfig])) => {
     const params = isListPermissionsObjectParams(config) ? config[0] : ['limit', 'offset', 'orderBy', 'application', 'resourceType', 'verb', 'permission', 'excludeGlobals', 'excludeRoles', 'allowedOnly', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPermissionsParams;
     const { limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, excludeRoles, allowedOnly, options = {} } = params;
     const localVarPath = `/permissions/`;
@@ -171,7 +175,7 @@ export const listPermissionsParamCreator = async (...config: ([ListPermissionsPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -182,6 +186,8 @@ export const listPermissionsParamCreator = async (...config: ([ListPermissionsPa
         }
         ]
     };
+
+    return sendRequest<ListPermissionsReturnType>(Promise.resolve(args));
 }
 
 export default listPermissionsParamCreator;

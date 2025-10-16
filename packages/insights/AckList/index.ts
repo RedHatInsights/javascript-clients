@@ -27,18 +27,23 @@ export type AckListParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckListReturnType = AxiosPromise<PaginatedAckList>;
+export type AckListReturnType = PaginatedAckList;
 
 const isAckListObjectParams = (params: [AckListParams] | unknown[]): params is [AckListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
+*          Display the list of rules that have been disabled or acknowledged in         this account, along with who disabled them and their justification.
+* @summary List the rules that have been acknowledged (disabled)
 * @param {AckListParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackListParamCreator = async (...config: ([AckListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckListParams] | [number, number, AxiosRequestConfig])) => {
     const params = isAckListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckListParams;
     const { limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/ack/`;
@@ -61,7 +66,7 @@ export const ackListParamCreator = async (...config: ([AckListParams] | [number,
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -73,6 +78,8 @@ export const ackListParamCreator = async (...config: ([AckListParams] | [number,
         }
         ]
     };
+
+    return sendRequest<AckListReturnType>(Promise.resolve(args));
 }
 
 export default ackListParamCreator;

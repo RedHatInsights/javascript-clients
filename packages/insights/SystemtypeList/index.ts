@@ -15,10 +15,14 @@ export type SystemtypeListParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemtypeListReturnType = AxiosPromise<Array<SystemType>>;
+export type SystemtypeListReturnType = Array<SystemType>;
 
 const isSystemtypeListObjectParams = (params: [SystemtypeListParams] | unknown[]): params is [SystemtypeListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List all system types by role and product code
@@ -27,7 +31,7 @@ const isSystemtypeListObjectParams = (params: [SystemtypeListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemtypeListParamCreator = async (...config: ([SystemtypeListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemtypeListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemtypeListParams] | [AxiosRequestConfig])) => {
     const params = isSystemtypeListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemtypeListParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/systemtype/`;
@@ -42,10 +46,12 @@ export const systemtypeListParamCreator = async (...config: ([SystemtypeListPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SystemtypeListReturnType>(Promise.resolve(args));
 }
 
 export default systemtypeListParamCreator;

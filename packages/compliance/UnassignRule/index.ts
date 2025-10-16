@@ -39,19 +39,23 @@ export type UnassignRuleParams = {
   options?: AxiosRequestConfig
 }
 
-export type UnassignRuleReturnType = AxiosPromise<void>;
+export type UnassignRuleReturnType = void;
 
 const isUnassignRuleObjectParams = (params: [UnassignRuleParams] | unknown[]): params is [UnassignRuleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
-* Unassigns a Rule from a Tailoring
+* Use this to remove a rule from your tailoring.
 * @summary Unassign a Rule from a Tailoring
 * @param {UnassignRuleParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const unassignRuleParamCreator = async (...config: ([UnassignRuleParams] | [any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const unassignRuleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UnassignRuleParams] | [any, any, any, any, AxiosRequestConfig])) => {
     const params = isUnassignRuleObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'ruleId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UnassignRuleParams;
     const { policyId, tailoringId, ruleId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules/{rule_id}`
@@ -75,10 +79,12 @@ export const unassignRuleParamCreator = async (...config: ([UnassignRuleParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<UnassignRuleReturnType>(Promise.resolve(args));
 }
 
 export default unassignRuleParamCreator;

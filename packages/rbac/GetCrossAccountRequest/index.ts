@@ -56,10 +56,14 @@ export const GetCrossAccountRequestApprovedOnlyEnum = {
 } as const;
 export type GetCrossAccountRequestApprovedOnlyEnum = typeof GetCrossAccountRequestApprovedOnlyEnum[keyof typeof GetCrossAccountRequestApprovedOnlyEnum];
 
-export type GetCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
+export type GetCrossAccountRequestReturnType = CrossAccountRequestDetail;
 
 const isGetCrossAccountRequestObjectParams = (params: [GetCrossAccountRequestParams] | unknown[]): params is [GetCrossAccountRequestParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
+  }
+  return false
 }
 /**
 *
@@ -68,7 +72,7 @@ const isGetCrossAccountRequestObjectParams = (params: [GetCrossAccountRequestPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getCrossAccountRequestParamCreator = async (...config: ([GetCrossAccountRequestParams] | [string, GetCrossAccountRequestQueryByEnum, string, GetCrossAccountRequestApprovedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getCrossAccountRequestParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetCrossAccountRequestParams] | [string, GetCrossAccountRequestQueryByEnum, string, GetCrossAccountRequestApprovedOnlyEnum, AxiosRequestConfig])) => {
     const params = isGetCrossAccountRequestObjectParams(config) ? config[0] : ['uuid', 'queryBy', 'account', 'approvedOnly', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetCrossAccountRequestParams;
     const { uuid, queryBy, account, approvedOnly, options = {} } = params;
     const localVarPath = `/cross-account-requests/{uuid}/`
@@ -96,7 +100,7 @@ export const getCrossAccountRequestParamCreator = async (...config: ([GetCrossAc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -107,6 +111,8 @@ export const getCrossAccountRequestParamCreator = async (...config: ([GetCrossAc
         }
         ]
     };
+
+    return sendRequest<GetCrossAccountRequestReturnType>(Promise.resolve(args));
 }
 
 export default getCrossAccountRequestParamCreator;

@@ -139,7 +139,7 @@ export type ApiHostGetHostListParams = {
   */
   systemType?: Array<ApiHostGetHostListSystemTypeEnum>,
   /**
-  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
+  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"workloads\": {\"sap\": {\"sap_system\": {\"eq\": \"true\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
   * @type { { [key: string]: SystemProfileNestedObjectValue; } }
   * @memberof ApiHostGetHostListApi
   */
@@ -215,14 +215,19 @@ export type ApiHostGetHostListRegisteredWithEnum = typeof ApiHostGetHostListRegi
 export const ApiHostGetHostListSystemTypeEnum = {
     Conventional: 'conventional',
     Bootc: 'bootc',
-    Edge: 'edge'
+    Edge: 'edge',
+    Cluster: 'cluster'
 } as const;
 export type ApiHostGetHostListSystemTypeEnum = typeof ApiHostGetHostListSystemTypeEnum[keyof typeof ApiHostGetHostListSystemTypeEnum];
 
-export type ApiHostGetHostListReturnType = AxiosPromise<HostQueryOutput>;
+export type ApiHostGetHostListReturnType = HostQueryOutput;
 
 const isApiHostGetHostListObjectParams = (params: [ApiHostGetHostListParams] | unknown[]): params is [ApiHostGetHostListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
@@ -231,7 +236,7 @@ const isApiHostGetHostListObjectParams = (params: [ApiHostGetHostListParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostListParamCreator = async (...config: ([ApiHostGetHostListParams] | [string, string, string, string, string, string, ApiHostGetHostListProviderTypeEnum, string, string, string, string, Array<string>, string, number, number, ApiHostGetHostListOrderByEnum, string, Array<ApiHostGetHostListStalenessEnum>, Array<string>, Array<ApiHostGetHostListRegisteredWithEnum>, Array<ApiHostGetHostListSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostListParams] | [string, string, string, string, string, string, ApiHostGetHostListProviderTypeEnum, string, string, string, string, Array<string>, string, number, number, ApiHostGetHostListOrderByEnum, string, Array<ApiHostGetHostListStalenessEnum>, Array<string>, Array<ApiHostGetHostListRegisteredWithEnum>, Array<ApiHostGetHostListSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
     const params = isApiHostGetHostListObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostListParams;
     const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, options = {} } = params;
     const localVarPath = `/hosts`;
@@ -346,7 +351,7 @@ export const apiHostGetHostListParamCreator = async (...config: ([ApiHostGetHost
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -358,6 +363,8 @@ export const apiHostGetHostListParamCreator = async (...config: ([ApiHostGetHost
         }
         ]
     };
+
+    return sendRequest<ApiHostGetHostListReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGetHostListParamCreator;

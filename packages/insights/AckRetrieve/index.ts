@@ -21,18 +21,23 @@ export type AckRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckRetrieveReturnType = AxiosPromise<Ack>;
+export type AckRetrieveReturnType = Ack;
 
 const isAckRetrieveObjectParams = (params: [AckRetrieveParams] | unknown[]): params is [AckRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
-* Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
+*          Display who disabled a rule in this account, when, and their         justification for disabling it.
+* @summary Display a specific acknowledgement (disabling) of a rule
 * @param {AckRetrieveParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackRetrieveParamCreator = async (...config: ([AckRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isAckRetrieveObjectParams(config) ? config[0] : ['ruleId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckRetrieveParams;
     const { ruleId, options = {} } = params;
     const localVarPath = `/api/insights/v1/ack/{rule_id}/`
@@ -48,7 +53,7 @@ export const ackRetrieveParamCreator = async (...config: ([AckRetrieveParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +65,8 @@ export const ackRetrieveParamCreator = async (...config: ([AckRetrieveParams] | 
         }
         ]
     };
+
+    return sendRequest<AckRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default ackRetrieveParamCreator;

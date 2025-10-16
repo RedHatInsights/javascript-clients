@@ -45,10 +45,14 @@ export type ListSourceServiceInstancesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceServiceInstancesReturnType = AxiosPromise<ServiceInstancesCollection>;
+export type ListSourceServiceInstancesReturnType = ServiceInstancesCollection;
 
 const isListSourceServiceInstancesObjectParams = (params: [ListSourceServiceInstancesParams] | unknown[]): params is [ListSourceServiceInstancesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of ServiceInstance objects
@@ -57,7 +61,7 @@ const isListSourceServiceInstancesObjectParams = (params: [ListSourceServiceInst
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceServiceInstancesParamCreator = async (...config: ([ListSourceServiceInstancesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceServiceInstancesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceServiceInstancesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceServiceInstancesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceServiceInstancesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/service_instances`
@@ -89,7 +93,7 @@ export const listSourceServiceInstancesParamCreator = async (...config: ([ListSo
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listSourceServiceInstancesParamCreator = async (...config: ([ListSo
         }
         ]
     };
+
+    return sendRequest<ListSourceServiceInstancesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceServiceInstancesParamCreator;

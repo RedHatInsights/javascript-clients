@@ -39,10 +39,14 @@ export type ListServiceInstancesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceInstancesReturnType = AxiosPromise<ServiceInstancesCollection>;
+export type ListServiceInstancesReturnType = ServiceInstancesCollection;
 
 const isListServiceInstancesObjectParams = (params: [ListServiceInstancesParams] | unknown[]): params is [ListServiceInstancesParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of ServiceInstance objects
@@ -51,7 +55,7 @@ const isListServiceInstancesObjectParams = (params: [ListServiceInstancesParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceInstancesParamCreator = async (...config: ([ListServiceInstancesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceInstancesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceInstancesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceInstancesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceInstancesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_instances`;
@@ -82,7 +86,7 @@ export const listServiceInstancesParamCreator = async (...config: ([ListServiceI
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listServiceInstancesParamCreator = async (...config: ([ListServiceI
         }
         ]
     };
+
+    return sendRequest<ListServiceInstancesReturnType>(Promise.resolve(args));
 }
 
 export default listServiceInstancesParamCreator;

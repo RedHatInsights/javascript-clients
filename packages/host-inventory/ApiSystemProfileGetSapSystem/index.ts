@@ -43,7 +43,7 @@ export type ApiSystemProfileGetSapSystemParams = {
   */
   registeredWith?: Array<ApiSystemProfileGetSapSystemRegisteredWithEnum>,
   /**
-  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
+  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"workloads\": {\"sap\": {\"sap_system\": {\"eq\": \"true\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
   * @type { { [key: string]: SystemProfileNestedObjectValue; } }
   * @memberof ApiSystemProfileGetSapSystemApi
   */
@@ -82,10 +82,14 @@ export const ApiSystemProfileGetSapSystemRegisteredWithEnum = {
 } as const;
 export type ApiSystemProfileGetSapSystemRegisteredWithEnum = typeof ApiSystemProfileGetSapSystemRegisteredWithEnum[keyof typeof ApiSystemProfileGetSapSystemRegisteredWithEnum];
 
-export type ApiSystemProfileGetSapSystemReturnType = AxiosPromise<SystemProfileSapSystemOut>;
+export type ApiSystemProfileGetSapSystemReturnType = SystemProfileSapSystemOut;
 
 const isApiSystemProfileGetSapSystemObjectParams = (params: [ApiSystemProfileGetSapSystemParams] | unknown[]): params is [ApiSystemProfileGetSapSystemParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Required permissions: inventory:hosts:read
@@ -94,7 +98,7 @@ const isApiSystemProfileGetSapSystemObjectParams = (params: [ApiSystemProfileGet
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiSystemProfileGetSapSystemParamCreator = async (...config: ([ApiSystemProfileGetSapSystemParams] | [Array<string>, number, number, Array<ApiSystemProfileGetSapSystemStalenessEnum>, Array<ApiSystemProfileGetSapSystemRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiSystemProfileGetSapSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiSystemProfileGetSapSystemParams] | [Array<string>, number, number, Array<ApiSystemProfileGetSapSystemStalenessEnum>, Array<ApiSystemProfileGetSapSystemRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
     const params = isApiSystemProfileGetSapSystemObjectParams(config) ? config[0] : ['tags', 'perPage', 'page', 'staleness', 'registeredWith', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiSystemProfileGetSapSystemParams;
     const { tags, perPage, page, staleness, registeredWith, filter, options = {} } = params;
     const localVarPath = `/system_profile/sap_system`;
@@ -133,7 +137,7 @@ export const apiSystemProfileGetSapSystemParamCreator = async (...config: ([ApiS
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -145,6 +149,8 @@ export const apiSystemProfileGetSapSystemParamCreator = async (...config: ([ApiS
         }
         ]
     };
+
+    return sendRequest<ApiSystemProfileGetSapSystemReturnType>(Promise.resolve(args));
 }
 
 export default apiSystemProfileGetSapSystemParamCreator;

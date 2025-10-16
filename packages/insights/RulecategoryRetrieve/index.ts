@@ -21,10 +21,14 @@ export type RulecategoryRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type RulecategoryRetrieveReturnType = AxiosPromise<RuleCategory>;
+export type RulecategoryRetrieveReturnType = RuleCategory;
 
 const isRulecategoryRetrieveObjectParams = (params: [RulecategoryRetrieveParams] | unknown[]): params is [RulecategoryRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
@@ -32,7 +36,7 @@ const isRulecategoryRetrieveObjectParams = (params: [RulecategoryRetrieveParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const rulecategoryRetrieveParamCreator = async (...config: ([RulecategoryRetrieveParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const rulecategoryRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RulecategoryRetrieveParams] | [number, AxiosRequestConfig])) => {
     const params = isRulecategoryRetrieveObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RulecategoryRetrieveParams;
     const { id, options = {} } = params;
     const localVarPath = `/api/insights/v1/rulecategory/{id}/`
@@ -48,10 +52,12 @@ export const rulecategoryRetrieveParamCreator = async (...config: ([Rulecategory
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<RulecategoryRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default rulecategoryRetrieveParamCreator;

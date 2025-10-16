@@ -15,10 +15,14 @@ export type GetParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetReturnType = AxiosPromise<void>;
+export type GetReturnType = void;
 
 const isGetObjectParams = (params: [GetParams] | unknown[]): params is [GetParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 *
@@ -27,7 +31,7 @@ const isGetObjectParams = (params: [GetParams] | unknown[]): params is [GetParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getParamCreator = async (...config: ([GetParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetParams] | [AxiosRequestConfig])) => {
     const params = isGetObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetParams;
     const { options = {} } = params;
     const localVarPath = `/`;
@@ -42,10 +46,12 @@ export const getParamCreator = async (...config: ([GetParams] | [AxiosRequestCon
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetReturnType>(Promise.resolve(args));
 }
 
 export default getParamCreator;

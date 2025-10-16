@@ -27,10 +27,14 @@ export type SecurityGuidesOSParams = {
   options?: AxiosRequestConfig
 }
 
-export type SecurityGuidesOSReturnType = AxiosPromise<any>;
+export type SecurityGuidesOSReturnType = any;
 
 const isSecurityGuidesOSObjectParams = (params: [SecurityGuidesOSParams] | unknown[]): params is [SecurityGuidesOSParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * This feature is exclusively used by the frontend
@@ -40,7 +44,7 @@ const isSecurityGuidesOSObjectParams = (params: [SecurityGuidesOSParams] | unkno
 * @deprecated
 * @throws {RequiredError}
 */
-export const securityGuidesOSParamCreator = async (...config: ([SecurityGuidesOSParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const securityGuidesOSParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SecurityGuidesOSParams] | [any, any, AxiosRequestConfig])) => {
     const params = isSecurityGuidesOSObjectParams(config) ? config[0] : ['xRHIDENTITY', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuidesOSParams;
     const { xRHIDENTITY, filter, options = {} } = params;
     const localVarPath = `/security_guides/os_versions`;
@@ -65,10 +69,12 @@ export const securityGuidesOSParamCreator = async (...config: ([SecurityGuidesOS
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SecurityGuidesOSReturnType>(Promise.resolve(args));
 }
 
 export default securityGuidesOSParamCreator;

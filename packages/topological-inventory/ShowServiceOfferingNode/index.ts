@@ -21,10 +21,14 @@ export type ShowServiceOfferingNodeParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowServiceOfferingNodeReturnType = AxiosPromise<ServiceOfferingNode>;
+export type ShowServiceOfferingNodeReturnType = ServiceOfferingNode;
 
 const isShowServiceOfferingNodeObjectParams = (params: [ShowServiceOfferingNodeParams] | unknown[]): params is [ShowServiceOfferingNodeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a ServiceOfferingNode object
@@ -33,7 +37,7 @@ const isShowServiceOfferingNodeObjectParams = (params: [ShowServiceOfferingNodeP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showServiceOfferingNodeParamCreator = async (...config: ([ShowServiceOfferingNodeParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showServiceOfferingNodeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowServiceOfferingNodeParams] | [string, AxiosRequestConfig])) => {
     const params = isShowServiceOfferingNodeObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowServiceOfferingNodeParams;
     const { id, options = {} } = params;
     const localVarPath = `/service_offering_nodes/{id}`
@@ -49,7 +53,7 @@ export const showServiceOfferingNodeParamCreator = async (...config: ([ShowServi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showServiceOfferingNodeParamCreator = async (...config: ([ShowServi
         }
         ]
     };
+
+    return sendRequest<ShowServiceOfferingNodeReturnType>(Promise.resolve(args));
 }
 
 export default showServiceOfferingNodeParamCreator;

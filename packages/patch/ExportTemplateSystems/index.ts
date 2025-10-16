@@ -50,10 +50,10 @@ export type ExportTemplateSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ExportTemplateSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -87,10 +87,14 @@ export type ExportTemplateSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ExportTemplateSystemsReturnType = AxiosPromise<Array<ControllersTemplateSystemsDBLookup>>;
+export type ExportTemplateSystemsReturnType = Array<ControllersTemplateSystemsDBLookup>;
 
 const isExportTemplateSystemsObjectParams = (params: [ExportTemplateSystemsParams] | unknown[]): params is [ExportTemplateSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'templateId') && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'templateId')
+  }
+  return false
 }
 /**
 * Export systems applicable to a template. Export endpoints are not paginated.
@@ -99,7 +103,7 @@ const isExportTemplateSystemsObjectParams = (params: [ExportTemplateSystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportTemplateSystemsParamCreator = async (...config: ([ExportTemplateSystemsParams] | [string, string, string, string, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportTemplateSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportTemplateSystemsParams] | [string, string, string, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
     const params = isExportTemplateSystemsObjectParams(config) ? config[0] : ['templateId', 'search', 'filterDisplayName', 'filterOs', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportTemplateSystemsParams;
     const { templateId, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/export/templates/{template_id}/systems`
@@ -159,7 +163,7 @@ export const exportTemplateSystemsParamCreator = async (...config: ([ExportTempl
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -171,6 +175,8 @@ export const exportTemplateSystemsParamCreator = async (...config: ([ExportTempl
         }
         ]
     };
+
+    return sendRequest<ExportTemplateSystemsReturnType>(Promise.resolve(args));
 }
 
 export default exportTemplateSystemsParamCreator;

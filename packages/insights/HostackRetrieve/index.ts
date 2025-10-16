@@ -21,18 +21,23 @@ export type HostackRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type HostackRetrieveReturnType = AxiosPromise<HostAck>;
+export type HostackRetrieveReturnType = HostAck;
 
 const isHostackRetrieveObjectParams = (params: [HostackRetrieveParams] | unknown[]): params is [HostackRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
-* HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  This view handles listing, retrieving, creating and deleting hostacks.
+*          Display who disabled a rule on a system, when, and their justification         for disabling it.  Host acks are selected by their ID number.
+* @summary Display a specific acknowledgement (disabling) of a rule on a system
 * @param {HostackRetrieveParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const hostackRetrieveParamCreator = async (...config: ([HostackRetrieveParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const hostackRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([HostackRetrieveParams] | [number, AxiosRequestConfig])) => {
     const params = isHostackRetrieveObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HostackRetrieveParams;
     const { id, options = {} } = params;
     const localVarPath = `/api/insights/v1/hostack/{id}/`
@@ -48,7 +53,7 @@ export const hostackRetrieveParamCreator = async (...config: ([HostackRetrievePa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +65,8 @@ export const hostackRetrieveParamCreator = async (...config: ([HostackRetrievePa
         }
         ]
     };
+
+    return sendRequest<HostackRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default hostackRetrieveParamCreator;

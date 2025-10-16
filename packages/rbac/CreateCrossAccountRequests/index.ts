@@ -21,10 +21,14 @@ export type CreateCrossAccountRequestsParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateCrossAccountRequestsReturnType = AxiosPromise<CrossAccountRequestOut>;
+export type CreateCrossAccountRequestsReturnType = CrossAccountRequestOut;
 
 const isCreateCrossAccountRequestsObjectParams = (params: [CreateCrossAccountRequestsParams] | unknown[]): params is [CreateCrossAccountRequestsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'crossAccountRequestIn')
+  }
+  return false
 }
 /**
 *
@@ -33,7 +37,7 @@ const isCreateCrossAccountRequestsObjectParams = (params: [CreateCrossAccountReq
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createCrossAccountRequestsParamCreator = async (...config: ([CreateCrossAccountRequestsParams] | [CrossAccountRequestIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createCrossAccountRequestsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreateCrossAccountRequestsParams] | [CrossAccountRequestIn, AxiosRequestConfig])) => {
     const params = isCreateCrossAccountRequestsObjectParams(config) ? config[0] : ['crossAccountRequestIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateCrossAccountRequestsParams;
     const { crossAccountRequestIn, options = {} } = params;
     const localVarPath = `/cross-account-requests/`;
@@ -50,7 +54,7 @@ export const createCrossAccountRequestsParamCreator = async (...config: ([Create
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: crossAccountRequestIn,
@@ -62,6 +66,8 @@ export const createCrossAccountRequestsParamCreator = async (...config: ([Create
         }
         ]
     };
+
+    return sendRequest<CreateCrossAccountRequestsReturnType>(Promise.resolve(args));
 }
 
 export default createCrossAccountRequestsParamCreator;

@@ -27,19 +27,23 @@ export type DeleteReportParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteReportReturnType = AxiosPromise<void>;
+export type DeleteReportReturnType = void;
 
 const isDeleteReportObjectParams = (params: [DeleteReportParams] | unknown[]): params is [DeleteReportParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+  }
+  return false
 }
 /**
-* Deletes Report\'s test results
+* Delete test results for a specific report.
 * @summary Delete a Report results
 * @param {DeleteReportParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteReportParamCreator = async (...config: ([DeleteReportParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteReportParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteReportParams] | [any, any, AxiosRequestConfig])) => {
     const params = isDeleteReportObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteReportParams;
     const { reportId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/reports/{report_id}`
@@ -61,10 +65,12 @@ export const deleteReportParamCreator = async (...config: ([DeleteReportParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<DeleteReportReturnType>(Promise.resolve(args));
 }
 
 export default deleteReportParamCreator;

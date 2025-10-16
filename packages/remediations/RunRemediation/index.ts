@@ -27,10 +27,14 @@ export type RunRemediationParams = {
   options?: AxiosRequestConfig
 }
 
-export type RunRemediationReturnType = AxiosPromise<ExecuteRemediation>;
+export type RunRemediationReturnType = ExecuteRemediation;
 
 const isRunRemediationObjectParams = (params: [RunRemediationParams] | unknown[]): params is [RunRemediationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Execute remediation, RBAC permission {remediations:remediation:execute}
@@ -39,7 +43,7 @@ const isRunRemediationObjectParams = (params: [RunRemediationParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const runRemediationParamCreator = async (...config: ([RunRemediationParams] | [string, PlaybookRunsInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const runRemediationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RunRemediationParams] | [string, PlaybookRunsInput, AxiosRequestConfig])) => {
     const params = isRunRemediationObjectParams(config) ? config[0] : ['id', 'playbookRunsInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RunRemediationParams;
     const { id, playbookRunsInput, options = {} } = params;
     const localVarPath = `/remediations/{id}/playbook_runs`
@@ -57,11 +61,13 @@ export const runRemediationParamCreator = async (...config: ([RunRemediationPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: playbookRunsInput,
     };
+
+    return sendRequest<RunRemediationReturnType>(Promise.resolve(args));
 }
 
 export default runRemediationParamCreator;

@@ -21,10 +21,14 @@ export type GetGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetGroupReturnType = AxiosPromise<GroupWithPrincipalsAndRoles>;
+export type GetGroupReturnType = GroupWithPrincipalsAndRoles;
 
 const isGetGroupObjectParams = (params: [GetGroupParams] | unknown[]): params is [GetGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
+  }
+  return false
 }
 /**
 *
@@ -33,7 +37,7 @@ const isGetGroupObjectParams = (params: [GetGroupParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getGroupParamCreator = async (...config: ([GetGroupParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetGroupParams] | [string, AxiosRequestConfig])) => {
     const params = isGetGroupObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetGroupParams;
     const { uuid, options = {} } = params;
     const localVarPath = `/groups/{uuid}/`
@@ -49,7 +53,7 @@ export const getGroupParamCreator = async (...config: ([GetGroupParams] | [strin
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const getGroupParamCreator = async (...config: ([GetGroupParams] | [strin
         }
         ]
     };
+
+    return sendRequest<GetGroupReturnType>(Promise.resolve(args));
 }
 
 export default getGroupParamCreator;

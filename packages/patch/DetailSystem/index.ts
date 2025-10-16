@@ -21,10 +21,14 @@ export type DetailSystemParams = {
   options?: AxiosRequestConfig
 }
 
-export type DetailSystemReturnType = AxiosPromise<ControllersSystemDetailResponse>;
+export type DetailSystemReturnType = ControllersSystemDetailResponse;
 
 const isDetailSystemObjectParams = (params: [DetailSystemParams] | unknown[]): params is [DetailSystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'inventoryId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
+  }
+  return false
 }
 /**
 * Show me details about a system by given inventory id
@@ -33,7 +37,7 @@ const isDetailSystemObjectParams = (params: [DetailSystemParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const detailSystemParamCreator = async (...config: ([DetailSystemParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const detailSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DetailSystemParams] | [string, AxiosRequestConfig])) => {
     const params = isDetailSystemObjectParams(config) ? config[0] : ['inventoryId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DetailSystemParams;
     const { inventoryId, options = {} } = params;
     const localVarPath = `/systems/{inventory_id}`
@@ -49,7 +53,7 @@ export const detailSystemParamCreator = async (...config: ([DetailSystemParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -61,6 +65,8 @@ export const detailSystemParamCreator = async (...config: ([DetailSystemParams] 
         }
         ]
     };
+
+    return sendRequest<DetailSystemReturnType>(Promise.resolve(args));
 }
 
 export default detailSystemParamCreator;

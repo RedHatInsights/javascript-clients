@@ -27,10 +27,14 @@ export type RuleUnackHostsCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleUnackHostsCreateReturnType = AxiosPromise<MultiAckResponse>;
+export type RuleUnackHostsCreateReturnType = MultiAckResponse;
 
 const isRuleUnackHostsCreateObjectParams = (params: [RuleUnackHostsCreateParams] | unknown[]): params is [RuleUnackHostsCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && Object.prototype.hasOwnProperty.call(params, 'multiHostUnAck')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId') && Object.prototype.hasOwnProperty.call(params[0], 'multiHostUnAck')
+  }
+  return false
 }
 /**
 * Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
@@ -38,7 +42,7 @@ const isRuleUnackHostsCreateObjectParams = (params: [RuleUnackHostsCreateParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleUnackHostsCreateParamCreator = async (...config: ([RuleUnackHostsCreateParams] | [string, MultiHostUnAck, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleUnackHostsCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleUnackHostsCreateParams] | [string, MultiHostUnAck, AxiosRequestConfig])) => {
     const params = isRuleUnackHostsCreateObjectParams(config) ? config[0] : ['ruleId', 'multiHostUnAck', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleUnackHostsCreateParams;
     const { ruleId, multiHostUnAck, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/unack_hosts/`
@@ -56,7 +60,7 @@ export const ruleUnackHostsCreateParamCreator = async (...config: ([RuleUnackHos
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: multiHostUnAck,
@@ -69,6 +73,8 @@ export const ruleUnackHostsCreateParamCreator = async (...config: ([RuleUnackHos
         }
         ]
     };
+
+    return sendRequest<RuleUnackHostsCreateReturnType>(Promise.resolve(args));
 }
 
 export default ruleUnackHostsCreateParamCreator;

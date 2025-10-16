@@ -92,6 +92,8 @@ export type RuleSystemsDetailListParams = {
   */
 export const RuleSystemsDetailListRhelVersionEnum = {
     _100: '10.0',
+    _101: '10.1',
+    _102: '10.2',
     _60: '6.0',
     _61: '6.1',
     _610: '6.10',
@@ -131,7 +133,9 @@ export const RuleSystemsDetailListRhelVersionEnum = {
     _93: '9.3',
     _94: '9.4',
     _95: '9.5',
-    _96: '9.6'
+    _96: '9.6',
+    _97: '9.7',
+    _98: '9.8'
 } as const;
 export type RuleSystemsDetailListRhelVersionEnum = typeof RuleSystemsDetailListRhelVersionEnum[keyof typeof RuleSystemsDetailListRhelVersionEnum];
 /**
@@ -162,10 +166,14 @@ export const RuleSystemsDetailListSortEnum = {
 } as const;
 export type RuleSystemsDetailListSortEnum = typeof RuleSystemsDetailListSortEnum[keyof typeof RuleSystemsDetailListSortEnum];
 
-export type RuleSystemsDetailListReturnType = AxiosPromise<PaginatedSystemsDetailList>;
+export type RuleSystemsDetailListReturnType = PaginatedSystemsDetailList;
 
 const isRuleSystemsDetailListObjectParams = (params: [RuleSystemsDetailListParams] | unknown[]): params is [RuleSystemsDetailListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
@@ -173,7 +181,7 @@ const isRuleSystemsDetailListObjectParams = (params: [RuleSystemsDetailListParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleSystemsDetailListParamCreator = async (...config: ([RuleSystemsDetailListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, number, string, number, Array<RuleSystemsDetailListRhelVersionEnum>, RuleSystemsDetailListSortEnum, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleSystemsDetailListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleSystemsDetailListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, number, string, number, Array<RuleSystemsDetailListRhelVersionEnum>, RuleSystemsDetailListSortEnum, Array<string>, AxiosRequestConfig])) => {
     const params = isRuleSystemsDetailListObjectParams(config) ? config[0] : ['ruleId', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'limit', 'name', 'offset', 'rhelVersion', 'sort', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleSystemsDetailListParams;
     const { ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, name, offset, rhelVersion, sort, tags, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/systems_detail/`
@@ -233,7 +241,7 @@ export const ruleSystemsDetailListParamCreator = async (...config: ([RuleSystems
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -245,6 +253,8 @@ export const ruleSystemsDetailListParamCreator = async (...config: ([RuleSystems
         }
         ]
     };
+
+    return sendRequest<RuleSystemsDetailListReturnType>(Promise.resolve(args));
 }
 
 export default ruleSystemsDetailListParamCreator;

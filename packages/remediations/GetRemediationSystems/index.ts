@@ -58,10 +58,14 @@ export const GetRemediationSystemsSortEnum = {
 } as const;
 export type GetRemediationSystemsSortEnum = typeof GetRemediationSystemsSortEnum[keyof typeof GetRemediationSystemsSortEnum];
 
-export type GetRemediationSystemsReturnType = AxiosPromise<RemediationSystemList>;
+export type GetRemediationSystemsReturnType = RemediationSystemList;
 
 const isGetRemediationSystemsObjectParams = (params: [GetRemediationSystemsParams] | unknown[]): params is [GetRemediationSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Get a paginated list of distinct systems from a given remediation plan, RBAC permission {remediations:remediation:read}
@@ -70,7 +74,7 @@ const isGetRemediationSystemsObjectParams = (params: [GetRemediationSystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationSystemsParamCreator = async (...config: ([GetRemediationSystemsParams] | [string, number, number, GetRemediationSystemsFilterParameter, GetRemediationSystemsSortEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRemediationSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationSystemsParams] | [string, number, number, GetRemediationSystemsFilterParameter, GetRemediationSystemsSortEnum, AxiosRequestConfig])) => {
     const params = isGetRemediationSystemsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sort', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationSystemsParams;
     const { id, limit, offset, filter, sort, options = {} } = params;
     const localVarPath = `/remediations/{id}/systems`
@@ -102,10 +106,12 @@ export const getRemediationSystemsParamCreator = async (...config: ([GetRemediat
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetRemediationSystemsReturnType>(Promise.resolve(args));
 }
 
 export default getRemediationSystemsParamCreator;

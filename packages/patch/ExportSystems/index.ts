@@ -44,100 +44,100 @@ export type ExportSystemsParams = {
   filterLastUpload?: string,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterRhsaCount?: string,
+  filterRhsaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterRhbaCount?: string,
+  filterRhbaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterRheaCount?: string,
+  filterRheaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterOtherCount?: string,
+  filterOtherCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterInstallableRhsaCount?: string,
+  filterInstallableRhsaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterInstallableRhbaCount?: string,
+  filterInstallableRhbaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterInstallableRheaCount?: string,
+  filterInstallableRheaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterInstallableOtherCount?: string,
+  filterInstallableOtherCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterApplicableRhsaCount?: string,
+  filterApplicableRhsaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterApplicableRhbaCount?: string,
+  filterApplicableRhbaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterApplicableRheaCount?: string,
+  filterApplicableRheaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterApplicableOtherCount?: string,
+  filterApplicableOtherCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { boolean }
   * @memberof ExportSystemsApi
   */
-  filterStale?: string,
+  filterStale?: boolean,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterPackagesInstalled?: string,
+  filterPackagesInstalled?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterPackagesInstallable?: string,
+  filterPackagesInstallable?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportSystemsApi
   */
-  filterPackagesApplicable?: string,
+  filterPackagesApplicable?: number,
   /**
   * Filter systems by inventory groups
   * @type { Array<string> }
@@ -146,10 +146,10 @@ export type ExportSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ExportSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -237,10 +237,14 @@ export type ExportSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ExportSystemsReturnType = AxiosPromise<Array<ControllersSystemDBLookup>>;
+export type ExportSystemsReturnType = Array<ControllersSystemDBLookup>;
 
 const isExportSystemsObjectParams = (params: [ExportSystemsParams] | unknown[]): params is [ExportSystemsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Export systems for my account. Export endpoints are not paginated.
@@ -249,7 +253,7 @@ const isExportSystemsObjectParams = (params: [ExportSystemsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportSystemsParamCreator = async (...config: ([ExportSystemsParams] | [string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, Array<string>, string, Array<string>, string, string, string, string, string, string, string, string, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportSystemsParams] | [string, string, string, string, string, number, number, number, number, number, number, number, number, number, number, number, number, boolean, number, number, number, Array<string>, boolean, Array<string>, string, string, string, string, string, string, string, string, string, string, string, string, Array<string>, AxiosRequestConfig])) => {
     const params = isExportSystemsObjectParams(config) ? config[0] : ['search', 'filterId', 'filterDisplayName', 'filterLastEvaluation', 'filterLastUpload', 'filterRhsaCount', 'filterRhbaCount', 'filterRheaCount', 'filterOtherCount', 'filterInstallableRhsaCount', 'filterInstallableRhbaCount', 'filterInstallableRheaCount', 'filterInstallableOtherCount', 'filterApplicableRhsaCount', 'filterApplicableRhbaCount', 'filterApplicableRheaCount', 'filterApplicableOtherCount', 'filterStale', 'filterPackagesInstalled', 'filterPackagesInstallable', 'filterPackagesApplicable', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'filterBaselineName', 'filterTemplateName', 'filterTemplateUuid', 'filterArch', 'filterOs', 'filterOsname', 'filterOsmajor', 'filterOsminor', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportSystemsParams;
     const { search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterBaselineName, filterTemplateName, filterTemplateUuid, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, options = {} } = params;
     const localVarPath = `/export/systems`;
@@ -412,7 +416,7 @@ export const exportSystemsParamCreator = async (...config: ([ExportSystemsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -424,6 +428,8 @@ export const exportSystemsParamCreator = async (...config: ([ExportSystemsParams
         }
         ]
     };
+
+    return sendRequest<ExportSystemsReturnType>(Promise.resolve(args));
 }
 
 export default exportSystemsParamCreator;

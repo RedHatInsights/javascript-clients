@@ -21,10 +21,14 @@ export type TopicDestroyParams = {
   options?: AxiosRequestConfig
 }
 
-export type TopicDestroyReturnType = AxiosPromise<void>;
+export type TopicDestroyReturnType = void;
 
 const isTopicDestroyObjectParams = (params: [TopicDestroyParams] | unknown[]): params is [TopicDestroyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * Delete a rule topic.  Rules associated with the tag of this topic will be unaffected
@@ -33,7 +37,7 @@ const isTopicDestroyObjectParams = (params: [TopicDestroyParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const topicDestroyParamCreator = async (...config: ([TopicDestroyParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const topicDestroyParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TopicDestroyParams] | [string, AxiosRequestConfig])) => {
     const params = isTopicDestroyObjectParams(config) ? config[0] : ['slug', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TopicDestroyParams;
     const { slug, options = {} } = params;
     const localVarPath = `/api/insights/v1/topic/{slug}/`
@@ -49,7 +53,7 @@ export const topicDestroyParamCreator = async (...config: ([TopicDestroyParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -61,6 +65,8 @@ export const topicDestroyParamCreator = async (...config: ([TopicDestroyParams] 
         }
         ]
     };
+
+    return sendRequest<TopicDestroyReturnType>(Promise.resolve(args));
 }
 
 export default topicDestroyParamCreator;

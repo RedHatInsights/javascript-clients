@@ -21,10 +21,14 @@ export type GenerateParams = {
   options?: AxiosRequestConfig
 }
 
-export type GenerateReturnType = AxiosPromise<string>;
+export type GenerateReturnType = string;
 
 const isGenerateObjectParams = (params: [GenerateParams] | unknown[]): params is [GenerateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'playbookDefinition')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'playbookDefinition')
+  }
+  return false
 }
 /**
 * Generates an Ansible Playbook based on input parameters
@@ -33,7 +37,7 @@ const isGenerateObjectParams = (params: [GenerateParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const generateParamCreator = async (...config: ([GenerateParams] | [PlaybookDefinition, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const generateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GenerateParams] | [PlaybookDefinition, AxiosRequestConfig])) => {
     const params = isGenerateObjectParams(config) ? config[0] : ['playbookDefinition', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GenerateParams;
     const { playbookDefinition, options = {} } = params;
     const localVarPath = `/playbook`;
@@ -50,11 +54,13 @@ export const generateParamCreator = async (...config: ([GenerateParams] | [Playb
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: playbookDefinition,
     };
+
+    return sendRequest<GenerateReturnType>(Promise.resolve(args));
 }
 
 export default generateParamCreator;

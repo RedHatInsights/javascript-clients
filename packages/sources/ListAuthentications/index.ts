@@ -39,10 +39,14 @@ export type ListAuthenticationsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListAuthenticationsReturnType = AxiosPromise<AuthenticationsCollection>;
+export type ListAuthenticationsReturnType = AuthenticationsCollection;
 
 const isListAuthenticationsObjectParams = (params: [ListAuthenticationsParams] | unknown[]): params is [ListAuthenticationsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Authentication objects
@@ -51,7 +55,7 @@ const isListAuthenticationsObjectParams = (params: [ListAuthenticationsParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listAuthenticationsParamCreator = async (...config: ([ListAuthenticationsParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listAuthenticationsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAuthenticationsParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListAuthenticationsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAuthenticationsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/authentications`;
@@ -82,7 +86,7 @@ export const listAuthenticationsParamCreator = async (...config: ([ListAuthentic
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listAuthenticationsParamCreator = async (...config: ([ListAuthentic
         }
         ]
     };
+
+    return sendRequest<ListAuthenticationsReturnType>(Promise.resolve(args));
 }
 
 export default listAuthenticationsParamCreator;

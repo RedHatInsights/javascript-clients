@@ -21,10 +21,14 @@ export type DeleteApplicationParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteApplicationReturnType = AxiosPromise<void>;
+export type DeleteApplicationReturnType = void;
 
 const isDeleteApplicationObjectParams = (params: [DeleteApplicationParams] | unknown[]): params is [DeleteApplicationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Deletes a Application object
@@ -33,7 +37,7 @@ const isDeleteApplicationObjectParams = (params: [DeleteApplicationParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteApplicationParamCreator = async (...config: ([DeleteApplicationParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteApplicationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteApplicationParams] | [string, AxiosRequestConfig])) => {
     const params = isDeleteApplicationObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteApplicationParams;
     const { id, options = {} } = params;
     const localVarPath = `/applications/{id}`
@@ -49,7 +53,7 @@ export const deleteApplicationParamCreator = async (...config: ([DeleteApplicati
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const deleteApplicationParamCreator = async (...config: ([DeleteApplicati
         }
         ]
     };
+
+    return sendRequest<DeleteApplicationReturnType>(Promise.resolve(args));
 }
 
 export default deleteApplicationParamCreator;

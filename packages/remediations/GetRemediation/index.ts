@@ -36,10 +36,14 @@ export const GetRemediationFormatEnum = {
 } as const;
 export type GetRemediationFormatEnum = typeof GetRemediationFormatEnum[keyof typeof GetRemediationFormatEnum];
 
-export type GetRemediationReturnType = AxiosPromise<RemediationDetails>;
+export type GetRemediationReturnType = RemediationDetails;
 
 const isGetRemediationObjectParams = (params: [GetRemediationParams] | unknown[]): params is [GetRemediationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
@@ -48,7 +52,7 @@ const isGetRemediationObjectParams = (params: [GetRemediationParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationParamCreator = async (...config: ([GetRemediationParams] | [string, GetRemediationFormatEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRemediationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationParams] | [string, GetRemediationFormatEnum, AxiosRequestConfig])) => {
     const params = isGetRemediationObjectParams(config) ? config[0] : ['id', 'format', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationParams;
     const { id, format, options = {} } = params;
     const localVarPath = `/remediations/{id}`
@@ -68,10 +72,12 @@ export const getRemediationParamCreator = async (...config: ([GetRemediationPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetRemediationReturnType>(Promise.resolve(args));
 }
 
 export default getRemediationParamCreator;

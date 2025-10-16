@@ -21,10 +21,14 @@ export type ApiHostGetHostExistsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostGetHostExistsReturnType = AxiosPromise<HostIdOut>;
+export type ApiHostGetHostExistsReturnType = HostIdOut;
 
 const isApiHostGetHostExistsObjectParams = (params: [ApiHostGetHostExistsParams] | unknown[]): params is [ApiHostGetHostExistsParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Find one host by insights_id, if it exists. <br /><br /> Required permissions: inventory:hosts:read
@@ -33,7 +37,7 @@ const isApiHostGetHostExistsObjectParams = (params: [ApiHostGetHostExistsParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostExistsParamCreator = async (...config: ([ApiHostGetHostExistsParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostExistsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostExistsParams] | [string, AxiosRequestConfig])) => {
     const params = isApiHostGetHostExistsObjectParams(config) ? config[0] : ['insightsId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostExistsParams;
     const { insightsId, options = {} } = params;
     const localVarPath = `/host_exists`;
@@ -52,7 +56,7 @@ export const apiHostGetHostExistsParamCreator = async (...config: ([ApiHostGetHo
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +68,8 @@ export const apiHostGetHostExistsParamCreator = async (...config: ([ApiHostGetHo
         }
         ]
     };
+
+    return sendRequest<ApiHostGetHostExistsReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGetHostExistsParamCreator;

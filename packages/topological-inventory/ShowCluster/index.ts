@@ -21,10 +21,14 @@ export type ShowClusterParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowClusterReturnType = AxiosPromise<Cluster>;
+export type ShowClusterReturnType = Cluster;
 
 const isShowClusterObjectParams = (params: [ShowClusterParams] | unknown[]): params is [ShowClusterParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a Cluster object
@@ -33,7 +37,7 @@ const isShowClusterObjectParams = (params: [ShowClusterParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showClusterParamCreator = async (...config: ([ShowClusterParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showClusterParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowClusterParams] | [string, AxiosRequestConfig])) => {
     const params = isShowClusterObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowClusterParams;
     const { id, options = {} } = params;
     const localVarPath = `/clusters/{id}`
@@ -49,7 +53,7 @@ export const showClusterParamCreator = async (...config: ([ShowClusterParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showClusterParamCreator = async (...config: ([ShowClusterParams] | 
         }
         ]
     };
+
+    return sendRequest<ShowClusterReturnType>(Promise.resolve(args));
 }
 
 export default showClusterParamCreator;

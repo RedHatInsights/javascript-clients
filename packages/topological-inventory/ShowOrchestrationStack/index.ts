@@ -21,10 +21,14 @@ export type ShowOrchestrationStackParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowOrchestrationStackReturnType = AxiosPromise<OrchestrationStack>;
+export type ShowOrchestrationStackReturnType = OrchestrationStack;
 
 const isShowOrchestrationStackObjectParams = (params: [ShowOrchestrationStackParams] | unknown[]): params is [ShowOrchestrationStackParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a OrchestrationStack object
@@ -33,7 +37,7 @@ const isShowOrchestrationStackObjectParams = (params: [ShowOrchestrationStackPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showOrchestrationStackParamCreator = async (...config: ([ShowOrchestrationStackParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showOrchestrationStackParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowOrchestrationStackParams] | [string, AxiosRequestConfig])) => {
     const params = isShowOrchestrationStackObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowOrchestrationStackParams;
     const { id, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}`
@@ -49,7 +53,7 @@ export const showOrchestrationStackParamCreator = async (...config: ([ShowOrches
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showOrchestrationStackParamCreator = async (...config: ([ShowOrches
         }
         ]
     };
+
+    return sendRequest<ShowOrchestrationStackReturnType>(Promise.resolve(args));
 }
 
 export default showOrchestrationStackParamCreator;

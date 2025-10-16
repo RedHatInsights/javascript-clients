@@ -27,10 +27,14 @@ export type UpdateEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateEndpointReturnType = AxiosPromise<void>;
+export type UpdateEndpointReturnType = void;
 
 const isUpdateEndpointObjectParams = (params: [UpdateEndpointParams] | unknown[]): params is [UpdateEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'endpoint')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'endpoint')
+  }
+  return false
 }
 /**
 * Updates a Endpoint object
@@ -39,7 +43,7 @@ const isUpdateEndpointObjectParams = (params: [UpdateEndpointParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateEndpointParamCreator = async (...config: ([UpdateEndpointParams] | [string, Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateEndpointParams] | [string, Endpoint, AxiosRequestConfig])) => {
     const params = isUpdateEndpointObjectParams(config) ? config[0] : ['id', 'endpoint', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateEndpointParams;
     const { id, endpoint, options = {} } = params;
     const localVarPath = `/endpoints/{id}`
@@ -57,7 +61,7 @@ export const updateEndpointParamCreator = async (...config: ([UpdateEndpointPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: endpoint,
@@ -69,6 +73,8 @@ export const updateEndpointParamCreator = async (...config: ([UpdateEndpointPara
         }
         ]
     };
+
+    return sendRequest<UpdateEndpointReturnType>(Promise.resolve(args));
 }
 
 export default updateEndpointParamCreator;

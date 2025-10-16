@@ -21,10 +21,14 @@ export type UserPreferencesCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type UserPreferencesCreateReturnType = AxiosPromise<PreferencesInput>;
+export type UserPreferencesCreateReturnType = PreferencesInput;
 
 const isUserPreferencesCreateObjectParams = (params: [UserPreferencesCreateParams] | unknown[]): params is [UserPreferencesCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'preferencesInput')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'preferencesInput')
+  }
+  return false
 }
 /**
 * Accept the settings as input, and adjust the actual models accordingly.  The current account settings will be updated, or one will be created, with the
@@ -32,7 +36,7 @@ const isUserPreferencesCreateObjectParams = (params: [UserPreferencesCreateParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const userPreferencesCreateParamCreator = async (...config: ([UserPreferencesCreateParams] | [PreferencesInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const userPreferencesCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UserPreferencesCreateParams] | [PreferencesInput, AxiosRequestConfig])) => {
     const params = isUserPreferencesCreateObjectParams(config) ? config[0] : ['preferencesInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UserPreferencesCreateParams;
     const { preferencesInput, options = {} } = params;
     const localVarPath = `/api/insights/v1/user-preferences/`;
@@ -49,7 +53,7 @@ export const userPreferencesCreateParamCreator = async (...config: ([UserPrefere
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: preferencesInput,
@@ -62,6 +66,8 @@ export const userPreferencesCreateParamCreator = async (...config: ([UserPrefere
         }
         ]
     };
+
+    return sendRequest<UserPreferencesCreateReturnType>(Promise.resolve(args));
 }
 
 export default userPreferencesCreateParamCreator;

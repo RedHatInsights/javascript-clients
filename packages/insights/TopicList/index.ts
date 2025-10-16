@@ -60,10 +60,14 @@ export const TopicListUpdateMethodEnum = {
 } as const;
 export type TopicListUpdateMethodEnum = typeof TopicListUpdateMethodEnum[keyof typeof TopicListUpdateMethodEnum];
 
-export type TopicListReturnType = AxiosPromise<Array<Topic>>;
+export type TopicListReturnType = Array<Topic>;
 
 const isTopicListObjectParams = (params: [TopicListParams] | unknown[]): params is [TopicListParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
@@ -71,7 +75,7 @@ const isTopicListObjectParams = (params: [TopicListParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const topicListParamCreator = async (...config: ([TopicListParams] | [Array<string>, boolean, Array<string>, boolean, Array<string>, Array<TopicListUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const topicListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TopicListParams] | [Array<string>, boolean, Array<string>, boolean, Array<string>, Array<TopicListUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isTopicListObjectParams(config) ? config[0] : ['filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'showDisabled', 'tags', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TopicListParams;
     const { filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/topic/`;
@@ -110,7 +114,7 @@ export const topicListParamCreator = async (...config: ([TopicListParams] | [Arr
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -122,6 +126,8 @@ export const topicListParamCreator = async (...config: ([TopicListParams] | [Arr
         }
         ]
     };
+
+    return sendRequest<TopicListReturnType>(Promise.resolve(args));
 }
 
 export default topicListParamCreator;

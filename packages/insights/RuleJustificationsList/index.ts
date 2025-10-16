@@ -33,10 +33,14 @@ export type RuleJustificationsListParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleJustificationsListReturnType = AxiosPromise<PaginatedJustificationCountList>;
+export type RuleJustificationsListReturnType = PaginatedJustificationCountList;
 
 const isRuleJustificationsListObjectParams = (params: [RuleJustificationsListParams] | unknown[]): params is [RuleJustificationsListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.
@@ -44,7 +48,7 @@ const isRuleJustificationsListObjectParams = (params: [RuleJustificationsListPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleJustificationsListParamCreator = async (...config: ([RuleJustificationsListParams] | [string, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleJustificationsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleJustificationsListParams] | [string, number, number, AxiosRequestConfig])) => {
     const params = isRuleJustificationsListObjectParams(config) ? config[0] : ['ruleId', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleJustificationsListParams;
     const { ruleId, limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/justifications/`
@@ -68,7 +72,7 @@ export const ruleJustificationsListParamCreator = async (...config: ([RuleJustif
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -80,6 +84,8 @@ export const ruleJustificationsListParamCreator = async (...config: ([RuleJustif
         }
         ]
     };
+
+    return sendRequest<RuleJustificationsListReturnType>(Promise.resolve(args));
 }
 
 export default ruleJustificationsListParamCreator;

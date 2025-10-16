@@ -27,10 +27,14 @@ export type UpdateRoleParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateRoleReturnType = AxiosPromise<void>;
+export type UpdateRoleReturnType = void;
 
 const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): params is [UpdateRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'rolePut')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'rolePut')
+  }
+  return false
 }
 /**
 *
@@ -39,7 +43,7 @@ const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [string, RolePut, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateRoleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateRoleParams] | [string, RolePut, AxiosRequestConfig])) => {
     const params = isUpdateRoleObjectParams(config) ? config[0] : ['uuid', 'rolePut', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateRoleParams;
     const { uuid, rolePut, options = {} } = params;
     const localVarPath = `/roles/{uuid}/`
@@ -57,7 +61,7 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: rolePut,
@@ -69,6 +73,8 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
         }
         ]
     };
+
+    return sendRequest<UpdateRoleReturnType>(Promise.resolve(args));
 }
 
 export default updateRoleParamCreator;

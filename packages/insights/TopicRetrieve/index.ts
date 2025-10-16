@@ -21,10 +21,14 @@ export type TopicRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type TopicRetrieveReturnType = AxiosPromise<Topic>;
+export type TopicRetrieveReturnType = Topic;
 
 const isTopicRetrieveObjectParams = (params: [TopicRetrieveParams] | unknown[]): params is [TopicRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * Retrieve a single topic by slug.  This also lists the topic\'s impacted systems count.
@@ -32,7 +36,7 @@ const isTopicRetrieveObjectParams = (params: [TopicRetrieveParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const topicRetrieveParamCreator = async (...config: ([TopicRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const topicRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TopicRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isTopicRetrieveObjectParams(config) ? config[0] : ['slug', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TopicRetrieveParams;
     const { slug, options = {} } = params;
     const localVarPath = `/api/insights/v1/topic/{slug}/`
@@ -48,7 +52,7 @@ export const topicRetrieveParamCreator = async (...config: ([TopicRetrieveParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const topicRetrieveParamCreator = async (...config: ([TopicRetrieveParams
         }
         ]
     };
+
+    return sendRequest<TopicRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default topicRetrieveParamCreator;

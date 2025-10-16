@@ -45,10 +45,14 @@ export type ListSubscriptionSecurityGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSubscriptionSecurityGroupsReturnType = AxiosPromise<SecurityGroupsCollection>;
+export type ListSubscriptionSecurityGroupsReturnType = SecurityGroupsCollection;
 
 const isListSubscriptionSecurityGroupsObjectParams = (params: [ListSubscriptionSecurityGroupsParams] | unknown[]): params is [ListSubscriptionSecurityGroupsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of SecurityGroup objects
@@ -57,7 +61,7 @@ const isListSubscriptionSecurityGroupsObjectParams = (params: [ListSubscriptionS
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSubscriptionSecurityGroupsParamCreator = async (...config: ([ListSubscriptionSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSubscriptionSecurityGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSubscriptionSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSubscriptionSecurityGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSubscriptionSecurityGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/subscriptions/{id}/security_groups`
@@ -89,7 +93,7 @@ export const listSubscriptionSecurityGroupsParamCreator = async (...config: ([Li
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listSubscriptionSecurityGroupsParamCreator = async (...config: ([Li
         }
         ]
     };
+
+    return sendRequest<ListSubscriptionSecurityGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listSubscriptionSecurityGroupsParamCreator;

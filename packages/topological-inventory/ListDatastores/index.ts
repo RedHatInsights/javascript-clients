@@ -39,10 +39,14 @@ export type ListDatastoresParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListDatastoresReturnType = AxiosPromise<DatastoresCollection>;
+export type ListDatastoresReturnType = DatastoresCollection;
 
 const isListDatastoresObjectParams = (params: [ListDatastoresParams] | unknown[]): params is [ListDatastoresParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Datastore objects
@@ -51,7 +55,7 @@ const isListDatastoresObjectParams = (params: [ListDatastoresParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listDatastoresParamCreator = async (...config: ([ListDatastoresParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listDatastoresParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListDatastoresParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListDatastoresObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListDatastoresParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/datastores`;
@@ -82,7 +86,7 @@ export const listDatastoresParamCreator = async (...config: ([ListDatastoresPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listDatastoresParamCreator = async (...config: ([ListDatastoresPara
         }
         ]
     };
+
+    return sendRequest<ListDatastoresReturnType>(Promise.resolve(args));
 }
 
 export default listDatastoresParamCreator;

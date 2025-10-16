@@ -55,7 +55,7 @@ export type ReportRuleResultsParams = {
   */
   sortBy?: any,
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rule Results are searchable using attributes `result`, `title`, `severity`, `remediation_available`, and `rule_group_id`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rule Results are searchable using attributes `result`, `title`, `severity`, `rule_group_id`, and `identifier_label`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof ReportRuleResultsApi
   */
@@ -63,19 +63,23 @@ export type ReportRuleResultsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportRuleResultsReturnType = AxiosPromise<ReportRuleResults200Response>;
+export type ReportRuleResultsReturnType = ReportRuleResults200Response;
 
 const isReportRuleResultsObjectParams = (params: [ReportRuleResultsParams] | unknown[]): params is [ReportRuleResultsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'testResultId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'testResultId') && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+  }
+  return false
 }
 /**
-* Lists Rule Results under a Report
+* Retrieve all of the rule results for a specific report.
 * @summary Request Rule Results under a Report
 * @param {ReportRuleResultsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportRuleResultsParamCreator = async (...config: ([ReportRuleResultsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportRuleResultsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportRuleResultsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isReportRuleResultsObjectParams(config) ? config[0] : ['testResultId', 'reportId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportRuleResultsParams;
     const { testResultId, reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/reports/{report_id}/test_results/{test_result_id}/rule_results`
@@ -118,10 +122,12 @@ export const reportRuleResultsParamCreator = async (...config: ([ReportRuleResul
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportRuleResultsReturnType>(Promise.resolve(args));
 }
 
 export default reportRuleResultsParamCreator;

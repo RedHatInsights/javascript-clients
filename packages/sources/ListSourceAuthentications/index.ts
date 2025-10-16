@@ -45,10 +45,14 @@ export type ListSourceAuthenticationsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceAuthenticationsReturnType = AxiosPromise<AuthenticationsCollection>;
+export type ListSourceAuthenticationsReturnType = AuthenticationsCollection;
 
 const isListSourceAuthenticationsObjectParams = (params: [ListSourceAuthenticationsParams] | unknown[]): params is [ListSourceAuthenticationsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Authentication objects
@@ -57,7 +61,7 @@ const isListSourceAuthenticationsObjectParams = (params: [ListSourceAuthenticati
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceAuthenticationsParamCreator = async (...config: ([ListSourceAuthenticationsParams] | [string, number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceAuthenticationsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceAuthenticationsParams] | [string, number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceAuthenticationsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceAuthenticationsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/sources/{id}/authentications`
@@ -89,7 +93,7 @@ export const listSourceAuthenticationsParamCreator = async (...config: ([ListSou
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listSourceAuthenticationsParamCreator = async (...config: ([ListSou
         }
         ]
     };
+
+    return sendRequest<ListSourceAuthenticationsReturnType>(Promise.resolve(args));
 }
 
 export default listSourceAuthenticationsParamCreator;

@@ -94,10 +94,14 @@ export const ExportSystemsListUpdateMethodEnum = {
 } as const;
 export type ExportSystemsListUpdateMethodEnum = typeof ExportSystemsListUpdateMethodEnum[keyof typeof ExportSystemsListUpdateMethodEnum];
 
-export type ExportSystemsListReturnType = AxiosPromise<Array<System>>;
+export type ExportSystemsListReturnType = Array<System>;
 
 const isExportSystemsListObjectParams = (params: [ExportSystemsListParams] | unknown[]): params is [ExportSystemsListParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
@@ -105,7 +109,7 @@ const isExportSystemsListObjectParams = (params: [ExportSystemsListParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportSystemsListParamCreator = async (...config: ([ExportSystemsListParams] | [string, ExportSystemsListFormatEnum, Array<string>, string, ExportSystemsListSortEnum, Array<ExportSystemsListUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportSystemsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportSystemsListParams] | [string, ExportSystemsListFormatEnum, Array<string>, string, ExportSystemsListSortEnum, Array<ExportSystemsListUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isExportSystemsListObjectParams(config) ? config[0] : ['displayName', 'format', 'groups', 'ruleId', 'sort', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportSystemsListParams;
     const { displayName, format, groups, ruleId, sort, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/export/systems/`;
@@ -144,7 +148,7 @@ export const exportSystemsListParamCreator = async (...config: ([ExportSystemsLi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -156,6 +160,8 @@ export const exportSystemsListParamCreator = async (...config: ([ExportSystemsLi
         }
         ]
     };
+
+    return sendRequest<ExportSystemsListReturnType>(Promise.resolve(args));
 }
 
 export default exportSystemsListParamCreator;

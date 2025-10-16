@@ -51,19 +51,23 @@ export type SupportedProfilesParams = {
   options?: AxiosRequestConfig
 }
 
-export type SupportedProfilesReturnType = AxiosPromise<SupportedProfiles200Response>;
+export type SupportedProfilesReturnType = SupportedProfiles200Response;
 
 const isSupportedProfilesObjectParams = (params: [SupportedProfilesParams] | unknown[]): params is [SupportedProfilesParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* Lists Supported Profiles
+* Retrieve the list of profiles supported by particular RHEL versions.
 * @summary Request Supported Profiles
 * @param {SupportedProfilesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const supportedProfilesParamCreator = async (...config: ([SupportedProfilesParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const supportedProfilesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SupportedProfilesParams] | [any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isSupportedProfilesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SupportedProfilesParams;
     const { xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides/supported_profiles`;
@@ -104,10 +108,12 @@ export const supportedProfilesParamCreator = async (...config: ([SupportedProfil
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SupportedProfilesReturnType>(Promise.resolve(args));
 }
 
 export default supportedProfilesParamCreator;

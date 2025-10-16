@@ -45,10 +45,14 @@ export type ListOrchestrationStackVmsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackVmsReturnType = AxiosPromise<VmsCollection>;
+export type ListOrchestrationStackVmsReturnType = VmsCollection;
 
 const isListOrchestrationStackVmsObjectParams = (params: [ListOrchestrationStackVmsParams] | unknown[]): params is [ListOrchestrationStackVmsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Vm objects
@@ -57,7 +61,7 @@ const isListOrchestrationStackVmsObjectParams = (params: [ListOrchestrationStack
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackVmsParamCreator = async (...config: ([ListOrchestrationStackVmsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackVmsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackVmsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackVmsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackVmsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/vms`
@@ -89,7 +93,7 @@ export const listOrchestrationStackVmsParamCreator = async (...config: ([ListOrc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listOrchestrationStackVmsParamCreator = async (...config: ([ListOrc
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackVmsReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackVmsParamCreator;

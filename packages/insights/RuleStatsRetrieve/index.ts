@@ -21,10 +21,14 @@ export type RuleStatsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type RuleStatsRetrieveReturnType = AxiosPromise<RuleUsageStats>;
+export type RuleStatsRetrieveReturnType = RuleUsageStats;
 
 const isRuleStatsRetrieveObjectParams = (params: [RuleStatsRetrieveParams] | unknown[]): params is [RuleStatsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.
@@ -32,7 +36,7 @@ const isRuleStatsRetrieveObjectParams = (params: [RuleStatsRetrieveParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleStatsRetrieveParamCreator = async (...config: ([RuleStatsRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleStatsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleStatsRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isRuleStatsRetrieveObjectParams(config) ? config[0] : ['ruleId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleStatsRetrieveParams;
     const { ruleId, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/stats/`
@@ -48,7 +52,7 @@ export const ruleStatsRetrieveParamCreator = async (...config: ([RuleStatsRetrie
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const ruleStatsRetrieveParamCreator = async (...config: ([RuleStatsRetrie
         }
         ]
     };
+
+    return sendRequest<RuleStatsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default ruleStatsRetrieveParamCreator;

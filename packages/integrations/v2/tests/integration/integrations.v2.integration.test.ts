@@ -13,7 +13,7 @@ import { EndpointResourceV2GetEndpointsParams } from '../../EndpointResourceV2Ge
 import { EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams } from '../../EndpointResourceV2GetOrCreateDrawerSubscriptionEndpoint';
 import { EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams } from '../../EndpointResourceV2GetOrCreateEmailSubscriptionEndpoint';
 import { EndpointResourceV2UpdateEndpointParams } from '../../EndpointResourceV2UpdateEndpoint';
-import { EndpointResourceV2UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV2UpdateEventTypesLinkedToEndpoint';
+import { EndpointResourceV1UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV1UpdateEventTypesLinkedToEndpoint';
 
 const BASE_PATH = 'http://localhost:3002/api/integrations/v2.0/';
 
@@ -25,13 +25,13 @@ describe('Integrations API (v2)', () => {
     const endpoint: Endpoint = {
       name: placeHolder,
       description: placeHolder,
-      type: EndpointType.Ansible,
+      type: '',
     };
 
     const endpointResourceV2CreateEndpointParams: EndpointResourceV2CreateEndpointParams = {
       endpoint: endpoint,
     };
-    const createEndpointResp = await client.endpointResourceV2CreateEndpoint(endpointResourceV2CreateEndpointParams);
+    const createEndpointResp = await client.endpointResourceV1CreateEndpoint(endpointResourceV2CreateEndpointParams);
     expect(createEndpointResp.status).toEqual(200);
   });
 
@@ -39,7 +39,7 @@ describe('Integrations API (v2)', () => {
     const deleteEndpointParams: EndpointResourceV2DeleteEndpointParams = {
       id: placeHolder,
     };
-    const deleteEndpointResp = await client.endpointResourceV2DeleteEndpoint(deleteEndpointParams);
+    const deleteEndpointResp = await client.endpointResourceV1DeleteEndpoint(deleteEndpointParams);
     expect(deleteEndpointResp.status).toEqual(204);
   });
 
@@ -47,13 +47,13 @@ describe('Integrations API (v2)', () => {
     const enableEndpointParams: EndpointResourceV2EnableEndpointParams = {
       id: placeHolder,
     };
-    const enableResp = await client.endpointResourceV2EnableEndpoint(enableEndpointParams);
+    const enableResp = await client.endpointResourceV1EnableEndpoint(enableEndpointParams);
     expect(enableResp.status).toEqual(200);
   });
 
   test('disable endpoint', async () => {
     const disableEndpointParams: EndpointResourceV2DisableEndpointParams = { id: placeHolder };
-    const disableResp = await client.endpointResourceV2DisableEndpoint(disableEndpointParams);
+    const disableResp = await client.endpointResourceV1DisableEndpoint(disableEndpointParams);
     expect(disableResp.status).toEqual(204);
   });
 
@@ -61,25 +61,25 @@ describe('Integrations API (v2)', () => {
     const getEndpointParams: EndpointResourceV2GetEndpointParams = {
       id: placeHolder,
     };
-    const getEndptResp = await client.endpointResourceV2GetEndpoint(getEndpointParams);
+    const getEndptResp = await client.endpointResourceV1GetEndpoint(getEndpointParams);
     expect(getEndptResp.status).toEqual(200);
   });
 
   test('get endpoint history', async () => {
     const getEndpointHistoryParams: EndpointResourceV2GetEndpointHistoryParams = { id: placeHolder };
-    const endpointHistoryResp = await client.endpointResourceV2GetEndpointHistory(getEndpointHistoryParams);
+    const endpointHistoryResp = await client.endpointResourceV1GetEndpointHistory(getEndpointHistoryParams);
     expect(endpointHistoryResp.status).toEqual(200);
   });
 
   test('get detailed endpoint history', async () => {
     const getDetailedHistoryParams: EndpointResourceV2GetDetailedEndpointHistoryParams = { historyId: placeHolder, id: placeHolder };
-    const resp = await client.endpointResourceV2GetDetailedEndpointHistory(getDetailedHistoryParams);
+    const resp = await client.endpointResourceV1GetDetailedEndpointHistory(getDetailedHistoryParams);
     expect(resp.status).toEqual(200);
   });
 
   test('get endpoints', async () => {
     const getEndpointsParams: EndpointResourceV2GetEndpointsParams = {};
-    const resp = await client.endpointResourceV2GetEndpoints(getEndpointsParams);
+    const resp = await client.endpointResourceV1GetEndpoints(getEndpointsParams);
     expect(resp.status).toEqual(200);
   });
 
@@ -90,7 +90,7 @@ describe('Integrations API (v2)', () => {
     const getOrCreateDrawerSubscriptionParams: EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams = {
       requestSystemSubscriptionProperties: requestSystemSubscriptionProps,
     };
-    const resp = await client.endpointResourceV2GetOrCreateDrawerSubscriptionEndpoint(getOrCreateDrawerSubscriptionParams);
+    const resp = await client.endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint(getOrCreateDrawerSubscriptionParams);
     expect(resp.status).toEqual(200);
   });
 
@@ -101,7 +101,7 @@ describe('Integrations API (v2)', () => {
     const params: EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams = {
       requestSystemSubscriptionProperties: requestSystemSubscriptionProps,
     };
-    const resp = await client.endpointResourceV2GetOrCreateEmailSubscriptionEndpoint(params);
+    const resp = await client.endpointResourceV1GetOrCreateEmailSubscriptionEndpoint(params);
     expect(resp.status).toEqual(200);
   });
 
@@ -109,18 +109,19 @@ describe('Integrations API (v2)', () => {
     const endpt: Endpoint = {
       name: placeHolder,
       description: placeHolder,
-      type: EndpointType.EmailSubscription,
+      type: 'EmailSubscription',
     };
     const params: EndpointResourceV2UpdateEndpointParams = { id: placeHolder, endpoint: endpt };
-    const resp = await client.endpointResourceV2UpdateEndpoint(params);
+    const resp = await client.endpointResourceV1UpdateEndpoint(params);
     expect(resp.status).toEqual(200);
   });
 
   test('update event types linked to endpoint', async () => {
-    const params: EndpointResourceV2UpdateEventTypesLinkedToEndpointParams = {
+    const params: EndpointResourceV1UpdateEventTypesLinkedToEndpointParams = {
       endpointId: placeHolder,
+      body: '',
     };
-    const resp = await client.endpointResourceV2UpdateEventTypesLinkedToEndpoint(params);
+    const resp = await client.endpointResourceV1UpdateEventTypesLinkedToEndpoint(params);
     expect(resp.status).toEqual(204);
   });
 });

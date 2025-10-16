@@ -55,7 +55,7 @@ export type ReportSystemsParams = {
   */
   sortBy?: any,
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_version`, `os_minor_version`, `never_reported`, and `group_name`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_minor_version`, `never_reported`, and `group_name`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof ReportSystemsApi
   */
@@ -63,19 +63,23 @@ export type ReportSystemsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportSystemsReturnType = AxiosPromise<Systems200Response>;
+export type ReportSystemsReturnType = Systems200Response;
 
 const isReportSystemsObjectParams = (params: [ReportSystemsParams] | unknown[]): params is [ReportSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+  }
+  return false
 }
 /**
-* Lists Systems assigned to a Report
+* Retrieve all of the systems for a specific report.
 * @summary Request Systems assigned to a Report
 * @param {ReportSystemsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportSystemsParamCreator = async (...config: ([ReportSystemsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportSystemsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isReportSystemsObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'tags', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportSystemsParams;
     const { reportId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/reports/{report_id}/systems`
@@ -121,10 +125,12 @@ export const reportSystemsParamCreator = async (...config: ([ReportSystemsParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportSystemsReturnType>(Promise.resolve(args));
 }
 
 export default reportSystemsParamCreator;

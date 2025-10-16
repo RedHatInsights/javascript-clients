@@ -26,7 +26,7 @@ describe('Integrations API (v1)', () => {
     const endpoint: Endpoint = {
       name: placeHolder,
       description: placeHolder,
-      type: EndpointType.Ansible,
+      type: 'Ansible',
     };
     const endpointResourceV1CreateEndpointParams: EndpointResourceV1CreateEndpointParams = {
       endpoint: endpoint,
@@ -109,7 +109,7 @@ describe('Integrations API (v1)', () => {
     const endpt: Endpoint = {
       name: placeHolder,
       description: placeHolder,
-      type: EndpointType.EmailSubscription,
+      type: 'EmailSubscription',
     };
     const params: EndpointResourceV1UpdateEndpointParams = { id: placeHolder, endpoint: endpt };
     const resp = await client.endpointResourceV1UpdateEndpoint(params);
@@ -119,6 +119,7 @@ describe('Integrations API (v1)', () => {
   test('update event types linked to endpoint', async () => {
     const params: EndpointResourceV1UpdateEventTypesLinkedToEndpointParams = {
       endpointId: placeHolder,
+      body: '',
     };
     const resp = await client.endpointResourceV1UpdateEventTypesLinkedToEndpoint(params);
     expect(resp.status).toEqual(204);

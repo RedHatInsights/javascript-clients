@@ -44,10 +44,10 @@ export type PackageSystemsIdsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof PackageSystemsIdsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -87,10 +87,14 @@ export type PackageSystemsIdsParams = {
   options?: AxiosRequestConfig
 }
 
-export type PackageSystemsIdsReturnType = AxiosPromise<ControllersIDsStatusResponse>;
+export type PackageSystemsIdsReturnType = ControllersIDsStatusResponse;
 
 const isPackageSystemsIdsObjectParams = (params: [PackageSystemsIdsParams] | unknown[]): params is [PackageSystemsIdsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'packageName') && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'packageName')
+  }
+  return false
 }
 /**
 * Show me all my systems which have a package installed
@@ -99,7 +103,7 @@ const isPackageSystemsIdsObjectParams = (params: [PackageSystemsIdsParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const packageSystemsIdsParamCreator = async (...config: ([PackageSystemsIdsParams] | [string, number, number, Array<string>, Array<string>, string, Array<string>, string, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const packageSystemsIdsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PackageSystemsIdsParams] | [string, number, number, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, string, AxiosRequestConfig])) => {
     const params = isPackageSystemsIdsObjectParams(config) ? config[0] : ['packageName', 'limit', 'offset', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'filterSatelliteManaged', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PackageSystemsIdsParams;
     const { packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, options = {} } = params;
     const localVarPath = `/ids/packages/{package_name}/systems`
@@ -159,7 +163,7 @@ export const packageSystemsIdsParamCreator = async (...config: ([PackageSystemsI
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -171,6 +175,8 @@ export const packageSystemsIdsParamCreator = async (...config: ([PackageSystemsI
         }
         ]
     };
+
+    return sendRequest<PackageSystemsIdsReturnType>(Promise.resolve(args));
 }
 
 export default packageSystemsIdsParamCreator;

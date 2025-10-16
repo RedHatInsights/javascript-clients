@@ -181,7 +181,7 @@ export const toPathString = function (url: URL) {
  *
  * @export
  */
-export const createRequestFunction = function (axiosArgs: RequestArgs, globalAxios: AxiosInstance, BASE_PATH: string, configuration?: Configuration) {
+export const createRequestFunction = function <R = number>(axiosArgs: RequestArgs, globalAxios: AxiosInstance, BASE_PATH: string, configuration?: Configuration) {
     return <T = unknown, R = AxiosResponse<T>>(axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
         const axiosRequestArgs = {...axiosArgs.options, url: (configuration?.basePath || basePath) + toPathString(axiosArgs.urlObj)};
         return axios.request<T, R>(axiosRequestArgs);

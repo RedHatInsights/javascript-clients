@@ -41,10 +41,14 @@ export const GetAuditlogsOrderByEnum = {
 } as const;
 export type GetAuditlogsOrderByEnum = typeof GetAuditlogsOrderByEnum[keyof typeof GetAuditlogsOrderByEnum];
 
-export type GetAuditlogsReturnType = AxiosPromise<AuditLogPagination>;
+export type GetAuditlogsReturnType = AuditLogPagination;
 
 const isGetAuditlogsObjectParams = (params: [GetAuditlogsParams] | unknown[]): params is [GetAuditlogsParams] => {
-  return params.length === 1 && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * A list of all of the Admin User\'s actions logged in Audit Logs
@@ -52,7 +56,7 @@ const isGetAuditlogsObjectParams = (params: [GetAuditlogsParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getAuditlogsParamCreator = async (...config: ([GetAuditlogsParams] | [number, number, GetAuditlogsOrderByEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getAuditlogsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetAuditlogsParams] | [number, number, GetAuditlogsOrderByEnum, AxiosRequestConfig])) => {
     const params = isGetAuditlogsObjectParams(config) ? config[0] : ['limit', 'offset', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetAuditlogsParams;
     const { limit, offset, orderBy, options = {} } = params;
     const localVarPath = `/auditlogs/`;
@@ -79,7 +83,7 @@ export const getAuditlogsParamCreator = async (...config: ([GetAuditlogsParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -90,6 +94,8 @@ export const getAuditlogsParamCreator = async (...config: ([GetAuditlogsParams] 
         }
         ]
     };
+
+    return sendRequest<GetAuditlogsReturnType>(Promise.resolve(args));
 }
 
 export default getAuditlogsParamCreator;

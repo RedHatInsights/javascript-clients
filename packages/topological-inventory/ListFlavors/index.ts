@@ -39,10 +39,14 @@ export type ListFlavorsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListFlavorsReturnType = AxiosPromise<FlavorsCollection>;
+export type ListFlavorsReturnType = FlavorsCollection;
 
 const isListFlavorsObjectParams = (params: [ListFlavorsParams] | unknown[]): params is [ListFlavorsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Flavor objects
@@ -51,7 +55,7 @@ const isListFlavorsObjectParams = (params: [ListFlavorsParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listFlavorsParamCreator = async (...config: ([ListFlavorsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listFlavorsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListFlavorsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListFlavorsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListFlavorsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/flavors`;
@@ -82,7 +86,7 @@ export const listFlavorsParamCreator = async (...config: ([ListFlavorsParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listFlavorsParamCreator = async (...config: ([ListFlavorsParams] | 
         }
         ]
     };
+
+    return sendRequest<ListFlavorsReturnType>(Promise.resolve(args));
 }
 
 export default listFlavorsParamCreator;

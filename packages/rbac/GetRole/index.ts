@@ -36,10 +36,14 @@ export const GetRoleScopeEnum = {
 } as const;
 export type GetRoleScopeEnum = typeof GetRoleScopeEnum[keyof typeof GetRoleScopeEnum];
 
-export type GetRoleReturnType = AxiosPromise<RoleWithAccess>;
+export type GetRoleReturnType = RoleWithAccess;
 
 const isGetRoleObjectParams = (params: [GetRoleParams] | unknown[]): params is [GetRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
+  }
+  return false
 }
 /**
 *
@@ -48,7 +52,7 @@ const isGetRoleObjectParams = (params: [GetRoleParams] | unknown[]): params is [
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRoleParamCreator = async (...config: ([GetRoleParams] | [string, GetRoleScopeEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRoleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRoleParams] | [string, GetRoleScopeEnum, AxiosRequestConfig])) => {
     const params = isGetRoleObjectParams(config) ? config[0] : ['uuid', 'scope', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRoleParams;
     const { uuid, scope, options = {} } = params;
     const localVarPath = `/roles/{uuid}/`
@@ -68,7 +72,7 @@ export const getRoleParamCreator = async (...config: ([GetRoleParams] | [string,
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -79,6 +83,8 @@ export const getRoleParamCreator = async (...config: ([GetRoleParams] | [string,
         }
         ]
     };
+
+    return sendRequest<GetRoleReturnType>(Promise.resolve(args));
 }
 
 export default getRoleParamCreator;

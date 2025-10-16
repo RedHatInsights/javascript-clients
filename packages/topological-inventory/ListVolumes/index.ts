@@ -39,10 +39,14 @@ export type ListVolumesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListVolumesReturnType = AxiosPromise<VolumesCollection>;
+export type ListVolumesReturnType = VolumesCollection;
 
 const isListVolumesObjectParams = (params: [ListVolumesParams] | unknown[]): params is [ListVolumesParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Volume objects
@@ -51,7 +55,7 @@ const isListVolumesObjectParams = (params: [ListVolumesParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listVolumesParamCreator = async (...config: ([ListVolumesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listVolumesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListVolumesParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListVolumesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListVolumesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/volumes`;
@@ -82,7 +86,7 @@ export const listVolumesParamCreator = async (...config: ([ListVolumesParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listVolumesParamCreator = async (...config: ([ListVolumesParams] | 
         }
         ]
     };
+
+    return sendRequest<ListVolumesReturnType>(Promise.resolve(args));
 }
 
 export default listVolumesParamCreator;

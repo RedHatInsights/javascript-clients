@@ -21,10 +21,14 @@ export type ShowServiceOfferingIconIconDataParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowServiceOfferingIconIconDataReturnType = AxiosPromise<File>;
+export type ShowServiceOfferingIconIconDataReturnType = File;
 
 const isShowServiceOfferingIconIconDataObjectParams = (params: [ShowServiceOfferingIconIconDataParams] | unknown[]): params is [ShowServiceOfferingIconIconDataParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a ServiceOfferingIcon IconData
@@ -33,7 +37,7 @@ const isShowServiceOfferingIconIconDataObjectParams = (params: [ShowServiceOffer
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showServiceOfferingIconIconDataParamCreator = async (...config: ([ShowServiceOfferingIconIconDataParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showServiceOfferingIconIconDataParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowServiceOfferingIconIconDataParams] | [string, AxiosRequestConfig])) => {
     const params = isShowServiceOfferingIconIconDataObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowServiceOfferingIconIconDataParams;
     const { id, options = {} } = params;
     const localVarPath = `/service_offering_icons/{id}/icon_data`
@@ -49,7 +53,7 @@ export const showServiceOfferingIconIconDataParamCreator = async (...config: ([S
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showServiceOfferingIconIconDataParamCreator = async (...config: ([S
         }
         ]
     };
+
+    return sendRequest<ShowServiceOfferingIconIconDataReturnType>(Promise.resolve(args));
 }
 
 export default showServiceOfferingIconIconDataParamCreator;

@@ -45,10 +45,14 @@ export type ListSourceTypeSourcesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceTypeSourcesReturnType = AxiosPromise<SourcesCollection>;
+export type ListSourceTypeSourcesReturnType = SourcesCollection;
 
 const isListSourceTypeSourcesObjectParams = (params: [ListSourceTypeSourcesParams] | unknown[]): params is [ListSourceTypeSourcesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Source objects
@@ -57,7 +61,7 @@ const isListSourceTypeSourcesObjectParams = (params: [ListSourceTypeSourcesParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceTypeSourcesParamCreator = async (...config: ([ListSourceTypeSourcesParams] | [string, number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceTypeSourcesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceTypeSourcesParams] | [string, number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceTypeSourcesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceTypeSourcesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_types/{id}/sources`
@@ -89,7 +93,7 @@ export const listSourceTypeSourcesParamCreator = async (...config: ([ListSourceT
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listSourceTypeSourcesParamCreator = async (...config: ([ListSourceT
         }
         ]
     };
+
+    return sendRequest<ListSourceTypeSourcesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceTypeSourcesParamCreator;

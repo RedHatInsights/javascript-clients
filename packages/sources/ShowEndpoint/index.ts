@@ -21,10 +21,14 @@ export type ShowEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowEndpointReturnType = AxiosPromise<Endpoint>;
+export type ShowEndpointReturnType = Endpoint;
 
 const isShowEndpointObjectParams = (params: [ShowEndpointParams] | unknown[]): params is [ShowEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a Endpoint object
@@ -33,7 +37,7 @@ const isShowEndpointObjectParams = (params: [ShowEndpointParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showEndpointParamCreator = async (...config: ([ShowEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowEndpointParams] | [string, AxiosRequestConfig])) => {
     const params = isShowEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowEndpointParams;
     const { id, options = {} } = params;
     const localVarPath = `/endpoints/{id}`
@@ -49,7 +53,7 @@ export const showEndpointParamCreator = async (...config: ([ShowEndpointParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showEndpointParamCreator = async (...config: ([ShowEndpointParams] 
         }
         ]
     };
+
+    return sendRequest<ShowEndpointReturnType>(Promise.resolve(args));
 }
 
 export default showEndpointParamCreator;

@@ -21,10 +21,14 @@ export type RatingRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type RatingRetrieveReturnType = AxiosPromise<RuleRating>;
+export type RatingRetrieveReturnType = RuleRating;
 
 const isRatingRetrieveObjectParams = (params: [RatingRetrieveParams] | unknown[]): params is [RatingRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'rule')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'rule')
+  }
+  return false
 }
 /**
 * Retrieve the ratings for a single rule, by Insights Rule ID
@@ -33,7 +37,7 @@ const isRatingRetrieveObjectParams = (params: [RatingRetrieveParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ratingRetrieveParamCreator = async (...config: ([RatingRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ratingRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RatingRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isRatingRetrieveObjectParams(config) ? config[0] : ['rule', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RatingRetrieveParams;
     const { rule, options = {} } = params;
     const localVarPath = `/api/insights/v1/rating/{rule}/`
@@ -49,7 +53,7 @@ export const ratingRetrieveParamCreator = async (...config: ([RatingRetrievePara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -61,6 +65,8 @@ export const ratingRetrieveParamCreator = async (...config: ([RatingRetrievePara
         }
         ]
     };
+
+    return sendRequest<RatingRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default ratingRetrieveParamCreator;

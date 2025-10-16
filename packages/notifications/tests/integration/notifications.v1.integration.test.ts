@@ -43,7 +43,12 @@ describe('Notifications API (v1)', () => {
   });
 
   test('update notification read status', async () => {
-    const params: DrawerResourceV1UpdateNotificationReadStatusParams = {};
+    const params: DrawerResourceV1UpdateNotificationReadStatusParams = {
+      updateNotificationDrawerStatus: {
+        notification_ids: ['1', '2'],
+        read_status: true,
+      },
+    };
     const resp = await client.drawerResourceV1UpdateNotificationReadStatus(params);
     expect(resp.status).toBe(200);
   });
@@ -95,6 +100,7 @@ describe('Notifications API (v1)', () => {
   test('update behavior group actions', async () => {
     const params: NotificationResourceV1UpdateBehaviorGroupActionsParams = {
       behaviorGroupId: 'behaviorGroupId',
+      body: '',
     };
     const resp = await client.notificationResourceV1UpdateBehaviorGroupActions(params);
     expect(resp.status).toBe(200);
@@ -113,7 +119,9 @@ describe('Notifications API (v1)', () => {
   });
 
   test('org config - save daily digest time pref', async () => {
-    const params: OrgConfigResourceV1SaveDailyDigestTimePreferenceParams = {};
+    const params: OrgConfigResourceV1SaveDailyDigestTimePreferenceParams = {
+      body: '',
+    };
     const resp = await client.orgConfigResourceV1SaveDailyDigestTimePreference(params);
     expect(resp.status).toBe(204);
   });
@@ -125,7 +133,7 @@ describe('Notifications API (v1)', () => {
   });
 
   test('update event types endpoints', async () => {
-    const params: NotificationResourceV1UpdateEventTypeEndpointsParams = { eventTypeId: '1' };
+    const params: NotificationResourceV1UpdateEventTypeEndpointsParams = { eventTypeId: '1', body: {} };
     const resp = await client.notificationResourceV1UpdateEventTypeEndpoints(params);
     expect(resp.status).toBe(200);
   });
@@ -143,6 +151,7 @@ describe('Notifications API (v1)', () => {
   test('update event type behaviors', async () => {
     const params: NotificationResourceV1UpdateEventTypeBehaviorsParams = {
       eventTypeId: 'eventTypeId',
+      body: '',
     };
     const resp = await client.notificationResourceV1UpdateEventTypeBehaviors(params);
     expect(resp.status).toBe(200);

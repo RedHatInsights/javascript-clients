@@ -101,6 +101,8 @@ export type RuleSystemsRetrieveFormatEnum = typeof RuleSystemsRetrieveFormatEnum
   */
 export const RuleSystemsRetrieveRhelVersionEnum = {
     _100: '10.0',
+    _101: '10.1',
+    _102: '10.2',
     _60: '6.0',
     _61: '6.1',
     _610: '6.10',
@@ -140,7 +142,9 @@ export const RuleSystemsRetrieveRhelVersionEnum = {
     _93: '9.3',
     _94: '9.4',
     _95: '9.5',
-    _96: '9.6'
+    _96: '9.6',
+    _97: '9.7',
+    _98: '9.8'
 } as const;
 export type RuleSystemsRetrieveRhelVersionEnum = typeof RuleSystemsRetrieveRhelVersionEnum[keyof typeof RuleSystemsRetrieveRhelVersionEnum];
 /**
@@ -170,10 +174,14 @@ export const RuleSystemsRetrieveUpdateMethodEnum = {
 } as const;
 export type RuleSystemsRetrieveUpdateMethodEnum = typeof RuleSystemsRetrieveUpdateMethodEnum[keyof typeof RuleSystemsRetrieveUpdateMethodEnum];
 
-export type RuleSystemsRetrieveReturnType = AxiosPromise<SystemsForRule>;
+export type RuleSystemsRetrieveReturnType = SystemsForRule;
 
 const isRuleSystemsRetrieveObjectParams = (params: [RuleSystemsRetrieveParams] | unknown[]): params is [RuleSystemsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
@@ -181,7 +189,7 @@ const isRuleSystemsRetrieveObjectParams = (params: [RuleSystemsRetrieveParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleSystemsRetrieveParamCreator = async (...config: ([RuleSystemsRetrieveParams] | [string, boolean, boolean, Array<string>, boolean, RuleSystemsRetrieveFormatEnum, Array<string>, string, Array<RuleSystemsRetrieveRhelVersionEnum>, Array<RuleSystemsRetrieveSortEnum>, Array<string>, Array<RuleSystemsRetrieveUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleSystemsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleSystemsRetrieveParams] | [string, boolean, boolean, Array<string>, boolean, RuleSystemsRetrieveFormatEnum, Array<string>, string, Array<RuleSystemsRetrieveRhelVersionEnum>, Array<RuleSystemsRetrieveSortEnum>, Array<string>, Array<RuleSystemsRetrieveUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isRuleSystemsRetrieveObjectParams(config) ? config[0] : ['ruleId', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'format', 'groups', 'name', 'rhelVersion', 'sort', 'tags', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleSystemsRetrieveParams;
     const { ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, name, rhelVersion, sort, tags, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/{rule_id}/systems/`
@@ -241,7 +249,7 @@ export const ruleSystemsRetrieveParamCreator = async (...config: ([RuleSystemsRe
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -253,6 +261,8 @@ export const ruleSystemsRetrieveParamCreator = async (...config: ([RuleSystemsRe
         }
         ]
     };
+
+    return sendRequest<RuleSystemsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default ruleSystemsRetrieveParamCreator;

@@ -27,10 +27,14 @@ export type ApiResourceTypeGetResourceTypeListParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiResourceTypeGetResourceTypeListReturnType = AxiosPromise<ResourceTypesQueryOutput>;
+export type ApiResourceTypeGetResourceTypeListReturnType = ResourceTypesQueryOutput;
 
 const isApiResourceTypeGetResourceTypeListObjectParams = (params: [ApiResourceTypeGetResourceTypeListParams] | unknown[]): params is [ApiResourceTypeGetResourceTypeListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
@@ -39,7 +43,7 @@ const isApiResourceTypeGetResourceTypeListObjectParams = (params: [ApiResourceTy
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiResourceTypeGetResourceTypeListParamCreator = async (...config: ([ApiResourceTypeGetResourceTypeListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiResourceTypeGetResourceTypeListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiResourceTypeGetResourceTypeListParams] | [number, number, AxiosRequestConfig])) => {
     const params = isApiResourceTypeGetResourceTypeListObjectParams(config) ? config[0] : ['perPage', 'page', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiResourceTypeGetResourceTypeListParams;
     const { perPage, page, options = {} } = params;
     const localVarPath = `/resource-types`;
@@ -62,7 +66,7 @@ export const apiResourceTypeGetResourceTypeListParamCreator = async (...config: 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -74,6 +78,8 @@ export const apiResourceTypeGetResourceTypeListParamCreator = async (...config: 
         }
         ]
     };
+
+    return sendRequest<ApiResourceTypeGetResourceTypeListReturnType>(Promise.resolve(args));
 }
 
 export default apiResourceTypeGetResourceTypeListParamCreator;

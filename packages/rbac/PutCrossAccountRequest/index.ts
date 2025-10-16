@@ -27,10 +27,14 @@ export type PutCrossAccountRequestParams = {
   options?: AxiosRequestConfig
 }
 
-export type PutCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
+export type PutCrossAccountRequestReturnType = CrossAccountRequestDetail;
 
 const isPutCrossAccountRequestObjectParams = (params: [PutCrossAccountRequestParams] | unknown[]): params is [PutCrossAccountRequestParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestUpdateIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'crossAccountRequestUpdateIn')
+  }
+  return false
 }
 /**
 * For TAM requestor to update the start_date/end_date/roles of an existing cross account request.
@@ -39,7 +43,7 @@ const isPutCrossAccountRequestObjectParams = (params: [PutCrossAccountRequestPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const putCrossAccountRequestParamCreator = async (...config: ([PutCrossAccountRequestParams] | [string, CrossAccountRequestUpdateIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const putCrossAccountRequestParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PutCrossAccountRequestParams] | [string, CrossAccountRequestUpdateIn, AxiosRequestConfig])) => {
     const params = isPutCrossAccountRequestObjectParams(config) ? config[0] : ['uuid', 'crossAccountRequestUpdateIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PutCrossAccountRequestParams;
     const { uuid, crossAccountRequestUpdateIn, options = {} } = params;
     const localVarPath = `/cross-account-requests/{uuid}/`
@@ -57,7 +61,7 @@ export const putCrossAccountRequestParamCreator = async (...config: ([PutCrossAc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: crossAccountRequestUpdateIn,
@@ -69,6 +73,8 @@ export const putCrossAccountRequestParamCreator = async (...config: ([PutCrossAc
         }
         ]
     };
+
+    return sendRequest<PutCrossAccountRequestReturnType>(Promise.resolve(args));
 }
 
 export default putCrossAccountRequestParamCreator;

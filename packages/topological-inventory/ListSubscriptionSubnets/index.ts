@@ -45,10 +45,14 @@ export type ListSubscriptionSubnetsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSubscriptionSubnetsReturnType = AxiosPromise<SubnetsCollection>;
+export type ListSubscriptionSubnetsReturnType = SubnetsCollection;
 
 const isListSubscriptionSubnetsObjectParams = (params: [ListSubscriptionSubnetsParams] | unknown[]): params is [ListSubscriptionSubnetsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Subnet objects
@@ -57,7 +61,7 @@ const isListSubscriptionSubnetsObjectParams = (params: [ListSubscriptionSubnetsP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSubscriptionSubnetsParamCreator = async (...config: ([ListSubscriptionSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSubscriptionSubnetsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSubscriptionSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSubscriptionSubnetsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSubscriptionSubnetsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/subscriptions/{id}/subnets`
@@ -89,7 +93,7 @@ export const listSubscriptionSubnetsParamCreator = async (...config: ([ListSubsc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listSubscriptionSubnetsParamCreator = async (...config: ([ListSubsc
         }
         ]
     };
+
+    return sendRequest<ListSubscriptionSubnetsReturnType>(Promise.resolve(args));
 }
 
 export default listSubscriptionSubnetsParamCreator;

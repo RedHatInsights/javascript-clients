@@ -21,10 +21,14 @@ export type GetRemediationConnectionStatusParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetRemediationConnectionStatusReturnType = AxiosPromise<RemediationConnectionStatus>;
+export type GetRemediationConnectionStatusReturnType = RemediationConnectionStatus;
 
 const isGetRemediationConnectionStatusObjectParams = (params: [GetRemediationConnectionStatusParams] | unknown[]): params is [GetRemediationConnectionStatusParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc
@@ -33,7 +37,7 @@ const isGetRemediationConnectionStatusObjectParams = (params: [GetRemediationCon
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationConnectionStatusParamCreator = async (...config: ([GetRemediationConnectionStatusParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRemediationConnectionStatusParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationConnectionStatusParams] | [string, AxiosRequestConfig])) => {
     const params = isGetRemediationConnectionStatusObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationConnectionStatusParams;
     const { id, options = {} } = params;
     const localVarPath = `/remediations/{id}/connection_status`
@@ -49,10 +53,12 @@ export const getRemediationConnectionStatusParamCreator = async (...config: ([Ge
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetRemediationConnectionStatusReturnType>(Promise.resolve(args));
 }
 
 export default getRemediationConnectionStatusParamCreator;

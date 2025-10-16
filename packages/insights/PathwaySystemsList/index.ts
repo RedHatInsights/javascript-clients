@@ -107,10 +107,14 @@ export const PathwaySystemsListUpdateMethodEnum = {
 } as const;
 export type PathwaySystemsListUpdateMethodEnum = typeof PathwaySystemsListUpdateMethodEnum[keyof typeof PathwaySystemsListUpdateMethodEnum];
 
-export type PathwaySystemsListReturnType = AxiosPromise<PaginatedSystemList>;
+export type PathwaySystemsListReturnType = PaginatedSystemList;
 
 const isPathwaySystemsListObjectParams = (params: [PathwaySystemsListParams] | unknown[]): params is [PathwaySystemsListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
@@ -119,7 +123,7 @@ const isPathwaySystemsListObjectParams = (params: [PathwaySystemsListParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const pathwaySystemsListParamCreator = async (...config: ([PathwaySystemsListParams] | [string, Array<PathwaySystemsListCategoryEnum>, boolean, boolean, Array<string>, boolean, Array<string>, number, number, Array<string>, string, Array<PathwaySystemsListUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const pathwaySystemsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PathwaySystemsListParams] | [string, Array<PathwaySystemsListCategoryEnum>, boolean, boolean, Array<string>, boolean, Array<string>, number, number, Array<string>, string, Array<PathwaySystemsListUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isPathwaySystemsListObjectParams(config) ? config[0] : ['slug', 'category', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'limit', 'offset', 'tags', 'text', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PathwaySystemsListParams;
     const { slug, category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/pathway/{slug}/systems/`
@@ -179,7 +183,7 @@ export const pathwaySystemsListParamCreator = async (...config: ([PathwaySystems
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -191,6 +195,8 @@ export const pathwaySystemsListParamCreator = async (...config: ([PathwaySystems
         }
         ]
     };
+
+    return sendRequest<PathwaySystemsListReturnType>(Promise.resolve(args));
 }
 
 export default pathwaySystemsListParamCreator;

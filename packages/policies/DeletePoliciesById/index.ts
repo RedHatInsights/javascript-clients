@@ -21,10 +21,14 @@ export type DeletePoliciesByIdParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeletePoliciesByIdReturnType = AxiosPromise<void>;
+export type DeletePoliciesByIdReturnType = void;
 
 const isDeletePoliciesByIdObjectParams = (params: [DeletePoliciesByIdParams] | unknown[]): params is [DeletePoliciesByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 *
@@ -33,7 +37,7 @@ const isDeletePoliciesByIdObjectParams = (params: [DeletePoliciesByIdParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deletePoliciesByIdParamCreator = async (...config: ([DeletePoliciesByIdParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deletePoliciesByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeletePoliciesByIdParams] | [string, AxiosRequestConfig])) => {
     const params = isDeletePoliciesByIdObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeletePoliciesByIdParams;
     const { id, options = {} } = params;
     const localVarPath = `/policies/{id}`
@@ -49,10 +53,12 @@ export const deletePoliciesByIdParamCreator = async (...config: ([DeletePolicies
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<DeletePoliciesByIdReturnType>(Promise.resolve(args));
 }
 
 export default deletePoliciesByIdParamCreator;

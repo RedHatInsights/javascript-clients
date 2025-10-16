@@ -57,19 +57,23 @@ export type ProfilesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ProfilesReturnType = AxiosPromise<Profiles200Response>;
+export type ProfilesReturnType = Profiles200Response;
 
 const isProfilesObjectParams = (params: [ProfilesParams] | unknown[]): params is [ProfilesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId')
+  }
+  return false
 }
 /**
-* Lists Profiles
+* List all security guide profiles.
 * @summary Request Profiles
 * @param {ProfilesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const profilesParamCreator = async (...config: ([ProfilesParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const profilesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ProfilesParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isProfilesObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfilesParams;
     const { securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/profiles`
@@ -111,10 +115,12 @@ export const profilesParamCreator = async (...config: ([ProfilesParams] | [any, 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ProfilesReturnType>(Promise.resolve(args));
 }
 
 export default profilesParamCreator;

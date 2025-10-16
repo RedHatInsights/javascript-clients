@@ -21,10 +21,14 @@ export type HostackDestroyParams = {
   options?: AxiosRequestConfig
 }
 
-export type HostackDestroyReturnType = AxiosPromise<string>;
+export type HostackDestroyReturnType = string;
 
 const isHostackDestroyObjectParams = (params: [HostackDestroyParams] | unknown[]): params is [HostackDestroyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Delete an acknowledgement for a rule, for a system, for an account, by its ID.  Takes the hostack ID (given in the hostack list) as an identifier.
@@ -32,7 +36,7 @@ const isHostackDestroyObjectParams = (params: [HostackDestroyParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const hostackDestroyParamCreator = async (...config: ([HostackDestroyParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const hostackDestroyParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([HostackDestroyParams] | [number, AxiosRequestConfig])) => {
     const params = isHostackDestroyObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as HostackDestroyParams;
     const { id, options = {} } = params;
     const localVarPath = `/api/insights/v1/hostack/{id}/`
@@ -48,7 +52,7 @@ export const hostackDestroyParamCreator = async (...config: ([HostackDestroyPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const hostackDestroyParamCreator = async (...config: ([HostackDestroyPara
         }
         ]
     };
+
+    return sendRequest<HostackDestroyReturnType>(Promise.resolve(args));
 }
 
 export default hostackDestroyParamCreator;

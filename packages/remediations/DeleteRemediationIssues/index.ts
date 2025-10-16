@@ -27,10 +27,14 @@ export type DeleteRemediationIssuesParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteRemediationIssuesReturnType = AxiosPromise<MultipleDelete>;
+export type DeleteRemediationIssuesReturnType = MultipleDelete;
 
 const isDeleteRemediationIssuesObjectParams = (params: [DeleteRemediationIssuesParams] | unknown[]): params is [DeleteRemediationIssuesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'issuesList')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issuesList')
+  }
+  return false
 }
 /**
 * Removes the given list of issues from the specified remediation plan.  Requests containing missing remediation plan ID are rejected.  Duplicate or missing issue IDs are ignored.
@@ -39,7 +43,7 @@ const isDeleteRemediationIssuesObjectParams = (params: [DeleteRemediationIssuesP
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRemediationIssuesParamCreator = async (...config: ([DeleteRemediationIssuesParams] | [string, IssuesList, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRemediationIssuesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRemediationIssuesParams] | [string, IssuesList, AxiosRequestConfig])) => {
     const params = isDeleteRemediationIssuesObjectParams(config) ? config[0] : ['id', 'issuesList', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationIssuesParams;
     const { id, issuesList, options = {} } = params;
     const localVarPath = `/remediations/{id}/issues`
@@ -57,11 +61,13 @@ export const deleteRemediationIssuesParamCreator = async (...config: ([DeleteRem
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: issuesList,
     };
+
+    return sendRequest<DeleteRemediationIssuesReturnType>(Promise.resolve(args));
 }
 
 export default deleteRemediationIssuesParamCreator;

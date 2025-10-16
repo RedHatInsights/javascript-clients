@@ -21,10 +21,14 @@ export type CreateApplicationParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateApplicationReturnType = AxiosPromise<Application>;
+export type CreateApplicationReturnType = Application;
 
 const isCreateApplicationObjectParams = (params: [CreateApplicationParams] | unknown[]): params is [CreateApplicationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'application')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'application')
+  }
+  return false
 }
 /**
 * Creates a Application object
@@ -33,7 +37,7 @@ const isCreateApplicationObjectParams = (params: [CreateApplicationParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createApplicationParamCreator = async (...config: ([CreateApplicationParams] | [Application, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createApplicationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreateApplicationParams] | [Application, AxiosRequestConfig])) => {
     const params = isCreateApplicationObjectParams(config) ? config[0] : ['application', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateApplicationParams;
     const { application, options = {} } = params;
     const localVarPath = `/applications`;
@@ -50,7 +54,7 @@ export const createApplicationParamCreator = async (...config: ([CreateApplicati
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: application,
@@ -62,6 +66,8 @@ export const createApplicationParamCreator = async (...config: ([CreateApplicati
         }
         ]
     };
+
+    return sendRequest<CreateApplicationReturnType>(Promise.resolve(args));
 }
 
 export default createApplicationParamCreator;

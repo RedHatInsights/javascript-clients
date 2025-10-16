@@ -21,10 +21,14 @@ export type ApiHostDeleteAllHostsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostDeleteAllHostsReturnType = AxiosPromise<void>;
+export type ApiHostDeleteAllHostsReturnType = void;
 
 const isApiHostDeleteAllHostsObjectParams = (params: [ApiHostDeleteAllHostsParams] | unknown[]): params is [ApiHostDeleteAllHostsParams] => {
-  return params.length === 1 && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
@@ -33,7 +37,7 @@ const isApiHostDeleteAllHostsObjectParams = (params: [ApiHostDeleteAllHostsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostDeleteAllHostsParamCreator = async (...config: ([ApiHostDeleteAllHostsParams] | [boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostDeleteAllHostsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostDeleteAllHostsParams] | [boolean, AxiosRequestConfig])) => {
     const params = isApiHostDeleteAllHostsObjectParams(config) ? config[0] : ['confirmDeleteAll', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostDeleteAllHostsParams;
     const { confirmDeleteAll, options = {} } = params;
     const localVarPath = `/hosts/all`;
@@ -52,7 +56,7 @@ export const apiHostDeleteAllHostsParamCreator = async (...config: ([ApiHostDele
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -64,6 +68,8 @@ export const apiHostDeleteAllHostsParamCreator = async (...config: ([ApiHostDele
         }
         ]
     };
+
+    return sendRequest<ApiHostDeleteAllHostsReturnType>(Promise.resolve(args));
 }
 
 export default apiHostDeleteAllHostsParamCreator;

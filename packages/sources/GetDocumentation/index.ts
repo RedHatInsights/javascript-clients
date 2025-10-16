@@ -15,10 +15,14 @@ export type GetDocumentationParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetDocumentationReturnType = AxiosPromise<object>;
+export type GetDocumentationReturnType = object;
 
 const isGetDocumentationObjectParams = (params: [GetDocumentationParams] | unknown[]): params is [GetDocumentationParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 *
@@ -27,7 +31,7 @@ const isGetDocumentationObjectParams = (params: [GetDocumentationParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getDocumentationParamCreator = async (...config: ([GetDocumentationParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getDocumentationParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetDocumentationParams] | [AxiosRequestConfig])) => {
     const params = isGetDocumentationObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetDocumentationParams;
     const { options = {} } = params;
     const localVarPath = `/openapi.json`;
@@ -42,7 +46,7 @@ export const getDocumentationParamCreator = async (...config: ([GetDocumentation
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -53,6 +57,8 @@ export const getDocumentationParamCreator = async (...config: ([GetDocumentation
         }
         ]
     };
+
+    return sendRequest<GetDocumentationReturnType>(Promise.resolve(args));
 }
 
 export default getDocumentationParamCreator;

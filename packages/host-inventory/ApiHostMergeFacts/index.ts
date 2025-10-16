@@ -39,10 +39,14 @@ export type ApiHostMergeFactsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiHostMergeFactsReturnType = AxiosPromise<void>;
+export type ApiHostMergeFactsReturnType = void;
 
 const isApiHostMergeFactsObjectParams = (params: [ApiHostMergeFactsParams] | unknown[]): params is [ApiHostMergeFactsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && Object.prototype.hasOwnProperty.call(params, 'namespace') && Object.prototype.hasOwnProperty.call(params, 'body') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList') && Object.prototype.hasOwnProperty.call(params[0], 'namespace') && Object.prototype.hasOwnProperty.call(params[0], 'body')
+  }
+  return false
 }
 /**
 * Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
@@ -51,7 +55,7 @@ const isApiHostMergeFactsObjectParams = (params: [ApiHostMergeFactsParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostMergeFactsParamCreator = async (...config: ([ApiHostMergeFactsParams] | [Array<string>, string, object, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostMergeFactsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostMergeFactsParams] | [Array<string>, string, object, string, AxiosRequestConfig])) => {
     const params = isApiHostMergeFactsObjectParams(config) ? config[0] : ['hostIdList', 'namespace', 'body', 'branchId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostMergeFactsParams;
     const { hostIdList, namespace, body, branchId, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/facts/{namespace}`
@@ -74,7 +78,7 @@ export const apiHostMergeFactsParamCreator = async (...config: ([ApiHostMergeFac
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
@@ -87,6 +91,8 @@ export const apiHostMergeFactsParamCreator = async (...config: ([ApiHostMergeFac
         }
         ]
     };
+
+    return sendRequest<ApiHostMergeFactsReturnType>(Promise.resolve(args));
 }
 
 export default apiHostMergeFactsParamCreator;

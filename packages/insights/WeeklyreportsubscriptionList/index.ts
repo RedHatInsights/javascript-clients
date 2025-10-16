@@ -15,10 +15,14 @@ export type WeeklyreportsubscriptionListParams = {
   options?: AxiosRequestConfig
 }
 
-export type WeeklyreportsubscriptionListReturnType = AxiosPromise<Array<WeeklyReportSubscription>>;
+export type WeeklyreportsubscriptionListReturnType = Array<WeeklyReportSubscription>;
 
 const isWeeklyreportsubscriptionListObjectParams = (params: [WeeklyreportsubscriptionListParams] | unknown[]): params is [WeeklyreportsubscriptionListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
@@ -26,7 +30,7 @@ const isWeeklyreportsubscriptionListObjectParams = (params: [Weeklyreportsubscri
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const weeklyreportsubscriptionListParamCreator = async (...config: ([WeeklyreportsubscriptionListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const weeklyreportsubscriptionListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WeeklyreportsubscriptionListParams] | [AxiosRequestConfig])) => {
     const params = isWeeklyreportsubscriptionListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WeeklyreportsubscriptionListParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/weeklyreportsubscription/`;
@@ -41,7 +45,7 @@ export const weeklyreportsubscriptionListParamCreator = async (...config: ([Week
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -53,6 +57,8 @@ export const weeklyreportsubscriptionListParamCreator = async (...config: ([Week
         }
         ]
     };
+
+    return sendRequest<WeeklyreportsubscriptionListReturnType>(Promise.resolve(args));
 }
 
 export default weeklyreportsubscriptionListParamCreator;

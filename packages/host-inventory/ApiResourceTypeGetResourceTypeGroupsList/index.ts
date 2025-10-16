@@ -33,10 +33,14 @@ export type ApiResourceTypeGetResourceTypeGroupsListParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiResourceTypeGetResourceTypeGroupsListReturnType = AxiosPromise<ResourceTypesGroupsQueryOutput>;
+export type ApiResourceTypeGetResourceTypeGroupsListReturnType = ResourceTypesGroupsQueryOutput;
 
 const isApiResourceTypeGetResourceTypeGroupsListObjectParams = (params: [ApiResourceTypeGetResourceTypeGroupsListParams] | unknown[]): params is [ApiResourceTypeGetResourceTypeGroupsListParams] => {
-  return params.length === 1 && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
@@ -45,7 +49,7 @@ const isApiResourceTypeGetResourceTypeGroupsListObjectParams = (params: [ApiReso
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiResourceTypeGetResourceTypeGroupsListParamCreator = async (...config: ([ApiResourceTypeGetResourceTypeGroupsListParams] | [string, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiResourceTypeGetResourceTypeGroupsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiResourceTypeGetResourceTypeGroupsListParams] | [string, number, number, AxiosRequestConfig])) => {
     const params = isApiResourceTypeGetResourceTypeGroupsListObjectParams(config) ? config[0] : ['name', 'perPage', 'page', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiResourceTypeGetResourceTypeGroupsListParams;
     const { name, perPage, page, options = {} } = params;
     const localVarPath = `/resource-types/inventory-groups`;
@@ -72,7 +76,7 @@ export const apiResourceTypeGetResourceTypeGroupsListParamCreator = async (...co
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -84,6 +88,8 @@ export const apiResourceTypeGetResourceTypeGroupsListParamCreator = async (...co
         }
         ]
     };
+
+    return sendRequest<ApiResourceTypeGetResourceTypeGroupsListReturnType>(Promise.resolve(args));
 }
 
 export default apiResourceTypeGetResourceTypeGroupsListParamCreator;

@@ -130,6 +130,8 @@ export type SystemListHitsEnum = typeof SystemListHitsEnum[keyof typeof SystemLi
   */
 export const SystemListRhelVersionEnum = {
     _100: '10.0',
+    _101: '10.1',
+    _102: '10.2',
     _60: '6.0',
     _61: '6.1',
     _610: '6.10',
@@ -169,7 +171,9 @@ export const SystemListRhelVersionEnum = {
     _93: '9.3',
     _94: '9.4',
     _95: '9.5',
-    _96: '9.6'
+    _96: '9.6',
+    _97: '9.7',
+    _98: '9.8'
 } as const;
 export type SystemListRhelVersionEnum = typeof SystemListRhelVersionEnum[keyof typeof SystemListRhelVersionEnum];
 /**
@@ -207,10 +211,14 @@ export const SystemListUpdateMethodEnum = {
 } as const;
 export type SystemListUpdateMethodEnum = typeof SystemListUpdateMethodEnum[keyof typeof SystemListUpdateMethodEnum];
 
-export type SystemListReturnType = AxiosPromise<PaginatedSystemList>;
+export type SystemListReturnType = PaginatedSystemList;
 
 const isSystemListObjectParams = (params: [SystemListParams] | unknown[]): params is [SystemListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
@@ -218,7 +226,7 @@ const isSystemListObjectParams = (params: [SystemListParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemListParamCreator = async (...config: ([SystemListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, boolean, Array<SystemListHitsEnum>, boolean, number, number, string, Array<SystemListRhelVersionEnum>, SystemListSortEnum, Array<string>, Array<SystemListUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, boolean, Array<SystemListHitsEnum>, boolean, number, number, string, Array<SystemListRhelVersionEnum>, SystemListSortEnum, Array<string>, Array<SystemListUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isSystemListObjectParams(config) ? config[0] : ['displayName', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasDisabledRecommendation', 'hits', 'incident', 'limit', 'offset', 'pathway', 'rhelVersion', 'sort', 'tags', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemListParams;
     const { displayName, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasDisabledRecommendation, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/system/`;
@@ -297,7 +305,7 @@ export const systemListParamCreator = async (...config: ([SystemListParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -309,6 +317,8 @@ export const systemListParamCreator = async (...config: ([SystemListParams] | [s
         }
         ]
     };
+
+    return sendRequest<SystemListReturnType>(Promise.resolve(args));
 }
 
 export default systemListParamCreator;

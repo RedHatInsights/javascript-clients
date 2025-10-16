@@ -27,10 +27,14 @@ export type ReportTestResultsSGParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportTestResultsSGReturnType = AxiosPromise<any>;
+export type ReportTestResultsSGReturnType = any;
 
 const isReportTestResultsSGObjectParams = (params: [ReportTestResultsSGParams] | unknown[]): params is [ReportTestResultsSGParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+  }
+  return false
 }
 /**
 * This feature is exclusively used by the frontend
@@ -40,7 +44,7 @@ const isReportTestResultsSGObjectParams = (params: [ReportTestResultsSGParams] |
 * @deprecated
 * @throws {RequiredError}
 */
-export const reportTestResultsSGParamCreator = async (...config: ([ReportTestResultsSGParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportTestResultsSGParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportTestResultsSGParams] | [any, any, AxiosRequestConfig])) => {
     const params = isReportTestResultsSGObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportTestResultsSGParams;
     const { reportId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/reports/{report_id}/test_results/security_guide_versions`
@@ -62,10 +66,12 @@ export const reportTestResultsSGParamCreator = async (...config: ([ReportTestRes
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportTestResultsSGReturnType>(Promise.resolve(args));
 }
 
 export default reportTestResultsSGParamCreator;

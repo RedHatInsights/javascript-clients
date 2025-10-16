@@ -21,10 +21,14 @@ export type ShowHostParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowHostReturnType = AxiosPromise<Host>;
+export type ShowHostReturnType = Host;
 
 const isShowHostObjectParams = (params: [ShowHostParams] | unknown[]): params is [ShowHostParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a Host object
@@ -33,7 +37,7 @@ const isShowHostObjectParams = (params: [ShowHostParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showHostParamCreator = async (...config: ([ShowHostParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showHostParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowHostParams] | [string, AxiosRequestConfig])) => {
     const params = isShowHostObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowHostParams;
     const { id, options = {} } = params;
     const localVarPath = `/hosts/{id}`
@@ -49,7 +53,7 @@ export const showHostParamCreator = async (...config: ([ShowHostParams] | [strin
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showHostParamCreator = async (...config: ([ShowHostParams] | [strin
         }
         ]
     };
+
+    return sendRequest<ShowHostReturnType>(Promise.resolve(args));
 }
 
 export default showHostParamCreator;

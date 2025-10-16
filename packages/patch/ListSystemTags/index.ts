@@ -42,10 +42,14 @@ export const ListSystemTagsSortEnum = {
 } as const;
 export type ListSystemTagsSortEnum = typeof ListSystemTagsSortEnum[keyof typeof ListSystemTagsSortEnum];
 
-export type ListSystemTagsReturnType = AxiosPromise<ControllersSystemTagsResponse>;
+export type ListSystemTagsReturnType = ControllersSystemTagsResponse;
 
 const isListSystemTagsObjectParams = (params: [ListSystemTagsParams] | unknown[]): params is [ListSystemTagsParams] => {
-  return params.length === 1 && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show me systems tags applicable to this application
@@ -54,7 +58,7 @@ const isListSystemTagsObjectParams = (params: [ListSystemTagsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSystemTagsParamCreator = async (...config: ([ListSystemTagsParams] | [ListSystemTagsSortEnum, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSystemTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSystemTagsParams] | [ListSystemTagsSortEnum, number, number, AxiosRequestConfig])) => {
     const params = isListSystemTagsObjectParams(config) ? config[0] : ['sort', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSystemTagsParams;
     const { sort, limit, offset, options = {} } = params;
     const localVarPath = `/tags`;
@@ -81,7 +85,7 @@ export const listSystemTagsParamCreator = async (...config: ([ListSystemTagsPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listSystemTagsParamCreator = async (...config: ([ListSystemTagsPara
         }
         ]
     };
+
+    return sendRequest<ListSystemTagsReturnType>(Promise.resolve(args));
 }
 
 export default listSystemTagsParamCreator;

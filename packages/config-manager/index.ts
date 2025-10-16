@@ -1,8 +1,6 @@
-export { default as createProfile, CreateProfileReturnType } from './CreateProfile'
+export { default as createProfile, type CreateProfileReturnType } from './CreateProfile'
 
-export { default as getPlaybook, GetPlaybookReturnType } from './GetPlaybook'
+export { default as getProfile, type GetProfileReturnType } from './GetProfile'
 
-export { default as getProfile, GetProfileReturnType } from './GetProfile'
 
-export { default as getProfiles, GetProfilesReturnType } from './GetProfiles'
-
+export * from './types'

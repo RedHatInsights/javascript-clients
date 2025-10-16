@@ -51,19 +51,23 @@ export type SecurityGuidesParams = {
   options?: AxiosRequestConfig
 }
 
-export type SecurityGuidesReturnType = AxiosPromise<SecurityGuides200Response>;
+export type SecurityGuidesReturnType = SecurityGuides200Response;
 
 const isSecurityGuidesObjectParams = (params: [SecurityGuidesParams] | unknown[]): params is [SecurityGuidesParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* Lists Security Guides
+* Retrieve a list of all SCAP security guides.
 * @summary Request Security Guides
 * @param {SecurityGuidesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const securityGuidesParamCreator = async (...config: ([SecurityGuidesParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const securityGuidesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SecurityGuidesParams] | [any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isSecurityGuidesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuidesParams;
     const { xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides`;
@@ -104,10 +108,12 @@ export const securityGuidesParamCreator = async (...config: ([SecurityGuidesPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SecurityGuidesReturnType>(Promise.resolve(args));
 }
 
 export default securityGuidesParamCreator;

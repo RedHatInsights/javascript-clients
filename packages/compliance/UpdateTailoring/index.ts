@@ -39,19 +39,23 @@ export type UpdateTailoringParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateTailoringReturnType = AxiosPromise<CreateTailoring201Response>;
+export type UpdateTailoringReturnType = CreateTailoring201Response;
 
 const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown[]): params is [UpdateTailoringParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
+  }
+  return false
 }
 /**
-* Updates a Tailoring with the provided value_overrides
+* Edit or update an existing tailoring.
 * @summary Update a Tailoring
 * @param {UpdateTailoringParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateTailoringParamCreator = async (...config: ([UpdateTailoringParams] | [any, any, any, Tailoring, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateTailoringParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateTailoringParams] | [any, any, any, Tailoring, AxiosRequestConfig])) => {
     const params = isUpdateTailoringObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'tailoring', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateTailoringParams;
     const { policyId, tailoringId, xRHIDENTITY, tailoring, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}`
@@ -76,11 +80,13 @@ export const updateTailoringParamCreator = async (...config: ([UpdateTailoringPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: tailoring,
     };
+
+    return sendRequest<UpdateTailoringReturnType>(Promise.resolve(args));
 }
 
 export default updateTailoringParamCreator;

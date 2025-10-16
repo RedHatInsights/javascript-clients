@@ -21,10 +21,14 @@ export type ShowContainerTemplateParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowContainerTemplateReturnType = AxiosPromise<ContainerTemplate>;
+export type ShowContainerTemplateReturnType = ContainerTemplate;
 
 const isShowContainerTemplateObjectParams = (params: [ShowContainerTemplateParams] | unknown[]): params is [ShowContainerTemplateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a ContainerTemplate object
@@ -33,7 +37,7 @@ const isShowContainerTemplateObjectParams = (params: [ShowContainerTemplateParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showContainerTemplateParamCreator = async (...config: ([ShowContainerTemplateParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showContainerTemplateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowContainerTemplateParams] | [string, AxiosRequestConfig])) => {
     const params = isShowContainerTemplateObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowContainerTemplateParams;
     const { id, options = {} } = params;
     const localVarPath = `/container_templates/{id}`
@@ -49,7 +53,7 @@ export const showContainerTemplateParamCreator = async (...config: ([ShowContain
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showContainerTemplateParamCreator = async (...config: ([ShowContain
         }
         ]
     };
+
+    return sendRequest<ShowContainerTemplateReturnType>(Promise.resolve(args));
 }
 
 export default showContainerTemplateParamCreator;

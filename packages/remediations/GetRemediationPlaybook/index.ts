@@ -39,10 +39,14 @@ export type GetRemediationPlaybookParams = {
   options?: AxiosRequestConfig
 }
 
-export type GetRemediationPlaybookReturnType = AxiosPromise<string>;
+export type GetRemediationPlaybookReturnType = string;
 
 const isGetRemediationPlaybookObjectParams = (params: [GetRemediationPlaybookParams] | unknown[]): params is [GetRemediationPlaybookParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
@@ -51,7 +55,7 @@ const isGetRemediationPlaybookObjectParams = (params: [GetRemediationPlaybookPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationPlaybookParamCreator = async (...config: ([GetRemediationPlaybookParams] | [string, Array<string>, string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRemediationPlaybookParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationPlaybookParams] | [string, Array<string>, string, boolean, AxiosRequestConfig])) => {
     const params = isGetRemediationPlaybookObjectParams(config) ? config[0] : ['id', 'hosts', 'satOrg', 'localhost', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationPlaybookParams;
     const { id, hosts, satOrg, localhost, options = {} } = params;
     const localVarPath = `/remediations/{id}/playbook`
@@ -79,10 +83,12 @@ export const getRemediationPlaybookParamCreator = async (...config: ([GetRemedia
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<GetRemediationPlaybookReturnType>(Promise.resolve(args));
 }
 
 export default getRemediationPlaybookParamCreator;

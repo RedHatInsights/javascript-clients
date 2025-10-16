@@ -267,10 +267,14 @@ export const RuleListUpdateMethodEnum = {
 } as const;
 export type RuleListUpdateMethodEnum = typeof RuleListUpdateMethodEnum[keyof typeof RuleListUpdateMethodEnum];
 
-export type RuleListReturnType = AxiosPromise<PaginatedRuleForAccountList>;
+export type RuleListReturnType = PaginatedRuleForAccountList;
 
 const isRuleListObjectParams = (params: [RuleListParams] | unknown[]): params is [RuleListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
@@ -278,7 +282,7 @@ const isRuleListObjectParams = (params: [RuleListParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ruleListParamCreator = async (...config: ([RuleListParams] | [Array<RuleListCategoryEnum>, boolean, boolean, Array<string>, boolean, Array<string>, boolean, Array<string>, Array<RuleListImpactEnum>, boolean, boolean, Array<RuleListLikelihoodEnum>, number, number, string, boolean, boolean, Array<RuleListResRiskEnum>, RuleListRuleStatusEnum, Array<RuleListSortEnum>, Array<string>, string, string, Array<RuleListTotalRiskEnum>, Array<RuleListUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ruleListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RuleListParams] | [Array<RuleListCategoryEnum>, boolean, boolean, Array<string>, boolean, Array<string>, boolean, Array<string>, Array<RuleListImpactEnum>, boolean, boolean, Array<RuleListLikelihoodEnum>, number, number, string, boolean, boolean, Array<RuleListResRiskEnum>, RuleListRuleStatusEnum, Array<RuleListSortEnum>, Array<string>, string, string, Array<RuleListTotalRiskEnum>, Array<RuleListUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isRuleListObjectParams(config) ? config[0] : ['category', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasPlaybook', 'hasTag', 'impact', 'impacting', 'incident', 'likelihood', 'limit', 'offset', 'pathway', 'reboot', 'reportsShown', 'resRisk', 'ruleStatus', 'sort', 'tags', 'text', 'topic', 'totalRisk', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RuleListParams;
     const { category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/rule/`;
@@ -393,7 +397,7 @@ export const ruleListParamCreator = async (...config: ([RuleListParams] | [Array
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -405,6 +409,8 @@ export const ruleListParamCreator = async (...config: ([RuleListParams] | [Array
         }
         ]
     };
+
+    return sendRequest<RuleListReturnType>(Promise.resolve(args));
 }
 
 export default ruleListParamCreator;

@@ -27,10 +27,14 @@ export type RatingAllRatingsListParams = {
   options?: AxiosRequestConfig
 }
 
-export type RatingAllRatingsListReturnType = AxiosPromise<PaginatedAllRuleRatingsList>;
+export type RatingAllRatingsListReturnType = PaginatedAllRuleRatingsList;
 
 const isRatingAllRatingsListObjectParams = (params: [RatingAllRatingsListParams] | unknown[]): params is [RatingAllRatingsListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show all ratings.  Available only to internal users.
@@ -38,7 +42,7 @@ const isRatingAllRatingsListObjectParams = (params: [RatingAllRatingsListParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ratingAllRatingsListParamCreator = async (...config: ([RatingAllRatingsListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ratingAllRatingsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RatingAllRatingsListParams] | [number, number, AxiosRequestConfig])) => {
     const params = isRatingAllRatingsListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RatingAllRatingsListParams;
     const { limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/rating/all_ratings/`;
@@ -61,7 +65,7 @@ export const ratingAllRatingsListParamCreator = async (...config: ([RatingAllRat
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -73,6 +77,8 @@ export const ratingAllRatingsListParamCreator = async (...config: ([RatingAllRat
         }
         ]
     };
+
+    return sendRequest<RatingAllRatingsListReturnType>(Promise.resolve(args));
 }
 
 export default ratingAllRatingsListParamCreator;

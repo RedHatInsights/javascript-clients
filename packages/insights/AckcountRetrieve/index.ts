@@ -21,10 +21,14 @@ export type AckcountRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckcountRetrieveReturnType = AxiosPromise<AckCount>;
+export type AckcountRetrieveReturnType = AckCount;
 
 const isAckcountRetrieveObjectParams = (params: [AckcountRetrieveParams] | unknown[]): params is [AckcountRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * Get the ack count for the given rule_id  Returns the rule_id and its ack count
@@ -32,7 +36,7 @@ const isAckcountRetrieveObjectParams = (params: [AckcountRetrieveParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackcountRetrieveParamCreator = async (...config: ([AckcountRetrieveParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackcountRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckcountRetrieveParams] | [string, AxiosRequestConfig])) => {
     const params = isAckcountRetrieveObjectParams(config) ? config[0] : ['ruleId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckcountRetrieveParams;
     const { ruleId, options = {} } = params;
     const localVarPath = `/api/insights/v1/ackcount/{rule_id}/`
@@ -48,7 +52,7 @@ export const ackcountRetrieveParamCreator = async (...config: ([AckcountRetrieve
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const ackcountRetrieveParamCreator = async (...config: ([AckcountRetrieve
         }
         ]
     };
+
+    return sendRequest<AckcountRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default ackcountRetrieveParamCreator;

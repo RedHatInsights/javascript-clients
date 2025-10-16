@@ -27,20 +27,24 @@ export type SystemsOSParams = {
   options?: AxiosRequestConfig
 }
 
-export type SystemsOSReturnType = AxiosPromise<any>;
+export type SystemsOSReturnType = any;
 
 const isSystemsOSObjectParams = (params: [SystemsOSParams] | unknown[]): params is [SystemsOSParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
-* This feature is exclusively used by the frontend
+* This feature is exclusively used by the frontend.
 * @summary Request the list of available OS versions
 * @param {SystemsOSParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @deprecated
 * @throws {RequiredError}
 */
-export const systemsOSParamCreator = async (...config: ([SystemsOSParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const systemsOSParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemsOSParams] | [any, any, AxiosRequestConfig])) => {
     const params = isSystemsOSObjectParams(config) ? config[0] : ['xRHIDENTITY', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemsOSParams;
     const { xRHIDENTITY, filter, options = {} } = params;
     const localVarPath = `/systems/os_versions`;
@@ -65,10 +69,12 @@ export const systemsOSParamCreator = async (...config: ([SystemsOSParams] | [any
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<SystemsOSReturnType>(Promise.resolve(args));
 }
 
 export default systemsOSParamCreator;

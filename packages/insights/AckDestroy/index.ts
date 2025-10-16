@@ -21,10 +21,14 @@ export type AckDestroyParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckDestroyReturnType = AxiosPromise<string>;
+export type AckDestroyReturnType = string;
 
 const isAckDestroyObjectParams = (params: [AckDestroyParams] | unknown[]): params is [AckDestroyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
@@ -32,7 +36,7 @@ const isAckDestroyObjectParams = (params: [AckDestroyParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackDestroyParamCreator = async (...config: ([AckDestroyParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackDestroyParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckDestroyParams] | [string, AxiosRequestConfig])) => {
     const params = isAckDestroyObjectParams(config) ? config[0] : ['ruleId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckDestroyParams;
     const { ruleId, options = {} } = params;
     const localVarPath = `/api/insights/v1/ack/{rule_id}/`
@@ -48,7 +52,7 @@ export const ackDestroyParamCreator = async (...config: ([AckDestroyParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const ackDestroyParamCreator = async (...config: ([AckDestroyParams] | [s
         }
         ]
     };
+
+    return sendRequest<AckDestroyReturnType>(Promise.resolve(args));
 }
 
 export default ackDestroyParamCreator;

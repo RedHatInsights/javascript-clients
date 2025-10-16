@@ -21,10 +21,14 @@ export type AutosubexclusionCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type AutosubexclusionCreateReturnType = AxiosPromise<SubscriptionExcludedAccount>;
+export type AutosubexclusionCreateReturnType = SubscriptionExcludedAccount;
 
 const isAutosubexclusionCreateObjectParams = (params: [AutosubexclusionCreateParams] | unknown[]): params is [AutosubexclusionCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'subscriptionExcludedAccount')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'subscriptionExcludedAccount')
+  }
+  return false
 }
 /**
 * Create a new subscription exclusion for an account.  This creates a new subscription exclusion for an account. This should contain an org_id and account. Only org_id is required. Account is optional.
@@ -32,7 +36,7 @@ const isAutosubexclusionCreateObjectParams = (params: [AutosubexclusionCreatePar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const autosubexclusionCreateParamCreator = async (...config: ([AutosubexclusionCreateParams] | [SubscriptionExcludedAccount, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const autosubexclusionCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AutosubexclusionCreateParams] | [SubscriptionExcludedAccount, AxiosRequestConfig])) => {
     const params = isAutosubexclusionCreateObjectParams(config) ? config[0] : ['subscriptionExcludedAccount', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AutosubexclusionCreateParams;
     const { subscriptionExcludedAccount, options = {} } = params;
     const localVarPath = `/api/insights/v1/autosubexclusion/`;
@@ -49,7 +53,7 @@ export const autosubexclusionCreateParamCreator = async (...config: ([Autosubexc
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: subscriptionExcludedAccount,
@@ -62,6 +66,8 @@ export const autosubexclusionCreateParamCreator = async (...config: ([Autosubexc
         }
         ]
     };
+
+    return sendRequest<AutosubexclusionCreateReturnType>(Promise.resolve(args));
 }
 
 export default autosubexclusionCreateParamCreator;

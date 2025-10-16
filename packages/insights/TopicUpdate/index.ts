@@ -27,10 +27,14 @@ export type TopicUpdateParams = {
   options?: AxiosRequestConfig
 }
 
-export type TopicUpdateReturnType = AxiosPromise<TopicEdit>;
+export type TopicUpdateReturnType = TopicEdit;
 
 const isTopicUpdateObjectParams = (params: [TopicUpdateParams] | unknown[]): params is [TopicUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && Object.prototype.hasOwnProperty.call(params, 'topicEdit')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug') && Object.prototype.hasOwnProperty.call(params[0], 'topicEdit')
+  }
+  return false
 }
 /**
 * Update an existing rule topic.  All fields need to be supplied
@@ -39,7 +43,7 @@ const isTopicUpdateObjectParams = (params: [TopicUpdateParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const topicUpdateParamCreator = async (...config: ([TopicUpdateParams] | [string, TopicEdit, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const topicUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TopicUpdateParams] | [string, TopicEdit, AxiosRequestConfig])) => {
     const params = isTopicUpdateObjectParams(config) ? config[0] : ['slug', 'topicEdit', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TopicUpdateParams;
     const { slug, topicEdit, options = {} } = params;
     const localVarPath = `/api/insights/v1/topic/{slug}/`
@@ -57,7 +61,7 @@ export const topicUpdateParamCreator = async (...config: ([TopicUpdateParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: topicEdit,
@@ -70,6 +74,8 @@ export const topicUpdateParamCreator = async (...config: ([TopicUpdateParams] | 
         }
         ]
     };
+
+    return sendRequest<TopicUpdateReturnType>(Promise.resolve(args));
 }
 
 export default topicUpdateParamCreator;

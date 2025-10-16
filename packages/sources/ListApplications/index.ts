@@ -39,10 +39,14 @@ export type ListApplicationsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListApplicationsReturnType = AxiosPromise<ApplicationsCollection>;
+export type ListApplicationsReturnType = ApplicationsCollection;
 
 const isListApplicationsObjectParams = (params: [ListApplicationsParams] | unknown[]): params is [ListApplicationsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of Application objects
@@ -51,7 +55,7 @@ const isListApplicationsObjectParams = (params: [ListApplicationsParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listApplicationsParamCreator = async (...config: ([ListApplicationsParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listApplicationsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListApplicationsParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListApplicationsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListApplicationsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/applications`;
@@ -82,7 +86,7 @@ export const listApplicationsParamCreator = async (...config: ([ListApplications
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listApplicationsParamCreator = async (...config: ([ListApplications
         }
         ]
     };
+
+    return sendRequest<ListApplicationsReturnType>(Promise.resolve(args));
 }
 
 export default listApplicationsParamCreator;

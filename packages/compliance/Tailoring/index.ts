@@ -33,19 +33,23 @@ export type TailoringParams = {
   options?: AxiosRequestConfig
 }
 
-export type TailoringReturnType = AxiosPromise<CreateTailoring201Response>;
+export type TailoringReturnType = CreateTailoring201Response;
 
 const isTailoringObjectParams = (params: [TailoringParams] | unknown[]): params is [TailoringParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
+  }
+  return false
 }
 /**
-* Returns a Tailoring
+* Retrieve a specific tailoring.
 * @summary Request a Tailoring
 * @param {TailoringParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const tailoringParamCreator = async (...config: ([TailoringParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const tailoringParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TailoringParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isTailoringObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringParams;
     const { policyId, tailoringId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}`
@@ -68,10 +72,12 @@ export const tailoringParamCreator = async (...config: ([TailoringParams] | [any
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<TailoringReturnType>(Promise.resolve(args));
 }
 
 export default tailoringParamCreator;

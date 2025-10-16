@@ -45,10 +45,14 @@ export type ListTagNetworksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListTagNetworksReturnType = AxiosPromise<NetworksCollection>;
+export type ListTagNetworksReturnType = NetworksCollection;
 
 const isListTagNetworksObjectParams = (params: [ListTagNetworksParams] | unknown[]): params is [ListTagNetworksParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Network objects
@@ -57,7 +61,7 @@ const isListTagNetworksObjectParams = (params: [ListTagNetworksParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listTagNetworksParamCreator = async (...config: ([ListTagNetworksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listTagNetworksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListTagNetworksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListTagNetworksObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListTagNetworksParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/tags/{id}/networks`
@@ -89,7 +93,7 @@ export const listTagNetworksParamCreator = async (...config: ([ListTagNetworksPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listTagNetworksParamCreator = async (...config: ([ListTagNetworksPa
         }
         ]
     };
+
+    return sendRequest<ListTagNetworksReturnType>(Promise.resolve(args));
 }
 
 export default listTagNetworksParamCreator;

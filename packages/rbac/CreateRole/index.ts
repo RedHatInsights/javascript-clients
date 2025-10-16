@@ -21,10 +21,14 @@ export type CreateRoleParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateRoleReturnType = AxiosPromise<RoleWithAccess>;
+export type CreateRoleReturnType = RoleWithAccess;
 
 const isCreateRoleObjectParams = (params: [CreateRoleParams] | unknown[]): params is [CreateRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'roleIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'roleIn')
+  }
+  return false
 }
 /**
 *
@@ -33,7 +37,7 @@ const isCreateRoleObjectParams = (params: [CreateRoleParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createRoleParamCreator = async (...config: ([CreateRoleParams] | [RoleIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const createRoleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CreateRoleParams] | [RoleIn, AxiosRequestConfig])) => {
     const params = isCreateRoleObjectParams(config) ? config[0] : ['roleIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateRoleParams;
     const { roleIn, options = {} } = params;
     const localVarPath = `/roles/`;
@@ -50,7 +54,7 @@ export const createRoleParamCreator = async (...config: ([CreateRoleParams] | [R
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: roleIn,
@@ -62,6 +66,8 @@ export const createRoleParamCreator = async (...config: ([CreateRoleParams] | [R
         }
         ]
     };
+
+    return sendRequest<CreateRoleReturnType>(Promise.resolve(args));
 }
 
 export default createRoleParamCreator;

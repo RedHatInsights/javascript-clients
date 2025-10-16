@@ -27,10 +27,14 @@ export type PostPoliciesValidateNameParams = {
   options?: AxiosRequestConfig
 }
 
-export type PostPoliciesValidateNameReturnType = AxiosPromise<Msg>;
+export type PostPoliciesValidateNameReturnType = Msg;
 
 const isPostPoliciesValidateNameObjectParams = (params: [PostPoliciesValidateNameParams] | unknown[]): params is [PostPoliciesValidateNameParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'body') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'body')
+  }
+  return false
 }
 /**
 *
@@ -39,7 +43,7 @@ const isPostPoliciesValidateNameObjectParams = (params: [PostPoliciesValidateNam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const postPoliciesValidateNameParamCreator = async (...config: ([PostPoliciesValidateNameParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const postPoliciesValidateNameParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PostPoliciesValidateNameParams] | [string, string, AxiosRequestConfig])) => {
     const params = isPostPoliciesValidateNameObjectParams(config) ? config[0] : ['body', 'id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PostPoliciesValidateNameParams;
     const { body, id, options = {} } = params;
     const localVarPath = `/policies/validate-name`;
@@ -60,11 +64,13 @@ export const postPoliciesValidateNameParamCreator = async (...config: ([PostPoli
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: body,
     };
+
+    return sendRequest<PostPoliciesValidateNameReturnType>(Promise.resolve(args));
 }
 
 export default postPoliciesValidateNameParamCreator;

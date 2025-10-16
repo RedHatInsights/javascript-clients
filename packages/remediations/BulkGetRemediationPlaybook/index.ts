@@ -39,10 +39,14 @@ export type BulkGetRemediationPlaybookParams = {
   options?: AxiosRequestConfig
 }
 
-export type BulkGetRemediationPlaybookReturnType = AxiosPromise<string>;
+export type BulkGetRemediationPlaybookReturnType = string;
 
 const isBulkGetRemediationPlaybookObjectParams = (params: [BulkGetRemediationPlaybookParams] | unknown[]): params is [BulkGetRemediationPlaybookParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'requestBody') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'requestBody')
+  }
+  return false
 }
 /**
 * Fetch Ansible Playbook - for use with large list of target systems, RBAC permission {remediations:remediation:read}
@@ -51,7 +55,7 @@ const isBulkGetRemediationPlaybookObjectParams = (params: [BulkGetRemediationPla
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const bulkGetRemediationPlaybookParamCreator = async (...config: ([BulkGetRemediationPlaybookParams] | [string, Array<string>, string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const bulkGetRemediationPlaybookParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([BulkGetRemediationPlaybookParams] | [string, Array<string>, string, boolean, AxiosRequestConfig])) => {
     const params = isBulkGetRemediationPlaybookObjectParams(config) ? config[0] : ['id', 'requestBody', 'satOrg', 'localhost', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as BulkGetRemediationPlaybookParams;
     const { id, requestBody, satOrg, localhost, options = {} } = params;
     const localVarPath = `/remediations/{id}/playbook`
@@ -77,11 +81,13 @@ export const bulkGetRemediationPlaybookParamCreator = async (...config: ([BulkGe
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: requestBody,
     };
+
+    return sendRequest<BulkGetRemediationPlaybookReturnType>(Promise.resolve(args));
 }
 
 export default bulkGetRemediationPlaybookParamCreator;

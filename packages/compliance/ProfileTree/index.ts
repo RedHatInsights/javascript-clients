@@ -33,19 +33,24 @@ export type ProfileTreeParams = {
   options?: AxiosRequestConfig
 }
 
-export type ProfileTreeReturnType = AxiosPromise<any>;
+export type ProfileTreeReturnType = any;
 
 const isProfileTreeObjectParams = (params: [ProfileTreeParams] | unknown[]): params is [ProfileTreeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'profileId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'profileId')
+  }
+  return false
 }
 /**
 * Returns the Rule Tree of a Profile
 * @summary Request the Rule Tree of a Profile
 * @param {ProfileTreeParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
-export const profileTreeParamCreator = async (...config: ([ProfileTreeParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const profileTreeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ProfileTreeParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isProfileTreeObjectParams(config) ? config[0] : ['securityGuideId', 'profileId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfileTreeParams;
     const { securityGuideId, profileId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/profiles/{profile_id}/rule_tree`
@@ -68,10 +73,12 @@ export const profileTreeParamCreator = async (...config: ([ProfileTreeParams] | 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ProfileTreeReturnType>(Promise.resolve(args));
 }
 
 export default profileTreeParamCreator;

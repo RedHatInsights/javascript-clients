@@ -15,10 +15,14 @@ export type StatsListParams = {
   options?: AxiosRequestConfig
 }
 
-export type StatsListReturnType = AxiosPromise<Array<Array<string>>>;
+export type StatsListReturnType = Array<Array<string>>;
 
 const isStatsListObjectParams = (params: [StatsListParams] | unknown[]): params is [StatsListParams] => {
-  return params.length === 1
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Provide a simple list of URLs contained here.  A list of statistics views.
@@ -26,7 +30,7 @@ const isStatsListObjectParams = (params: [StatsListParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const statsListParamCreator = async (...config: ([StatsListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+export const statsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([StatsListParams] | [AxiosRequestConfig])) => {
     const params = isStatsListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as StatsListParams;
     const { options = {} } = params;
     const localVarPath = `/api/insights/v1/stats/`;
@@ -41,7 +45,7 @@ export const statsListParamCreator = async (...config: ([StatsListParams] | [Axi
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -53,6 +57,8 @@ export const statsListParamCreator = async (...config: ([StatsListParams] | [Axi
         }
         ]
     };
+
+    return sendRequest<StatsListReturnType>(Promise.resolve(args));
 }
 
 export default statsListParamCreator;

@@ -63,19 +63,23 @@ export type ReportTestResultsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportTestResultsReturnType = AxiosPromise<ReportTestResults200Response>;
+export type ReportTestResultsReturnType = ReportTestResults200Response;
 
 const isReportTestResultsObjectParams = (params: [ReportTestResultsParams] | unknown[]): params is [ReportTestResultsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+  }
+  return false
 }
 /**
-* Lists Test Results under a Report
+* Retrieve all of the test results for a specific report.
 * @summary Request Test Results under a Report
 * @param {ReportTestResultsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportTestResultsParamCreator = async (...config: ([ReportTestResultsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportTestResultsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportTestResultsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
     const params = isReportTestResultsObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'tags', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportTestResultsParams;
     const { reportId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/reports/{report_id}/test_results`
@@ -121,10 +125,12 @@ export const reportTestResultsParamCreator = async (...config: ([ReportTestResul
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportTestResultsReturnType>(Promise.resolve(args));
 }
 
 export default reportTestResultsParamCreator;

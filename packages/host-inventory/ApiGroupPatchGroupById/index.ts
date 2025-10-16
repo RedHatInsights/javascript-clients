@@ -27,10 +27,14 @@ export type ApiGroupPatchGroupByIdParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiGroupPatchGroupByIdReturnType = AxiosPromise<GroupOutWithHostCount>;
+export type ApiGroupPatchGroupByIdReturnType = GroupOutWithHostCount;
 
 const isApiGroupPatchGroupByIdObjectParams = (params: [ApiGroupPatchGroupByIdParams] | unknown[]): params is [ApiGroupPatchGroupByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupId') && Object.prototype.hasOwnProperty.call(params, 'groupIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'groupId') && Object.prototype.hasOwnProperty.call(params[0], 'groupIn')
+  }
+  return false
 }
 /**
 * Update group information, removing any existing host associations from the group. <br /><br /> Required permissions: inventory:groups:write
@@ -39,7 +43,7 @@ const isApiGroupPatchGroupByIdObjectParams = (params: [ApiGroupPatchGroupByIdPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiGroupPatchGroupByIdParamCreator = async (...config: ([ApiGroupPatchGroupByIdParams] | [string, GroupIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiGroupPatchGroupByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiGroupPatchGroupByIdParams] | [string, GroupIn, AxiosRequestConfig])) => {
     const params = isApiGroupPatchGroupByIdObjectParams(config) ? config[0] : ['groupId', 'groupIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiGroupPatchGroupByIdParams;
     const { groupId, groupIn, options = {} } = params;
     const localVarPath = `/groups/{group_id}`
@@ -57,7 +61,7 @@ export const apiGroupPatchGroupByIdParamCreator = async (...config: ([ApiGroupPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: groupIn,
@@ -70,6 +74,8 @@ export const apiGroupPatchGroupByIdParamCreator = async (...config: ([ApiGroupPa
         }
         ]
     };
+
+    return sendRequest<ApiGroupPatchGroupByIdReturnType>(Promise.resolve(args));
 }
 
 export default apiGroupPatchGroupByIdParamCreator;

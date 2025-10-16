@@ -69,10 +69,14 @@ export const ApiHostGetHostByIdOrderByEnum = {
 } as const;
 export type ApiHostGetHostByIdOrderByEnum = typeof ApiHostGetHostByIdOrderByEnum[keyof typeof ApiHostGetHostByIdOrderByEnum];
 
-export type ApiHostGetHostByIdReturnType = AxiosPromise<HostQueryOutput>;
+export type ApiHostGetHostByIdReturnType = HostQueryOutput;
 
 const isApiHostGetHostByIdObjectParams = (params: [ApiHostGetHostByIdParams] | unknown[]): params is [ApiHostGetHostByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+  }
+  return false
 }
 /**
 * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
@@ -81,7 +85,7 @@ const isApiHostGetHostByIdObjectParams = (params: [ApiHostGetHostByIdParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostByIdParamCreator = async (...config: ([ApiHostGetHostByIdParams] | [Array<string>, string, number, number, ApiHostGetHostByIdOrderByEnum, string, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostByIdParams] | [Array<string>, string, number, number, ApiHostGetHostByIdOrderByEnum, string, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
     const params = isApiHostGetHostByIdObjectParams(config) ? config[0] : ['hostIdList', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostByIdParams;
     const { hostIdList, branchId, perPage, page, orderBy, orderHow, fields, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}`
@@ -121,7 +125,7 @@ export const apiHostGetHostByIdParamCreator = async (...config: ([ApiHostGetHost
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -133,6 +137,8 @@ export const apiHostGetHostByIdParamCreator = async (...config: ([ApiHostGetHost
         }
         ]
     };
+
+    return sendRequest<ApiHostGetHostByIdReturnType>(Promise.resolve(args));
 }
 
 export default apiHostGetHostByIdParamCreator;

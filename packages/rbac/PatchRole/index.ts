@@ -27,10 +27,14 @@ export type PatchRoleParams = {
   options?: AxiosRequestConfig
 }
 
-export type PatchRoleReturnType = AxiosPromise<RoleWithAccess>;
+export type PatchRoleReturnType = RoleWithAccess;
 
 const isPatchRoleObjectParams = (params: [PatchRoleParams] | unknown[]): params is [PatchRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
+  }
+  return false
 }
 /**
 *
@@ -39,7 +43,7 @@ const isPatchRoleObjectParams = (params: [PatchRoleParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const patchRoleParamCreator = async (...config: ([PatchRoleParams] | [string, RolePatch, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const patchRoleParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PatchRoleParams] | [string, RolePatch, AxiosRequestConfig])) => {
     const params = isPatchRoleObjectParams(config) ? config[0] : ['uuid', 'rolePatch', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PatchRoleParams;
     const { uuid, rolePatch, options = {} } = params;
     const localVarPath = `/roles/{uuid}/`
@@ -57,7 +61,7 @@ export const patchRoleParamCreator = async (...config: ([PatchRoleParams] | [str
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: rolePatch,
@@ -69,6 +73,8 @@ export const patchRoleParamCreator = async (...config: ([PatchRoleParams] | [str
         }
         ]
     };
+
+    return sendRequest<PatchRoleReturnType>(Promise.resolve(args));
 }
 
 export default patchRoleParamCreator;

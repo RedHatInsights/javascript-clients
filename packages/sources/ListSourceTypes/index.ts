@@ -39,10 +39,14 @@ export type ListSourceTypesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceTypesReturnType = AxiosPromise<SourceTypesCollection>;
+export type ListSourceTypesReturnType = SourceTypesCollection;
 
 const isListSourceTypesObjectParams = (params: [ListSourceTypesParams] | unknown[]): params is [ListSourceTypesParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of SourceType objects
@@ -51,7 +55,7 @@ const isListSourceTypesObjectParams = (params: [ListSourceTypesParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceTypesParamCreator = async (...config: ([ListSourceTypesParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceTypesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceTypesParams] | [number, number, object, ListApplicationTypesSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceTypesObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceTypesParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_types`;
@@ -82,7 +86,7 @@ export const listSourceTypesParamCreator = async (...config: ([ListSourceTypesPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listSourceTypesParamCreator = async (...config: ([ListSourceTypesPa
         }
         ]
     };
+
+    return sendRequest<ListSourceTypesReturnType>(Promise.resolve(args));
 }
 
 export default listSourceTypesParamCreator;

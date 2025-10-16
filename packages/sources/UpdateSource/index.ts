@@ -27,10 +27,14 @@ export type UpdateSourceParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateSourceReturnType = AxiosPromise<void>;
+export type UpdateSourceReturnType = void;
 
 const isUpdateSourceObjectParams = (params: [UpdateSourceParams] | unknown[]): params is [UpdateSourceParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'source')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'source')
+  }
+  return false
 }
 /**
 * Updates a Source object
@@ -39,7 +43,7 @@ const isUpdateSourceObjectParams = (params: [UpdateSourceParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateSourceParamCreator = async (...config: ([UpdateSourceParams] | [string, Source, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateSourceParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateSourceParams] | [string, Source, AxiosRequestConfig])) => {
     const params = isUpdateSourceObjectParams(config) ? config[0] : ['id', 'source', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateSourceParams;
     const { id, source, options = {} } = params;
     const localVarPath = `/sources/{id}`
@@ -57,7 +61,7 @@ export const updateSourceParamCreator = async (...config: ([UpdateSourceParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: source,
@@ -69,6 +73,8 @@ export const updateSourceParamCreator = async (...config: ([UpdateSourceParams] 
         }
         ]
     };
+
+    return sendRequest<UpdateSourceReturnType>(Promise.resolve(args));
 }
 
 export default updateSourceParamCreator;

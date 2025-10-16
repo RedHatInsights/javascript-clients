@@ -39,10 +39,14 @@ export type ListServicePlansParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServicePlansReturnType = AxiosPromise<ServicePlansCollection>;
+export type ListServicePlansReturnType = ServicePlansCollection;
 
 const isListServicePlansObjectParams = (params: [ListServicePlansParams] | unknown[]): params is [ListServicePlansParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of ServicePlan objects
@@ -51,7 +55,7 @@ const isListServicePlansObjectParams = (params: [ListServicePlansParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServicePlansParamCreator = async (...config: ([ListServicePlansParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServicePlansParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServicePlansParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServicePlansObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServicePlansParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_plans`;
@@ -82,7 +86,7 @@ export const listServicePlansParamCreator = async (...config: ([ListServicePlans
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listServicePlansParamCreator = async (...config: ([ListServicePlans
         }
         ]
     };
+
+    return sendRequest<ListServicePlansReturnType>(Promise.resolve(args));
 }
 
 export default listServicePlansParamCreator;

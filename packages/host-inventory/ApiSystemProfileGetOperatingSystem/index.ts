@@ -43,7 +43,7 @@ export type ApiSystemProfileGetOperatingSystemParams = {
   */
   registeredWith?: Array<ApiSystemProfileGetOperatingSystemRegisteredWithEnum>,
   /**
-  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
+  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"workloads\": {\"sap\": {\"sap_system\": {\"eq\": \"true\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
   * @type { { [key: string]: SystemProfileNestedObjectValue; } }
   * @memberof ApiSystemProfileGetOperatingSystemApi
   */
@@ -82,10 +82,14 @@ export const ApiSystemProfileGetOperatingSystemRegisteredWithEnum = {
 } as const;
 export type ApiSystemProfileGetOperatingSystemRegisteredWithEnum = typeof ApiSystemProfileGetOperatingSystemRegisteredWithEnum[keyof typeof ApiSystemProfileGetOperatingSystemRegisteredWithEnum];
 
-export type ApiSystemProfileGetOperatingSystemReturnType = AxiosPromise<SystemProfileOperatingSystemOut>;
+export type ApiSystemProfileGetOperatingSystemReturnType = SystemProfileOperatingSystemOut;
 
 const isApiSystemProfileGetOperatingSystemObjectParams = (params: [ApiSystemProfileGetOperatingSystemParams] | unknown[]): params is [ApiSystemProfileGetOperatingSystemParams] => {
-  return params.length === 1 && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Required permissions: inventory:hosts:read
@@ -94,7 +98,7 @@ const isApiSystemProfileGetOperatingSystemObjectParams = (params: [ApiSystemProf
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiSystemProfileGetOperatingSystemParamCreator = async (...config: ([ApiSystemProfileGetOperatingSystemParams] | [Array<string>, number, number, Array<ApiSystemProfileGetOperatingSystemStalenessEnum>, Array<ApiSystemProfileGetOperatingSystemRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiSystemProfileGetOperatingSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiSystemProfileGetOperatingSystemParams] | [Array<string>, number, number, Array<ApiSystemProfileGetOperatingSystemStalenessEnum>, Array<ApiSystemProfileGetOperatingSystemRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
     const params = isApiSystemProfileGetOperatingSystemObjectParams(config) ? config[0] : ['tags', 'perPage', 'page', 'staleness', 'registeredWith', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiSystemProfileGetOperatingSystemParams;
     const { tags, perPage, page, staleness, registeredWith, filter, options = {} } = params;
     const localVarPath = `/system_profile/operating_system`;
@@ -133,7 +137,7 @@ export const apiSystemProfileGetOperatingSystemParamCreator = async (...config: 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -145,6 +149,8 @@ export const apiSystemProfileGetOperatingSystemParamCreator = async (...config: 
         }
         ]
     };
+
+    return sendRequest<ApiSystemProfileGetOperatingSystemReturnType>(Promise.resolve(args));
 }
 
 export default apiSystemProfileGetOperatingSystemParamCreator;

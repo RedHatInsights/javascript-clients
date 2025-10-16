@@ -27,10 +27,14 @@ export type AckUpdateParams = {
   options?: AxiosRequestConfig
 }
 
-export type AckUpdateReturnType = AxiosPromise<Ack>;
+export type AckUpdateReturnType = Ack;
 
 const isAckUpdateObjectParams = (params: [AckUpdateParams] | unknown[]): params is [AckUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
+  }
+  return false
 }
 /**
 * Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
@@ -38,7 +42,7 @@ const isAckUpdateObjectParams = (params: [AckUpdateParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ackUpdateParamCreator = async (...config: ([AckUpdateParams] | [string, AckJustification, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ackUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AckUpdateParams] | [string, AckJustification, AxiosRequestConfig])) => {
     const params = isAckUpdateObjectParams(config) ? config[0] : ['ruleId', 'ackJustification', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AckUpdateParams;
     const { ruleId, ackJustification, options = {} } = params;
     const localVarPath = `/api/insights/v1/ack/{rule_id}/`
@@ -56,7 +60,7 @@ export const ackUpdateParamCreator = async (...config: ([AckUpdateParams] | [str
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: ackJustification,
@@ -69,6 +73,8 @@ export const ackUpdateParamCreator = async (...config: ([AckUpdateParams] | [str
         }
         ]
     };
+
+    return sendRequest<AckUpdateReturnType>(Promise.resolve(args));
 }
 
 export default ackUpdateParamCreator;

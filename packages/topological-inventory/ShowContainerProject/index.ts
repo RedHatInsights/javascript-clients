@@ -21,10 +21,14 @@ export type ShowContainerProjectParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowContainerProjectReturnType = AxiosPromise<ContainerProject>;
+export type ShowContainerProjectReturnType = ContainerProject;
 
 const isShowContainerProjectObjectParams = (params: [ShowContainerProjectParams] | unknown[]): params is [ShowContainerProjectParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a ContainerProject object
@@ -33,7 +37,7 @@ const isShowContainerProjectObjectParams = (params: [ShowContainerProjectParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showContainerProjectParamCreator = async (...config: ([ShowContainerProjectParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showContainerProjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowContainerProjectParams] | [string, AxiosRequestConfig])) => {
     const params = isShowContainerProjectObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowContainerProjectParams;
     const { id, options = {} } = params;
     const localVarPath = `/container_projects/{id}`
@@ -49,7 +53,7 @@ export const showContainerProjectParamCreator = async (...config: ([ShowContaine
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showContainerProjectParamCreator = async (...config: ([ShowContaine
         }
         ]
     };
+
+    return sendRequest<ShowContainerProjectReturnType>(Promise.resolve(args));
 }
 
 export default showContainerProjectParamCreator;

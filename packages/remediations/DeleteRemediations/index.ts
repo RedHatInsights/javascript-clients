@@ -21,10 +21,14 @@ export type DeleteRemediationsParams = {
   options?: AxiosRequestConfig
 }
 
-export type DeleteRemediationsReturnType = AxiosPromise<MultipleDelete>;
+export type DeleteRemediationsReturnType = MultipleDelete;
 
 const isDeleteRemediationsObjectParams = (params: [DeleteRemediationsParams] | unknown[]): params is [DeleteRemediationsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'remediationsList')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'remediationsList')
+  }
+  return false
 }
 /**
 * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
@@ -33,7 +37,7 @@ const isDeleteRemediationsObjectParams = (params: [DeleteRemediationsParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRemediationsParamCreator = async (...config: ([DeleteRemediationsParams] | [RemediationsList, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRemediationsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRemediationsParams] | [RemediationsList, AxiosRequestConfig])) => {
     const params = isDeleteRemediationsObjectParams(config) ? config[0] : ['remediationsList', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationsParams;
     const { remediationsList, options = {} } = params;
     const localVarPath = `/remediations`;
@@ -50,11 +54,13 @@ export const deleteRemediationsParamCreator = async (...config: ([DeleteRemediat
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: remediationsList,
     };
+
+    return sendRequest<DeleteRemediationsReturnType>(Promise.resolve(args));
 }
 
 export default deleteRemediationsParamCreator;

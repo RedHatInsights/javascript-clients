@@ -39,10 +39,14 @@ export type StatsRulesRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
-export type StatsRulesRetrieveReturnType = AxiosPromise<Stats>;
+export type StatsRulesRetrieveReturnType = Stats;
 
 const isStatsRulesRetrieveObjectParams = (params: [StatsRulesRetrieveParams] | unknown[]): params is [StatsRulesRetrieveParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Show statistics of rule usage across categories and risks.  Only current reports are considered.
@@ -50,7 +54,7 @@ const isStatsRulesRetrieveObjectParams = (params: [StatsRulesRetrieveParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const statsRulesRetrieveParamCreator = async (...config: ([StatsRulesRetrieveParams] | [Array<string>, Array<string>, boolean, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const statsRulesRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([StatsRulesRetrieveParams] | [Array<string>, Array<string>, boolean, Array<string>, AxiosRequestConfig])) => {
     const params = isStatsRulesRetrieveObjectParams(config) ? config[0] : ['tags', 'groups', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSidsContains', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as StatsRulesRetrieveParams;
     const { tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options = {} } = params;
     const localVarPath = `/api/insights/v1/stats/rules/`;
@@ -81,7 +85,7 @@ export const statsRulesRetrieveParamCreator = async (...config: ([StatsRulesRetr
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const statsRulesRetrieveParamCreator = async (...config: ([StatsRulesRetr
         }
         ]
     };
+
+    return sendRequest<StatsRulesRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default statsRulesRetrieveParamCreator;

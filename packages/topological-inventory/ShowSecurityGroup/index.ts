@@ -21,10 +21,14 @@ export type ShowSecurityGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowSecurityGroupReturnType = AxiosPromise<SecurityGroup>;
+export type ShowSecurityGroupReturnType = SecurityGroup;
 
 const isShowSecurityGroupObjectParams = (params: [ShowSecurityGroupParams] | unknown[]): params is [ShowSecurityGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a SecurityGroup object
@@ -33,7 +37,7 @@ const isShowSecurityGroupObjectParams = (params: [ShowSecurityGroupParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showSecurityGroupParamCreator = async (...config: ([ShowSecurityGroupParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showSecurityGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowSecurityGroupParams] | [string, AxiosRequestConfig])) => {
     const params = isShowSecurityGroupObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowSecurityGroupParams;
     const { id, options = {} } = params;
     const localVarPath = `/security_groups/{id}`
@@ -49,7 +53,7 @@ export const showSecurityGroupParamCreator = async (...config: ([ShowSecurityGro
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showSecurityGroupParamCreator = async (...config: ([ShowSecurityGro
         }
         ]
     };
+
+    return sendRequest<ShowSecurityGroupReturnType>(Promise.resolve(args));
 }
 
 export default showSecurityGroupParamCreator;

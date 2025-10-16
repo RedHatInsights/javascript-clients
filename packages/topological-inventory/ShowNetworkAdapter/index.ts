@@ -21,10 +21,14 @@ export type ShowNetworkAdapterParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowNetworkAdapterReturnType = AxiosPromise<NetworkAdapter>;
+export type ShowNetworkAdapterReturnType = NetworkAdapter;
 
 const isShowNetworkAdapterObjectParams = (params: [ShowNetworkAdapterParams] | unknown[]): params is [ShowNetworkAdapterParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a NetworkAdapter object
@@ -33,7 +37,7 @@ const isShowNetworkAdapterObjectParams = (params: [ShowNetworkAdapterParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showNetworkAdapterParamCreator = async (...config: ([ShowNetworkAdapterParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showNetworkAdapterParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowNetworkAdapterParams] | [string, AxiosRequestConfig])) => {
     const params = isShowNetworkAdapterObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowNetworkAdapterParams;
     const { id, options = {} } = params;
     const localVarPath = `/network_adapters/{id}`
@@ -49,7 +53,7 @@ export const showNetworkAdapterParamCreator = async (...config: ([ShowNetworkAda
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showNetworkAdapterParamCreator = async (...config: ([ShowNetworkAda
         }
         ]
     };
+
+    return sendRequest<ShowNetworkAdapterReturnType>(Promise.resolve(args));
 }
 
 export default showNetworkAdapterParamCreator;

@@ -27,10 +27,14 @@ export type UpdateTaskParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateTaskReturnType = AxiosPromise<void>;
+export type UpdateTaskReturnType = void;
 
 const isUpdateTaskObjectParams = (params: [UpdateTaskParams] | unknown[]): params is [UpdateTaskParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'task')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'task')
+  }
+  return false
 }
 /**
 * Updates a Task object
@@ -39,7 +43,7 @@ const isUpdateTaskObjectParams = (params: [UpdateTaskParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateTaskParamCreator = async (...config: ([UpdateTaskParams] | [string, Task, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateTaskParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateTaskParams] | [string, Task, AxiosRequestConfig])) => {
     const params = isUpdateTaskObjectParams(config) ? config[0] : ['id', 'task', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateTaskParams;
     const { id, task, options = {} } = params;
     const localVarPath = `/tasks/{id}`
@@ -57,7 +61,7 @@ export const updateTaskParamCreator = async (...config: ([UpdateTaskParams] | [s
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: task,
@@ -69,6 +73,8 @@ export const updateTaskParamCreator = async (...config: ([UpdateTaskParams] | [s
         }
         ]
     };
+
+    return sendRequest<UpdateTaskReturnType>(Promise.resolve(args));
 }
 
 export default updateTaskParamCreator;

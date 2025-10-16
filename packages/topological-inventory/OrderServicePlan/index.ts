@@ -27,10 +27,14 @@ export type OrderServicePlanParams = {
   options?: AxiosRequestConfig
 }
 
-export type OrderServicePlanReturnType = AxiosPromise<AppliedInventoriesForServiceOffering200Response>;
+export type OrderServicePlanReturnType = AppliedInventoriesForServiceOffering200Response;
 
 const isOrderServicePlanObjectParams = (params: [OrderServicePlanParams] | unknown[]): params is [OrderServicePlanParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'orderParametersServicePlan')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'orderParametersServicePlan')
+  }
+  return false
 }
 /**
 * Returns a Task id
@@ -39,7 +43,7 @@ const isOrderServicePlanObjectParams = (params: [OrderServicePlanParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const orderServicePlanParamCreator = async (...config: ([OrderServicePlanParams] | [string, OrderParametersServicePlan, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const orderServicePlanParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([OrderServicePlanParams] | [string, OrderParametersServicePlan, AxiosRequestConfig])) => {
     const params = isOrderServicePlanObjectParams(config) ? config[0] : ['id', 'orderParametersServicePlan', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as OrderServicePlanParams;
     const { id, orderParametersServicePlan, options = {} } = params;
     const localVarPath = `/service_plans/{id}/order`
@@ -57,7 +61,7 @@ export const orderServicePlanParamCreator = async (...config: ([OrderServicePlan
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: orderParametersServicePlan,
@@ -69,6 +73,8 @@ export const orderServicePlanParamCreator = async (...config: ([OrderServicePlan
         }
         ]
     };
+
+    return sendRequest<OrderServicePlanReturnType>(Promise.resolve(args));
 }
 
 export default orderServicePlanParamCreator;

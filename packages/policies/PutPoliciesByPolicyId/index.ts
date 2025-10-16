@@ -20,23 +20,27 @@ export type PutPoliciesByPolicyIdParams = {
   policyId: string,
   /**
   *
+  * @type { Policy }
+  * @memberof PutPoliciesByPolicyIdApi
+  */
+  policy: Policy,
+  /**
+  *
   * @type { boolean }
   * @memberof PutPoliciesByPolicyIdApi
   */
   dry?: boolean,
-  /**
-  *
-  * @type { Policy }
-  * @memberof PutPoliciesByPolicyIdApi
-  */
-  policy?: Policy,
   options?: AxiosRequestConfig
 }
 
-export type PutPoliciesByPolicyIdReturnType = AxiosPromise<Policy>;
+export type PutPoliciesByPolicyIdReturnType = Policy;
 
 const isPutPoliciesByPolicyIdObjectParams = (params: [PutPoliciesByPolicyIdParams] | unknown[]): params is [PutPoliciesByPolicyIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'policy')
+  }
+  return false
 }
 /**
 *
@@ -45,9 +49,9 @@ const isPutPoliciesByPolicyIdObjectParams = (params: [PutPoliciesByPolicyIdParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const putPoliciesByPolicyIdParamCreator = async (...config: ([PutPoliciesByPolicyIdParams] | [string, boolean, Policy, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isPutPoliciesByPolicyIdObjectParams(config) ? config[0] : ['policyId', 'dry', 'policy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PutPoliciesByPolicyIdParams;
-    const { policyId, dry, policy, options = {} } = params;
+export const putPoliciesByPolicyIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PutPoliciesByPolicyIdParams] | [string, Policy, boolean, AxiosRequestConfig])) => {
+    const params = isPutPoliciesByPolicyIdObjectParams(config) ? config[0] : ['policyId', 'policy', 'dry', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PutPoliciesByPolicyIdParams;
+    const { policyId, policy, dry, options = {} } = params;
     const localVarPath = `/policies/{policyId}`
         .replace(`{${"policyId"}}`, encodeURIComponent(String(policyId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -67,11 +71,13 @@ export const putPoliciesByPolicyIdParamCreator = async (...config: ([PutPolicies
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: policy,
     };
+
+    return sendRequest<PutPoliciesByPolicyIdReturnType>(Promise.resolve(args));
 }
 
 export default putPoliciesByPolicyIdParamCreator;

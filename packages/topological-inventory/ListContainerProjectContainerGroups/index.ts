@@ -45,10 +45,14 @@ export type ListContainerProjectContainerGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerProjectContainerGroupsReturnType = AxiosPromise<ContainerGroupsCollection>;
+export type ListContainerProjectContainerGroupsReturnType = ContainerGroupsCollection;
 
 const isListContainerProjectContainerGroupsObjectParams = (params: [ListContainerProjectContainerGroupsParams] | unknown[]): params is [ListContainerProjectContainerGroupsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of ContainerGroup objects
@@ -57,7 +61,7 @@ const isListContainerProjectContainerGroupsObjectParams = (params: [ListContaine
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerProjectContainerGroupsParamCreator = async (...config: ([ListContainerProjectContainerGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerProjectContainerGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerProjectContainerGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerProjectContainerGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerProjectContainerGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_projects/{id}/container_groups`
@@ -89,7 +93,7 @@ export const listContainerProjectContainerGroupsParamCreator = async (...config:
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listContainerProjectContainerGroupsParamCreator = async (...config:
         }
         ]
     };
+
+    return sendRequest<ListContainerProjectContainerGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listContainerProjectContainerGroupsParamCreator;

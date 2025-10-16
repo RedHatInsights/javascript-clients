@@ -150,10 +150,14 @@ export const ListPrincipalsTypeEnum = {
 } as const;
 export type ListPrincipalsTypeEnum = typeof ListPrincipalsTypeEnum[keyof typeof ListPrincipalsTypeEnum];
 
-export type ListPrincipalsReturnType = AxiosPromise<ListPrincipals200Response>;
+export type ListPrincipalsReturnType = ListPrincipals200Response;
 
 const isListPrincipalsObjectParams = (params: [ListPrincipalsParams] | unknown[]): params is [ListPrincipalsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by username
@@ -162,7 +166,7 @@ const isListPrincipalsObjectParams = (params: [ListPrincipalsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listPrincipalsParamCreator = async (...config: ([ListPrincipalsParams] | [number, number, ListPrincipalsMatchCriteriaEnum, string, ListPrincipalsSortOrderEnum, string, ListPrincipalsStatusEnum, boolean, ListPrincipalsOrderByEnum, boolean, ListPrincipalsTypeEnum, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listPrincipalsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListPrincipalsParams] | [number, number, ListPrincipalsMatchCriteriaEnum, string, ListPrincipalsSortOrderEnum, string, ListPrincipalsStatusEnum, boolean, ListPrincipalsOrderByEnum, boolean, ListPrincipalsTypeEnum, string, string, string, AxiosRequestConfig])) => {
     const params = isListPrincipalsObjectParams(config) ? config[0] : ['limit', 'offset', 'matchCriteria', 'usernames', 'sortOrder', 'email', 'status', 'adminOnly', 'orderBy', 'usernameOnly', 'type', 'name', 'owner', 'description', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPrincipalsParams;
     const { limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, type, name, owner, description, options = {} } = params;
     const localVarPath = `/principals/`;
@@ -233,7 +237,7 @@ export const listPrincipalsParamCreator = async (...config: ([ListPrincipalsPara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -244,6 +248,8 @@ export const listPrincipalsParamCreator = async (...config: ([ListPrincipalsPara
         }
         ]
     };
+
+    return sendRequest<ListPrincipalsReturnType>(Promise.resolve(args));
 }
 
 export default listPrincipalsParamCreator;

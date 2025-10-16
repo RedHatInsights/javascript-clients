@@ -39,10 +39,14 @@ export type ListContainerGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerGroupsReturnType = AxiosPromise<ContainerGroupsCollection>;
+export type ListContainerGroupsReturnType = ContainerGroupsCollection;
 
 const isListContainerGroupsObjectParams = (params: [ListContainerGroupsParams] | unknown[]): params is [ListContainerGroupsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of ContainerGroup objects
@@ -51,7 +55,7 @@ const isListContainerGroupsObjectParams = (params: [ListContainerGroupsParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerGroupsParamCreator = async (...config: ([ListContainerGroupsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerGroupsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerGroupsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerGroupsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_groups`;
@@ -82,7 +86,7 @@ export const listContainerGroupsParamCreator = async (...config: ([ListContainer
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listContainerGroupsParamCreator = async (...config: ([ListContainer
         }
         ]
     };
+
+    return sendRequest<ListContainerGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listContainerGroupsParamCreator;

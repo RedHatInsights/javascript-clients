@@ -27,10 +27,14 @@ export type RatingListParams = {
   options?: AxiosRequestConfig
 }
 
-export type RatingListReturnType = AxiosPromise<PaginatedRuleRatingList>;
+export type RatingListReturnType = PaginatedRuleRatingList;
 
 const isRatingListObjectParams = (params: [RatingListParams] | unknown[]): params is [RatingListParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * List all rules rated by the current user  Only the current user\'s ratings are listed here.
@@ -38,7 +42,7 @@ const isRatingListObjectParams = (params: [RatingListParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ratingListParamCreator = async (...config: ([RatingListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ratingListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RatingListParams] | [number, number, AxiosRequestConfig])) => {
     const params = isRatingListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RatingListParams;
     const { limit, offset, options = {} } = params;
     const localVarPath = `/api/insights/v1/rating/`;
@@ -61,7 +65,7 @@ export const ratingListParamCreator = async (...config: ([RatingListParams] | [n
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -73,6 +77,8 @@ export const ratingListParamCreator = async (...config: ([RatingListParams] | [n
         }
         ]
     };
+
+    return sendRequest<RatingListReturnType>(Promise.resolve(args));
 }
 
 export default ratingListParamCreator;

@@ -45,10 +45,14 @@ export type ListOrchestrationStackSecurityGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListOrchestrationStackSecurityGroupsReturnType = AxiosPromise<SecurityGroupsCollection>;
+export type ListOrchestrationStackSecurityGroupsReturnType = SecurityGroupsCollection;
 
 const isListOrchestrationStackSecurityGroupsObjectParams = (params: [ListOrchestrationStackSecurityGroupsParams] | unknown[]): params is [ListOrchestrationStackSecurityGroupsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of SecurityGroup objects
@@ -57,7 +61,7 @@ const isListOrchestrationStackSecurityGroupsObjectParams = (params: [ListOrchest
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listOrchestrationStackSecurityGroupsParamCreator = async (...config: ([ListOrchestrationStackSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listOrchestrationStackSecurityGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListOrchestrationStackSecurityGroupsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListOrchestrationStackSecurityGroupsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListOrchestrationStackSecurityGroupsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/orchestration_stacks/{id}/security_groups`
@@ -89,7 +93,7 @@ export const listOrchestrationStackSecurityGroupsParamCreator = async (...config
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listOrchestrationStackSecurityGroupsParamCreator = async (...config
         }
         ]
     };
+
+    return sendRequest<ListOrchestrationStackSecurityGroupsReturnType>(Promise.resolve(args));
 }
 
 export default listOrchestrationStackSecurityGroupsParamCreator;

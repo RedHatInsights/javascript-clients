@@ -39,10 +39,14 @@ export type ListServiceOfferingIconsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListServiceOfferingIconsReturnType = AxiosPromise<ServiceOfferingIconsCollection>;
+export type ListServiceOfferingIconsReturnType = ServiceOfferingIconsCollection;
 
 const isListServiceOfferingIconsObjectParams = (params: [ListServiceOfferingIconsParams] | unknown[]): params is [ListServiceOfferingIconsParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of ServiceOfferingIcon objects
@@ -51,7 +55,7 @@ const isListServiceOfferingIconsObjectParams = (params: [ListServiceOfferingIcon
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listServiceOfferingIconsParamCreator = async (...config: ([ListServiceOfferingIconsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listServiceOfferingIconsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListServiceOfferingIconsParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListServiceOfferingIconsObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListServiceOfferingIconsParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/service_offering_icons`;
@@ -82,7 +86,7 @@ export const listServiceOfferingIconsParamCreator = async (...config: ([ListServ
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listServiceOfferingIconsParamCreator = async (...config: ([ListServ
         }
         ]
     };
+
+    return sendRequest<ListServiceOfferingIconsReturnType>(Promise.resolve(args));
 }
 
 export default listServiceOfferingIconsParamCreator;

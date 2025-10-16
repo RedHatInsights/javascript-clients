@@ -39,10 +39,14 @@ export type ListContainerResourceQuotaParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListContainerResourceQuotaReturnType = AxiosPromise<ContainerResourceQuotaCollection>;
+export type ListContainerResourceQuotaReturnType = ContainerResourceQuotaCollection;
 
 const isListContainerResourceQuotaObjectParams = (params: [ListContainerResourceQuotaParams] | unknown[]): params is [ListContainerResourceQuotaParams] => {
-  return params.length === 1 && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
 }
 /**
 * Returns an array of ContainerResourceQuota objects
@@ -51,7 +55,7 @@ const isListContainerResourceQuotaObjectParams = (params: [ListContainerResource
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listContainerResourceQuotaParamCreator = async (...config: ([ListContainerResourceQuotaParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listContainerResourceQuotaParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListContainerResourceQuotaParams] | [number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListContainerResourceQuotaObjectParams(config) ? config[0] : ['limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListContainerResourceQuotaParams;
     const { limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/container_resource_quotas`;
@@ -82,7 +86,7 @@ export const listContainerResourceQuotaParamCreator = async (...config: ([ListCo
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -93,6 +97,8 @@ export const listContainerResourceQuotaParamCreator = async (...config: ([ListCo
         }
         ]
     };
+
+    return sendRequest<ListContainerResourceQuotaReturnType>(Promise.resolve(args));
 }
 
 export default listContainerResourceQuotaParamCreator;

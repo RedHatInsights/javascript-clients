@@ -55,10 +55,14 @@ export const ApiGroupGetGroupsByIdOrderByEnum = {
 } as const;
 export type ApiGroupGetGroupsByIdOrderByEnum = typeof ApiGroupGetGroupsByIdOrderByEnum[keyof typeof ApiGroupGetGroupsByIdOrderByEnum];
 
-export type ApiGroupGetGroupsByIdReturnType = AxiosPromise<GroupQueryOutput>;
+export type ApiGroupGetGroupsByIdReturnType = GroupQueryOutput;
 
 const isApiGroupGetGroupsByIdObjectParams = (params: [ApiGroupGetGroupsByIdParams] | unknown[]): params is [ApiGroupGetGroupsByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupIdList') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'groupIdList')
+  }
+  return false
 }
 /**
 * Find one or more groups by their IDs. <br /><br /> Required permissions: inventory:groups:read
@@ -67,7 +71,7 @@ const isApiGroupGetGroupsByIdObjectParams = (params: [ApiGroupGetGroupsByIdParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiGroupGetGroupsByIdParamCreator = async (...config: ([ApiGroupGetGroupsByIdParams] | [Array<string>, number, number, ApiGroupGetGroupsByIdOrderByEnum, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiGroupGetGroupsByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiGroupGetGroupsByIdParams] | [Array<string>, number, number, ApiGroupGetGroupsByIdOrderByEnum, string, AxiosRequestConfig])) => {
     const params = isApiGroupGetGroupsByIdObjectParams(config) ? config[0] : ['groupIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiGroupGetGroupsByIdParams;
     const { groupIdList, perPage, page, orderBy, orderHow, options = {} } = params;
     const localVarPath = `/groups/{group_id_list}`
@@ -99,7 +103,7 @@ export const apiGroupGetGroupsByIdParamCreator = async (...config: ([ApiGroupGet
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -111,6 +115,8 @@ export const apiGroupGetGroupsByIdParamCreator = async (...config: ([ApiGroupGet
         }
         ]
     };
+
+    return sendRequest<ApiGroupGetGroupsByIdReturnType>(Promise.resolve(args));
 }
 
 export default apiGroupGetGroupsByIdParamCreator;

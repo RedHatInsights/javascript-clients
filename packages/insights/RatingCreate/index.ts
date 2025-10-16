@@ -21,10 +21,14 @@ export type RatingCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type RatingCreateReturnType = AxiosPromise<RuleRating>;
+export type RatingCreateReturnType = RuleRating;
 
 const isRatingCreateObjectParams = (params: [RatingCreateParams] | unknown[]): params is [RatingCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleRating')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'ruleRating')
+  }
+  return false
 }
 /**
 * Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
@@ -32,7 +36,7 @@ const isRatingCreateObjectParams = (params: [RatingCreateParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const ratingCreateParamCreator = async (...config: ([RatingCreateParams] | [RuleRating, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const ratingCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RatingCreateParams] | [RuleRating, AxiosRequestConfig])) => {
     const params = isRatingCreateObjectParams(config) ? config[0] : ['ruleRating', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RatingCreateParams;
     const { ruleRating, options = {} } = params;
     const localVarPath = `/api/insights/v1/rating/`;
@@ -49,7 +53,7 @@ export const ratingCreateParamCreator = async (...config: ([RatingCreateParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: ruleRating,
@@ -62,6 +66,8 @@ export const ratingCreateParamCreator = async (...config: ([RatingCreateParams] 
         }
         ]
     };
+
+    return sendRequest<RatingCreateReturnType>(Promise.resolve(args));
 }
 
 export default ratingCreateParamCreator;

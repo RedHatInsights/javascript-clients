@@ -13,24 +13,28 @@ import type { Msg, Policy } from '../types';
 
 export type PostPoliciesParams = {
   /**
+  *
+  * @type { Policy }
+  * @memberof PostPoliciesApi
+  */
+  policy: Policy,
+  /**
   * If passed and set to true, the passed policy is also persisted (if it is valid)
   * @type { boolean }
   * @memberof PostPoliciesApi
   */
   alsoStore?: boolean,
-  /**
-  *
-  * @type { Policy }
-  * @memberof PostPoliciesApi
-  */
-  policy?: Policy,
   options?: AxiosRequestConfig
 }
 
-export type PostPoliciesReturnType = AxiosPromise<void>;
+export type PostPoliciesReturnType = void;
 
 const isPostPoliciesObjectParams = (params: [PostPoliciesParams] | unknown[]): params is [PostPoliciesParams] => {
-  return params.length === 1 && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policy')
+  }
+  return false
 }
 /**
 *
@@ -39,9 +43,9 @@ const isPostPoliciesObjectParams = (params: [PostPoliciesParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const postPoliciesParamCreator = async (...config: ([PostPoliciesParams] | [boolean, Policy, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isPostPoliciesObjectParams(config) ? config[0] : ['alsoStore', 'policy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PostPoliciesParams;
-    const { alsoStore, policy, options = {} } = params;
+export const postPoliciesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PostPoliciesParams] | [Policy, boolean, AxiosRequestConfig])) => {
+    const params = isPostPoliciesObjectParams(config) ? config[0] : ['policy', 'alsoStore', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PostPoliciesParams;
+    const { policy, alsoStore, options = {} } = params;
     const localVarPath = `/policies`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -60,11 +64,13 @@ export const postPoliciesParamCreator = async (...config: ([PostPoliciesParams] 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: policy,
     };
+
+    return sendRequest<PostPoliciesReturnType>(Promise.resolve(args));
 }
 
 export default postPoliciesParamCreator;

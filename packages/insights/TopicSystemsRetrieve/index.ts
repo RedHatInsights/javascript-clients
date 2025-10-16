@@ -83,10 +83,14 @@ export const TopicSystemsRetrieveUpdateMethodEnum = {
 } as const;
 export type TopicSystemsRetrieveUpdateMethodEnum = typeof TopicSystemsRetrieveUpdateMethodEnum[keyof typeof TopicSystemsRetrieveUpdateMethodEnum];
 
-export type TopicSystemsRetrieveReturnType = AxiosPromise<SystemsForRule>;
+export type TopicSystemsRetrieveReturnType = SystemsForRule;
 
 const isTopicSystemsRetrieveObjectParams = (params: [TopicSystemsRetrieveParams] | unknown[]): params is [TopicSystemsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'slug')
+  }
+  return false
 }
 /**
 * List all systems affected by this rule topic.  Systems are just listed by their UUID.
@@ -94,7 +98,7 @@ const isTopicSystemsRetrieveObjectParams = (params: [TopicSystemsRetrieveParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const topicSystemsRetrieveParamCreator = async (...config: ([TopicSystemsRetrieveParams] | [string, Array<string>, boolean, Array<string>, Array<TopicSystemsRetrieveSortEnum>, Array<string>, Array<TopicSystemsRetrieveUpdateMethodEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const topicSystemsRetrieveParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TopicSystemsRetrieveParams] | [string, Array<string>, boolean, Array<string>, Array<TopicSystemsRetrieveSortEnum>, Array<string>, Array<TopicSystemsRetrieveUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isTopicSystemsRetrieveObjectParams(config) ? config[0] : ['slug', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'sort', 'tags', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TopicSystemsRetrieveParams;
     const { slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/topic/{slug}/systems/`
@@ -134,7 +138,7 @@ export const topicSystemsRetrieveParamCreator = async (...config: ([TopicSystems
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -146,6 +150,8 @@ export const topicSystemsRetrieveParamCreator = async (...config: ([TopicSystems
         }
         ]
     };
+
+    return sendRequest<TopicSystemsRetrieveReturnType>(Promise.resolve(args));
 }
 
 export default topicSystemsRetrieveParamCreator;

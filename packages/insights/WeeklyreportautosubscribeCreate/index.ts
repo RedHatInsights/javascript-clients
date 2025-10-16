@@ -21,10 +21,14 @@ export type WeeklyreportautosubscribeCreateParams = {
   options?: AxiosRequestConfig
 }
 
-export type WeeklyreportautosubscribeCreateReturnType = AxiosPromise<AutoSubscribe>;
+export type WeeklyreportautosubscribeCreateReturnType = AutoSubscribe;
 
 const isWeeklyreportautosubscribeCreateObjectParams = (params: [WeeklyreportautosubscribeCreateParams] | unknown[]): params is [WeeklyreportautosubscribeCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'autoSubscribeInput')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'autoSubscribeInput')
+  }
+  return false
 }
 /**
 * Set the auto-subscription status of the current user to the supplied `is_auto_subscribed` value.  If \'is_auto_subscribed\' is true, an auto-subscription is added if it doesn\'t already exist.  If it is false, the auto-subscription is removed if it exists.  Check if ENABLE_AUTOSUB enviroment variable is set to allow the method.
@@ -32,7 +36,7 @@ const isWeeklyreportautosubscribeCreateObjectParams = (params: [Weeklyreportauto
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const weeklyreportautosubscribeCreateParamCreator = async (...config: ([WeeklyreportautosubscribeCreateParams] | [AutoSubscribeInput, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const weeklyreportautosubscribeCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WeeklyreportautosubscribeCreateParams] | [AutoSubscribeInput, AxiosRequestConfig])) => {
     const params = isWeeklyreportautosubscribeCreateObjectParams(config) ? config[0] : ['autoSubscribeInput', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WeeklyreportautosubscribeCreateParams;
     const { autoSubscribeInput, options = {} } = params;
     const localVarPath = `/api/insights/v1/weeklyreportautosubscribe/`;
@@ -49,7 +53,7 @@ export const weeklyreportautosubscribeCreateParamCreator = async (...config: ([W
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: autoSubscribeInput,
@@ -62,6 +66,8 @@ export const weeklyreportautosubscribeCreateParamCreator = async (...config: ([W
         }
         ]
     };
+
+    return sendRequest<WeeklyreportautosubscribeCreateReturnType>(Promise.resolve(args));
 }
 
 export default weeklyreportautosubscribeCreateParamCreator;

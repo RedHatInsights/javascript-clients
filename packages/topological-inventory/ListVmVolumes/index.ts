@@ -45,10 +45,14 @@ export type ListVmVolumesParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListVmVolumesReturnType = AxiosPromise<VolumesCollection>;
+export type ListVmVolumesReturnType = VolumesCollection;
 
 const isListVmVolumesObjectParams = (params: [ListVmVolumesParams] | unknown[]): params is [ListVmVolumesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Volume objects
@@ -57,7 +61,7 @@ const isListVmVolumesObjectParams = (params: [ListVmVolumesParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listVmVolumesParamCreator = async (...config: ([ListVmVolumesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listVmVolumesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListVmVolumesParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListVmVolumesObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListVmVolumesParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/vms/{id}/volumes`
@@ -89,7 +93,7 @@ export const listVmVolumesParamCreator = async (...config: ([ListVmVolumesParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listVmVolumesParamCreator = async (...config: ([ListVmVolumesParams
         }
         ]
     };
+
+    return sendRequest<ListVmVolumesReturnType>(Promise.resolve(args));
 }
 
 export default listVmVolumesParamCreator;

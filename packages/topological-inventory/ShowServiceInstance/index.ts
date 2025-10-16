@@ -21,10 +21,14 @@ export type ShowServiceInstanceParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowServiceInstanceReturnType = AxiosPromise<ServiceInstance>;
+export type ShowServiceInstanceReturnType = ServiceInstance;
 
 const isShowServiceInstanceObjectParams = (params: [ShowServiceInstanceParams] | unknown[]): params is [ShowServiceInstanceParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a ServiceInstance object
@@ -33,7 +37,7 @@ const isShowServiceInstanceObjectParams = (params: [ShowServiceInstanceParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showServiceInstanceParamCreator = async (...config: ([ShowServiceInstanceParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showServiceInstanceParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowServiceInstanceParams] | [string, AxiosRequestConfig])) => {
     const params = isShowServiceInstanceObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowServiceInstanceParams;
     const { id, options = {} } = params;
     const localVarPath = `/service_instances/{id}`
@@ -49,7 +53,7 @@ export const showServiceInstanceParamCreator = async (...config: ([ShowServiceIn
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showServiceInstanceParamCreator = async (...config: ([ShowServiceIn
         }
         ]
     };
+
+    return sendRequest<ShowServiceInstanceReturnType>(Promise.resolve(args));
 }
 
 export default showServiceInstanceParamCreator;

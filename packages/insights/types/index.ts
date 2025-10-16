@@ -1,5 +1,5 @@
 /**
- *
+ * An \'ack\'nowledgement of a rule across an entire organisation.  This hides (or disables) the given rule, so that all systems in this organisation systems do not appear to be affected by the rule.
  * @export
  * @interface Ack
  */
@@ -232,6 +232,25 @@ export interface AutoSubscribeInput {
     'is_auto_subscribed': boolean;
 }
 /**
+ * Displays rules which are disabled, either organisation-wide (Ack) or system-specific (HostAck).  The scope field indicates which of these causes this rule to be disabled - \'account\' or \'system\'.  To find which systems have disabled a rule, use the \'rule_id\' query parameter in the hostack/ endpoint.
+ * @export
+ * @interface DisabledRules
+ */
+export interface DisabledRules {
+    /**
+     *
+     * @type {string}
+     * @memberof DisabledRules
+     */
+    'rule_id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof DisabledRules
+     */
+    'scope': string;
+}
+/**
  * The basic report information for each system affected by a rule.  Only lists basic details of the host and rule, and links to more information.
  * @export
  * @interface ExportHits
@@ -260,7 +279,7 @@ export interface ExportHits {
      * @type {string}
      * @memberof ExportHits
      */
-    'last_seen': string;
+    'last_seen': string | null;
     /**
      *
      * @type {string}
@@ -305,7 +324,7 @@ export interface ExportHits {
     'results_url': string;
 }
 /**
- * Ignore reports of this rule on this system for this account.
+ * Ignore reports of this rule on this system for this account.  This \'ack\'nowledges (or hides) this rule from affecting this rule on this system.
  * @export
  * @interface HostAck
  */
@@ -493,17 +512,73 @@ export interface MultiHostUnAck {
     'systems': Array<string>;
 }
 /**
- * A specific org id for a Red Hat customer.
+ *
  * @export
- * @interface OrgId
+ * @interface PaginatedAckCountList
  */
-export interface OrgId {
+export interface PaginatedAckCountList {
+    /**
+     *
+     * @type {PaginatedAckCountListMeta}
+     * @memberof PaginatedAckCountList
+     */
+    'meta'?: PaginatedAckCountListMeta;
+    /**
+     *
+     * @type {PaginatedAckCountListLinks}
+     * @memberof PaginatedAckCountList
+     */
+    'links'?: PaginatedAckCountListLinks;
+    /**
+     *
+     * @type {Array<AckCount>}
+     * @memberof PaginatedAckCountList
+     */
+    'data'?: Array<AckCount>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedAckCountListLinks
+ */
+export interface PaginatedAckCountListLinks {
     /**
      *
      * @type {string}
-     * @memberof OrgId
+     * @memberof PaginatedAckCountListLinks
      */
-    'org_id': string;
+    'first'?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof PaginatedAckCountListLinks
+     */
+    'previous'?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof PaginatedAckCountListLinks
+     */
+    'next'?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof PaginatedAckCountListLinks
+     */
+    'last'?: string | null;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedAckCountListMeta
+ */
+export interface PaginatedAckCountListMeta {
+    /**
+     *
+     * @type {number}
+     * @memberof PaginatedAckCountListMeta
+     */
+    'count': number;
 }
 /**
  *
@@ -513,16 +588,16 @@ export interface OrgId {
 export interface PaginatedAckList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedAckList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedAckList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<Ack>}
@@ -533,65 +608,21 @@ export interface PaginatedAckList {
 /**
  *
  * @export
- * @interface PaginatedAckListLinks
- */
-export interface PaginatedAckListLinks {
-    /**
-     *
-     * @type {string}
-     * @memberof PaginatedAckListLinks
-     */
-    'first'?: string | null;
-    /**
-     *
-     * @type {string}
-     * @memberof PaginatedAckListLinks
-     */
-    'previous'?: string | null;
-    /**
-     *
-     * @type {string}
-     * @memberof PaginatedAckListLinks
-     */
-    'next'?: string | null;
-    /**
-     *
-     * @type {string}
-     * @memberof PaginatedAckListLinks
-     */
-    'last'?: string | null;
-}
-/**
- *
- * @export
- * @interface PaginatedAckListMeta
- */
-export interface PaginatedAckListMeta {
-    /**
-     *
-     * @type {number}
-     * @memberof PaginatedAckListMeta
-     */
-    'count': number;
-}
-/**
- *
- * @export
  * @interface PaginatedAllRuleRatingsList
  */
 export interface PaginatedAllRuleRatingsList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedAllRuleRatingsList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedAllRuleRatingsList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<AllRuleRatings>}
@@ -602,21 +633,46 @@ export interface PaginatedAllRuleRatingsList {
 /**
  *
  * @export
+ * @interface PaginatedDisabledRulesList
+ */
+export interface PaginatedDisabledRulesList {
+    /**
+     *
+     * @type {PaginatedAckCountListMeta}
+     * @memberof PaginatedDisabledRulesList
+     */
+    'meta'?: PaginatedAckCountListMeta;
+    /**
+     *
+     * @type {PaginatedAckCountListLinks}
+     * @memberof PaginatedDisabledRulesList
+     */
+    'links'?: PaginatedAckCountListLinks;
+    /**
+     *
+     * @type {Array<DisabledRules>}
+     * @memberof PaginatedDisabledRulesList
+     */
+    'data'?: Array<DisabledRules>;
+}
+/**
+ *
+ * @export
  * @interface PaginatedHostAckList
  */
 export interface PaginatedHostAckList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedHostAckList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedHostAckList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<HostAck>}
@@ -632,16 +688,16 @@ export interface PaginatedHostAckList {
 export interface PaginatedJustificationCountList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedJustificationCountList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedJustificationCountList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<JustificationCount>}
@@ -652,46 +708,21 @@ export interface PaginatedJustificationCountList {
 /**
  *
  * @export
- * @interface PaginatedOrgIdList
- */
-export interface PaginatedOrgIdList {
-    /**
-     *
-     * @type {PaginatedAckListMeta}
-     * @memberof PaginatedOrgIdList
-     */
-    'meta'?: PaginatedAckListMeta;
-    /**
-     *
-     * @type {PaginatedAckListLinks}
-     * @memberof PaginatedOrgIdList
-     */
-    'links'?: PaginatedAckListLinks;
-    /**
-     *
-     * @type {Array<OrgId>}
-     * @memberof PaginatedOrgIdList
-     */
-    'data'?: Array<OrgId>;
-}
-/**
- *
- * @export
  * @interface PaginatedPathwayList
  */
 export interface PaginatedPathwayList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedPathwayList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedPathwayList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<Pathway>}
@@ -707,16 +738,16 @@ export interface PaginatedPathwayList {
 export interface PaginatedRuleForAccountList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedRuleForAccountList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedRuleForAccountList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<RuleForAccount>}
@@ -732,16 +763,16 @@ export interface PaginatedRuleForAccountList {
 export interface PaginatedRuleRatingList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedRuleRatingList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedRuleRatingList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<RuleRating>}
@@ -757,16 +788,16 @@ export interface PaginatedRuleRatingList {
 export interface PaginatedRuleRatingStatsList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedRuleRatingStatsList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedRuleRatingStatsList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<RuleRatingStats>}
@@ -782,16 +813,16 @@ export interface PaginatedRuleRatingStatsList {
 export interface PaginatedSubscriptionExcludedAccountList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedSubscriptionExcludedAccountList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedSubscriptionExcludedAccountList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<SubscriptionExcludedAccount>}
@@ -807,16 +838,16 @@ export interface PaginatedSubscriptionExcludedAccountList {
 export interface PaginatedSystemList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedSystemList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedSystemList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<System>}
@@ -832,16 +863,16 @@ export interface PaginatedSystemList {
 export interface PaginatedSystemsDetailList {
     /**
      *
-     * @type {PaginatedAckListMeta}
+     * @type {PaginatedAckCountListMeta}
      * @memberof PaginatedSystemsDetailList
      */
-    'meta'?: PaginatedAckListMeta;
+    'meta'?: PaginatedAckCountListMeta;
     /**
      *
-     * @type {PaginatedAckListLinks}
+     * @type {PaginatedAckCountListLinks}
      * @memberof PaginatedSystemsDetailList
      */
-    'links'?: PaginatedAckListLinks;
+    'links'?: PaginatedAckCountListLinks;
     /**
      *
      * @type {Array<SystemsDetail>}
@@ -1002,43 +1033,6 @@ export interface Pathway {
     'low_risk_count': number;
 }
 /**
- * Serializer specifically for handling CREATE and UPDATE views for Pathways
- * @export
- * @interface PathwayInput
- */
-export interface PathwayInput {
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'description': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'component': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'resolution_risk': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'publish_date': string;
-}
-/**
  * User preferences - separated from account settings.
  * @export
  * @interface PreferencesInput
@@ -1050,49 +1044,6 @@ export interface PreferencesInput {
      * @memberof PreferencesInput
      */
     'is_subscribed': boolean;
-}
-/**
- * The actual rule fields with the report data for a particular system rendered into them, in a flat structure that\'s easier to use.
- * @export
- * @interface RenderedReport
- */
-export interface RenderedReport {
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'description': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'summary': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'generic': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'reason': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'more_info'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'resolution': string;
 }
 /**
  *
@@ -1978,7 +1929,7 @@ export interface System {
      * @type {string}
      * @memberof System
      */
-    'last_seen': string;
+    'last_seen': string | null;
     /**
      *
      * @type {string}
@@ -2094,7 +2045,7 @@ export interface SystemsDetail {
      * @type {string}
      * @memberof SystemsDetail
      */
-    'last_seen': string;
+    'last_seen': string | null;
     /**
      *
      * @type {string}
@@ -2266,19 +2217,6 @@ export interface TopicEdit {
      * @memberof TopicEdit
      */
     'enabled'?: boolean;
-}
-/**
- * An approximation of the number of unique hits per day.
- * @export
- * @interface Usage
- */
-export interface Usage {
-    /**
-     *
-     * @type {number}
-     * @memberof Usage
-     */
-    'unique_hits': number;
 }
 /**
  *

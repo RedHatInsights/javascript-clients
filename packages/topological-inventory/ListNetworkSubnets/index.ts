@@ -45,10 +45,14 @@ export type ListNetworkSubnetsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListNetworkSubnetsReturnType = AxiosPromise<SubnetsCollection>;
+export type ListNetworkSubnetsReturnType = SubnetsCollection;
 
 const isListNetworkSubnetsObjectParams = (params: [ListNetworkSubnetsParams] | unknown[]): params is [ListNetworkSubnetsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Subnet objects
@@ -57,7 +61,7 @@ const isListNetworkSubnetsObjectParams = (params: [ListNetworkSubnetsParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listNetworkSubnetsParamCreator = async (...config: ([ListNetworkSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listNetworkSubnetsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListNetworkSubnetsParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListNetworkSubnetsObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListNetworkSubnetsParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/networks/{id}/subnets`
@@ -89,7 +93,7 @@ export const listNetworkSubnetsParamCreator = async (...config: ([ListNetworkSub
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listNetworkSubnetsParamCreator = async (...config: ([ListNetworkSub
         }
         ]
     };
+
+    return sendRequest<ListNetworkSubnetsReturnType>(Promise.resolve(args));
 }
 
 export default listNetworkSubnetsParamCreator;

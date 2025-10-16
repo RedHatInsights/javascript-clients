@@ -99,10 +99,14 @@ export const GetPrincipalsFromGroupPrincipalTypeEnum = {
 } as const;
 export type GetPrincipalsFromGroupPrincipalTypeEnum = typeof GetPrincipalsFromGroupPrincipalTypeEnum[keyof typeof GetPrincipalsFromGroupPrincipalTypeEnum];
 
-export type GetPrincipalsFromGroupReturnType = AxiosPromise<GetPrincipalsFromGroup200Response>;
+export type GetPrincipalsFromGroupReturnType = GetPrincipalsFromGroup200Response;
 
 const isGetPrincipalsFromGroupObjectParams = (params: [GetPrincipalsFromGroupParams] | unknown[]): params is [GetPrincipalsFromGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true && true && true && true && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
+  }
+  return false
 }
 /**
 * By default, responses are sorted in ascending order by username
@@ -111,7 +115,7 @@ const isGetPrincipalsFromGroupObjectParams = (params: [GetPrincipalsFromGroupPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPrincipalsFromGroupParamCreator = async (...config: ([GetPrincipalsFromGroupParams] | [string, boolean, string, number, number, GetPrincipalsFromGroupOrderByEnum, boolean, GetPrincipalsFromGroupPrincipalTypeEnum, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPrincipalsFromGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetPrincipalsFromGroupParams] | [string, boolean, string, number, number, GetPrincipalsFromGroupOrderByEnum, boolean, GetPrincipalsFromGroupPrincipalTypeEnum, string, string, string, AxiosRequestConfig])) => {
     const params = isGetPrincipalsFromGroupObjectParams(config) ? config[0] : ['uuid', 'adminOnly', 'principalUsername', 'limit', 'offset', 'orderBy', 'usernameOnly', 'principalType', 'serviceAccountClientIds', 'serviceAccountDescription', 'serviceAccountName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPrincipalsFromGroupParams;
     const { uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, principalType, serviceAccountClientIds, serviceAccountDescription, serviceAccountName, options = {} } = params;
     const localVarPath = `/groups/{uuid}/principals/`
@@ -167,7 +171,7 @@ export const getPrincipalsFromGroupParamCreator = async (...config: ([GetPrincip
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -178,6 +182,8 @@ export const getPrincipalsFromGroupParamCreator = async (...config: ([GetPrincip
         }
         ]
     };
+
+    return sendRequest<GetPrincipalsFromGroupReturnType>(Promise.resolve(args));
 }
 
 export default getPrincipalsFromGroupParamCreator;

@@ -53,10 +53,14 @@ export type {{operationIdCamelCase}}{{enumName}} = typeof {{operationIdCamelCase
 
 {{#operations}}
 {{#operation}}
-export type {{operationIdCamelCase}}ReturnType = AxiosPromise<{{{returnType}}}{{^returnType}}void{{/returnType}}>;
+export type {{operationIdCamelCase}}ReturnType = {{{returnType}}}{{^returnType}}void{{/returnType}};
 
 const is{{operationIdCamelCase}}ObjectParams = (params: [{{operationIdCamelCase}}Params] | unknown[]): params is [{{operationIdCamelCase}}Params] => {
-  return params.length === 1{{#allParams}} && {{^required}}true{{/required}}{{#required}}Object.prototype.hasOwnProperty.call(params, '{{paramName}}'){{/required}}{{/allParams}}
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true{{#allParams}}{{#required}} && Object.prototype.hasOwnProperty.call(params[0], '{{paramName}}'){{/required}}{{/allParams}}
+  }
+  return false
 }
 /**
 * {{&notes}}
@@ -68,7 +72,7 @@ const is{{operationIdCamelCase}}ObjectParams = (params: [{{operationIdCamelCase}
 * @deprecated{{/isDeprecated}}
 * @throws {RequiredError}
 */
-export const {{nickname}}ParamCreator = async (...config: ([{{operationIdCamelCase}}Params] | [{{#allParams}}{{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{/allParams}}AxiosRequestConfig])): Promise<RequestArgs> => {
+export const {{nickname}}ParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([{{operationIdCamelCase}}Params] | [{{#allParams}}{{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{/allParams}}AxiosRequestConfig])) => {
     const params = is{{operationIdCamelCase}}ObjectParams(config) ? config[0] : [{{#allParams}}'{{paramName}}', {{/allParams}}'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as {{operationIdCamelCase}}Params;
     const { {{#allParams}}{{paramName}}, {{/allParams}}options = {} } = params;
 {{#allParams}}
@@ -191,7 +195,7 @@ export const {{nickname}}ParamCreator = async (...config: ([{{operationIdCamelCa
     localVarRequestOptions.data = localVarFormParams{{#vendorExtensions}}{{^multipartFormData}}.toString(){{/multipartFormData}}{{/vendorExtensions}};
 {{/hasFormParams}}
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         {{#bodyParam}}
@@ -232,6 +236,8 @@ export const {{nickname}}ParamCreator = async (...config: ([{{operationIdCamelCa
         ]
         {{/authMethods.0}}
     };
+
+    return sendRequest<{{operationIdCamelCase}}ReturnType>(Promise.resolve(args));
 }
 
 export default {{nickname}}ParamCreator;

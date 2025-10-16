@@ -21,10 +21,14 @@ export type ApiGroupDeleteGroupsParams = {
   options?: AxiosRequestConfig
 }
 
-export type ApiGroupDeleteGroupsReturnType = AxiosPromise<void>;
+export type ApiGroupDeleteGroupsReturnType = void;
 
 const isApiGroupDeleteGroupsObjectParams = (params: [ApiGroupDeleteGroupsParams] | unknown[]): params is [ApiGroupDeleteGroupsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupIdList')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'groupIdList')
+  }
+  return false
 }
 /**
 * Delete a list of groups. <br /><br /> Required permissions: inventory:groups:write
@@ -33,7 +37,7 @@ const isApiGroupDeleteGroupsObjectParams = (params: [ApiGroupDeleteGroupsParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiGroupDeleteGroupsParamCreator = async (...config: ([ApiGroupDeleteGroupsParams] | [Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiGroupDeleteGroupsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiGroupDeleteGroupsParams] | [Array<string>, AxiosRequestConfig])) => {
     const params = isApiGroupDeleteGroupsObjectParams(config) ? config[0] : ['groupIdList', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiGroupDeleteGroupsParams;
     const { groupIdList, options = {} } = params;
     const localVarPath = `/groups/{group_id_list}`
@@ -49,7 +53,7 @@ export const apiGroupDeleteGroupsParamCreator = async (...config: ([ApiGroupDele
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -61,6 +65,8 @@ export const apiGroupDeleteGroupsParamCreator = async (...config: ([ApiGroupDele
         }
         ]
     };
+
+    return sendRequest<ApiGroupDeleteGroupsReturnType>(Promise.resolve(args));
 }
 
 export default apiGroupDeleteGroupsParamCreator;

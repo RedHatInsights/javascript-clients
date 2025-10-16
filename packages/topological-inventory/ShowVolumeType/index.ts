@@ -21,10 +21,14 @@ export type ShowVolumeTypeParams = {
   options?: AxiosRequestConfig
 }
 
-export type ShowVolumeTypeReturnType = AxiosPromise<VolumeType>;
+export type ShowVolumeTypeReturnType = VolumeType;
 
 const isShowVolumeTypeObjectParams = (params: [ShowVolumeTypeParams] | unknown[]): params is [ShowVolumeTypeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns a VolumeType object
@@ -33,7 +37,7 @@ const isShowVolumeTypeObjectParams = (params: [ShowVolumeTypeParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const showVolumeTypeParamCreator = async (...config: ([ShowVolumeTypeParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const showVolumeTypeParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ShowVolumeTypeParams] | [string, AxiosRequestConfig])) => {
     const params = isShowVolumeTypeObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ShowVolumeTypeParams;
     const { id, options = {} } = params;
     const localVarPath = `/volume_types/{id}`
@@ -49,7 +53,7 @@ export const showVolumeTypeParamCreator = async (...config: ([ShowVolumeTypePara
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -60,6 +64,8 @@ export const showVolumeTypeParamCreator = async (...config: ([ShowVolumeTypePara
         }
         ]
     };
+
+    return sendRequest<ShowVolumeTypeReturnType>(Promise.resolve(args));
 }
 
 export default showVolumeTypeParamCreator;

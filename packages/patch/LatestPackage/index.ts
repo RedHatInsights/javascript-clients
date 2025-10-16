@@ -21,10 +21,14 @@ export type LatestPackageParams = {
   options?: AxiosRequestConfig
 }
 
-export type LatestPackageReturnType = AxiosPromise<ControllersPackageDetailResponse>;
+export type LatestPackageReturnType = ControllersPackageDetailResponse;
 
 const isLatestPackageObjectParams = (params: [LatestPackageParams] | unknown[]): params is [LatestPackageParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'packageName')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'packageName')
+  }
+  return false
 }
 /**
 * Show me metadata of selected package
@@ -33,7 +37,7 @@ const isLatestPackageObjectParams = (params: [LatestPackageParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const latestPackageParamCreator = async (...config: ([LatestPackageParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const latestPackageParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([LatestPackageParams] | [string, AxiosRequestConfig])) => {
     const params = isLatestPackageObjectParams(config) ? config[0] : ['packageName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as LatestPackageParams;
     const { packageName, options = {} } = params;
     const localVarPath = `/packages/{package_name}`
@@ -49,7 +53,7 @@ export const latestPackageParamCreator = async (...config: ([LatestPackageParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -61,6 +65,8 @@ export const latestPackageParamCreator = async (...config: ([LatestPackageParams
         }
         ]
     };
+
+    return sendRequest<LatestPackageReturnType>(Promise.resolve(args));
 }
 
 export default latestPackageParamCreator;

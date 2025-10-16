@@ -33,10 +33,14 @@ export type ReportSystemsOSParams = {
   options?: AxiosRequestConfig
 }
 
-export type ReportSystemsOSReturnType = AxiosPromise<any>;
+export type ReportSystemsOSReturnType = any;
 
 const isReportSystemsOSObjectParams = (params: [ReportSystemsOSParams] | unknown[]): params is [ReportSystemsOSParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'reportId')
+  }
+  return false
 }
 /**
 * This feature is exclusively used by the frontend
@@ -46,7 +50,7 @@ const isReportSystemsOSObjectParams = (params: [ReportSystemsOSParams] | unknown
 * @deprecated
 * @throws {RequiredError}
 */
-export const reportSystemsOSParamCreator = async (...config: ([ReportSystemsOSParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const reportSystemsOSParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ReportSystemsOSParams] | [any, any, any, AxiosRequestConfig])) => {
     const params = isReportSystemsOSObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportSystemsOSParams;
     const { reportId, xRHIDENTITY, filter, options = {} } = params;
     const localVarPath = `/reports/{report_id}/systems/os_versions`
@@ -72,10 +76,12 @@ export const reportSystemsOSParamCreator = async (...config: ([ReportSystemsOSPa
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<ReportSystemsOSReturnType>(Promise.resolve(args));
 }
 
 export default reportSystemsOSParamCreator;

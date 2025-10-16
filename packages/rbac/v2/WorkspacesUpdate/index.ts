@@ -27,10 +27,14 @@ export type WorkspacesUpdateParams = {
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesUpdateReturnType = AxiosPromise<WorkspacesUpdateWorkspaceResponse>;
+export type WorkspacesUpdateReturnType = WorkspacesUpdateWorkspaceResponse;
 
 const isWorkspacesUpdateObjectParams = (params: [WorkspacesUpdateParams] | unknown[]): params is [WorkspacesUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'workspacesUpdateWorkspaceRequest')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'workspacesUpdateWorkspaceRequest')
+  }
+  return false
 }
 /**
 * Edit a workspace
@@ -39,7 +43,7 @@ const isWorkspacesUpdateObjectParams = (params: [WorkspacesUpdateParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesUpdateParamCreator = async (...config: ([WorkspacesUpdateParams] | [string, WorkspacesUpdateWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const workspacesUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesUpdateParams] | [string, WorkspacesUpdateWorkspaceRequest, AxiosRequestConfig])) => {
     const params = isWorkspacesUpdateObjectParams(config) ? config[0] : ['id', 'workspacesUpdateWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesUpdateParams;
     const { id, workspacesUpdateWorkspaceRequest, options = {} } = params;
     const localVarPath = `/workspaces/{id}/`
@@ -57,11 +61,13 @@ export const workspacesUpdateParamCreator = async (...config: ([WorkspacesUpdate
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: workspacesUpdateWorkspaceRequest,
     };
+
+    return sendRequest<WorkspacesUpdateReturnType>(Promise.resolve(args));
 }
 
 export default workspacesUpdateParamCreator;

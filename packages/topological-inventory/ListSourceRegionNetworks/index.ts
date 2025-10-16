@@ -45,10 +45,14 @@ export type ListSourceRegionNetworksParams = {
   options?: AxiosRequestConfig
 }
 
-export type ListSourceRegionNetworksReturnType = AxiosPromise<NetworksCollection>;
+export type ListSourceRegionNetworksReturnType = NetworksCollection;
 
 const isListSourceRegionNetworksObjectParams = (params: [ListSourceRegionNetworksParams] | unknown[]): params is [ListSourceRegionNetworksParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
 }
 /**
 * Returns an array of Network objects
@@ -57,7 +61,7 @@ const isListSourceRegionNetworksObjectParams = (params: [ListSourceRegionNetwork
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSourceRegionNetworksParamCreator = async (...config: ([ListSourceRegionNetworksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listSourceRegionNetworksParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSourceRegionNetworksParams] | [string, number, number, object, ListClustersSortByParameter, AxiosRequestConfig])) => {
     const params = isListSourceRegionNetworksObjectParams(config) ? config[0] : ['id', 'limit', 'offset', 'filter', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSourceRegionNetworksParams;
     const { id, limit, offset, filter, sortBy, options = {} } = params;
     const localVarPath = `/source_regions/{id}/networks`
@@ -89,7 +93,7 @@ export const listSourceRegionNetworksParamCreator = async (...config: ([ListSour
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         auth:[
@@ -100,6 +104,8 @@ export const listSourceRegionNetworksParamCreator = async (...config: ([ListSour
         }
         ]
     };
+
+    return sendRequest<ListSourceRegionNetworksReturnType>(Promise.resolve(args));
 }
 
 export default listSourceRegionNetworksParamCreator;

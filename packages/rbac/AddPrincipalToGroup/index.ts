@@ -27,10 +27,14 @@ export type AddPrincipalToGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type AddPrincipalToGroupReturnType = AxiosPromise<GroupWithPrincipalsAndRoles>;
+export type AddPrincipalToGroupReturnType = GroupWithPrincipalsAndRoles;
 
 const isAddPrincipalToGroupObjectParams = (params: [AddPrincipalToGroupParams] | unknown[]): params is [AddPrincipalToGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'groupPrincipalIn')
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'groupPrincipalIn')
+  }
+  return false
 }
 /**
 *
@@ -39,7 +43,7 @@ const isAddPrincipalToGroupObjectParams = (params: [AddPrincipalToGroupParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const addPrincipalToGroupParamCreator = async (...config: ([AddPrincipalToGroupParams] | [string, GroupPrincipalIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const addPrincipalToGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([AddPrincipalToGroupParams] | [string, GroupPrincipalIn, AxiosRequestConfig])) => {
     const params = isAddPrincipalToGroupObjectParams(config) ? config[0] : ['uuid', 'groupPrincipalIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AddPrincipalToGroupParams;
     const { uuid, groupPrincipalIn, options = {} } = params;
     const localVarPath = `/groups/{uuid}/principals/`
@@ -57,7 +61,7 @@ export const addPrincipalToGroupParamCreator = async (...config: ([AddPrincipalT
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: groupPrincipalIn,
@@ -69,6 +73,8 @@ export const addPrincipalToGroupParamCreator = async (...config: ([AddPrincipalT
         }
         ]
     };
+
+    return sendRequest<AddPrincipalToGroupReturnType>(Promise.resolve(args));
 }
 
 export default addPrincipalToGroupParamCreator;
