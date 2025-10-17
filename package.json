@@ -23,7 +23,7 @@
     "test": "npm-run-all --parallel test:*",
     "build": "nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "build:no-cache": "npm run build -- --skip-nx-cache",
-    "generate": "nx run-many -t generate --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "generate": "nx run-many -t generate --exclude=@redhat-cloud-services/CLIENTNAME-client,@redhat-cloud-services/build-utils,@redhat-cloud-services/javascript-clients-shared",
     "lint": "nx run-many -t lint --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "lint:fix": "nx run-many -t lint --fix --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "version": "nx run-many -t version --exclude=@redhat-cloud-services/CLIENTNAME-client"
@@ -109,8 +109,8 @@
     "ts-jest": "29.4.4",
     "ts-node": "10.9.1",
     "tsconfig-paths": "^4.2.0",
-    "typedoc": "^0.28.13",
-    "typedoc-plugin-markdown": "^3.13.6",
+    "typedoc": "^0.28.14",
+    "typedoc-plugin-markdown": "^4.9.0",
     "typescript": "^5.6.0",
     "webpack-cli": "^5.1.4",
     "zod": "^3.22.4"

@@ -4,6 +4,9 @@
   "sourceRoot": "packages/quickstarts",
   "projectType": "library",
   "targets": {
+    "clean": {
+      "executor": "@redhat-cloud-services/build-utils:clean"
+    },
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
