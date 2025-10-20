@@ -15,3 +15,4 @@
 export * from "./api";
 export * from "./configuration";
 export { DefaultApi as GitApi } from "./git-api";
+// Trigger release - updated to regenerate clients

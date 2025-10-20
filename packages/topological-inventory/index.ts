@@ -354,3 +354,4 @@ export { default as updateTask, type UpdateTaskReturnType } from './UpdateTask'
 
 
 export * from './types'
+// Trigger release - updated to regenerate clients
