@@ -4,3 +4,5 @@ export { default as getProfile, type GetProfileReturnType } from './GetProfile'
 
 
 export * from './types'
+
+// Trigger release - updated to regenerate clients

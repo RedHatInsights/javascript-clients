@@ -146,3 +146,5 @@ export { default as weeklyreportsubscriptionList, type WeeklyreportsubscriptionL
 
 
 export * from './types'
+
+// Trigger release - updated to regenerate clients

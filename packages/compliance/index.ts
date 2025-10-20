@@ -112,3 +112,5 @@ export { default as valueDefinitions, type ValueDefinitionsReturnType } from './
 
 
 export * from './types'
+
+// Trigger release - updated to regenerate clients
