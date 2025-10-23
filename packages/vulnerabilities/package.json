@@ -45,9 +45,10 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/vulnerabilities#readme",
   "scripts": {
+    "doc:clean": "rm -rf doc git-api/doc",
     "doc:production": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out doc --exclude \"**/git-api/*.ts\" --gitRevision main index.ts",
     "doc:git-api": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out git-api/doc --gitRevision main ./git-api/index.ts",
-    "doc": "npm run doc:git-api; npm run doc:production"
+    "doc": "npm run doc:clean && npm run doc:git-api && npm run doc:production"
   },
   "dependencies": {
     "axios": "^1.12.2",

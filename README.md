@@ -15,6 +15,41 @@ We are using Java to install and build this generator. Please install Java and p
 
 ### Troubleshooting
 
+#### Cleaning previously generated files
+
+```sh
+# clean ts files of vulnerabilities-client
+npx nx run @redhat-cloud-services/vulnerabilities-client:clean
+
+# clean the docs vulnerabilities-client
+npm run doc:clean --workspace=@redhat-cloud-services/vulnerabilities-client
+
+# clean all packages
+nx run-many -t clean
+```
+
+#### Viewing paths in Open API specs
+
+The URL for each package's OpenAPI spec are inside the package's `project.json` file. 
+
+```sh
+grep -rn "openapi.json" packages/*/project.json
+```
+
+Download the specs to local
+
+```sh
+# download openapi spec for vulnerabilities-client
+curl -L https://console.redhat.com/api/vulnerability/v1/openapi.json -o tmp/openapi/vulnerabilities.json
+```
+
+View the relevant paths for a spec. 
+
+```sh
+# view openapi paths for vulnerabilities-client
+cat tmp/openapi/vulnerabilities-V1.json | jq ".paths | keys[]"
+```
+
 #### Publish to local registry 
 
 You can publish a package to a local registry to test that the import works. 

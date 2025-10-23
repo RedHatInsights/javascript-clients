@@ -8,22 +8,47 @@ jest.mock('child_process', () => ({
   execSync: () => undefined,
 }));
 
-const options: ClientGeneratorSchema = {
-  postProcess: '',
-  specs: {},
+jest.mock('fs', () => ({
+  existsSync: jest.fn(() => false),
+  readFileSync: jest.fn(() => ''),
+  rmSync: jest.fn(),
+}));
+
+const mockContext: ExecutorContext = {
+  projectName: 'test-project',
+  root: '/test/workspace',
+  cwd: '/test/workspace',
+  isVerbose: false,
+  projectGraph: {} as any,
+  nxJsonConfiguration: {} as any,
+  projectsConfigurations: {
+    version: 2,
+    projects: {
+      'test-project': {
+        root: '/test/path',
+      },
+    },
+  },
 };
 
 describe('Client Generator', () => {
   it('can run', async () => {
-    const output = await executor(options, {} as ExecutorContext);
+    const options: ClientGeneratorSchema = {
+      postProcess: '',
+      specs: {},
+    };
+    const output = await executor(options, mockContext);
     expect(output.success).toBe(true);
   });
 
   it('logs error if executor options object missing "specs" key', async () => {
     jest.spyOn(console, 'error');
-    delete options.specs;
+    const invalidOptions = {
+      postProcess: '',
+      // specs property intentionally omitted
+    } as any;
     try {
-      await executor(options, {} as ExecutorContext);
+      await executor(invalidOptions, mockContext);
     } catch (e) {
       expect(e).toBeDefined();
       expect(console.error).toHaveBeenCalled();
