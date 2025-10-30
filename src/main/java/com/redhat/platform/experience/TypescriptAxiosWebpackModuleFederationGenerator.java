@@ -366,13 +366,6 @@ public class TypescriptAxiosWebpackModuleFederationGenerator extends TypeScriptA
     public void processOpts() {
       super.processOpts();
       supportingFiles.removeIf(file -> (file.getDestinationFilename() == "base.ts" || file.getDestinationFilename() == "common.ts" || file.getDestinationFilename() == "configuration.ts"));
-      String[] outputDirParts = this.getOutputDir().split("/");
-      String outputDirName = outputDirParts[outputDirParts.length - 2];
-      String[] outputDirNameParts = outputDirName.split("-");
-      String[] capitalizedOutputDirNameParts = Arrays.stream(outputDirNameParts)
-                .map(word -> word.substring(0, 1).toUpperCase() + word.substring(1))
-                .toArray(String[]::new);
-      String clientName = String.join("", capitalizedOutputDirNameParts) + "Client";
-      additionalProperties.put("clientName", clientName);
+      // clientName should be provided via additional properties
     }
 }
