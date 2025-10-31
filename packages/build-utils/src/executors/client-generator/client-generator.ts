@@ -36,12 +36,13 @@ export default async function generateClients(options: ClientGeneratorSchemaType
   }
 
   const projectConfig = context.projectsConfigurations?.projects[context.projectName];
-  const packagePath = projectConfig.root;
 
   // Extract client name from project name
-  if (!projectConfig?.name) {
+  if (!projectConfig || !projectConfig.name) {
     throw new Error('Project name is required to generate client name');
   }
+
+  const packagePath = projectConfig.root;
 
   const packageName = projectConfig.name.split('/')[1]; // "rbac-client"
   if (!packageName) {

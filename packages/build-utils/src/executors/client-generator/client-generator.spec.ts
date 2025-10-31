@@ -24,6 +24,7 @@ describe('generateClients', () => {
       projects: {
         'test-project': {
           root: '/workspace/test-project',
+          name: '@redhat-cloud-services/test-client',
         },
       },
     },
@@ -88,7 +89,8 @@ describe('generateClients', () => {
       await generateClients(options, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/openapi.yaml'), { stdio: 'inherit' });
-      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project/'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should handle remote spec URL', async () => {
@@ -99,6 +101,7 @@ describe('generateClients', () => {
       await generateClients(options, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i https://api.example.com/openapi.yaml'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should handle http URL (not just https)', async () => {
@@ -109,6 +112,7 @@ describe('generateClients', () => {
       await generateClients(options, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i http://api.example.com/openapi.yaml'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should handle multiple specs with different namespaces', async () => {
@@ -126,6 +130,8 @@ describe('generateClients', () => {
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec1.yaml'), { stdio: 'inherit' });
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec2.yaml'), { stdio: 'inherit' });
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec3.yaml'), { stdio: 'inherit' });
+      // All calls should include clientName
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
   });
 
@@ -137,7 +143,8 @@ describe('generateClients', () => {
 
       await generateClients(options, mockContext);
 
-      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project/'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should create namespace subdirectory for non-default namespace', async () => {
@@ -148,6 +155,7 @@ describe('generateClients', () => {
       await generateClients(options, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project/users'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should use outputPath as full relative path when specified', async () => {
@@ -159,6 +167,7 @@ describe('generateClients', () => {
       await generateClients(options, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o packages/test-project/src'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should combine outputPath with namespace for non-default namespace', async () => {
@@ -170,6 +179,7 @@ describe('generateClients', () => {
       await generateClients(options, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o packages/test-project/src/users'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
   });
 
@@ -187,6 +197,7 @@ describe('generateClients', () => {
         ),
         { stdio: 'inherit' },
       );
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should use legacy generator when legacyGenerator is true', async () => {
@@ -199,6 +210,7 @@ describe('generateClients', () => {
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-g typescript-axios'), { stdio: 'inherit' });
       expect(mockExecSync).toHaveBeenCalledWith(expect.not.stringContaining('--custom-generator'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should use modern generator when legacyGenerator is false', async () => {
@@ -215,6 +227,7 @@ describe('generateClients', () => {
         ),
         { stdio: 'inherit' },
       );
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
   });
 
@@ -409,7 +422,7 @@ describe('generateClients', () => {
       await generateClients(options, mockContext);
 
       const expectedCommand =
-        "TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i /workspace/test-project/spec.yaml -o /workspace/test-project/ --openapitools /workspace/test-project/openapitools.json --skip-validate-spec --enable-post-process-file --custom-generator=target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation";
+        "TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i /workspace/test-project/spec.yaml -o /workspace/test-project --openapitools /workspace/test-project/openapitools.json --skip-validate-spec --enable-post-process-file --custom-generator=target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation --additional-properties clientName=TestClient";
 
       expect(mockExecSync).toHaveBeenCalledWith(expectedCommand, { stdio: 'inherit' });
     });
@@ -435,7 +448,7 @@ describe('generateClients', () => {
       await generateClients(options, contextWithPackageName);
 
       const expectedCommand =
-        "TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i /workspace/test-project/spec.yaml -o /workspace/test-project/ --openapitools /workspace/test-project/openapitools.json --skip-validate-spec --enable-post-process-file --custom-generator=target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation --additional-properties clientName=TestClient";
+        "TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i /workspace/test-project/spec.yaml -o /workspace/test-project --openapitools /workspace/test-project/openapitools.json --skip-validate-spec --enable-post-process-file --custom-generator=target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation --additional-properties clientName=TestClient";
 
       expect(mockExecSync).toHaveBeenCalledWith(expectedCommand, { stdio: 'inherit' });
     });
