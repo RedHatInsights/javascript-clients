@@ -13,7 +13,7 @@ const ClientGeneratorSchema = z.object({
 
 export type ClientGeneratorSchemaType = z.infer<typeof ClientGeneratorSchema>;
 
-function generateClient(packagePath: string, spec: string, dir: string, clientName?: string, isLegacy?: boolean) {
+function generateClient(packagePath: string, spec: string, outputDir: string, clientName: string, isLegacy?: boolean) {
   let additionalArgs: string;
   if (isLegacy) {
     additionalArgs = '-g typescript-axios';
@@ -22,10 +22,8 @@ function generateClient(packagePath: string, spec: string, dir: string, clientNa
       '--custom-generator=target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation';
   }
 
-  const clientNameArg = clientName ? ` --additional-properties clientName=${clientName}` : '';
-
   execSync(
-    `TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i ${spec} -o ${packagePath}/${dir} --openapitools ${packagePath}/openapitools.json --skip-validate-spec --enable-post-process-file ${additionalArgs}${clientNameArg}`,
+    `TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i ${spec} -o ${outputDir} --openapitools ${packagePath}/openapitools.json --skip-validate-spec --enable-post-process-file ${additionalArgs} --additional-properties clientName=${clientName}`,
     { stdio: 'inherit' },
   );
 }
@@ -41,12 +39,20 @@ export default async function generateClients(options: ClientGeneratorSchemaType
   const packagePath = projectConfig.root;
 
   // Extract client name from project name
-  let clientName = '';
-  if (projectConfig?.name) {
-    const packageName = projectConfig.name.split('/')[1]; // "rbac-client"
-    if (packageName) {
-      clientName = startCase(packageName).replace(/ /g, ''); // "RbacClient"
-    }
+  if (!projectConfig?.name) {
+    throw new Error('Project name is required to generate client name');
+  }
+
+  const packageName = projectConfig.name.split('/')[1]; // "rbac-client"
+  if (!packageName) {
+    throw new Error(
+      `Failed to extract client name from project name: ${projectConfig.name}. Project name should follow the format '@scope/package-name'`,
+    );
+  }
+
+  const clientName = startCase(packageName).replace(/ /g, ''); // "RbacClient"
+  if (!clientName) {
+    throw new Error(`Generated client name is empty from package name: ${packageName}`);
   }
 
   Object.keys(options.specs).forEach((namespace) => {
@@ -59,10 +65,7 @@ export default async function generateClients(options: ClientGeneratorSchemaType
     }
 
     // Determine output directory
-    let outputDir = '';
-    if (options.outputPath) {
-      outputDir = join(outputDir, options.outputPath);
-    }
+    let outputDir = options.outputPath ? options.outputPath : packagePath;
     if (namespace !== 'default') {
       outputDir = join(outputDir, namespace);
     }

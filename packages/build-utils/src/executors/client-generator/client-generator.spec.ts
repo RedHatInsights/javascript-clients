@@ -150,26 +150,26 @@ describe('generateClients', () => {
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project/users'), { stdio: 'inherit' });
     });
 
-    it('should use outputPath when specified', async () => {
+    it('should use outputPath as full relative path when specified', async () => {
       const options: ClientGeneratorSchemaType = {
         specs: { default: 'spec.yaml' },
-        outputPath: 'generated',
+        outputPath: 'packages/test-project/src',
       };
 
       await generateClients(options, mockContext);
 
-      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project/generated'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o packages/test-project/src'), { stdio: 'inherit' });
     });
 
     it('should combine outputPath with namespace for non-default namespace', async () => {
       const options: ClientGeneratorSchemaType = {
         specs: { users: 'spec.yaml' },
-        outputPath: 'generated',
+        outputPath: 'packages/test-project/src',
       };
 
       await generateClients(options, mockContext);
 
-      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project/generated/users'), { stdio: 'inherit' });
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o packages/test-project/src/users'), { stdio: 'inherit' });
     });
   });
 
@@ -330,7 +330,7 @@ describe('generateClients', () => {
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=ComplianceClient'), { stdio: 'inherit' });
     });
 
-    it('should not include clientName when project has no name', async () => {
+    it('should throw error when project has no name', async () => {
       const contextWithoutName = {
         ...createBaseContext(),
         projectsConfigurations: {
@@ -348,12 +348,11 @@ describe('generateClients', () => {
         specs: { default: 'spec.yaml' },
       };
 
-      await generateClients(options, contextWithoutName);
-
-      expect(mockExecSync).toHaveBeenCalledWith(expect.not.stringContaining('--additional-properties clientName='), { stdio: 'inherit' });
+      await expect(generateClients(options, contextWithoutName)).rejects.toThrow('Project name is required to generate client name');
+      expect(mockExecSync).not.toHaveBeenCalled();
     });
 
-    it('should not include clientName for unscoped packages', async () => {
+    it('should throw error for unscoped packages', async () => {
       const contextWithUnscopedPackage = {
         ...createBaseContext(),
         projectsConfigurations: {
@@ -371,9 +370,10 @@ describe('generateClients', () => {
         specs: { default: 'spec.yaml' },
       };
 
-      await generateClients(options, contextWithUnscopedPackage);
-
-      expect(mockExecSync).toHaveBeenCalledWith(expect.not.stringContaining('--additional-properties clientName='), { stdio: 'inherit' });
+      await expect(generateClients(options, contextWithUnscopedPackage)).rejects.toThrow(
+        "Failed to extract client name from project name: unscoped-package. Project name should follow the format '@scope/package-name'",
+      );
+      expect(mockExecSync).not.toHaveBeenCalled();
     });
 
     it('should extract client name from any scoped package', async () => {
@@ -510,7 +510,7 @@ describe('generateClients', () => {
         specs: { default: 'spec.yaml' },
       };
 
-      await expect(generateClients(options, contextWithoutProject)).rejects.toThrow();
+      await expect(generateClients(options, contextWithoutProject)).rejects.toThrow('Project name is required to generate client name');
     });
 
     it('should throw error when context has missing projectsConfigurations', async () => {
@@ -523,7 +523,7 @@ describe('generateClients', () => {
         specs: { default: 'spec.yaml' },
       };
 
-      await expect(generateClients(options, contextWithoutProjectsConfig)).rejects.toThrow();
+      await expect(generateClients(options, contextWithoutProjectsConfig)).rejects.toThrow('Project name is required to generate client name');
     });
   });
 });
