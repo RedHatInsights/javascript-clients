@@ -46,7 +46,7 @@ const isDeleteRemediationSystemsObjectParams = (params: [DeleteRemediationSystem
 export const deleteRemediationSystemsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([DeleteRemediationSystemsParams] | [string, SystemsList, AxiosRequestConfig])) => {
     const params = isDeleteRemediationSystemsObjectParams(config) ? config[0] : ['id', 'systemsList', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRemediationSystemsParams;
     const { id, systemsList, options = {} } = params;
-    const localVarPath = `/remediations/{id}/systems/{system}/issues`
+    const localVarPath = `/remediations/{id}/systems`
         .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
