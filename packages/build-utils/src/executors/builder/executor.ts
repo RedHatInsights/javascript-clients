@@ -11,6 +11,7 @@ const BuilderExecutorSchema = z.object({
   esmTsConfig: z.string(),
   cjsTsConfig: z.string(),
   outputPath: z.string(),
+  inputPath: z.string().optional(),
   assets: z.array(z.string()).optional(),
 });
 
@@ -20,9 +21,9 @@ async function validateExistingFile(path: string) {
   return asyncStat(path);
 }
 
-async function runTSC(tsConfigPath: string, outputDir: string) {
+async function runTSC(tsConfigPath: string, outputDir: string, inputDir: string) {
   try {
-    execSync(`tsc -p ${tsConfigPath} --outDir ${outputDir}`, { stdio: 'inherit' });
+    execSync(`tsc -p ${tsConfigPath} --outDir ${outputDir} --rootDir ${inputDir}`, { stdio: 'inherit' });
   } catch (error) {
     console.log(error);
     throw new Error(`Failed to run tsc for ${tsConfigPath}`);
@@ -45,6 +46,7 @@ export default async function runExecutor(options: BuilderExecutorSchemaType, co
   const currentProjectRoot = context.projectsConfigurations?.projects?.[projectName]?.root;
   const projectPackageJsonPath = `${currentProjectRoot}/package.json`;
   const outputDir = `${projectRoot}/${options.outputPath}`;
+  const inputDir = options.inputPath ? `${options.inputPath}` : currentProjectRoot;
 
   const assets = [...(options.assets ?? []), projectPackageJsonPath];
 
@@ -53,7 +55,7 @@ export default async function runExecutor(options: BuilderExecutorSchemaType, co
     validateExistingFile(options.cjsTsConfig),
     validateExistingFile(projectPackageJsonPath),
   ]);
-  await Promise.all([runTSC(options.esmTsConfig, `${outputDir}/esm`), runTSC(options.cjsTsConfig, outputDir)]);
+  await Promise.all([runTSC(options.esmTsConfig, `${outputDir}/esm`, inputDir), runTSC(options.cjsTsConfig, outputDir, inputDir)]);
   await copyAssets(assets, outputDir);
   return {
     success: true,
