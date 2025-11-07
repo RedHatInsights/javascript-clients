@@ -83,13 +83,12 @@ describe('generateClients', () => {
     });
 
     it('should accept valid options with all properties', async () => {
-
       const options = {
         ...mockOptions,
         specs: { default: 'spec.yaml', v2: 'spec-v2.yaml' },
         postProcess: 'npm run format',
         legacyGenerator: true,
-        outputPath: 'generated'
+        outputPath: 'generated',
       };
 
       const result = await generateClients(options, mockContext);
@@ -255,7 +254,6 @@ describe('generateClients', () => {
       expect(mockExecSync).toHaveBeenLastCalledWith('cd /workspace/test-project && npm run lint', { stdio: 'inherit' });
     });
   });
-
 
   describe('command construction', () => {
     it('should include all required openapi-generator-cli arguments', async () => {

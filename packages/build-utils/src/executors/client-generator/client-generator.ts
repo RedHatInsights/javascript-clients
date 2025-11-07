@@ -8,12 +8,9 @@ const ClientGeneratorSchema = z.object({
   postProcess: z.string().optional(),
   legacyGenerator: z.boolean().optional(),
   outputPath: z.string().optional(),
-  clientName: z.string().refine(
-    (name) => /^[A-Z][a-zA-Z0-9]*Client$/.test(name),
-    {
-      message: "clientName must be PascalCase and end with 'Client' (e.g., 'MyServiceClient')"
-    }
-  ),
+  clientName: z.string().refine((name) => /^[A-Z][a-zA-Z0-9]*Client$/.test(name), {
+    message: "clientName must be PascalCase and end with 'Client' (e.g., 'MyServiceClient')",
+  }),
 });
 
 export type ClientGeneratorSchemaType = z.infer<typeof ClientGeneratorSchema>;
