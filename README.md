@@ -84,7 +84,8 @@ After client creation, add your OpenAPI spec locations as an object entries in y
         "specs": {
           "default": "https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json",
           "v2": "https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/v2/openapi.v2.yaml"
-        }
+        },
+        "clientName": "RbacClient"
       }
     },
     ...

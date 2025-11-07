@@ -2,13 +2,15 @@ import { ExecutorContext } from '@nx/devkit';
 import { execSync } from 'child_process';
 import { join } from 'node:path';
 import { z } from 'zod';
-import { startCase } from 'lodash';
 
 const ClientGeneratorSchema = z.object({
   specs: z.record(z.string(), z.string()),
   postProcess: z.string().optional(),
   legacyGenerator: z.boolean().optional(),
   outputPath: z.string().optional(),
+  clientName: z.string().refine((name) => /^[A-Z][a-zA-Z0-9]*Client$/.test(name), {
+    message: "clientName must be PascalCase and end with 'Client' (e.g., 'MyServiceClient')",
+  }),
 });
 
 export type ClientGeneratorSchemaType = z.infer<typeof ClientGeneratorSchema>;
@@ -37,24 +39,12 @@ export default async function generateClients(options: ClientGeneratorSchemaType
 
   const projectConfig = context.projectsConfigurations?.projects[context.projectName];
 
-  // Extract client name from project name
-  if (!projectConfig || !projectConfig.name) {
-    throw new Error('Project name is required to generate client name');
+  if (!projectConfig) {
+    throw new Error('Project configuration not found');
   }
 
   const packagePath = projectConfig.root;
-
-  const packageName = projectConfig.name.split('/')[1]; // "rbac-client"
-  if (!packageName) {
-    throw new Error(
-      `Failed to extract client name from project name: ${projectConfig.name}. Project name should follow the format '@scope/package-name'`,
-    );
-  }
-
-  const clientName = startCase(packageName).replace(/ /g, ''); // "RbacClient"
-  if (!clientName) {
-    throw new Error(`Generated client name is empty from package name: ${packageName}`);
-  }
+  const clientName = options.clientName;
 
   Object.keys(options.specs).forEach((namespace) => {
     // Can be either a local file or a remote URL

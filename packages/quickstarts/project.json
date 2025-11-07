@@ -8,8 +8,9 @@
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
         "specs": {
-          "default": "https://raw.githubusercontent.com/RedHatInsights/quickstarts/main/spec/openapi.yaml" 
-        }
+          "default": "https://raw.githubusercontent.com/RedHatInsights/quickstarts/main/spec/openapi.yaml"
+        },
+        "clientName": "QuickstartsClient"
       }
     },
     "build": {

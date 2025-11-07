@@ -9,7 +9,8 @@
       "options": {
         "specs": {
           "default": "http://cloud.redhat.com/api/remediations/v1/openapi.json"
-        }
+        },
+        "clientName": "RemediationsClient"
       }
     },
     "build": {

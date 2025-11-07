@@ -9,7 +9,8 @@
       "options": {
         "specs": {
           "default": "path-to-your-openAPI-spec"
-        }
+        },
+        "clientName": "CLIENTNAMEClient"
       }
     },
     "build": {
