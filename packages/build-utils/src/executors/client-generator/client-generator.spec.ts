@@ -30,11 +30,17 @@ describe('generateClients', () => {
     },
   });
 
+  const createBaseOptions = (): ClientGeneratorSchemaType => ({
+    specs: { default: 'spec.yaml' },
+  });
+
   let mockContext: ExecutorContext;
+  let mockOptions: ClientGeneratorSchemaType;
 
   beforeEach(() => {
     jest.clearAllMocks();
     mockContext = createBaseContext();
+    mockOptions = createBaseOptions();
   });
 
   afterAll(() => {
@@ -59,16 +65,13 @@ describe('generateClients', () => {
     });
 
     it('should accept valid minimal options', async () => {
-      const validOptions: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      const result = await generateClients(validOptions, mockContext);
+      const result = await generateClients(mockOptions, mockContext);
       expect(result.success).toBe(true);
     });
 
     it('should accept valid options with all properties', async () => {
-      const validOptions: ClientGeneratorSchemaType = {
+      const validOptions = {
+        ...mockOptions,
         specs: { default: 'spec.yaml', v2: 'spec-v2.yaml' },
         postProcess: 'npm run format',
         legacyGenerator: true,
@@ -82,9 +85,7 @@ describe('generateClients', () => {
 
   describe('spec processing', () => {
     it('should handle local spec file (default namespace)', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'openapi.yaml' },
-      };
+      const options = { ...mockOptions, specs: { default: 'openapi.yaml' } };
 
       await generateClients(options, mockContext);
 
@@ -94,9 +95,7 @@ describe('generateClients', () => {
     });
 
     it('should handle remote spec URL', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'https://api.example.com/openapi.yaml' },
-      };
+      const options = { ...mockOptions, specs: { default: 'https://api.example.com/openapi.yaml' } };
 
       await generateClients(options, mockContext);
 
@@ -105,9 +104,7 @@ describe('generateClients', () => {
     });
 
     it('should handle http URL (not just https)', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'http://api.example.com/openapi.yaml' },
-      };
+      const options = { ...mockOptions, specs: { default: 'http://api.example.com/openapi.yaml' } };
 
       await generateClients(options, mockContext);
 
@@ -116,7 +113,8 @@ describe('generateClients', () => {
     });
 
     it('should handle multiple specs with different namespaces', async () => {
-      const options: ClientGeneratorSchemaType = {
+      const options = {
+        ...mockOptions,
         specs: {
           default: 'spec1.yaml',
           users: 'spec2.yaml',
@@ -137,20 +135,14 @@ describe('generateClients', () => {
 
   describe('output directory logic', () => {
     it('should use root directory for default namespace without outputPath', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, mockContext);
+      await generateClients(mockOptions, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-o /workspace/test-project'), { stdio: 'inherit' });
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
 
     it('should create namespace subdirectory for non-default namespace', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { users: 'spec.yaml' },
-      };
+      const options = { ...mockOptions, specs: { users: 'spec.yaml' } };
 
       await generateClients(options, mockContext);
 
@@ -159,10 +151,7 @@ describe('generateClients', () => {
     });
 
     it('should use outputPath as full relative path when specified', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-        outputPath: 'packages/test-project/src',
-      };
+      const options = { ...mockOptions, outputPath: 'packages/test-project/src' };
 
       await generateClients(options, mockContext);
 
@@ -171,7 +160,8 @@ describe('generateClients', () => {
     });
 
     it('should combine outputPath with namespace for non-default namespace', async () => {
-      const options: ClientGeneratorSchemaType = {
+      const options = {
+        ...mockOptions,
         specs: { users: 'spec.yaml' },
         outputPath: 'packages/test-project/src',
       };
@@ -185,11 +175,7 @@ describe('generateClients', () => {
 
   describe('generator type', () => {
     it('should use modern generator by default', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, mockContext);
+      await generateClients(mockOptions, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(
         expect.stringContaining(
@@ -201,10 +187,7 @@ describe('generateClients', () => {
     });
 
     it('should use legacy generator when legacyGenerator is true', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-        legacyGenerator: true,
-      };
+      const options = { ...mockOptions, legacyGenerator: true };
 
       await generateClients(options, mockContext);
 
@@ -214,10 +197,7 @@ describe('generateClients', () => {
     });
 
     it('should use modern generator when legacyGenerator is false', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-        legacyGenerator: false,
-      };
+      const options = { ...mockOptions, legacyGenerator: false };
 
       await generateClients(options, mockContext);
 
@@ -233,20 +213,13 @@ describe('generateClients', () => {
 
   describe('post processing', () => {
     it('should not run post process when not specified', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, mockContext);
+      await generateClients(mockOptions, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledTimes(1); // Only the generator call
     });
 
     it('should run post process command when specified', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-        postProcess: 'npm run format',
-      };
+      const options = { ...mockOptions, postProcess: 'npm run format' };
 
       await generateClients(options, mockContext);
 
@@ -255,7 +228,8 @@ describe('generateClients', () => {
     });
 
     it('should run post process after all specs are generated', async () => {
-      const options: ClientGeneratorSchemaType = {
+      const options = {
+        ...mockOptions,
         specs: {
           default: 'spec1.yaml',
           users: 'spec2.yaml',
@@ -286,11 +260,7 @@ describe('generateClients', () => {
         },
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, contextWithPackageName);
+      await generateClients(mockOptions, contextWithPackageName);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=RbacClient'), { stdio: 'inherit' });
     });
@@ -309,11 +279,7 @@ describe('generateClients', () => {
         },
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, contextWithKebabCase);
+      await generateClients(mockOptions, contextWithKebabCase);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=HostInventoryClient'), {
         stdio: 'inherit',
@@ -334,11 +300,7 @@ describe('generateClients', () => {
         },
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, contextWithSingleWord);
+      await generateClients(mockOptions, contextWithSingleWord);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=ComplianceClient'), { stdio: 'inherit' });
     });
@@ -357,11 +319,7 @@ describe('generateClients', () => {
         },
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await expect(generateClients(options, contextWithoutName)).rejects.toThrow('Project name is required to generate client name');
+      await expect(generateClients(mockOptions, contextWithoutName)).rejects.toThrow('Project name is required to generate client name');
       expect(mockExecSync).not.toHaveBeenCalled();
     });
 
@@ -379,11 +337,7 @@ describe('generateClients', () => {
         },
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await expect(generateClients(options, contextWithUnscopedPackage)).rejects.toThrow(
+      await expect(generateClients(mockOptions, contextWithUnscopedPackage)).rejects.toThrow(
         "Failed to extract client name from project name: unscoped-package. Project name should follow the format '@scope/package-name'",
       );
       expect(mockExecSync).not.toHaveBeenCalled();
@@ -403,11 +357,7 @@ describe('generateClients', () => {
         },
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, contextWithDifferentPattern);
+      await generateClients(mockOptions, contextWithDifferentPattern);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=SomePackage'), { stdio: 'inherit' });
     });
@@ -415,11 +365,7 @@ describe('generateClients', () => {
 
   describe('command construction', () => {
     it('should include all required openapi-generator-cli arguments', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, mockContext);
+      await generateClients(mockOptions, mockContext);
 
       const expectedCommand =
         "TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i /workspace/test-project/spec.yaml -o /workspace/test-project --openapitools /workspace/test-project/openapitools.json --skip-validate-spec --enable-post-process-file --custom-generator=target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation --additional-properties clientName=TestClient";
@@ -441,11 +387,7 @@ describe('generateClients', () => {
         },
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, contextWithPackageName);
+      await generateClients(mockOptions, contextWithPackageName);
 
       const expectedCommand =
         "TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i /workspace/test-project/spec.yaml -o /workspace/test-project --openapitools /workspace/test-project/openapitools.json --skip-validate-spec --enable-post-process-file --custom-generator=target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation --additional-properties clientName=TestClient";
@@ -454,21 +396,13 @@ describe('generateClients', () => {
     });
 
     it('should include environment variable TS_POST_PROCESS_FILE', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, mockContext);
+      await generateClients(mockOptions, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining("TS_POST_PROCESS_FILE='./postProcess.sh'"), { stdio: 'inherit' });
     });
 
     it('should include openapitools.json path', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, mockContext);
+      await generateClients(mockOptions, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--openapitools /workspace/test-project/openapitools.json'), {
         stdio: 'inherit',
@@ -476,11 +410,7 @@ describe('generateClients', () => {
     });
 
     it('should include skip-validate-spec and enable-post-process-file flags', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await generateClients(options, mockContext);
+      await generateClients(mockOptions, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--skip-validate-spec --enable-post-process-file'), { stdio: 'inherit' });
     });
@@ -488,11 +418,7 @@ describe('generateClients', () => {
 
   describe('return value', () => {
     it('should return success: true on successful execution', async () => {
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      const result = await generateClients(options, mockContext);
+      const result = await generateClients(mockOptions, mockContext);
 
       expect(result).toEqual({ success: true });
     });
@@ -519,11 +445,7 @@ describe('generateClients', () => {
         },
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await expect(generateClients(options, contextWithoutProject)).rejects.toThrow('Project name is required to generate client name');
+      await expect(generateClients(mockOptions, contextWithoutProject)).rejects.toThrow('Project name is required to generate client name');
     });
 
     it('should throw error when context has missing projectsConfigurations', async () => {
@@ -532,11 +454,7 @@ describe('generateClients', () => {
         projectsConfigurations: undefined as any,
       };
 
-      const options: ClientGeneratorSchemaType = {
-        specs: { default: 'spec.yaml' },
-      };
-
-      await expect(generateClients(options, contextWithoutProjectsConfig)).rejects.toThrow('Project name is required to generate client name');
+      await expect(generateClients(mockOptions, contextWithoutProjectsConfig)).rejects.toThrow('Project name is required to generate client name');
     });
   });
 });
