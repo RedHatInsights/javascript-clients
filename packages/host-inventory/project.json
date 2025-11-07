@@ -9,7 +9,8 @@
       "options": {
         "specs": {
           "default": "https://raw.githubusercontent.com/RedHatInsights/insights-host-inventory/master/swagger/openapi.json"
-        }
+        },
+        "clientName": "HostInventoryClient"
       }
     },
     "build": {

@@ -10,7 +10,8 @@
         "specs": {
           "default": "https://console.redhat.com/api/notifications/v1.0/openapi.json",
           "v2": "https://console.redhat.com/api/notifications/v2/openapi.json"
-        }
+        },
+        "clientName": "NotificationsClient"
       }
     },
     "build": {

@@ -9,7 +9,8 @@
       "options": {
         "specs": {
           "default": "https://raw.githubusercontent.com/RedHatInsights/entitlements-api/master/swagger/api.spec.json"
-        }
+        },
+        "clientName": "EntitlementsClient"
       }
     },
     "build": {

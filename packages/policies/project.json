@@ -9,7 +9,8 @@
       "options": {
         "specs": {
           "default": "https://cloud.redhat.com/api/policies/v1/openapi.json"
-        }
+        },
+        "clientName": "PoliciesClient"
       }
     },
     "build": {

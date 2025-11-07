@@ -12,7 +12,8 @@
         "specs": {
           "default": "apiSpec.json",
           "git-api": "apiSpec.json"
-        }
+        },
+        "clientName": "VulnerabilitiesClient"
       },
       "dependsOn": ["preGenerate"]
     },

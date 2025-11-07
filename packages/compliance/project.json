@@ -9,7 +9,8 @@
       "options": {
         "specs": {
           "default": "https://cloud.redhat.com/api/compliance/v2/openapi.json"
-        }
+        },
+        "clientName": "ComplianceClient"
       }
     },
     "build": {

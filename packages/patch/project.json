@@ -9,7 +9,8 @@
       "options": {
         "specs": {
           "default": "https://console.redhat.com/api/patch/v3/openapi.json"
-        }
+        },
+        "clientName": "PatchClient"
       }
     },
     "build": {
