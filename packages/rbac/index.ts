@@ -22,6 +22,8 @@ export { default as getCrossAccountRequest, type GetCrossAccountRequestReturnTyp
 
 export { default as getGroup, type GetGroupReturnType } from './GetGroup'
 
+export { default as getOpenAPISpec, type GetOpenAPISpecReturnType } from './GetOpenAPISpec'
+
 export { default as getPrincipalAccess, type GetPrincipalAccessReturnType } from './GetPrincipalAccess'
 
 export { default as getPrincipalsFromGroup, type GetPrincipalsFromGroupReturnType } from './GetPrincipalsFromGroup'
@@ -58,4 +60,3 @@ export { default as updateRole, type UpdateRoleReturnType } from './UpdateRole'
 
 
 export * from './types'
-// Trigger release - updated to regenerate clients
