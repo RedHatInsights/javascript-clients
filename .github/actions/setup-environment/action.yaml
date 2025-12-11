@@ -16,10 +16,14 @@ runs:
     - uses: actions/setup-node@v5
       with:
         node-version-file: '.nvmrc'
+        registry-url: 'https://registry.npmjs.org'
     - name: Show final Node.js version
       shell: bash
       run: |
         echo "=== Final Node.js version after setup ==="
         which node && node --version
         npm --version
+    - name: Update npm to latest version
+      shell: bash
+      run: npm install -g npm@11.6.2
     - uses: './.github/actions/node-cache'
