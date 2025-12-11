@@ -24,7 +24,7 @@ export interface CursorPaginationLinks {
  */
 export interface CursorPaginationMeta {
     /**
-     * Limit of returned objects
+     * Limit of returned objects. Use -1 to return all objects.
      * @type {number}
      * @memberof CursorPaginationMeta
      */
@@ -74,7 +74,7 @@ export interface OffsetPaginationMeta {
      */
     'count': number;
     /**
-     * Limit of returned objects
+     * Limit of returned objects. Use -1 to return all objects.
      * @type {number}
      * @memberof OffsetPaginationMeta
      */
