@@ -8,40 +8,33 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { RequestError } from '../types';
+import type {  } from '../types';
 
 
-export type CheckExecutableParams = {
-  /**
-  * Remediation identifier
-  * @type { string }
-  * @memberof CheckExecutableApi
-  */
-  id: string,
+export type GetOpenAPISpecParams = {
   options?: AxiosRequestConfig
 }
 
-export type CheckExecutableReturnType = void;
+export type GetOpenAPISpecReturnType = object;
 
-const isCheckExecutableObjectParams = (params: [CheckExecutableParams] | unknown[]): params is [CheckExecutableParams] => {
+const isGetOpenAPISpecObjectParams = (params: [GetOpenAPISpecParams] | unknown[]): params is [GetOpenAPISpecParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+    return true
   }
   return false
 }
 /**
-* Checks if a remediation exists
-* @summary Check if remediation is executable
-* @param {CheckExecutableParams} config with all available params.
+* Returns the OpenAPI specification document for this API
+* @summary Get the OpenAPI specification
+* @param {GetOpenAPISpecParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const checkExecutableParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CheckExecutableParams] | [string, AxiosRequestConfig])) => {
-    const params = isCheckExecutableObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CheckExecutableParams;
-    const { id, options = {} } = params;
-    const localVarPath = `/remediations/{id}/executable`
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+export const getOpenAPISpecParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetOpenAPISpecParams] | [AxiosRequestConfig])) => {
+    const params = isGetOpenAPISpecObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetOpenAPISpecParams;
+    const { options = {} } = params;
+    const localVarPath = `/openapi.json`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
@@ -56,9 +49,16 @@ export const checkExecutableParamCreator = async (sendRequest: BaseAPI["sendRequ
     const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
+        auth:[
+        {
+        // authentication basic_auth required
+        // http basic authentication required
+        authType: AuthTypeEnum.Basic,
+        }
+        ]
     };
 
-    return sendRequest<CheckExecutableReturnType>(Promise.resolve(args));
+    return sendRequest<GetOpenAPISpecReturnType>(Promise.resolve(args));
 }
 
-export default checkExecutableParamCreator;
+export default getOpenAPISpecParamCreator;

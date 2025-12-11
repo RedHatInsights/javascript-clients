@@ -45,7 +45,6 @@ RuleSystemsRetrieve/index.ts
 RuleUnackHostsCreate/index.ts
 RulecategoryList/index.ts
 RulecategoryRetrieve/index.ts
-SettingsList/index.ts
 StatsList/index.ts
 StatsOverviewRetrieve/index.ts
 StatsReportsRetrieve/index.ts

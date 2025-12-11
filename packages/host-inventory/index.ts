@@ -66,5 +66,3 @@ export { default as apiTagGetTags, type ApiTagGetTagsReturnType } from './ApiTag
 
 
 export * from './types'
-
-// Trigger release - updated to regenerate clients

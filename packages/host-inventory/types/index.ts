@@ -594,6 +594,12 @@ export interface HostOut {
      * @memberof HostOut
      */
     'last_check_in'?: string;
+    /**
+     * The OpenShift cluster ID that the host belongs to, if any.
+     * @type {string}
+     * @memberof HostOut
+     */
+    'openshift_cluster_id'?: string | null;
 }
 /**
  * A paginated host search query result with host entries and their Inventory metadata.

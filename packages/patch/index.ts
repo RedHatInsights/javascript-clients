@@ -1,7 +1,5 @@
 export { default as addTemplateSubscribedSystem, type AddTemplateSubscribedSystemReturnType } from './AddTemplateSubscribedSystem'
 
-export { default as deletesystem, type DeletesystemReturnType } from './Deletesystem'
-
 export { default as detailAdvisory, type DetailAdvisoryReturnType } from './DetailAdvisory'
 
 export { default as detailSystem, type DetailSystemReturnType } from './DetailSystem'
@@ -72,5 +70,3 @@ export { default as viewSystemsAdvisories, type ViewSystemsAdvisoriesReturnType 
 
 
 export * from './types'
-
-// Trigger release - updated to regenerate clients

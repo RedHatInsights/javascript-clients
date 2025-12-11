@@ -8,22 +8,22 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { RequestError } from '../types';
+import type { Endpoint } from '../types';
 
 
-export type CheckExecutableParams = {
+export type EndpointResourceV2V2GetEndpointParams = {
   /**
-  * Remediation identifier
-  * @type { string }
-  * @memberof CheckExecutableApi
+  *
+  * @type { any }
+  * @memberof EndpointResourceV2V2GetEndpointApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
-export type CheckExecutableReturnType = void;
+export type EndpointResourceV2V2GetEndpointReturnType = Endpoint;
 
-const isCheckExecutableObjectParams = (params: [CheckExecutableParams] | unknown[]): params is [CheckExecutableParams] => {
+const isEndpointResourceV2V2GetEndpointObjectParams = (params: [EndpointResourceV2V2GetEndpointParams] | unknown[]): params is [EndpointResourceV2V2GetEndpointParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
     return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
@@ -31,16 +31,16 @@ const isCheckExecutableObjectParams = (params: [CheckExecutableParams] | unknown
   return false
 }
 /**
-* Checks if a remediation exists
-* @summary Check if remediation is executable
-* @param {CheckExecutableParams} config with all available params.
+* Retrieves the public information associated with an endpoint such as its description, name, and properties.
+* @summary Retrieve an endpoint
+* @param {EndpointResourceV2V2GetEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const checkExecutableParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([CheckExecutableParams] | [string, AxiosRequestConfig])) => {
-    const params = isCheckExecutableObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CheckExecutableParams;
+export const endpointResourceV2V2GetEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV2V2GetEndpointParams] | [any, AxiosRequestConfig])) => {
+    const params = isEndpointResourceV2V2GetEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2V2GetEndpointParams;
     const { id, options = {} } = params;
-    const localVarPath = `/remediations/{id}/executable`
+    const localVarPath = `/endpoints/{id}`
         .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -58,7 +58,7 @@ export const checkExecutableParamCreator = async (sendRequest: BaseAPI["sendRequ
         options: localVarRequestOptions,
     };
 
-    return sendRequest<CheckExecutableReturnType>(Promise.resolve(args));
+    return sendRequest<EndpointResourceV2V2GetEndpointReturnType>(Promise.resolve(args));
 }
 
-export default checkExecutableParamCreator;
+export default endpointResourceV2V2GetEndpointParamCreator;

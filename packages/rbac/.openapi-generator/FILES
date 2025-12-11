@@ -12,6 +12,7 @@ DeleteRoleFromGroup/index.ts
 GetAuditlogs/index.ts
 GetCrossAccountRequest/index.ts
 GetGroup/index.ts
+GetOpenAPISpec/index.ts
 GetPrincipalAccess/index.ts
 GetPrincipalsFromGroup/index.ts
 GetRole/index.ts

@@ -97,6 +97,12 @@ export type ExportHitsListParams = {
   */
   text?: string,
   /**
+  * Display rules in this topic (slug)
+  * @type { string }
+  * @memberof ExportHitsListApi
+  */
+  topic?: string,
+  /**
   * Display rules with this total risk level (1..4)
   * @type { Array<ExportHitsListTotalRiskEnum> }
   * @memberof ExportHitsListApi
@@ -205,9 +211,9 @@ const isExportHitsListObjectParams = (params: [ExportHitsListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportHitsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportHitsListParams] | [Array<ExportHitsListCategoryEnum>, string, Array<string>, boolean, ExportHitsListFormatEnum, Array<string>, boolean, Array<ExportHitsListImpactEnum>, boolean, Array<ExportHitsListLikelihoodEnum>, boolean, Array<ExportHitsListResRiskEnum>, Array<string>, string, Array<ExportHitsListTotalRiskEnum>, Array<ExportHitsListUpdateMethodEnum>, string, AxiosRequestConfig])) => {
-    const params = isExportHitsListObjectParams(config) ? config[0] : ['category', 'displayName', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'format', 'groups', 'hasPlaybook', 'impact', 'incident', 'likelihood', 'reboot', 'resRisk', 'tags', 'text', 'totalRisk', 'updateMethod', 'uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportHitsListParams;
-    const { category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options = {} } = params;
+export const exportHitsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportHitsListParams] | [Array<ExportHitsListCategoryEnum>, string, Array<string>, boolean, ExportHitsListFormatEnum, Array<string>, boolean, Array<ExportHitsListImpactEnum>, boolean, Array<ExportHitsListLikelihoodEnum>, boolean, Array<ExportHitsListResRiskEnum>, Array<string>, string, string, Array<ExportHitsListTotalRiskEnum>, Array<ExportHitsListUpdateMethodEnum>, string, AxiosRequestConfig])) => {
+    const params = isExportHitsListObjectParams(config) ? config[0] : ['category', 'displayName', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'format', 'groups', 'hasPlaybook', 'impact', 'incident', 'likelihood', 'reboot', 'resRisk', 'tags', 'text', 'topic', 'totalRisk', 'updateMethod', 'uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportHitsListParams;
+    const { category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, topic, totalRisk, updateMethod, uuid, options = {} } = params;
     const localVarPath = `/api/insights/v1/export/hits/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -269,6 +275,10 @@ export const exportHitsListParamCreator = async (sendRequest: BaseAPI["sendReque
 
     if (text !== undefined) {
         localVarQueryParameter['text'] = text;
+    }
+
+    if (topic !== undefined) {
+        localVarQueryParameter['topic'] = topic;
     }
 
     if (totalRisk) {

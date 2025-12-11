@@ -33,13 +33,13 @@ export interface Application {
      * @type {any}
      * @memberof Application
      */
-    'display_name': any;
+    'displayName': any;
     /**
      *
      * @type {any}
      * @memberof Application
      */
-    'bundle_id': any;
+    'bundleId': any;
 }
 /**
  *
@@ -70,13 +70,13 @@ export interface BehaviorGroup {
      * @type {any}
      * @memberof BehaviorGroup
      */
-    'display_name': any;
+    'displayName': any;
     /**
      *
      * @type {any}
      * @memberof BehaviorGroup
      */
-    'bundle_id': any;
+    'bundleId': any;
     /**
      *
      * @type {Bundle}
@@ -181,7 +181,7 @@ export interface Bundle {
      * @type {any}
      * @memberof Bundle
      */
-    'display_name': any;
+    'displayName': any;
 }
 /**
  *
@@ -371,7 +371,7 @@ export interface Endpoint {
      * @type {any}
      * @memberof Endpoint
      */
-    'server_errors'?: any;
+    'serverErrors'?: any;
     /**
      *
      * @type {any}
@@ -389,7 +389,7 @@ export interface Endpoint {
      * @type {any}
      * @memberof Endpoint
      */
-    'sub_type'?: any;
+    'subType'?: any;
 }
 
 
@@ -623,7 +623,7 @@ export interface EventTypeBehavior {
      * @type {EventType}
      * @memberof EventTypeBehavior
      */
-    'event_type'?: EventType;
+    'eventType'?: EventType;
 }
 /**
  *

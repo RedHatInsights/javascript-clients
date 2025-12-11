@@ -91,6 +91,12 @@ export type ExportReportsListParams = {
   */
   text?: string,
   /**
+  * Display rules in this topic (slug)
+  * @type { string }
+  * @memberof ExportReportsListApi
+  */
+  topic?: string,
+  /**
   * Display rules with this total risk level (1..4)
   * @type { Array<ExportReportsListTotalRiskEnum> }
   * @memberof ExportReportsListApi
@@ -190,9 +196,9 @@ const isExportReportsListObjectParams = (params: [ExportReportsListParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportReportsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportReportsListParams] | [Array<ExportReportsListCategoryEnum>, string, Array<string>, boolean, Array<string>, boolean, Array<ExportReportsListImpactEnum>, boolean, Array<ExportReportsListLikelihoodEnum>, boolean, Array<ExportReportsListResRiskEnum>, Array<string>, string, Array<ExportReportsListTotalRiskEnum>, Array<ExportReportsListUpdateMethodEnum>, string, AxiosRequestConfig])) => {
-    const params = isExportReportsListObjectParams(config) ? config[0] : ['category', 'displayName', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasPlaybook', 'impact', 'incident', 'likelihood', 'reboot', 'resRisk', 'tags', 'text', 'totalRisk', 'updateMethod', 'uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportReportsListParams;
-    const { category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options = {} } = params;
+export const exportReportsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportReportsListParams] | [Array<ExportReportsListCategoryEnum>, string, Array<string>, boolean, Array<string>, boolean, Array<ExportReportsListImpactEnum>, boolean, Array<ExportReportsListLikelihoodEnum>, boolean, Array<ExportReportsListResRiskEnum>, Array<string>, string, string, Array<ExportReportsListTotalRiskEnum>, Array<ExportReportsListUpdateMethodEnum>, string, AxiosRequestConfig])) => {
+    const params = isExportReportsListObjectParams(config) ? config[0] : ['category', 'displayName', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasPlaybook', 'impact', 'incident', 'likelihood', 'reboot', 'resRisk', 'tags', 'text', 'topic', 'totalRisk', 'updateMethod', 'uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportReportsListParams;
+    const { category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, topic, totalRisk, updateMethod, uuid, options = {} } = params;
     const localVarPath = `/api/insights/v1/export/reports/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -250,6 +256,10 @@ export const exportReportsListParamCreator = async (sendRequest: BaseAPI["sendRe
 
     if (text !== undefined) {
         localVarQueryParameter['text'] = text;
+    }
+
+    if (topic !== undefined) {
+        localVarQueryParameter['topic'] = topic;
     }
 
     if (totalRisk) {

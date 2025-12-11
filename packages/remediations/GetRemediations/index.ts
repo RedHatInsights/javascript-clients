@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { GetRemediations200Response, GetRemediationsFilterParameter, RequestError } from '../types';
+import type { GetRemediations200Response, GetRemediationsFieldsDataParameter, GetRemediationsFilterParameter, RequestError } from '../types';
 
 
 export type GetRemediationsParams = {
@@ -49,11 +49,11 @@ export type GetRemediationsParams = {
   */
   hideArchived?: boolean,
   /**
-  * Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response
-  * @type { Array<GetRemediationsFieldsDataEnum> }
+  * Include specified items - name: list all remediation plan names and IDs in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response (cannot be combined with other fields) - last_playbook_run: include latest playbook run summary in the response (cannot be combined with other fields)
+  * @type { GetRemediationsFieldsDataParameter }
   * @memberof GetRemediationsApi
   */
-  fieldsData?: Array<GetRemediationsFieldsDataEnum>,
+  fieldsData?: GetRemediationsFieldsDataParameter,
   options?: AxiosRequestConfig
 }
 /**
@@ -77,15 +77,6 @@ export const GetRemediationsSortEnum = {
     NotStatus: '-status'
 } as const;
 export type GetRemediationsSortEnum = typeof GetRemediationsSortEnum[keyof typeof GetRemediationsSortEnum];
-/**
-  * @export
-  * @enum {string}
-  */
-export const GetRemediationsFieldsDataEnum = {
-    Name: 'name',
-    PlaybookRuns: 'playbook_runs'
-} as const;
-export type GetRemediationsFieldsDataEnum = typeof GetRemediationsFieldsDataEnum[keyof typeof GetRemediationsFieldsDataEnum];
 
 export type GetRemediationsReturnType = GetRemediations200Response;
 
@@ -103,7 +94,7 @@ const isGetRemediationsObjectParams = (params: [GetRemediationsParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationsParams] | [GetRemediationsSortEnum, GetRemediationsFilterParameter, number, number, string, boolean, Array<GetRemediationsFieldsDataEnum>, AxiosRequestConfig])) => {
+export const getRemediationsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetRemediationsParams] | [GetRemediationsSortEnum, GetRemediationsFilterParameter, number, number, string, boolean, GetRemediationsFieldsDataParameter, AxiosRequestConfig])) => {
     const params = isGetRemediationsObjectParams(config) ? config[0] : ['sort', 'filter', 'limit', 'offset', 'system', 'hideArchived', 'fieldsData', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationsParams;
     const { sort, filter, limit, offset, system, hideArchived, fieldsData, options = {} } = params;
     const localVarPath = `/remediations`;
@@ -137,7 +128,7 @@ export const getRemediationsParamCreator = async (sendRequest: BaseAPI["sendRequ
         localVarQueryParameter['hide_archived'] = hideArchived;
     }
 
-    if (fieldsData) {
+    if (fieldsData !== undefined) {
         localVarQueryParameter['fields[data]'] = fieldsData;
     }
 

@@ -156,6 +156,12 @@ export interface GetRemediations200Response {
     'links': Links;
 }
 /**
+ * @type GetRemediationsFieldsDataParameter
+ * @export
+ */
+export type GetRemediationsFieldsDataParameter = Array<string>;
+
+/**
  *
  * @export
  * @interface GetRemediationsFilterParameter
@@ -731,7 +737,6 @@ export interface PlaybookRunExecutorDetails {
 
 export const PlaybookRunExecutorStatus = {
     Pending: 'pending',
-    Acked: 'acked',
     Running: 'running',
     Success: 'success',
     Failure: 'failure',
@@ -878,6 +883,12 @@ export interface PlaybookRunSystems {
      * @memberof PlaybookRunSystems
      */
     'playbook_run_executor_id': string;
+    /**
+     * Executor type for this system (e.g., \'direct\' or \'satellite\')
+     * @type {string}
+     * @memberof PlaybookRunSystems
+     */
+    'executor_type'?: string;
 }
 
 
@@ -1409,6 +1420,12 @@ export interface RemediationNameListItem {
      * @type {string}
      * @memberof RemediationNameListItem
      */
+    'id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof RemediationNameListItem
+     */
     'name': string;
 }
 /**
@@ -1419,10 +1436,10 @@ export interface RemediationNameListItem {
 export interface RemediationSystemList {
     /**
      *
-     * @type {Array<SystemOut>}
+     * @type {Array<SystemWithIssueCount>}
      * @memberof RemediationSystemList
      */
-    'data': Array<SystemOut>;
+    'data': Array<SystemWithIssueCount>;
     /**
      *
      * @type {Meta}
@@ -1712,6 +1729,37 @@ export interface SystemOut {
      * @memberof SystemOut
      */
     'resolved'?: boolean;
+}
+/**
+ *
+ * @export
+ * @interface SystemWithIssueCount
+ */
+export interface SystemWithIssueCount {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemWithIssueCount
+     */
+    'id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemWithIssueCount
+     */
+    'hostname': string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemWithIssueCount
+     */
+    'display_name': string | null;
+    /**
+     * Number of issues associated with this system in the remediation plan
+     * @type {number}
+     * @memberof SystemWithIssueCount
+     */
+    'issue_count': number;
 }
 /**
  *

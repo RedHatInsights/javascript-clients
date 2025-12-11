@@ -20,4 +20,3 @@ export { default as quickstartsIdGet, type QuickstartsIdGetReturnType } from './
 
 
 export * from './types'
-// Trigger release - updated to regenerate clients

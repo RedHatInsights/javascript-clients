@@ -88,7 +88,7 @@ const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubj
 export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, string, number, string, string, string, boolean, string, string, AxiosRequestConfig])) => {
     const params = isRoleBindingsListBySubjectObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'limit', 'cursor', 'subjectType', 'subjectId', 'parentRoleBindings', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListBySubjectParams;
     const { resourceId, resourceType, limit, cursor, subjectType, subjectId, parentRoleBindings, fields, orderBy, options = {} } = params;
-    const localVarPath = `/role-bindings/by-subject`;
+    const localVarPath = `/role-bindings/by-subject/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};

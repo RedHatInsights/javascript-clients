@@ -88,8 +88,6 @@ export { default as rulecategoryList, type RulecategoryListReturnType } from './
 
 export { default as rulecategoryRetrieve, type RulecategoryRetrieveReturnType } from './RulecategoryRetrieve'
 
-export { default as settingsList, type SettingsListReturnType } from './SettingsList'
-
 export { default as statsList, type StatsListReturnType } from './StatsList'
 
 export { default as statsOverviewRetrieve, type StatsOverviewRetrieveReturnType } from './StatsOverviewRetrieve'
@@ -146,5 +144,3 @@ export { default as weeklyreportsubscriptionList, type WeeklyreportsubscriptionL
 
 
 export * from './types'
-
-// Trigger release - updated to regenerate clients
