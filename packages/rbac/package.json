@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/rbac-client",
-  "version": "4.2.5",
+  "version": "4.2.6",
   "description": "TypeScript client for Red Hat Insights RBAC service",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
