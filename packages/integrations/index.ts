@@ -26,5 +26,3 @@ export { default as endpointResourceV1UpdateEventTypesLinkedToEndpoint, type End
 
 
 export * from './types'
-
-// Trigger release - updated to regenerate clients

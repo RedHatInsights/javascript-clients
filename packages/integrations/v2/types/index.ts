@@ -77,7 +77,7 @@ export interface CamelProperties {
      * @type {any}
      * @memberof CamelProperties
      */
-    'disableSslVerification': any;
+    'disable_ssl_verification': any;
     /**
      *
      * @type {{ [key: string]: any; }}
@@ -95,7 +95,7 @@ export interface CamelProperties {
      * @type {any}
      * @memberof CamelProperties
      */
-    'secretToken'?: any;
+    'secret_token'?: any;
 }
 /**
  *
@@ -215,19 +215,6 @@ export interface EndpointPage {
  * @interface EndpointStatus
  */
 export interface EndpointStatus {
-}
-/**
- *
- * @export
- * @interface EndpointTestRequest
- */
-export interface EndpointTestRequest {
-    /**
-     *
-     * @type {any}
-     * @memberof EndpointTestRequest
-     */
-    'message': any;
 }
 /**
  *
@@ -353,6 +340,31 @@ export interface NotificationStatus {
 /**
  *
  * @export
+ * @interface PageNotificationHistory
+ */
+export interface PageNotificationHistory {
+    /**
+     *
+     * @type {any}
+     * @memberof PageNotificationHistory
+     */
+    'data': any;
+    /**
+     *
+     * @type {{ [key: string]: any; }}
+     * @memberof PageNotificationHistory
+     */
+    'links': { [key: string]: any; };
+    /**
+     *
+     * @type {Meta}
+     * @memberof PageNotificationHistory
+     */
+    'meta': Meta;
+}
+/**
+ *
+ * @export
  * @interface PagerDutyProperties
  */
 export interface PagerDutyProperties {
@@ -367,7 +379,7 @@ export interface PagerDutyProperties {
      * @type {any}
      * @memberof PagerDutyProperties
      */
-    'secretToken': any;
+    'secret_token': any;
 }
 
 
@@ -381,25 +393,6 @@ export interface PagerDutySeverity {
 /**
  *
  * @export
- * @interface RequestSystemSubscriptionProperties
- */
-export interface RequestSystemSubscriptionProperties {
-    /**
-     *
-     * @type {any}
-     * @memberof RequestSystemSubscriptionProperties
-     */
-    'only_admins': any;
-    /**
-     *
-     * @type {any}
-     * @memberof RequestSystemSubscriptionProperties
-     */
-    'group_id'?: any;
-}
-/**
- *
- * @export
  * @interface SystemSubscriptionProperties
  */
 export interface SystemSubscriptionProperties {
@@ -408,19 +401,25 @@ export interface SystemSubscriptionProperties {
      * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'groupId'?: any;
+    'group_id'?: any;
     /**
      *
      * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'ignorePreferences'?: any;
+    'group_ids'?: any;
     /**
      *
      * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'onlyAdmins'?: any;
+    'ignore_preferences'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof SystemSubscriptionProperties
+     */
+    'only_admins'?: any;
 }
 /**
  *
@@ -433,7 +432,7 @@ export interface WebhookProperties {
      * @type {any}
      * @memberof WebhookProperties
      */
-    'disableSslVerification': any;
+    'disable_ssl_verification': any;
     /**
      *
      * @type {any}
@@ -451,11 +450,11 @@ export interface WebhookProperties {
      * @type {any}
      * @memberof WebhookProperties
      */
-    'bearerAuthentication'?: any;
+    'bearer_authentication'?: any;
     /**
      *
      * @type {any}
      * @memberof WebhookProperties
      */
-    'secretToken'?: any;
+    'secret_token'?: any;
 }

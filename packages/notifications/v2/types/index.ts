@@ -33,13 +33,13 @@ export interface Application {
      * @type {any}
      * @memberof Application
      */
-    'display_name': any;
+    'displayName': any;
     /**
      *
      * @type {any}
      * @memberof Application
      */
-    'bundle_id': any;
+    'bundleId': any;
 }
 /**
  *
@@ -70,13 +70,13 @@ export interface BehaviorGroup {
      * @type {any}
      * @memberof BehaviorGroup
      */
-    'display_name': any;
+    'displayName': any;
     /**
      *
      * @type {any}
      * @memberof BehaviorGroup
      */
-    'bundle_id': any;
+    'bundleId': any;
     /**
      *
      * @type {Bundle}
@@ -181,142 +181,7 @@ export interface Bundle {
      * @type {any}
      * @memberof Bundle
      */
-    'display_name': any;
-}
-/**
- *
- * @export
- * @interface CreateBehaviorGroupRequest
- */
-export interface CreateBehaviorGroupRequest {
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupRequest
-     */
-    'bundle_id'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupRequest
-     */
-    'bundle_name'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupRequest
-     */
-    'display_name': any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupRequest
-     */
-    'endpoint_ids'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupRequest
-     */
-    'event_type_ids'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupRequest
-     */
-    'bundle_uuid_or_bundle_name_valid'?: any;
-}
-/**
- *
- * @export
- * @interface CreateBehaviorGroupResponse
- */
-export interface CreateBehaviorGroupResponse {
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupResponse
-     */
-    'id': any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupResponse
-     */
-    'bundle_id': any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupResponse
-     */
-    'display_name': any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupResponse
-     */
-    'endpoints': any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupResponse
-     */
-    'event_types': any;
-    /**
-     *
-     * @type {any}
-     * @memberof CreateBehaviorGroupResponse
-     */
-    'created': any;
-}
-/**
- *
- * @export
- * @interface DrawerEntryPayload
- */
-export interface DrawerEntryPayload {
-    /**
-     *
-     * @type {any}
-     * @memberof DrawerEntryPayload
-     */
-    'id'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof DrawerEntryPayload
-     */
-    'description'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof DrawerEntryPayload
-     */
-    'title'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof DrawerEntryPayload
-     */
-    'created'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof DrawerEntryPayload
-     */
-    'read': any;
-    /**
-     *
-     * @type {any}
-     * @memberof DrawerEntryPayload
-     */
-    'source'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof DrawerEntryPayload
-     */
-    'bundle'?: any;
+    'displayName': any;
 }
 /**
  *
@@ -371,7 +236,7 @@ export interface Endpoint {
      * @type {any}
      * @memberof Endpoint
      */
-    'server_errors'?: any;
+    'serverErrors'?: any;
     /**
      *
      * @type {any}
@@ -389,7 +254,7 @@ export interface Endpoint {
      * @type {any}
      * @memberof Endpoint
      */
-    'sub_type'?: any;
+    'subType'?: any;
 }
 
 
@@ -406,120 +271,6 @@ export interface EndpointStatus {
  * @interface EndpointType
  */
 export interface EndpointType {
-}
-/**
- *
- * @export
- * @interface EventLogEntry
- */
-export interface EventLogEntry {
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntry
-     */
-    'id': any;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntry
-     */
-    'created': any;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntry
-     */
-    'bundle': any;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntry
-     */
-    'application': any;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntry
-     */
-    'event_type': any;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntry
-     */
-    'payload'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntry
-     */
-    'actions': any;
-}
-/**
- *
- * @export
- * @interface EventLogEntryAction
- */
-export interface EventLogEntryAction {
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntryAction
-     */
-    'id': any;
-    /**
-     *
-     * @type {EndpointType}
-     * @memberof EventLogEntryAction
-     */
-    'endpoint_type': EndpointType;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntryAction
-     */
-    'endpoint_sub_type'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntryAction
-     * @deprecated
-     */
-    'invocation_result': any;
-    /**
-     *
-     * @type {EventLogEntryActionStatus}
-     * @memberof EventLogEntryAction
-     */
-    'status': EventLogEntryActionStatus;
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntryAction
-     */
-    'endpoint_id'?: any;
-    /**
-     *
-     * @type {{ [key: string]: any; }}
-     * @memberof EventLogEntryAction
-     */
-    'details'?: { [key: string]: any; };
-    /**
-     *
-     * @type {any}
-     * @memberof EventLogEntryAction
-     */
-    'recipients_count'?: any;
-}
-
-
-/**
- *
- * @export
- * @interface EventLogEntryActionStatus
- */
-export interface EventLogEntryActionStatus {
 }
 /**
  *
@@ -623,7 +374,7 @@ export interface EventTypeBehavior {
      * @type {EventType}
      * @memberof EventTypeBehavior
      */
-    'event_type'?: EventType;
+    'eventType'?: EventType;
 }
 /**
  *
@@ -647,37 +398,6 @@ export interface EventTypeBehaviorId {
 /**
  *
  * @export
- * @interface Facet
- */
-export interface Facet {
-    /**
-     *
-     * @type {any}
-     * @memberof Facet
-     */
-    'id': any;
-    /**
-     *
-     * @type {any}
-     * @memberof Facet
-     */
-    'name': any;
-    /**
-     *
-     * @type {any}
-     * @memberof Facet
-     */
-    'displayName': any;
-    /**
-     *
-     * @type {any}
-     * @memberof Facet
-     */
-    'children'?: any;
-}
-/**
- *
- * @export
  * @interface Meta
  */
 export interface Meta {
@@ -691,125 +411,25 @@ export interface Meta {
 /**
  *
  * @export
- * @interface PageDrawerEntryPayload
+ * @interface PageBehaviorGroup
  */
-export interface PageDrawerEntryPayload {
+export interface PageBehaviorGroup {
     /**
      *
      * @type {any}
-     * @memberof PageDrawerEntryPayload
+     * @memberof PageBehaviorGroup
      */
     'data': any;
     /**
      *
      * @type {{ [key: string]: any; }}
-     * @memberof PageDrawerEntryPayload
+     * @memberof PageBehaviorGroup
      */
     'links': { [key: string]: any; };
     /**
      *
      * @type {Meta}
-     * @memberof PageDrawerEntryPayload
+     * @memberof PageBehaviorGroup
      */
     'meta': Meta;
-}
-/**
- *
- * @export
- * @interface PageEventLogEntry
- */
-export interface PageEventLogEntry {
-    /**
-     *
-     * @type {any}
-     * @memberof PageEventLogEntry
-     */
-    'data': any;
-    /**
-     *
-     * @type {{ [key: string]: any; }}
-     * @memberof PageEventLogEntry
-     */
-    'links': { [key: string]: any; };
-    /**
-     *
-     * @type {Meta}
-     * @memberof PageEventLogEntry
-     */
-    'meta': Meta;
-}
-/**
- *
- * @export
- * @interface PageEventType
- */
-export interface PageEventType {
-    /**
-     *
-     * @type {any}
-     * @memberof PageEventType
-     */
-    'data': any;
-    /**
-     *
-     * @type {{ [key: string]: any; }}
-     * @memberof PageEventType
-     */
-    'links': { [key: string]: any; };
-    /**
-     *
-     * @type {Meta}
-     * @memberof PageEventType
-     */
-    'meta': Meta;
-}
-/**
- *
- * @export
- * @interface UpdateBehaviorGroupRequest
- */
-export interface UpdateBehaviorGroupRequest {
-    /**
-     *
-     * @type {any}
-     * @memberof UpdateBehaviorGroupRequest
-     */
-    'display_name'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof UpdateBehaviorGroupRequest
-     */
-    'endpoint_ids'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof UpdateBehaviorGroupRequest
-     */
-    'event_type_ids'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof UpdateBehaviorGroupRequest
-     */
-    'display_name_not_null_and_blank'?: any;
-}
-/**
- *
- * @export
- * @interface UpdateNotificationDrawerStatus
- */
-export interface UpdateNotificationDrawerStatus {
-    /**
-     *
-     * @type {any}
-     * @memberof UpdateNotificationDrawerStatus
-     */
-    'notification_ids': any;
-    /**
-     *
-     * @type {any}
-     * @memberof UpdateNotificationDrawerStatus
-     */
-    'read_status': any;
 }

@@ -1,19 +1,9 @@
 import { describe, expect, test } from '@jest/globals';
 
 import { IntegrationsClient } from '../../api';
-import { Endpoint, EndpointType, RequestSystemSubscriptionProperties } from '../../types';
-import { EndpointResourceV2CreateEndpointParams } from '../../EndpointResourceV2CreateEndpoint';
-import { EndpointResourceV2DeleteEndpointParams } from '../../EndpointResourceV2DeleteEndpoint';
-import { EndpointResourceV2EnableEndpointParams } from '../../EndpointResourceV2EnableEndpoint';
-import { EndpointResourceV2DisableEndpointParams } from '../../EndpointResourceV2DisableEndpoint';
-import { EndpointResourceV2GetEndpointParams } from '../../EndpointResourceV2GetEndpoint';
-import { EndpointResourceV2GetEndpointHistoryParams } from '../../EndpointResourceV2GetEndpointHistory';
-import { EndpointResourceV2GetDetailedEndpointHistoryParams } from '../../EndpointResourceV2GetDetailedEndpointHistory';
-import { EndpointResourceV2GetEndpointsParams } from '../../EndpointResourceV2GetEndpoints';
-import { EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams } from '../../EndpointResourceV2GetOrCreateDrawerSubscriptionEndpoint';
-import { EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams } from '../../EndpointResourceV2GetOrCreateEmailSubscriptionEndpoint';
-import { EndpointResourceV2UpdateEndpointParams } from '../../EndpointResourceV2UpdateEndpoint';
-import { EndpointResourceV1UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV1UpdateEventTypesLinkedToEndpoint';
+import { EndpointResourceV2V2GetEndpointParams } from '../../EndpointResourceV2V2GetEndpoint';
+import { EndpointResourceV2V2GetEndpointHistoryParams } from '../../EndpointResourceV2V2GetEndpointHistory';
+import { EndpointResourceV2V2GetEndpointsParams } from '../../EndpointResourceV2V2GetEndpoints';
 
 const BASE_PATH = 'http://localhost:3002/api/integrations/v2.0/';
 
@@ -21,107 +11,23 @@ const client = IntegrationsClient(BASE_PATH);
 const placeHolder = 'bob';
 
 describe('Integrations API (v2)', () => {
-  test('create endpoint', async () => {
-    const endpoint: Endpoint = {
-      name: placeHolder,
-      description: placeHolder,
-      type: '',
-    };
-
-    const endpointResourceV2CreateEndpointParams: EndpointResourceV2CreateEndpointParams = {
-      endpoint: endpoint,
-    };
-    const createEndpointResp = await client.endpointResourceV1CreateEndpoint(endpointResourceV2CreateEndpointParams);
-    expect(createEndpointResp.status).toEqual(200);
-  });
-
-  test('delete endpoint', async () => {
-    const deleteEndpointParams: EndpointResourceV2DeleteEndpointParams = {
-      id: placeHolder,
-    };
-    const deleteEndpointResp = await client.endpointResourceV1DeleteEndpoint(deleteEndpointParams);
-    expect(deleteEndpointResp.status).toEqual(204);
-  });
-
-  test('enable endpoint', async () => {
-    const enableEndpointParams: EndpointResourceV2EnableEndpointParams = {
-      id: placeHolder,
-    };
-    const enableResp = await client.endpointResourceV1EnableEndpoint(enableEndpointParams);
-    expect(enableResp.status).toEqual(200);
-  });
-
-  test('disable endpoint', async () => {
-    const disableEndpointParams: EndpointResourceV2DisableEndpointParams = { id: placeHolder };
-    const disableResp = await client.endpointResourceV1DisableEndpoint(disableEndpointParams);
-    expect(disableResp.status).toEqual(204);
-  });
-
   test('get endpoint', async () => {
-    const getEndpointParams: EndpointResourceV2GetEndpointParams = {
+    const getEndpointParams: EndpointResourceV2V2GetEndpointParams = {
       id: placeHolder,
     };
-    const getEndptResp = await client.endpointResourceV1GetEndpoint(getEndpointParams);
+    const getEndptResp = await client.endpointResourceV2V2GetEndpoint(getEndpointParams);
     expect(getEndptResp.status).toEqual(200);
   });
 
   test('get endpoint history', async () => {
-    const getEndpointHistoryParams: EndpointResourceV2GetEndpointHistoryParams = { id: placeHolder };
-    const endpointHistoryResp = await client.endpointResourceV1GetEndpointHistory(getEndpointHistoryParams);
+    const getEndpointHistoryParams: EndpointResourceV2V2GetEndpointHistoryParams = { id: placeHolder };
+    const endpointHistoryResp = await client.endpointResourceV2V2GetEndpointHistory(getEndpointHistoryParams);
     expect(endpointHistoryResp.status).toEqual(200);
   });
 
-  test('get detailed endpoint history', async () => {
-    const getDetailedHistoryParams: EndpointResourceV2GetDetailedEndpointHistoryParams = { historyId: placeHolder, id: placeHolder };
-    const resp = await client.endpointResourceV1GetDetailedEndpointHistory(getDetailedHistoryParams);
-    expect(resp.status).toEqual(200);
-  });
-
   test('get endpoints', async () => {
-    const getEndpointsParams: EndpointResourceV2GetEndpointsParams = {};
-    const resp = await client.endpointResourceV1GetEndpoints(getEndpointsParams);
+    const getEndpointsParams: EndpointResourceV2V2GetEndpointsParams = {};
+    const resp = await client.endpointResourceV2V2GetEndpoints(getEndpointsParams);
     expect(resp.status).toEqual(200);
-  });
-
-  test('get or create drawer subscription endpoint', async () => {
-    const requestSystemSubscriptionProps: RequestSystemSubscriptionProperties = {
-      only_admins: true,
-    };
-    const getOrCreateDrawerSubscriptionParams: EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams = {
-      requestSystemSubscriptionProperties: requestSystemSubscriptionProps,
-    };
-    const resp = await client.endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint(getOrCreateDrawerSubscriptionParams);
-    expect(resp.status).toEqual(200);
-  });
-
-  test('get or create email subscription endpoint', async () => {
-    const requestSystemSubscriptionProps: RequestSystemSubscriptionProperties = {
-      only_admins: false,
-    };
-    const params: EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams = {
-      requestSystemSubscriptionProperties: requestSystemSubscriptionProps,
-    };
-    const resp = await client.endpointResourceV1GetOrCreateEmailSubscriptionEndpoint(params);
-    expect(resp.status).toEqual(200);
-  });
-
-  test('update endpoint', async () => {
-    const endpt: Endpoint = {
-      name: placeHolder,
-      description: placeHolder,
-      type: 'EmailSubscription',
-    };
-    const params: EndpointResourceV2UpdateEndpointParams = { id: placeHolder, endpoint: endpt };
-    const resp = await client.endpointResourceV1UpdateEndpoint(params);
-    expect(resp.status).toEqual(200);
-  });
-
-  test('update event types linked to endpoint', async () => {
-    const params: EndpointResourceV1UpdateEventTypesLinkedToEndpointParams = {
-      endpointId: placeHolder,
-      body: '',
-    };
-    const resp = await client.endpointResourceV1UpdateEventTypesLinkedToEndpoint(params);
-    expect(resp.status).toEqual(204);
   });
 });
