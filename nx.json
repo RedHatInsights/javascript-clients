@@ -72,7 +72,10 @@
     },
     "changelog": {
       "workspaceChangelog": false,
-      "projectChangelogs": false
+      "projectChangelogs": {
+        "file": "{projectRoot}/CHANGELOG.md",
+        "createReleaseInGitHub": false
+      }
     },
     "releaseTagPattern": "{projectName}-{version}"
   },
