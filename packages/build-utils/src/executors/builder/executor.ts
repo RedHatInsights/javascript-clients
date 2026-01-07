@@ -23,7 +23,7 @@ async function validateExistingFile(path: string) {
 
 async function runTSC(tsConfigPath: string, outputDir: string, inputDir: string) {
   try {
-    execSync(`tsc -p ${tsConfigPath} --outDir ${outputDir} --rootDir ${inputDir}`, { stdio: 'inherit' });
+    execSync(`npx tsc -p ${tsConfigPath} --outDir ${outputDir} --rootDir ${inputDir}`, { stdio: 'inherit' });
   } catch (error) {
     console.log(error);
     throw new Error(`Failed to run tsc for ${tsConfigPath}`);

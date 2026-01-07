@@ -7,7 +7,7 @@ import { DrawerResourceV1UpdateNotificationReadStatusParams } from '../../Drawer
 import { NotificationResourceV1CreateBehaviorGroupParams } from '../../NotificationResourceV1CreateBehaviorGroup';
 import { CreateBehaviorGroupRequest } from '../../types';
 import { NotificationResourceV1DeleteBehaviorGroupParams } from '../../NotificationResourceV1DeleteBehaviorGroup';
-import { UpdateBehaviorGroupRequest } from '../../v2/types';
+import { UpdateBehaviorGroupRequest } from '../../types';
 import { NotificationResourceV1UpdateBehaviorGroupParams } from '../../NotificationResourceV1UpdateBehaviorGroup';
 import { NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams } from '../../NotificationResourceV1DeleteBehaviorGroupFromEventType';
 import { NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams } from '../../NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint';

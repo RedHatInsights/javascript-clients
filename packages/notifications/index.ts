@@ -46,5 +46,3 @@ export { default as orgConfigResourceV1SaveDailyDigestTimePreference, type OrgCo
 
 
 export * from './types'
-
-// Trigger release - updated to regenerate clients

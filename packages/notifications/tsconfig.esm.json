@@ -19,6 +19,9 @@
     "dist",
     "node_modules",
     "*.d.ts",
-    "jest.config.ts"
+    "jest.config.ts",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/tests/**"
   ]
 }

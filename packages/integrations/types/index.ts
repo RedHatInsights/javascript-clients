@@ -77,7 +77,7 @@ export interface CamelProperties {
      * @type {any}
      * @memberof CamelProperties
      */
-    'disableSslVerification': any;
+    'disable_ssl_verification': any;
     /**
      *
      * @type {{ [key: string]: any; }}
@@ -95,7 +95,7 @@ export interface CamelProperties {
      * @type {any}
      * @memberof CamelProperties
      */
-    'secretToken'?: any;
+    'secret_token'?: any;
 }
 /**
  *
@@ -367,7 +367,7 @@ export interface PagerDutyProperties {
      * @type {any}
      * @memberof PagerDutyProperties
      */
-    'secretToken': any;
+    'secret_token': any;
 }
 
 
@@ -408,19 +408,25 @@ export interface SystemSubscriptionProperties {
      * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'groupId'?: any;
+    'group_id'?: any;
     /**
      *
      * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'ignorePreferences'?: any;
+    'group_ids'?: any;
     /**
      *
      * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'onlyAdmins'?: any;
+    'ignore_preferences'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof SystemSubscriptionProperties
+     */
+    'only_admins'?: any;
 }
 /**
  *
@@ -433,7 +439,7 @@ export interface WebhookProperties {
      * @type {any}
      * @memberof WebhookProperties
      */
-    'disableSslVerification': any;
+    'disable_ssl_verification': any;
     /**
      *
      * @type {any}
@@ -451,11 +457,11 @@ export interface WebhookProperties {
      * @type {any}
      * @memberof WebhookProperties
      */
-    'bearerAuthentication'?: any;
+    'bearer_authentication'?: any;
     /**
      *
      * @type {any}
      * @memberof WebhookProperties
      */
-    'secretToken'?: any;
+    'secret_token'?: any;
 }
