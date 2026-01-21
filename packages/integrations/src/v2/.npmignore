@@ -1,0 +1,6 @@
+.openapi-generator
+node_modules
+.openapi-generator-ignore
+package-lock.json
+*.ts
+!*.d.ts
