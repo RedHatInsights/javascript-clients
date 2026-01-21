@@ -39,5 +39,5 @@ npx @stoplight/prism-cli mock \
   --port "$PORT" \
   --cors \
   --errors=false \
-  --verboseLevel=fatal \
+  --verboseLevel=error \
   "$SPEC_URL"

@@ -1,8 +1,0 @@
-.gitignore
-.npmignore
-NotificationResourceV2V2GetLinkedBehaviorGroups/index.ts
-api.ts
-git_push.sh
-index.ts
-index.ts
-types/index.ts
