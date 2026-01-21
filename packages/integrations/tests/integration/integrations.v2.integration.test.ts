@@ -1,11 +1,12 @@
 import { describe, expect, test } from '@jest/globals';
 
-import { IntegrationsClient } from '../../api';
-import { EndpointResourceV2V2GetEndpointParams } from '../../EndpointResourceV2V2GetEndpoint';
-import { EndpointResourceV2V2GetEndpointHistoryParams } from '../../EndpointResourceV2V2GetEndpointHistory';
-import { EndpointResourceV2V2GetEndpointsParams } from '../../EndpointResourceV2V2GetEndpoints';
+import { IntegrationsClient } from '../../src/v2/api';
+import { EndpointResourceV2V2GetEndpointParams } from '../../src/v2/EndpointResourceV2V2GetEndpoint';
+import { EndpointResourceV2V2GetEndpointHistoryParams } from '../../src/v2/EndpointResourceV2V2GetEndpointHistory';
+import { EndpointResourceV2V2GetEndpointsParams } from '../../src/v2/EndpointResourceV2V2GetEndpoints';
 
-const BASE_PATH = 'http://localhost:3002/api/integrations/v2.0/';
+// note the v2 endpoint path
+const BASE_PATH = 'http://localhost:3001/api/integrations/v2.0/';
 
 const client = IntegrationsClient(BASE_PATH);
 const placeHolder = 'bob';
