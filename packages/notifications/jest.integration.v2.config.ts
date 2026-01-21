@@ -9,7 +9,7 @@ export default {
   coverageDirectory: '../../coverage/packages/notifications',
   testEnvironmentOptions: {
     testEnvironment: 'node',
-    url: "http://localhost:3002",
+    url: "http://localhost:3001",
   },
   testMatch: ['**/notifications.v2.integration.test.ts']
 };
