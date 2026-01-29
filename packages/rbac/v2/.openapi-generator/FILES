@@ -1,6 +1,13 @@
 .gitignore
 .npmignore
+RoleBindingsCreate/index.ts
 RoleBindingsListBySubject/index.ts
+RoleBindingsUpdate/index.ts
+RolesBatchDelete/index.ts
+RolesCreate/index.ts
+RolesList/index.ts
+RolesRead/index.ts
+RolesUpdate/index.ts
 WorkspacesCreate/index.ts
 WorkspacesDelete/index.ts
 WorkspacesList/index.ts

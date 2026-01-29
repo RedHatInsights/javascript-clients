@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, RoleBindingsListBySubject401Response, RoleBindingsListBySubject500Response, RoleBindingsRoleBindingBySubjectListResponse } from '../types';
+import type { ProblemsProblem403, RoleBindingsCreate401Response, RoleBindingsCreate500Response, RoleBindingsListBySubject200Response } from '../types';
 
 
 export type RoleBindingsListBySubjectParams = {
@@ -55,7 +55,7 @@ export type RoleBindingsListBySubjectParams = {
   */
   parentRoleBindings?: boolean,
   /**
-  * Control which fields are included in the response to optimize payload size and improve performance.  **Default Behavior (no fields parameter):** Basic required fields are always included: subject.id, subject.type, role.id, resource.id  **When fields parameter is provided:** Only explicitly specified fields are included in the response. Subject type field (subject.type) is always required and included even if not specified.  **Syntax:** - Use parentheses to specify fields for nested objects: `object(field1,field2)` - Use comma to separate multiple field specifications: `subject(name),resource(name),last_modified` - Fields not in parentheses apply to the root level  **Available Fields:**  **subject object (polymorphic - available fields depend on type):** - id (UUID) - always included - type (string) - always included, cannot be excluded (determines which additional fields are available)  *When type = \"user\":* - user.username (string) - username of the user  *When type = \"group\":* - group.name (string) - name of the group - group.description (string) - description of the group - group.user_count (integer) - number of users in the group  **role object:** - id (UUID) - always included - name (string) - role display name  **resource object:** - id (UUID) - always included - name (string) - resource name - type (string) - resource type  **root level:** - last_modified (datetime) - timestamp of last modification - inherited_from (object) - resource from which this role binding is inherited (only present when parent_role_bindings=true)  **Examples:** - `subject(group.name,group.user_count)` - Include group name and user count (only for group subjects) - `subject(user.username)` - Include username (only for user subjects) - `role(name)` - Include role name - `resource(name,type)` - Include resource name and type - `subject(group.name),role(name),resource(name)` - Combine multiple object field specifications - `subject(user.username),role(name),last_modified` - Include user details, role name, and modification timestamp - `last_modified` - Include only modification timestamp (plus required fields) - `subject(group.name,group.user_count),resource(name,type)` - Mix group and resource specific fields - `inherited_from(name,type)` - Include inherited resource name and type (only relevant when parent_role_bindings=true)
+  * Control which fields are included in the response to optimize payload size and improve performance.
   * @type { string }
   * @memberof RoleBindingsListBySubjectApi
   */
@@ -69,7 +69,7 @@ export type RoleBindingsListBySubjectParams = {
   options?: AxiosRequestConfig
 }
 
-export type RoleBindingsListBySubjectReturnType = RoleBindingsRoleBindingBySubjectListResponse;
+export type RoleBindingsListBySubjectReturnType = RoleBindingsListBySubject200Response;
 
 const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubjectParams] | unknown[]): params is [RoleBindingsListBySubjectParams] => {
   const l = params.length === 1

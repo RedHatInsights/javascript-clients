@@ -1,4 +1,18 @@
+export { default as roleBindingsCreate, type RoleBindingsCreateReturnType } from './RoleBindingsCreate'
+
 export { default as roleBindingsListBySubject, type RoleBindingsListBySubjectReturnType } from './RoleBindingsListBySubject'
+
+export { default as roleBindingsUpdate, type RoleBindingsUpdateReturnType } from './RoleBindingsUpdate'
+
+export { default as rolesBatchDelete, type RolesBatchDeleteReturnType } from './RolesBatchDelete'
+
+export { default as rolesCreate, type RolesCreateReturnType } from './RolesCreate'
+
+export { default as rolesList, type RolesListReturnType } from './RolesList'
+
+export { default as rolesRead, type RolesReadReturnType } from './RolesRead'
+
+export { default as rolesUpdate, type RolesUpdateReturnType } from './RolesUpdate'
 
 export { default as workspacesCreate, type WorkspacesCreateReturnType } from './WorkspacesCreate'
 

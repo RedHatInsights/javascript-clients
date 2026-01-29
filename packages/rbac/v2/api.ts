@@ -3,7 +3,14 @@
 import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
+    roleBindingsCreate,
     roleBindingsListBySubject,
+    roleBindingsUpdate,
+    rolesBatchDelete,
+    rolesCreate,
+    rolesList,
+    rolesRead,
+    rolesUpdate,
     workspacesCreate,
     workspacesDelete,
     workspacesList,
@@ -15,7 +22,14 @@ import {
   } from './index';
 
 const endpointList = {
-      roleBindingsListBySubject,
+      roleBindingsCreate,
+    roleBindingsListBySubject,
+    roleBindingsUpdate,
+    rolesBatchDelete,
+    rolesCreate,
+    rolesList,
+    rolesRead,
+    rolesUpdate,
     workspacesCreate,
     workspacesDelete,
     workspacesList,

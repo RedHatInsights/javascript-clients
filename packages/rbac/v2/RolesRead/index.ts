@@ -8,22 +8,28 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, ProblemsWorkspaceProblem400WorkspaceNotEmpty, RoleBindingsCreate401Response, RoleBindingsCreate500Response } from '../types';
+import type { ProblemsProblem403, ProblemsProblem404, RoleBindingsCreate401Response, RoleBindingsCreate500Response, RolesRole } from '../types';
 
 
-export type WorkspacesDeleteParams = {
+export type RolesReadParams = {
   /**
-  * Unique identification
+  *
   * @type { string }
-  * @memberof WorkspacesDeleteApi
+  * @memberof RolesReadApi
   */
   id: string,
+  /**
+  * Control which fields are included in the response to optimize payload size.
+  * @type { string }
+  * @memberof RolesReadApi
+  */
+  fields?: string,
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesDeleteReturnType = void;
+export type RolesReadReturnType = RolesRole;
 
-const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unknown[]): params is [WorkspacesDeleteParams] => {
+const isRolesReadObjectParams = (params: [RolesReadParams] | unknown[]): params is [RolesReadParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
     return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
@@ -31,22 +37,25 @@ const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unkno
   return false
 }
 /**
-* Delete a workspace
-* @summary Delete the workspace
-* @param {WorkspacesDeleteParams} config with all available params.
+*
+* @param {RolesReadParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesDeleteParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesDeleteParams] | [string, AxiosRequestConfig])) => {
-    const params = isWorkspacesDeleteObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesDeleteParams;
-    const { id, options = {} } = params;
-    const localVarPath = `/workspaces/{id}/`
+export const rolesReadParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RolesReadParams] | [string, string, AxiosRequestConfig])) => {
+    const params = isRolesReadObjectParams(config) ? config[0] : ['id', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RolesReadParams;
+    const { id, fields, options = {} } = params;
+    const localVarPath = `/roles/{id}/`
         .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'DELETE' as Method, ...options};
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
+
+    if (fields !== undefined) {
+        localVarQueryParameter['fields'] = fields;
+    }
 
 
 
@@ -58,7 +67,7 @@ export const workspacesDeleteParamCreator = async (sendRequest: BaseAPI["sendReq
         options: localVarRequestOptions,
     };
 
-    return sendRequest<WorkspacesDeleteReturnType>(Promise.resolve(args));
+    return sendRequest<RolesReadReturnType>(Promise.resolve(args));
 }
 
-export default workspacesDeleteParamCreator;
+export default rolesReadParamCreator;
