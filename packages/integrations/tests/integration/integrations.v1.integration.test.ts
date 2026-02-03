@@ -1,8 +1,9 @@
 import { describe, expect, test } from '@jest/globals';
+import { randomUUID } from 'crypto';
 
 import { IntegrationsClient } from '../../api';
 import { EndpointResourceV1CreateEndpointParams } from '../../EndpointResourceV1CreateEndpoint';
-import { Endpoint, EndpointType, RequestSystemSubscriptionProperties } from '../../types';
+import { Endpoint, RequestSystemSubscriptionProperties } from '../../types';
 import { EndpointResourceV1DeleteEndpointParams } from '../../EndpointResourceV1DeleteEndpoint';
 import { EndpointResourceV1EnableEndpointParams } from '../../EndpointResourceV1EnableEndpoint';
 import { EndpointResourceV1DisableEndpointParams } from '../../EndpointResourceV1DisableEndpoint';
@@ -16,17 +17,23 @@ import { EndpointResourceV1UpdateEndpointParams } from '../../EndpointResourceV1
 import { EndpointResourceV1UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV1UpdateEventTypesLinkedToEndpoint';
 
 // note the 1.0, which is different from, for example, RBAC v1
-const BASE_PATH = 'http://localhost:3001/api/integrations/v1.0/';
+const BASE_PATH = 'http://localhost:3001';
 
 const client = IntegrationsClient(BASE_PATH);
-const placeHolder = 'bob';
+
+// Generate valid test data for OpenAPI validation
+const generateTestData = {
+  uuid: () => randomUUID(),
+  name: () => `test-${Math.random().toString(36).substring(7)}`,
+  description: () => `Test description ${Date.now()}`,
+};
 
 describe('Integrations API (v1)', () => {
   test('create endpoint', async () => {
     const endpoint: Endpoint = {
-      name: placeHolder,
-      description: placeHolder,
-      type: 'Ansible',
+      name: generateTestData.name(),
+      description: generateTestData.description(),
+      type: 'ansible',
     };
     const endpointResourceV1CreateEndpointParams: EndpointResourceV1CreateEndpointParams = {
       endpoint: endpoint,
@@ -37,7 +44,7 @@ describe('Integrations API (v1)', () => {
 
   test('delete endpoint', async () => {
     const deleteEndpointParams: EndpointResourceV1DeleteEndpointParams = {
-      id: placeHolder,
+      id: generateTestData.uuid(),
     };
     const deleteEndpointResp = await client.endpointResourceV1DeleteEndpoint(deleteEndpointParams);
     expect(deleteEndpointResp.status).toEqual(204);
@@ -45,34 +52,37 @@ describe('Integrations API (v1)', () => {
 
   test('enable endpoint', async () => {
     const enableEndpointParams: EndpointResourceV1EnableEndpointParams = {
-      id: placeHolder,
+      id: generateTestData.uuid(),
     };
     const enableResp = await client.endpointResourceV1EnableEndpoint(enableEndpointParams);
     expect(enableResp.status).toEqual(200);
   });
 
   test('disable endpoint', async () => {
-    const disableEndpointParams: EndpointResourceV1DisableEndpointParams = { id: placeHolder };
+    const disableEndpointParams: EndpointResourceV1DisableEndpointParams = { id: generateTestData.uuid() };
     const disableResp = await client.endpointResourceV1DisableEndpoint(disableEndpointParams);
     expect(disableResp.status).toEqual(204);
   });
 
   test('get endpoint', async () => {
     const getEndpointParams: EndpointResourceV1GetEndpointParams = {
-      id: placeHolder,
+      id: generateTestData.uuid(),
     };
     const getEndptResp = await client.endpointResourceV1GetEndpoint(getEndpointParams);
     expect(getEndptResp.status).toEqual(200);
   });
 
   test('get endpoint history', async () => {
-    const getEndpointHistoryParams: EndpointResourceV1GetEndpointHistoryParams = { id: placeHolder };
+    const getEndpointHistoryParams: EndpointResourceV1GetEndpointHistoryParams = { id: generateTestData.uuid() };
     const endpointHistoryResp = await client.endpointResourceV1GetEndpointHistory(getEndpointHistoryParams);
     expect(endpointHistoryResp.status).toEqual(200);
   });
 
   test('get detailed endpoint history', async () => {
-    const getDetailedHistoryParams: EndpointResourceV1GetDetailedEndpointHistoryParams = { historyId: placeHolder, id: placeHolder };
+    const getDetailedHistoryParams: EndpointResourceV1GetDetailedEndpointHistoryParams = {
+      historyId: generateTestData.uuid(),
+      id: generateTestData.uuid(),
+    };
     const resp = await client.endpointResourceV1GetDetailedEndpointHistory(getDetailedHistoryParams);
     expect(resp.status).toEqual(200);
   });
@@ -107,19 +117,19 @@ describe('Integrations API (v1)', () => {
 
   test('update endpoint', async () => {
     const endpt: Endpoint = {
-      name: placeHolder,
-      description: placeHolder,
-      type: 'EmailSubscription',
+      name: generateTestData.name(),
+      description: generateTestData.description(),
+      type: 'email_subscription',
     };
-    const params: EndpointResourceV1UpdateEndpointParams = { id: placeHolder, endpoint: endpt };
+    const params: EndpointResourceV1UpdateEndpointParams = { id: generateTestData.uuid(), endpoint: endpt };
     const resp = await client.endpointResourceV1UpdateEndpoint(params);
     expect(resp.status).toEqual(200);
   });
 
   test('update event types linked to endpoint', async () => {
     const params: EndpointResourceV1UpdateEventTypesLinkedToEndpointParams = {
-      endpointId: placeHolder,
-      body: '',
+      endpointId: generateTestData.uuid(),
+      body: [],
     };
     const resp = await client.endpointResourceV1UpdateEventTypesLinkedToEndpoint(params);
     expect(resp.status).toEqual(204);

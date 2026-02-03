@@ -1,32 +1,46 @@
-import { describe, expect, test } from '@jest/globals';
+/**
+ * Using CommonJS require() for consistency with Jest's default behavior.
+ * ESM support in Jest remains experimental as of 2026.
+ * @todo Migrate to Vitest for native ESM support and better performance
+ */
+const { describe, expect, test } = require('@jest/globals');
+const { randomUUID } = require('crypto');
 
-import { NotificationsClient } from '../../api';
-import { DrawerResourceV1GetDrawerEntriesParams } from '../../DrawerResourceV1GetDrawerEntries';
-import { EventResourceV1GetEventsParams } from '../../EventResourceV1GetEvents';
-import { DrawerResourceV1UpdateNotificationReadStatusParams } from '../../DrawerResourceV1UpdateNotificationReadStatus';
-import { NotificationResourceV1CreateBehaviorGroupParams } from '../../NotificationResourceV1CreateBehaviorGroup';
-import { CreateBehaviorGroupRequest, UpdateBehaviorGroupRequest } from '../../types';
-import { NotificationResourceV1DeleteBehaviorGroupParams } from '../../NotificationResourceV1DeleteBehaviorGroup';
-import { NotificationResourceV1UpdateBehaviorGroupParams } from '../../NotificationResourceV1UpdateBehaviorGroup';
-import { NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams } from '../../NotificationResourceV1DeleteBehaviorGroupFromEventType';
-import { NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams } from '../../NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint';
-import { NotificationResourceV1UpdateBehaviorGroupActionsParams } from '../../NotificationResourceV1UpdateBehaviorGroupActions';
-import { OrgConfigResourceV1GetDailyDigestTimePreferenceParams } from '../../OrgConfigResourceV1GetDailyDigestTimePreference';
-import { OrgConfigResourceV1SaveDailyDigestTimePreferenceParams } from '../../OrgConfigResourceV1SaveDailyDigestTimePreference';
-import { NotificationResourceV1GetEventTypesParams } from '../../NotificationResourceV1GetEventTypes';
-import { NotificationResourceV1UpdateEventTypeEndpointsParams } from '../../NotificationResourceV1UpdateEventTypeEndpoints';
-import { NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams } from '../../NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup';
-import { NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams } from '../../NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName';
-import { NotificationResourceV1UpdateEventTypeBehaviorsParams } from '../../NotificationResourceV1UpdateEventTypeBehaviors';
-import { NotificationResourceV1AppendBehaviorGroupToEventTypeParams } from '../../NotificationResourceV1AppendBehaviorGroupToEventType';
-import { NotificationResourceV1FindBehaviorGroupsByBundleIdParams } from '../../NotificationResourceV1FindBehaviorGroupsByBundleId';
-import { NotificationResourceV1GetApplicationByNameAndBundleNameParams } from '../../NotificationResourceV1GetApplicationByNameAndBundleName';
-import { NotificationResourceV1GetApplicationsFacetsParams } from '../../NotificationResourceV1GetApplicationsFacets';
-import { NotificationResourceV1GetBundleByNameParams } from '../../NotificationResourceV1GetBundleByName';
-import { NotificationResourceV1GetBundleFacetsParams } from '../../NotificationResourceV1GetBundleFacets';
+const { NotificationsClient } = require('../../api');
+// TypeScript type imports (compile-time only)
+import type { DrawerResourceV1GetDrawerEntriesParams } from '../../DrawerResourceV1GetDrawerEntries';
+import type { EventResourceV1GetEventsParams } from '../../EventResourceV1GetEvents';
+import type { DrawerResourceV1UpdateNotificationReadStatusParams } from '../../DrawerResourceV1UpdateNotificationReadStatus';
+import type { NotificationResourceV1CreateBehaviorGroupParams } from '../../NotificationResourceV1CreateBehaviorGroup';
+import type { CreateBehaviorGroupRequest, UpdateBehaviorGroupRequest } from '../../types';
+import type { NotificationResourceV1DeleteBehaviorGroupParams } from '../../NotificationResourceV1DeleteBehaviorGroup';
+import type { NotificationResourceV1UpdateBehaviorGroupParams } from '../../NotificationResourceV1UpdateBehaviorGroup';
+import type { NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams } from '../../NotificationResourceV1DeleteBehaviorGroupFromEventType';
+import type { NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams } from '../../NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint';
+import type { NotificationResourceV1UpdateBehaviorGroupActionsParams } from '../../NotificationResourceV1UpdateBehaviorGroupActions';
+import type { OrgConfigResourceV1GetDailyDigestTimePreferenceParams } from '../../OrgConfigResourceV1GetDailyDigestTimePreference';
+import type { OrgConfigResourceV1SaveDailyDigestTimePreferenceParams } from '../../OrgConfigResourceV1SaveDailyDigestTimePreference';
+import type { NotificationResourceV1GetEventTypesParams } from '../../NotificationResourceV1GetEventTypes';
+import type { NotificationResourceV1UpdateEventTypeEndpointsParams } from '../../NotificationResourceV1UpdateEventTypeEndpoints';
+import type { NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams } from '../../NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup';
+import type { NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams } from '../../NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName';
+import type { NotificationResourceV1UpdateEventTypeBehaviorsParams } from '../../NotificationResourceV1UpdateEventTypeBehaviors';
+import type { NotificationResourceV1AppendBehaviorGroupToEventTypeParams } from '../../NotificationResourceV1AppendBehaviorGroupToEventType';
+import type { NotificationResourceV1FindBehaviorGroupsByBundleIdParams } from '../../NotificationResourceV1FindBehaviorGroupsByBundleId';
+import type { NotificationResourceV1GetApplicationByNameAndBundleNameParams } from '../../NotificationResourceV1GetApplicationByNameAndBundleName';
+import type { NotificationResourceV1GetApplicationsFacetsParams } from '../../NotificationResourceV1GetApplicationsFacets';
+import type { NotificationResourceV1GetBundleByNameParams } from '../../NotificationResourceV1GetBundleByName';
+import type { NotificationResourceV1GetBundleFacetsParams } from '../../NotificationResourceV1GetBundleFacets';
 
-const BASE_PATH = 'http://localhost:3001/api/notifications/v1.0';
+const BASE_PATH = 'http://localhost:3001';
 const client = NotificationsClient(BASE_PATH);
+
+// Generate valid test data for OpenAPI validation
+const generateTestData = {
+  uuid: () => randomUUID(),
+  name: () => `test-${Math.random().toString(36).substring(7)}`,
+  description: () => `Test description ${Date.now()}`,
+};
 
 describe('Notifications API (v1)', () => {
   test('get drawer entries', async () => {
@@ -44,7 +58,7 @@ describe('Notifications API (v1)', () => {
   test('update notification read status', async () => {
     const params: DrawerResourceV1UpdateNotificationReadStatusParams = {
       updateNotificationDrawerStatus: {
-        notification_ids: ['1', '2'],
+        notification_ids: [generateTestData.uuid(), generateTestData.uuid()],
         read_status: true,
       },
     };
@@ -54,7 +68,7 @@ describe('Notifications API (v1)', () => {
 
   test('create behavior group', async () => {
     const createBehaviorGroupRequest: CreateBehaviorGroupRequest = {
-      display_name: 'test name',
+      display_name: generateTestData.name(),
     };
     const params: NotificationResourceV1CreateBehaviorGroupParams = { createBehaviorGroupRequest };
     const resp = await client.notificationResourceV1CreateBehaviorGroup(params);
@@ -62,35 +76,38 @@ describe('Notifications API (v1)', () => {
   });
 
   test('delete behavior group', async () => {
-    const params: NotificationResourceV1DeleteBehaviorGroupParams = { id: '1' };
+    const params: NotificationResourceV1DeleteBehaviorGroupParams = { id: generateTestData.uuid() };
     const resp = await client.notificationResourceV1DeleteBehaviorGroup(params);
     expect(resp.status).toBe(200);
   });
 
   test('find behavior groups by bundle id', async () => {
-    const params: NotificationResourceV1FindBehaviorGroupsByBundleIdParams = { bundleId: '1' };
+    const params: NotificationResourceV1FindBehaviorGroupsByBundleIdParams = { bundleId: generateTestData.uuid() };
     const resp = await client.notificationResourceV1FindBehaviorGroupsByBundleId(params);
     expect(resp.status).toBe(200);
   });
 
   test('update behavior group', async () => {
     const updateBehaviorGroupRequest: UpdateBehaviorGroupRequest = {
-      display_name: 'updated name',
+      display_name: generateTestData.name(),
     };
-    const params: NotificationResourceV1UpdateBehaviorGroupParams = { id: '1', updateBehaviorGroupRequest };
+    const params: NotificationResourceV1UpdateBehaviorGroupParams = { id: generateTestData.uuid(), updateBehaviorGroupRequest };
     const resp = await client.notificationResourceV1UpdateBehaviorGroup(params);
     expect(resp.status).toBe(200);
   });
 
   test('delete behavior group from event type', async () => {
-    const params: NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams = { behaviorGroupId: '12', eventTypeId: '13' };
+    const params: NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams = {
+      behaviorGroupId: generateTestData.uuid(),
+      eventTypeId: generateTestData.uuid(),
+    };
     const resp = await client.notificationResourceV1DeleteBehaviorGroupFromEventType(params);
     expect(resp.status).toBe(204);
   });
 
   test('get behavior groups affected by removal of endpoint', async () => {
     const params: NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams = {
-      endpointId: '1',
+      endpointId: generateTestData.uuid(),
     };
     const resp = await client.notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint(params);
     expect(resp.status).toBe(200);
@@ -98,15 +115,18 @@ describe('Notifications API (v1)', () => {
 
   test('update behavior group actions', async () => {
     const params: NotificationResourceV1UpdateBehaviorGroupActionsParams = {
-      behaviorGroupId: 'behaviorGroupId',
-      body: '',
+      behaviorGroupId: generateTestData.uuid(),
+      body: [],
     };
     const resp = await client.notificationResourceV1UpdateBehaviorGroupActions(params);
     expect(resp.status).toBe(200);
   });
 
   test('append behavior group to event type', async () => {
-    const params: NotificationResourceV1AppendBehaviorGroupToEventTypeParams = { behaviorGroupUuid: '1', eventTypeUuid: '1' };
+    const params: NotificationResourceV1AppendBehaviorGroupToEventTypeParams = {
+      behaviorGroupUuid: generateTestData.uuid(),
+      eventTypeUuid: generateTestData.uuid(),
+    };
     const resp = await client.notificationResourceV1AppendBehaviorGroupToEventType(params);
     expect(resp.status).toBe(204);
   });
@@ -119,7 +139,7 @@ describe('Notifications API (v1)', () => {
 
   test('org config - save daily digest time pref', async () => {
     const params: OrgConfigResourceV1SaveDailyDigestTimePreferenceParams = {
-      body: '',
+      body: 'UTC',
     };
     const resp = await client.orgConfigResourceV1SaveDailyDigestTimePreference(params);
     expect(resp.status).toBe(204);
@@ -132,7 +152,7 @@ describe('Notifications API (v1)', () => {
   });
 
   test('update event types endpoints', async () => {
-    const params: NotificationResourceV1UpdateEventTypeEndpointsParams = { eventTypeId: '1', body: {} };
+    const params: NotificationResourceV1UpdateEventTypeEndpointsParams = { eventTypeId: generateTestData.uuid(), body: [] };
     const resp = await client.notificationResourceV1UpdateEventTypeEndpoints(params);
     expect(resp.status).toBe(200);
   });
@@ -149,8 +169,8 @@ describe('Notifications API (v1)', () => {
 
   test('update event type behaviors', async () => {
     const params: NotificationResourceV1UpdateEventTypeBehaviorsParams = {
-      eventTypeId: 'eventTypeId',
-      body: '',
+      eventTypeId: generateTestData.uuid(),
+      body: [],
     };
     const resp = await client.notificationResourceV1UpdateEventTypeBehaviors(params);
     expect(resp.status).toBe(200);
@@ -158,7 +178,7 @@ describe('Notifications API (v1)', () => {
 
   test('get event types affected by removal of behavior group', async () => {
     const params: NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams = {
-      behaviorGroupId: '1',
+      behaviorGroupId: generateTestData.uuid(),
     };
     const resp = await client.notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup(params);
     expect(resp.status).toBe(200);

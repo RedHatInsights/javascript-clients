@@ -1,44 +1,51 @@
-import { describe, expect, test } from '@jest/globals';
+/**
+ * Using CommonJS require() for consistency with Jest's default behavior.
+ * ESM support in Jest remains experimental as of 2026.
+ * @todo Migrate to Vitest for native ESM support and better performance
+ */
+const { describe, expect, test } = require('@jest/globals');
+const { randomUUID } = require('crypto');
 
-import { RbacClient } from '../../api';
-import { Group, GroupPrincipalIn, GroupRoleIn, RoleIn } from '../../types';
-import { AxiosRequestConfig } from 'axios';
-import { GetGroupParams } from '../../GetGroup';
-import { CreateRoleParams } from '../../CreateRole';
-import { DeleteGroupParams } from '../../DeleteGroup';
-import { ListGroupsParams } from '../../ListGroups';
-import { GetRoleParams } from '../../GetRole';
-import { ListRolesParams } from '../../ListRoles';
-import { DeleteRoleParams } from '../../DeleteRole';
-import { ListPrincipalsParams } from '../../ListPrincipals';
-import { GetPrincipalsFromGroupParams } from '../../GetPrincipalsFromGroup';
-import { DeletePrincipalFromGroupParams } from '../../DeletePrincipalFromGroup';
-import { AddPrincipalToGroupParams } from '../../AddPrincipalToGroup';
-import { AddRoleToGroupParams } from '../../AddRoleToGroup';
-import { DeleteRoleFromGroupParams } from '../../DeleteRoleFromGroup';
-import { GetRoleAccessParams } from '../../GetRoleAccess';
-import { GetPrincipalAccessParams } from '../../GetPrincipalAccess';
+const { RbacClient } = require('../../api');
+const axios = require('axios');
 
-const BASE_PATH = 'http://localhost:3001/api/rbac/v1/';
+// TypeScript type imports (compile-time only)
+import type { Group, GroupPrincipalIn, GroupRoleIn, RoleIn } from '../../types';
 
-const config: AxiosRequestConfig = {
-  baseURL: BASE_PATH,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  withCredentials: false,
+// Simple data generators using Node.js built-ins
+// Note: Using these instead of faker due to CommonJS/ESM compatibility issues
+const generateTestData = {
+  uuid: () => randomUUID(),
+  name: () => `test-${Math.random().toString(36).substring(7)}`,
+  description: () => `Test description ${Date.now()}`,
+  application: () => `app-${Math.random().toString(36).substring(7)}`,
+  jobTitle: () => `role-${Math.random().toString(36).substring(7)}`,
 };
 
-const client = RbacClient(BASE_PATH);
+const BASE_PATH = 'http://localhost:3001';
+
+const authHeaders = {
+  'Content-Type': 'application/json',
+  Authorization: 'Basic ' + Buffer.from('testuser:testpass').toString('base64'),
+};
+
+const axiosConfig = {
+  axios: axios.create({
+    headers: authHeaders,
+    withCredentials: false,
+  }),
+};
+
+const client = RbacClient(BASE_PATH, axiosConfig);
 
 describe('RBAC API (v1)', () => {
   test('access', async () => {
-    const getRoleAccessParams: GetRoleAccessParams = { uuid: 'fake-uuid' };
+    const getRoleAccessParams = { uuid: generateTestData.uuid() };
     const roleAccessResp = await client.getRoleAccess(getRoleAccessParams);
     expect(roleAccessResp.status).toEqual(200);
 
-    const getPrincipalAccessParams: GetPrincipalAccessParams = {
-      application: 'jeff',
+    const getPrincipalAccessParams = {
+      application: generateTestData.application(),
     };
     const getPrincipalAccessResp = await client.getPrincipalAccess(getPrincipalAccessParams);
     expect(getPrincipalAccessResp.status).toEqual(200);
@@ -46,15 +53,15 @@ describe('RBAC API (v1)', () => {
 
   test('groups crud operations', async () => {
     const groupData: Group = {
-      name: 'Test Group',
-      description: 'Some test group',
+      name: generateTestData.name(),
+      description: generateTestData.description(),
     };
-    const response = await client.createGroup(groupData, config);
+    const response = await client.createGroup({ group: groupData });
     expect(response.status).toEqual(201);
     expect(response.data.name).toBeTruthy();
     expect(response.data.description).toBeTruthy();
 
-    const getGroupParams: GetGroupParams = {
+    const getGroupParams = {
       uuid: response.data.uuid,
     };
     const getResponse = await client.getGroup(getGroupParams);
@@ -62,13 +69,13 @@ describe('RBAC API (v1)', () => {
     expect(getResponse.data.name).toBeTruthy();
     expect(getResponse.data.description).toBeTruthy();
 
-    const listParams: ListGroupsParams = {};
+    const listParams = {};
     const listResponse = await client.listGroups(listParams);
     expect(listResponse.status).toEqual(200);
     expect(listResponse.data).toBeTruthy();
 
-    const delParams: DeleteGroupParams = {
-      uuid: 'fake-uuid',
+    const delParams = {
+      uuid: generateTestData.uuid(),
     };
     const delResponse = await client.deleteGroup(delParams);
     expect(delResponse.status).toEqual(204);
@@ -76,10 +83,10 @@ describe('RBAC API (v1)', () => {
 
   test('roles crud operations', async () => {
     const roleData: RoleIn = {
-      name: 'Test Group',
+      name: generateTestData.jobTitle(),
       access: [],
     };
-    const createRoleParams: CreateRoleParams = {
+    const createRoleParams = {
       roleIn: roleData,
     };
     const response = await client.createRole(createRoleParams);
@@ -88,20 +95,20 @@ describe('RBAC API (v1)', () => {
     expect(response.data.description).toBeTruthy();
     expect(response.data.display_name).toBeTruthy();
 
-    const getRoleParams: GetRoleParams = {
-      uuid: 'fake-uuid',
+    const getRoleParams = {
+      uuid: generateTestData.uuid(),
     };
     const getResponse = await client.getRole(getRoleParams);
     expect(getResponse.status).toEqual(200);
     expect(getResponse.data.name).toBeTruthy();
 
-    const listParams: ListRolesParams = {};
+    const listParams = {};
     const listResponse = await client.listRoles(listParams);
     expect(listResponse.status).toEqual(200);
     expect(listResponse.data).toBeTruthy();
 
-    const deleteRoleParams: DeleteRoleParams = {
-      uuid: 'fake-uuid',
+    const deleteRoleParams = {
+      uuid: generateTestData.uuid(),
     };
     const delResponse = await client.deleteRole(deleteRoleParams);
     expect(delResponse.status).toEqual(204);
@@ -109,31 +116,34 @@ describe('RBAC API (v1)', () => {
     const groupRoleInTest: GroupRoleIn = {
       roles: [],
     };
-    const addRoleToGroupParams: AddRoleToGroupParams = {
-      uuid: 'fake-group-uuid',
+    const addRoleToGroupParams = {
+      uuid: generateTestData.uuid(),
       groupRoleIn: groupRoleInTest,
     };
     const addRoleToGroupResponse = await client.addRoleToGroup(addRoleToGroupParams);
     expect(addRoleToGroupResponse.status).toEqual(200);
 
-    const delRoleFromGroupParams: DeleteRoleFromGroupParams = { uuid: 'fake-group-uuid', roles: 'role1,role2' };
+    const delRoleFromGroupParams = {
+      uuid: generateTestData.uuid(),
+      roles: `${generateTestData.jobTitle()},${generateTestData.jobTitle()}`,
+    };
     const delRoleFromGroupResp = await client.deleteRoleFromGroup(delRoleFromGroupParams);
     expect(delRoleFromGroupResp.status).toEqual(204);
   });
 
   test('principals', async () => {
-    const listParams: ListPrincipalsParams = {};
+    const listParams = {};
     const listResponse = await client.listPrincipals(listParams);
     expect(listResponse.status).toEqual(200);
 
-    const getPrincipalsFromGroupParams: GetPrincipalsFromGroupParams = {
-      uuid: 'fake-group-uuid',
+    const getPrincipalsFromGroupParams = {
+      uuid: generateTestData.uuid(),
     };
     const getPrincipalsFromGroupResp = await client.getPrincipalsFromGroup(getPrincipalsFromGroupParams);
     expect(getPrincipalsFromGroupResp.status).toEqual(200);
 
-    const delPrincipalFromGroupParams: DeletePrincipalFromGroupParams = {
-      uuid: 'fake-group-uuid',
+    const delPrincipalFromGroupParams = {
+      uuid: generateTestData.uuid(),
     };
 
     const delFromGroupResp = await client.deletePrincipalFromGroup(delPrincipalFromGroupParams);
@@ -142,8 +152,8 @@ describe('RBAC API (v1)', () => {
     const groupPrincipalIn: GroupPrincipalIn = {
       principals: [],
     };
-    const addPrincipalToGroupParams: AddPrincipalToGroupParams = {
-      uuid: 'fake-group-uuid',
+    const addPrincipalToGroupParams = {
+      uuid: generateTestData.uuid(),
       groupPrincipalIn: groupPrincipalIn,
     };
 
