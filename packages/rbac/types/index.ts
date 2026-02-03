@@ -285,22 +285,28 @@ export interface CrossAccountRequestByAccount {
     'end_date'?: any;
     /**
      *
-     * @type {string}
+     * @type {boolean}
      * @memberof CrossAccountRequestByAccount
      */
-    'first_name'?: string;
+    'user_available': boolean;
     /**
      *
      * @type {string}
      * @memberof CrossAccountRequestByAccount
      */
-    'last_name'?: string;
+    'first_name': string;
     /**
      *
      * @type {string}
      * @memberof CrossAccountRequestByAccount
      */
-    'email'?: string;
+    'last_name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof CrossAccountRequestByAccount
+     */
+    'email': string;
 }
 /**
  *
@@ -355,7 +361,13 @@ export interface CrossAccountRequestByUserId {
      * @type {string}
      * @memberof CrossAccountRequestByUserId
      */
-    'user_id'?: string;
+    'user_id': string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof CrossAccountRequestByUserId
+     */
+    'user_available': boolean;
 }
 /**
  * @type CrossAccountRequestDetail

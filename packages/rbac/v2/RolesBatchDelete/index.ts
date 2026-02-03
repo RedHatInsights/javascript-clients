@@ -8,39 +8,38 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem400, ProblemsProblem403, RoleBindingsCreate401Response, RoleBindingsCreate500Response, WorkspacesCreateWorkspaceRequest, WorkspacesCreateWorkspaceResponse } from '../types';
+import type { ProblemsProblem400, ProblemsProblem403, ProblemsProblem404, RoleBindingsCreate401Response, RoleBindingsCreate500Response, RolesBatchDeleteRolesRequest } from '../types';
 
 
-export type WorkspacesCreateParams = {
+export type RolesBatchDeleteParams = {
   /**
   *
-  * @type { WorkspacesCreateWorkspaceRequest }
-  * @memberof WorkspacesCreateApi
+  * @type { RolesBatchDeleteRolesRequest }
+  * @memberof RolesBatchDeleteApi
   */
-  workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest,
+  rolesBatchDeleteRolesRequest: RolesBatchDeleteRolesRequest,
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesCreateReturnType = WorkspacesCreateWorkspaceResponse;
+export type RolesBatchDeleteReturnType = void;
 
-const isWorkspacesCreateObjectParams = (params: [WorkspacesCreateParams] | unknown[]): params is [WorkspacesCreateParams] => {
+const isRolesBatchDeleteObjectParams = (params: [RolesBatchDeleteParams] | unknown[]): params is [RolesBatchDeleteParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true && Object.prototype.hasOwnProperty.call(params[0], 'workspacesCreateWorkspaceRequest')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'rolesBatchDeleteRolesRequest')
   }
   return false
 }
 /**
-* Create workspace in tenant
-* @summary Create workspace in tenant
-* @param {WorkspacesCreateParams} config with all available params.
+* Delete multiple roles by ID atomically.
+* @param {RolesBatchDeleteParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesCreateParams] | [WorkspacesCreateWorkspaceRequest, AxiosRequestConfig])) => {
-    const params = isWorkspacesCreateObjectParams(config) ? config[0] : ['workspacesCreateWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesCreateParams;
-    const { workspacesCreateWorkspaceRequest, options = {} } = params;
-    const localVarPath = `/workspaces/`;
+export const rolesBatchDeleteParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RolesBatchDeleteParams] | [RolesBatchDeleteRolesRequest, AxiosRequestConfig])) => {
+    const params = isRolesBatchDeleteObjectParams(config) ? config[0] : ['rolesBatchDeleteRolesRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RolesBatchDeleteParams;
+    const { rolesBatchDeleteRolesRequest, options = {} } = params;
+    const localVarPath = `/roles:batchDelete`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'POST' as Method, ...options};
@@ -57,10 +56,10 @@ export const workspacesCreateParamCreator = async (sendRequest: BaseAPI["sendReq
     const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: workspacesCreateWorkspaceRequest,
+        serializeData: rolesBatchDeleteRolesRequest,
     };
 
-    return sendRequest<WorkspacesCreateReturnType>(Promise.resolve(args));
+    return sendRequest<RolesBatchDeleteReturnType>(Promise.resolve(args));
 }
 
-export default workspacesCreateParamCreator;
+export default rolesBatchDeleteParamCreator;

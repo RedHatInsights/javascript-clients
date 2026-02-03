@@ -60,5 +60,3 @@ export { default as updateRole, type UpdateRoleReturnType } from './UpdateRole'
 
 
 export * from './types'
-
-// Trigger release - updated to regenerate clients

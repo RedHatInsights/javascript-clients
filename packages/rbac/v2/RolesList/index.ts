@@ -8,46 +8,46 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, RoleBindingsCreate401Response, RoleBindingsCreate500Response, WorkspacesWorkspaceListResponse, WorkspacesWorkspaceTypesQueryParam } from '../types';
+import type { ProblemsProblem403, RoleBindingsCreate401Response, RoleBindingsCreate500Response, RolesList200Response } from '../types';
 
 
-export type WorkspacesListParams = {
+export type RolesListParams = {
   /**
   *
   * @type { number }
-  * @memberof WorkspacesListApi
+  * @memberof RolesListApi
   */
   limit?: number,
   /**
-  * Offset for offset-based pagination.
-  * @type { number }
-  * @memberof WorkspacesListApi
-  */
-  offset?: number,
-  /**
-  * Defaults to all when param is not supplied.
-  * @type { WorkspacesWorkspaceTypesQueryParam }
-  * @memberof WorkspacesListApi
-  */
-  type?: WorkspacesWorkspaceTypesQueryParam,
-  /**
-  * Case sensitive exact match of workspace by name.
+  * Cursor for cursor-based pagination.
   * @type { string }
-  * @memberof WorkspacesListApi
+  * @memberof RolesListApi
+  */
+  cursor?: string,
+  /**
+  * Filter by role name using case sensitive exact match.
+  * @type { string }
+  * @memberof RolesListApi
   */
   name?: string,
   /**
-  * Sort by specified field(s), prefix with \'-\' for descending order. Allowed fields: name, created, modified, type.
+  * Control which fields are included in the response to optimize payload size.
   * @type { string }
-  * @memberof WorkspacesListApi
+  * @memberof RolesListApi
+  */
+  fields?: string,
+  /**
+  * Sort by specified field(s), prefix with \'-\' for descending order. Allowed fields: name, last_modified.
+  * @type { string }
+  * @memberof RolesListApi
   */
   orderBy?: string,
   options?: AxiosRequestConfig
 }
 
-export type WorkspacesListReturnType = WorkspacesWorkspaceListResponse;
+export type RolesListReturnType = RolesList200Response;
 
-const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]): params is [WorkspacesListParams] => {
+const isRolesListObjectParams = (params: [RolesListParams] | unknown[]): params is [RolesListParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
     return true
@@ -55,16 +55,16 @@ const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]
   return false
 }
 /**
-* List workspaces in a tenant
-* @summary List workspaces in a tenant
-* @param {WorkspacesListParams} config with all available params.
+* List the roles for a tenant
+* @summary List the roles for a tenant
+* @param {RolesListParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, string, string, AxiosRequestConfig])) => {
-    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'name', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
-    const { limit, offset, type, name, orderBy, options = {} } = params;
-    const localVarPath = `/workspaces/`;
+export const rolesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RolesListParams] | [number, string, string, string, string, AxiosRequestConfig])) => {
+    const params = isRolesListObjectParams(config) ? config[0] : ['limit', 'cursor', 'name', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RolesListParams;
+    const { limit, cursor, name, fields, orderBy, options = {} } = params;
+    const localVarPath = `/roles/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
@@ -75,16 +75,16 @@ export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendReque
         localVarQueryParameter['limit'] = limit;
     }
 
-    if (offset !== undefined) {
-        localVarQueryParameter['offset'] = offset;
-    }
-
-    if (type !== undefined) {
-        localVarQueryParameter['type'] = type;
+    if (cursor !== undefined) {
+        localVarQueryParameter['cursor'] = cursor;
     }
 
     if (name !== undefined) {
         localVarQueryParameter['name'] = name;
+    }
+
+    if (fields !== undefined) {
+        localVarQueryParameter['fields'] = fields;
     }
 
     if (orderBy !== undefined) {
@@ -101,7 +101,7 @@ export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendReque
         options: localVarRequestOptions,
     };
 
-    return sendRequest<WorkspacesListReturnType>(Promise.resolve(args));
+    return sendRequest<RolesListReturnType>(Promise.resolve(args));
 }
 
-export default workspacesListParamCreator;
+export default rolesListParamCreator;

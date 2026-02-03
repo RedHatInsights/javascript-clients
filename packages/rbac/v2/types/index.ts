@@ -24,7 +24,7 @@ export interface CursorPaginationLinks {
  */
 export interface CursorPaginationMeta {
     /**
-     * Limit of returned objects. Use -1 to return all objects.
+     * Limit for pagination. Controls the maximum number of items returned. Use -1 to return all objects.
      * @type {number}
      * @memberof CursorPaginationMeta
      */
@@ -74,13 +74,13 @@ export interface OffsetPaginationMeta {
      */
     'count': number;
     /**
-     * Limit of returned objects. Use -1 to return all objects.
+     * Limit for pagination. Controls the maximum number of items returned. Use -1 to return all objects.
      * @type {number}
      * @memberof OffsetPaginationMeta
      */
     'limit': number;
     /**
-     * Offset of returned objects
+     * Offset for offset-based pagination. The number of items to skip before starting to return results.
      * @type {number}
      * @memberof OffsetPaginationMeta
      */
@@ -322,6 +322,240 @@ export interface RoleBindingsBaseSubject {
 /**
  *
  * @export
+ * @interface RoleBindingsCreate401Response
+ */
+export interface RoleBindingsCreate401Response {
+    /**
+     *
+     * @type {ProblemsProblemType}
+     * @memberof RoleBindingsCreate401Response
+     */
+    'type'?: ProblemsProblemType;
+    /**
+     *
+     * @type {number}
+     * @memberof RoleBindingsCreate401Response
+     */
+    'status'?: RoleBindingsCreate401ResponseStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreate401Response
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreate401Response
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreate401Response
+     */
+    'instance'?: string;
+}
+
+export const RoleBindingsCreate401ResponseStatusEnum = {
+    NUMBER_401: 401
+} as const;
+
+export type RoleBindingsCreate401ResponseStatusEnum = typeof RoleBindingsCreate401ResponseStatusEnum[keyof typeof RoleBindingsCreate401ResponseStatusEnum];
+
+/**
+ *
+ * @export
+ * @interface RoleBindingsCreate500Response
+ */
+export interface RoleBindingsCreate500Response {
+    /**
+     *
+     * @type {ProblemsProblemType}
+     * @memberof RoleBindingsCreate500Response
+     */
+    'type'?: ProblemsProblemType;
+    /**
+     *
+     * @type {number}
+     * @memberof RoleBindingsCreate500Response
+     */
+    'status'?: RoleBindingsCreate500ResponseStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreate500Response
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreate500Response
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreate500Response
+     */
+    'instance'?: string;
+}
+
+export const RoleBindingsCreate500ResponseStatusEnum = {
+    NUMBER_500: 500
+} as const;
+
+export type RoleBindingsCreate500ResponseStatusEnum = typeof RoleBindingsCreate500ResponseStatusEnum[keyof typeof RoleBindingsCreate500ResponseStatusEnum];
+
+/**
+ * Request body for creating role bindings
+ * @export
+ * @interface RoleBindingsCreateRoleBindingsRequest
+ */
+export interface RoleBindingsCreateRoleBindingsRequest {
+    /**
+     *
+     * @type {RoleBindingsCreateRoleBindingsRequestResource}
+     * @memberof RoleBindingsCreateRoleBindingsRequest
+     */
+    'resource': RoleBindingsCreateRoleBindingsRequestResource;
+    /**
+     * Subjects to grant access to (at least one required)
+     * @type {Array<RoleBindingsCreateRoleBindingsRequestSubjectsInner>}
+     * @memberof RoleBindingsCreateRoleBindingsRequest
+     */
+    'subjects': Array<RoleBindingsCreateRoleBindingsRequestSubjectsInner>;
+    /**
+     * Roles to assign (at least one required)
+     * @type {Array<RoleBindingsCreateRoleBindingsRequestRolesInner>}
+     * @memberof RoleBindingsCreateRoleBindingsRequest
+     */
+    'roles': Array<RoleBindingsCreateRoleBindingsRequestRolesInner>;
+}
+/**
+ * Resource to bind roles to
+ * @export
+ * @interface RoleBindingsCreateRoleBindingsRequestResource
+ */
+export interface RoleBindingsCreateRoleBindingsRequestResource {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreateRoleBindingsRequestResource
+     */
+    'id': string;
+    /**
+     * Type of resource
+     * @type {string}
+     * @memberof RoleBindingsCreateRoleBindingsRequestResource
+     */
+    'type': string;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsCreateRoleBindingsRequestRolesInner
+ */
+export interface RoleBindingsCreateRoleBindingsRequestRolesInner {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreateRoleBindingsRequestRolesInner
+     */
+    'id': string;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsCreateRoleBindingsRequestSubjectsInner
+ */
+export interface RoleBindingsCreateRoleBindingsRequestSubjectsInner {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreateRoleBindingsRequestSubjectsInner
+     */
+    'id': string;
+    /**
+     * Type of subject
+     * @type {string}
+     * @memberof RoleBindingsCreateRoleBindingsRequestSubjectsInner
+     */
+    'type': RoleBindingsCreateRoleBindingsRequestSubjectsInnerTypeEnum;
+}
+
+export const RoleBindingsCreateRoleBindingsRequestSubjectsInnerTypeEnum = {
+    User: 'user',
+    Group: 'group'
+} as const;
+
+export type RoleBindingsCreateRoleBindingsRequestSubjectsInnerTypeEnum = typeof RoleBindingsCreateRoleBindingsRequestSubjectsInnerTypeEnum[keyof typeof RoleBindingsCreateRoleBindingsRequestSubjectsInnerTypeEnum];
+
+/**
+ * Response from creating role bindings - supports field masking with all optional fields
+ * @export
+ * @interface RoleBindingsCreateRoleBindingsResponse
+ */
+export interface RoleBindingsCreateRoleBindingsResponse {
+    /**
+     *
+     * @type {RoleBindingsResource}
+     * @memberof RoleBindingsCreateRoleBindingsResponse
+     */
+    'resource'?: RoleBindingsResource;
+    /**
+     * Subjects that were granted access (includes group.user_count when applicable)
+     * @type {Array<RoleBindingsCreateRoleBindingsResponseSubjectsInner>}
+     * @memberof RoleBindingsCreateRoleBindingsResponse
+     */
+    'subjects'?: Array<RoleBindingsCreateRoleBindingsResponseSubjectsInner>;
+    /**
+     * Roles that were assigned
+     * @type {Array<RoleBindingsRole>}
+     * @memberof RoleBindingsCreateRoleBindingsResponse
+     */
+    'roles'?: Array<RoleBindingsRole>;
+    /**
+     * Timestamp of when the role bindings were created
+     * @type {string}
+     * @memberof RoleBindingsCreateRoleBindingsResponse
+     */
+    'last_modified'?: string;
+    /**
+     * Number of subjects in the binding
+     * @type {number}
+     * @memberof RoleBindingsCreateRoleBindingsResponse
+     */
+    'subject_count'?: number;
+    /**
+     * Number of roles assigned
+     * @type {number}
+     * @memberof RoleBindingsCreateRoleBindingsResponse
+     */
+    'role_count'?: number;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsCreateRoleBindingsResponseSubjectsInner
+ */
+export interface RoleBindingsCreateRoleBindingsResponseSubjectsInner {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsCreateRoleBindingsResponseSubjectsInner
+     */
+    'id'?: string;
+    /**
+     * Type of subject
+     * @type {string}
+     * @memberof RoleBindingsCreateRoleBindingsResponseSubjectsInner
+     */
+    'type': string;
+}
+/**
+ *
+ * @export
  * @interface RoleBindingsGroupDetails
  */
 export interface RoleBindingsGroupDetails {
@@ -373,91 +607,28 @@ export type RoleBindingsGroupSubjectTypeEnum = typeof RoleBindingsGroupSubjectTy
 /**
  *
  * @export
- * @interface RoleBindingsListBySubject401Response
+ * @interface RoleBindingsListBySubject200Response
  */
-export interface RoleBindingsListBySubject401Response {
+export interface RoleBindingsListBySubject200Response {
     /**
      *
-     * @type {ProblemsProblemType}
-     * @memberof RoleBindingsListBySubject401Response
+     * @type {CursorPaginationMeta}
+     * @memberof RoleBindingsListBySubject200Response
      */
-    'type'?: ProblemsProblemType;
+    'meta': CursorPaginationMeta;
     /**
      *
-     * @type {number}
-     * @memberof RoleBindingsListBySubject401Response
+     * @type {CursorPaginationLinks}
+     * @memberof RoleBindingsListBySubject200Response
      */
-    'status'?: RoleBindingsListBySubject401ResponseStatusEnum;
+    'links': CursorPaginationLinks;
     /**
      *
-     * @type {string}
-     * @memberof RoleBindingsListBySubject401Response
+     * @type {Array<RoleBindingsRoleBindingBySubject>}
+     * @memberof RoleBindingsListBySubject200Response
      */
-    'title'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsListBySubject401Response
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsListBySubject401Response
-     */
-    'instance'?: string;
+    'data': Array<RoleBindingsRoleBindingBySubject>;
 }
-
-export const RoleBindingsListBySubject401ResponseStatusEnum = {
-    NUMBER_401: 401
-} as const;
-
-export type RoleBindingsListBySubject401ResponseStatusEnum = typeof RoleBindingsListBySubject401ResponseStatusEnum[keyof typeof RoleBindingsListBySubject401ResponseStatusEnum];
-
-/**
- *
- * @export
- * @interface RoleBindingsListBySubject500Response
- */
-export interface RoleBindingsListBySubject500Response {
-    /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof RoleBindingsListBySubject500Response
-     */
-    'type'?: ProblemsProblemType;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleBindingsListBySubject500Response
-     */
-    'status'?: RoleBindingsListBySubject500ResponseStatusEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsListBySubject500Response
-     */
-    'title'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsListBySubject500Response
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsListBySubject500Response
-     */
-    'instance'?: string;
-}
-
-export const RoleBindingsListBySubject500ResponseStatusEnum = {
-    NUMBER_500: 500
-} as const;
-
-export type RoleBindingsListBySubject500ResponseStatusEnum = typeof RoleBindingsListBySubject500ResponseStatusEnum[keyof typeof RoleBindingsListBySubject500ResponseStatusEnum];
-
 /**
  *
  * @export
@@ -540,31 +711,6 @@ export interface RoleBindingsRoleBindingBySubject {
     'inherited_from'?: RoleBindingsResource;
 }
 /**
- *
- * @export
- * @interface RoleBindingsRoleBindingBySubjectListResponse
- */
-export interface RoleBindingsRoleBindingBySubjectListResponse {
-    /**
-     *
-     * @type {CursorPaginationMeta}
-     * @memberof RoleBindingsRoleBindingBySubjectListResponse
-     */
-    'meta': CursorPaginationMeta;
-    /**
-     *
-     * @type {CursorPaginationLinks}
-     * @memberof RoleBindingsRoleBindingBySubjectListResponse
-     */
-    'links': CursorPaginationLinks;
-    /**
-     * List of role bindings grouped by subject
-     * @type {Array<RoleBindingsRoleBindingBySubject>}
-     * @memberof RoleBindingsRoleBindingBySubjectListResponse
-     */
-    'data': Array<RoleBindingsRoleBindingBySubject>;
-}
-/**
  * Subject of the role binding
  * @export
  * @interface RoleBindingsRoleBindingBySubjectSubject
@@ -582,6 +728,32 @@ export interface RoleBindingsRoleBindingBySubjectSubject {
      * @memberof RoleBindingsRoleBindingBySubjectSubject
      */
     'type': string;
+}
+/**
+ * Request body for updating role bindings - contains the new roles to assign
+ * @export
+ * @interface RoleBindingsUpdateRoleBindingsRequest
+ */
+export interface RoleBindingsUpdateRoleBindingsRequest {
+    /**
+     * Roles to assign (replaces existing roles for the target binding)
+     * @type {Array<RoleBindingsUpdateRoleBindingsRequestRolesInner>}
+     * @memberof RoleBindingsUpdateRoleBindingsRequest
+     */
+    'roles': Array<RoleBindingsUpdateRoleBindingsRequestRolesInner>;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsUpdateRoleBindingsRequestRolesInner
+ */
+export interface RoleBindingsUpdateRoleBindingsRequestRolesInner {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsUpdateRoleBindingsRequestRolesInner
+     */
+    'id': string;
 }
 /**
  *
@@ -622,6 +794,137 @@ export const RoleBindingsUserSubjectTypeEnum = {
 
 export type RoleBindingsUserSubjectTypeEnum = typeof RoleBindingsUserSubjectTypeEnum[keyof typeof RoleBindingsUserSubjectTypeEnum];
 
+/**
+ * Data for request to delete multiple roles by ID.
+ * @export
+ * @interface RolesBatchDeleteRolesRequest
+ */
+export interface RolesBatchDeleteRolesRequest {
+    /**
+     * The IDs of the roles to delete. A maximum of 100 roles can be deleted in one batch.
+     * @type {Array<string>}
+     * @memberof RolesBatchDeleteRolesRequest
+     */
+    'ids': Array<string>;
+}
+/**
+ * Role data for create and update operations
+ * @export
+ * @interface RolesCreateOrUpdateRoleRequest
+ */
+export interface RolesCreateOrUpdateRoleRequest {
+    /**
+     * A human readable name for the role. Does not need to be unique.
+     * @type {string}
+     * @memberof RolesCreateOrUpdateRoleRequest
+     */
+    'name': string;
+    /**
+     * A description of the role to help clarify its purpose. Does not need to be unique.
+     * @type {string}
+     * @memberof RolesCreateOrUpdateRoleRequest
+     */
+    'description': string;
+    /**
+     * List of permissions to assign to this role
+     * @type {Array<RolesPermission>}
+     * @memberof RolesCreateOrUpdateRoleRequest
+     */
+    'permissions': Array<RolesPermission>;
+}
+/**
+ *
+ * @export
+ * @interface RolesList200Response
+ */
+export interface RolesList200Response {
+    /**
+     *
+     * @type {CursorPaginationMeta}
+     * @memberof RolesList200Response
+     */
+    'meta': CursorPaginationMeta;
+    /**
+     *
+     * @type {CursorPaginationLinks}
+     * @memberof RolesList200Response
+     */
+    'links': CursorPaginationLinks;
+    /**
+     *
+     * @type {Array<RolesRole>}
+     * @memberof RolesList200Response
+     */
+    'data': Array<RolesRole>;
+}
+/**
+ *
+ * @export
+ * @interface RolesPermission
+ */
+export interface RolesPermission {
+    /**
+     * Application name
+     * @type {string}
+     * @memberof RolesPermission
+     */
+    'application': string;
+    /**
+     * Resource type within the application
+     * @type {string}
+     * @memberof RolesPermission
+     */
+    'resource_type': string;
+    /**
+     * Operation for this permission
+     * @type {string}
+     * @memberof RolesPermission
+     */
+    'operation': string;
+}
+/**
+ * Role with optional fields (supports field masking)
+ * @export
+ * @interface RolesRole
+ */
+export interface RolesRole {
+    /**
+     *
+     * @type {string}
+     * @memberof RolesRole
+     */
+    'id'?: string;
+    /**
+     * A human readable name for the role. Does not need to be unique.
+     * @type {string}
+     * @memberof RolesRole
+     */
+    'name'?: string;
+    /**
+     * A description of the role to help clarify its purpose. Does not need to be unique.
+     * @type {string}
+     * @memberof RolesRole
+     */
+    'description'?: string;
+    /**
+     * List of permissions assigned to this role
+     * @type {Array<RolesPermission>}
+     * @memberof RolesRole
+     */
+    'permissions'?: Array<RolesPermission>;
+    /**
+     * Number of permissions assigned to this role
+     * @type {number}
+     * @memberof RolesRole
+     */
+    'permissions_count'?: number;
+    /**
+     * Timestamp of when the role was last modified
+     * @type {string}
+     * @memberof RolesRole
+     */
+    'last_modified'?: string;
+}
 /**
  *
  * @export
