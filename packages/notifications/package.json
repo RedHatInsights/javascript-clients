@@ -1,7 +1,7 @@
 {
   "name": "@redhat-cloud-services/notifications-client",
   "version": "4.0.6",
-  "description": "",
+  "description": "JavaScript client for Red Hat Insights Notifications service",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "exports": {
