@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/integrations-client",
-  "version": "4.0.8",
+  "version": "5.0.0",
   "description": "JavaScript client for Red Hat Insights Integrations service",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
