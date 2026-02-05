@@ -7,7 +7,7 @@
       "noImplicitOverride": false,
       "noPropertyAccessFromIndexSignature": false,
       "noImplicitReturns": true,
-      "noFallthroughCasesInSwitch": true,
+      "noFallthroughCasesInSwitch": true
   },
   "files": [],
   "references": [

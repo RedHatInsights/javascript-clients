@@ -1,9 +1,12 @@
 {
-  "entryPoints": ["./**/index.ts"],
+  "entryPoints": ["./src/index.ts"],
   "out": "doc",
   "plugin": [
     "typedoc-plugin-markdown"
   ],
   "theme": "markdown",
-  "gitRevision": "main"
+  "gitRevision": "main",
+  "excludeInternal": true,
+  "excludePrivate": true,
+  "excludeProtected": true
 }
