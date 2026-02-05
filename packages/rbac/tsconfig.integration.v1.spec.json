@@ -3,11 +3,12 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
+    "allowJs": true,
     "types": ["jest", "node"]
   },
   "include": [
     "jest.config.ts",
-    "packages/rbac/tests/rbac.v1.test.ts"
+    "tests/integration/*.ts"
   ],
   "exclude": ["packages/rbac/v2/test/integration/workspaces.test.ts"]
 }

@@ -1,65 +1,42 @@
 #!/usr/bin/env bash
 
 #
-# Produces a Mockoon config/env with the necessary CORS headers so that the integration tests will function properly.
-# Then runs the Mockoon server with the updated config.
+# Starts a Prism mock server from an OpenAPI specification with CORS headers enabled.
+# Prism generates responses from OpenAPI schemas, solving issues with incomplete examples.
 #
 # The script expects to execute from the repo root folder.
 #
-# The process looks like this:
-#   1. produce a Mockoon config from the OpenAPI spec.
-#   2. add the CORS headers to the Mockoon config, taken from cors_headers.json
-#   3. Run the server with the updated Mockoon config
+# Usage: serve.sh <openapi-spec-url> [port]
+#   - openapi-spec-url: URL to the OpenAPI JSON specification
+#   - port: Optional port number (defaults to 3000)
 #
-# The final, updated Mockoon config is kept in /tmp/workspaces_updated.json
-# The server runs on localhost port 3000 by default. Can be overridden using arg 2.
+# Prism features used:
+#   --dynamic: Generate responses from schemas instead of static examples
+#   --ignoreExamples: Ignore incomplete examples in favor of schema-generated data
+#   --cors: Enable CORS headers automatically
+#   --errors=false: Don't return errors for minor spec violations
 #
 
 set -e
-if ! command -v jq; then
-    echo "This script requires jq; install and try again"
-    exit 1
+
+if [ -z "$1" ]; then
+  echo "Usage: $0 <openapi-spec-url> [port]"
+  echo "Example: $0 https://example.com/api/openapi.json 3001"
+  exit 1
 fi
 
-# Clean up temp files
-rm -f /tmp/workspaces.json
-rm -f /tmp/workspaces_updated.json
-rm -f /tmp/cors_headers.json
+SPEC_URL="$1"
+PORT="${2:-3000}"
 
-if [ ! -n "$2" ]; then
-  echo "Mockoon will use the default port, 3000"
-  MOCKOON_PORT=3000
-else
-  echo "Mockoon will run on port $2"
-  MOCKOON_PORT="$2"
-fi
+echo "Starting Prism mock server for spec: $SPEC_URL"
+echo "Server will run on port: $PORT"
 
-# Put CORS headers in /tmp
-cat << END > /tmp/cors_headers.json
-{
-  "newHeaders": [
-    {
-      "key": "Access-Control-Allow-Origin",
-      "value": "*"
-    },
-    {
-      "key": "Access-Control-Allow-Methods",
-      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
-    },
-    {
-      "key": "Access-Control-Allow-Headers",
-      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
-    }
-
-  ]
-}
-END
-
-echo "Updating the Mockoon config from the latest spec ($1)"
-npx mockoon-cli import -i "$1" -o /tmp/workspaces.json -p
-
-echo "Adding CORS headers to the Mockoon config"
-jq -n 'input | .headers += [inputs.newHeaders][]' /tmp/workspaces.json /tmp/cors_headers.json > /tmp/workspaces_updated.json
-
-echo "Running API using the updated spec"
-npx mockoon-cli start --data /tmp/workspaces_updated.json --port "$MOCKOON_PORT"
+# Start Prism with schema-based generation and CORS support
+npx @stoplight/prism-cli mock \
+  --dynamic \
+  --ignoreExamples \
+  --host 0.0.0.0 \
+  --port "$PORT" \
+  --cors \
+  --errors=false \
+  "$SPEC_URL"

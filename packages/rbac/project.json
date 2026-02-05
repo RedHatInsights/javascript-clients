@@ -45,7 +45,7 @@
       "command": "echo no longer supported && exit 0"
     },
     "integration-v1": {
-      "command": "start-server-and-test 'bin/serve.sh https://raw.githubusercontent.com/RedHatInsights/insights-rbac/refs/heads/master/docs/source/specs/openapi.json 3001' http://localhost:3001/api/rbac/v1/access/ 'nx run --verbose @redhat-cloud-services/rbac-client:jest-v1'"
+      "command": "start-server-and-test 'bin/serve.sh https://raw.githubusercontent.com/RedHatInsights/insights-rbac/refs/heads/master/docs/source/specs/openapi.json 3001' http-get://testuser:testpass@localhost:3001/status/ 'nx run --verbose @redhat-cloud-services/rbac-client:jest-v1'"
     },
     "jest-v2": {
       "executor": "@nx/jest:jest",
