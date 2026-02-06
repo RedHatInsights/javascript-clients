@@ -8,13 +8,12 @@
     "declarationMap": true,
     "noImplicitAny": true,
     "outDir": "esm",
-    "rootDir": ".",
     "lib": [
         "es2017",
         "dom"
     ]
   },
-  "include": ["*.ts", "**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": [
     "dist",
     "node_modules",

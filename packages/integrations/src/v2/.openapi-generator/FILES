@@ -1,0 +1,11 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
+EndpointResourceV2GetEndpoint/index.ts
+EndpointResourceV2GetEndpointHistory/index.ts
+EndpointResourceV2GetEndpoints/index.ts
+api.ts
+git_push.sh
+index.ts
+index.ts
+types/index.ts

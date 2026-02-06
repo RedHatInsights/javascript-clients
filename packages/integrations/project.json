@@ -7,6 +7,7 @@
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
+        "outputPath": "packages/integrations/src",
         "specs": {
           "default": "https://console.redhat.com/api/integrations/v1.0/openapi.json",
           "v2": "https://console.redhat.com/api/integrations/v2/openapi.json"
@@ -17,8 +18,9 @@
     "build": {
       "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
+        "inputPath": "packages/integrations/src",
         "outputPath": "packages/integrations/dist",
-        "main": "packages/integrations/index.ts",
+        "main": "packages/integrations/src/index.ts",
         "esmTsConfig": "packages/integrations/tsconfig.esm.json",
         "cjsTsConfig": "packages/integrations/tsconfig.cjs.json"
       }
@@ -51,6 +53,9 @@
         "jestConfig": "packages/integrations/jest.integration.v1.config.ts"
       },
       "parallelism": false
+    },
+    "integration-v2": {
+      "command": "start-server-and-test 'bin/serve.sh https://console.redhat.com/api/integrations/v2/openapi.json 3001' http-get://localhost:3001/endpoints 'nx run --verbose @redhat-cloud-services/integrations-client:jest-v2'"
     },
     "jest-v2": {
       "executor": "@nx/jest:jest",

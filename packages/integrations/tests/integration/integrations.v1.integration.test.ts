@@ -1,20 +1,20 @@
 import { describe, expect, test } from '@jest/globals';
 import { randomUUID } from 'crypto';
 
-import { IntegrationsClient } from '../../api';
-import { EndpointResourceV1CreateEndpointParams } from '../../EndpointResourceV1CreateEndpoint';
-import { Endpoint, RequestSystemSubscriptionProperties } from '../../types';
-import { EndpointResourceV1DeleteEndpointParams } from '../../EndpointResourceV1DeleteEndpoint';
-import { EndpointResourceV1EnableEndpointParams } from '../../EndpointResourceV1EnableEndpoint';
-import { EndpointResourceV1DisableEndpointParams } from '../../EndpointResourceV1DisableEndpoint';
-import { EndpointResourceV1GetEndpointParams } from '../../EndpointResourceV1GetEndpoint';
-import { EndpointResourceV1GetEndpointHistoryParams } from '../../EndpointResourceV1GetEndpointHistory';
-import { EndpointResourceV1GetDetailedEndpointHistoryParams } from '../../EndpointResourceV1GetDetailedEndpointHistory';
-import { EndpointResourceV1GetEndpointsParams } from '../../EndpointResourceV1GetEndpoints';
-import { EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams } from '../../EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint';
-import { EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams } from '../../EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint';
-import { EndpointResourceV1UpdateEndpointParams } from '../../EndpointResourceV1UpdateEndpoint';
-import { EndpointResourceV1UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV1UpdateEventTypesLinkedToEndpoint';
+import { IntegrationsClient } from '../../src/api';
+import { EndpointResourceV1CreateEndpointParams } from '../../src/EndpointResourceV1CreateEndpoint';
+import { Endpoint, RequestSystemSubscriptionProperties } from '../../src/types';
+import { EndpointResourceV1DeleteEndpointParams } from '../../src/EndpointResourceV1DeleteEndpoint';
+import { EndpointResourceV1EnableEndpointParams } from '../../src/EndpointResourceV1EnableEndpoint';
+import { EndpointResourceV1DisableEndpointParams } from '../../src/EndpointResourceV1DisableEndpoint';
+import { EndpointResourceV1GetEndpointParams } from '../../src/EndpointResourceV1GetEndpoint';
+import { EndpointResourceV1GetEndpointHistoryParams } from '../../src/EndpointResourceV1GetEndpointHistory';
+import { EndpointResourceV1GetDetailedEndpointHistoryParams } from '../../src/EndpointResourceV1GetDetailedEndpointHistory';
+import { EndpointResourceV1GetEndpointsParams } from '../../src/EndpointResourceV1GetEndpoints';
+import { EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams } from '../../src/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint';
+import { EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams } from '../../src/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint';
+import { EndpointResourceV1UpdateEndpointParams } from '../../src/EndpointResourceV1UpdateEndpoint';
+import { EndpointResourceV1UpdateEventTypesLinkedToEndpointParams } from '../../src/EndpointResourceV1UpdateEventTypesLinkedToEndpoint';
 
 // note the 1.0, which is different from, for example, RBAC v1
 const BASE_PATH = 'http://localhost:3001';
