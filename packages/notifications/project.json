@@ -7,6 +7,7 @@
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
+        "outputPath": "packages/notifications/src",
         "specs": {
           "default": "https://console.redhat.com/api/notifications/v1.0/openapi.json",
           "v2": "https://console.redhat.com/api/notifications/v2/openapi.json"
@@ -17,8 +18,9 @@
     "build": {
       "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
+        "inputPath": "packages/notifications/src",
         "outputPath": "packages/notifications/dist",
-        "main": "packages/notifications/index.ts",
+        "main": "packages/notifications/src/index.ts",
         "esmTsConfig": "packages/notifications/tsconfig.esm.json",
         "cjsTsConfig": "packages/notifications/tsconfig.cjs.json"
       }
@@ -44,6 +46,16 @@
     "integration-v1": {
       "command": "start-server-and-test 'bin/serve.sh https://console.redhat.com/api/notifications/v1.0/openapi.json 3001' http-get://localhost:3001/notifications/facets/bundles 'nx run --verbose @redhat-cloud-services/notifications-client:jest-v1'"
     },
+    "jest-v1": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/notifications/jest.integration.v1.config.ts"
+      }
+    },
+    "integration-v2": {
+      "command": "start-server-and-test 'bin/serve.sh https://console.redhat.com/api/notifications/v2/openapi.json 3001' http-get://localhost:3001/notifications/eventTypes/550e8400-e29b-41d4-a716-446655440000/behaviorGroups 'nx run --verbose @redhat-cloud-services/notifications-client:jest-v2'"
+    },
     "jest-v2": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
@@ -51,13 +63,6 @@
         "jestConfig": "packages/notifications/jest.integration.v2.config.ts"
       },
       "parallelism": false
-    },
-    "jest-v1": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "packages/notifications/jest.integration.v1.config.ts"
-      }
     },
     "npm": {
       "executor": "ngx-deploy-npm:deploy",

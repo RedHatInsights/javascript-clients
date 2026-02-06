@@ -1,0 +1,9 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
+NotificationResourceV2GetLinkedBehaviorGroups/index.ts
+api.ts
+git_push.sh
+index.ts
+index.ts
+types/index.ts

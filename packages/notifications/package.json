@@ -2,42 +2,42 @@
   "name": "@redhat-cloud-services/notifications-client",
   "version": "5.0.0",
   "description": "JavaScript client for Red Hat Insights Notifications service",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "default": "./dist/index.js"
+      "types": "./index.d.ts",
+      "import": "./esm/index.js",
+      "default": "./index.js"
     },
     "./api": {
-      "types": "./dist/api.d.ts",
-      "import": "./dist/esm/api.js",
-      "default": "./dist/api.js"
+      "types": "./api.d.ts",
+      "import": "./esm/api.js",
+      "default": "./api.js"
     },
     "./v2": {
-      "types": "./dist/v2/index.d.ts",
-      "import": "./dist/esm/v2/index.js",
-      "default": "./dist/v2/index.js"
+      "types": "./v2/index.d.ts",
+      "import": "./esm/v2/index.js",
+      "default": "./v2/index.js"
     },
     "./v2/api": {
-      "types": "./dist/v2/api.d.ts",
-      "import": "./dist/esm/v2/api.js",
-      "default": "./dist/v2/api.js"
+      "types": "./v2/api.d.ts",
+      "import": "./esm/v2/api.js",
+      "default": "./v2/api.js"
     },
     "./*": {
-      "types": "./dist/*/index.d.ts",
-      "import": "./dist/esm/*/index.js",
-      "default": "./dist/*/index.js"
+      "types": "./*/index.d.ts",
+      "import": "./esm/*/index.js",
+      "default": "./*/index.js"
     }
   },
   "typesVersions": {
     "*": {
       "api": [
-        "./dist/api.d.ts"
+        "./api.d.ts"
       ],
       "*": [
-        "./dist/*/index.d.ts"
+        "./*/index.d.ts"
       ]
     }
   },
