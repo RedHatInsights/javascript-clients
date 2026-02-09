@@ -8,7 +8,6 @@
   },
   "include": [
     "jest.config.ts",
-    "tests/integration/*.ts"
-  ],
-  "exclude": ["packages/rbac/v2/test/integration/workspaces.test.ts"]
+    "tests/integration/rbac.v1.integration.test.ts"
+  ]
 }

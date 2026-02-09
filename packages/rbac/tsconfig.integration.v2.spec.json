@@ -7,6 +7,6 @@
   },
   "include": [
     "jest.config.ts",
-    "packages/rbac/v2/tests/integration/workspaces.test.ts"
+    "tests/integration/workspaces.integration.test.ts"
   ]
 }
