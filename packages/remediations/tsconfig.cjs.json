@@ -1,6 +1,21 @@
 {
   "extends": "./tsconfig.esm.json",
   "compilerOptions": {
-    "module": "CommonJS",
+    "declaration": true,
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": ".",
+    "rootDir": ".",
+    "lib": [
+        "es2017",
+        "dom"
+    ]
   },
+  "exclude": [
+      "dist",
+      "node_modules",
+      "*.d.ts",
+      "jest.config.ts"
+  ]
 }
