@@ -1,5 +1,6 @@
 .gitignore
 .npmignore
+.openapi-generator-ignore
 AddPrincipalToGroup/index.ts
 AddRoleToGroup/index.ts
 CreateCrossAccountRequests/index.ts

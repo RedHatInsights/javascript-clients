@@ -1,5 +1,6 @@
 .gitignore
 .npmignore
+.openapi-generator-ignore
 RoleBindingsBatchCreate/index.ts
 RoleBindingsList/index.ts
 RoleBindingsListBySubject/index.ts

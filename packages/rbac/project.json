@@ -4,7 +4,11 @@
   "sourceRoot": "packages/rbac",
   "projectType": "library",
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/rbac/src"
+    },
     "generate": {
+      "dependsOn": ["clean-generate"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
         "outputPath": "packages/rbac/src",
@@ -15,7 +19,11 @@
         "clientName": "RbacClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/rbac/dist"
+    },
     "build": {
+      "dependsOn": ["clean-build", "^build"],
       "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
         "inputPath": "packages/rbac/src",
