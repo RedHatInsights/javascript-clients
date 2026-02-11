@@ -4,8 +4,12 @@
   "sourceRoot": "packages/integrations",
   "projectType": "library",
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/integrations/src"
+    },
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "dependsOn": ["clean-generate"],
       "options": {
         "outputPath": "packages/integrations/src",
         "specs": {
@@ -15,8 +19,12 @@
         "clientName": "IntegrationsClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/integrations/dist"
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:builder",
+      "dependsOn": ["clean-build", "^build"],
       "options": {
         "inputPath": "packages/integrations/src",
         "outputPath": "packages/integrations/dist",
