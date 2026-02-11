@@ -4,20 +4,30 @@
   "sourceRoot": "packages/remediations",
   "projectType": "library",
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/remediations/src"
+    },
     "generate": {
+      "dependsOn": ["clean-generate"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
+        "outputPath": "packages/remediations/src",
         "specs": {
           "default": "http://cloud.redhat.com/api/remediations/v1/openapi.json"
         },
         "clientName": "RemediationsClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/remediations/dist"
+    },
     "build": {
+      "dependsOn": ["clean-build", "^build"],
       "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
+        "inputPath": "packages/remediations/src",
         "outputPath": "packages/remediations/dist",
-        "main": "packages/remediations/index.ts",
+        "main": "packages/remediations/src/index.ts",
         "esmTsConfig": "packages/remediations/tsconfig.esm.json",
         "cjsTsConfig": "packages/remediations/tsconfig.cjs.json"
       }
