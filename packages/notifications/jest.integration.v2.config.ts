@@ -4,12 +4,13 @@ export default {
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[t]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.integration.v2.spec.json' }],
+    '^.+\\.js$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'js'],
   coverageDirectory: '../../coverage/packages/notifications',
+  testEnvironment: 'node',
   testEnvironmentOptions: {
-    testEnvironment: 'node',
-    url: "http://localhost:3002",
+    url: "http://localhost:3001",
   },
   testMatch: ['**/notifications.v2.integration.test.ts']
 };
