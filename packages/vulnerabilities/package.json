@@ -50,7 +50,7 @@
     "doc": "npm run doc:git-api; npm run doc:production"
   },
   "dependencies": {
-    "axios": "^1.12.2",
+    "axios": "^1.13.5",
     "tslib": "^2.6.2"
   },
   "devDependencies": {
