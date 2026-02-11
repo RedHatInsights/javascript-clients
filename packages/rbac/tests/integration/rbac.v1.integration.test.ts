@@ -6,11 +6,11 @@
 const { describe, expect, test } = require('@jest/globals');
 const { randomUUID } = require('crypto');
 
-const { RbacClient } = require('../../api');
+const { RbacClient } = require('../../src/api');
 const axios = require('axios');
 
 // TypeScript type imports (compile-time only)
-import type { Group, GroupPrincipalIn, GroupRoleIn, RoleIn } from '../../types';
+import type { Group, GroupPrincipalIn, GroupRoleIn, RoleIn } from '../../src/types';
 
 // Simple data generators using Node.js built-ins
 // Note: Using these instead of faker due to CommonJS/ESM compatibility issues
@@ -24,6 +24,7 @@ const generateTestData = {
 
 const BASE_PATH = 'http://localhost:3001';
 
+// RBAC API requires basic auth - Prism validates the security scheme format
 const authHeaders = {
   'Content-Type': 'application/json',
   Authorization: 'Basic ' + Buffer.from('testuser:testpass').toString('base64'),
