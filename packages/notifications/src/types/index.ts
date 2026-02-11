@@ -430,6 +430,12 @@ export interface EventLogEntry {
      * @type {any}
      * @memberof EventLogEntry
      */
+    'external_id'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof EventLogEntry
+     */
     'created': any;
     /**
      *

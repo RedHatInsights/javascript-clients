@@ -89,6 +89,12 @@ export type EventResourceV1GetEventsParams = {
   * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
+  severities?: any,
+  /**
+  *
+  * @type { any }
+  * @memberof EventResourceV1GetEventsApi
+  */
   sortBy?: any,
   /**
   *
@@ -127,9 +133,9 @@ const isEventResourceV1GetEventsObjectParams = (params: [EventResourceV1GetEvent
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EventResourceV1GetEventsParams] | [any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
-    const params = isEventResourceV1GetEventsObjectParams(config) ? config[0] : ['appIds', 'bundleIds', 'endDate', 'endpointTypes', 'eventTypeDisplayName', 'includeActions', 'includeDetails', 'includePayload', 'invocationResults', 'limit', 'offset', 'pageNumber', 'sortBy', 'sortBy2', 'startDate', 'status', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EventResourceV1GetEventsParams;
-    const { appIds, bundleIds, endDate, endpointTypes, eventTypeDisplayName, includeActions, includeDetails, includePayload, invocationResults, limit, offset, pageNumber, sortBy, sortBy2, startDate, status, options = {} } = params;
+export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EventResourceV1GetEventsParams] | [any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
+    const params = isEventResourceV1GetEventsObjectParams(config) ? config[0] : ['appIds', 'bundleIds', 'endDate', 'endpointTypes', 'eventTypeDisplayName', 'includeActions', 'includeDetails', 'includePayload', 'invocationResults', 'limit', 'offset', 'pageNumber', 'severities', 'sortBy', 'sortBy2', 'startDate', 'status', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EventResourceV1GetEventsParams;
+    const { appIds, bundleIds, endDate, endpointTypes, eventTypeDisplayName, includeActions, includeDetails, includePayload, invocationResults, limit, offset, pageNumber, severities, sortBy, sortBy2, startDate, status, options = {} } = params;
     const localVarPath = `/notifications/events`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -183,6 +189,10 @@ export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI[
 
     if (pageNumber !== undefined) {
         localVarQueryParameter['pageNumber'] = pageNumber;
+    }
+
+    if (severities !== undefined) {
+        localVarQueryParameter['severities'] = severities;
     }
 
     if (sortBy !== undefined) {

@@ -4,7 +4,11 @@
   "sourceRoot": "packages/notifications",
   "projectType": "library",
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/notifications/src"
+    },
     "generate": {
+      "dependsOn": ["clean-generate"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
         "outputPath": "packages/notifications/src",
@@ -15,7 +19,11 @@
         "clientName": "NotificationsClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/notifications/dist"
+    },
     "build": {
+      "dependsOn": ["clean-build", "^build"],
       "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
         "inputPath": "packages/notifications/src",
