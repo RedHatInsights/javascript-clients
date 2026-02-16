@@ -1,13 +1,24 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
+    "target": "es2021",
+    "module": "esnext",
+    "moduleResolution": "node",
     "declaration": true,
-    "types": ["node"],
-    "module": "ES2015",
-    "target": "ES5",
-    "rootDir": "./",
+    "declarationMap": true,
+    "noImplicitAny": true,
+    "outDir": "esm",
+    "rootDir": ".",
+    "lib": [
+        "es2017",
+        "dom"
+    ]
   },
-  "include": ["*.ts", "**/*.ts"],
-  "exclude": ["jest.config.ts", "dist"]
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "*.d.ts",
+    "jest.config.ts"
+  ]
 }
