@@ -2,32 +2,32 @@
   "name": "@redhat-cloud-services/host-inventory-client",
   "version": "4.1.7",
   "description": "",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "default": "./dist/index.js"
+      "types": "./index.d.ts",
+      "import": "./esm/index.js",
+      "default": "./index.js"
     },
     "./api": {
-      "types": "./dist/api.d.ts",
-      "import": "./dist/esm/api.js",
-      "default": "./dist/api.js"
+      "types": "./api.d.ts",
+      "import": "./esm/api.js",
+      "default": "./api.js"
     },
     "./*": {
-      "types": "./dist/*/index.d.ts",
-      "import": "./dist/esm/*/index.js",
-      "default": "./dist/*/index.js"
+      "types": "./*/index.d.ts",
+      "import": "./esm/*/index.js",
+      "default": "./*/index.js"
     }
   },
   "typesVersions": {
     "*": {
       "api": [
-        "./dist/api.d.ts"
+        "./api.d.ts"
       ],
       "*": [
-        "./dist/*/index.d.ts"
+        "./*/index.d.ts"
       ]
     }
   },
