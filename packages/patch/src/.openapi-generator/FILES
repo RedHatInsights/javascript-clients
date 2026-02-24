@@ -1,7 +1,7 @@
 .gitignore
 .npmignore
+.openapi-generator-ignore
 AddTemplateSubscribedSystem/index.ts
-Deletesystem/index.ts
 DetailAdvisory/index.ts
 DetailSystem/index.ts
 ExportAdvisories/index.ts

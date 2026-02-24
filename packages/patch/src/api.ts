@@ -4,7 +4,6 @@ import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dis
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
     addTemplateSubscribedSystem,
-    deletesystem,
     detailAdvisory,
     detailSystem,
     exportAdvisories,
@@ -44,7 +43,6 @@ import {
 
 const endpointList = {
       addTemplateSubscribedSystem,
-    deletesystem,
     detailAdvisory,
     detailSystem,
     exportAdvisories,
