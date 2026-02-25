@@ -4,9 +4,14 @@
   "sourceRoot": "packages/insights",
   "projectType": "library",
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/insights/src"
+    },
     "generate": {
+      "dependsOn": ["clean-generate"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
+        "outputPath": "packages/insights/src",
         "postProcess": "./postProcess.sh",
         "specs": {
           "default": "https://cloud.redhat.com/api/insights/v1/openapi.json"
@@ -14,11 +19,16 @@
         "clientName": "InsightsClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/insights/dist"
+    },
     "build": {
+      "dependsOn": ["clean-build", "^build"],
       "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
+        "inputPath": "packages/insights/src",
         "outputPath": "packages/insights/dist",
-        "main": "packages/insights/index.ts",
+        "main": "packages/insights/src/index.ts",
         "esmTsConfig": "packages/insights/tsconfig.esm.json",
         "cjsTsConfig": "packages/insights/tsconfig.cjs.json"
       }
