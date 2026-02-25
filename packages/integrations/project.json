@@ -73,6 +73,11 @@
       },
       "parallelism": false
     },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "{projectRoot}/dist"
+      }
+    },
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
