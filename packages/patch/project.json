@@ -4,20 +4,30 @@
   "sourceRoot": "packages/patch",
   "projectType": "library",
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/patch/src"
+    },
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "dependsOn": ["clean-generate"],
       "options": {
+        "outputPath": "packages/patch/src",
         "specs": {
           "default": "https://console.redhat.com/api/patch/v3/openapi.json"
         },
         "clientName": "PatchClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/patch/dist"
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:builder",
+      "dependsOn": ["clean-build", "^build"],
       "options": {
+        "inputPath": "packages/patch/src",
         "outputPath": "packages/patch/dist",
-        "main": "packages/patch/index.ts",
+        "main": "packages/patch/src/index.ts",
         "esmTsConfig": "packages/patch/tsconfig.esm.json",
         "cjsTsConfig": "packages/patch/tsconfig.cjs.json"
       }
