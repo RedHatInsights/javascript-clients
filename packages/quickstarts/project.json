@@ -4,20 +4,30 @@
   "sourceRoot": "packages/quickstarts",
   "projectType": "library",
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/quickstarts/src"
+    },
     "generate": {
+      "dependsOn": ["clean-generate"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
+        "outputPath": "packages/quickstarts/src",
         "specs": {
           "default": "https://raw.githubusercontent.com/RedHatInsights/quickstarts/main/spec/openapi.yaml"
         },
         "clientName": "QuickstartsClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/quickstarts/dist"
+    },
     "build": {
+      "dependsOn": ["clean-build", "^build"],
       "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
+        "inputPath": "packages/quickstarts/src",
         "outputPath": "packages/quickstarts/dist",
-        "main": "packages/quickstarts/index.ts",
+        "main": "packages/quickstarts/src/index.ts",
         "esmTsConfig": "packages/quickstarts/tsconfig.esm.json",
         "cjsTsConfig": "packages/quickstarts/tsconfig.cjs.json"
       }
@@ -38,6 +48,11 @@
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "packages/quickstarts/jest.config.ts"
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "{projectRoot}/dist"
       }
     },
     "npm": {
