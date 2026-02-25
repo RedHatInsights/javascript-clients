@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/insights-client",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "",
   "main": "./index.js",
   "typings": "./index.d.ts",
