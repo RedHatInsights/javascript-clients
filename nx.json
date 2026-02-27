@@ -55,13 +55,13 @@
   "release": {
     "projects": ["packages/*"],
     "projectsRelationship": "independent",
+    "git": {
+      "commit": true,
+      "tag": true,
+      "push": true,
+      "commitMessage": "chore(release): publish\n\n{releaseNotes}"
+    },
     "version": {
-      "git": {
-        "commit": true,
-        "tag": true,
-        "push": true,
-        "commitMessage": "chore(release): publish\n\n{releaseNotes}"
-      },
       "preVersionCommand": "npx nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client",
       "conventionalCommits": true,
       "preserveLocalDependencyProtocols": false,
@@ -69,6 +69,9 @@
         "skipLockFileUpdate": false
       },
       "manifestRootsToUpdate": ["{projectRoot}", "{projectRoot}/dist"]
+    },
+    "conventionalCommits": {
+      "useCommitScope": false
     },
     "changelog": {
       "workspaceChangelog": false,
