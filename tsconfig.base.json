@@ -28,7 +28,7 @@
       "@redhat-cloud-services/quickstarts-client": ["packages/quickstarts/index.ts"],
       "@redhat-cloud-services/rbac-client": ["packages/rbac/src/index.ts"],
       "@redhat-cloud-services/remediations-client": ["packages/remediations/src/index.ts"],
-      "@redhat-cloud-services/sources-client": ["packages/sources/index.ts"],
+      "@redhat-cloud-services/sources-client": ["packages/sources/src/index.ts"],
       "@redhat-cloud-services/topological-inventory-client": ["packages/topological-inventory/index.ts"],
       "@redhat-cloud-services/vulnerabilities-client": ["packages/vulnerabilities/index.ts"]
     }
