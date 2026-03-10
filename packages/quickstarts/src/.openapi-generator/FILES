@@ -1,5 +1,6 @@
 .gitignore
 .npmignore
+.openapi-generator-ignore
 FavoritesGet/index.ts
 FavoritesPost/index.ts
 HelptopicsGet/index.ts
