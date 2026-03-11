@@ -39,7 +39,7 @@ const isRolesBatchDeleteObjectParams = (params: [RolesBatchDeleteParams] | unkno
 export const rolesBatchDeleteParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RolesBatchDeleteParams] | [RolesBatchDeleteRolesRequest, AxiosRequestConfig])) => {
     const params = isRolesBatchDeleteObjectParams(config) ? config[0] : ['rolesBatchDeleteRolesRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RolesBatchDeleteParams;
     const { rolesBatchDeleteRolesRequest, options = {} } = params;
-    const localVarPath = `/roles:batchDelete`;
+    const localVarPath = `/roles:batchDelete/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'POST' as Method, ...options};

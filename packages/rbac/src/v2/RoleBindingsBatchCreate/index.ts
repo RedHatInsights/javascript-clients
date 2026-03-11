@@ -46,7 +46,7 @@ const isRoleBindingsBatchCreateObjectParams = (params: [RoleBindingsBatchCreateP
 export const roleBindingsBatchCreateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsBatchCreateParams] | [RoleBindingsBatchCreateRoleBindingsRequest, string, AxiosRequestConfig])) => {
     const params = isRoleBindingsBatchCreateObjectParams(config) ? config[0] : ['roleBindingsBatchCreateRoleBindingsRequest', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsBatchCreateParams;
     const { roleBindingsBatchCreateRoleBindingsRequest, fields, options = {} } = params;
-    const localVarPath = `/role-bindings:batchCreate`;
+    const localVarPath = `/role-bindings:batchCreate/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'POST' as Method, ...options};

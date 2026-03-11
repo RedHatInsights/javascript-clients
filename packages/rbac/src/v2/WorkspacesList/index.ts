@@ -37,6 +37,12 @@ export type WorkspacesListParams = {
   */
   name?: string,
   /**
+  * Filter workspaces by parent workspace UUID. Returns only direct children of the specified workspace. Useful for lazy-loading a nested tree structure.
+  * @type { string }
+  * @memberof WorkspacesListApi
+  */
+  parentId?: string,
+  /**
   * Filter workspaces by one or more comma-separated UUIDs. Defaults to type=standard unless type is explicitly specified.
   * @type { Array<string> }
   * @memberof WorkspacesListApi
@@ -67,9 +73,9 @@ const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, string, Array<string>, string, AxiosRequestConfig])) => {
-    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'name', 'ids', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
-    const { limit, offset, type, name, ids, orderBy, options = {} } = params;
+export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, string, string, Array<string>, string, AxiosRequestConfig])) => {
+    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'name', 'parentId', 'ids', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
+    const { limit, offset, type, name, parentId, ids, orderBy, options = {} } = params;
     const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -91,6 +97,10 @@ export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendReque
 
     if (name !== undefined) {
         localVarQueryParameter['name'] = name;
+    }
+
+    if (parentId !== undefined) {
+        localVarQueryParameter['parent_id'] = parentId;
     }
 
     if (ids) {

@@ -31,6 +31,30 @@ export type RoleBindingsListParams = {
   */
   roleId?: string,
   /**
+  * Filter by resource ID
+  * @type { string }
+  * @memberof RoleBindingsListApi
+  */
+  resourceId?: string,
+  /**
+  * Filter by resource type
+  * @type { string }
+  * @memberof RoleBindingsListApi
+  */
+  resourceType?: string,
+  /**
+  * Filter by subject type (e.g., \'group\')
+  * @type { string }
+  * @memberof RoleBindingsListApi
+  */
+  subjectType?: string,
+  /**
+  * Filter by subject ID
+  * @type { string }
+  * @memberof RoleBindingsListApi
+  */
+  subjectId?: string,
+  /**
   * Control which fields are included in the response to optimize payload size.
   * @type { string }
   * @memberof RoleBindingsListApi
@@ -61,9 +85,9 @@ const isRoleBindingsListObjectParams = (params: [RoleBindingsListParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListParams] | [number, string, string, string, string, AxiosRequestConfig])) => {
-    const params = isRoleBindingsListObjectParams(config) ? config[0] : ['limit', 'cursor', 'roleId', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListParams;
-    const { limit, cursor, roleId, fields, orderBy, options = {} } = params;
+export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListParams] | [number, string, string, string, string, string, string, string, string, AxiosRequestConfig])) => {
+    const params = isRoleBindingsListObjectParams(config) ? config[0] : ['limit', 'cursor', 'roleId', 'resourceId', 'resourceType', 'subjectType', 'subjectId', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListParams;
+    const { limit, cursor, roleId, resourceId, resourceType, subjectType, subjectId, fields, orderBy, options = {} } = params;
     const localVarPath = `/role-bindings/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -81,6 +105,22 @@ export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendReq
 
     if (roleId !== undefined) {
         localVarQueryParameter['role_id'] = roleId;
+    }
+
+    if (resourceId !== undefined) {
+        localVarQueryParameter['resource_id'] = resourceId;
+    }
+
+    if (resourceType !== undefined) {
+        localVarQueryParameter['resource_type'] = resourceType;
+    }
+
+    if (subjectType !== undefined) {
+        localVarQueryParameter['subject_type'] = subjectType;
+    }
+
+    if (subjectId !== undefined) {
+        localVarQueryParameter['subject_id'] = subjectId;
     }
 
     if (fields !== undefined) {

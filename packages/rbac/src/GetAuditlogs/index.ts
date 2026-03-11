@@ -25,7 +25,31 @@ export type GetAuditlogsParams = {
   */
   offset?: number,
   /**
-  * Parameter for ordering resource by database id so that latest actions appear first
+  * Parameter for filtering audit logs by principal username. Supports partial and exact matching via name_match parameter.
+  * @type { string }
+  * @memberof GetAuditlogsApi
+  */
+  principalUsername?: string,
+  /**
+  * Parameter for filtering audit logs by resource type. Multiple values can be provided.
+  * @type { Array<GetAuditlogsResourceTypeEnum> }
+  * @memberof GetAuditlogsApi
+  */
+  resourceType?: Array<GetAuditlogsResourceTypeEnum>,
+  /**
+  * Parameter for filtering audit logs by action. Multiple values can be provided.
+  * @type { Array<GetAuditlogsActionEnum> }
+  * @memberof GetAuditlogsApi
+  */
+  action?: Array<GetAuditlogsActionEnum>,
+  /**
+  * Parameter for specifying the matching type for principal_username filter. Default is partial.
+  * @type { GetAuditlogsNameMatchEnum }
+  * @memberof GetAuditlogsApi
+  */
+  nameMatch?: GetAuditlogsNameMatchEnum,
+  /**
+  * Parameter for ordering audit logs. Prefix with \'-\' for descending order. Default is \'-created\'.
   * @type { GetAuditlogsOrderByEnum }
   * @memberof GetAuditlogsApi
   */
@@ -36,8 +60,47 @@ export type GetAuditlogsParams = {
   * @export
   * @enum {string}
   */
+export const GetAuditlogsResourceTypeEnum = {
+    Group: 'group',
+    Role: 'role',
+    User: 'user',
+    Permission: 'permission'
+} as const;
+export type GetAuditlogsResourceTypeEnum = typeof GetAuditlogsResourceTypeEnum[keyof typeof GetAuditlogsResourceTypeEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const GetAuditlogsActionEnum = {
+    Delete: 'delete',
+    Add: 'add',
+    Edit: 'edit',
+    Create: 'create',
+    Remove: 'remove'
+} as const;
+export type GetAuditlogsActionEnum = typeof GetAuditlogsActionEnum[keyof typeof GetAuditlogsActionEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const GetAuditlogsNameMatchEnum = {
+    Partial: 'partial',
+    Exact: 'exact'
+} as const;
+export type GetAuditlogsNameMatchEnum = typeof GetAuditlogsNameMatchEnum[keyof typeof GetAuditlogsNameMatchEnum];
+/**
+  * @export
+  * @enum {string}
+  */
 export const GetAuditlogsOrderByEnum = {
-    Id: 'id'
+    Created: 'created',
+    NotCreated: '-created',
+    PrincipalUsername: 'principal_username',
+    NotPrincipalUsername: '-principal_username',
+    ResourceType: 'resource_type',
+    NotResourceType: '-resource_type',
+    Action: 'action',
+    NotAction: '-action'
 } as const;
 export type GetAuditlogsOrderByEnum = typeof GetAuditlogsOrderByEnum[keyof typeof GetAuditlogsOrderByEnum];
 
@@ -56,9 +119,9 @@ const isGetAuditlogsObjectParams = (params: [GetAuditlogsParams] | unknown[]): p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getAuditlogsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetAuditlogsParams] | [number, number, GetAuditlogsOrderByEnum, AxiosRequestConfig])) => {
-    const params = isGetAuditlogsObjectParams(config) ? config[0] : ['limit', 'offset', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetAuditlogsParams;
-    const { limit, offset, orderBy, options = {} } = params;
+export const getAuditlogsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([GetAuditlogsParams] | [number, number, string, Array<GetAuditlogsResourceTypeEnum>, Array<GetAuditlogsActionEnum>, GetAuditlogsNameMatchEnum, GetAuditlogsOrderByEnum, AxiosRequestConfig])) => {
+    const params = isGetAuditlogsObjectParams(config) ? config[0] : ['limit', 'offset', 'principalUsername', 'resourceType', 'action', 'nameMatch', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetAuditlogsParams;
+    const { limit, offset, principalUsername, resourceType, action, nameMatch, orderBy, options = {} } = params;
     const localVarPath = `/auditlogs/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -72,6 +135,22 @@ export const getAuditlogsParamCreator = async (sendRequest: BaseAPI["sendRequest
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (principalUsername !== undefined) {
+        localVarQueryParameter['principal_username'] = principalUsername;
+    }
+
+    if (resourceType) {
+        localVarQueryParameter['resource_type'] = resourceType;
+    }
+
+    if (action) {
+        localVarQueryParameter['action'] = action;
+    }
+
+    if (nameMatch !== undefined) {
+        localVarQueryParameter['name_match'] = nameMatch;
     }
 
     if (orderBy !== undefined) {

@@ -31,6 +31,21 @@ export interface CursorPaginationMeta {
     'limit': number;
 }
 /**
+ * Exclude bindings by source type: \'none\' (default) shows all, \'indirect\' excludes inherited, \'direct\' excludes direct
+ * @export
+ * @enum {string}
+ */
+
+export const ExcludeSources = {
+    Direct: 'direct',
+    Indirect: 'indirect',
+    None: 'none'
+} as const;
+
+export type ExcludeSources = typeof ExcludeSources[keyof typeof ExcludeSources];
+
+
+/**
  *
  * @export
  * @interface OffsetPaginationLinks
@@ -326,6 +341,20 @@ export const ProblemsWorkspaceProblem400WorkspaceNotEmptyStatusEnum = {
 export type ProblemsWorkspaceProblem400WorkspaceNotEmptyStatusEnum = typeof ProblemsWorkspaceProblem400WorkspaceNotEmptyStatusEnum[keyof typeof ProblemsWorkspaceProblem400WorkspaceNotEmptyStatusEnum];
 
 /**
+ * Resource type for role binding operations. \'workspace\' for workspace-scoped bindings (resource_id is workspace UUID). \'tenant\' for tenant-scoped bindings (resource_id is tenant resource ID in format {domain}/{org_id}, e.g. redhat/12345).
+ * @export
+ * @enum {string}
+ */
+
+export const ResourceType = {
+    Workspace: 'workspace',
+    Tenant: 'tenant'
+} as const;
+
+export type ResourceType = typeof ResourceType[keyof typeof ResourceType];
+
+
+/**
  *
  * @export
  * @interface Role
@@ -367,6 +396,12 @@ export interface Role {
      * @memberof Role
      */
     'last_modified'?: string;
+    /**
+     * ID of the organization that owns this role. Will not be populated if roles belong to the Public Tenant.
+     * @type {string}
+     * @memberof Role
+     */
+    'org_id'?: string;
 }
 /**
  *
@@ -767,11 +802,11 @@ export interface RoleBindingsRoleBindingBySubject {
      */
     'resource'?: RoleBindingsResource;
     /**
-     *
-     * @type {RoleBindingsResource}
+     * Resources from which this role binding is sourced (direct or inherited)
+     * @type {Array<RoleBindingsResource>}
      * @memberof RoleBindingsRoleBindingBySubject
      */
-    'inherited_from'?: RoleBindingsResource;
+    'sources'?: Array<RoleBindingsResource>;
 }
 /**
  * Subject of the role binding
@@ -906,7 +941,7 @@ export interface RolesCreateOrUpdateRoleRequest {
      * @type {string}
      * @memberof RolesCreateOrUpdateRoleRequest
      */
-    'description': string;
+    'description'?: string;
     /**
      * List of permissions to assign to this role
      * @type {Array<Permission>}

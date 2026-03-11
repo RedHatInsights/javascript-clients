@@ -8,22 +8,22 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsListBySubject200Response } from '../types';
+import type { ExcludeSources, ProblemsProblem403, ResourceType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsListBySubject200Response } from '../types';
 
 
 export type RoleBindingsListBySubjectParams = {
   /**
-  * Filter by resource ID
+  * Filter by resource ID. For workspace: UUID. For tenant: tenant resource ID (format: {domain}/{org_id}).
   * @type { string }
   * @memberof RoleBindingsListBySubjectApi
   */
   resourceId: string,
   /**
   * Filter by resource type
-  * @type { string }
+  * @type { ResourceType }
   * @memberof RoleBindingsListBySubjectApi
   */
-  resourceType: string,
+  resourceType: ResourceType,
   /**
   *
   * @type { number }
@@ -49,11 +49,11 @@ export type RoleBindingsListBySubjectParams = {
   */
   subjectId?: string,
   /**
-  * Include role bindings inherited from parent resources
-  * @type { boolean }
+  *
+  * @type { ExcludeSources }
   * @memberof RoleBindingsListBySubjectApi
   */
-  parentRoleBindings?: boolean,
+  excludeSources?: ExcludeSources,
   /**
   * Control which fields are included in the response to optimize payload size and improve performance.
   * @type { string }
@@ -85,9 +85,9 @@ const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubj
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, string, number, string, string, string, boolean, string, string, AxiosRequestConfig])) => {
-    const params = isRoleBindingsListBySubjectObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'limit', 'cursor', 'subjectType', 'subjectId', 'parentRoleBindings', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListBySubjectParams;
-    const { resourceId, resourceType, limit, cursor, subjectType, subjectId, parentRoleBindings, fields, orderBy, options = {} } = params;
+export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, ResourceType, number, string, string, string, ExcludeSources, string, string, AxiosRequestConfig])) => {
+    const params = isRoleBindingsListBySubjectObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'limit', 'cursor', 'subjectType', 'subjectId', 'excludeSources', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListBySubjectParams;
+    const { resourceId, resourceType, limit, cursor, subjectType, subjectId, excludeSources, fields, orderBy, options = {} } = params;
     const localVarPath = `/role-bindings/by-subject/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -119,8 +119,8 @@ export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI
         localVarQueryParameter['subject_id'] = subjectId;
     }
 
-    if (parentRoleBindings !== undefined) {
-        localVarQueryParameter['parent_role_bindings'] = parentRoleBindings;
+    if (excludeSources !== undefined) {
+        localVarQueryParameter['exclude_sources'] = excludeSources;
     }
 
     if (fields !== undefined) {
