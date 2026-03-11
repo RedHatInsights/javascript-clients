@@ -74,3 +74,4 @@ Run `nx run @redhat-cloud-services/host-inventory-client:test` to execute the un
 ## API documentation
 
 * [README](doc/README.md)
+
