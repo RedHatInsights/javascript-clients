@@ -17,7 +17,7 @@ This client is using typescript and axios. Types are distributed with this packa
 
 This package comes with a client in its `api.ts` already defined with every call available. 
 ```JS
-`import quickstartsClient from '@redhat-cloud-services/javascript-clients-shared/utils';
+import quickstartsClient from '@redhat-cloud-services/javascript-clients-shared/utils';
 
 quickstartsClient.someEndpoint();
 ```
