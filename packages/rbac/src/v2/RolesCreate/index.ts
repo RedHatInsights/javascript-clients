@@ -19,7 +19,7 @@ export type RolesCreateParams = {
   */
   rolesCreateOrUpdateRoleRequest: RolesCreateOrUpdateRoleRequest,
   /**
-  * Control which fields are included in the response to optimize payload size.  **When fields parameter is provided:** Only explicitly specified fields are returned. All response fields become optional.  **Examples:** - `?fields=id,name,permissions_count` - Include id, name, and count (no permissions array) - `?fields=permissions_count,last_modified` - Include only count and timestamp
+  * Control which fields are included in the response to optimize payload size.  **When fields parameter is provided:** Only explicitly specified fields are returned. All response fields become optional.  **Examples:** - `?fields=id,name,permissions_count` - Include id, name, and count (no permissions array) - `?fields=permissions_count,last_modified` - Include only count and timestamp - `?fields=id,name,org_id` - Include org_id (not returned by default; must be requested explicitly)
   * @type { string }
   * @memberof RolesCreateApi
   */
