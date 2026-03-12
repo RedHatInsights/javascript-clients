@@ -1,3 +1,17 @@
+# 7.0.0 (2026-03-12)
+
+### 🚀 Features
+
+- ⚠️  **rbac:** regenerate v2 client from latest openapi spec ([9f565a62](https://github.com/RedHatInsights/javascript-clients/commit/9f565a62))
+
+### ⚠️  Breaking Changes
+
+- ⚠️  **rbac:** regenerate v2 client from latest openapi spec ([9f565a62](https://github.com/RedHatInsights/javascript-clients/commit/9f565a62))
+
+### ❤️ Thank You
+
+- Riccardo Forina
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
