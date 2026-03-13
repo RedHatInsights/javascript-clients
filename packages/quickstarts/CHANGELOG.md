@@ -1,3 +1,13 @@
+## 4.0.8 (2026-03-13)
+
+### 🩹 Fixes
+
+- **quickstarts:** remove stray backtick in README code block ([cbf17f6e](https://github.com/RedHatInsights/javascript-clients/commit/cbf17f6e))
+
+### ❤️ Thank You
+
+- Charles Mulder
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
