@@ -1,5 +1,6 @@
 .gitignore
 .npmignore
+.openapi-generator-ignore
 CheckAvailabilitySource/index.ts
 CreateApplication/index.ts
 CreateAuthentication/index.ts
