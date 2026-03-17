@@ -16,7 +16,7 @@
     "paths": {
       "@redhat-cloud-services/build-utils": ["packages/build-utils/src/index.ts"],
       "@redhat-cloud-services/javascript-clients-shared": ["packages/shared/index.ts"],
-      "@redhat-cloud-services/compliance-client": ["packages/compliance/index.ts"],
+      "@redhat-cloud-services/compliance-client": ["packages/compliance/src/index.ts"],
       "@redhat-cloud-services/config-manager-client": ["packages/config-manager/src/index.ts"],
       "@redhat-cloud-services/entitlements-client": ["packages/entitlements/src/index.ts"],
       "@redhat-cloud-services/insights-client": ["packages/insights/src/index.ts"],

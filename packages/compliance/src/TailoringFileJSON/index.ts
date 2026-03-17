@@ -8,45 +8,49 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { TailoringFile } from '../types';
+import type { TailoringFileJson } from '../types';
 
 
-export type TailoringFileParams = {
+export type TailoringFileJSONParams = {
   /**
   *
   * @type { any }
-  * @memberof TailoringFileApi
+  * @memberof TailoringFileJSONApi
   */
   policyId: any,
   /**
-  * UUID or OS minor version number
+  * UUID **or** OS minor version number
   * @type { any }
-  * @memberof TailoringFileApi
+  * @memberof TailoringFileJSONApi
   */
   tailoringId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof TailoringFileApi
+  * @memberof TailoringFileJSONApi
   */
   xRHIDENTITY?: any,
   options?: AxiosRequestConfig
 }
 
-export type TailoringFileReturnType = AxiosPromise<TailoringFile>;
+export type TailoringFileJSONReturnType = TailoringFileJson;
 
-const isTailoringFileObjectParams = (params: [TailoringFileParams] | unknown[]): params is [TailoringFileParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
+const isTailoringFileJSONObjectParams = (params: [TailoringFileJSONParams] | unknown[]): params is [TailoringFileJSONParams] => {
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
+  }
+  return false
 }
 /**
-* Returns a Tailoring File
+* Retrieve a tailoring file of a specific tailoring.
 * @summary Request a Tailoring file
-* @param {TailoringFileParams} config with all available params.
+* @param {TailoringFileJSONParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const tailoringFileParamCreator = async (...config: ([TailoringFileParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isTailoringFileObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringFileParams;
+export const tailoringFileJSONParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TailoringFileJSONParams] | [any, any, any, AxiosRequestConfig])) => {
+    const params = isTailoringFileJSONObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringFileJSONParams;
     const { policyId, tailoringId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/tailoring_file.json`
         .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
@@ -68,10 +72,12 @@ export const tailoringFileParamCreator = async (...config: ([TailoringFileParams
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
-    return {
+    const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
     };
+
+    return sendRequest<TailoringFileJSONReturnType>(Promise.resolve(args));
 }
 
-export default tailoringFileParamCreator;
+export default tailoringFileJSONParamCreator;
