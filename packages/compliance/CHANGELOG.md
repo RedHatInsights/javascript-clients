@@ -1,3 +1,17 @@
+# 4.0.0 (2026-03-19)
+
+### 🚀 Features
+
+- ⚠️  **compliance:** restructure to generate into src directory ([4c99468c](https://github.com/RedHatInsights/javascript-clients/commit/4c99468c))
+
+### ⚠️  Breaking Changes
+
+- **compliance:** API endpoints changed:
+
+### ❤️ Thank You
+
+- Olha Tomylko
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
