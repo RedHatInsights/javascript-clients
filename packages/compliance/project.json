@@ -4,20 +4,30 @@
   "sourceRoot": "packages/compliance",
   "projectType": "library",
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/compliance/src"
+    },
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "dependsOn": ["clean-generate"],
       "options": {
+        "outputPath": "packages/compliance/src",
         "specs": {
           "default": "https://cloud.redhat.com/api/compliance/v2/openapi.json"
         },
         "clientName": "ComplianceClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/compliance/dist"
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:builder",
+      "dependsOn": ["clean-build", "^build"],
       "options": {
+        "inputPath": "packages/compliance/src",
         "outputPath": "packages/compliance/dist",
-        "main": "packages/compliance/index.ts",
+        "main": "packages/compliance/src/index.ts",
         "esmTsConfig": "packages/compliance/tsconfig.esm.json",
         "cjsTsConfig": "packages/compliance/tsconfig.cjs.json"
       }
@@ -38,6 +48,11 @@
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "packages/compliance/jest.config.ts"
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "{projectRoot}/dist"
       }
     },
     "npm": {

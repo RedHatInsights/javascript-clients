@@ -8,40 +8,34 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CreateTailoring201Response, Tailoring } from '../types';
+import type { CreateTailoring201Response, Errors } from '../types';
 
 
-export type UpdateTailoringParams = {
+export type TailoringParams = {
   /**
   *
   * @type { any }
-  * @memberof UpdateTailoringApi
+  * @memberof TailoringApi
   */
   policyId: any,
   /**
-  * UUID or OS minor version number
+  * UUID **or** OS minor version number
   * @type { any }
-  * @memberof UpdateTailoringApi
+  * @memberof TailoringApi
   */
   tailoringId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof UpdateTailoringApi
+  * @memberof TailoringApi
   */
   xRHIDENTITY?: any,
-  /**
-  *
-  * @type { Tailoring }
-  * @memberof UpdateTailoringApi
-  */
-  tailoring?: Tailoring,
   options?: AxiosRequestConfig
 }
 
-export type UpdateTailoringReturnType = CreateTailoring201Response;
+export type TailoringReturnType = CreateTailoring201Response;
 
-const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown[]): params is [UpdateTailoringParams] => {
+const isTailoringObjectParams = (params: [TailoringParams] | unknown[]): params is [TailoringParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
     return true && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId')
@@ -49,21 +43,21 @@ const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown
   return false
 }
 /**
-* Edit or update an existing tailoring.
-* @summary Update a Tailoring
-* @param {UpdateTailoringParams} config with all available params.
+* Retrieve a specific tailoring.
+* @summary Request a Tailoring
+* @param {TailoringParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateTailoringParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateTailoringParams] | [any, any, any, Tailoring, AxiosRequestConfig])) => {
-    const params = isUpdateTailoringObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'tailoring', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateTailoringParams;
-    const { policyId, tailoringId, xRHIDENTITY, tailoring, options = {} } = params;
+export const tailoringParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([TailoringParams] | [any, any, any, AxiosRequestConfig])) => {
+    const params = isTailoringObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringParams;
+    const { policyId, tailoringId, xRHIDENTITY, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}`
         .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
         .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PATCH' as Method, ...options};
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
@@ -75,18 +69,15 @@ export const updateTailoringParamCreator = async (sendRequest: BaseAPI["sendRequ
 
 
 
-    localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
     const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: tailoring,
     };
 
-    return sendRequest<UpdateTailoringReturnType>(Promise.resolve(args));
+    return sendRequest<TailoringReturnType>(Promise.resolve(args));
 }
 
-export default updateTailoringParamCreator;
+export default tailoringParamCreator;

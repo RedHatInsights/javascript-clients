@@ -1,5 +1,6 @@
 .gitignore
 .npmignore
+.openapi-generator-ignore
 AssignRule/index.ts
 AssignRules/index.ts
 AssignSystem/index.ts
