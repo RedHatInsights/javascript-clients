@@ -54,6 +54,6 @@
     "tslib": "^2.6.2"
   },
   "devDependencies": {
-    "yaml": "^1.8.3"
+    "yaml": "^1.10.3"
   }
 }
