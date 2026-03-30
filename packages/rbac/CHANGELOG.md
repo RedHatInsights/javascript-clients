@@ -1,3 +1,17 @@
+# 8.0.0 (2026-03-30)
+
+### 🚀 Features
+
+- ⚠️  **rbac:** regenerate v2 client from latest openapi spec ([1527cc58](https://github.com/RedHatInsights/javascript-clients/commit/1527cc58))
+
+### ⚠️  Breaking Changes
+
+- ⚠️  **rbac:** regenerate v2 client from latest openapi spec ([1527cc58](https://github.com/RedHatInsights/javascript-clients/commit/1527cc58))
+
+### ❤️ Thank You
+
+- Riccardo Forina
+
 # 7.0.0 (2026-03-12)
 
 ### 🚀 Features
