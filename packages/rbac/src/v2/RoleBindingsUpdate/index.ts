@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem400, ProblemsProblem403, ProblemsProblem404, ResourceType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsRoleBindingBySubject, RoleBindingsUpdateRoleBindingsRequest } from '../types';
+import type { ProblemsProblem400, ProblemsProblem403, ProblemsProblem404, ResourceType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsRoleBindingBySubject, RoleBindingsSubjectType, RoleBindingsUpdateRoleBindingsRequest } from '../types';
 
 
 export type RoleBindingsUpdateParams = {
@@ -32,10 +32,10 @@ export type RoleBindingsUpdateParams = {
   subjectId: string,
   /**
   * Identify the subject type for the set of role bindings to replace
-  * @type { string }
+  * @type { RoleBindingsSubjectType }
   * @memberof RoleBindingsUpdateApi
   */
-  subjectType: string,
+  subjectType: RoleBindingsSubjectType,
   /**
   *
   * @type { RoleBindingsUpdateRoleBindingsRequest }
@@ -67,7 +67,7 @@ const isRoleBindingsUpdateObjectParams = (params: [RoleBindingsUpdateParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsUpdateParams] | [string, ResourceType, string, string, RoleBindingsUpdateRoleBindingsRequest, string, AxiosRequestConfig])) => {
+export const roleBindingsUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsUpdateParams] | [string, ResourceType, string, RoleBindingsSubjectType, RoleBindingsUpdateRoleBindingsRequest, string, AxiosRequestConfig])) => {
     const params = isRoleBindingsUpdateObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'subjectId', 'subjectType', 'roleBindingsUpdateRoleBindingsRequest', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsUpdateParams;
     const { resourceId, resourceType, subjectId, subjectType, roleBindingsUpdateRoleBindingsRequest, fields, options = {} } = params;
     const localVarPath = `/role-bindings/by-subject/`;

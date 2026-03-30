@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, RoleBindingsList200Response, RoleBindingsList401Response, RoleBindingsList500Response } from '../types';
+import type { ProblemsProblem403, RoleBindingsList200Response, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsSubjectType } from '../types';
 
 
 export type RoleBindingsListParams = {
@@ -43,17 +43,29 @@ export type RoleBindingsListParams = {
   */
   resourceType?: string,
   /**
-  * Filter by subject type (e.g., \'group\')
-  * @type { string }
+  * Filter by subject type (e.g., \'group\' or \'user\')
+  * @type { RoleBindingsSubjectType }
   * @memberof RoleBindingsListApi
   */
-  subjectType?: string,
+  subjectType?: RoleBindingsSubjectType,
   /**
   * Filter by subject ID
   * @type { string }
   * @memberof RoleBindingsListApi
   */
   subjectId?: string,
+  /**
+  * Filter by the type of subject effectively granted access. When \'user\', returns role bindings granted directly to the user and through their group memberships. When \'group\', returns role bindings granted to the group. Cannot be combined with subject_type/subject_id.
+  * @type { RoleBindingsSubjectType }
+  * @memberof RoleBindingsListApi
+  */
+  grantedSubjectType?: RoleBindingsSubjectType,
+  /**
+  * ID of the subject effectively granted access. Accepts a principal UUID, user_id, or group UUID. Required when granted_subject_type is provided.
+  * @type { string }
+  * @memberof RoleBindingsListApi
+  */
+  grantedSubjectId?: string,
   /**
   * Control which fields are included in the response to optimize payload size.
   * @type { string }
@@ -85,9 +97,9 @@ const isRoleBindingsListObjectParams = (params: [RoleBindingsListParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListParams] | [number, string, string, string, string, string, string, string, string, AxiosRequestConfig])) => {
-    const params = isRoleBindingsListObjectParams(config) ? config[0] : ['limit', 'cursor', 'roleId', 'resourceId', 'resourceType', 'subjectType', 'subjectId', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListParams;
-    const { limit, cursor, roleId, resourceId, resourceType, subjectType, subjectId, fields, orderBy, options = {} } = params;
+export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListParams] | [number, string, string, string, string, RoleBindingsSubjectType, string, RoleBindingsSubjectType, string, string, string, AxiosRequestConfig])) => {
+    const params = isRoleBindingsListObjectParams(config) ? config[0] : ['limit', 'cursor', 'roleId', 'resourceId', 'resourceType', 'subjectType', 'subjectId', 'grantedSubjectType', 'grantedSubjectId', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListParams;
+    const { limit, cursor, roleId, resourceId, resourceType, subjectType, subjectId, grantedSubjectType, grantedSubjectId, fields, orderBy, options = {} } = params;
     const localVarPath = `/role-bindings/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -121,6 +133,14 @@ export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendReq
 
     if (subjectId !== undefined) {
         localVarQueryParameter['subject_id'] = subjectId;
+    }
+
+    if (grantedSubjectType !== undefined) {
+        localVarQueryParameter['granted_subject_type'] = grantedSubjectType;
+    }
+
+    if (grantedSubjectId !== undefined) {
+        localVarQueryParameter['granted_subject_id'] = grantedSubjectId;
     }
 
     if (fields !== undefined) {
