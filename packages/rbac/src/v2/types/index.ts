@@ -518,19 +518,13 @@ export interface RoleBindingsCreateRoleBindingsRequestSubject {
      */
     'id': string;
     /**
-     * Type of subject
-     * @type {string}
+     *
+     * @type {RoleBindingsSubjectType}
      * @memberof RoleBindingsCreateRoleBindingsRequestSubject
      */
-    'type': RoleBindingsCreateRoleBindingsRequestSubjectTypeEnum;
+    'type': RoleBindingsSubjectType;
 }
 
-export const RoleBindingsCreateRoleBindingsRequestSubjectTypeEnum = {
-    User: 'user',
-    Group: 'group'
-} as const;
-
-export type RoleBindingsCreateRoleBindingsRequestSubjectTypeEnum = typeof RoleBindingsCreateRoleBindingsRequestSubjectTypeEnum[keyof typeof RoleBindingsCreateRoleBindingsRequestSubjectTypeEnum];
 
 /**
  *
@@ -847,13 +841,27 @@ export interface RoleBindingsRoleBindingSubject {
     'type': string;
 }
 /**
+ * Type of subject for role bindings
+ * @export
+ * @enum {string}
+ */
+
+export const RoleBindingsSubjectType = {
+    User: 'user',
+    Group: 'group'
+} as const;
+
+export type RoleBindingsSubjectType = typeof RoleBindingsSubjectType[keyof typeof RoleBindingsSubjectType];
+
+
+/**
  * Request body for updating role bindings - contains the new roles to assign
  * @export
  * @interface RoleBindingsUpdateRoleBindingsRequest
  */
 export interface RoleBindingsUpdateRoleBindingsRequest {
     /**
-     * Roles to assign (replaces existing roles for the target binding)
+     * Roles to assign (replaces existing roles for the target binding). Empty array removes all bindings.
      * @type {Array<RoleBindingsUpdateRoleBindingsRequestRolesInner>}
      * @memberof RoleBindingsUpdateRoleBindingsRequest
      */
@@ -931,7 +939,7 @@ export interface RolesBatchDeleteRolesRequest {
  */
 export interface RolesCreateOrUpdateRoleRequest {
     /**
-     * A human readable name for the role. Must be unique within a tenant.
+     * A human readable name for the role. Must be unique within a tenant. Asterisks (*) are not allowed.
      * @type {string}
      * @memberof RolesCreateOrUpdateRoleRequest
      */

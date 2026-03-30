@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ExcludeSources, ProblemsProblem403, ResourceType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsListBySubject200Response } from '../types';
+import type { ExcludeSources, ProblemsProblem403, ResourceType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsListBySubject200Response, RoleBindingsSubjectType } from '../types';
 
 
 export type RoleBindingsListBySubjectParams = {
@@ -38,10 +38,10 @@ export type RoleBindingsListBySubjectParams = {
   cursor?: string,
   /**
   * Filter by subject type
-  * @type { string }
+  * @type { RoleBindingsSubjectType }
   * @memberof RoleBindingsListBySubjectApi
   */
-  subjectType?: string,
+  subjectType?: RoleBindingsSubjectType,
   /**
   * Filter by subject ID
   * @type { string }
@@ -85,7 +85,7 @@ const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubj
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, ResourceType, number, string, string, string, ExcludeSources, string, string, AxiosRequestConfig])) => {
+export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, ResourceType, number, string, RoleBindingsSubjectType, string, ExcludeSources, string, string, AxiosRequestConfig])) => {
     const params = isRoleBindingsListBySubjectObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'limit', 'cursor', 'subjectType', 'subjectId', 'excludeSources', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListBySubjectParams;
     const { resourceId, resourceType, limit, cursor, subjectType, subjectId, excludeSources, fields, orderBy, options = {} } = params;
     const localVarPath = `/role-bindings/by-subject/`;

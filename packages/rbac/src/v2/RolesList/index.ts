@@ -31,6 +31,18 @@ export type RolesListParams = {
   */
   name?: string,
   /**
+  * Filter roles by the resource type (e.g. \'tenant\', \'workspace\'). When omitted, returns roles from all scopes.
+  * @type { string }
+  * @memberof RolesListApi
+  */
+  resourceType?: string,
+  /**
+  * Filter by resource ID. Requires resource_type to be specified.
+  * @type { string }
+  * @memberof RolesListApi
+  */
+  resourceId?: string,
+  /**
   * Control which fields are included in the response to optimize payload size.
   * @type { string }
   * @memberof RolesListApi
@@ -61,9 +73,9 @@ const isRolesListObjectParams = (params: [RolesListParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const rolesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RolesListParams] | [number, string, string, string, string, AxiosRequestConfig])) => {
-    const params = isRolesListObjectParams(config) ? config[0] : ['limit', 'cursor', 'name', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RolesListParams;
-    const { limit, cursor, name, fields, orderBy, options = {} } = params;
+export const rolesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RolesListParams] | [number, string, string, string, string, string, string, AxiosRequestConfig])) => {
+    const params = isRolesListObjectParams(config) ? config[0] : ['limit', 'cursor', 'name', 'resourceType', 'resourceId', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RolesListParams;
+    const { limit, cursor, name, resourceType, resourceId, fields, orderBy, options = {} } = params;
     const localVarPath = `/roles/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -81,6 +93,14 @@ export const rolesListParamCreator = async (sendRequest: BaseAPI["sendRequest"],
 
     if (name !== undefined) {
         localVarQueryParameter['name'] = name;
+    }
+
+    if (resourceType !== undefined) {
+        localVarQueryParameter['resource_type'] = resourceType;
+    }
+
+    if (resourceId !== undefined) {
+        localVarQueryParameter['resource_id'] = resourceId;
     }
 
     if (fields !== undefined) {
