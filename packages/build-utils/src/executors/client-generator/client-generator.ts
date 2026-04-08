@@ -72,14 +72,13 @@ export default async function generateClients(options: ClientGeneratorSchemaType
   const packagePath = projectConfig.root;
   const clientName = options.clientName;
 
-  const resolvedSpecs: { namespace: string; specURI: string; outputDir: string }[] = [];
+  // Resolve URIs, validate, and collect specs for generation
+  const resolvedSpecs: { specURI: string; outputDir: string }[] = [];
 
-  Object.keys(options.specs).forEach((namespace) => {
+  for (const namespace of Object.keys(options.specs)) {
     // Can be either a local file or a remote URL
     let specURI = options.specs[namespace];
-
-    // Local spec file
-    if (specURI.indexOf('http://') < 0 && specURI.indexOf('https://') < 0) {
+    if (!specURI.startsWith('http://') && !specURI.startsWith('https://')) {
       specURI = join(packagePath, specURI);
     }
 
@@ -89,17 +88,16 @@ export default async function generateClients(options: ClientGeneratorSchemaType
       outputDir = join(outputDir, namespace);
     }
 
-    resolvedSpecs.push({ namespace, specURI, outputDir });
-  });
-
-  // Validate all specs before generating any code
-  if (!options.skipValidation) {
-    for (const { specURI, namespace } of resolvedSpecs) {
+    // Validate before collecting — fails fast if any spec is invalid
+    if (!options.skipValidation) {
       console.log(`Validating spec '${namespace}': ${specURI}`);
       validateSpec(specURI);
     }
+
+    resolvedSpecs.push({ specURI, outputDir });
   }
 
+  // Generate all clients only after every spec has been validated
   for (const { specURI, outputDir } of resolvedSpecs) {
     generateClient(packagePath, specURI, outputDir, clientName, options.legacyGenerator);
   }

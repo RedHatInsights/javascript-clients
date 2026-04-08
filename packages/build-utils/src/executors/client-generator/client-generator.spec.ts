@@ -19,6 +19,16 @@ const mockConsoleWarn = jest.spyOn(console, 'warn').mockImplementation(() => {
   return undefined;
 });
 
+/** Classify each execSync call as 'validate', 'generate', or 'postprocess'. */
+function classifyCalls(): ('validate' | 'generate' | 'postprocess')[] {
+  return mockExecSync.mock.calls.map(([cmd]) => {
+    const command = String(cmd);
+    if (command.includes('openapi-generator-cli validate')) return 'validate';
+    if (command.includes('openapi-generator-cli generate')) return 'generate';
+    return 'postprocess';
+  });
+}
+
 describe('generateClients', () => {
   const createBaseContext = (): ExecutorContext => ({
     projectName: 'test-project',
@@ -123,10 +133,9 @@ describe('generateClients', () => {
     it('should validate specs before generating by default', async () => {
       await generateClients(mockOptions, mockContext);
 
-      // First call should be validate, second should be generate
-      expect(mockExecSync).toHaveBeenCalledTimes(2);
-      expect(mockExecSync).toHaveBeenNthCalledWith(
-        1,
+      const calls = classifyCalls();
+      expect(calls).toEqual(['validate', 'generate']);
+      expect(mockExecSync).toHaveBeenCalledWith(
         expect.stringContaining('openapi-generator-cli validate -i /workspace/test-project/spec.yaml --recommend'),
         expect.objectContaining({ encoding: 'utf-8' }),
       );
@@ -140,16 +149,17 @@ describe('generateClients', () => {
 
       await generateClients(mockOptions, mockContext);
 
-      // 2 validate calls + 2 generate calls = 4
-      expect(mockExecSync).toHaveBeenCalledTimes(4);
-      // Validate calls should come first
-      expect(mockExecSync).toHaveBeenNthCalledWith(
-        1,
+      // All validate calls come before all generate calls
+      const calls = classifyCalls();
+      expect(calls.filter((c) => c === 'validate')).toHaveLength(2);
+      expect(calls.filter((c) => c === 'generate')).toHaveLength(2);
+      expect(calls.lastIndexOf('validate')).toBeLessThan(calls.indexOf('generate'));
+
+      expect(mockExecSync).toHaveBeenCalledWith(
         expect.stringContaining('validate -i /workspace/test-project/spec1.yaml'),
         expect.objectContaining({ encoding: 'utf-8' }),
       );
-      expect(mockExecSync).toHaveBeenNthCalledWith(
-        2,
+      expect(mockExecSync).toHaveBeenCalledWith(
         expect.stringContaining('validate -i /workspace/test-project/spec2.yaml'),
         expect.objectContaining({ encoding: 'utf-8' }),
       );
@@ -160,8 +170,8 @@ describe('generateClients', () => {
 
       await generateClients(mockOptions, mockContext);
 
-      // Only the generate call, no validate
-      expect(mockExecSync).toHaveBeenCalledTimes(1);
+      const calls = classifyCalls();
+      expect(calls).toEqual(['generate']);
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('openapi-generator-cli generate'), { stdio: 'inherit' });
     });
 
@@ -179,8 +189,8 @@ describe('generateClients', () => {
 
       await expect(generateClients(mockOptions, mockContext)).rejects.toThrow('OpenAPI spec validation failed');
 
-      // Should not have called generate
-      expect(mockExecSync).toHaveBeenCalledTimes(1);
+      const calls = classifyCalls();
+      expect(calls).toEqual(['validate']);
       expect(mockExecSync).not.toHaveBeenCalledWith(expect.stringContaining('openapi-generator-cli generate'), expect.anything());
     });
 
@@ -280,12 +290,15 @@ describe('generateClients', () => {
 
       await generateClients(mockOptions, mockContext);
 
-      // 3 validate + 3 generate = 6
-      expect(mockExecSync).toHaveBeenCalledTimes(6);
+      const calls = classifyCalls();
+      expect(calls.filter((c) => c === 'validate')).toHaveLength(3);
+      expect(calls.filter((c) => c === 'generate')).toHaveLength(3);
+      expect(calls.lastIndexOf('validate')).toBeLessThan(calls.indexOf('generate'));
+
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec1.yaml'), { stdio: 'inherit' });
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec2.yaml'), { stdio: 'inherit' });
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec3.yaml'), { stdio: 'inherit' });
-      // All calls should include clientName
+      // All generate calls should include clientName
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--additional-properties clientName=TestClient'), { stdio: 'inherit' });
     });
   });
@@ -372,8 +385,8 @@ describe('generateClients', () => {
     it('should not run post process when not specified', async () => {
       await generateClients(mockOptions, mockContext);
 
-      // 1 validate + 1 generate = 2
-      expect(mockExecSync).toHaveBeenCalledTimes(2);
+      const calls = classifyCalls();
+      expect(calls).toEqual(['validate', 'generate']);
     });
 
     it('should run post process command when specified', async () => {
@@ -381,8 +394,8 @@ describe('generateClients', () => {
 
       await generateClients(mockOptions, mockContext);
 
-      // 1 validate + 1 generate + 1 postProcess = 3
-      expect(mockExecSync).toHaveBeenCalledTimes(3);
+      const calls = classifyCalls();
+      expect(calls).toEqual(['validate', 'generate', 'postprocess']);
       expect(mockExecSync).toHaveBeenCalledWith('cd /workspace/test-project && npm run format', { stdio: 'inherit' });
     });
 
@@ -398,9 +411,8 @@ describe('generateClients', () => {
 
       await generateClients(options, mockContext);
 
-      // 2 validate + 2 generate + 1 postProcess = 5
-      expect(mockExecSync).toHaveBeenCalledTimes(5);
-      // Post process should be the last call
+      const calls = classifyCalls();
+      expect(calls).toEqual(['validate', 'validate', 'generate', 'generate', 'postprocess']);
       expect(mockExecSync).toHaveBeenLastCalledWith('cd /workspace/test-project && npm run lint', { stdio: 'inherit' });
     });
   });
