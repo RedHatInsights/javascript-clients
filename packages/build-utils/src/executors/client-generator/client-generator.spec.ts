@@ -1,6 +1,6 @@
 import { ExecutorContext } from '@nx/devkit';
 import { execSync } from 'child_process';
-import generateClients, { ClientGeneratorSchemaType } from './client-generator';
+import generateClients, { ClientGeneratorSchemaType, validateSpec } from './client-generator';
 
 // Mock child_process
 jest.mock('child_process');
@@ -8,6 +8,14 @@ const mockExecSync = execSync as jest.MockedFunction<typeof execSync>;
 
 // Mock console.error
 const mockConsoleError = jest.spyOn(console, 'error').mockImplementation(() => {
+  return undefined;
+});
+
+const mockConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {
+  return undefined;
+});
+
+const mockConsoleWarn = jest.spyOn(console, 'warn').mockImplementation(() => {
   return undefined;
 });
 
@@ -42,10 +50,15 @@ describe('generateClients', () => {
     jest.clearAllMocks();
     mockContext = createBaseContext();
     mockOptions = createBaseOptions();
+    // By default, validation succeeds (returns clean output)
+    // execSync with { encoding: 'utf-8' } returns a string
+    mockExecSync.mockReturnValue('No validation issues detected.' as any);
   });
 
   afterAll(() => {
     mockConsoleError.mockRestore();
+    mockConsoleLog.mockRestore();
+    mockConsoleWarn.mockRestore();
   });
 
   describe('schema validation', () => {
@@ -94,6 +107,139 @@ describe('generateClients', () => {
       const result = await generateClients(options, mockContext);
       expect(result.success).toBe(true);
     });
+
+    it('should accept skipValidation option', async () => {
+      const options = {
+        ...mockOptions,
+        skipValidation: true,
+      };
+
+      const result = await generateClients(options, mockContext);
+      expect(result.success).toBe(true);
+    });
+  });
+
+  describe('spec validation', () => {
+    it('should validate specs before generating by default', async () => {
+      await generateClients(mockOptions, mockContext);
+
+      // First call should be validate, second should be generate
+      expect(mockExecSync).toHaveBeenCalledTimes(2);
+      expect(mockExecSync).toHaveBeenNthCalledWith(
+        1,
+        expect.stringContaining('openapi-generator-cli validate -i /workspace/test-project/spec.yaml --recommend'),
+        expect.objectContaining({ encoding: 'utf-8' }),
+      );
+    });
+
+    it('should validate all specs before generating any code', async () => {
+      mockOptions.specs = {
+        default: 'spec1.yaml',
+        users: 'spec2.yaml',
+      };
+
+      await generateClients(mockOptions, mockContext);
+
+      // 2 validate calls + 2 generate calls = 4
+      expect(mockExecSync).toHaveBeenCalledTimes(4);
+      // Validate calls should come first
+      expect(mockExecSync).toHaveBeenNthCalledWith(
+        1,
+        expect.stringContaining('validate -i /workspace/test-project/spec1.yaml'),
+        expect.objectContaining({ encoding: 'utf-8' }),
+      );
+      expect(mockExecSync).toHaveBeenNthCalledWith(
+        2,
+        expect.stringContaining('validate -i /workspace/test-project/spec2.yaml'),
+        expect.objectContaining({ encoding: 'utf-8' }),
+      );
+    });
+
+    it('should skip validation when skipValidation is true', async () => {
+      mockOptions.skipValidation = true;
+
+      await generateClients(mockOptions, mockContext);
+
+      // Only the generate call, no validate
+      expect(mockExecSync).toHaveBeenCalledTimes(1);
+      expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('openapi-generator-cli generate'), { stdio: 'inherit' });
+    });
+
+    it('should not generate any code if validation fails', async () => {
+      mockExecSync.mockImplementation((command: string) => {
+        if (typeof command === 'string' && command.includes('validate')) {
+          const error = new Error('Command failed') as Error & { stdout: string; stderr: string; status: number };
+          error.stdout = 'Errors:\n  - Missing required field: info';
+          error.stderr = '';
+          error.status = 1;
+          throw error;
+        }
+        return Buffer.from('');
+      });
+
+      await expect(generateClients(mockOptions, mockContext)).rejects.toThrow('OpenAPI spec validation failed');
+
+      // Should not have called generate
+      expect(mockExecSync).toHaveBeenCalledTimes(1);
+      expect(mockExecSync).not.toHaveBeenCalledWith(expect.stringContaining('openapi-generator-cli generate'), expect.anything());
+    });
+
+    it('should validate remote spec URLs', async () => {
+      mockOptions.specs = { default: 'https://api.example.com/openapi.yaml' };
+
+      await generateClients(mockOptions, mockContext);
+
+      expect(mockExecSync).toHaveBeenCalledWith(
+        expect.stringContaining('validate -i https://api.example.com/openapi.yaml'),
+        expect.objectContaining({ encoding: 'utf-8' }),
+      );
+    });
+  });
+
+  describe('validateSpec', () => {
+    it('should pass when validation returns no errors', () => {
+      mockExecSync.mockReturnValue('No validation issues detected.' as any);
+
+      expect(() => validateSpec('spec.yaml')).not.toThrow();
+    });
+
+    it('should throw when output contains [error]', () => {
+      mockExecSync.mockReturnValue('[error] spec.yaml is not valid\nErrors:\n  - Missing info' as any);
+
+      expect(() => validateSpec('spec.yaml')).toThrow("OpenAPI spec validation failed for 'spec.yaml'");
+    });
+
+    it('should warn but not throw when output contains [warning]', () => {
+      mockExecSync.mockReturnValue('[warning] Unused schema: Pet' as any);
+
+      expect(() => validateSpec('spec.yaml')).not.toThrow();
+      expect(mockConsoleWarn).toHaveBeenCalledWith(expect.stringContaining('[warning]'));
+    });
+
+    it('should throw with details when command fails with non-zero exit', () => {
+      const error = new Error('Command failed') as Error & { stdout: string; stderr: string; status: number };
+      error.stdout = 'Unable to read spec file: spec.yaml';
+      error.stderr = '';
+      error.status = 1;
+      mockExecSync.mockImplementation(() => {
+        throw error;
+      });
+
+      expect(() => validateSpec('spec.yaml')).toThrow("OpenAPI spec validation failed for 'spec.yaml'");
+      expect(() => validateSpec('spec.yaml')).toThrow('Unable to read spec file');
+    });
+
+    it('should provide fallback message when no output is available', () => {
+      const error = new Error('Command failed') as Error & { stdout: string; stderr: string; status: number };
+      error.stdout = '';
+      error.stderr = '';
+      error.status = 1;
+      mockExecSync.mockImplementation(() => {
+        throw error;
+      });
+
+      expect(() => validateSpec('spec.yaml')).toThrow('Spec could not be read or parsed.');
+    });
   });
 
   describe('spec processing', () => {
@@ -134,7 +280,8 @@ describe('generateClients', () => {
 
       await generateClients(mockOptions, mockContext);
 
-      expect(mockExecSync).toHaveBeenCalledTimes(3);
+      // 3 validate + 3 generate = 6
+      expect(mockExecSync).toHaveBeenCalledTimes(6);
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec1.yaml'), { stdio: 'inherit' });
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec2.yaml'), { stdio: 'inherit' });
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('-i /workspace/test-project/spec3.yaml'), { stdio: 'inherit' });
@@ -225,7 +372,8 @@ describe('generateClients', () => {
     it('should not run post process when not specified', async () => {
       await generateClients(mockOptions, mockContext);
 
-      expect(mockExecSync).toHaveBeenCalledTimes(1); // Only the generator call
+      // 1 validate + 1 generate = 2
+      expect(mockExecSync).toHaveBeenCalledTimes(2);
     });
 
     it('should run post process command when specified', async () => {
@@ -233,7 +381,8 @@ describe('generateClients', () => {
 
       await generateClients(mockOptions, mockContext);
 
-      expect(mockExecSync).toHaveBeenCalledTimes(2);
+      // 1 validate + 1 generate + 1 postProcess = 3
+      expect(mockExecSync).toHaveBeenCalledTimes(3);
       expect(mockExecSync).toHaveBeenCalledWith('cd /workspace/test-project && npm run format', { stdio: 'inherit' });
     });
 
@@ -249,7 +398,8 @@ describe('generateClients', () => {
 
       await generateClients(options, mockContext);
 
-      expect(mockExecSync).toHaveBeenCalledTimes(3);
+      // 2 validate + 2 generate + 1 postProcess = 5
+      expect(mockExecSync).toHaveBeenCalledTimes(5);
       // Post process should be the last call
       expect(mockExecSync).toHaveBeenLastCalledWith('cd /workspace/test-project && npm run lint', { stdio: 'inherit' });
     });

@@ -2,8 +2,37 @@
   "$schema": "http://json-schema.org/schema",
   "version": 2,
   "title": "Client generator",
-  "description": "",
+  "description": "Generates TypeScript API clients from OpenAPI specifications",
   "type": "object",
-  "properties": {},
-  "required": []
+  "properties": {
+    "specs": {
+      "type": "object",
+      "description": "Map of namespace to spec URL or local file path",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "clientName": {
+      "type": "string",
+      "description": "PascalCase name ending with 'Client' (e.g., 'MyServiceClient')"
+    },
+    "postProcess": {
+      "type": "string",
+      "description": "Optional post-processing command to run after generation"
+    },
+    "legacyGenerator": {
+      "type": "boolean",
+      "description": "Use the legacy typescript-axios generator instead of the custom one"
+    },
+    "outputPath": {
+      "type": "string",
+      "description": "Custom output path for generated files"
+    },
+    "skipValidation": {
+      "type": "boolean",
+      "description": "Skip OpenAPI spec validation before generation",
+      "default": false
+    }
+  },
+  "required": ["specs", "clientName"]
 }
