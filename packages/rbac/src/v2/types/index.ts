@@ -449,6 +449,20 @@ export interface RoleBindingsBatchCreateRoleBindingsResponse {
     'role_bindings': Array<RoleBindingsRoleBinding>;
 }
 /**
+ * Subject kind for create/batch, by-subject, and list filters on the binding\'s subject (group UUID or user/principal UUID). Does not include principal as a separate type string; for external user ID use GET /role-bindings/ with granted_subject_type=principal and granted_subject.principal.user_id.
+ * @export
+ * @enum {string}
+ */
+
+export const RoleBindingsBindingSubjectType = {
+    User: 'user',
+    Group: 'group'
+} as const;
+
+export type RoleBindingsBindingSubjectType = typeof RoleBindingsBindingSubjectType[keyof typeof RoleBindingsBindingSubjectType];
+
+
+/**
  * Request body for creating role bindings
  * @export
  * @interface RoleBindingsCreateRoleBindingsRequest
@@ -519,11 +533,26 @@ export interface RoleBindingsCreateRoleBindingsRequestSubject {
     'id': string;
     /**
      *
-     * @type {RoleBindingsSubjectType}
+     * @type {RoleBindingsBindingSubjectType}
      * @memberof RoleBindingsCreateRoleBindingsRequestSubject
      */
-    'type': RoleBindingsSubjectType;
+    'type': RoleBindingsBindingSubjectType;
 }
+
+
+/**
+ * Effective-grant filter for GET /role-bindings/ only. With type principal, use query granted_subject.principal.user_id. Cannot be combined with subject_type/subject_id on the same request. Not used on /role-bindings/by-subject/.
+ * @export
+ * @enum {string}
+ */
+
+export const RoleBindingsGrantedSubjectFilterType = {
+    User: 'user',
+    Group: 'group',
+    Principal: 'principal'
+} as const;
+
+export type RoleBindingsGrantedSubjectFilterType = typeof RoleBindingsGrantedSubjectFilterType[keyof typeof RoleBindingsGrantedSubjectFilterType];
 
 
 /**
@@ -764,6 +793,12 @@ export interface RoleBindingsRoleBinding {
      * @memberof RoleBindingsRoleBinding
      */
     'resource'?: RoleBindingsResource;
+    /**
+     * Resources from which this role binding is sourced (direct or inherited)
+     * @type {Array<RoleBindingsResource>}
+     * @memberof RoleBindingsRoleBinding
+     */
+    'sources'?: Array<RoleBindingsResource>;
 }
 /**
  *
@@ -840,20 +875,6 @@ export interface RoleBindingsRoleBindingSubject {
      */
     'type': string;
 }
-/**
- * Type of subject for role bindings
- * @export
- * @enum {string}
- */
-
-export const RoleBindingsSubjectType = {
-    User: 'user',
-    Group: 'group'
-} as const;
-
-export type RoleBindingsSubjectType = typeof RoleBindingsSubjectType[keyof typeof RoleBindingsSubjectType];
-
-
 /**
  * Request body for updating role bindings - contains the new roles to assign
  * @export

@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem400, ProblemsProblem403, ProblemsProblem404, ResourceType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsRoleBindingBySubject, RoleBindingsSubjectType, RoleBindingsUpdateRoleBindingsRequest } from '../types';
+import type { ProblemsProblem400, ProblemsProblem403, ProblemsProblem404, ResourceType, RoleBindingsBindingSubjectType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsRoleBindingBySubject, RoleBindingsUpdateRoleBindingsRequest } from '../types';
 
 
 export type RoleBindingsUpdateParams = {
@@ -31,11 +31,11 @@ export type RoleBindingsUpdateParams = {
   */
   subjectId: string,
   /**
-  * Identify the subject type for the set of role bindings to replace
-  * @type { RoleBindingsSubjectType }
+  * Subject kind: group or user (principal UUID). No granted_subject.* params on this path.
+  * @type { RoleBindingsBindingSubjectType }
   * @memberof RoleBindingsUpdateApi
   */
-  subjectType: RoleBindingsSubjectType,
+  subjectType: RoleBindingsBindingSubjectType,
   /**
   *
   * @type { RoleBindingsUpdateRoleBindingsRequest }
@@ -61,13 +61,13 @@ const isRoleBindingsUpdateObjectParams = (params: [RoleBindingsUpdateParams] | u
   return false
 }
 /**
-* Update roles for a specific subject on a resource. Replaces all existing roles with the provided roles.
+* Update roles for a specific subject on a resource. Replaces all existing roles with the provided roles. subject_type is user or group only (UUID via subject_id). granted_subject.* query params are not supported here; use GET /role-bindings/ to filter by external user ID.
 * @summary Update role bindings
 * @param {RoleBindingsUpdateParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsUpdateParams] | [string, ResourceType, string, RoleBindingsSubjectType, RoleBindingsUpdateRoleBindingsRequest, string, AxiosRequestConfig])) => {
+export const roleBindingsUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsUpdateParams] | [string, ResourceType, string, RoleBindingsBindingSubjectType, RoleBindingsUpdateRoleBindingsRequest, string, AxiosRequestConfig])) => {
     const params = isRoleBindingsUpdateObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'subjectId', 'subjectType', 'roleBindingsUpdateRoleBindingsRequest', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsUpdateParams;
     const { resourceId, resourceType, subjectId, subjectType, roleBindingsUpdateRoleBindingsRequest, fields, options = {} } = params;
     const localVarPath = `/role-bindings/by-subject/`;

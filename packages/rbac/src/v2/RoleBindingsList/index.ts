@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, RoleBindingsList200Response, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsSubjectType } from '../types';
+import type { ExcludeSources, ProblemsProblem403, RoleBindingsBindingSubjectType, RoleBindingsGrantedSubjectFilterType, RoleBindingsList200Response, RoleBindingsList401Response, RoleBindingsList500Response } from '../types';
 
 
 export type RoleBindingsListParams = {
@@ -43,11 +43,17 @@ export type RoleBindingsListParams = {
   */
   resourceType?: string,
   /**
-  * Filter by subject type (e.g., \'group\' or \'user\')
-  * @type { RoleBindingsSubjectType }
+  * Org ID of the tenant resource to filter by. Cannot be combined with resource_id. When provided, resource_type is implicitly \'tenant\'.
+  * @type { string }
   * @memberof RoleBindingsListApi
   */
-  subjectType?: RoleBindingsSubjectType,
+  resourceTenantOrgId?: string,
+  /**
+  * Filter by binding subject type (group or user) on each row. Distinct from granted_subject_type.
+  * @type { RoleBindingsBindingSubjectType }
+  * @memberof RoleBindingsListApi
+  */
+  subjectType?: RoleBindingsBindingSubjectType,
   /**
   * Filter by subject ID
   * @type { string }
@@ -55,17 +61,29 @@ export type RoleBindingsListParams = {
   */
   subjectId?: string,
   /**
-  * Filter by the type of subject effectively granted access. When \'user\', returns role bindings granted directly to the user and through their group memberships. When \'group\', returns role bindings granted to the group. Cannot be combined with subject_type/subject_id.
-  * @type { RoleBindingsSubjectType }
+  *
+  * @type { ExcludeSources }
   * @memberof RoleBindingsListApi
   */
-  grantedSubjectType?: RoleBindingsSubjectType,
+  excludeSources?: ExcludeSources,
   /**
-  * ID of the subject effectively granted access. Accepts a principal UUID, user_id, or group UUID. Required when granted_subject_type is provided.
+  * Filter by the type of subject effectively granted access. When \'user\', returns role bindings granted directly to the user and through their group memberships. When \'group\', returns role bindings granted to the group. When \'principal\', filters by external user ID via granted_subject.principal.user_id. Cannot be combined with subject_type/subject_id.
+  * @type { RoleBindingsGrantedSubjectFilterType }
+  * @memberof RoleBindingsListApi
+  */
+  grantedSubjectType?: RoleBindingsGrantedSubjectFilterType,
+  /**
+  * ID of the subject effectively granted access. Accepts a principal UUID or group UUID. Required when granted_subject_type is \'user\' or \'group\'.
   * @type { string }
   * @memberof RoleBindingsListApi
   */
   grantedSubjectId?: string,
+  /**
+  * External user ID of the principal effectively granted access. Required when granted_subject_type is \'principal\'.
+  * @type { string }
+  * @memberof RoleBindingsListApi
+  */
+  grantedSubjectPrincipalUserId?: string,
   /**
   * Control which fields are included in the response to optimize payload size.
   * @type { string }
@@ -97,9 +115,9 @@ const isRoleBindingsListObjectParams = (params: [RoleBindingsListParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListParams] | [number, string, string, string, string, RoleBindingsSubjectType, string, RoleBindingsSubjectType, string, string, string, AxiosRequestConfig])) => {
-    const params = isRoleBindingsListObjectParams(config) ? config[0] : ['limit', 'cursor', 'roleId', 'resourceId', 'resourceType', 'subjectType', 'subjectId', 'grantedSubjectType', 'grantedSubjectId', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListParams;
-    const { limit, cursor, roleId, resourceId, resourceType, subjectType, subjectId, grantedSubjectType, grantedSubjectId, fields, orderBy, options = {} } = params;
+export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListParams] | [number, string, string, string, string, string, RoleBindingsBindingSubjectType, string, ExcludeSources, RoleBindingsGrantedSubjectFilterType, string, string, string, string, AxiosRequestConfig])) => {
+    const params = isRoleBindingsListObjectParams(config) ? config[0] : ['limit', 'cursor', 'roleId', 'resourceId', 'resourceType', 'resourceTenantOrgId', 'subjectType', 'subjectId', 'excludeSources', 'grantedSubjectType', 'grantedSubjectId', 'grantedSubjectPrincipalUserId', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListParams;
+    const { limit, cursor, roleId, resourceId, resourceType, resourceTenantOrgId, subjectType, subjectId, excludeSources, grantedSubjectType, grantedSubjectId, grantedSubjectPrincipalUserId, fields, orderBy, options = {} } = params;
     const localVarPath = `/role-bindings/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -127,6 +145,10 @@ export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendReq
         localVarQueryParameter['resource_type'] = resourceType;
     }
 
+    if (resourceTenantOrgId !== undefined) {
+        localVarQueryParameter['resource.tenant.org_id'] = resourceTenantOrgId;
+    }
+
     if (subjectType !== undefined) {
         localVarQueryParameter['subject_type'] = subjectType;
     }
@@ -135,12 +157,20 @@ export const roleBindingsListParamCreator = async (sendRequest: BaseAPI["sendReq
         localVarQueryParameter['subject_id'] = subjectId;
     }
 
+    if (excludeSources !== undefined) {
+        localVarQueryParameter['exclude_sources'] = excludeSources;
+    }
+
     if (grantedSubjectType !== undefined) {
         localVarQueryParameter['granted_subject_type'] = grantedSubjectType;
     }
 
     if (grantedSubjectId !== undefined) {
         localVarQueryParameter['granted_subject_id'] = grantedSubjectId;
+    }
+
+    if (grantedSubjectPrincipalUserId !== undefined) {
+        localVarQueryParameter['granted_subject.principal.user_id'] = grantedSubjectPrincipalUserId;
     }
 
     if (fields !== undefined) {
