@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ExcludeSources, ProblemsProblem403, ResourceType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsListBySubject200Response, RoleBindingsSubjectType } from '../types';
+import type { ExcludeSources, ProblemsProblem403, ResourceType, RoleBindingsBindingSubjectType, RoleBindingsList401Response, RoleBindingsList500Response, RoleBindingsListBySubject200Response } from '../types';
 
 
 export type RoleBindingsListBySubjectParams = {
@@ -37,13 +37,13 @@ export type RoleBindingsListBySubjectParams = {
   */
   cursor?: string,
   /**
-  * Filter by subject type
-  * @type { RoleBindingsSubjectType }
+  * Filter by binding subject kind: group or user (principal UUID). There is no granted_subject.* on this endpoint.
+  * @type { RoleBindingsBindingSubjectType }
   * @memberof RoleBindingsListBySubjectApi
   */
-  subjectType?: RoleBindingsSubjectType,
+  subjectType?: RoleBindingsBindingSubjectType,
   /**
-  * Filter by subject ID
+  * Filter by subject ID (group UUID or user/principal UUID)
   * @type { string }
   * @memberof RoleBindingsListBySubjectApi
   */
@@ -79,13 +79,13 @@ const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubj
   return false
 }
 /**
-* List role bindings grouped by subject
+* List role bindings grouped by subject. subject_type (optional) is user or group only, with subject_id as UUID. granted_subject_type, granted_subject_id, and granted_subject.principal.user_id are not query parameters on this path—use GET /role-bindings/ for those filters.
 * @summary List role bindings grouped by subject
 * @param {RoleBindingsListBySubjectParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, ResourceType, number, string, RoleBindingsSubjectType, string, ExcludeSources, string, string, AxiosRequestConfig])) => {
+export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, ResourceType, number, string, RoleBindingsBindingSubjectType, string, ExcludeSources, string, string, AxiosRequestConfig])) => {
     const params = isRoleBindingsListBySubjectObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'limit', 'cursor', 'subjectType', 'subjectId', 'excludeSources', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListBySubjectParams;
     const { resourceId, resourceType, limit, cursor, subjectType, subjectId, excludeSources, fields, orderBy, options = {} } = params;
     const localVarPath = `/role-bindings/by-subject/`;
