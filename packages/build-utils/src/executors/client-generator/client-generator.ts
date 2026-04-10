@@ -8,12 +8,38 @@ const ClientGeneratorSchema = z.object({
   postProcess: z.string().optional(),
   legacyGenerator: z.boolean().optional(),
   outputPath: z.string().optional(),
+  skipValidation: z.boolean().optional(),
   clientName: z.string().refine((name) => /^[A-Z][a-zA-Z0-9]*Client$/.test(name), {
     message: "clientName must be PascalCase and end with 'Client' (e.g., 'MyServiceClient')",
   }),
 });
 
 export type ClientGeneratorSchemaType = z.infer<typeof ClientGeneratorSchema>;
+
+export function validateSpec(spec: string): void {
+  try {
+    const output = execSync(`openapi-generator-cli validate -i ${spec} --recommend`, {
+      encoding: 'utf-8',
+      stdio: ['pipe', 'pipe', 'pipe'],
+    });
+
+    if (output.includes('[error]')) {
+      throw new Error(`OpenAPI spec validation failed for '${spec}':\n${output}`);
+    }
+
+    if (output.includes('[warning]')) {
+      console.warn(output.trim());
+    }
+  } catch (error: unknown) {
+    if (error instanceof Error && error.message.startsWith('OpenAPI spec validation failed')) {
+      throw error;
+    }
+
+    const execError = error as { stdout?: string; stderr?: string; status?: number };
+    const output = execError.stdout || execError.stderr || '';
+    throw new Error(`OpenAPI spec validation failed for '${spec}':\n${output || 'Spec could not be read or parsed.'}`);
+  }
+}
 
 function generateClient(packagePath: string, spec: string, outputDir: string, clientName: string, isLegacy?: boolean) {
   let additionalArgs: string;
@@ -46,12 +72,13 @@ export default async function generateClients(options: ClientGeneratorSchemaType
   const packagePath = projectConfig.root;
   const clientName = options.clientName;
 
-  Object.keys(options.specs).forEach((namespace) => {
+  // Resolve URIs, validate, and collect specs for generation
+  const resolvedSpecs: { specURI: string; outputDir: string }[] = [];
+
+  for (const namespace of Object.keys(options.specs)) {
     // Can be either a local file or a remote URL
     let specURI = options.specs[namespace];
-
-    // Local spec file
-    if (specURI.indexOf('http://') < 0 && specURI.indexOf('https://') < 0) {
+    if (!specURI.startsWith('http://') && !specURI.startsWith('https://')) {
       specURI = join(packagePath, specURI);
     }
 
@@ -61,8 +88,19 @@ export default async function generateClients(options: ClientGeneratorSchemaType
       outputDir = join(outputDir, namespace);
     }
 
+    // Validate before collecting — fails fast if any spec is invalid
+    if (!options.skipValidation) {
+      console.log(`Validating spec '${namespace}': ${specURI}`);
+      validateSpec(specURI);
+    }
+
+    resolvedSpecs.push({ specURI, outputDir });
+  }
+
+  // Generate all clients only after every spec has been validated
+  for (const { specURI, outputDir } of resolvedSpecs) {
     generateClient(packagePath, specURI, outputDir, clientName, options.legacyGenerator);
-  });
+  }
 
   if (options.postProcess) {
     execSync(`cd ${packagePath} && ${options.postProcess}`, { stdio: 'inherit' });
