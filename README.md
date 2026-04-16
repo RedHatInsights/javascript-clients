@@ -133,4 +133,14 @@ To run integration tests, use a command like the following:
 `npm run test:integration`
 
 Generally, the pattern is for a client to have a `tests/integration` folder with test files having names matching `*.test.ts`. Within each client's folder (e.g. `packages/<client>`) there should be a dedicated `tsconfig.integration.spec.json` with an `include` glob pattern that points to the integration tests. Similarly, there should also be a dedicated `jest.integration.config.ts` that points to `tsconfig.integration.spec.json` in the `transform` value. Also, each client's `project.json` should have an `integration` target defined/added when the integration tests are created.
- 
+
+## Documentation
+
+| Document | Purpose |
+|----------|---------|
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Setup, workflow, commit conventions, PR guidelines |
+| [AGENTS.md](AGENTS.md) | AI agent onboarding, cross-cutting conventions |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | System design, dependency graph, data flows |
+| [docs/testing-guidelines.md](docs/testing-guidelines.md) | Test types, integration test patterns |
+| [docs/api-contracts-guidelines.md](docs/api-contracts-guidelines.md) | OpenAPI spec management, code generation pipeline |
+
