@@ -24,7 +24,6 @@
       "@redhat-cloud-services/integrations-client": ["packages/integrations/src/index.ts"],
       "@redhat-cloud-services/notifications-client": ["packages/notifications/src/index.ts"],
       "@redhat-cloud-services/patch-client": ["packages/patch/src/index.ts"],
-      "@redhat-cloud-services/policies-client": ["packages/policies/index.ts"],
       "@redhat-cloud-services/quickstarts-client": ["packages/quickstarts/src/index.ts"],
       "@redhat-cloud-services/rbac-client": ["packages/rbac/src/index.ts"],
       "@redhat-cloud-services/remediations-client": ["packages/remediations/src/index.ts"],
