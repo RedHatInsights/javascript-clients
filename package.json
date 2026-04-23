@@ -68,7 +68,7 @@
     "@nx/workspace": "21.5.3",
     "@openapitools/openapi-generator-cli": "^2.29.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
-    "@stoplight/prism-cli": "^5.14.2",
+    "@stoplight/prism-cli": "^5.15.10",
     "@svgr/webpack": "^8.0.1",
     "@swc-node/register": "~1.9.1",
     "@swc/cli": "~0.6.0",
@@ -112,5 +112,10 @@
     "typescript": "^5.6.0",
     "webpack-cli": "^5.1.4",
     "zod": "^3.22.4"
+  },
+  "overrides": {
+    "postman-collection": {
+      "lodash": "4.18.1"
+    }
   }
 }
