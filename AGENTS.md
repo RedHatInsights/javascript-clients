@@ -22,7 +22,7 @@ This is an Nx monorepo that auto-generates TypeScript API clients for Red Hat Hy
 | Layer | Technology |
 |-------|-----------|
 | Language | TypeScript 5.6+, Node.js 20.19.5 |
-| Monorepo | Nx 21.5.3 |
+| Monorepo | Nx 22.6.5 |
 | HTTP Client | Axios |
 | Code Generation | Custom Java OpenAPI generator (Maven), Mustache templates |
 | Testing | Jest 30 (unit + integration), Prism mock server |

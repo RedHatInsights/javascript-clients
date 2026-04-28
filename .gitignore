@@ -47,3 +47,6 @@ target/typescript-axios-webpack-module-federation-openapi-generator-*-tests*
 # Maven target folder (jars)
 /target/*
 .hypothesis
+
+.claude/worktrees
+.claude/settings.local.json

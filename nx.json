@@ -79,7 +79,9 @@
         "createReleaseInGitHub": false
       }
     },
-    "releaseTagPattern": "{projectName}-{version}"
+    "releaseTag": {
+      "pattern": "{projectName}-{version}"
+    }
   },
   "generators": {
     "@nx/react": {
