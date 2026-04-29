@@ -86,3 +86,19 @@ See [docs/testing-guidelines.md](docs/testing-guidelines.md) for details on test
 ## Release Process
 
 Releases are automated via Nx Release on the `main` branch. Each package is independently versioned based on conventional commit history. Do not manually bump versions.
+
+### Critical Configuration: `useCommitScope`
+
+**Do not change `"useCommitScope": true` in `nx.json` (line 73).**
+
+This setting controls how breaking changes affect version bumps:
+
+- **`true` (current)**: Breaking changes only bump packages named in commit scope
+  - Example: `feat(rbac)!: breaking change` → rbac gets major bump, other packages get patch for dependency update
+  - Prevents cascading major bumps across unrelated packages
+
+- **`false` (dangerous)**: Breaking changes bump ALL packages with modified files to major
+  - Causes `preserveMatchingDependencyRanges` failures when shared package jumps major but clients still depend on `^2.x`
+  - Results in failed releases
+
+Since `packages/shared/` is a dependency of all 15 client packages, setting `useCommitScope: false` would cause any breaking change touching shared files to trigger major bumps across the entire monorepo.
