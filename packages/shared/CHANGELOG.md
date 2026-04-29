@@ -1,3 +1,7 @@
+## 2.0.6 (2026-04-29)
+
+This was a version bump only for @redhat-cloud-services/javascript-clients-shared to align it with other projects, there were no code changes.
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).

@@ -1,3 +1,13 @@
+## 2.1.6 (2026-04-29)
+
+### 🩹 Fixes
+
+- **vulnerabilities:** skip validation for upstream spec issues ([eb8f5950](https://github.com/RedHatInsights/javascript-clients/commit/eb8f5950))
+
+### ❤️ Thank You
+
+- Charles Mulder
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
