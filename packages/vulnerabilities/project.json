@@ -9,6 +9,7 @@
       "options": {
         "postProcess": "./postProcess.sh",
         "legacyGenerator": true,
+        "skipValidation": true,
         "specs": {
           "default": "apiSpec.json",
           "git-api": "apiSpec.json"

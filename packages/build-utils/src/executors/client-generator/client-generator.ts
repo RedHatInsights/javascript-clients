@@ -1,5 +1,6 @@
 import { ExecutorContext } from '@nx/devkit';
 import { execSync } from 'child_process';
+import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { z } from 'zod';
 
@@ -50,8 +51,11 @@ function generateClient(packagePath: string, spec: string, outputDir: string, cl
       '--custom-generator=target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation';
   }
 
+  const packageOpenapitools = join(packagePath, 'openapitools.json');
+  const openapiToolsArg = existsSync(packageOpenapitools) ? `--openapitools ${packageOpenapitools}` : '';
+
   execSync(
-    `TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i ${spec} -o ${outputDir} --openapitools ${packagePath}/openapitools.json --skip-validate-spec --enable-post-process-file ${additionalArgs} --additional-properties clientName=${clientName}`,
+    `TS_POST_PROCESS_FILE='./postProcess.sh' openapi-generator-cli generate -i ${spec} -o ${outputDir} ${openapiToolsArg} --skip-validate-spec --enable-post-process-file ${additionalArgs} --additional-properties clientName=${clientName}`,
     { stdio: 'inherit' },
   );
 }

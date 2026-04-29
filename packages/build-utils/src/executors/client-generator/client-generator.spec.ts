@@ -1,10 +1,15 @@
 import { ExecutorContext } from '@nx/devkit';
 import { execSync } from 'child_process';
+import { existsSync } from 'node:fs';
 import generateClients, { ClientGeneratorSchemaType, validateSpec } from './client-generator';
 
 // Mock child_process
 jest.mock('child_process');
 const mockExecSync = execSync as jest.MockedFunction<typeof execSync>;
+
+// Mock node:fs
+jest.mock('node:fs');
+const mockExistsSync = existsSync as jest.MockedFunction<typeof existsSync>;
 
 // Mock console.error
 const mockConsoleError = jest.spyOn(console, 'error').mockImplementation(() => {
@@ -63,6 +68,8 @@ describe('generateClients', () => {
     // By default, validation succeeds (returns clean output)
     // execSync with { encoding: 'utf-8' } returns a string
     mockExecSync.mockReturnValue('No validation issues detected.' as any);
+    // By default, openapitools.json exists
+    mockExistsSync.mockReturnValue(true);
   });
 
   afterAll(() => {
@@ -433,10 +440,20 @@ describe('generateClients', () => {
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining("TS_POST_PROCESS_FILE='./postProcess.sh'"), { stdio: 'inherit' });
     });
 
-    it('should include openapitools.json path', async () => {
+    it('should include openapitools.json path when file exists', async () => {
+      mockExistsSync.mockReturnValue(true);
       await generateClients(mockOptions, mockContext);
 
       expect(mockExecSync).toHaveBeenCalledWith(expect.stringContaining('--openapitools /workspace/test-project/openapitools.json'), {
+        stdio: 'inherit',
+      });
+    });
+
+    it('should omit openapitools.json path when file does not exist', async () => {
+      mockExistsSync.mockReturnValue(false);
+      await generateClients(mockOptions, mockContext);
+
+      expect(mockExecSync).toHaveBeenCalledWith(expect.not.stringContaining('--openapitools'), {
         stdio: 'inherit',
       });
     });
