@@ -69,6 +69,12 @@ export interface ControllersAdvisoriesDBLookup {
      * @type {string}
      * @memberof ControllersAdvisoriesDBLookup
      */
+    'severity_name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersAdvisoriesDBLookup
+     */
     'synopsis'?: string;
 }
 /**
@@ -193,6 +199,12 @@ export interface ControllersAdvisoryDetailAttributes {
      * @memberof ControllersAdvisoryDetailAttributes
      */
     'severity'?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersAdvisoryDetailAttributes
+     */
+    'severity_name'?: string;
     /**
      *
      * @type {string}
@@ -335,6 +347,12 @@ export interface ControllersAdvisoryItemAttributes {
      * @memberof ControllersAdvisoryItemAttributes
      */
     'severity'?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersAdvisoryItemAttributes
+     */
+    'severity_name'?: string;
     /**
      *
      * @type {string}
@@ -1203,6 +1221,12 @@ export interface ControllersSystemAdvisoriesDBLookup {
      * @type {string}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
+    'severity_name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemAdvisoriesDBLookup
+     */
     'status'?: string;
     /**
      *
@@ -1309,6 +1333,12 @@ export interface ControllersSystemAdvisoryItemAttributes {
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
     'severity'?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof ControllersSystemAdvisoryItemAttributes
+     */
+    'severity_name'?: string;
     /**
      *
      * @type {string}
@@ -1891,12 +1921,6 @@ export interface ControllersSystemItemAttributesExtended {
      * @memberof ControllersSystemItemAttributesExtended
      */
     'groups'?: Array<ControllersSystemGroup>;
-    /**
-     *
-     * @type {string}
-     * @memberof ControllersSystemItemAttributesExtended
-     */
-    'insights_id'?: string;
     /**
      *
      * @type {number}

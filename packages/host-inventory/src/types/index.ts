@@ -2270,6 +2270,12 @@ export type SystemProfileDnfModuleStatusEnum = typeof SystemProfileDnfModuleStat
  */
 export interface SystemProfileImageBuilder {
     /**
+     * The blueprint used to build the image deployed on this host
+     * @type {string}
+     * @memberof SystemProfileImageBuilder
+     */
+    'blueprint_id'?: string;
+    /**
      * The compliance policy that was used and applied during the image build
      * @type {string}
      * @memberof SystemProfileImageBuilder
