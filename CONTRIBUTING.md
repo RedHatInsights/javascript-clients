@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-- Node.js (version in `.nvmrc`, currently 20.19.5)
+- Node.js (version specified in `.nvmrc`)
 - npm 7.0+
-- Java 21 + Maven (for the custom OpenAPI generator)
+- Java (version specified in `.java-version`) + Maven (for the custom OpenAPI generator)
 - Git
 
 ## Setup
@@ -12,8 +12,32 @@
 ```bash
 git clone https://github.com/RedHatInsights/javascript-clients.git
 cd javascript-clients
-nvm use           # Switch to correct Node version
+
+# Verify Node version matches .nvmrc
+cat .nvmrc
+node --version
+
+# Switch to correct Node version (or install if missing)
+nvm use           # If version installed
+# OR
+nvm install       # If version not installed (installs + switches)
+
 npm install       # Install npm deps + build Maven generator
+```
+
+### Switching Node Versions
+
+If you need to switch Node versions after initial setup:
+
+```bash
+# Clean all caches and node_modules
+rm -r .nx node_modules packages/*/node_modules
+
+# Switch to .nvmrc version
+nvm use
+
+# Reinstall dependencies
+npm install
 ```
 
 ## Development Workflow

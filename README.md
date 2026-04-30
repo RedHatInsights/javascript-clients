@@ -15,6 +15,32 @@ We are using Java to install and build this generator. Please install Java and p
 
 ### Troubleshooting
 
+#### Node version mismatch
+
+This project uses nvm to manage Node.js versions. The required version is in `.nvmrc`.
+
+**Check version match:**
+```bash
+cat .nvmrc
+node --version
+```
+
+**Switch to correct version:**
+```bash
+nvm use           # If version already installed
+# OR
+nvm install       # If version not installed
+```
+
+**After switching Node versions, clean reinstall:**
+```bash
+rm -r .nx node_modules packages/*/node_modules
+nvm use
+npm install
+```
+
+This prevents `package-lock.json` mismatches and stale Nx cache issues.
+
 #### Publish to local registry 
 
 You can publish a package to a local registry to test that the import works. 
@@ -41,16 +67,17 @@ NPM_CONFIG_REGISTRY=http://127.0.0.1:4873 npx tsc
 
 #### CI fails due to mismatch between package.json and package-lock.json
 
-The Ubuntu 24.04 container running the Github Actions uses node 20.19.5.
-Therefore, make sure to be running the same node version when running `npm install`.
+The Ubuntu 24.04 container running GitHub Actions uses the Node version from `.nvmrc`.
+Therefore, make sure to be running the same Node version when running `npm install`.
 
 ```sh
 # option 1: using nvm on local 
-nvm use 20.19.5'
+nvm use
 npm install
 
-# option 2: using container very similar to the github action
-podman run --rm -it --userns=keep-id -v .:/workspace:Z -w /workspace -e PATH="/opt/acttoolcache/node/20.19.5/x64/bin:$PATH" catthehacker/ubuntu:act-24.04 npm install
+# option 2: using container very similar to the github action (check .nvmrc for version)
+# Replace NODE_VERSION with value from .nvmrc
+podman run --rm -it --userns=keep-id -v .:/workspace:Z -w /workspace -e PATH="/opt/acttoolcache/node/NODE_VERSION/x64/bin:$PATH" catthehacker/ubuntu:act-24.04 npm install
 ```
 
 #### NX Daemon
