@@ -4,7 +4,7 @@ description: Setup Node.js and cache dependencies consistently
 runs:
   using: "composite"
   steps:
-    - name: Show Node.js environment info
+    - name: Show environment info
       shell: bash
       run: |
         echo "=== Pre-installed Node.js versions ==="
@@ -13,17 +13,27 @@ runs:
         which node && node --version || echo "No default Node.js found"
         echo "=== .nvmrc content ==="
         cat .nvmrc 2>/dev/null || echo "No .nvmrc file found"
+        echo "=== .java-version content ==="
+        cat .java-version 2>/dev/null || echo "No .java-version file found"
+        echo "=== Current Java ==="
+        which java && java --version || echo "No default Java found"
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version-file: '.java-version'
+        cache: 'maven'
     - uses: actions/setup-node@v5
       with:
         node-version-file: '.nvmrc'
         registry-url: 'https://registry.npmjs.org'
-    - name: Show final Node.js version
+    - name: Show final versions
       shell: bash
       run: |
+        echo "=== Final Java version after setup ==="
+        which java && java --version
+        which mvn && mvn --version || echo "Maven not found"
         echo "=== Final Node.js version after setup ==="
         which node && node --version
         npm --version
-    - name: Update npm to latest version
-      shell: bash
-      run: npm install -g npm@11.6.2
     - uses: './.github/actions/node-cache'

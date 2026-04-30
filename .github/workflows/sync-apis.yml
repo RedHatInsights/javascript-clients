@@ -19,12 +19,6 @@ jobs:
       with:
         token: ${{ secrets.BOT_GH_TOKEN }}
     - uses: './.github/actions/setup-environment'
-    - name: Install Java and Maven
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '21'
-        cache: 'maven'
     - run: npm install
     - name: Generate clients
       run: npm run nx:reset && npm run generate

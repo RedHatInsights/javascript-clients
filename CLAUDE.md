@@ -1,5 +1,26 @@
 @AGENTS.md
 
+## Session Startup Checklist
+
+**Always check Node version matches `.nvmrc` at session start:**
+
+```bash
+cat .nvmrc
+node --version
+```
+
+If mismatch:
+```bash
+nvm use           # Switch to .nvmrc version (or nvm install if not installed)
+```
+
+If Node version changed, clean reinstall:
+```bash
+rm -r .nx node_modules packages/*/node_modules
+nvm use
+npm install
+```
+
 ## Build & Test Commands
 
 ```bash
@@ -24,8 +45,8 @@ Husky is configured:
 
 ## CI Requirements
 
-- Node.js version must match `.nvmrc` (20.19.5)
-- Java 21 + Maven required for generator builds
+- Node.js version must match `.nvmrc`
+- Java (version in `.java-version`) + Maven required for generator builds
 - `npm ci` is used in CI (not `npm install`)
 - Only affected packages are linted/tested/built (`nx affected`)
 

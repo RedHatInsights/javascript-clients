@@ -21,12 +21,12 @@ This is an Nx monorepo that auto-generates TypeScript API clients for Red Hat Hy
 
 | Layer | Technology |
 |-------|-----------|
-| Language | TypeScript 5.6+, Node.js 20.19.5 |
-| Monorepo | Nx 22.6.5 |
+| Language | TypeScript (see `package.json`), Node.js (see `.nvmrc`) |
+| Monorepo | Nx (see `package.json`) |
 | HTTP Client | Axios |
 | Code Generation | Custom Java OpenAPI generator (Maven), Mustache templates |
-| Testing | Jest 30 (unit + integration), Prism mock server |
-| Linting | ESLint 9 + Prettier |
+| Testing | Jest (unit + integration), Prism mock server |
+| Linting | ESLint + Prettier |
 | CI/CD | GitHub Actions |
 | Release | Nx Release (independent per package, conventional commits) |
 | Module System | Dual CJS + ESM builds |
@@ -96,10 +96,34 @@ npm run nx:reset         # Reset Nx daemon (if it crashes)
 
 ### Common Pitfalls
 
-1. **Editing generated code** — Changes in `src/` will be overwritten. Use templates instead.
-2. **Stale Nx cache** — If builds seem wrong, run `npm run build:no-cache` or `npm run nx:reset`.
-3. **Wrong spec URL domain** — Use `console.redhat.com`, not `cloud.redhat.com` (returns 404).
-4. **Missing Java/Maven** — The custom generator requires Java 21 + Maven. `npm install` triggers `mvn clean package`.
-5. **Pre-commit hook runs tests** — Husky runs `npm test` before every commit. Fix failing tests first.
-6. **Package-lock.json mismatch** — Use the exact Node version from `.nvmrc` (20.19.5) when running `npm install`.
-7. **Shared package changes** — `@redhat-cloud-services/javascript-clients-shared` is a runtime dependency of all clients. Changes propagate everywhere.
+1. **Wrong Node version** — Project requires Node version in `.nvmrc`. Check version match at session start:
+   ```bash
+   cat .nvmrc
+   node --version
+   ```
+   If mismatch, switch version:
+   ```bash
+   nvm use                    # Switch to .nvmrc version
+   # Or if version not installed:
+   nvm install                # Install + switch to .nvmrc version
+   ```
+   After switching Node versions, clean install:
+   ```bash
+   rm -r .nx node_modules packages/*/node_modules
+   nvm use
+   npm install
+   ```
+
+2. **Editing generated code** — Changes in `src/` will be overwritten. Use templates instead.
+
+3. **Stale Nx cache** — If builds seem wrong, run `npm run build:no-cache` or `npm run nx:reset`.
+
+4. **Wrong spec URL domain** — Use `console.redhat.com`, not `cloud.redhat.com` (returns 404).
+
+5. **Missing Java/Maven** — The custom generator requires Java (see `.java-version`) + Maven. `npm install` triggers `mvn clean package`.
+
+6. **Pre-commit hook runs tests** — Husky runs `npm test` before every commit. Fix failing tests first.
+
+7. **Package-lock.json mismatch** — Use the exact Node version from `.nvmrc` when running `npm install`.
+
+8. **Shared package changes** — `@redhat-cloud-services/javascript-clients-shared` is a runtime dependency of all clients. Changes propagate everywhere.
