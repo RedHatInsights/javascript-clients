@@ -37,7 +37,7 @@ export type ApiGroupGetGroupListParams = {
   */
   orderBy?: ApiGroupGetGroupListOrderByEnum,
   /**
-  * Direction of the ordering (case-insensitive); defaults to ASC for name, and to DESC for host_count
+  * Direction of the ordering (case-insensitive); defaults to ASC for name, and to DESC for host_count and updated
   * @type { string }
   * @memberof ApiGroupGetGroupListApi
   */
