@@ -51,7 +51,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/build-utils/jest.config.ts"
+        "jestConfig": "packages/build-utils/jest.config.js"
       }
     }
   },
