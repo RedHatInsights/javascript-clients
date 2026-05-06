@@ -1402,6 +1402,12 @@ export interface RemediationListItem {
      */
     'archived': boolean;
     /**
+     * Timestamp of the most recent playbook run for the remediation or null if never executed
+     * @type {string}
+     * @memberof RemediationListItem
+     */
+    'last_run_at'?: string | null;
+    /**
      *
      * @type {Array<PlaybookRunDetails>}
      * @memberof RemediationListItem

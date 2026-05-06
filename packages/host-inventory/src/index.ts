@@ -68,5 +68,17 @@ export { default as apiSystemProfileValidateSchema, type ApiSystemProfileValidat
 
 export { default as apiTagGetTags, type ApiTagGetTagsReturnType } from './ApiTagGetTags'
 
+export { default as apiViewsCloneView, type ApiViewsCloneViewReturnType } from './ApiViewsCloneView'
+
+export { default as apiViewsCreateView, type ApiViewsCreateViewReturnType } from './ApiViewsCreateView'
+
+export { default as apiViewsDeleteView, type ApiViewsDeleteViewReturnType } from './ApiViewsDeleteView'
+
+export { default as apiViewsGetViewById, type ApiViewsGetViewByIdReturnType } from './ApiViewsGetViewById'
+
+export { default as apiViewsGetViewsList, type ApiViewsGetViewsListReturnType } from './ApiViewsGetViewsList'
+
+export { default as apiViewsUpdateView, type ApiViewsUpdateViewReturnType } from './ApiViewsUpdateView'
+
 
 export * from './types'

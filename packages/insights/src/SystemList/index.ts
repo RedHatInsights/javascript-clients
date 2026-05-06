@@ -86,10 +86,10 @@ export type SystemListParams = {
   pathway?: string,
   /**
   * Display only systems with these versions of RHEL
-  * @type { Array<SystemListRhelVersionEnum> }
+  * @type { Array<string> }
   * @memberof SystemListApi
   */
-  rhelVersion?: Array<SystemListRhelVersionEnum>,
+  rhelVersion?: Array<string>,
   /**
   * Order by this field
   * @type { SystemListSortEnum }
@@ -130,58 +130,6 @@ export const SystemListHitsEnum = {
     Yes: 'yes'
 } as const;
 export type SystemListHitsEnum = typeof SystemListHitsEnum[keyof typeof SystemListHitsEnum];
-/**
-  * @export
-  * @enum {string}
-  */
-export const SystemListRhelVersionEnum = {
-    _100: '10.0',
-    _101: '10.1',
-    _102: '10.2',
-    _60: '6.0',
-    _61: '6.1',
-    _610: '6.10',
-    _62: '6.2',
-    _63: '6.3',
-    _64: '6.4',
-    _65: '6.5',
-    _66: '6.6',
-    _67: '6.7',
-    _68: '6.8',
-    _69: '6.9',
-    _70: '7.0',
-    _71: '7.1',
-    _710: '7.10',
-    _72: '7.2',
-    _73: '7.3',
-    _74: '7.4',
-    _75: '7.5',
-    _76: '7.6',
-    _77: '7.7',
-    _78: '7.8',
-    _79: '7.9',
-    _80: '8.0',
-    _81: '8.1',
-    _810: '8.10',
-    _82: '8.2',
-    _83: '8.3',
-    _84: '8.4',
-    _85: '8.5',
-    _86: '8.6',
-    _87: '8.7',
-    _88: '8.8',
-    _89: '8.9',
-    _90: '9.0',
-    _91: '9.1',
-    _92: '9.2',
-    _93: '9.3',
-    _94: '9.4',
-    _95: '9.5',
-    _96: '9.6',
-    _97: '9.7',
-    _98: '9.8'
-} as const;
-export type SystemListRhelVersionEnum = typeof SystemListRhelVersionEnum[keyof typeof SystemListRhelVersionEnum];
 /**
   * @export
   * @enum {string}
@@ -243,7 +191,7 @@ const isSystemListObjectParams = (params: [SystemListParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, boolean, Array<SystemListHitsEnum>, boolean, number, number, string, Array<SystemListRhelVersionEnum>, SystemListSortEnum, SystemListSystemTypeEnum, Array<string>, Array<SystemListUpdateMethodEnum>, AxiosRequestConfig])) => {
+export const systemListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([SystemListParams] | [string, boolean, boolean, Array<string>, boolean, Array<string>, boolean, Array<SystemListHitsEnum>, boolean, number, number, string, Array<string>, SystemListSortEnum, SystemListSystemTypeEnum, Array<string>, Array<SystemListUpdateMethodEnum>, AxiosRequestConfig])) => {
     const params = isSystemListObjectParams(config) ? config[0] : ['displayName', 'filterSystemProfileAnsible', 'filterSystemProfileMssql', 'filterSystemProfileSapSidsContains', 'filterSystemProfileSapSystem', 'groups', 'hasDisabledRecommendation', 'hits', 'incident', 'limit', 'offset', 'pathway', 'rhelVersion', 'sort', 'systemType', 'tags', 'updateMethod', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemListParams;
     const { displayName, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasDisabledRecommendation, hits, incident, limit, offset, pathway, rhelVersion, sort, systemType, tags, updateMethod, options = {} } = params;
     const localVarPath = `/api/insights/v1/system/`;

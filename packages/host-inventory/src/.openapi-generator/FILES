@@ -36,6 +36,12 @@ ApiSystemProfileGetSapSids/index.ts
 ApiSystemProfileGetSapSystem/index.ts
 ApiSystemProfileValidateSchema/index.ts
 ApiTagGetTags/index.ts
+ApiViewsCloneView/index.ts
+ApiViewsCreateView/index.ts
+ApiViewsDeleteView/index.ts
+ApiViewsGetViewById/index.ts
+ApiViewsGetViewsList/index.ts
+ApiViewsUpdateView/index.ts
 api.ts
 git_push.sh
 index.ts

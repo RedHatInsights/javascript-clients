@@ -38,6 +38,12 @@ import {
     apiSystemProfileGetSapSystem,
     apiSystemProfileValidateSchema,
     apiTagGetTags,
+    apiViewsCloneView,
+    apiViewsCreateView,
+    apiViewsDeleteView,
+    apiViewsGetViewById,
+    apiViewsGetViewsList,
+    apiViewsUpdateView,
 
   } from './index';
 
@@ -77,6 +83,12 @@ const endpointList = {
     apiSystemProfileGetSapSystem,
     apiSystemProfileValidateSchema,
     apiTagGetTags,
+    apiViewsCloneView,
+    apiViewsCreateView,
+    apiViewsDeleteView,
+    apiViewsGetViewById,
+    apiViewsGetViewsList,
+    apiViewsUpdateView,
 
 
 };
