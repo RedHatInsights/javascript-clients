@@ -2270,6 +2270,12 @@ export type SystemProfileDnfModuleStatusEnum = typeof SystemProfileDnfModuleStat
  */
 export interface SystemProfileImageBuilder {
     /**
+     * The blueprint used to build the image deployed on this host
+     * @type {string}
+     * @memberof SystemProfileImageBuilder
+     */
+    'blueprint_id'?: string;
+    /**
      * The compliance policy that was used and applied during the image build
      * @type {string}
      * @memberof SystemProfileImageBuilder
@@ -3079,6 +3085,249 @@ export interface TagsOut {
      * @memberof TagsOut
      */
     'results'?: { [key: string]: Array<StructuredTag>; };
+}
+/**
+ * Configuration for a single column in a view.
+ * @export
+ * @interface ViewColumnConfig
+ */
+export interface ViewColumnConfig {
+    /**
+     * The column key identifier, e.g. \"insights_id\", \"compliance.last_scan\", \"advisor.recommendations\".
+     * @type {string}
+     * @memberof ViewColumnConfig
+     */
+    'key': string;
+    /**
+     * Whether the column is visible in the view.
+     * @type {boolean}
+     * @memberof ViewColumnConfig
+     */
+    'visible'?: boolean;
+}
+/**
+ * The full visual configuration for an inventory view, including column layout, sort order, and active filters.
+ * @export
+ * @interface ViewConfiguration
+ */
+export interface ViewConfiguration {
+    /**
+     * Ordered list of column configurations.
+     * @type {Array<ViewColumnConfig>}
+     * @memberof ViewConfiguration
+     */
+    'columns': Array<ViewColumnConfig>;
+    /**
+     *
+     * @type {ViewSortConfig}
+     * @memberof ViewConfiguration
+     */
+    'sort'?: ViewSortConfig;
+    /**
+     * Active filter criteria. Keys are filter names, values are arrays of selected filter values.
+     * @type {{ [key: string]: Array<string>; }}
+     * @memberof ViewConfiguration
+     */
+    'filters'?: { [key: string]: Array<string>; };
+}
+/**
+ * Data required to create a new inventory view.
+ * @export
+ * @interface ViewIn
+ */
+export interface ViewIn {
+    /**
+     * The display name for the view.
+     * @type {string}
+     * @memberof ViewIn
+     */
+    'name': string;
+    /**
+     * An optional description of the view.
+     * @type {string}
+     * @memberof ViewIn
+     */
+    'description'?: string | null;
+    /**
+     *
+     * @type {ViewConfiguration}
+     * @memberof ViewIn
+     */
+    'configuration': ViewConfiguration;
+    /**
+     * If true, the view is visible to all users in the organization. If false, only the creator can see it.
+     * @type {boolean}
+     * @memberof ViewIn
+     */
+    'org_wide'?: boolean;
+}
+/**
+ * Full representation of an inventory view returned by the API.
+ * @export
+ * @interface ViewOut
+ */
+export interface ViewOut {
+    /**
+     * The unique identifier of the view.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'id': string;
+    /**
+     * The organization ID that owns the view. null for system views.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'org_id'?: string | null;
+    /**
+     * The display name for the view.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'name': string;
+    /**
+     * An optional description of the view.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'description'?: string | null;
+    /**
+     *
+     * @type {ViewConfiguration}
+     * @memberof ViewOut
+     */
+    'configuration': ViewConfiguration;
+    /**
+     * Whether the view is visible to the entire organization.
+     * @type {boolean}
+     * @memberof ViewOut
+     */
+    'org_wide': boolean;
+    /**
+     * True if this is a read-only system view (Red Hat preset). System views cannot be updated or deleted, but can be cloned.
+     * @type {boolean}
+     * @memberof ViewOut
+     */
+    'is_system_view': boolean;
+    /**
+     * True if the requesting user is the creator of this view. Only the owner can update or delete a view.
+     * @type {boolean}
+     * @memberof ViewOut
+     */
+    'is_owner': boolean;
+    /**
+     * The username of the view creator.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'created_by'?: string | null;
+    /**
+     * Timestamp when the view was created.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'created_at': string;
+    /**
+     * Timestamp when the view was last updated.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'updated_at': string;
+}
+/**
+ * Data for updating an existing inventory view. All fields are optional.
+ * @export
+ * @interface ViewPatch
+ */
+export interface ViewPatch {
+    /**
+     * The display name for the view.
+     * @type {string}
+     * @memberof ViewPatch
+     */
+    'name'?: string;
+    /**
+     * An optional description of the view.
+     * @type {string}
+     * @memberof ViewPatch
+     */
+    'description'?: string | null;
+    /**
+     *
+     * @type {ViewConfiguration}
+     * @memberof ViewPatch
+     */
+    'configuration'?: ViewConfiguration;
+    /**
+     * If true, the view is visible to all users in the organization. If false, only the creator can see it.
+     * @type {boolean}
+     * @memberof ViewPatch
+     */
+    'org_wide'?: boolean;
+}
+/**
+ * Sort configuration for a view.
+ * @export
+ * @interface ViewSortConfig
+ */
+export interface ViewSortConfig {
+    /**
+     * The column key to sort by.
+     * @type {string}
+     * @memberof ViewSortConfig
+     */
+    'key': string;
+    /**
+     * The sort direction.
+     * @type {string}
+     * @memberof ViewSortConfig
+     */
+    'direction'?: ViewSortConfigDirectionEnum;
+}
+
+export const ViewSortConfigDirectionEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+
+export type ViewSortConfigDirectionEnum = typeof ViewSortConfigDirectionEnum[keyof typeof ViewSortConfigDirectionEnum];
+
+/**
+ * A paginated list of inventory views.
+ * @export
+ * @interface ViewsListOut
+ */
+export interface ViewsListOut {
+    /**
+     * The number of items on the current page
+     * @type {number}
+     * @memberof ViewsListOut
+     */
+    'count': number;
+    /**
+     * The page number
+     * @type {number}
+     * @memberof ViewsListOut
+     */
+    'page': number;
+    /**
+     * The number of items to return per page
+     * @type {number}
+     * @memberof ViewsListOut
+     */
+    'per_page': number;
+    /**
+     * Total number of items
+     * @type {number}
+     * @memberof ViewsListOut
+     */
+    'total': number;
+    /**
+     * List of inventory views.
+     * @type {Array<ViewOut>}
+     * @memberof ViewsListOut
+     */
+    'results': Array<ViewOut>;
 }
 /**
  *

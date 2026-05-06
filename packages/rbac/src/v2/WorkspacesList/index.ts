@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, RoleBindingsList401Response, RoleBindingsList500Response, WorkspacesWorkspaceListResponse, WorkspacesWorkspaceTypesQueryParam } from '../types';
+import type { ProblemsProblem403, RoleBindingsList401Response, RoleBindingsList500Response, WorkspacesWorkspaceListResponse } from '../types';
 
 
 export type WorkspacesListParams = {
@@ -25,11 +25,11 @@ export type WorkspacesListParams = {
   */
   offset?: number,
   /**
-  * Defaults to all when param is not supplied.
-  * @type { WorkspacesWorkspaceTypesQueryParam }
+  * Filter by workspace type. Supports comma-separated values (e.g. type=standard,ungrouped-hosts). Defaults to all when not supplied. Case-insensitive.
+  * @type { string }
   * @memberof WorkspacesListApi
   */
-  type?: WorkspacesWorkspaceTypesQueryParam,
+  type?: string,
   /**
   * Case sensitive exact match of workspace by name.
   * @type { string }
@@ -73,7 +73,7 @@ const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, string, string, Array<string>, string, AxiosRequestConfig])) => {
+export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesListParams] | [number, number, string, string, string, Array<string>, string, AxiosRequestConfig])) => {
     const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'name', 'parentId', 'ids', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
     const { limit, offset, type, name, parentId, ids, orderBy, options = {} } = params;
     const localVarPath = `/workspaces/`;
