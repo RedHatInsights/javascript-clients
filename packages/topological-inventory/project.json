@@ -40,7 +40,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/topological-inventory/**/*.ts", "packages/topological-inventory/package.json"]
+        "lintFilePatterns": ["packages/topological-inventory/**/*.ts", "packages/topological-inventory/*.json"]
       }
     },
     "test": {

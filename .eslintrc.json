@@ -9,7 +9,11 @@
     {
       "files": "*.json",
       "parser": "jsonc-eslint-parser",
-      "rules": {}
+      "plugins": ["jsonc"],
+      "rules": {
+        "jsonc/comma-dangle": ["error", "never"],
+        "prettier/prettier": "off"
+      }
     },
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],

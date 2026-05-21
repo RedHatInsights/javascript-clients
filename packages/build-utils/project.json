@@ -42,8 +42,7 @@
       "options": {
         "lintFilePatterns": [
           "packages/build-utils/**/*.ts",
-          "packages/build-utils/package.json",
-          "packages/build-utils/executors.json"
+          "packages/build-utils/*.json"
         ]
       }
     },

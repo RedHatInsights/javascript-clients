@@ -40,7 +40,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/host-inventory/**/*.ts", "packages/host-inventory/package.json"]
+        "lintFilePatterns": ["packages/host-inventory/**/*.ts", "packages/host-inventory/*.json"]
       }
     },
     "test": {
