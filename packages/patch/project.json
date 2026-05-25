@@ -40,7 +40,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/patch/**/*.ts", "packages/patch/package.json"]
+        "lintFilePatterns": ["packages/patch/**/*.ts", "packages/patch/*.json"]
       }
     },
     "test": {

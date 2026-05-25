@@ -21,7 +21,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/shared/**/*.ts", "packages/shared/package.json"]
+        "lintFilePatterns": ["packages/shared/**/*.ts", "packages/shared/*.json"]
       }
     },
     "test": {

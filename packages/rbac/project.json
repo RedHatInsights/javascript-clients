@@ -41,7 +41,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/rbac/**/*.ts", "packages/rbac/package.json"]
+        "lintFilePatterns": ["packages/rbac/**/*.ts", "packages/rbac/*.json"]
       }
     },
     "test": {

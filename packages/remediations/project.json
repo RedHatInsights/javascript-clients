@@ -40,7 +40,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/remediations/**/*.ts", "packages/remediations/package.json"]
+        "lintFilePatterns": ["packages/remediations/**/*.ts", "packages/remediations/*.json"]
       }
     },
     "test": {

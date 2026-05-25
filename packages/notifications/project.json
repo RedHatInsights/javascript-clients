@@ -41,7 +41,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/notifications/**/*.ts", "packages/notifications/package.json"]
+        "lintFilePatterns": ["packages/notifications/**/*.ts", "packages/notifications/*.json"]
       }
     },
     "test": {

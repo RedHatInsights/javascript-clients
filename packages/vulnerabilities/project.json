@@ -38,7 +38,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/vulnerabilities/**/*.ts", "packages/vulnerabilities/package.json"]
+        "lintFilePatterns": ["packages/vulnerabilities/**/*.ts", "packages/vulnerabilities/*.json"]
       }
     },
     "test": {

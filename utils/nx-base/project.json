@@ -30,7 +30,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/CLIENTNAME/**/*.ts", "packages/CLIENTNAME/package.json"]
+        "lintFilePatterns": ["packages/CLIENTNAME/**/*.ts", "packages/CLIENTNAME/*.json"]
       }
     },
     "test": {
