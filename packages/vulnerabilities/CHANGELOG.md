@@ -1,3 +1,14 @@
+## 2.1.7 (2026-05-29)
+
+### 🩹 Fixes
+
+- **shared:** bump axios to ^1.15.0 (CVE-2025-62718, CVE-2026-40175) ([#491](https://github.com/RedHatInsights/javascript-clients/pull/491))
+
+### ❤️ Thank You
+
+- Claude Opus 4.6
+- Řehoř
+
 ## 2.1.6 (2026-04-29)
 
 ### 🩹 Fixes
