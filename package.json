@@ -82,7 +82,7 @@
     "@types/react-dom": "19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.44.1",
     "@typescript-eslint/parser": "^8.44.1",
-    "axios": "^1.13.5",
+    "axios": "^1.15.0",
     "babel-jest": "^30.0.2",
     "cypress": "15.9.0",
     "eslint": "^9.36.0",
