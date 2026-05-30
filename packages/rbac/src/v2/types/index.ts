@@ -494,7 +494,7 @@ export interface RoleBindingsCreateRoleBindingsRequest {
  */
 export interface RoleBindingsCreateRoleBindingsRequestResource {
     /**
-     *
+     * Identifier of the resource
      * @type {string}
      * @memberof RoleBindingsCreateRoleBindingsRequestResource
      */
@@ -751,7 +751,7 @@ export interface RoleBindingsListBySubject200Response {
  */
 export interface RoleBindingsResource {
     /**
-     *
+     * Resource identifier
      * @type {string}
      * @memberof RoleBindingsResource
      */

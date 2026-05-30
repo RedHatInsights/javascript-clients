@@ -25,7 +25,7 @@ export type RolesListParams = {
   */
   cursor?: string,
   /**
-  * Filter by role name. Exact match by default; use * as a wildcard for partial matching (e.g. foo*).
+  * Filter by role name. Case-insensitive substring match by default; use * for glob patterns (e.g. foo*).
   * @type { string }
   * @memberof RolesListApi
   */

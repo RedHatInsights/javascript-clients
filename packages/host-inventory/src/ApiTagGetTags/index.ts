@@ -121,11 +121,23 @@ export type ApiTagGetTagsParams = {
   */
   groupName?: Array<string>,
   /**
+  * Filter by workspace name
+  * @type { Array<string> }
+  * @memberof ApiTagGetTagsApi
+  */
+  workspaceName?: Array<string>,
+  /**
   * Filter by group ID (UUID format)
   * @type { Array<string> }
   * @memberof ApiTagGetTagsApi
   */
   groupId?: Array<string>,
+  /**
+  * Filter by workspace ID (UUID format)
+  * @type { Array<string> }
+  * @memberof ApiTagGetTagsApi
+  */
+  workspaceId?: Array<string>,
   /**
   * Filters out any host not registered by the specified reporters
   * @type { Array<ApiTagGetTagsRegisteredWithEnum> }
@@ -227,9 +239,9 @@ const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiTagGetTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, Array<ApiTagGetTagsSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
-    const params = isApiTagGetTagsObjectParams(config) ? config[0] : ['tags', 'orderBy', 'orderHow', 'perPage', 'page', 'staleness', 'search', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'groupId', 'registeredWith', 'systemType', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiTagGetTagsParams;
-    const { tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, groupId, registeredWith, systemType, filter, options = {} } = params;
+export const apiTagGetTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, Array<string>, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, Array<ApiTagGetTagsSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
+    const params = isApiTagGetTagsObjectParams(config) ? config[0] : ['tags', 'orderBy', 'orderHow', 'perPage', 'page', 'staleness', 'search', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'workspaceName', 'groupId', 'workspaceId', 'registeredWith', 'systemType', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiTagGetTagsParams;
+    const { tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, workspaceName, groupId, workspaceId, registeredWith, systemType, filter, options = {} } = params;
     const localVarPath = `/tags`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -317,8 +329,16 @@ export const apiTagGetTagsParamCreator = async (sendRequest: BaseAPI["sendReques
         localVarQueryParameter['group_name'] = groupName;
     }
 
+    if (workspaceName) {
+        localVarQueryParameter['workspace_name'] = workspaceName;
+    }
+
     if (groupId) {
         localVarQueryParameter['group_id'] = groupId;
+    }
+
+    if (workspaceId) {
+        localVarQueryParameter['workspace_id'] = workspaceId;
     }
 
     if (registeredWith) {

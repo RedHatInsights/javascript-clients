@@ -436,31 +436,31 @@ export interface Report {
      */
     'percent_compliant'?: any;
     /**
-     * The number of Systems assigned to this Report. Not visible under the Systems endpoint.
+     * The number of Systems assigned to this Report
      * @type {any}
      * @memberof Report
      */
     'assigned_system_count'?: any;
     /**
-     * The number of compliant Systems in this Report. Inconsistent under the Systems endpoint.
+     * The number of compliant Systems in this Report
      * @type {any}
      * @memberof Report
      */
     'compliant_system_count'?: any;
     /**
-     * Informs if the user has access to all the Systems under the Report. \\                             Inconsistent under the Systems endpoint.
+     * Informs if the user has access to all the Systems under the Report
      * @type {any}
      * @memberof Report
      */
     'all_systems_exposed'?: any;
     /**
-     * The number of unsupported Systems in this Report. \\                             Inconsistent under the Systems endpoint.
+     * The number of unsupported Systems in this Report
      * @type {any}
      * @memberof Report
      */
     'unsupported_system_count'?: any;
     /**
-     * The number of Systems in this Report that have Test Results available. \\                             Inconsistent under the Systems endpoint.
+     * The number of Systems in this Report that have Test Results available
      * @type {any}
      * @memberof Report
      */
