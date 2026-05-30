@@ -53,12 +53,6 @@ export type ListAdvisorySystemsIdsParams = {
   * @type { string }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterInsightsId?: string,
-  /**
-  * Filter
-  * @type { string }
-  * @memberof ListAdvisorySystemsIdsApi
-  */
   filterDisplayName?: string,
   /**
   * Filter
@@ -247,9 +241,9 @@ const isListAdvisorySystemsIdsObjectParams = (params: [ListAdvisorySystemsIdsPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listAdvisorySystemsIdsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAdvisorySystemsIdsParams] | [string, number, number, ListAdvisorySystemsIdsSortEnum, string, string, string, string, string, string, number, number, number, number, boolean, boolean, string, string, string, string, string, string, string, string, boolean, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
-    const params = isListAdvisorySystemsIdsObjectParams(config) ? config[0] : ['advisoryId', 'limit', 'offset', 'sort', 'search', 'filterId', 'filterInsightsId', 'filterDisplayName', 'filterLastEvaluation', 'filterLastUpload', 'filterRhsaCount', 'filterRhbaCount', 'filterRheaCount', 'filterOtherCount', 'filterSatelliteManaged', 'filterStale', 'filterStaleTimestamp', 'filterStaleWarningTimestamp', 'filterCulledTimestamp', 'filterCreated', 'filterOsname', 'filterOsminor', 'filterOsmajor', 'filterOs', 'filterBuiltPkgcache', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAdvisorySystemsIdsParams;
-    const { advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
+export const listAdvisorySystemsIdsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAdvisorySystemsIdsParams] | [string, number, number, ListAdvisorySystemsIdsSortEnum, string, string, string, string, string, number, number, number, number, boolean, boolean, string, string, string, string, string, string, string, string, boolean, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])) => {
+    const params = isListAdvisorySystemsIdsObjectParams(config) ? config[0] : ['advisoryId', 'limit', 'offset', 'sort', 'search', 'filterId', 'filterDisplayName', 'filterLastEvaluation', 'filterLastUpload', 'filterRhsaCount', 'filterRhbaCount', 'filterRheaCount', 'filterOtherCount', 'filterSatelliteManaged', 'filterStale', 'filterStaleTimestamp', 'filterStaleWarningTimestamp', 'filterCulledTimestamp', 'filterCreated', 'filterOsname', 'filterOsminor', 'filterOsmajor', 'filterOs', 'filterBuiltPkgcache', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAdvisorySystemsIdsParams;
+    const { advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/ids/advisories/{advisory_id}/systems`
         .replace(`{${"advisory_id"}}`, encodeURIComponent(String(advisoryId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -276,10 +270,6 @@ export const listAdvisorySystemsIdsParamCreator = async (sendRequest: BaseAPI["s
 
     if (filterId !== undefined) {
         localVarQueryParameter['filter[id]'] = filterId;
-    }
-
-    if (filterInsightsId !== undefined) {
-        localVarQueryParameter['filter[insights_id]'] = filterInsightsId;
     }
 
     if (filterDisplayName !== undefined) {

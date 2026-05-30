@@ -60,6 +60,12 @@ export type ExportSystemAdvisoriesParams = {
   * @memberof ExportSystemAdvisoriesApi
   */
   filterSeverity?: number,
+  /**
+  * Filter
+  * @type { ExportSystemAdvisoriesFilterSeverityNameEnum }
+  * @memberof ExportSystemAdvisoriesApi
+  */
+  filterSeverityName?: ExportSystemAdvisoriesFilterSeverityNameEnum,
   options?: AxiosRequestConfig
 }
 /**
@@ -75,6 +81,17 @@ export const ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum = {
     Security: 'security'
 } as const;
 export type ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum = typeof ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum[keyof typeof ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const ExportSystemAdvisoriesFilterSeverityNameEnum = {
+    Low: 'Low',
+    Medium: 'Medium',
+    High: 'High',
+    Critical: 'Critical'
+} as const;
+export type ExportSystemAdvisoriesFilterSeverityNameEnum = typeof ExportSystemAdvisoriesFilterSeverityNameEnum[keyof typeof ExportSystemAdvisoriesFilterSeverityNameEnum];
 
 export type ExportSystemAdvisoriesReturnType = Array<ControllersSystemAdvisoriesDBLookup>;
 
@@ -92,9 +109,9 @@ const isExportSystemAdvisoriesObjectParams = (params: [ExportSystemAdvisoriesPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportSystemAdvisoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportSystemAdvisoriesParams] | [string, string, string, string, string, string, ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum, number, AxiosRequestConfig])) => {
-    const params = isExportSystemAdvisoriesObjectParams(config) ? config[0] : ['inventoryId', 'search', 'filterId', 'filterDescription', 'filterPublicDate', 'filterSynopsis', 'filterAdvisoryTypeName', 'filterSeverity', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportSystemAdvisoriesParams;
-    const { inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, options = {} } = params;
+export const exportSystemAdvisoriesParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ExportSystemAdvisoriesParams] | [string, string, string, string, string, string, ExportSystemAdvisoriesFilterAdvisoryTypeNameEnum, number, ExportSystemAdvisoriesFilterSeverityNameEnum, AxiosRequestConfig])) => {
+    const params = isExportSystemAdvisoriesObjectParams(config) ? config[0] : ['inventoryId', 'search', 'filterId', 'filterDescription', 'filterPublicDate', 'filterSynopsis', 'filterAdvisoryTypeName', 'filterSeverity', 'filterSeverityName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportSystemAdvisoriesParams;
+    const { inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterSeverityName, options = {} } = params;
     const localVarPath = `/export/systems/{inventory_id}/advisories`
         .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -129,6 +146,10 @@ export const exportSystemAdvisoriesParamCreator = async (sendRequest: BaseAPI["s
 
     if (filterSeverity !== undefined) {
         localVarQueryParameter['filter[severity]'] = filterSeverity;
+    }
+
+    if (filterSeverityName !== undefined) {
+        localVarQueryParameter['filter[severity_name]'] = filterSeverityName;
     }
 
 

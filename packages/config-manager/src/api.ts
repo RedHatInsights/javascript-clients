@@ -10,7 +10,8 @@ import {
 
 const endpointList = {
       createProfile,
-      getProfile,
+    getProfile,
+
 
 };
 

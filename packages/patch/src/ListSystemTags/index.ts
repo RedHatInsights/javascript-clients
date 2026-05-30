@@ -25,6 +25,12 @@ export type ListSystemTagsParams = {
   */
   limit?: number,
   /**
+  * Find matching text
+  * @type { string }
+  * @memberof ListSystemTagsApi
+  */
+  search?: string,
+  /**
   * Offset for paging
   * @type { number }
   * @memberof ListSystemTagsApi
@@ -58,9 +64,9 @@ const isListSystemTagsObjectParams = (params: [ListSystemTagsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listSystemTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSystemTagsParams] | [ListSystemTagsSortEnum, number, number, AxiosRequestConfig])) => {
-    const params = isListSystemTagsObjectParams(config) ? config[0] : ['sort', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSystemTagsParams;
-    const { sort, limit, offset, options = {} } = params;
+export const listSystemTagsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListSystemTagsParams] | [ListSystemTagsSortEnum, number, string, number, AxiosRequestConfig])) => {
+    const params = isListSystemTagsObjectParams(config) ? config[0] : ['sort', 'limit', 'search', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListSystemTagsParams;
+    const { sort, limit, search, offset, options = {} } = params;
     const localVarPath = `/tags`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -74,6 +80,10 @@ export const listSystemTagsParamCreator = async (sendRequest: BaseAPI["sendReque
 
     if (limit !== undefined) {
         localVarQueryParameter['limit'] = limit;
+    }
+
+    if (search !== undefined) {
+        localVarQueryParameter['search'] = search;
     }
 
     if (offset !== undefined) {
