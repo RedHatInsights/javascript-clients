@@ -6,9 +6,11 @@ on:
   pull_request:
     branches: [main]
 
+# Default permissions for PR builds - read-only
+# Release job overrides with write permissions
 permissions:
+  contents: read
   id-token: write
-  contents: write
 
 jobs:
   install:
@@ -70,7 +72,11 @@ jobs:
   release:
     runs-on: ubuntu-24.04
     needs: [install, lint, test, build]
-    if: github.event_name != 'pull_request'
+    # Only run on push to main branch (never on PRs, workflow_dispatch, etc.)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write  # Needed for git push
+      id-token: write  # Needed for npm publish
     steps:
       - uses: actions/checkout@v4
         with:
