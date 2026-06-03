@@ -8,6 +8,9 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
+permissions:
+  contents: write  # Needed for create-pull-request action
+  pull-requests: write  # Needed for create-pull-request action
 
 jobs:
   build:
