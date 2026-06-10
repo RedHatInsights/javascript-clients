@@ -22,7 +22,7 @@ jobs:
       with:
         token: ${{ secrets.BOT_GH_TOKEN }}
     - uses: './.github/actions/setup-environment'
-    - run: npm install
+    - run: npm ci
     - name: Generate clients
       run: npm run nx:reset && npm run generate
     - name: Build packages
