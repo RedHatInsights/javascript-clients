@@ -29,7 +29,8 @@
         "outputPath": "packages/quickstarts/dist",
         "main": "packages/quickstarts/src/index.ts",
         "esmTsConfig": "packages/quickstarts/tsconfig.esm.json",
-        "cjsTsConfig": "packages/quickstarts/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/quickstarts/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

@@ -1,0 +1,5 @@
+# Test files (should not be in dist, but defensive)
+*.test.*
+*.spec.*
+__snapshots__/
+__mocks__/
