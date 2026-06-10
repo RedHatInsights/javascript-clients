@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
+    "noImplicitAny": true,
+    "outDir": "esm",
+    "lib": [
+        "es2017",
+        "dom"
+    ]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "*.d.ts"
+  ]
+}
