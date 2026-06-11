@@ -1,0 +1,66 @@
+{
+  "name": "@redhat-cloud-services/scheduler-client",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/scheduler",
+  "projectType": "library",
+  "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/scheduler/src"
+    },
+    "generate": {
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "dependsOn": ["clean-generate"],
+      "options": {
+        "outputPath": "packages/scheduler/src",
+        "specs": {
+          "default": "https://raw.githubusercontent.com/RedHatInsights/scheduler/master/internal/shell/http/openapi.json"
+        },
+        "clientName": "SchedulerClient"
+      }
+    },
+    "clean-build": {
+      "command": "rm -rf packages/scheduler/dist"
+    },
+    "build": {
+      "executor": "@redhat-cloud-services/build-utils:builder",
+      "dependsOn": ["clean-build", "^build"],
+      "options": {
+        "inputPath": "packages/scheduler/src",
+        "outputPath": "packages/scheduler/dist",
+        "main": "packages/scheduler/src/index.ts",
+        "esmTsConfig": "packages/scheduler/tsconfig.esm.json",
+        "cjsTsConfig": "packages/scheduler/tsconfig.cjs.json"
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs @redhat-cloud-services/scheduler-client {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/scheduler/**/*.ts", "packages/scheduler/*.json"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/scheduler/jest.config.ts"
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "{projectRoot}/dist"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}
