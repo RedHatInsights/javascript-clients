@@ -116,6 +116,12 @@
   "overrides": {
     "postman-collection": {
       "lodash": "4.18.1"
+    },
+    "@nrwl/tao": {
+      "minimatch": "9.0.7"
+    },
+    "@nrwl/devkit": {
+      "minimatch": "9.0.7"
     }
   }
 }
