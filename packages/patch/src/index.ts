@@ -42,6 +42,8 @@ export { default as listSystems, type ListSystemsReturnType } from './ListSystem
 
 export { default as listSystemsIds, type ListSystemsIdsReturnType } from './ListSystemsIds'
 
+export { default as listSystemsPost, type ListSystemsPostReturnType } from './ListSystemsPost'
+
 export { default as listTemplate, type ListTemplateReturnType } from './ListTemplate'
 
 export { default as listTemplateSystems, type ListTemplateSystemsReturnType } from './ListTemplateSystems'

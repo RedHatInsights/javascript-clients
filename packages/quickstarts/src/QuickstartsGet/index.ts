@@ -67,6 +67,12 @@ export type QuickstartsGetParams = {
   */
   displayName?: string,
   /**
+  * Enable fuzzy search using Levenshtein distance for typo tolerance (searches spec.displayName)
+  * @type { boolean }
+  * @memberof QuickstartsGetApi
+  */
+  fuzzy?: boolean,
+  /**
   * Pagination limit
   * @type { number }
   * @memberof QuickstartsGetApi
@@ -97,9 +103,9 @@ const isQuickstartsGetObjectParams = (params: [QuickstartsGetParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const quickstartsGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([QuickstartsGetParams] | [Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, string, string, number, number, AxiosRequestConfig])) => {
-    const params = isQuickstartsGetObjectParams(config) ? config[0] : ['productFamilies', 'content', 'useCase', 'bundle', 'application', 'kind', 'topic', 'name', 'displayName', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as QuickstartsGetParams;
-    const { productFamilies, content, useCase, bundle, application, kind, topic, name, displayName, limit, offset, options = {} } = params;
+export const quickstartsGetParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([QuickstartsGetParams] | [Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, Array<string>, string, string, boolean, number, number, AxiosRequestConfig])) => {
+    const params = isQuickstartsGetObjectParams(config) ? config[0] : ['productFamilies', 'content', 'useCase', 'bundle', 'application', 'kind', 'topic', 'name', 'displayName', 'fuzzy', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as QuickstartsGetParams;
+    const { productFamilies, content, useCase, bundle, application, kind, topic, name, displayName, fuzzy, limit, offset, options = {} } = params;
     const localVarPath = `/quickstarts`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -141,6 +147,10 @@ export const quickstartsGetParamCreator = async (sendRequest: BaseAPI["sendReque
 
     if (displayName !== undefined) {
         localVarQueryParameter['display-name'] = displayName;
+    }
+
+    if (fuzzy !== undefined) {
+        localVarQueryParameter['fuzzy'] = fuzzy;
     }
 
     if (limit !== undefined) {

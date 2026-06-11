@@ -13,18 +13,6 @@ import type { ProblemsProblem400, ProblemsProblem403, ProblemsProblem404, Resour
 
 export type RoleBindingsUpdateParams = {
   /**
-  * Identify the resource ID for the set of role bindings to replace. For workspace: UUID. For tenant: tenant resource ID (format: {domain}/{org_id}).
-  * @type { string }
-  * @memberof RoleBindingsUpdateApi
-  */
-  resourceId: string,
-  /**
-  * Identify the resource type for the set of role bindings to replace
-  * @type { ResourceType }
-  * @memberof RoleBindingsUpdateApi
-  */
-  resourceType: ResourceType,
-  /**
   * Identify the subject ID for the set of role bindings to replace
   * @type { string }
   * @memberof RoleBindingsUpdateApi
@@ -43,6 +31,24 @@ export type RoleBindingsUpdateParams = {
   */
   roleBindingsUpdateRoleBindingsRequest: RoleBindingsUpdateRoleBindingsRequest,
   /**
+  * Identify the resource ID for the set of role bindings to replace. For workspace: UUID. For tenant: tenant resource ID (format: {domain}/{org_id}). Required unless resource.tenant.org_id is provided.
+  * @type { string }
+  * @memberof RoleBindingsUpdateApi
+  */
+  resourceId?: string,
+  /**
+  * Identify the resource type for the set of role bindings to replace. Required unless resource.tenant.org_id is provided.
+  * @type { ResourceType }
+  * @memberof RoleBindingsUpdateApi
+  */
+  resourceType?: ResourceType,
+  /**
+  * Org ID of the tenant resource. Cannot be combined with resource_id. When provided, resource_type is implicitly \'tenant\'.
+  * @type { string }
+  * @memberof RoleBindingsUpdateApi
+  */
+  resourceTenantOrgId?: string,
+  /**
   *
   * @type { string }
   * @memberof RoleBindingsUpdateApi
@@ -56,7 +62,7 @@ export type RoleBindingsUpdateReturnType = RoleBindingsRoleBindingBySubject;
 const isRoleBindingsUpdateObjectParams = (params: [RoleBindingsUpdateParams] | unknown[]): params is [RoleBindingsUpdateParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true && Object.prototype.hasOwnProperty.call(params[0], 'resourceId') && Object.prototype.hasOwnProperty.call(params[0], 'resourceType') && Object.prototype.hasOwnProperty.call(params[0], 'subjectId') && Object.prototype.hasOwnProperty.call(params[0], 'subjectType') && Object.prototype.hasOwnProperty.call(params[0], 'roleBindingsUpdateRoleBindingsRequest')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'subjectId') && Object.prototype.hasOwnProperty.call(params[0], 'subjectType') && Object.prototype.hasOwnProperty.call(params[0], 'roleBindingsUpdateRoleBindingsRequest')
   }
   return false
 }
@@ -67,9 +73,9 @@ const isRoleBindingsUpdateObjectParams = (params: [RoleBindingsUpdateParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsUpdateParams] | [string, ResourceType, string, RoleBindingsBindingSubjectType, RoleBindingsUpdateRoleBindingsRequest, string, AxiosRequestConfig])) => {
-    const params = isRoleBindingsUpdateObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'subjectId', 'subjectType', 'roleBindingsUpdateRoleBindingsRequest', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsUpdateParams;
-    const { resourceId, resourceType, subjectId, subjectType, roleBindingsUpdateRoleBindingsRequest, fields, options = {} } = params;
+export const roleBindingsUpdateParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsUpdateParams] | [string, RoleBindingsBindingSubjectType, RoleBindingsUpdateRoleBindingsRequest, string, ResourceType, string, string, AxiosRequestConfig])) => {
+    const params = isRoleBindingsUpdateObjectParams(config) ? config[0] : ['subjectId', 'subjectType', 'roleBindingsUpdateRoleBindingsRequest', 'resourceId', 'resourceType', 'resourceTenantOrgId', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsUpdateParams;
+    const { subjectId, subjectType, roleBindingsUpdateRoleBindingsRequest, resourceId, resourceType, resourceTenantOrgId, fields, options = {} } = params;
     const localVarPath = `/role-bindings/by-subject/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -83,6 +89,10 @@ export const roleBindingsUpdateParamCreator = async (sendRequest: BaseAPI["sendR
 
     if (resourceType !== undefined) {
         localVarQueryParameter['resource_type'] = resourceType;
+    }
+
+    if (resourceTenantOrgId !== undefined) {
+        localVarQueryParameter['resource.tenant.org_id'] = resourceTenantOrgId;
     }
 
     if (subjectId !== undefined) {

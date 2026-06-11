@@ -4,10 +4,6 @@
 CreateProfile/index.ts
 GetProfile/index.ts
 api.ts
-docs/CreateProfileApi.md
-docs/CreateProfileRequest.md
-docs/GetProfileApi.md
-docs/Profile.md
 git_push.sh
 index.ts
 index.ts

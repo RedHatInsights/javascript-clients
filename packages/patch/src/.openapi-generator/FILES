@@ -23,6 +23,7 @@ ListSystemAdvisoriesIds/index.ts
 ListSystemTags/index.ts
 ListSystems/index.ts
 ListSystemsIds/index.ts
+ListSystemsPost/index.ts
 ListTemplate/index.ts
 ListTemplateSystems/index.ts
 ListTemplateSystemsIds/index.ts

@@ -13,18 +13,6 @@ import type { ExcludeSources, ProblemsProblem403, ResourceType, RoleBindingsBind
 
 export type RoleBindingsListBySubjectParams = {
   /**
-  * Filter by resource ID. For workspace: UUID. For tenant: tenant resource ID (format: {domain}/{org_id}).
-  * @type { string }
-  * @memberof RoleBindingsListBySubjectApi
-  */
-  resourceId: string,
-  /**
-  * Filter by resource type
-  * @type { ResourceType }
-  * @memberof RoleBindingsListBySubjectApi
-  */
-  resourceType: ResourceType,
-  /**
   *
   * @type { number }
   * @memberof RoleBindingsListBySubjectApi
@@ -36,6 +24,24 @@ export type RoleBindingsListBySubjectParams = {
   * @memberof RoleBindingsListBySubjectApi
   */
   cursor?: string,
+  /**
+  * Filter by resource ID. For workspace: UUID. For tenant: tenant resource ID (format: {domain}/{org_id}). Required unless resource.tenant.org_id is provided.
+  * @type { string }
+  * @memberof RoleBindingsListBySubjectApi
+  */
+  resourceId?: string,
+  /**
+  * Filter by resource type. Required unless resource.tenant.org_id is provided.
+  * @type { ResourceType }
+  * @memberof RoleBindingsListBySubjectApi
+  */
+  resourceType?: ResourceType,
+  /**
+  * Org ID of the tenant resource to filter by. Cannot be combined with resource_id. When provided, resource_type is implicitly \'tenant\'.
+  * @type { string }
+  * @memberof RoleBindingsListBySubjectApi
+  */
+  resourceTenantOrgId?: string,
   /**
   * Filter by binding subject kind: group or user (principal UUID). There is no granted_subject.* on this endpoint.
   * @type { RoleBindingsBindingSubjectType }
@@ -74,7 +80,7 @@ export type RoleBindingsListBySubjectReturnType = RoleBindingsListBySubject200Re
 const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubjectParams] | unknown[]): params is [RoleBindingsListBySubjectParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true && Object.prototype.hasOwnProperty.call(params[0], 'resourceId') && Object.prototype.hasOwnProperty.call(params[0], 'resourceType')
+    return true
   }
   return false
 }
@@ -85,9 +91,9 @@ const isRoleBindingsListBySubjectObjectParams = (params: [RoleBindingsListBySubj
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [string, ResourceType, number, string, RoleBindingsBindingSubjectType, string, ExcludeSources, string, string, AxiosRequestConfig])) => {
-    const params = isRoleBindingsListBySubjectObjectParams(config) ? config[0] : ['resourceId', 'resourceType', 'limit', 'cursor', 'subjectType', 'subjectId', 'excludeSources', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListBySubjectParams;
-    const { resourceId, resourceType, limit, cursor, subjectType, subjectId, excludeSources, fields, orderBy, options = {} } = params;
+export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RoleBindingsListBySubjectParams] | [number, string, string, ResourceType, string, RoleBindingsBindingSubjectType, string, ExcludeSources, string, string, AxiosRequestConfig])) => {
+    const params = isRoleBindingsListBySubjectObjectParams(config) ? config[0] : ['limit', 'cursor', 'resourceId', 'resourceType', 'resourceTenantOrgId', 'subjectType', 'subjectId', 'excludeSources', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RoleBindingsListBySubjectParams;
+    const { limit, cursor, resourceId, resourceType, resourceTenantOrgId, subjectType, subjectId, excludeSources, fields, orderBy, options = {} } = params;
     const localVarPath = `/role-bindings/by-subject/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -109,6 +115,10 @@ export const roleBindingsListBySubjectParamCreator = async (sendRequest: BaseAPI
 
     if (resourceType !== undefined) {
         localVarQueryParameter['resource_type'] = resourceType;
+    }
+
+    if (resourceTenantOrgId !== undefined) {
+        localVarQueryParameter['resource.tenant.org_id'] = resourceTenantOrgId;
     }
 
     if (subjectType !== undefined) {
