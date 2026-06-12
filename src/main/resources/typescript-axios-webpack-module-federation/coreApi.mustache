@@ -1,13 +1,9 @@
-// @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
-// @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-// @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-// @ts-ignore
 import type { {{#imports}}{{classname}}{{^-last}}, {{/-last}}{{/imports}} } from '../types';
 
 {{#models}}
@@ -27,7 +23,7 @@ export type {{operationIdCamelCase}}Params = {
   * @deprecated
 {{/deprecated}}
   */
-  {{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, 
+  {{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}},
   {{/allParams}}
   options?: AxiosRequestConfig
 }
@@ -148,8 +144,8 @@ export const {{nickname}}ParamCreator = async (sendRequest: BaseAPI["sendRequest
         {{/isString}}
         {{^isString}}
         {{! isString is falsy also for $ref that defines a string or enum type}}
-        localVarHeaderParameter['{{baseName}}'] = typeof {{paramName}} === 'string' 
-            ? {{paramName}} 
+        localVarHeaderParameter['{{baseName}}'] = typeof {{paramName}} === 'string'
+            ? {{paramName}}
             : JSON.stringify({{paramName}});
         {{/isString}}
     }
