@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       with:
         token: ${{ secrets.BOT_GH_TOKEN }}
     - uses: './.github/actions/setup-environment'
@@ -28,7 +28,7 @@ jobs:
     - name: Build packages
       run: npm run build:no-cache
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v7
+      uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
       with:
         token: ${{ secrets.BOT_GH_TOKEN }}
         title: 'chore(nightly-sync): API sync and client generation'

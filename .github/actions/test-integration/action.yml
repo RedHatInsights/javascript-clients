@@ -3,7 +3,7 @@ description: Run API client integration tests against stubbed services
 runs:
   using: "composite"
   steps:
-    - uses: nrwl/nx-set-shas@v4
+    - uses: nrwl/nx-set-shas@3e9ad7370203c1e93d109be57f3b72eb0eb511b1 # v4
     - name: integration test
       shell: bash
       run: npm run test:integration
