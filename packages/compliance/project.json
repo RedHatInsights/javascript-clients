@@ -29,7 +29,8 @@
         "outputPath": "packages/compliance/dist",
         "main": "packages/compliance/src/index.ts",
         "esmTsConfig": "packages/compliance/tsconfig.esm.json",
-        "cjsTsConfig": "packages/compliance/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/compliance/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

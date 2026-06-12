@@ -63,6 +63,22 @@ Husky is configured:
 
 See: Nx source `packages/nx/src/command-line/release/utils/semver.ts:44`
 
+## Package Publishing
+
+Root `.npmignore` is copied into each package's `dist/` during build. Excludes tests, configs, docs, source maps, and OpenAPI files from published packages. Protected by CODEOWNERS.
+
+Packages publish from `{projectRoot}/dist` (see `nx-release-publish` in `project.json`).
+
+To verify package contents before publish:
+
+```bash
+npm run build -- @redhat-cloud-services/<package>-client
+cd packages/<package>/dist
+npm pack --dry-run
+```
+
+Expected output: `.js`, `.d.ts`, `.map`, `package.json`. No `src/`, `tests/`, `tsconfig.*`, etc.
+
 ## Working with This Repo
 
 - Never directly call CLI tools (`jest`, `eslint`, `tsc`). Use npm scripts.

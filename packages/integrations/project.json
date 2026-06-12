@@ -30,7 +30,8 @@
         "outputPath": "packages/integrations/dist",
         "main": "packages/integrations/src/index.ts",
         "esmTsConfig": "packages/integrations/tsconfig.esm.json",
-        "cjsTsConfig": "packages/integrations/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/integrations/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

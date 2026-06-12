@@ -29,7 +29,8 @@
         "outputPath": "packages/host-inventory/dist",
         "main": "packages/host-inventory/src/index.ts",
         "esmTsConfig": "packages/host-inventory/tsconfig.esm.json",
-        "cjsTsConfig": "packages/host-inventory/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/host-inventory/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

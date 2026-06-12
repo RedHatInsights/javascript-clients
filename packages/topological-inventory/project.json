@@ -29,7 +29,8 @@
         "outputPath": "packages/topological-inventory/dist",
         "main": "packages/topological-inventory/src/index.ts",
         "esmTsConfig": "packages/topological-inventory/tsconfig.esm.json",
-        "cjsTsConfig": "packages/topological-inventory/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/topological-inventory/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

@@ -29,7 +29,8 @@
         "outputPath": "packages/config-manager/dist",
         "main": "packages/config-manager/src/index.ts",
         "esmTsConfig": "packages/config-manager/tsconfig.esm.json",
-        "cjsTsConfig": "packages/config-manager/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/config-manager/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

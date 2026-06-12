@@ -29,7 +29,8 @@
         "outputPath": "packages/entitlements/dist",
         "main": "packages/entitlements/src/index.ts",
         "esmTsConfig": "packages/entitlements/tsconfig.esm.json",
-        "cjsTsConfig": "packages/entitlements/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/entitlements/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

@@ -27,7 +27,8 @@
         "outputPath": "packages/vulnerabilities/dist",
         "main": "packages/vulnerabilities/index.ts",
         "esmTsConfig": "packages/vulnerabilities/tsconfig.esm.json",
-        "cjsTsConfig": "packages/vulnerabilities/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/vulnerabilities/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

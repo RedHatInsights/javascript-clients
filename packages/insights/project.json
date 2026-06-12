@@ -30,7 +30,8 @@
         "outputPath": "packages/insights/dist",
         "main": "packages/insights/src/index.ts",
         "esmTsConfig": "packages/insights/tsconfig.esm.json",
-        "cjsTsConfig": "packages/insights/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/insights/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

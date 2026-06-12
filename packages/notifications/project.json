@@ -30,7 +30,8 @@
         "outputPath": "packages/notifications/dist",
         "main": "packages/notifications/src/index.ts",
         "esmTsConfig": "packages/notifications/tsconfig.esm.json",
-        "cjsTsConfig": "packages/notifications/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/notifications/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

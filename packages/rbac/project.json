@@ -30,7 +30,8 @@
         "outputPath": "packages/rbac/dist",
         "main": "packages/rbac/src/index.ts",
         "esmTsConfig": "packages/rbac/tsconfig.esm.json",
-        "cjsTsConfig": "packages/rbac/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/rbac/tsconfig.cjs.json",
+        "assets": [".npmignore"]
       }
     },
     "publish": {

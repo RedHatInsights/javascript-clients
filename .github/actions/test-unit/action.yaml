@@ -6,7 +6,7 @@ runs:
     - uses: nrwl/nx-set-shas@v4
     - name: Install deps
       shell: bash
-      run: npm i
+      run: npm ci
     - name: Test affected
       shell: bash
       run: npx nx affected -t test --configuration=ci --exclude=@redhat-cloud-services/CLIENTNAME-client
