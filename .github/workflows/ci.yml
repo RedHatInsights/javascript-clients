@@ -74,9 +74,10 @@ jobs:
     needs: [install, lint, test, build]
     # Only run on push to main branch (never on PRs, workflow_dispatch, etc.)
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment: npm-publish
     permissions:
       contents: write  # Needed for git push
-      id-token: write  # Needed for npm publish
+      id-token: write  # Needed for npm publish (OIDC trusted publishing)
     steps:
       - uses: actions/checkout@v4
         with:
