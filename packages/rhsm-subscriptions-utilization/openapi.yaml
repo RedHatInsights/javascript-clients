@@ -1,0 +1,140 @@
+---
+openapi: 3.0.2
+info:
+  title: Swatch Utilization API
+  version: 1.0.0
+  description: Subscription Watch utilization HTTP APIs
+  contact:
+    name: SWATCH Dev
+    url: https://github.com/RedHatInsights/rhsm-subscriptions
+servers:
+  - url: https://console.redhat.com
+  - url: https://console.stage.redhat.com
+tags:
+  - name: OrgPreferences
+    description: Organization-level utilization preferences
+paths:
+  /api/rhsm-subscriptions/v1/utilization/org-preferences:
+    get:
+      tags:
+        - OrgPreferences
+      operationId: getOrgPreferences
+      security:
+        - customer: []
+        - service: []
+      summary: Get organization utilization preferences
+      description: >-
+        Retrieves the organization utilization preferences for the organization resolved
+        from the authenticated x-rh-identity header.
+      parameters:
+        - name: x-rh-identity
+          in: header
+          required: true
+          schema:
+            type: string
+          description: >-
+            Base64-encoded JSON identity document for x-rh-identity (must include org_id for User
+            and ServiceAccount identities, per the authenticated principal).
+      responses:
+        "200":
+          description: Preferences retrieved successfully. Returns system default threshold if not configured.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrgPreferencesResponse"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    post:
+      tags:
+        - OrgPreferences
+      operationId: updateOrgPreferences
+      security:
+        - org_admin: []
+        - service: []
+      summary: Update organization utilization preferences
+      description: >-
+        Accepts organization utilization preferences (for example custom over-usage threshold)
+        and persists them for the organization resolved from the authenticated x-rh-identity header.
+      parameters:
+        - name: x-rh-identity
+          in: header
+          required: true
+          schema:
+            type: string
+          description: >-
+            Base64-encoded JSON identity document for x-rh-identity (must include org_id for User
+            and ServiceAccount identities, per the authenticated principal).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrgPreferencesRequest"
+      responses:
+        "200":
+          description: Preferences were applied successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrgPreferencesResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+components:
+  securitySchemes:
+    customer:
+      type: apiKey
+      description: customer facing API
+      name: x-rh-identity
+      in: header
+    org_admin:
+      type: apiKey
+      description: API is available for organization administrators (is_org_admin=true in x-rh-identity)
+      name: x-rh-identity
+      in: header
+    service:
+      type: apiKey
+      description: API is available for services
+      name: x-rh-swatch-psk
+      in: header
+  responses:
+    BadRequest:
+      description: The server could not process the current request.
+    Forbidden:
+      description: The request was valid, but the request was refused by the server.
+    InternalServerError:
+      description: An internal server error has occurred and is not recoverable.
+  schemas:
+    OrgPreferencesRequest:
+      type: object
+      required:
+        - custom_threshold
+      properties:
+        custom_threshold:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 100
+          description: Over-usage threshold margin as a whole-number percentage (e.g. 5 means 5%).
+    OrgPreferencesResponse:
+      type: object
+      required:
+        - custom_threshold
+      properties:
+        custom_threshold:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 100
+          description: Persisted over-usage threshold margin as a whole-number percentage.
+        last_modified:
+          type: string
+          format: date-time
+          description: >-
+            UTC timestamp when preferences were last persisted. Omitted when the organization
+            has not configured custom preferences and the system default threshold is returned.

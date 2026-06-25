@@ -1,0 +1,54 @@
+{
+  "name": "@redhat-cloud-services/rhsm-subscriptions-utilization-client",
+  "version": "1.0.0",
+  "description": "JavaScript client for Red Hat Subscription Watch utilization APIs",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./esm/index.js",
+      "default": "./index.js"
+    },
+    "./api": {
+      "types": "./api.d.ts",
+      "import": "./esm/api.js",
+      "default": "./api.js"
+    },
+    "./*": {
+      "types": "./*/index.d.ts",
+      "import": "./esm/*/index.js",
+      "default": "./*/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "api": [
+        "./api.d.ts"
+      ],
+      "*": [
+        "./*/index.d.ts"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RedHatInsights/javascript-clients/issues"
+  },
+  "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
+  "scripts": {
+    "doc": "typedoc"
+  },
+  "dependencies": {
+    "@redhat-cloud-services/javascript-clients-shared": "^2.0.5",
+    "tslib": "^2.6.2"
+  }
+}
