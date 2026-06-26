@@ -1,0 +1,10 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
+GetOrgPreferences/index.ts
+UpdateOrgPreferences/index.ts
+api.ts
+git_push.sh
+index.ts
+index.ts
+types/index.ts

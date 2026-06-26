@@ -1,0 +1,70 @@
+{
+  "name": "@redhat-cloud-services/rhsm-subscriptions-utilization-client",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/rhsm-subscriptions-utilization",
+  "projectType": "library",
+  "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/rhsm-subscriptions-utilization/src"
+    },
+    "generate": {
+      "dependsOn": ["clean-generate"],
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "options": {
+        "outputPath": "packages/rhsm-subscriptions-utilization/src",
+        "specs": {
+          "default": "openapi.yaml"
+        },
+        "clientName": "RhsmSubscriptionsUtilizationClient"
+      }
+    },
+    "clean-build": {
+      "command": "rm -rf packages/rhsm-subscriptions-utilization/dist"
+    },
+    "build": {
+      "dependsOn": ["clean-build", "^build"],
+      "executor": "@redhat-cloud-services/build-utils:builder",
+      "options": {
+        "inputPath": "packages/rhsm-subscriptions-utilization/src",
+        "outputPath": "packages/rhsm-subscriptions-utilization/dist",
+        "main": "packages/rhsm-subscriptions-utilization/src/index.ts",
+        "esmTsConfig": "packages/rhsm-subscriptions-utilization/tsconfig.esm.json",
+        "cjsTsConfig": "packages/rhsm-subscriptions-utilization/tsconfig.cjs.json",
+        "assets": [".npmignore"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs @redhat-cloud-services/rhsm-subscriptions-utilization-client {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/rhsm-subscriptions-utilization/**/*.ts",
+          "packages/rhsm-subscriptions-utilization/*.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/rhsm-subscriptions-utilization/jest.config.ts"
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "{projectRoot}/dist"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}
