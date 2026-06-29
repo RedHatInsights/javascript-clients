@@ -98,7 +98,7 @@ export interface AdvisorAppData {
     'low'?: number | null;
 }
 /**
- * Application data fields available for sorting in the /hosts-view endpoint. Use format `app_name:field_name` with the `order_by` parameter.  **Advisor** - `advisor:recommendations` - Number of Advisor recommendations - `advisor:incidents` - Number of Advisor incidents  **Vulnerability** - `vulnerability:total_cves` - Total CVE count - `vulnerability:critical_cves` - Critical severity CVEs  **Patch** - `patch:advisories_rhsa_installable` - Number of RHSA installable advisories - `patch:packages_installable` - Number of installable packages  **Remediations** - `remediations:remediations_plans` - Active remediation plans count  **Compliance** - `compliance:last_scan` - Last compliance scan timestamp  **Malware** - `malware:last_matches` - Malware matches count - `malware:last_scan` - Last malware scan timestamp
+ * Application data fields available for sorting in the /hosts-view endpoint. Use format `app_name:field_name` with the `order_by` parameter.  **Advisor** - `advisor:recommendations` - Number of Advisor recommendations - `advisor:incidents` - Number of Advisor incidents - `advisor:critical` - Critical severity recommendations - `advisor:important` - Important severity recommendations - `advisor:moderate` - Moderate severity recommendations - `advisor:low` - Low severity recommendations  **Vulnerability** - `vulnerability:total_cves` - Total CVE count - `vulnerability:critical_cves` - Critical severity CVEs - `vulnerability:important_cves` - Important severity CVEs - `vulnerability:cves_with_security_rules` - CVEs with security rules - `vulnerability:cves_with_known_exploits` - CVEs with known exploits  **Patch** - `patch:advisories_total_installable` - Total installable advisories (sum of all types) - `patch:advisories_total_applicable` - Total applicable advisories (sum of all types) - `patch:advisories_rhsa_installable` - Number of RHSA installable advisories - `patch:advisories_rhba_installable` - Number of RHBA installable advisories - `patch:advisories_rhea_installable` - Number of RHEA installable advisories - `patch:advisories_other_installable` - Number of other installable advisories - `patch:advisories_rhsa_applicable` - Number of RHSA applicable advisories - `patch:advisories_rhba_applicable` - Number of RHBA applicable advisories - `patch:advisories_rhea_applicable` - Number of RHEA applicable advisories - `patch:advisories_other_applicable` - Number of other applicable advisories - `patch:packages_installable` - Number of installable packages - `patch:packages_applicable` - Number of applicable packages - `patch:packages_installed` - Number of installed packages - `patch:template_name` - Patch template name  **Remediations** - `remediations:remediations_plans` - Active remediation plans count  **Compliance** - `compliance:last_scan` - Last compliance scan timestamp - `compliance:policies_count` - Number of compliance policies  **Malware** - `malware:last_matches` - Malware matches count - `malware:total_matches` - Total malware matches count - `malware:last_scan` - Last malware scan timestamp - `malware:last_status` - Last malware detection status
  * @export
  * @enum {string}
  */
@@ -106,14 +106,36 @@ export interface AdvisorAppData {
 export const AppSortableFields = {
     Advisorrecommendations: 'advisor:recommendations',
     Advisorincidents: 'advisor:incidents',
+    Advisorcritical: 'advisor:critical',
+    Advisorimportant: 'advisor:important',
+    Advisormoderate: 'advisor:moderate',
+    Advisorlow: 'advisor:low',
     VulnerabilitytotalCves: 'vulnerability:total_cves',
     VulnerabilitycriticalCves: 'vulnerability:critical_cves',
+    VulnerabilityimportantCves: 'vulnerability:important_cves',
+    VulnerabilitycvesWithSecurityRules: 'vulnerability:cves_with_security_rules',
+    VulnerabilitycvesWithKnownExploits: 'vulnerability:cves_with_known_exploits',
+    PatchadvisoriesTotalInstallable: 'patch:advisories_total_installable',
+    PatchadvisoriesTotalApplicable: 'patch:advisories_total_applicable',
     PatchadvisoriesRhsaInstallable: 'patch:advisories_rhsa_installable',
+    PatchadvisoriesRhbaInstallable: 'patch:advisories_rhba_installable',
+    PatchadvisoriesRheaInstallable: 'patch:advisories_rhea_installable',
+    PatchadvisoriesOtherInstallable: 'patch:advisories_other_installable',
+    PatchadvisoriesRhsaApplicable: 'patch:advisories_rhsa_applicable',
+    PatchadvisoriesRhbaApplicable: 'patch:advisories_rhba_applicable',
+    PatchadvisoriesRheaApplicable: 'patch:advisories_rhea_applicable',
+    PatchadvisoriesOtherApplicable: 'patch:advisories_other_applicable',
     PatchpackagesInstallable: 'patch:packages_installable',
+    PatchpackagesApplicable: 'patch:packages_applicable',
+    PatchpackagesInstalled: 'patch:packages_installed',
+    PatchtemplateName: 'patch:template_name',
     RemediationsremediationsPlans: 'remediations:remediations_plans',
     CompliancelastScan: 'compliance:last_scan',
+    CompliancepoliciesCount: 'compliance:policies_count',
     MalwarelastMatches: 'malware:last_matches',
-    MalwarelastScan: 'malware:last_scan'
+    MalwaretotalMatches: 'malware:total_matches',
+    MalwarelastScan: 'malware:last_scan',
+    MalwarelastStatus: 'malware:last_status'
 } as const;
 
 export type AppSortableFields = typeof AppSortableFields[keyof typeof AppSortableFields];
@@ -253,6 +275,12 @@ export interface ComplianceAppData {
      * @memberof ComplianceAppData
      */
     'policies'?: Array<object> | null;
+    /**
+     * Number of compliance policies (computed from policies array length)
+     * @type {number}
+     * @memberof ComplianceAppData
+     */
+    'policies_count'?: number;
     /**
      *
      * @type {string}
@@ -396,7 +424,7 @@ export interface FactSet {
  */
 export interface GroupIn {
     /**
-     * A group’s human-readable name.
+     * A group’s human-readable name. Must contain only letters, numbers, spaces, hyphens, and underscores.
      * @type {string}
      * @memberof GroupIn
      */
@@ -421,7 +449,7 @@ export interface GroupOut {
      */
     'id'?: string;
     /**
-     * A group’s human-readable name.
+     * A group’s human-readable name. Must contain only letters, numbers, spaces, hyphens, and underscores.
      * @type {string}
      * @memberof GroupOut
      */
@@ -471,7 +499,7 @@ export interface GroupOutWithHostCount {
      */
     'id'?: string;
     /**
-     * A group’s human-readable name.
+     * A group’s human-readable name. Must contain only letters, numbers, spaces, hyphens, and underscores.
      * @type {string}
      * @memberof GroupOutWithHostCount
      */
@@ -783,6 +811,68 @@ export interface HostSystemProfileOut {
      * @memberof HostSystemProfileOut
      */
     'system_profile'?: SystemProfile;
+}
+/**
+ * Combined sparse fieldset supporting both system_profile and application data fields. The `system_profile` key selects system profile fields, while all other keys select application data fields. The `app_data` key is an explicit shorthand to request all app data. When omitted, all application data is returned by default but no system_profile data is included.
+ * @export
+ * @interface HostViewCombinedFields
+ */
+export interface HostViewCombinedFields {
+    /**
+     * Map of field names to include. Keys are field names, values are always true.
+     * @type {{ [key: string]: boolean; }}
+     * @memberof HostViewCombinedFields
+     */
+    'system_profile'?: { [key: string]: boolean; };
+    /**
+     * Map of field names to include. Keys are field names, values are always true.
+     * @type {{ [key: string]: boolean; }}
+     * @memberof HostViewCombinedFields
+     */
+    'app_data'?: { [key: string]: boolean; };
+    /**
+     * Map of field names to include. Keys are field names, values are always true.
+     * @type {{ [key: string]: boolean; }}
+     * @memberof HostViewCombinedFields
+     */
+    'advisor'?: { [key: string]: boolean; };
+    /**
+     * Map of field names to include. Keys are field names, values are always true.
+     * @type {{ [key: string]: boolean; }}
+     * @memberof HostViewCombinedFields
+     */
+    'vulnerability'?: { [key: string]: boolean; };
+    /**
+     * Map of field names to include. Keys are field names, values are always true.
+     * @type {{ [key: string]: boolean; }}
+     * @memberof HostViewCombinedFields
+     */
+    'patch'?: { [key: string]: boolean; };
+    /**
+     * Map of field names to include. Keys are field names, values are always true.
+     * @type {{ [key: string]: boolean; }}
+     * @memberof HostViewCombinedFields
+     */
+    'remediations'?: { [key: string]: boolean; };
+    /**
+     * Map of field names to include. Keys are field names, values are always true.
+     * @type {{ [key: string]: boolean; }}
+     * @memberof HostViewCombinedFields
+     */
+    'compliance'?: { [key: string]: boolean; };
+    /**
+     * Map of field names to include. Keys are field names, values are always true.
+     * @type {{ [key: string]: boolean; }}
+     * @memberof HostViewCombinedFields
+     */
+    'malware'?: { [key: string]: boolean; };
+}
+/**
+ *
+ * @export
+ * @interface HostViewCombinedFilterValue
+ */
+export interface HostViewCombinedFilterValue {
 }
 /**
  * Supported comparison operators for application metrics filtering.  **Value comparisons:** - `eq` - Equal to - `ne` - Not equal to - `gt` - Greater than - `lt` - Less than - `gte` - Greater than or equal to - `lte` - Less than or equal to  **null checks:** - `nil` - Field is null/missing - `not_nil` - Field is not null/exists
@@ -2270,6 +2360,12 @@ export type SystemProfileDnfModuleStatusEnum = typeof SystemProfileDnfModuleStat
  */
 export interface SystemProfileImageBuilder {
     /**
+     * The blueprint used to build the image deployed on this host
+     * @type {string}
+     * @memberof SystemProfileImageBuilder
+     */
+    'blueprint_id'?: string;
+    /**
      * The compliance policy that was used and applied during the image build
      * @type {string}
      * @memberof SystemProfileImageBuilder
@@ -3081,6 +3177,249 @@ export interface TagsOut {
     'results'?: { [key: string]: Array<StructuredTag>; };
 }
 /**
+ * Configuration for a single column in a view.
+ * @export
+ * @interface ViewColumnConfig
+ */
+export interface ViewColumnConfig {
+    /**
+     * The column key identifier, e.g. \"insights_id\", \"compliance.last_scan\", \"advisor.recommendations\".
+     * @type {string}
+     * @memberof ViewColumnConfig
+     */
+    'key': string;
+    /**
+     * Whether the column is visible in the view.
+     * @type {boolean}
+     * @memberof ViewColumnConfig
+     */
+    'visible'?: boolean;
+}
+/**
+ * The full visual configuration for an inventory view, including column layout, sort order, and active filters.
+ * @export
+ * @interface ViewConfiguration
+ */
+export interface ViewConfiguration {
+    /**
+     * Ordered list of column configurations.
+     * @type {Array<ViewColumnConfig>}
+     * @memberof ViewConfiguration
+     */
+    'columns': Array<ViewColumnConfig>;
+    /**
+     *
+     * @type {ViewSortConfig}
+     * @memberof ViewConfiguration
+     */
+    'sort'?: ViewSortConfig;
+    /**
+     * Active filter criteria. Keys are filter names, values are arrays of selected filter values.
+     * @type {{ [key: string]: Array<string>; }}
+     * @memberof ViewConfiguration
+     */
+    'filters'?: { [key: string]: Array<string>; };
+}
+/**
+ * Data required to create a new inventory view.
+ * @export
+ * @interface ViewIn
+ */
+export interface ViewIn {
+    /**
+     * The display name for the view.
+     * @type {string}
+     * @memberof ViewIn
+     */
+    'name': string;
+    /**
+     * An optional description of the view.
+     * @type {string}
+     * @memberof ViewIn
+     */
+    'description'?: string | null;
+    /**
+     *
+     * @type {ViewConfiguration}
+     * @memberof ViewIn
+     */
+    'configuration': ViewConfiguration;
+    /**
+     * If true, the view is visible to all users in the organization. If false, only the creator can see it.
+     * @type {boolean}
+     * @memberof ViewIn
+     */
+    'org_wide'?: boolean;
+}
+/**
+ * Full representation of an inventory view returned by the API.
+ * @export
+ * @interface ViewOut
+ */
+export interface ViewOut {
+    /**
+     * The unique identifier of the view.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'id': string;
+    /**
+     * The organization ID that owns the view. null for system views.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'org_id'?: string | null;
+    /**
+     * The display name for the view.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'name': string;
+    /**
+     * An optional description of the view.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'description'?: string | null;
+    /**
+     *
+     * @type {ViewConfiguration}
+     * @memberof ViewOut
+     */
+    'configuration': ViewConfiguration;
+    /**
+     * Whether the view is visible to the entire organization.
+     * @type {boolean}
+     * @memberof ViewOut
+     */
+    'org_wide': boolean;
+    /**
+     * True if this is a read-only system view (Red Hat preset). System views cannot be updated or deleted, but can be cloned.
+     * @type {boolean}
+     * @memberof ViewOut
+     */
+    'is_system_view': boolean;
+    /**
+     * True if the requesting user is the creator of this view. Only the owner can update or delete a view.
+     * @type {boolean}
+     * @memberof ViewOut
+     */
+    'is_owner': boolean;
+    /**
+     * The username of the view creator.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'created_by'?: string | null;
+    /**
+     * Timestamp when the view was created.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'created_at': string;
+    /**
+     * Timestamp when the view was last updated.
+     * @type {string}
+     * @memberof ViewOut
+     */
+    'updated_at': string;
+}
+/**
+ * Data for updating an existing inventory view. All fields are optional.
+ * @export
+ * @interface ViewPatch
+ */
+export interface ViewPatch {
+    /**
+     * The display name for the view.
+     * @type {string}
+     * @memberof ViewPatch
+     */
+    'name'?: string;
+    /**
+     * An optional description of the view.
+     * @type {string}
+     * @memberof ViewPatch
+     */
+    'description'?: string | null;
+    /**
+     *
+     * @type {ViewConfiguration}
+     * @memberof ViewPatch
+     */
+    'configuration'?: ViewConfiguration;
+    /**
+     * If true, the view is visible to all users in the organization. If false, only the creator can see it.
+     * @type {boolean}
+     * @memberof ViewPatch
+     */
+    'org_wide'?: boolean;
+}
+/**
+ * Sort configuration for a view.
+ * @export
+ * @interface ViewSortConfig
+ */
+export interface ViewSortConfig {
+    /**
+     * The column key to sort by.
+     * @type {string}
+     * @memberof ViewSortConfig
+     */
+    'key': string;
+    /**
+     * The sort direction.
+     * @type {string}
+     * @memberof ViewSortConfig
+     */
+    'direction'?: ViewSortConfigDirectionEnum;
+}
+
+export const ViewSortConfigDirectionEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+
+export type ViewSortConfigDirectionEnum = typeof ViewSortConfigDirectionEnum[keyof typeof ViewSortConfigDirectionEnum];
+
+/**
+ * A paginated list of inventory views.
+ * @export
+ * @interface ViewsListOut
+ */
+export interface ViewsListOut {
+    /**
+     * The number of items on the current page
+     * @type {number}
+     * @memberof ViewsListOut
+     */
+    'count': number;
+    /**
+     * The page number
+     * @type {number}
+     * @memberof ViewsListOut
+     */
+    'page': number;
+    /**
+     * The number of items to return per page
+     * @type {number}
+     * @memberof ViewsListOut
+     */
+    'per_page': number;
+    /**
+     * Total number of items
+     * @type {number}
+     * @memberof ViewsListOut
+     */
+    'total': number;
+    /**
+     * List of inventory views.
+     * @type {Array<ViewOut>}
+     * @memberof ViewsListOut
+     */
+    'results': Array<ViewOut>;
+}
+/**
  *
  * @export
  * @interface VulnerabilityAppData
@@ -3103,7 +3442,7 @@ export interface VulnerabilityAppData {
      * @type {number}
      * @memberof VulnerabilityAppData
      */
-    'high_severity_cves'?: number | null;
+    'important_cves'?: number | null;
     /**
      *
      * @type {number}
