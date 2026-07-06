@@ -81,10 +81,10 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
-          ssh-key: ${{ secrets.BOT_SSH_KEY}}
+          token: ${{ secrets.GH_BOT_TOKEN }}
       - uses: './.github/actions/setup-environment'
       - uses: './.github/actions/release'
         with:
-          gh_token: ${{ secrets.BOT_GH_TOKEN }}
+          gh_token: ${{ secrets.GH_BOT_TOKEN }}
           gh_name: ${{ secrets.GH_NAME }}
           gh_email: ${{ secrets.GH_EMAIL }}
