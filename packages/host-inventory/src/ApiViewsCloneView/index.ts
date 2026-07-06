@@ -4,36 +4,43 @@ import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shar
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-import type {  } from '../types';
+import type { ViewOut } from '../types';
 
 
-export type ApiStalenessDeleteStalenessParams = {
+export type ApiViewsCloneViewParams = {
+  /**
+  * View ID.
+  * @type { string }
+  * @memberof ApiViewsCloneViewApi
+  */
+  viewId: string,
   options?: AxiosRequestConfig
 }
 
-export type ApiStalenessDeleteStalenessReturnType = void;
+export type ApiViewsCloneViewReturnType = ViewOut;
 
-const isApiStalenessDeleteStalenessObjectParams = (params: [ApiStalenessDeleteStalenessParams] | unknown[]): params is [ApiStalenessDeleteStalenessParams] => {
+const isApiViewsCloneViewObjectParams = (params: [ApiViewsCloneViewParams] | unknown[]): params is [ApiViewsCloneViewParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'viewId')
   }
   return false
 }
 /**
-* Delete an account staleness <br /><br /> Required permissions: staleness:staleness:write
-* @summary Delete an account staleness
-* @param {ApiStalenessDeleteStalenessParams} config with all available params.
+* Creates a copy of any visible view (including system views) as a new private view owned by the requesting user. The cloned view name is prefixed with \"Copy of \". <br /><br /> Required permissions: inventory:views:write <br /><br /> <b>NOTE:</b> This endpoint is not yet implemented and will return HTTP 501.
+* @summary Clone an inventory view
+* @param {ApiViewsCloneViewParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiStalenessDeleteStalenessParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiStalenessDeleteStalenessParams] | [AxiosRequestConfig])) => {
-    const params = isApiStalenessDeleteStalenessObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiStalenessDeleteStalenessParams;
-    const { options = {} } = params;
-    const localVarPath = `/account/staleness`;
+export const apiViewsCloneViewParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiViewsCloneViewParams] | [string, AxiosRequestConfig])) => {
+    const params = isApiViewsCloneViewObjectParams(config) ? config[0] : ['viewId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiViewsCloneViewParams;
+    const { viewId, options = {} } = params;
+    const localVarPath = `/beta/views/{view_id}/clone`
+        .replace(`{${"view_id"}}`, encodeURIComponent(String(viewId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'DELETE' as Method, ...options};
+    const localVarRequestOptions = { method: 'POST' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
@@ -51,16 +58,11 @@ export const apiStalenessDeleteStalenessParamCreator = async (sendRequest: BaseA
         // in header with key required
         authType: AuthTypeEnum.InHeader,
         authKey: "x-rh-identity"
-        },
-        {
-        // authentication BearerAuth required
-        // bearer auth required
-        authType: AuthTypeEnum.Bearer,
         }
         ]
     };
 
-    return sendRequest<ApiStalenessDeleteStalenessReturnType>(Promise.resolve(args));
+    return sendRequest<ApiViewsCloneViewReturnType>(Promise.resolve(args));
 }
 
-export default apiStalenessDeleteStalenessParamCreator;
+export default apiViewsCloneViewParamCreator;

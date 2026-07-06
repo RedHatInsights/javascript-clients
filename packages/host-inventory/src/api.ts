@@ -1,7 +1,5 @@
-/* tslint:disable */
-/* eslint-disable */
-import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
-import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
+import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/utils';
+import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/common'
 import {
     apiGroupCreateGroup,
     apiGroupDeleteGroups,
@@ -38,6 +36,12 @@ import {
     apiSystemProfileGetSapSystem,
     apiSystemProfileValidateSchema,
     apiTagGetTags,
+    apiViewsCloneView,
+    apiViewsCreateView,
+    apiViewsDeleteView,
+    apiViewsGetViewById,
+    apiViewsGetViewsList,
+    apiViewsUpdateView,
 
   } from './index';
 
@@ -77,6 +81,12 @@ const endpointList = {
     apiSystemProfileGetSapSystem,
     apiSystemProfileValidateSchema,
     apiTagGetTags,
+    apiViewsCloneView,
+    apiViewsCreateView,
+    apiViewsDeleteView,
+    apiViewsGetViewById,
+    apiViewsGetViewsList,
+    apiViewsUpdateView,
 
 
 };

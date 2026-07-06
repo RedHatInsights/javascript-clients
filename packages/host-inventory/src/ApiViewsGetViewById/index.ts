@@ -4,36 +4,43 @@ import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shar
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-import type {  } from '../types';
+import type { ViewOut } from '../types';
 
 
-export type ApiStalenessDeleteStalenessParams = {
+export type ApiViewsGetViewByIdParams = {
+  /**
+  * View ID.
+  * @type { string }
+  * @memberof ApiViewsGetViewByIdApi
+  */
+  viewId: string,
   options?: AxiosRequestConfig
 }
 
-export type ApiStalenessDeleteStalenessReturnType = void;
+export type ApiViewsGetViewByIdReturnType = ViewOut;
 
-const isApiStalenessDeleteStalenessObjectParams = (params: [ApiStalenessDeleteStalenessParams] | unknown[]): params is [ApiStalenessDeleteStalenessParams] => {
+const isApiViewsGetViewByIdObjectParams = (params: [ApiViewsGetViewByIdParams] | unknown[]): params is [ApiViewsGetViewByIdParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'viewId')
   }
   return false
 }
 /**
-* Delete an account staleness <br /><br /> Required permissions: staleness:staleness:write
-* @summary Delete an account staleness
-* @param {ApiStalenessDeleteStalenessParams} config with all available params.
+* Returns the full details and configuration for a single inventory view. The view must be visible to the requesting user. <br /><br /> Required permissions: inventory:views:read <br /><br /> <b>NOTE:</b> This endpoint is not yet implemented and will return HTTP 501.
+* @summary Get a single inventory view
+* @param {ApiViewsGetViewByIdParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiStalenessDeleteStalenessParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiStalenessDeleteStalenessParams] | [AxiosRequestConfig])) => {
-    const params = isApiStalenessDeleteStalenessObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiStalenessDeleteStalenessParams;
-    const { options = {} } = params;
-    const localVarPath = `/account/staleness`;
+export const apiViewsGetViewByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiViewsGetViewByIdParams] | [string, AxiosRequestConfig])) => {
+    const params = isApiViewsGetViewByIdObjectParams(config) ? config[0] : ['viewId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiViewsGetViewByIdParams;
+    const { viewId, options = {} } = params;
+    const localVarPath = `/beta/views/{view_id}`
+        .replace(`{${"view_id"}}`, encodeURIComponent(String(viewId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'DELETE' as Method, ...options};
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
@@ -51,16 +58,11 @@ export const apiStalenessDeleteStalenessParamCreator = async (sendRequest: BaseA
         // in header with key required
         authType: AuthTypeEnum.InHeader,
         authKey: "x-rh-identity"
-        },
-        {
-        // authentication BearerAuth required
-        // bearer auth required
-        authType: AuthTypeEnum.Bearer,
         }
         ]
     };
 
-    return sendRequest<ApiStalenessDeleteStalenessReturnType>(Promise.resolve(args));
+    return sendRequest<ApiViewsGetViewByIdReturnType>(Promise.resolve(args));
 }
 
-export default apiStalenessDeleteStalenessParamCreator;
+export default apiViewsGetViewByIdParamCreator;

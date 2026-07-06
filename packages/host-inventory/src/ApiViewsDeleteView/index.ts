@@ -4,55 +4,45 @@ import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shar
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-import type { NotFoundErrorResponse } from '../types';
+import type {  } from '../types';
 
 
-export type ApiHostDeleteHostByIdParams = {
+export type ApiViewsDeleteViewParams = {
   /**
-  * A comma-separated list of host IDs.
-  * @type { Array<string> }
-  * @memberof ApiHostDeleteHostByIdApi
-  */
-  hostIdList: Array<string>,
-  /**
-  * Filter by branch_id
+  * View ID.
   * @type { string }
-  * @memberof ApiHostDeleteHostByIdApi
+  * @memberof ApiViewsDeleteViewApi
   */
-  branchId?: string,
+  viewId: string,
   options?: AxiosRequestConfig
 }
 
-export type ApiHostDeleteHostByIdReturnType = object;
+export type ApiViewsDeleteViewReturnType = void;
 
-const isApiHostDeleteHostByIdObjectParams = (params: [ApiHostDeleteHostByIdParams] | unknown[]): params is [ApiHostDeleteHostByIdParams] => {
+const isApiViewsDeleteViewObjectParams = (params: [ApiViewsDeleteViewParams] | unknown[]): params is [ApiViewsDeleteViewParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'viewId')
   }
   return false
 }
 /**
-* Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
-* @summary Delete hosts by IDs
-* @param {ApiHostDeleteHostByIdParams} config with all available params.
+* Deletes an existing inventory view. Only the view creator can delete a view. System views cannot be deleted. <br /><br /> Required permissions: inventory:views:write <br /><br /> <b>NOTE:</b> This endpoint is not yet implemented and will return HTTP 501.
+* @summary Delete an inventory view
+* @param {ApiViewsDeleteViewParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostDeleteHostByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostDeleteHostByIdParams] | [Array<string>, string, AxiosRequestConfig])) => {
-    const params = isApiHostDeleteHostByIdObjectParams(config) ? config[0] : ['hostIdList', 'branchId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostDeleteHostByIdParams;
-    const { hostIdList, branchId, options = {} } = params;
-    const localVarPath = `/hosts/{host_id_list}`
-        .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
+export const apiViewsDeleteViewParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiViewsDeleteViewParams] | [string, AxiosRequestConfig])) => {
+    const params = isApiViewsDeleteViewObjectParams(config) ? config[0] : ['viewId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiViewsDeleteViewParams;
+    const { viewId, options = {} } = params;
+    const localVarPath = `/beta/views/{view_id}`
+        .replace(`{${"view_id"}}`, encodeURIComponent(String(viewId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'DELETE' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
-
-    if (branchId !== undefined) {
-        localVarQueryParameter['branch_id'] = branchId;
-    }
 
 
 
@@ -72,7 +62,7 @@ export const apiHostDeleteHostByIdParamCreator = async (sendRequest: BaseAPI["se
         ]
     };
 
-    return sendRequest<ApiHostDeleteHostByIdReturnType>(Promise.resolve(args));
+    return sendRequest<ApiViewsDeleteViewReturnType>(Promise.resolve(args));
 }
 
-export default apiHostDeleteHostByIdParamCreator;
+export default apiViewsDeleteViewParamCreator;
