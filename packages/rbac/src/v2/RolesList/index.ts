@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, RoleBindingsList401Response, RoleBindingsList500Response, RolesList200Response } from '../types';
+import type { ProblemsProblem400, ProblemsProblem401, ProblemsProblem403, ProblemsProblem500, RolesList200Response } from '../types';
 
 
 export type RolesListParams = {
@@ -25,7 +25,7 @@ export type RolesListParams = {
   */
   cursor?: string,
   /**
-  * Filter by role name. Exact match by default; use * as a wildcard for partial matching (e.g. foo*).
+  * Filter by role name. Case-insensitive substring match by default; use * for glob patterns (e.g. foo*).
   * @type { string }
   * @memberof RolesListApi
   */
@@ -37,17 +37,29 @@ export type RolesListParams = {
   */
   resourceType?: string,
   /**
-  * Filter by resource ID. Requires resource_type to be specified.
+  * Filter by resource ID. For workspace: UUID. For tenant: tenant resource ID (format: {domain}/{org_id}). Requires resource_type unless resource.tenant.org_id is provided.
   * @type { string }
   * @memberof RolesListApi
   */
   resourceId?: string,
+  /**
+  * Org ID of the tenant resource to filter by. Cannot be combined with resource_id. When provided, resource_type is implicitly \'tenant\'.
+  * @type { string }
+  * @memberof RolesListApi
+  */
+  resourceTenantOrgId?: string,
   /**
   * Control which fields are included in the response to optimize payload size.
   * @type { string }
   * @memberof RolesListApi
   */
   fields?: string,
+  /**
+  * Filter by permission string(s). Comma-separated exact match (e.g. \'inventory:hosts:read\' or \'inventory:hosts:read,rbac:workspace:write\').
+  * @type { string }
+  * @memberof RolesListApi
+  */
+  permission?: string,
   /**
   * Sort by specified field(s), prefix with \'-\' for descending order. Allowed fields: name, last_modified.
   * @type { string }
@@ -73,9 +85,9 @@ const isRolesListObjectParams = (params: [RolesListParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const rolesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RolesListParams] | [number, string, string, string, string, string, string, AxiosRequestConfig])) => {
-    const params = isRolesListObjectParams(config) ? config[0] : ['limit', 'cursor', 'name', 'resourceType', 'resourceId', 'fields', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RolesListParams;
-    const { limit, cursor, name, resourceType, resourceId, fields, orderBy, options = {} } = params;
+export const rolesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RolesListParams] | [number, string, string, string, string, string, string, string, string, AxiosRequestConfig])) => {
+    const params = isRolesListObjectParams(config) ? config[0] : ['limit', 'cursor', 'name', 'resourceType', 'resourceId', 'resourceTenantOrgId', 'fields', 'permission', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RolesListParams;
+    const { limit, cursor, name, resourceType, resourceId, resourceTenantOrgId, fields, permission, orderBy, options = {} } = params;
     const localVarPath = `/roles/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -103,8 +115,16 @@ export const rolesListParamCreator = async (sendRequest: BaseAPI["sendRequest"],
         localVarQueryParameter['resource_id'] = resourceId;
     }
 
+    if (resourceTenantOrgId !== undefined) {
+        localVarQueryParameter['resource.tenant.org_id'] = resourceTenantOrgId;
+    }
+
     if (fields !== undefined) {
         localVarQueryParameter['fields'] = fields;
+    }
+
+    if (permission !== undefined) {
+        localVarQueryParameter['permission'] = permission;
     }
 
     if (orderBy !== undefined) {

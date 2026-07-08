@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, RoleBindingsList401Response, RoleBindingsList500Response, WorkspacesWorkspaceListResponse, WorkspacesWorkspaceTypesQueryParam } from '../types';
+import type { ProblemsProblem400, ProblemsProblem401, ProblemsProblem403, ProblemsProblem500, WorkspacesWorkspaceListResponse } from '../types';
 
 
 export type WorkspacesListParams = {
@@ -25,13 +25,13 @@ export type WorkspacesListParams = {
   */
   offset?: number,
   /**
-  * Defaults to all when param is not supplied.
-  * @type { WorkspacesWorkspaceTypesQueryParam }
+  * Filter by workspace type. Supports comma-separated values (e.g. type=standard,ungrouped-hosts). Defaults to all when not supplied. Case-insensitive.
+  * @type { string }
   * @memberof WorkspacesListApi
   */
-  type?: WorkspacesWorkspaceTypesQueryParam,
+  type?: string,
   /**
-  * Case sensitive exact match of workspace by name.
+  * Filter by workspace name. Case-insensitive substring match by default; use * for glob patterns (e.g. foo*).
   * @type { string }
   * @memberof WorkspacesListApi
   */
@@ -54,6 +54,12 @@ export type WorkspacesListParams = {
   * @memberof WorkspacesListApi
   */
   orderBy?: string,
+  /**
+  * When true, list responses include ancestor workspaces for tree navigation and fallback workspaces (root, default, ungrouped) when the user has no explicit access. When false (default), only workspaces with explicit Inventory permission are returned.
+  * @type { boolean }
+  * @memberof WorkspacesListApi
+  */
+  withAncestry?: boolean,
   options?: AxiosRequestConfig
 }
 
@@ -73,9 +79,9 @@ const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, string, string, Array<string>, string, AxiosRequestConfig])) => {
-    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'name', 'parentId', 'ids', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
-    const { limit, offset, type, name, parentId, ids, orderBy, options = {} } = params;
+export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([WorkspacesListParams] | [number, number, string, string, string, Array<string>, string, boolean, AxiosRequestConfig])) => {
+    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'name', 'parentId', 'ids', 'orderBy', 'withAncestry', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
+    const { limit, offset, type, name, parentId, ids, orderBy, withAncestry, options = {} } = params;
     const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -109,6 +115,10 @@ export const workspacesListParamCreator = async (sendRequest: BaseAPI["sendReque
 
     if (orderBy !== undefined) {
         localVarQueryParameter['order_by'] = orderBy;
+    }
+
+    if (withAncestry !== undefined) {
+        localVarQueryParameter['with_ancestry'] = withAncestry;
     }
 
 
