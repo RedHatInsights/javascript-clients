@@ -63,6 +63,7 @@
     "version": {
       "preVersionCommand": "npx nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client",
       "conventionalCommits": true,
+      "fallbackCurrentVersionResolver": "disk",
       "preserveLocalDependencyProtocols": false,
       "versionActionsOptions": {
         "skipLockFileUpdate": false
