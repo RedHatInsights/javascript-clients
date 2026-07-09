@@ -10,6 +10,9 @@ inputs:
   gh_email:
     description: 'Github email'
     required: true
+  gpg_private_key:
+    description: 'GPG private key for signing commits (passphrase-less)'
+    required: true
 runs:
   using: "composite"
   steps:
@@ -17,11 +20,18 @@ runs:
     - name: Install deps
       shell: bash
       run: npm ci
+    - name: Import GPG key
+      shell: bash
+      run: |
+        echo "${{ inputs.gpg_private_key }}" | base64 -d | gpg --batch --import
+        gpg --list-secret-keys --keyid-format LONG
     - name: git config
       shell: bash
       run: |
         git config user.name "${{ inputs.gh_name }}"
         git config user.email "${{ inputs.gh_email }}"
+        git config commit.gpgsign true
+        git config user.signingkey $(gpg --list-secret-keys --with-colons | awk -F: '/^sec:/ {print $5; exit}')
     - name: Release
       shell: bash
       env:
@@ -31,6 +41,9 @@ runs:
         # See: https://github.com/nrwl/nx/issues/22066#issuecomment-2576366862
         # See: https://github.com/nrwl/nx/blob/5ea2e47acfa9d175546daa922ce40905533f1074/packages/nx/src/utils/package-manager.ts#L207-L213
         npm_config_legacy_peer_deps: false
+        # https://docs.npmjs.com/generating-provenance-statements#using-third-party-package-publishing-tools
+        # https://philna.sh/blog/2026/01/28/trusted-publishing-npm/
+        NPM_CONFIG_PROVENANCE: true
       run: npx nx release --yes
     - name: Push release commit and tags
       shell: bash
@@ -39,5 +52,8 @@ runs:
       # createRelease (GitHub/GitLab releases) is enabled. Since we use createReleaseInGitHub: false,
       # we push manually here so that the version bumps in package.json reach the remote and
       # nacho-bot can create PRs in consuming repos.
+      # HUSKY=0 disables pre-push hooks in CI — tests are run separately by the CI pipeline.
+      env:
+        HUSKY: '0'
       run: git push --follow-tags
 
