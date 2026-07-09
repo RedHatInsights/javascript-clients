@@ -8,6 +8,13 @@
 # All Konflux tekton configuration changes review from admins
 #.tekton/** @RedHatInsights/experience-services-admins
 
+# Protect Husky git hooks from unauthorized modification
+.husky/** @RedHatInsights/experience-services-admins
+
+# Protect package lifecycle scripts and npm configuration
+package.json @RedHatInsights/experience-services-admins
+.npmrc @RedHatInsights/experience-services-admins
+
 # Protect .npmignore - package publish contents control
 .npmignore @RedHatInsights/experience-services-admins
 
