@@ -203,12 +203,6 @@ export interface CrossAccountRequest {
      * @type {string}
      * @memberof CrossAccountRequest
      */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequest
-     */
     'target_org'?: string;
     /**
      *
@@ -247,12 +241,6 @@ export interface CrossAccountRequestByAccount {
      * @memberof CrossAccountRequestByAccount
      */
     'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'target_account'?: string;
     /**
      *
      * @type {string}
@@ -325,12 +313,6 @@ export interface CrossAccountRequestByUserId {
      * @type {string}
      * @memberof CrossAccountRequestByUserId
      */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByUserId
-     */
     'target_org'?: string;
     /**
      *
@@ -387,12 +369,6 @@ export interface CrossAccountRequestDetailByAccount {
      * @memberof CrossAccountRequestDetailByAccount
      */
     'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'target_account'?: string;
     /**
      *
      * @type {string}
@@ -465,12 +441,6 @@ export interface CrossAccountRequestDetailByUseId {
      * @type {string}
      * @memberof CrossAccountRequestDetailByUseId
      */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
     'target_org'?: string;
     /**
      *
@@ -520,12 +490,6 @@ export interface CrossAccountRequestIn {
      * @type {string}
      * @memberof CrossAccountRequestIn
      */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestIn
-     */
     'target_org': string;
     /**
      *
@@ -558,12 +522,6 @@ export interface CrossAccountRequestOut {
      * @memberof CrossAccountRequestOut
      */
     'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'target_account'?: string;
     /**
      *
      * @type {string}
@@ -717,12 +675,6 @@ export interface CrossAccountRequestWithRoles {
      * @memberof CrossAccountRequestWithRoles
      */
     'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestWithRoles
-     */
-    'target_account'?: string;
     /**
      *
      * @type {string}

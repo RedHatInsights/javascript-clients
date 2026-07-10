@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ExcludeSources, ProblemsProblem403, RoleBindingsBindingSubjectType, RoleBindingsGrantedSubjectFilterType, RoleBindingsList200Response, RoleBindingsList401Response, RoleBindingsList500Response } from '../types';
+import type { ExcludeSources, ProblemsProblem400, ProblemsProblem401, ProblemsProblem403, ProblemsProblem500, RoleBindingsBindingSubjectType, RoleBindingsGrantedSubjectFilterType, RoleBindingsList200Response } from '../types';
 
 
 export type RoleBindingsListParams = {

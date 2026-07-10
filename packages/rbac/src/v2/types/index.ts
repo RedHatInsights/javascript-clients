@@ -137,6 +137,12 @@ export interface ProblemsProblem400 {
      * @type {string}
      * @memberof ProblemsProblem400
      */
+    'type': ProblemsProblem400TypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem400
+     */
     'title': ProblemsProblem400TitleEnum;
     /**
      *
@@ -144,12 +150,6 @@ export interface ProblemsProblem400 {
      * @memberof ProblemsProblem400
      */
     'detail': string;
-    /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof ProblemsProblem400
-     */
-    'type'?: ProblemsProblemType;
     /**
      *
      * @type {number}
@@ -164,6 +164,11 @@ export interface ProblemsProblem400 {
     'instance'?: string;
 }
 
+export const ProblemsProblem400TypeEnum = {
+    HttpProjectKesselOrgProblemsInvalidRequest: 'http://project-kessel.org/problems/invalid-request'
+} as const;
+
+export type ProblemsProblem400TypeEnum = typeof ProblemsProblem400TypeEnum[keyof typeof ProblemsProblem400TypeEnum];
 export const ProblemsProblem400TitleEnum = {
     TheRequestPayloadContainsInvalidSyntax: 'The request payload contains invalid syntax.'
 } as const;
@@ -174,6 +179,114 @@ export const ProblemsProblem400StatusEnum = {
 } as const;
 
 export type ProblemsProblem400StatusEnum = typeof ProblemsProblem400StatusEnum[keyof typeof ProblemsProblem400StatusEnum];
+
+/**
+ *
+ * @export
+ * @interface ProblemsProblem400AlreadyExists
+ */
+export interface ProblemsProblem400AlreadyExists {
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem400AlreadyExists
+     */
+    'type': ProblemsProblem400AlreadyExistsTypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem400AlreadyExists
+     */
+    'title': ProblemsProblem400AlreadyExistsTitleEnum;
+    /**
+     *
+     * @type {number}
+     * @memberof ProblemsProblem400AlreadyExists
+     */
+    'status'?: ProblemsProblem400AlreadyExistsStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem400AlreadyExists
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem400AlreadyExists
+     */
+    'instance'?: string;
+}
+
+export const ProblemsProblem400AlreadyExistsTypeEnum = {
+    HttpProjectKesselOrgProblemsAlreadyExists: 'http://project-kessel.org/problems/already-exists'
+} as const;
+
+export type ProblemsProblem400AlreadyExistsTypeEnum = typeof ProblemsProblem400AlreadyExistsTypeEnum[keyof typeof ProblemsProblem400AlreadyExistsTypeEnum];
+export const ProblemsProblem400AlreadyExistsTitleEnum = {
+    TheResourceAlreadyExists: 'The resource already exists.'
+} as const;
+
+export type ProblemsProblem400AlreadyExistsTitleEnum = typeof ProblemsProblem400AlreadyExistsTitleEnum[keyof typeof ProblemsProblem400AlreadyExistsTitleEnum];
+export const ProblemsProblem400AlreadyExistsStatusEnum = {
+    NUMBER_400: 400
+} as const;
+
+export type ProblemsProblem400AlreadyExistsStatusEnum = typeof ProblemsProblem400AlreadyExistsStatusEnum[keyof typeof ProblemsProblem400AlreadyExistsStatusEnum];
+
+/**
+ *
+ * @export
+ * @interface ProblemsProblem401
+ */
+export interface ProblemsProblem401 {
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem401
+     */
+    'type': ProblemsProblem401TypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem401
+     */
+    'title': ProblemsProblem401TitleEnum;
+    /**
+     *
+     * @type {number}
+     * @memberof ProblemsProblem401
+     */
+    'status'?: ProblemsProblem401StatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem401
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem401
+     */
+    'instance'?: string;
+}
+
+export const ProblemsProblem401TypeEnum = {
+    HttpProjectKesselOrgProblemsUnauthenticated: 'http://project-kessel.org/problems/unauthenticated'
+} as const;
+
+export type ProblemsProblem401TypeEnum = typeof ProblemsProblem401TypeEnum[keyof typeof ProblemsProblem401TypeEnum];
+export const ProblemsProblem401TitleEnum = {
+    AuthenticationCredentialsWereNotProvidedOrAreInvalid: 'Authentication credentials were not provided or are invalid.'
+} as const;
+
+export type ProblemsProblem401TitleEnum = typeof ProblemsProblem401TitleEnum[keyof typeof ProblemsProblem401TitleEnum];
+export const ProblemsProblem401StatusEnum = {
+    NUMBER_401: 401
+} as const;
+
+export type ProblemsProblem401StatusEnum = typeof ProblemsProblem401StatusEnum[keyof typeof ProblemsProblem401StatusEnum];
 
 /**
  *
@@ -240,6 +353,12 @@ export interface ProblemsProblem404 {
      * @type {string}
      * @memberof ProblemsProblem404
      */
+    'type': ProblemsProblem404TypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem404
+     */
     'title': ProblemsProblem404TitleEnum;
     /**
      *
@@ -247,12 +366,6 @@ export interface ProblemsProblem404 {
      * @memberof ProblemsProblem404
      */
     'detail': string;
-    /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof ProblemsProblem404
-     */
-    'type'?: ProblemsProblemType;
     /**
      *
      * @type {number}
@@ -267,6 +380,11 @@ export interface ProblemsProblem404 {
     'instance'?: string;
 }
 
+export const ProblemsProblem404TypeEnum = {
+    HttpProjectKesselOrgProblemsNotFound: 'http://project-kessel.org/problems/not-found'
+} as const;
+
+export type ProblemsProblem404TypeEnum = typeof ProblemsProblem404TypeEnum[keyof typeof ProblemsProblem404TypeEnum];
 export const ProblemsProblem404TitleEnum = {
     ResourceWasNotFound: 'Resource was not found'
 } as const;
@@ -281,11 +399,71 @@ export type ProblemsProblem404StatusEnum = typeof ProblemsProblem404StatusEnum[k
 /**
  *
  * @export
+ * @interface ProblemsProblem500
+ */
+export interface ProblemsProblem500 {
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem500
+     */
+    'type': ProblemsProblem500TypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem500
+     */
+    'title': ProblemsProblem500TitleEnum;
+    /**
+     *
+     * @type {number}
+     * @memberof ProblemsProblem500
+     */
+    'status'?: ProblemsProblem500StatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem500
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ProblemsProblem500
+     */
+    'instance'?: string;
+}
+
+export const ProblemsProblem500TypeEnum = {
+    HttpProjectKesselOrgProblemsInternalError: 'http://project-kessel.org/problems/internal-error'
+} as const;
+
+export type ProblemsProblem500TypeEnum = typeof ProblemsProblem500TypeEnum[keyof typeof ProblemsProblem500TypeEnum];
+export const ProblemsProblem500TitleEnum = {
+    UnexpectedErrorOccurred: 'Unexpected error occurred.'
+} as const;
+
+export type ProblemsProblem500TitleEnum = typeof ProblemsProblem500TitleEnum[keyof typeof ProblemsProblem500TitleEnum];
+export const ProblemsProblem500StatusEnum = {
+    NUMBER_500: 500
+} as const;
+
+export type ProblemsProblem500StatusEnum = typeof ProblemsProblem500StatusEnum[keyof typeof ProblemsProblem500StatusEnum];
+
+/**
+ *
+ * @export
  * @enum {string}
  */
 
 export const ProblemsProblemType = {
-    HttpProjectKesselOrgProblemsInsufficientPermission: 'http://project-kessel.org/problems/insufficient-permission'
+    InsufficientPermission: 'http://project-kessel.org/problems/insufficient-permission',
+    Unauthenticated: 'http://project-kessel.org/problems/unauthenticated',
+    NotFound: 'http://project-kessel.org/problems/not-found',
+    InternalError: 'http://project-kessel.org/problems/internal-error',
+    InvalidRequest: 'http://project-kessel.org/problems/invalid-request',
+    AlreadyExists: 'http://project-kessel.org/problems/already-exists',
+    WorkspaceNotEmpty: 'http://project-kessel.org/problems/workspace-not-empty'
 } as const;
 
 export type ProblemsProblemType = typeof ProblemsProblemType[keyof typeof ProblemsProblemType];
@@ -302,13 +480,13 @@ export interface ProblemsWorkspaceProblem400WorkspaceNotEmpty {
      * @type {string}
      * @memberof ProblemsWorkspaceProblem400WorkspaceNotEmpty
      */
-    'title': ProblemsWorkspaceProblem400WorkspaceNotEmptyTitleEnum;
+    'type': ProblemsWorkspaceProblem400WorkspaceNotEmptyTypeEnum;
     /**
      *
-     * @type {ProblemsProblemType}
+     * @type {string}
      * @memberof ProblemsWorkspaceProblem400WorkspaceNotEmpty
      */
-    'type'?: ProblemsProblemType;
+    'title': ProblemsWorkspaceProblem400WorkspaceNotEmptyTitleEnum;
     /**
      *
      * @type {number}
@@ -329,6 +507,11 @@ export interface ProblemsWorkspaceProblem400WorkspaceNotEmpty {
     'instance'?: string;
 }
 
+export const ProblemsWorkspaceProblem400WorkspaceNotEmptyTypeEnum = {
+    HttpProjectKesselOrgProblemsWorkspaceNotEmpty: 'http://project-kessel.org/problems/workspace-not-empty'
+} as const;
+
+export type ProblemsWorkspaceProblem400WorkspaceNotEmptyTypeEnum = typeof ProblemsWorkspaceProblem400WorkspaceNotEmptyTypeEnum[keyof typeof ProblemsWorkspaceProblem400WorkspaceNotEmptyTypeEnum];
 export const ProblemsWorkspaceProblem400WorkspaceNotEmptyTitleEnum = {
     UnableToDeleteDueToWorkspaceDependencies: 'Unable to delete due to workspace dependencies'
 } as const;
@@ -494,7 +677,7 @@ export interface RoleBindingsCreateRoleBindingsRequest {
  */
 export interface RoleBindingsCreateRoleBindingsRequestResource {
     /**
-     *
+     * Identifier of the resource
      * @type {string}
      * @memberof RoleBindingsCreateRoleBindingsRequestResource
      */
@@ -634,94 +817,6 @@ export interface RoleBindingsList200Response {
 /**
  *
  * @export
- * @interface RoleBindingsList401Response
- */
-export interface RoleBindingsList401Response {
-    /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof RoleBindingsList401Response
-     */
-    'type'?: ProblemsProblemType;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleBindingsList401Response
-     */
-    'status'?: RoleBindingsList401ResponseStatusEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsList401Response
-     */
-    'title'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsList401Response
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsList401Response
-     */
-    'instance'?: string;
-}
-
-export const RoleBindingsList401ResponseStatusEnum = {
-    NUMBER_401: 401
-} as const;
-
-export type RoleBindingsList401ResponseStatusEnum = typeof RoleBindingsList401ResponseStatusEnum[keyof typeof RoleBindingsList401ResponseStatusEnum];
-
-/**
- *
- * @export
- * @interface RoleBindingsList500Response
- */
-export interface RoleBindingsList500Response {
-    /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof RoleBindingsList500Response
-     */
-    'type'?: ProblemsProblemType;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleBindingsList500Response
-     */
-    'status'?: RoleBindingsList500ResponseStatusEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsList500Response
-     */
-    'title'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsList500Response
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsList500Response
-     */
-    'instance'?: string;
-}
-
-export const RoleBindingsList500ResponseStatusEnum = {
-    NUMBER_500: 500
-} as const;
-
-export type RoleBindingsList500ResponseStatusEnum = typeof RoleBindingsList500ResponseStatusEnum[keyof typeof RoleBindingsList500ResponseStatusEnum];
-
-/**
- *
- * @export
  * @interface RoleBindingsListBySubject200Response
  */
 export interface RoleBindingsListBySubject200Response {
@@ -751,7 +846,7 @@ export interface RoleBindingsListBySubject200Response {
  */
 export interface RoleBindingsResource {
     /**
-     *
+     * Resource identifier
      * @type {string}
      * @memberof RoleBindingsResource
      */
@@ -1057,6 +1152,50 @@ export interface WorkspacesBasicWorkspace {
 /**
  *
  * @export
+ * @interface WorkspacesCreate400Response
+ */
+export interface WorkspacesCreate400Response {
+    /**
+     *
+     * @type {ProblemsProblemType}
+     * @memberof WorkspacesCreate400Response
+     */
+    'type': ProblemsProblemType;
+    /**
+     *
+     * @type {number}
+     * @memberof WorkspacesCreate400Response
+     */
+    'status'?: WorkspacesCreate400ResponseStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreate400Response
+     */
+    'title': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreate400Response
+     */
+    'detail': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreate400Response
+     */
+    'instance'?: string;
+}
+
+export const WorkspacesCreate400ResponseStatusEnum = {
+    NUMBER_400: 400
+} as const;
+
+export type WorkspacesCreate400ResponseStatusEnum = typeof WorkspacesCreate400ResponseStatusEnum[keyof typeof WorkspacesCreate400ResponseStatusEnum];
+
+/**
+ *
+ * @export
  * @interface WorkspacesCreateWorkspaceRequest
  */
 export interface WorkspacesCreateWorkspaceRequest {
@@ -1129,6 +1268,50 @@ export interface WorkspacesCreateWorkspaceResponse {
     'modified': string;
 }
 
+
+/**
+ *
+ * @export
+ * @interface WorkspacesDelete400Response
+ */
+export interface WorkspacesDelete400Response {
+    /**
+     *
+     * @type {ProblemsProblemType}
+     * @memberof WorkspacesDelete400Response
+     */
+    'type': ProblemsProblemType;
+    /**
+     *
+     * @type {number}
+     * @memberof WorkspacesDelete400Response
+     */
+    'status'?: WorkspacesDelete400ResponseStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesDelete400Response
+     */
+    'title': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesDelete400Response
+     */
+    'detail': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesDelete400Response
+     */
+    'instance'?: string;
+}
+
+export const WorkspacesDelete400ResponseStatusEnum = {
+    NUMBER_400: 400
+} as const;
+
+export type WorkspacesDelete400ResponseStatusEnum = typeof WorkspacesDelete400ResponseStatusEnum[keyof typeof WorkspacesDelete400ResponseStatusEnum];
 
 /**
  *
@@ -1409,50 +1592,6 @@ export interface WorkspacesReadWorkspaceWithAncestryResponse {
     'modified': string;
 }
 
-
-/**
- *
- * @export
- * @interface WorkspacesUpdate400Response
- */
-export interface WorkspacesUpdate400Response {
-    /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof WorkspacesUpdate400Response
-     */
-    'type'?: ProblemsProblemType;
-    /**
-     *
-     * @type {number}
-     * @memberof WorkspacesUpdate400Response
-     */
-    'status'?: WorkspacesUpdate400ResponseStatusEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesUpdate400Response
-     */
-    'title'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesUpdate400Response
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesUpdate400Response
-     */
-    'instance'?: string;
-}
-
-export const WorkspacesUpdate400ResponseStatusEnum = {
-    NUMBER_400: 400
-} as const;
-
-export type WorkspacesUpdate400ResponseStatusEnum = typeof WorkspacesUpdate400ResponseStatusEnum[keyof typeof WorkspacesUpdate400ResponseStatusEnum];
 
 /**
  *

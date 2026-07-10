@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem400, ProblemsProblem403, RoleBindingsList401Response, RoleBindingsList500Response, WorkspacesCreateWorkspaceRequest, WorkspacesCreateWorkspaceResponse } from '../types';
+import type { ProblemsProblem401, ProblemsProblem403, ProblemsProblem500, WorkspacesCreate400Response, WorkspacesCreateWorkspaceRequest, WorkspacesCreateWorkspaceResponse } from '../types';
 
 
 export type WorkspacesCreateParams = {
