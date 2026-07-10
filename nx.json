@@ -55,11 +55,6 @@
   "release": {
     "projects": ["packages/*"],
     "projectsRelationship": "independent",
-    "git": {
-      "commit": true,
-      "tag": true,
-      "commitMessage": "chore(versions): package.json version sync + changelog [skip ci]\n\n{releaseNotes}"
-    },
     "version": {
       "preVersionCommand": "npx nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client",
       "conventionalCommits": true,
@@ -68,7 +63,12 @@
       "versionActionsOptions": {
         "skipLockFileUpdate": false
       },
-      "manifestRootsToUpdate": ["{projectRoot}", "{projectRoot}/dist"]
+      "manifestRootsToUpdate": ["{projectRoot}", "{projectRoot}/dist"],
+      "git": {
+        "commit": true,
+        "tag": true,
+        "commitMessage": "chore(versions): package.json version sync + changelog [skip ci]\n\n{releaseNotes}"
+      }
     },
     "conventionalCommits": {
       "useCommitScope": true
@@ -78,6 +78,9 @@
       "projectChangelogs": {
         "file": "{projectRoot}/CHANGELOG.md",
         "createReleaseInGitHub": false
+      },
+      "git": {
+        "commit": false
       }
     },
     "releaseTag": {
