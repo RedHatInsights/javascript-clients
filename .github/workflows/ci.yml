@@ -88,3 +88,4 @@ jobs:
           gh_token: ${{ secrets.GH_BOT_TOKEN }}
           gh_name: ${{ secrets.GH_NAME }}
           gh_email: ${{ secrets.GH_EMAIL }}
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}

@@ -10,6 +10,9 @@ inputs:
   gh_email:
     description: 'Github email'
     required: true
+  gpg_private_key:
+    description: 'GPG private key for signing commits (passphrase-less)'
+    required: true
 runs:
   using: "composite"
   steps:
@@ -17,11 +20,17 @@ runs:
     - name: Install deps
       shell: bash
       run: npm ci
+    - name: Import GPG key
+      shell: bash
+      run: |
+        echo "${{ inputs.gpg_private_key }}" | base64 -d | gpg --batch --import
     - name: git config
       shell: bash
       run: |
         git config user.name "${{ inputs.gh_name }}"
         git config user.email "${{ inputs.gh_email }}"
+        git config commit.gpgsign true
+        git config user.signingkey $(gpg --list-secret-keys --with-colons "${{ inputs.gh_name }}" | awk -F: '/^sec:/ {print $5; exit}')
     - name: Release
       shell: bash
       env:
@@ -42,5 +51,8 @@ runs:
       # createRelease (GitHub/GitLab releases) is enabled. Since we use createReleaseInGitHub: false,
       # we push manually here so that the version bumps in package.json reach the remote and
       # nacho-bot can create PRs in consuming repos.
+      # HUSKY=0 disables pre-push hooks in CI — tests are run separately by the CI pipeline.
+      env:
+        HUSKY: '0'
       run: git push --follow-tags
 
