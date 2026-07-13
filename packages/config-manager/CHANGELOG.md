@@ -1,3 +1,9 @@
+## 5.0.8 (2026-07-13)
+
+### 🧱 Updated Dependencies
+
+- Updated @redhat-cloud-services/javascript-clients-shared to 2.0.12
+
 ## 5.0.3 (2026-05-29)
 
 ### 🧱 Updated Dependencies

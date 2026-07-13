@@ -1,3 +1,21 @@
+## 5.0.7 (2026-07-13)
+
+### 🚀 Features
+
+- ⚠️  **host-inventory:** update host-inventory for vuln app data params ([6848c386](https://github.com/RedHatInsights/javascript-clients/commit/6848c386))
+
+### ⚠️  Breaking Changes
+
+- **host-inventory:** update host-inventory for vuln app data params  ([6848c386](https://github.com/RedHatInsights/javascript-clients/commit/6848c386))
+
+### 🧱 Updated Dependencies
+
+- Updated @redhat-cloud-services/javascript-clients-shared to 2.0.12
+
+### ❤️ Thank You
+
+- Michael Johnson
+
 ## 5.0.2 (2026-05-29)
 
 ### 🧱 Updated Dependencies

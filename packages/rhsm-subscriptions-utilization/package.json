@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/rhsm-subscriptions-utilization-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript client for Red Hat Subscription Watch utilization APIs",
   "main": "./index.js",
   "typings": "./index.d.ts",

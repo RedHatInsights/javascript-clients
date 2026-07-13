@@ -1,3 +1,22 @@
+## 9.0.7 (2026-07-13)
+
+### 🚀 Features
+
+- ⚠️  **rbac:** regenerate v2 client from latest openapi spec ([#506](https://github.com/RedHatInsights/javascript-clients/pull/506))
+
+### ⚠️  Breaking Changes
+
+- **rbac:** regenerate v2 client from latest openapi spec  ([#506](https://github.com/RedHatInsights/javascript-clients/pull/506))
+
+### 🧱 Updated Dependencies
+
+- Updated @redhat-cloud-services/javascript-clients-shared to 2.0.12
+
+### ❤️ Thank You
+
+- Claude Opus 4.6 (1M context)
+- Riccardo Forina
+
 ## 9.0.2 (2026-05-29)
 
 ### 🧱 Updated Dependencies

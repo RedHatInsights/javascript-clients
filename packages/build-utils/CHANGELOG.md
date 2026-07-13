@@ -1,3 +1,14 @@
+## 1.1.3 (2026-07-13)
+
+### 🩹 Fixes
+
+- **build-utils:** remediate CVE-2026-27904 minimatch ReDoS ([7c8dbac5](https://github.com/RedHatInsights/javascript-clients/commit/7c8dbac5))
+
+### ❤️ Thank You
+
+- Claude Opus 4.6
+- platex-rehor-bot
+
 ## 1.1.2 (2026-05-29)
 
 This was a version bump only for @redhat-cloud-services/build-utils to align it with other projects, there were no code changes.
