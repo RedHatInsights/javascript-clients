@@ -1,14 +1,10 @@
-// @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
-// @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-// @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-// @ts-ignore
-import type { CreateJobRequest, Job } from '../types';
+import type { CreateJobRequest, ErrorResponse, Job } from '../types';
 
 
 export type CreateJobParams = {
@@ -58,6 +54,14 @@ export const createJobParamCreator = async (sendRequest: BaseAPI["sendRequest"],
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: createJobRequest,
+        auth:[
+        {
+        // authentication ApiKeyAuth required
+        // in header with key required
+        authType: AuthTypeEnum.InHeader,
+        authKey: "X-Rh-Identity"
+        }
+        ]
     };
 
     return sendRequest<CreateJobReturnType>(Promise.resolve(args));

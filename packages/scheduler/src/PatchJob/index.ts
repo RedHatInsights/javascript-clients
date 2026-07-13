@@ -1,23 +1,19 @@
-// @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
-// @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-// @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-// @ts-ignore
-import type { Job, PatchJobRequest } from '../types';
+import type { ErrorResponse, Job, PatchJobRequest } from '../types';
 
 
 export type PatchJobParams = {
   /**
   * Job ID
-  * @type { any }
+  * @type { string }
   * @memberof PatchJobApi
   */
-  id: any,
+  id: string,
   /**
   *
   * @type { PatchJobRequest }
@@ -43,7 +39,7 @@ const isPatchJobObjectParams = (params: [PatchJobParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const patchJobParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PatchJobParams] | [any, PatchJobRequest, AxiosRequestConfig])) => {
+export const patchJobParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([PatchJobParams] | [string, PatchJobRequest, AxiosRequestConfig])) => {
     const params = isPatchJobObjectParams(config) ? config[0] : ['id', 'patchJobRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PatchJobParams;
     const { id, patchJobRequest, options = {} } = params;
     const localVarPath = `/jobs/{id}`
@@ -65,6 +61,14 @@ export const patchJobParamCreator = async (sendRequest: BaseAPI["sendRequest"], 
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
         serializeData: patchJobRequest,
+        auth:[
+        {
+        // authentication ApiKeyAuth required
+        // in header with key required
+        authType: AuthTypeEnum.InHeader,
+        authKey: "X-Rh-Identity"
+        }
+        ]
     };
 
     return sendRequest<PatchJobReturnType>(Promise.resolve(args));

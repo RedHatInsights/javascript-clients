@@ -1,34 +1,34 @@
-/* tslint:disable */
-/* eslint-disable */
-import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
-import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
+import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/utils';
+import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/common'
 import {
-    listJobs,
     createJob,
-    getJob,
-    updateJob,
-    patchJob,
     deleteJob,
-    runJob,
+    getJob,
+    getJobRun,
+    getJobRuns,
+    listAllRuns,
+    listJobs,
+    patchJob,
     pauseJob,
     resumeJob,
-    getJobRuns,
-    getJobRun,
+    runJob,
+    updateJob,
 
   } from './index';
 
 const endpointList = {
-      listJobs,
-    createJob,
-    getJob,
-    updateJob,
-    patchJob,
+      createJob,
     deleteJob,
-    runJob,
+    getJob,
+    getJobRun,
+    getJobRuns,
+    listAllRuns,
+    listJobs,
+    patchJob,
     pauseJob,
     resumeJob,
-    getJobRuns,
-    getJobRun,
+    runJob,
+    updateJob,
 
 
 };

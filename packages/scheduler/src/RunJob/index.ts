@@ -1,23 +1,19 @@
-// @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
-// @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-// @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-// @ts-ignore
-import type { RunJobResponse } from '../types';
+import type { ErrorResponse, RunJobResponse } from '../types';
 
 
 export type RunJobParams = {
   /**
   * Job ID
-  * @type { any }
+  * @type { string }
   * @memberof RunJobApi
   */
-  id: any,
+  id: string,
   options?: AxiosRequestConfig
 }
 
@@ -37,7 +33,7 @@ const isRunJobObjectParams = (params: [RunJobParams] | unknown[]): params is [Ru
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const runJobParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RunJobParams] | [any, AxiosRequestConfig])) => {
+export const runJobParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([RunJobParams] | [string, AxiosRequestConfig])) => {
     const params = isRunJobObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as RunJobParams;
     const { id, options = {} } = params;
     const localVarPath = `/jobs/{id}/run`
@@ -56,6 +52,14 @@ export const runJobParamCreator = async (sendRequest: BaseAPI["sendRequest"], ..
     const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
+        auth:[
+        {
+        // authentication ApiKeyAuth required
+        // in header with key required
+        authType: AuthTypeEnum.InHeader,
+        authKey: "X-Rh-Identity"
+        }
+        ]
     };
 
     return sendRequest<RunJobReturnType>(Promise.resolve(args));
