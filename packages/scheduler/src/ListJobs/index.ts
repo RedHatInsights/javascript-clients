@@ -1,41 +1,37 @@
-// @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
-// @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-// @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-// @ts-ignore
-import type { PaginatedJobsResponse } from '../types';
+import type { ErrorResponse, JobStatus, PaginatedJobsResponse } from '../types';
 
 
 export type ListJobsParams = {
   /**
   * Filter jobs by status
-  * @type { any }
+  * @type { JobStatus }
   * @memberof ListJobsApi
   */
-  status?: any,
+  status?: JobStatus,
   /**
   * Filter jobs by name (partial match)
-  * @type { any }
+  * @type { string }
   * @memberof ListJobsApi
   */
-  name?: any,
+  name?: string,
   /**
   * Number of items to skip (for pagination)
-  * @type { any }
+  * @type { number }
   * @memberof ListJobsApi
   */
-  offset?: any,
+  offset?: number,
   /**
   * Maximum number of items to return (max 100)
-  * @type { any }
+  * @type { number }
   * @memberof ListJobsApi
   */
-  limit?: any,
+  limit?: number,
   options?: AxiosRequestConfig
 }
 
@@ -55,7 +51,7 @@ const isListJobsObjectParams = (params: [ListJobsParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listJobsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListJobsParams] | [any, any, any, any, AxiosRequestConfig])) => {
+export const listJobsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListJobsParams] | [JobStatus, string, number, number, AxiosRequestConfig])) => {
     const params = isListJobsObjectParams(config) ? config[0] : ['status', 'name', 'offset', 'limit', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListJobsParams;
     const { status, name, offset, limit, options = {} } = params;
     const localVarPath = `/jobs`;
@@ -89,6 +85,14 @@ export const listJobsParamCreator = async (sendRequest: BaseAPI["sendRequest"], 
     const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
+        auth:[
+        {
+        // authentication ApiKeyAuth required
+        // in header with key required
+        authType: AuthTypeEnum.InHeader,
+        authKey: "X-Rh-Identity"
+        }
+        ]
     };
 
     return sendRequest<ListJobsReturnType>(Promise.resolve(args));

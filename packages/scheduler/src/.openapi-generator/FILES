@@ -1,8 +1,12 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
 CreateJob/index.ts
 DeleteJob/index.ts
 GetJob/index.ts
 GetJobRun/index.ts
 GetJobRuns/index.ts
+ListAllRuns/index.ts
 ListJobs/index.ts
 PatchJob/index.ts
 PauseJob/index.ts
@@ -10,5 +14,7 @@ ResumeJob/index.ts
 RunJob/index.ts
 UpdateJob/index.ts
 api.ts
+git_push.sh
+index.ts
 index.ts
 types/index.ts

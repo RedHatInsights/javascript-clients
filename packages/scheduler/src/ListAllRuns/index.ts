@@ -4,55 +4,60 @@ import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shar
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-import type { ErrorResponse, Job, UpdateJobRequest } from '../types';
+import type { ErrorResponse, PaginatedJobRunsResponse } from '../types';
 
 
-export type UpdateJobParams = {
+export type ListAllRunsParams = {
   /**
-  * Job ID
-  * @type { string }
-  * @memberof UpdateJobApi
+  * Number of items to skip (for pagination)
+  * @type { number }
+  * @memberof ListAllRunsApi
   */
-  id: string,
+  offset?: number,
   /**
-  *
-  * @type { UpdateJobRequest }
-  * @memberof UpdateJobApi
+  * Maximum number of items to return (max 100)
+  * @type { number }
+  * @memberof ListAllRunsApi
   */
-  updateJobRequest: UpdateJobRequest,
+  limit?: number,
   options?: AxiosRequestConfig
 }
 
-export type UpdateJobReturnType = Job;
+export type ListAllRunsReturnType = PaginatedJobRunsResponse;
 
-const isUpdateJobObjectParams = (params: [UpdateJobParams] | unknown[]): params is [UpdateJobParams] => {
+const isListAllRunsObjectParams = (params: [ListAllRunsParams] | unknown[]): params is [ListAllRunsParams] => {
   const l = params.length === 1
   if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
-    return true && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'updateJobRequest')
+    return true
   }
   return false
 }
 /**
-* Completely update a job with new values. All fields must be provided.
-* @summary Update a job
-* @param {UpdateJobParams} config with all available params.
+* Retrieve all job execution runs for jobs owned by the authenticated user. Returns runs in reverse chronological order (most recent first), with pagination support.
+* @summary List all runs for the authenticated user
+* @param {ListAllRunsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateJobParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([UpdateJobParams] | [string, UpdateJobRequest, AxiosRequestConfig])) => {
-    const params = isUpdateJobObjectParams(config) ? config[0] : ['id', 'updateJobRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateJobParams;
-    const { id, updateJobRequest, options = {} } = params;
-    const localVarPath = `/jobs/{id}`
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+export const listAllRunsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAllRunsParams] | [number, number, AxiosRequestConfig])) => {
+    const params = isListAllRunsObjectParams(config) ? config[0] : ['offset', 'limit', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAllRunsParams;
+    const { offset, limit, options = {} } = params;
+    const localVarPath = `/runs`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PUT' as Method, ...options};
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
+    if (offset !== undefined) {
+        localVarQueryParameter['offset'] = offset;
+    }
+
+    if (limit !== undefined) {
+        localVarQueryParameter['limit'] = limit;
+    }
 
 
-    localVarHeaderParameter['Content-Type'] = 'application/json';
 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
@@ -60,7 +65,6 @@ export const updateJobParamCreator = async (sendRequest: BaseAPI["sendRequest"],
     const args = {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: updateJobRequest,
         auth:[
         {
         // authentication ApiKeyAuth required
@@ -71,7 +75,7 @@ export const updateJobParamCreator = async (sendRequest: BaseAPI["sendRequest"],
         ]
     };
 
-    return sendRequest<UpdateJobReturnType>(Promise.resolve(args));
+    return sendRequest<ListAllRunsReturnType>(Promise.resolve(args));
 }
 
-export default updateJobParamCreator;
+export default listAllRunsParamCreator;
