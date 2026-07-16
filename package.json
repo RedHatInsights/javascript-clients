@@ -25,7 +25,9 @@
     "build:no-cache": "npm run build -- --skip-nx-cache",
     "generate": "nx run-many -t generate --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "lint": "nx run-many -t lint --exclude=@redhat-cloud-services/CLIENTNAME-client",
-    "lint:fix": "nx run-many -t lint --fix --exclude=@redhat-cloud-services/CLIENTNAME-client"
+    "lint:fix": "nx run-many -t lint --fix --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix"
   },
   "workspaces": [
     "packages/*"
