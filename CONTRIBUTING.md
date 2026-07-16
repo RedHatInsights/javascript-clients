@@ -80,15 +80,19 @@ This repo uses [Conventional Commits](https://www.conventionalcommits.org/). Com
 type(scope): description
 
 # Examples:
-feat(rbac): add v2 endpoint support
-fix(build-utils): handle missing spec file gracefully
+feat(@redhat-cloud-services/rbac-client): add v2 endpoint support
+fix(@redhat-cloud-services/build-utils): handle missing spec file gracefully
+feat(@redhat-cloud-services/scheduler-client)!: remove v1 endpoints
+feat(@redhat-cloud-services/rbac-client,@redhat-cloud-services/scheduler-client)!: breaking change
 chore(deps): update axios to 1.13.5
 docs(readme): add troubleshooting section
 ```
 
 **Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`, `build`, `revert`
 
-**Scope**: Package name (e.g., `rbac`, `build-utils`, `shared`) or area (`deps`, `ci`, `readme`).
+**Scope**: Full Nx project name for packages (e.g., `@redhat-cloud-services/rbac-client`, `@redhat-cloud-services/shared`) or area (`deps`, `ci`, `readme`). Multiple packages: comma-separated with **no spaces** (e.g., `pkg1,pkg2`).
+
+**Version bumps**: `fix` → patch, `feat` → minor, `!` → major (standard conventional commits).
 
 ## Testing
 
@@ -115,14 +119,17 @@ Releases are automated via Nx Release on the `main` branch. Each package is inde
 
 **Do not change `"useCommitScope": true` in `nx.json` (line 73).**
 
-This setting controls how breaking changes affect version bumps:
+This setting requires commit scopes to **exactly match** the full Nx project name for version bumps to apply correctly:
 
-- **`true` (current)**: Breaking changes only bump packages named in commit scope
-  - Example: `feat(rbac)!: breaking change` → rbac gets major bump, other packages get patch for dependency update
-  - Prevents cascading major bumps across unrelated packages
+- **`true` (current)**: Scope must match full project name (e.g., `@redhat-cloud-services/rbac-client`)
+  - `feat(@redhat-cloud-services/rbac-client)!:` → rbac gets major bump
+  - `feat(rbac)!:` → rbac gets only patch (scope mismatch, treated as indirect change)
+  - Standard conventional commits rules: `fix` → patch, `feat` → minor, `!` → major
 
-- **`false` (dangerous)**: Breaking changes bump ALL packages with modified files to major
-  - Causes `preserveMatchingDependencyRanges` failures when shared package jumps major but clients still depend on `^2.x`
-  - Results in failed releases
+- **`false`**: Ignores scope, applies commit type's semver bump to ALL packages in Nx affected graph
+  - `feat(shared):` touching `packages/shared/` → **minor bump** for all 15 client packages (affected by dependency)
+  - `feat(shared)!:` → **major bump** for all 15 clients
+  - Breaking change risk: cascading major bumps break `preserveMatchingDependencyRanges` semver constraints
+  - Commit type determines bump (`feat` → minor, `fix` → patch, `!` → major), applied uniformly to all affected
 
-Since `packages/shared/` is a dependency of all 15 client packages, setting `useCommitScope: false` would cause any breaking change touching shared files to trigger major bumps across the entire monorepo.
+**Always use the full project name as scope** for package changes.

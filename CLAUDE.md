@@ -54,14 +54,25 @@ Husky is configured:
 
 **CRITICAL: Do not change `useCommitScope` in `nx.json`**
 
-`nx.json` has `"conventionalCommits": { "useCommitScope": true }` (line 73). This controls how breaking changes affect version bumps:
+`nx.json` has `"conventionalCommits": { "useCommitScope": true }` (line 73). This requires commit scopes to **exactly match** the full Nx project name for version bumps:
 
-- `useCommitScope: true` (current, REQUIRED) — Breaking changes only bump packages named in commit scope. Example: `feat(rbac)!: breaking change` bumps rbac to major, other packages get patch for dependency update.
-- `useCommitScope: false` (DANGEROUS) — Breaking changes bump ALL packages with modified files to major, regardless of commit scope. Causes `preserveMatchingDependencyRanges` failures when shared package jumps major but clients depend on `^2.x`.
+- `useCommitScope: true` (current, REQUIRED) — Scope must match full project name (e.g., `@redhat-cloud-services/rbac-client`). Standard conventional commits rules apply: `fix` → patch, `feat` → minor, `!` → major. Non-matching scopes (e.g., `feat(rbac)!:`) are treated as indirect changes and capped at patch.
+- `useCommitScope: false` — Ignores scope, uses Nx affected graph. Risk: breaking change touching `packages/shared/` → major bumps all 15 client packages, breaking `preserveMatchingDependencyRanges`.
 
-**Why this matters:** Shared package is a dependency of all clients. With `useCommitScope: false`, any breaking change touching shared's files triggers major bumps across all 15 packages, breaking semver ranges and failing releases.
+**Commit scope convention:** Always use full project name as scope:
+```
+feat(@redhat-cloud-services/scheduler-client)!: remove v1 endpoints
+```
 
-See: Nx source `packages/nx/src/command-line/release/utils/semver.ts:44`
+Multiple packages (comma-separated, **no spaces**):
+```
+feat(@redhat-cloud-services/rbac-client,@redhat-cloud-services/scheduler-client)!: breaking change
+```
+
+Not: `feat(scheduler)!:` (scope mismatch, capped at patch)
+Not: `feat(rbac, scheduler)!:` (spaces break match)
+
+See: Nx source `node_modules/nx/src/command-line/release/utils/semver.js` (determineSemverChange)
 
 ## Package Publishing
 
