@@ -55,7 +55,12 @@ module.exports = {
           }
 
           if (!scope) {
-            return [true];
+            const commitType = isBreaking ? 'breaking (!)/feat/fix' : 'feat/fix';
+            return [
+              false,
+              `Scope required for ${commitType} commits.\n` +
+                `Use: ${type}(@redhat-cloud-services/rbac-client): ...`
+            ];
           }
 
           const projectSet = new Set(validProjects);

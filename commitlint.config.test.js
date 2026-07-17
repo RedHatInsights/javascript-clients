@@ -68,13 +68,10 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.valid).toBe(true);
     });
 
-    it('feat with no scope', async () => {
-      const result = await lintMessage('feat: global change');
-      expect(result.valid).toBe(true);
-    });
-
-    it('breaking type! with no scope', async () => {
-      const result = await lintMessage('fix!: breaking fix');
+    it('breaking with BREAKING CHANGE footer (BREAKING CHANGE footer)', async () => {
+      const result = await lintMessage(
+        'feat(@redhat-cloud-services/rbac-client): remove v1\n\nBREAKING CHANGE: removes v1 API'
+      );
       expect(result.valid).toBe(true);
     });
 
@@ -144,6 +141,18 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.valid).toBe(false);
       expect(result.errors[0].message).toContain('Project');
       expect(result.errors[0].message).toContain('not found');
+    });
+
+    it('feat with no scope', async () => {
+      const result = await lintMessage('feat: global change');
+      expect(result.valid).toBe(false);
+      expect(result.errors[0].message).toContain('Scope required');
+    });
+
+    it('breaking with no scope', async () => {
+      const result = await lintMessage('fix!: breaking fix');
+      expect(result.valid).toBe(false);
+      expect(result.errors[0].message).toContain('Scope required');
     });
   });
 });
