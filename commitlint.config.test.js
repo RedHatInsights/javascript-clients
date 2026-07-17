@@ -58,13 +58,13 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.valid).toBe(true);
     });
 
-    it('feat with area scope (deps)', async () => {
-      const result = await lintMessage('feat(deps): add new dep');
+    it('chore with area scope (deps)', async () => {
+      const result = await lintMessage('chore(deps): add new dep');
       expect(result.valid).toBe(true);
     });
 
-    it('feat with area scope (ci)', async () => {
-      const result = await lintMessage('feat(ci): update workflow');
+    it('chore with area scope (ci)', async () => {
+      const result = await lintMessage('chore(ci): update workflow');
       expect(result.valid).toBe(true);
     });
 
@@ -149,10 +149,40 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.errors[0].message).toContain('Scope required');
     });
 
+    it('fix with no scope', async () => {
+      const result = await lintMessage('fix: global change');
+      expect(result.valid).toBe(false);
+      expect(result.errors[0].message).toContain('Scope required');
+    });
+
     it('breaking with no scope', async () => {
       const result = await lintMessage('fix!: breaking fix');
       expect(result.valid).toBe(false);
       expect(result.errors[0].message).toContain('Scope required');
+    });
+
+    it('feat with area scope (deps)', async () => {
+      const result = await lintMessage('feat(deps): add new dep');
+      expect(result.valid).toBe(false);
+      expect(result.errors[0].message).toContain(
+        'must be a full Nx project name'
+      );
+    });
+
+    it('feat with area scope (ci)', async () => {
+      const result = await lintMessage('feat(ci): update workflow');
+      expect(result.valid).toBe(false);
+      expect(result.errors[0].message).toContain(
+        'must be a full Nx project name'
+      );
+    });
+
+    it('fix with area scope (docs)', async () => {
+      const result = await lintMessage('fix(docs): update readme');
+      expect(result.valid).toBe(false);
+      expect(result.errors[0].message).toContain(
+        'must be a full Nx project name'
+      );
     });
   });
 });

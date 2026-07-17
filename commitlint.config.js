@@ -16,7 +16,6 @@ function getNxProjects() {
 }
 
 const validProjects = getNxProjects();
-const AREA_SCOPES = ['deps', 'ci', 'readme', 'docs'];
 
 module.exports = {
   extends: ['@commitlint/config-conventional'],
@@ -67,7 +66,6 @@ module.exports = {
           const scopes = scope.split(',');
 
           for (const s of scopes) {
-            if (AREA_SCOPES.includes(s)) continue;
             if (!projectSet.has(s)) {
               const commitType = isBreaking
                 ? 'breaking (!)/feat/fix'

@@ -56,7 +56,7 @@ Husky is configured:
 
 `nx.json` has `"conventionalCommits": { "useCommitScope": true }` (line 73). This controls how breaking changes affect version bumps:
 
-- `useCommitScope: true` (current, REQUIRED) — Breaking changes only bump packages named in commit scope. Example: `feat(rbac)!: breaking change` bumps rbac to major, other packages get patch for dependency update.
+- `useCommitScope: true` (current, REQUIRED) — Breaking changes only bump packages named in commit scope. Example: `feat(@redhat-cloud-services/rbac-client)!: breaking change` bumps rbac-client to major, other packages get patch for dependency update.
 - `useCommitScope: false` (DANGEROUS) — Breaking changes bump ALL packages with modified files to major, regardless of commit scope. Causes `preserveMatchingDependencyRanges` failures when shared package jumps major but clients depend on `^2.x`.
 
 **Why this matters:** Shared package is a dependency of all clients. With `useCommitScope: false`, any breaking change touching shared's files triggers major bumps across all 15 packages, breaking semver ranges and failing releases.
