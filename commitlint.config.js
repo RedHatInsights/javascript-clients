@@ -32,9 +32,12 @@ module.exports = {
             return [true];
           }
 
-          const { type, header } = parsed;
+          const { type, header, notes } = parsed;
 
-          const isBreaking = header && header.includes('!:');
+          // Detect breaking change: header `!:` marker OR BREAKING CHANGE footer
+          const isBreaking =
+            !!(header && header.includes('!:')) ||
+            !!(notes && notes.some((n) => n.title === 'BREAKING CHANGE'));
           const isVersioningType = ['feat', 'fix'].includes(type);
 
           if (!isBreaking && !isVersioningType) {

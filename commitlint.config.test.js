@@ -27,9 +27,16 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.valid).toBe(true);
     });
 
-    it('breaking with full project name', async () => {
+    it('breaking with full project name (! marker)', async () => {
       const result = await lintMessage(
         'feat(@redhat-cloud-services/rbac-client)!: remove v1'
+      );
+      expect(result.valid).toBe(true);
+    });
+
+    it('breaking with full project name (BREAKING CHANGE footer)', async () => {
+      const result = await lintMessage(
+        'feat(@redhat-cloud-services/rbac-client): remove v1\n\nBREAKING CHANGE: removes v1 API'
       );
       expect(result.valid).toBe(true);
     });
@@ -106,8 +113,15 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.valid).toBe(false);
     });
 
-    it('breaking chore with short scope', async () => {
+    it('breaking chore with short scope (! marker)', async () => {
       const result = await lintMessage('chore(rbac)!: breaking change');
+      expect(result.valid).toBe(false);
+    });
+
+    it('breaking chore with short scope (BREAKING CHANGE footer)', async () => {
+      const result = await lintMessage(
+        'chore(rbac): breaking change\n\nBREAKING CHANGE: removes old API'
+      );
       expect(result.valid).toBe(false);
     });
 
