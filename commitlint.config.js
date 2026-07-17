@@ -64,11 +64,12 @@ module.exports = {
               const commitType = isBreaking
                 ? 'breaking (!)/feat/fix'
                 : 'feat/fix';
+              const hint = s.startsWith('@redhat-cloud-services/')
+                ? `Project "${s}" not found. Run: npx nx show projects`
+                : `Use full project name like: ${type}(@redhat-cloud-services/rbac-client)${isBreaking ? '!' : ''}: ...`;
               return [
                 false,
-                `Scope "${s}" must be a full Nx project name for ${commitType} commits.\n` +
-                  `Use: ${type}(@redhat-cloud-services/<package>-client)${isBreaking ? '!' : ''}: ...\n` +
-                  `Not: ${type}(${s})${isBreaking ? '!' : ''}: ...`,
+                `Scope "${s}" must be a full Nx project name for ${commitType} commits.\n${hint}`,
               ];
             }
           }

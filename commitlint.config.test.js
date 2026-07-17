@@ -98,6 +98,7 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.errors[0].message).toContain(
         'must be a full Nx project name'
       );
+      expect(result.errors[0].message).toContain('Use full project name like');
     });
 
     it('fix with short scope', async () => {
@@ -127,6 +128,8 @@ describe('commitlint scope-full-name-for-versioning', () => {
         'feat(@redhat-cloud-services/nonexistent-client): add feature'
       );
       expect(result.valid).toBe(false);
+      expect(result.errors[0].message).toContain('Project');
+      expect(result.errors[0].message).toContain('not found');
     });
   });
 });
