@@ -45,7 +45,7 @@ jobs:
           fetch-depth: 0
       - uses: './.github/actions/setup-environment'
       - uses: './.github/actions/test-unit'
-  commitlint-test:
+  commitlint:
     runs-on: ubuntu-24.04
     needs: [install]
     steps:
@@ -57,6 +57,12 @@ jobs:
         run: npm ci
       - name: Test commitlint config
         run: npx jest --config=commitlint.jest.config.js
+      - name: Validate current commit on push
+        if: github.event_name == 'push'
+        run: npx commitlint --last --verbose
+      - name: Validate PR commits
+        if: github.event_name == 'pull_request'
+        run: npx commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
   integration:
     runs-on: ubuntu-24.04
     needs: [install]
@@ -83,7 +89,7 @@ jobs:
         run: npx nx affected -t build --exclude=@redhat-cloud-services/CLIENTNAME-client
   release:
     runs-on: ubuntu-24.04
-    needs: [install, lint, test, commitlint-test, build]
+    needs: [install, lint, test, commitlint, build]
     # Only run on push to main branch (never on PRs, workflow_dispatch, etc.)
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment: npm-publish
