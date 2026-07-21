@@ -93,6 +93,9 @@ jobs:
     # Only run on push to main branch (never on PRs, workflow_dispatch, etc.)
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment: npm-publish
+    concurrency:
+      group: ${{ github.workflow }}-release
+      cancel-in-progress: false
     permissions:
       contents: write  # Needed for git push
       id-token: write  # Needed for npm publish
