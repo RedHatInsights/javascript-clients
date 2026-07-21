@@ -37,9 +37,9 @@ module.exports = {
           const isBreaking =
             !!(header && header.includes('!:')) ||
             !!(notes && notes.some((n) => n.title === 'BREAKING CHANGE'));
-          const isVersioningType = ['feat', 'fix'].includes(type);
+          const requiresFullScope = type === 'feat' || isBreaking;
 
-          if (!isBreaking && !isVersioningType) {
+          if (!requiresFullScope) {
             return [true];
           }
 
@@ -54,7 +54,7 @@ module.exports = {
           }
 
           if (!scope) {
-            const commitType = isBreaking ? 'breaking (!)/feat/fix' : 'feat/fix';
+            const commitType = isBreaking ? 'breaking (!)/feat' : 'feat';
             return [
               false,
               `Scope required for ${commitType} commits.\n` +
@@ -67,9 +67,7 @@ module.exports = {
 
           for (const s of scopes) {
             if (!projectSet.has(s)) {
-              const commitType = isBreaking
-                ? 'breaking (!)/feat/fix'
-                : 'feat/fix';
+              const commitType = isBreaking ? 'breaking (!)/feat' : 'feat';
               const hint = s.startsWith('@redhat-cloud-services/')
                 ? `Project "${s}" not found. Run: npx nx show projects`
                 : `Use full project name like: ${type}(@redhat-cloud-services/rbac-client)${isBreaking ? '!' : ''}: ...`;

@@ -93,6 +93,26 @@ describe('commitlint scope-full-name-for-versioning', () => {
       );
       expect(result.valid).toBe(true);
     });
+
+    it('fix with short scope (allowed)', async () => {
+      const result = await lintMessage('fix(scheduler): handle error');
+      expect(result.valid).toBe(true);
+    });
+
+    it('fix with no scope (allowed)', async () => {
+      const result = await lintMessage('fix: global change');
+      expect(result.valid).toBe(true);
+    });
+
+    it('fix with deps scope (dependabot)', async () => {
+      const result = await lintMessage('fix(deps): bump axios to 1.18.0');
+      expect(result.valid).toBe(true);
+    });
+
+    it('fix with deps-dev scope (dependabot)', async () => {
+      const result = await lintMessage('fix(deps-dev): bump webpack to 5.1.0');
+      expect(result.valid).toBe(true);
+    });
   });
 
   describe('invalid commits', () => {
@@ -105,10 +125,6 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.errors[0].message).toContain('Use full project name like');
     });
 
-    it('fix with short scope', async () => {
-      const result = await lintMessage('fix(scheduler): handle error');
-      expect(result.valid).toBe(false);
-    });
 
     it('breaking chore with short scope (! marker)', async () => {
       const result = await lintMessage('chore(rbac)!: breaking change');
@@ -149,11 +165,6 @@ describe('commitlint scope-full-name-for-versioning', () => {
       expect(result.errors[0].message).toContain('Scope required');
     });
 
-    it('fix with no scope', async () => {
-      const result = await lintMessage('fix: global change');
-      expect(result.valid).toBe(false);
-      expect(result.errors[0].message).toContain('Scope required');
-    });
 
     it('breaking with no scope', async () => {
       const result = await lintMessage('fix!: breaking fix');
@@ -177,12 +188,5 @@ describe('commitlint scope-full-name-for-versioning', () => {
       );
     });
 
-    it('fix with area scope (docs)', async () => {
-      const result = await lintMessage('fix(docs): update readme');
-      expect(result.valid).toBe(false);
-      expect(result.errors[0].message).toContain(
-        'must be a full Nx project name'
-      );
-    });
   });
 });
