@@ -96,6 +96,7 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-release
       cancel-in-progress: false
+      queue: max
     permissions:
       contents: write  # Needed for git push
       id-token: write  # Needed for npm publish
