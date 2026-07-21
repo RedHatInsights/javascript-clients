@@ -21,6 +21,7 @@ module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'scope-case': [0],
+    'body-max-line-length': [0],
     'scope-full-name-for-versioning': [2, 'always'],
   },
   plugins: [
