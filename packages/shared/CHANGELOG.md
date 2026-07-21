@@ -1,3 +1,9 @@
+## 2.0.13 (2026-07-21)
+
+### 🩹 Fixes
+
+- **@redhat-cloud-services/javascript-clients-shared:** bump axios from 1.17.0 to 1.18.0 ([#520](https://github.com/RedHatInsights/javascript-clients/pull/520))
+
 ## 2.0.12 (2026-07-13)
 
 This was a version bump only for @redhat-cloud-services/javascript-clients-shared to align it with other projects, there were no code changes.
