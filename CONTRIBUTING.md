@@ -93,13 +93,16 @@ ci(github): update workflow
 **Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`, `build`, `revert`
 
 **Scope rules**:
-- **`feat`, `fix`, or breaking changes** (`!` marker or `BREAKING CHANGE` footer): Must use full Nx project name
+- **`feat` or breaking changes** (`!` marker or `BREAKING CHANGE` footer): Must use full Nx project name
   - Valid: `feat(@redhat-cloud-services/rbac-client): ...`
   - Invalid: `feat(rbac): ...` or `feat(deps): ...`
+- **`fix`**: Any scope or no scope allowed
+  - Valid: `fix(@redhat-cloud-services/rbac-client): ...`, `fix(deps): ...`, `fix: ...`
+  - With `useCommitScope: true`, all `fix` commits result in patch bumps regardless of scope
 - **Non-versioning types** (`chore`, `docs`, `ci`, etc.): Can use short names or area scopes (`deps`, `ci`, `readme`)
   - Valid: `chore(deps): ...` or `docs(readme): ...`
 
-**Why full names for versioning commits?** Nx uses commit scope to determine which package gets bumped. Short scopes or area scopes cause Nx to silently cap version bumps at patch, even when `feat` or breaking change promises minor/major.
+**Why full names for `feat`/breaking?** Nx uses commit scope to determine bump magnitude. For `feat`, scoped projects get minor, non-scoped file-affected projects get capped at patch. For `fix`, all projects always get patch regardless of scope, so full names are optional.
 
 ## Testing
 
@@ -117,6 +120,27 @@ See [docs/testing-guidelines.md](docs/testing-guidelines.md) for details on test
 - Ensure `npm run lint` passes before pushing
 - Include integration tests for new client packages or endpoint changes
 - PR descriptions should reference the Jira ticket if applicable
+
+### Dependency Updates (Renovate)
+
+Renovate is configured to automatically create PRs for dependency updates using `fix(deps):` commit format for production dependencies and `chore(deps-dev):` for dev dependencies.
+
+**Production dependencies** (touches `packages/<name>/package.json`):
+- Renovate creates PR with title: `fix(deps): bump axios from 1.17.0 to 1.18.0`
+- Merge as-is
+- Nx Release bumps all file-affected workspace packages (patch)
+
+**Dev dependencies** (only root `package.json` changed):
+- Renovate creates PR with title: `chore(deps-dev): bump webpack from 5.0.0 to 5.1.0`
+- Merge as-is
+- No version bumps (chore type has `semverBump: 'none'`)
+
+**Why this works:**
+1. Renovate configured in `renovate.json` with `commitMessagePrefix: "fix(deps):"` for production deps
+2. Nx uses two-phase versioning with `useCommitScope: true`:
+   - **File detection**: Always finds all projects with modified files (same as `nx affected`)
+   - **Bump magnitude**: `fix` type results in patch for all file-affected packages
+3. Security patches are released immediately instead of waiting for the next unrelated feature commit
 
 ## Release Process
 
