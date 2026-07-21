@@ -79,16 +79,27 @@ This repo uses [Conventional Commits](https://www.conventionalcommits.org/). Com
 ```
 type(scope): description
 
-# Examples:
-feat(rbac): add v2 endpoint support
-fix(build-utils): handle missing spec file gracefully
+# Examples (versioning types — feat, fix, breaking):
+feat(@redhat-cloud-services/rbac-client): add v2 endpoint support
+fix(@redhat-cloud-services/build-utils): handle missing spec file gracefully
+feat(@redhat-cloud-services/javascript-clients-shared): add retry interceptor
+
+# Examples (non-versioning types — chore, docs, ci, etc.):
 chore(deps): update axios to 1.13.5
 docs(readme): add troubleshooting section
+ci(github): update workflow
 ```
 
 **Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`, `build`, `revert`
 
-**Scope**: Package name (e.g., `rbac`, `build-utils`, `shared`) or area (`deps`, `ci`, `readme`).
+**Scope rules**:
+- **`feat`, `fix`, or breaking changes** (`!` marker or `BREAKING CHANGE` footer): Must use full Nx project name
+  - Valid: `feat(@redhat-cloud-services/rbac-client): ...`
+  - Invalid: `feat(rbac): ...` or `feat(deps): ...`
+- **Non-versioning types** (`chore`, `docs`, `ci`, etc.): Can use short names or area scopes (`deps`, `ci`, `readme`)
+  - Valid: `chore(deps): ...` or `docs(readme): ...`
+
+**Why full names for versioning commits?** Nx uses commit scope to determine which package gets bumped. Short scopes or area scopes cause Nx to silently cap version bumps at patch, even when `feat` or breaking change promises minor/major.
 
 ## Testing
 
@@ -118,7 +129,7 @@ Releases are automated via Nx Release on the `main` branch. Each package is inde
 This setting controls how breaking changes affect version bumps:
 
 - **`true` (current)**: Breaking changes only bump packages named in commit scope
-  - Example: `feat(rbac)!: breaking change` → rbac gets major bump, other packages get patch for dependency update
+  - Example: `feat(@redhat-cloud-services/rbac-client)!: breaking change` → rbac-client gets major bump, other packages get patch for dependency update
   - Prevents cascading major bumps across unrelated packages
 
 - **`false` (dangerous)**: Breaking changes bump ALL packages with modified files to major
