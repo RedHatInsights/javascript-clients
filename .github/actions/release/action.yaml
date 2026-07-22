@@ -47,7 +47,6 @@ runs:
     - name: Release
       shell: bash
       # Skip publish to avoid orphaned npm versions if push fails.
-      # Publish happens after push succeeds (see "Publish to npm" step below).
       env:
         GH_TOKEN: ${{ inputs.gh_token }}
         GITHUB_TOKEN: ${{ inputs.gh_token }}
