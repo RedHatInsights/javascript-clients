@@ -1,3 +1,17 @@
+# 3.0.0 (2026-07-22)
+
+### 🚀 Features
+
+- ⚠️  **@redhat-cloud-services/vulnerabilities-client:** regenerate vulnerability client ([d35cf61d](https://github.com/RedHatInsights/javascript-clients/commit/d35cf61d))
+
+### ⚠️  Breaking Changes
+
+- **@redhat-cloud-services/vulnerabilities-client:** regenerate vulnerability client  ([d35cf61d](https://github.com/RedHatInsights/javascript-clients/commit/d35cf61d))
+
+### ❤️ Thank You
+
+- Anastasiia Surai
+
 ## 2.1.13 (2026-07-21)
 
 ### 🩹 Fixes
