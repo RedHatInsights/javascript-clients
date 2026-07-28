@@ -1,3 +1,9 @@
+## 3.0.1 (2026-07-28)
+
+### 🩹 Fixes
+
+- **deps:** bump the production-dependencies group with 5 updates ([#532](https://github.com/RedHatInsights/javascript-clients/pull/532))
+
 # 3.0.0 (2026-07-22)
 
 ### 🚀 Features
