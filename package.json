@@ -43,7 +43,7 @@
   "dependencies": {
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
-    "@nx/devkit": "22.6.5",
+    "@nx/devkit": "23.1.0",
     "eslint-plugin-prettier": "^5.0.1",
     "fs-extra": "^11.4.0",
     "react": "19.2.8",
