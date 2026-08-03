@@ -1,17 +1,31 @@
-// @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
-// @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
-// @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-// @ts-ignore
 import type { PageEventLogEntry } from '../types';
 
 
 export type EventResourceV1GetEventsParams = {
+  /**
+  * Number of items per page, if not specified 20 is used.
+  * @type { any }
+  * @memberof EventResourceV1GetEventsApi
+  */
+  limit?: any,
+  /**
+  * Start of the date range filter. Accepts either a date (yyyy-MM-dd), expanded to the beginning of that day, or a date-time (yyyy-MM-dd\'T\'HH:mm:ss).
+  * @type { any }
+  * @memberof EventResourceV1GetEventsApi
+  */
+  startDate?: any,
+  /**
+  * End of the date range filter. Accepts either a date (yyyy-MM-dd), expanded to the end of that day, or a date-time (yyyy-MM-dd\'T\'HH:mm:ss).
+  * @type { any }
+  * @memberof EventResourceV1GetEventsApi
+  */
+  endDate?: any,
   /**
   *
   * @type { any }
@@ -29,12 +43,6 @@ export type EventResourceV1GetEventsParams = {
   * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  endDate?: any,
-  /**
-  *
-  * @type { any }
-  * @memberof EventResourceV1GetEventsApi
-  */
   endpointTypes?: any,
   /**
   *
@@ -42,6 +50,12 @@ export type EventResourceV1GetEventsParams = {
   * @memberof EventResourceV1GetEventsApi
   */
   eventTypeDisplayName?: any,
+  /**
+  *
+  * @type { any }
+  * @memberof EventResourceV1GetEventsApi
+  */
+  hasAction?: any,
   /**
   *
   * @type { any }
@@ -66,12 +80,6 @@ export type EventResourceV1GetEventsParams = {
   * @memberof EventResourceV1GetEventsApi
   */
   invocationResults?: any,
-  /**
-  * Number of items per page, if not specified 20 is used.
-  * @type { any }
-  * @memberof EventResourceV1GetEventsApi
-  */
-  limit?: any,
   /**
   *
   * @type { any }
@@ -107,12 +115,6 @@ export type EventResourceV1GetEventsParams = {
   * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  startDate?: any,
-  /**
-  *
-  * @type { any }
-  * @memberof EventResourceV1GetEventsApi
-  */
   status?: any,
   options?: AxiosRequestConfig
 }
@@ -133,15 +135,27 @@ const isEventResourceV1GetEventsObjectParams = (params: [EventResourceV1GetEvent
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EventResourceV1GetEventsParams] | [any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
-    const params = isEventResourceV1GetEventsObjectParams(config) ? config[0] : ['appIds', 'bundleIds', 'endDate', 'endpointTypes', 'eventTypeDisplayName', 'includeActions', 'includeDetails', 'includePayload', 'invocationResults', 'limit', 'offset', 'pageNumber', 'severities', 'sortBy', 'sortBy2', 'startDate', 'status', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EventResourceV1GetEventsParams;
-    const { appIds, bundleIds, endDate, endpointTypes, eventTypeDisplayName, includeActions, includeDetails, includePayload, invocationResults, limit, offset, pageNumber, severities, sortBy, sortBy2, startDate, status, options = {} } = params;
+export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EventResourceV1GetEventsParams] | [any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])) => {
+    const params = isEventResourceV1GetEventsObjectParams(config) ? config[0] : ['limit', 'startDate', 'endDate', 'appIds', 'bundleIds', 'endpointTypes', 'eventTypeDisplayName', 'hasAction', 'includeActions', 'includeDetails', 'includePayload', 'invocationResults', 'offset', 'pageNumber', 'severities', 'sortBy', 'sortBy2', 'status', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EventResourceV1GetEventsParams;
+    const { limit, startDate, endDate, appIds, bundleIds, endpointTypes, eventTypeDisplayName, hasAction, includeActions, includeDetails, includePayload, invocationResults, offset, pageNumber, severities, sortBy, sortBy2, status, options = {} } = params;
     const localVarPath = `/notifications/events`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
+
+    if (limit !== undefined) {
+        localVarQueryParameter['limit'] = limit;
+    }
+
+    if (startDate !== undefined) {
+        localVarQueryParameter['startDate'] = startDate;
+    }
+
+    if (endDate !== undefined) {
+        localVarQueryParameter['endDate'] = endDate;
+    }
 
     if (appIds !== undefined) {
         localVarQueryParameter['appIds'] = appIds;
@@ -151,16 +165,16 @@ export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI[
         localVarQueryParameter['bundleIds'] = bundleIds;
     }
 
-    if (endDate !== undefined) {
-        localVarQueryParameter['endDate'] = endDate;
-    }
-
     if (endpointTypes !== undefined) {
         localVarQueryParameter['endpointTypes'] = endpointTypes;
     }
 
     if (eventTypeDisplayName !== undefined) {
         localVarQueryParameter['eventTypeDisplayName'] = eventTypeDisplayName;
+    }
+
+    if (hasAction !== undefined) {
+        localVarQueryParameter['hasAction'] = hasAction;
     }
 
     if (includeActions !== undefined) {
@@ -177,10 +191,6 @@ export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI[
 
     if (invocationResults !== undefined) {
         localVarQueryParameter['invocationResults'] = invocationResults;
-    }
-
-    if (limit !== undefined) {
-        localVarQueryParameter['limit'] = limit;
     }
 
     if (offset !== undefined) {
@@ -201,10 +211,6 @@ export const eventResourceV1GetEventsParamCreator = async (sendRequest: BaseAPI[
 
     if (sortBy2 !== undefined) {
         localVarQueryParameter['sort_by'] = sortBy2;
-    }
-
-    if (startDate !== undefined) {
-        localVarQueryParameter['startDate'] = startDate;
     }
 
     if (status !== undefined) {
