@@ -27,7 +27,7 @@ const isApiViewsCreateViewObjectParams = (params: [ApiViewsCreateViewParams] | u
   return false
 }
 /**
-* Creates a new inventory view with the provided name and configuration. The view is owned by the requesting user. <br /><br /> Required permissions: inventory:views:write <br /><br /> <b>NOTE:</b> This endpoint is not yet implemented and will return HTTP 501.
+* Creates a new inventory view with the provided name and configuration. The view is owned by the requesting user. <br /><br /> Required permissions: inventory:views:write
 * @summary Create a new inventory view
 * @param {ApiViewsCreateViewParams} config with all available params.
 * @param {*} [options] Override http request option.

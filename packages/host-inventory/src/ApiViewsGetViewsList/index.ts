@@ -33,7 +33,7 @@ const isApiViewsGetViewsListObjectParams = (params: [ApiViewsGetViewsListParams]
   return false
 }
 /**
-* Read the list of all inventory views visible to the requesting user. This includes system views, org-wide views, and private views owned by the requester. <br /><br /> Required permissions: inventory:views:read <br /><br /> <b>NOTE:</b> This endpoint is not yet implemented and will return HTTP 501.
+* Read the list of all inventory views visible to the requesting user. This includes system views, org-wide views, and private views owned by the requester. <br /><br /> Required permissions: inventory:views:read
 * @summary Read the list of inventory views
 * @param {ApiViewsGetViewsListParams} config with all available params.
 * @param {*} [options] Override http request option.
