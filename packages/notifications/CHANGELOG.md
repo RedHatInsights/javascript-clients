@@ -1,3 +1,18 @@
+# 7.0.0 (2026-08-04)
+
+### 🚀 Features
+
+- ⚠️  **@redhat-cloud-services/notifications-client:** regenerate client from latest OpenAPI spec ([#540](https://github.com/RedHatInsights/javascript-clients/pull/540))
+
+### ⚠️  Breaking Changes
+
+- **@redhat-cloud-services/notifications-client:** regenerate client from latest OpenAPI spec  ([#540](https://github.com/RedHatInsights/javascript-clients/pull/540))
+
+### ❤️ Thank You
+
+- alex @aferd
+- Claude Opus 4.6
+
 ## 6.1.10 (2026-07-28)
 
 ### 🧱 Updated Dependencies
