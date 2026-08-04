@@ -361,6 +361,12 @@ export interface EventType {
      * @type {any}
      * @memberof EventType
      */
+    'included_in_drawer'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof EventType
+     */
     'not_subscription_locked_or_subscribed_by_default'?: any;
 }
 

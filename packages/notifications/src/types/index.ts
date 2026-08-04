@@ -318,6 +318,12 @@ export interface DrawerEntryPayload {
      */
     'bundle'?: any;
     /**
+     * The technical name of the application (not the display name)
+     * @type {any}
+     * @memberof DrawerEntryPayload
+     */
+    'application'?: any;
+    /**
      *
      * @type {any}
      * @memberof DrawerEntryPayload
@@ -625,6 +631,12 @@ export interface EventType {
      * @memberof EventType
      */
     'restrict_to_recipients_integrations'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof EventType
+     */
+    'included_in_drawer'?: any;
     /**
      *
      * @type {any}
