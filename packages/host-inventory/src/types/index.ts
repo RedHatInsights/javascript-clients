@@ -739,6 +739,12 @@ export interface HostOut {
     'groups'?: Array<GroupOut>;
     /**
      *
+     * @type {HostOutAllOfWorkspace}
+     * @memberof HostOut
+     */
+    'workspace'?: HostOutAllOfWorkspace | null;
+    /**
+     *
      * @type {SystemProfile}
      * @memberof HostOut
      */
@@ -755,6 +761,56 @@ export interface HostOut {
      * @memberof HostOut
      */
     'openshift_cluster_id'?: string | null;
+}
+/**
+ * The workspace that the host belongs to, if any. Contains the same data as the first entry in the groups list.
+ * @export
+ * @interface HostOutAllOfWorkspace
+ */
+export interface HostOutAllOfWorkspace {
+    /**
+     *
+     * @type {string}
+     * @memberof HostOutAllOfWorkspace
+     */
+    'id'?: string;
+    /**
+     * A group’s human-readable name. Must contain only letters, numbers, spaces, hyphens, and underscores.
+     * @type {string}
+     * @memberof HostOutAllOfWorkspace
+     */
+    'name'?: string;
+    /**
+     * A Red Hat Account number that owns the host.
+     * @type {string}
+     * @memberof HostOutAllOfWorkspace
+     * @deprecated
+     */
+    'account'?: string | null;
+    /**
+     * The Org ID of the tenant that owns the host.
+     * @type {string}
+     * @memberof HostOutAllOfWorkspace
+     */
+    'org_id'?: string;
+    /**
+     * Whether the group is the \"ungrouped hosts\" group
+     * @type {boolean}
+     * @memberof HostOutAllOfWorkspace
+     */
+    'ungrouped'?: boolean;
+    /**
+     * A timestamp when the entry was created.
+     * @type {string}
+     * @memberof HostOutAllOfWorkspace
+     */
+    'created'?: string;
+    /**
+     * A timestamp when the entry was last updated.
+     * @type {string}
+     * @memberof HostOutAllOfWorkspace
+     */
+    'updated'?: string;
 }
 /**
  * A paginated host search query result with host entries and their Inventory metadata.
@@ -1076,6 +1132,12 @@ export interface HostViewHost {
     'groups'?: Array<GroupOut>;
     /**
      *
+     * @type {HostOutAllOfWorkspace}
+     * @memberof HostViewHost
+     */
+    'workspace'?: HostOutAllOfWorkspace | null;
+    /**
+     *
      * @type {SystemProfile}
      * @memberof HostViewHost
      */
@@ -1135,6 +1197,12 @@ export interface HostViewQueryOutput {
      * @memberof HostViewQueryOutput
      */
     'results': Array<HostViewHost>;
+    /**
+     * List of app_data service names the user lacks permission for. Present when per-service RBAC is active; omitted when RBAC is bypassed. Allows consumers to distinguish denied services from services with no data.
+     * @type {Array<string>}
+     * @memberof HostViewQueryOutput
+     */
+    'denied_services'?: Array<string>;
 }
 /**
  *
@@ -2960,6 +3028,12 @@ export interface SystemProfileWorkloads {
     'rhel_ai'?: SystemProfileWorkloadsRhelAi;
     /**
      *
+     * @type {SystemProfileWorkloadsSatellite}
+     * @memberof SystemProfileWorkloads
+     */
+    'satellite'?: SystemProfileWorkloadsSatellite;
+    /**
+     *
      * @type {SystemProfileSap}
      * @memberof SystemProfileWorkloads
      */
@@ -3059,6 +3133,33 @@ export interface SystemProfileWorkloadsRhelAiGpuModelsInner {
      */
     'count'?: number;
 }
+/**
+ * Object containing data specific to the Red Hat Satellite workload
+ * @export
+ * @interface SystemProfileWorkloadsSatellite
+ */
+export interface SystemProfileWorkloadsSatellite {
+    /**
+     * Whether this system is a Satellite Server or Capsule
+     * @type {string}
+     * @memberof SystemProfileWorkloadsSatellite
+     */
+    'type'?: SystemProfileWorkloadsSatelliteTypeEnum;
+    /**
+     * The Satellite or Capsule version
+     * @type {string}
+     * @memberof SystemProfileWorkloadsSatellite
+     */
+    'version'?: string;
+}
+
+export const SystemProfileWorkloadsSatelliteTypeEnum = {
+    Server: 'server',
+    Capsule: 'capsule'
+} as const;
+
+export type SystemProfileWorkloadsSatelliteTypeEnum = typeof SystemProfileWorkloadsSatelliteTypeEnum[keyof typeof SystemProfileWorkloadsSatelliteTypeEnum];
+
 /**
  * Representation of one yum repository
  * @export
@@ -3183,17 +3284,11 @@ export interface TagsOut {
  */
 export interface ViewColumnConfig {
     /**
-     * The column key identifier, e.g. \"insights_id\", \"compliance.last_scan\", \"advisor.recommendations\".
+     * The column key identifier. Core fields use bare names (e.g. \"display_name\", \"last_check_in\"). App fields use colon-delimited format (e.g. \"compliance:last_scan\", \"advisor:recommendations\"). Validated server-side against the field registry.
      * @type {string}
      * @memberof ViewColumnConfig
      */
     'key': string;
-    /**
-     * Whether the column is visible in the view.
-     * @type {boolean}
-     * @memberof ViewColumnConfig
-     */
-    'visible'?: boolean;
 }
 /**
  * The full visual configuration for an inventory view, including column layout, sort order, and active filters.
@@ -3214,11 +3309,11 @@ export interface ViewConfiguration {
      */
     'sort'?: ViewSortConfig;
     /**
-     * Active filter criteria. Keys are filter names, values are arrays of selected filter values.
-     * @type {{ [key: string]: Array<string>; }}
+     * Active filter criteria. Mirrors the existing filter engine shape: filter[namespace][field][operator]=value. Top-level keys are app names (e.g. vulnerability, patch) or system_profile. Values are nested objects of field -> operator -> value. Validated server-side against the field and operator registries.
+     * @type {{ [key: string]: { [key: string]: HostViewFilterComparison; }; }}
      * @memberof ViewConfiguration
      */
-    'filters'?: { [key: string]: Array<string>; };
+    'filters'?: { [key: string]: { [key: string]: HostViewFilterComparison; }; };
 }
 /**
  * Data required to create a new inventory view.
@@ -3306,7 +3401,7 @@ export interface ViewOut {
      */
     'is_owner': boolean;
     /**
-     * The username of the view creator.
+     * The user_id of the view creator.
      * @type {string}
      * @memberof ViewOut
      */

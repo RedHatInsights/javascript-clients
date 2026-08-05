@@ -27,7 +27,7 @@ const isApiViewsGetViewByIdObjectParams = (params: [ApiViewsGetViewByIdParams] |
   return false
 }
 /**
-* Returns the full details and configuration for a single inventory view. The view must be visible to the requesting user. <br /><br /> Required permissions: inventory:views:read <br /><br /> <b>NOTE:</b> This endpoint is not yet implemented and will return HTTP 501.
+* Returns the full details and configuration for a single inventory view. The view must be visible to the requesting user. <br /><br /> Required permissions: inventory:views:read
 * @summary Get a single inventory view
 * @param {ApiViewsGetViewByIdParams} config with all available params.
 * @param {*} [options] Override http request option.

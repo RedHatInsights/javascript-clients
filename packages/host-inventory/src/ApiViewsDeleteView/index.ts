@@ -27,7 +27,7 @@ const isApiViewsDeleteViewObjectParams = (params: [ApiViewsDeleteViewParams] | u
   return false
 }
 /**
-* Deletes an existing inventory view. Only the view creator can delete a view. System views cannot be deleted. <br /><br /> Required permissions: inventory:views:write <br /><br /> <b>NOTE:</b> This endpoint is not yet implemented and will return HTTP 501.
+* Deletes an existing inventory view. Only the view creator can delete a view. System views cannot be deleted. <br /><br /> Required permissions: inventory:views:write
 * @summary Delete an inventory view
 * @param {ApiViewsDeleteViewParams} config with all available params.
 * @param {*} [options] Override http request option.

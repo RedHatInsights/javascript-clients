@@ -33,7 +33,7 @@ const isApiViewsUpdateViewObjectParams = (params: [ApiViewsUpdateViewParams] | u
   return false
 }
 /**
-* Updates an existing inventory view\'s name, description, configuration, or sharing settings. Only the view creator can update a view. System views cannot be updated. <br /><br /> Required permissions: inventory:views:write <br /><br /> <b>NOTE:</b> This endpoint is not yet implemented and will return HTTP 501.
+* Updates an existing inventory view\'s name, description, configuration, or sharing settings. Only the view creator can update a view. System views cannot be updated. <br /><br /> Required permissions: inventory:views:write
 * @summary Update an inventory view
 * @param {ApiViewsUpdateViewParams} config with all available params.
 * @param {*} [options] Override http request option.
@@ -46,7 +46,7 @@ export const apiViewsUpdateViewParamCreator = async (sendRequest: BaseAPI["sendR
         .replace(`{${"view_id"}}`, encodeURIComponent(String(viewId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PUT' as Method, ...options};
+    const localVarRequestOptions = { method: 'PATCH' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
