@@ -3,7 +3,7 @@
   "version": "1.1.5",
   "private": true,
   "dependencies": {
-    "@nx/devkit": "22.6.5",
+    "@nx/devkit": "23.1.0",
     "fs-extra": "^11.4.0",
     "semver": "^7.8.5",
     "zod": "^3.22.4",
