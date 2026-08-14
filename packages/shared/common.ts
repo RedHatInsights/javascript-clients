@@ -177,13 +177,17 @@ export const toPathString = function (url: URL) {
     return url.pathname + url.search + url.hash
 }
 
+export type RequestFunction = <T = unknown, R = AxiosResponse<T>>(axios?: AxiosInstance, basePath?: string) => Promise<R>;
+
+export type CreateRequestFunction = (axiosArgs: RequestArgs, globalAxios: AxiosInstance, BASE_PATH: string, configuration?: Configuration) => RequestFunction;
+
 /**
  *
  * @export
  */
-export const createRequestFunction = function <R = number>(axiosArgs: RequestArgs, globalAxios: AxiosInstance, BASE_PATH: string, configuration?: Configuration) {
+export const createRequestFunction: CreateRequestFunction = function (axiosArgs, globalAxios, BASE_PATH, configuration) {
     return <T = unknown, R = AxiosResponse<T>>(axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
         const axiosRequestArgs = {...axiosArgs.options, url: (configuration?.basePath || basePath) + toPathString(axiosArgs.urlObj)};
-        return axios.request<T, R>(axiosRequestArgs);
+        return axios.request<T, R>(axiosRequestArgs) as Promise<R>;
     };
 }
