@@ -1,3 +1,13 @@
+## 6.0.12 (2026-08-14)
+
+### 🩹 Fixes
+
+- **clients:** declare axios dependency in generated client packages ([c96b375f](https://github.com/RedHatInsights/javascript-clients/commit/c96b375f))
+
+### ❤️ Thank You
+
+- Charles Mulder @charlesmulder
+
 ## 6.0.11 (2026-08-14)
 
 ### 🧱 Updated Dependencies
