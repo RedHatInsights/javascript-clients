@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/host-inventory",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "clean-generate": {
       "command": "rm -rf packages/host-inventory/src"
@@ -38,10 +39,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/host-inventory/**/*.ts", "packages/host-inventory/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -62,6 +61,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }

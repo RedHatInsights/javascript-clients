@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/rbac",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "clean-generate": {
       "command": "rm -rf packages/rbac/src"
@@ -39,10 +40,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/rbac/**/*.ts", "packages/rbac/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -58,10 +57,10 @@
     "jest-v1": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "parallelism": false,
       "options": {
         "jestConfig": "packages/rbac/jest.integration.v1.config.ts"
-      },
-      "parallelism": false
+      }
     },
     "integration-v2": {
       "command": "start-server-and-test 'bin/serve.sh https://raw.githubusercontent.com/RedHatInsights/insights-rbac/refs/heads/master/docs/source/specs/v2/openapi.yaml 3001' http-get://testuser:testpass@localhost:3001/workspaces/ 'nx run --verbose @redhat-cloud-services/rbac-client:jest-v2'"
@@ -69,10 +68,10 @@
     "jest-v2": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "parallelism": false,
       "options": {
         "jestConfig": "packages/rbac/jest.integration.v2.config.ts"
-      },
-      "parallelism": false
+      }
     },
     "nx-release-publish": {
       "options": {
@@ -85,6 +84,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }

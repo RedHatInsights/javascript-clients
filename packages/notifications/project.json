@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/notifications",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "clean-generate": {
       "command": "rm -rf packages/notifications/src"
@@ -39,10 +40,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/notifications/**/*.ts", "packages/notifications/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -68,10 +67,10 @@
     "jest-v2": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "parallelism": false,
       "options": {
         "jestConfig": "packages/notifications/jest.integration.v2.config.ts"
-      },
-      "parallelism": false
+      }
     },
     "nx-release-publish": {
       "options": {
@@ -84,6 +83,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }

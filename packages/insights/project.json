@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/insights",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "clean-generate": {
       "command": "rm -rf packages/insights/src"
@@ -39,10 +40,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/insights/**/*.ts", "packages/insights/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -63,6 +62,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }

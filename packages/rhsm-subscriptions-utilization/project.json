@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/rhsm-subscriptions-utilization",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "clean-generate": {
       "command": "rm -rf packages/rhsm-subscriptions-utilization/src"
@@ -38,13 +39,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/rhsm-subscriptions-utilization/**/*.ts",
-          "packages/rhsm-subscriptions-utilization/*.json"
-        ]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -65,6 +61,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }

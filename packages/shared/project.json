@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/shared",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@redhat-cloud-services/build-utils:builder",
@@ -19,10 +20,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/shared/**/*.ts", "packages/shared/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -41,6 +40,5 @@
     "syncDependencies": {
       "executor": "@redhat-cloud-services/build-utils:sync-dependencies"
     }
-  },
-  "tags": []
+  }
 }

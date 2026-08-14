@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/build-utils/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
@@ -37,13 +38,8 @@
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/build-utils/**/*.ts",
-          "packages/build-utils/*.json"
-        ]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -53,6 +49,5 @@
         "jestConfig": "packages/build-utils/jest.config.js"
       }
     }
-  },
-  "tags": []
+  }
 }

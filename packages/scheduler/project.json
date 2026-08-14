@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/scheduler",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "clean-generate": {
       "command": "rm -rf packages/scheduler/src"
@@ -37,10 +38,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/scheduler/**/*.ts", "packages/scheduler/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -61,6 +60,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }
