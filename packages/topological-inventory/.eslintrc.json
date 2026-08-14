@@ -20,7 +20,9 @@
       "files": ["*.json"],
       "parser": "jsonc-eslint-parser",
       "rules": {
-        "@nx/dependency-checks": "off"
+        // tslib is required by the compiled dist output (tsconfig importHelpers emits require("tslib")),
+        // but this rule only sees source-level imports, so it always flags tslib as unused. Ignore it.
+        "@nx/dependency-checks": ["error", { "ignoredDependencies": ["tslib"] }]
       }
     }
   ]

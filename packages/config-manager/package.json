@@ -48,6 +48,7 @@
     "doc": "typedoc"
   },
   "dependencies": {
+    "axios": "^1.18.1",
     "@redhat-cloud-services/javascript-clients-shared": "^2.0.5",
     "tslib": "^2.6.2"
   }
