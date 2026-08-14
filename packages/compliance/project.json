@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/compliance",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "clean-generate": {
       "command": "rm -rf packages/compliance/src"
@@ -38,10 +39,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/compliance/**/*.ts", "packages/compliance/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -62,6 +61,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }

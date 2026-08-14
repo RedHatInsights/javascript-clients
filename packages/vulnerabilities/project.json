@@ -3,9 +3,11 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/vulnerabilities",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "dependsOn": ["preGenerate"],
       "options": {
         "postProcess": "./postProcess.sh",
         "legacyGenerator": true,
@@ -15,8 +17,7 @@
           "git-api": "apiSpec.json"
         },
         "clientName": "VulnerabilitiesClient"
-      },
-      "dependsOn": ["preGenerate"]
+      }
     },
     "preGenerate": {
       "command": "node packages/vulnerabilities/preProcess.js 'https://console.redhat.com/api/vulnerability/v1/openapi.json'"
@@ -36,10 +37,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/vulnerabilities/**/*.ts", "packages/vulnerabilities/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -55,6 +54,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }

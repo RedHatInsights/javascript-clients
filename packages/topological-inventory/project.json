@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/topological-inventory",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "clean-generate": {
       "command": "rm -rf packages/topological-inventory/src"
@@ -38,10 +39,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/topological-inventory/**/*.ts", "packages/topological-inventory/*.json"]
+        "args": ["**/*.ts", "*.json"]
       }
     },
     "test": {
@@ -62,6 +61,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }

@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/CLIENTNAME",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
@@ -27,10 +28,8 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/CLIENTNAME/**/*.ts", "packages/CLIENTNAME/*.json"]
+        "args": ["packages/CLIENTNAME/**/*.ts", "packages/CLIENTNAME/*.json"]
       }
     },
     "test": {
@@ -61,6 +60,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }
