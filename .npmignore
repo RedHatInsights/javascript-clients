@@ -3,3 +3,38 @@
 *.spec.*
 __snapshots__/
 __mocks__/
+
+# Config files — not needed in published packages
+tsconfig*.json
+jest.config.*
+jest.integration.*
+project.json
+eslint.config.*
+.eslintrc*
+.prettierrc*
+typedoc.json
+
+# Source and docs — dist contains compiled output
+src/
+doc/
+docs/
+*.md
+!README.md
+
+# OpenAPI specs — consumers don't need raw specs
+openapi*.json
+openapi*.yaml
+openapi*.yml
+
+# CI/CD and tooling
+.github/
+.husky/
+.nx/
+.vscode/
+
+# Security — never publish credentials or env files
+.env
+.env.*
+*.pem
+*.key
+*.secret

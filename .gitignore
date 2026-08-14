@@ -50,3 +50,19 @@ target/typescript-axios-webpack-module-federation-openapi-generator-*-tests*
 
 .claude/worktrees
 .claude/settings.local.json
+
+# Security-sensitive files — prevent accidental secret commits
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+*.jks
+credentials.json
+sa-key.json
+service-account*.json
+**/secrets/
+*.secret
