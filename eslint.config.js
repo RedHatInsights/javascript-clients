@@ -9,8 +9,12 @@ module.exports = [
   // JS files ignored because all packages are TypeScript-only; JS files in
   // packages are build scripts (preProcess.js, jest.config.js, etc.) that were
   // never linted under the legacy config's lintFilePatterns either.
+  // dist ignored because the inferred lint target always runs `eslint .`
+  // (whole project dir), unlike the old lintFilePatterns-scoped executor —
+  // without this, a locally built dist/package.json trips @nx/dependency-checks.
   {
     ignores: [
+      '**/dist/**',
       '**/*.js',
       '**/*.jsx',
       '**/base.ts',
