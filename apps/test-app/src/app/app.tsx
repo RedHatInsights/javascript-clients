@@ -21,22 +21,19 @@ const RbacClient = APIFactory('http://localhost:3000', {
 export function App() {
   useEffect(() => {
         const f = async() => {
-          const d = await RbacClient.getPrincipalAccess({ application: 'my-app', limit: 5 })
-          const foo = await RbacClient.apiHostHostCheckin({
+          await RbacClient.getPrincipalAccess({ application: 'my-app', limit: 5 })
+          await RbacClient.apiHostHostCheckin({
             createCheckIn: {
               bios_uuid: '1234',
               insights_id: '5678'
             }
           })
-          
         }
         f()
   }, []);
   return (
     <StyledApp>
-      <button onClick={() => {
-      }
-        }>
+      <button>
         Foobar
       </button>
     </StyledApp>
