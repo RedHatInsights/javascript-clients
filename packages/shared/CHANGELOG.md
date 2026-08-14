@@ -1,3 +1,13 @@
+## 2.0.15 (2026-08-14)
+
+### 🩹 Fixes
+
+- **@redhat-cloud-services/javascript-clients-shared,@redhat-cloud-services/vulnerabilities-client:** bump axios from 1.18.1 to 1.19.0 ([19fb6bbb](https://github.com/RedHatInsights/javascript-clients/commit/19fb6bbb))
+
+### ❤️ Thank You
+
+- Charles Mulder @charlesmulder
+
 ## 2.0.14 (2026-07-28)
 
 ### 🩹 Fixes

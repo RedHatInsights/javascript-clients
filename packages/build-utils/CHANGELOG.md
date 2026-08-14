@@ -1,3 +1,7 @@
+## 1.1.6 (2026-08-14)
+
+This was a version bump only for @redhat-cloud-services/build-utils to align it with other projects, there were no code changes.
+
 ## 1.1.5 (2026-07-28)
 
 ### 🩹 Fixes
