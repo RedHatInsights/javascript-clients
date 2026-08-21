@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "cypress": "15.20.1",
+    "cypress": "15.21.0",
     "eslint-plugin-cypress": "^3.5.0"
   }
 }
