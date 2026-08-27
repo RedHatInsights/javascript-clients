@@ -32,6 +32,12 @@ export type ListJobsParams = {
   * @memberof ListJobsApi
   */
   limit?: number,
+  /**
+  * Sort jobs by a field, in the form \'field:direction\'. Direction is optional and defaults to \'asc\'. Allowed fields: name, status, created_at, next_run_at, last_run_at. Defaults to \'created_at:desc\'.
+  * @type { string }
+  * @memberof ListJobsApi
+  */
+  sortBy?: string,
   options?: AxiosRequestConfig
 }
 
@@ -51,9 +57,9 @@ const isListJobsObjectParams = (params: [ListJobsParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listJobsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListJobsParams] | [JobStatus, string, number, number, AxiosRequestConfig])) => {
-    const params = isListJobsObjectParams(config) ? config[0] : ['status', 'name', 'offset', 'limit', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListJobsParams;
-    const { status, name, offset, limit, options = {} } = params;
+export const listJobsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListJobsParams] | [JobStatus, string, number, number, string, AxiosRequestConfig])) => {
+    const params = isListJobsObjectParams(config) ? config[0] : ['status', 'name', 'offset', 'limit', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListJobsParams;
+    const { status, name, offset, limit, sortBy, options = {} } = params;
     const localVarPath = `/jobs`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -75,6 +81,10 @@ export const listJobsParamCreator = async (sendRequest: BaseAPI["sendRequest"], 
 
     if (limit !== undefined) {
         localVarQueryParameter['limit'] = limit;
+    }
+
+    if (sortBy !== undefined) {
+        localVarQueryParameter['sort_by'] = sortBy;
     }
 
 

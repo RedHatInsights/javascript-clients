@@ -176,6 +176,12 @@ export interface JobRun {
      */
     'job_id': string;
     /**
+     * Name of the parent job
+     * @type {string}
+     * @memberof JobRun
+     */
+    'job_name'?: string;
+    /**
      *
      * @type {JobRunStatus}
      * @memberof JobRun

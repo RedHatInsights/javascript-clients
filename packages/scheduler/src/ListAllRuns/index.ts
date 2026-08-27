@@ -20,6 +20,12 @@ export type ListAllRunsParams = {
   * @memberof ListAllRunsApi
   */
   limit?: number,
+  /**
+  * Sort runs by a field, in the form \'field:direction\'. Direction is optional and defaults to \'asc\'. Allowed fields: start_time, end_time, status, created_at. Defaults to \'start_time:desc\'.
+  * @type { string }
+  * @memberof ListAllRunsApi
+  */
+  sortBy?: string,
   options?: AxiosRequestConfig
 }
 
@@ -39,9 +45,9 @@ const isListAllRunsObjectParams = (params: [ListAllRunsParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listAllRunsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAllRunsParams] | [number, number, AxiosRequestConfig])) => {
-    const params = isListAllRunsObjectParams(config) ? config[0] : ['offset', 'limit', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAllRunsParams;
-    const { offset, limit, options = {} } = params;
+export const listAllRunsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ListAllRunsParams] | [number, number, string, AxiosRequestConfig])) => {
+    const params = isListAllRunsObjectParams(config) ? config[0] : ['offset', 'limit', 'sortBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAllRunsParams;
+    const { offset, limit, sortBy, options = {} } = params;
     const localVarPath = `/runs`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -55,6 +61,10 @@ export const listAllRunsParamCreator = async (sendRequest: BaseAPI["sendRequest"
 
     if (limit !== undefined) {
         localVarQueryParameter['limit'] = limit;
+    }
+
+    if (sortBy !== undefined) {
+        localVarQueryParameter['sort_by'] = sortBy;
     }
 
 
