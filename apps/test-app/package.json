@@ -17,13 +17,13 @@
     "@testing-library/dom": "10.4.1",
     "@testing-library/react": "16.3.2",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
+    "@types/react-dom": "19.2.5",
     "axios": "^1.19.0",
     "babel-jest": "^30.0.2",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "7.1.1",
     "react-refresh": "^0.18.0",
-    "typescript-eslint": "^8.67.0"
+    "typescript-eslint": "^8.68.0"
   }
 }
