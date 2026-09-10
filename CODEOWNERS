@@ -9,31 +9,31 @@
 * @RedHatInsights/experience-services-committers @RedHatInsights/experience-services-package-admins
 
 # --- CI / GitHub configuration ---
-.github/** @RedHatInsights/experience-services-package-admins
+/.github/ @RedHatInsights/experience-services-package-admins
 
-#.tekton/** @RedHatInsights/experience-services-package-admins
+/.tekton/ @RedHatInsights/experience-services-package-admins
 
 # --- Git hooks & commit tooling ---
-.husky/** @RedHatInsights/experience-services-package-admins
-commitlint.config.js @RedHatInsights/experience-services-package-admins
-commitlint.config.test.js @RedHatInsights/experience-services-package-admins
-commitlint.jest.config.js @RedHatInsights/experience-services-package-admins
+/.husky/ @RedHatInsights/experience-services-package-admins
+/commitlint.config.js @RedHatInsights/experience-services-package-admins
+/commitlint.config.test.js @RedHatInsights/experience-services-package-admins
+/commitlint.jest.config.js @RedHatInsights/experience-services-package-admins
 
 # --- Package lifecycle, publish & dependency control ---
-package.json @RedHatInsights/experience-services-package-admins
-package-lock.json @RedHatInsights/experience-services-package-admins
-.npmrc @RedHatInsights/experience-services-package-admins
-.npmignore @RedHatInsights/experience-services-package-admins
-renovate.json @RedHatInsights/experience-services-package-admins
+/package.json @RedHatInsights/experience-services-package-admins
+/package-lock.json @RedHatInsights/experience-services-package-admins
+/.npmrc @RedHatInsights/experience-services-package-admins
+/.npmignore @RedHatInsights/experience-services-package-admins
+/renovate.json @RedHatInsights/experience-services-package-admins
 
 # --- Build / codegen / task orchestration ---
-nx.json @RedHatInsights/experience-services-package-admins
-pom.xml @RedHatInsights/experience-services-package-admins
-postProcess.sh @RedHatInsights/experience-services-package-admins
-utils/create-client.sh @RedHatInsights/experience-services-package-admins
-utils/nx-base/** @RedHatInsights/experience-services-package-admins
-bin/** @RedHatInsights/experience-services-package-admins
+/nx.json @RedHatInsights/experience-services-package-admins
+/pom.xml @RedHatInsights/experience-services-package-admins
+/postProcess.sh @RedHatInsights/experience-services-package-admins
+/utils/create-client.sh @RedHatInsights/experience-services-package-admins
+/utils/nx-base/** @RedHatInsights/experience-services-package-admins
+/bin/** @RedHatInsights/experience-services-package-admins
 
 # --- Security policy & self-protection ---
-security-policy.yml @RedHatInsights/experience-services-package-admins
-CODEOWNERS @RedHatInsights/experience-services-package-admins
+/security-policy.yml @RedHatInsights/experience-services-package-admins
+/CODEOWNERS @RedHatInsights/experience-services-package-admins
