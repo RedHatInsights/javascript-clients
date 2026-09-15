@@ -1,4 +1,12 @@
-const { default: lint } = require('@commitlint/lint');
+import lint from '@commitlint/lint';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+import { createRequire } from 'node:module';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
+
 const config = require('./commitlint.config');
 
 // Use the conventional-commits parser opts that support the ! breaking marker.
