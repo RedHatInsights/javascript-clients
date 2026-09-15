@@ -56,7 +56,7 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: Test commitlint config
-        run: npx jest --config=commitlint.jest.config.js
+        run: NODE_OPTIONS=--experimental-vm-modules npx jest --config=commitlint.jest.config.js
       - name: Validate current commit on push
         if: github.event_name == 'push'
         run: npx commitlint --from HEAD~1 --to HEAD --verbose
