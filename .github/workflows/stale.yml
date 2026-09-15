@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-stale-workflow:
-    uses: RedHatInsights/shared-workflows/.github/workflows/stale.yml@master
+    uses: RedHatInsights/shared-workflows/.github/workflows/stale.yml@49179c048ff6c47ee4ff8f8722168bbfa1b00fee
     # Optional: customize inputs
     # with:
     #   days-before-stale: 60
