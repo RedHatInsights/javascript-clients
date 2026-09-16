@@ -5,8 +5,13 @@ on:
     - cron: '0 0 * * *' # Run daily at midnight UTC
   workflow_dispatch: # Allow manual triggers
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   call-stale-workflow:
+    if: github.ref == 'refs/heads/main'
     uses: RedHatInsights/shared-workflows/.github/workflows/stale.yml@49179c048ff6c47ee4ff8f8722168bbfa1b00fee
     # Optional: customize inputs
     # with:
