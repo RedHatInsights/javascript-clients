@@ -1,3 +1,17 @@
+# 4.0.0 (2026-09-17)
+
+### 🚀 Features
+
+- ⚠️  **@redhat-cloud-services/vulnerabilities-client:** regenerate vulnerability client ([#585](https://github.com/RedHatInsights/javascript-clients/pull/585))
+
+### ⚠️  Breaking Changes
+
+- **@redhat-cloud-services/vulnerabilities-client:** regenerate vulnerability client  ([#585](https://github.com/RedHatInsights/javascript-clients/pull/585))
+
+### ❤️ Thank You
+
+- Anastasiia Surai @Siasurai
+
 ## 3.0.3 (2026-09-04)
 
 ### 🩹 Fixes
