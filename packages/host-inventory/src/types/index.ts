@@ -46,7 +46,7 @@ export interface ActiveTags {
      * @type {number}
      * @memberof ActiveTags
      */
-    'total': number;
+    'total': number | null;
     /**
      *
      * @type {Array<ActiveTag>}
@@ -98,7 +98,7 @@ export interface AdvisorAppData {
     'low'?: number | null;
 }
 /**
- * Application data fields available for sorting in the /hosts-view endpoint. Use format `app_name:field_name` with the `order_by` parameter.  **Advisor** - `advisor:recommendations` - Number of Advisor recommendations - `advisor:incidents` - Number of Advisor incidents - `advisor:critical` - Critical severity recommendations - `advisor:important` - Important severity recommendations - `advisor:moderate` - Moderate severity recommendations - `advisor:low` - Low severity recommendations - `advisor:total_severity` - Weighted severity score (critical×1000 + important×100 + moderate×10 + low)  **Vulnerability** - `vulnerability:total_cves` - Total CVE count - `vulnerability:critical_cves` - Critical severity CVEs - `vulnerability:important_cves` - Important severity CVEs - `vulnerability:cves_with_security_rules` - CVEs with security rules - `vulnerability:cves_with_known_exploits` - CVEs with known exploits  **Patch** - `patch:advisories_total_installable` - Total installable advisories (sum of all types) - `patch:advisories_total_applicable` - Total applicable advisories (sum of all types) - `patch:advisories_rhsa_installable` - Number of RHSA installable advisories - `patch:advisories_rhba_installable` - Number of RHBA installable advisories - `patch:advisories_rhea_installable` - Number of RHEA installable advisories - `patch:advisories_other_installable` - Number of other installable advisories - `patch:advisories_rhsa_applicable` - Number of RHSA applicable advisories - `patch:advisories_rhba_applicable` - Number of RHBA applicable advisories - `patch:advisories_rhea_applicable` - Number of RHEA applicable advisories - `patch:advisories_other_applicable` - Number of other applicable advisories - `patch:packages_installable` - Number of installable packages - `patch:packages_applicable` - Number of applicable packages - `patch:packages_installed` - Number of installed packages - `patch:template_name` - Patch template name  **Remediations** - `remediations:remediations_plans` - Active remediation plans count  **Compliance** - `compliance:last_scan` - Last compliance scan timestamp - `compliance:policies_count` - Number of compliance policies  **Malware** - `malware:last_matches` - Malware matches count - `malware:total_matches` - Total malware matches count - `malware:last_scan` - Last malware scan timestamp - `malware:last_status` - Last malware detection status
+ * Application data fields available for sorting in the /hosts-view endpoint. Use format `app_name:field_name` with the `order_by` parameter.  **Advisor** - `advisor:recommendations` - Number of Advisor recommendations - `advisor:incidents` - Number of Advisor incidents - `advisor:critical` - Critical severity recommendations - `advisor:important` - Important severity recommendations - `advisor:moderate` - Moderate severity recommendations - `advisor:low` - Low severity recommendations - `advisor:severity_priority` - Priority sort by severity (critical > important > moderate > low)  **Vulnerability** - `vulnerability:total_cves` - Total CVE count - `vulnerability:critical_cves` - Critical severity CVEs - `vulnerability:important_cves` - Important severity CVEs - `vulnerability:cves_with_security_rules` - CVEs with security rules - `vulnerability:cves_with_known_exploits` - CVEs with known exploits  **Patch** - `patch:advisories_total_installable` - Total installable advisories (sum of all types) - `patch:advisories_total_applicable` - Total applicable advisories (sum of all types) - `patch:advisories_rhsa_installable` - Number of RHSA installable advisories - `patch:advisories_rhba_installable` - Number of RHBA installable advisories - `patch:advisories_rhea_installable` - Number of RHEA installable advisories - `patch:advisories_other_installable` - Number of other installable advisories - `patch:advisories_rhsa_applicable` - Number of RHSA applicable advisories - `patch:advisories_rhba_applicable` - Number of RHBA applicable advisories - `patch:advisories_rhea_applicable` - Number of RHEA applicable advisories - `patch:advisories_other_applicable` - Number of other applicable advisories - `patch:packages_installable` - Number of installable packages - `patch:packages_applicable` - Number of applicable packages - `patch:packages_installed` - Number of installed packages - `patch:template_name` - Patch template name  **Remediations** - `remediations:remediations_plans` - Active remediation plans count  **Compliance** - `compliance:last_scan` - Last compliance scan timestamp - `compliance:policies_count` - Number of compliance policies  **Malware** - `malware:last_matches` - Malware matches count - `malware:total_matches` - Total malware matches count - `malware:last_scan` - Last malware scan timestamp - `malware:last_status` - Last malware detection status
  * @export
  * @enum {string}
  */
@@ -110,7 +110,7 @@ export const AppSortableFields = {
     Advisorimportant: 'advisor:important',
     Advisormoderate: 'advisor:moderate',
     Advisorlow: 'advisor:low',
-    AdvisortotalSeverity: 'advisor:total_severity',
+    AdvisorseverityPriority: 'advisor:severity_priority',
     VulnerabilitytotalCves: 'vulnerability:total_cves',
     VulnerabilitycriticalCves: 'vulnerability:critical_cves',
     VulnerabilityimportantCves: 'vulnerability:important_cves',
@@ -400,6 +400,19 @@ export interface CreateCheckIn {
     'checkin_frequency'?: number;
 }
 /**
+ * Data for setting the user\'s default view.
+ * @export
+ * @interface DefaultViewIn
+ */
+export interface DefaultViewIn {
+    /**
+     * The UUID of the view to pin as the user\'s default.
+     * @type {string}
+     * @memberof DefaultViewIn
+     */
+    'view_id': string;
+}
+/**
  * A set of string facts belonging to a single namespace.
  * @export
  * @interface FactSet
@@ -572,7 +585,7 @@ export interface GroupQueryOutput {
      * @type {number}
      * @memberof GroupQueryOutput
      */
-    'total': number;
+    'total': number | null;
     /**
      * Actual group search query result entries.
      * @type {Array<GroupOutWithHostCount>}
@@ -927,7 +940,7 @@ export interface HostQueryOutput {
      * @type {number}
      * @memberof HostQueryOutput
      */
-    'total': number;
+    'total': number | null;
     /**
      * Actual host search query result entries.
      * @type {Array<HostOut>}
@@ -1276,7 +1289,7 @@ export interface HostViewQueryOutput {
      * @type {number}
      * @memberof HostViewQueryOutput
      */
-    'total': number;
+    'total': number | null;
     /**
      * Combined host and application entries.
      * @type {Array<HostViewHost>}
@@ -1387,7 +1400,7 @@ export interface PaginationOut {
      * @type {number}
      * @memberof PaginationOut
      */
-    'total': number;
+    'total': number | null;
 }
 /**
  *
@@ -2445,7 +2458,7 @@ export interface SystemProfileByHostOut {
      * @type {number}
      * @memberof SystemProfileByHostOut
      */
-    'total': number;
+    'total': number | null;
     /**
      * Actual host search query result entries.
      * @type {Array<HostSystemProfileOut>}
@@ -2769,7 +2782,7 @@ export interface SystemProfileOperatingSystemOut {
      * @type {number}
      * @memberof SystemProfileOperatingSystemOut
      */
-    'total'?: number;
+    'total'?: number | null;
     /**
      * The number of items on the current page
      * @type {number}
@@ -2974,7 +2987,7 @@ export interface SystemProfileSapSystemOut {
      * @type {number}
      * @memberof SystemProfileSapSystemOut
      */
-    'total'?: number;
+    'total'?: number | null;
     /**
      * The number of items on the current page
      * @type {number}
@@ -3385,7 +3398,7 @@ export interface TagCountOut {
      * @type {number}
      * @memberof TagCountOut
      */
-    'total': number;
+    'total': number | null;
     /**
      * The list of tags on the systems
      * @type {{ [key: string]: number; }}
@@ -3422,7 +3435,7 @@ export interface TagsOut {
      * @type {number}
      * @memberof TagsOut
      */
-    'total': number;
+    'total': number | null;
     /**
      * The list of tags on the systems
      * @type {{ [key: string]: Array<StructuredTag>; }}
@@ -3490,7 +3503,7 @@ export interface ViewConfigurationFilters {
  */
 export interface ViewIn {
     /**
-     * The display name for the view. Must contain only letters, numbers, spaces, hyphens, and underscores.
+     * The display name for the view. Must contain only letters, numbers, spaces, hyphens, underscores, periods, and apostrophes, and include at least one letter or number.
      * @type {string}
      * @memberof ViewIn
      */
@@ -3594,7 +3607,7 @@ export interface ViewOut {
  */
 export interface ViewPatch {
     /**
-     * The display name for the view. Must contain only letters, numbers, spaces, hyphens, and underscores.
+     * The display name for the view. Must contain only letters, numbers, spaces, hyphens, underscores, periods, and apostrophes, and include at least one letter or number.
      * @type {string}
      * @memberof ViewPatch
      */
@@ -3674,7 +3687,13 @@ export interface ViewsListOut {
      * @type {number}
      * @memberof ViewsListOut
      */
-    'total': number;
+    'total': number | null;
+    /**
+     * The UUID of the user\'s current default view. This is the view that should be loaded automatically on page open. Falls back to the \"All systems\" system view if no preference is set.
+     * @type {string}
+     * @memberof ViewsListOut
+     */
+    'default_view_id': string;
     /**
      * List of inventory views.
      * @type {Array<ViewOut>}
