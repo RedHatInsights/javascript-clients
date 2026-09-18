@@ -72,6 +72,8 @@ export { default as apiViewsCloneView, type ApiViewsCloneViewReturnType } from '
 
 export { default as apiViewsCreateView, type ApiViewsCreateViewReturnType } from './ApiViewsCreateView'
 
+export { default as apiViewsDeleteDefaultView, type ApiViewsDeleteDefaultViewReturnType } from './ApiViewsDeleteDefaultView'
+
 export { default as apiViewsDeleteView, type ApiViewsDeleteViewReturnType } from './ApiViewsDeleteView'
 
 export { default as apiViewsGetViewById, type ApiViewsGetViewByIdReturnType } from './ApiViewsGetViewById'
@@ -79,6 +81,8 @@ export { default as apiViewsGetViewById, type ApiViewsGetViewByIdReturnType } fr
 export { default as apiViewsGetViewsList, type ApiViewsGetViewsListReturnType } from './ApiViewsGetViewsList'
 
 export { default as apiViewsPatchView, type ApiViewsPatchViewReturnType } from './ApiViewsPatchView'
+
+export { default as apiViewsSetDefaultView, type ApiViewsSetDefaultViewReturnType } from './ApiViewsSetDefaultView'
 
 
 export * from './types'

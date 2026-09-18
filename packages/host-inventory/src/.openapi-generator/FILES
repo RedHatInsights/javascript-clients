@@ -38,10 +38,12 @@ ApiSystemProfileValidateSchema/index.ts
 ApiTagGetTags/index.ts
 ApiViewsCloneView/index.ts
 ApiViewsCreateView/index.ts
+ApiViewsDeleteDefaultView/index.ts
 ApiViewsDeleteView/index.ts
 ApiViewsGetViewById/index.ts
 ApiViewsGetViewsList/index.ts
 ApiViewsPatchView/index.ts
+ApiViewsSetDefaultView/index.ts
 api.ts
 git_push.sh
 index.ts

@@ -164,6 +164,12 @@ export type ApiHostGetHostListParams = {
   * @memberof ApiHostGetHostListApi
   */
   fields?: { [key: string]: SystemProfileNestedObjectValue; },
+  /**
+  * When true, the response includes the total number of items.
+  * @type { boolean }
+  * @memberof ApiHostGetHostListApi
+  */
+  getTotal?: boolean,
   options?: AxiosRequestConfig
 }
 /**
@@ -250,9 +256,9 @@ const isApiHostGetHostListObjectParams = (params: [ApiHostGetHostListParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostListParams] | [string, string, string, string, string, string, ApiHostGetHostListProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, Array<string>, Array<string>, string, number, number, ApiHostGetHostListOrderByEnum, string, Array<ApiHostGetHostListStalenessEnum>, Array<string>, Array<ApiHostGetHostListRegisteredWithEnum>, Array<ApiHostGetHostListSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
-    const params = isApiHostGetHostListObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'workspaceName', 'groupId', 'workspaceId', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostListParams;
-    const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, workspaceName, groupId, workspaceId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, options = {} } = params;
+export const apiHostGetHostListParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostListParams] | [string, string, string, string, string, string, ApiHostGetHostListProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, Array<string>, Array<string>, string, number, number, ApiHostGetHostListOrderByEnum, string, Array<ApiHostGetHostListStalenessEnum>, Array<string>, Array<ApiHostGetHostListRegisteredWithEnum>, Array<ApiHostGetHostListSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, { [key: string]: SystemProfileNestedObjectValue; }, boolean, AxiosRequestConfig])) => {
+    const params = isApiHostGetHostListObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'workspaceName', 'groupId', 'workspaceId', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'getTotal', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostListParams;
+    const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, workspaceName, groupId, workspaceId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, getTotal, options = {} } = params;
     const localVarPath = `/hosts`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -370,6 +376,10 @@ export const apiHostGetHostListParamCreator = async (sendRequest: BaseAPI["sendR
 
     if (fields !== undefined) {
         localVarQueryParameter['fields'] = fields;
+    }
+
+    if (getTotal !== undefined) {
+        localVarQueryParameter['get_total'] = getTotal;
     }
 
 
