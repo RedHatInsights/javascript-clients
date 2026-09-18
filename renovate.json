@@ -18,19 +18,19 @@
       "semanticCommitScope": "ci"
     },
     {
-      "description": "Update Node.js version in .nvmrc and package.json engines.node",
+      "description": "Handle all Node.js updates (.nvmrc, engines.node)",
       "matchManagers": ["nvm", "npm"],
       "matchDepNames": ["node"],
-      "matchUpdateTypes": ["minor", "patch"],
+      "enabled": true,
       "semanticCommitType": "chore",
       "semanticCommitScope": "node",
       "automerge": false
     },
     {
-      "description": "Update npm version in package.json (engines.npm and packageManager)",
+      "description": "Handle all npm updates (engines.npm, packageManager)",
       "matchManagers": ["npm"],
       "matchDepNames": ["npm"],
-      "matchUpdateTypes": ["minor", "patch"],
+      "enabled": true,
       "semanticCommitType": "chore",
       "semanticCommitScope": "npm",
       "automerge": false
