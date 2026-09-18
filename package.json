@@ -90,7 +90,7 @@
     "typedoc-plugin-markdown": "^4.13.0",
     "typescript": "^5.6.0",
     "webpack-cli": "^7.2.3",
-    "zod": "^4.5.4"
+    "zod": "^4.6.5"
   },
   "overrides": {
     "postman-collection": {
