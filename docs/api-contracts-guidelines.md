@@ -95,6 +95,13 @@ All clients depend on `@redhat-cloud-services/javascript-clients-shared`:
 
 Changes to `shared` affect all client packages. Test thoroughly.
 
-## Spec Sync
+## Spec Sync & Updates
 
-The `sync-apis.yml` GitHub Action runs nightly (or manually) to pull latest specs, regenerate all clients, and open a PR for review. Regenerated code is committed — review diffs for breaking changes.
+API generation is run on demand rather than automatically on a schedule. Because automated syncing cannot reliably distinguish between breaking and non-breaking contract changes, updates are triggered manually:
+
+1. Run `npm run generate` to fetch upstream specs and regenerate code.
+2. Inspect the diff to evaluate semver impact:
+   - Non-breaking additions or fixes map to `feat(<scope>)` or `fix(<scope>)`.
+   - Breaking changes (removed/renamed fields, altered signatures) require a breaking commit (`feat(<scope>)!:`) to trigger a major version bump.
+3. Verify changes with `npm test` before submitting a PR.
+
