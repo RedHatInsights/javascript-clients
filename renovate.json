@@ -1,11 +1,39 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>RedHatInsights/shared-workflows//renovate/frontend"],
-  "commitMessagePrefix": "fix(deps):",
+  "commitMessageLowerCase": "auto",
+  "semanticCommits": "enabled",
+  "semanticCommitType": "fix",
+  "semanticCommitScope": "deps",
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "commitMessagePrefix": "chore(deps-dev):"
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps-dev"
+    },
+    {
+      "description": "Use chore commit type for GitHub Actions version updates (no package release should be triggered)",
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "ci"
+    },
+    {
+      "description": "Handle all Node.js updates (.nvmrc, engines.node)",
+      "matchManagers": ["nvm", "npm"],
+      "matchDepNames": ["node"],
+      "enabled": true,
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "node",
+      "automerge": false
+    },
+    {
+      "description": "Handle all npm updates (engines.npm, packageManager)",
+      "matchManagers": ["npm"],
+      "matchDepNames": ["npm"],
+      "enabled": true,
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "npm",
+      "automerge": false
     }
   ]
 }
