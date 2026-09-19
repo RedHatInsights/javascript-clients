@@ -137,6 +137,6 @@
         <openapi-generator-version>7.0.0</openapi-generator-version>
         <maven-plugin-version>1.0.0</maven-plugin-version>
         <junit-version>4.13.2</junit-version>
-        <apache-commons-version>1.10.0</apache-commons-version>
+        <apache-commons-version>1.15.0</apache-commons-version>
     </properties>
 </project>
