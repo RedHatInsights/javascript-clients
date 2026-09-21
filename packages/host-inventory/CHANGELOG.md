@@ -1,3 +1,13 @@
+## 7.2.0 (2026-09-21)
+
+### 🚀 Features
+
+- **@redhat-cloud-services/host-inventory-client:** update host-inventory client default views #595 ([#595](https://github.com/RedHatInsights/javascript-clients/issues/595))
+
+### ❤️ Thank You
+
+- Michael Johnson
+
 ## 7.1.0 (2026-09-04)
 
 ### 🚀 Features

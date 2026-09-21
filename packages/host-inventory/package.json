@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/host-inventory-client",
-  "version": "7.1.0",
+  "version": "7.2.0",
   "description": "",
   "main": "./index.js",
   "typings": "./index.d.ts",
