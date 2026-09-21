@@ -50,6 +50,6 @@
   "dependencies": {
     "axios": "^1.20.0",
     "@redhat-cloud-services/javascript-clients-shared": "^2.0.5",
-    "tslib": "^2.6.2"
+    "tslib": "^2.8.1"
   }
 }
