@@ -23,9 +23,18 @@ runs:
         distribution: 'temurin'
         java-version-file: '.java-version'
         cache: 'maven'
+    # Keep this Node/npm toolchain aligned with MintMaker's Renovate image
+    # quay.io/konflux-ci/mintmaker-renovate-image so
+    # locally regenerated lockfiles, CI, and Renovate artifact updates agree.
+    # See README.md#node-and-npm-toolchain for the current image reference.
     - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
       with:
         node-version-file: '.nvmrc'
+    - name: Enable Corepack and activate pinned npm version
+      shell: bash
+      run: |
+        corepack enable npm
+        corepack install
     - name: Show final versions
       shell: bash
       run: |

@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- Node.js (version specified in `.nvmrc`)
-- npm 7.0+
+- Node.js (exact version specified in `.nvmrc`)
+- npm (exact version pinned by the root `package.json` `packageManager` field; activate it with Corepack)
 - Java (version specified in `.java-version`) + Maven (for the custom OpenAPI generator)
 - Git
 
@@ -21,6 +21,10 @@ node --version
 nvm use           # If version installed
 # OR
 nvm install       # If version not installed (installs + switches)
+
+# Activate the npm version pinned in package.json
+corepack enable npm
+corepack install
 
 npm install       # Install npm deps + build Maven generator
 ```
@@ -124,6 +128,8 @@ See [docs/testing-guidelines.md](docs/testing-guidelines.md) for details on test
 ### Dependency Updates (Renovate)
 
 Renovate is configured to automatically create PRs for dependency updates using `fix(deps):` commit format for production dependencies and `chore(deps-dev):` for dev dependencies.
+
+The Node and npm versions pinned in `.nvmrc` and `package.json` are intentionally aligned with MintMaker's Renovate image (`quay.io/konflux-ci/mintmaker-renovate-image`). Keep those pins aligned when updating either toolchain so Renovate can regenerate `package-lock.json` artifacts that GitHub Actions CI can install.
 
 **Production dependencies** (touches `packages/<name>/package.json`):
 - Renovate creates PR with title: `fix(deps): bump axios from 1.17.0 to 1.18.0`
