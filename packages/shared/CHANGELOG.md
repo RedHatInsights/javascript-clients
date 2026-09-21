@@ -1,3 +1,13 @@
+## 2.0.17 (2026-09-21)
+
+### 🩹 Fixes
+
+- **deps:** update npm minor and patch dependencies ([#601](https://github.com/RedHatInsights/javascript-clients/pull/601))
+
+### ❤️ Thank You
+
+- Charles Mulder @charlesmulder
+
 ## 2.0.16 (2026-09-04)
 
 ### 🩹 Fixes

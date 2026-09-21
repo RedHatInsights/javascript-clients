@@ -1,3 +1,17 @@
+## 5.0.14 (2026-09-21)
+
+### 🩹 Fixes
+
+- **deps:** update npm minor and patch dependencies ([#601](https://github.com/RedHatInsights/javascript-clients/pull/601))
+
+### 🧱 Updated Dependencies
+
+- Updated @redhat-cloud-services/javascript-clients-shared to 2.0.17
+
+### ❤️ Thank You
+
+- Charles Mulder @charlesmulder
+
 ## 5.0.13 (2026-09-04)
 
 ### 🩹 Fixes
