@@ -38,10 +38,12 @@ import {
     apiTagGetTags,
     apiViewsCloneView,
     apiViewsCreateView,
+    apiViewsDeleteDefaultView,
     apiViewsDeleteView,
     apiViewsGetViewById,
     apiViewsGetViewsList,
     apiViewsPatchView,
+    apiViewsSetDefaultView,
 
   } from './index';
 
@@ -83,10 +85,12 @@ const endpointList = {
     apiTagGetTags,
     apiViewsCloneView,
     apiViewsCreateView,
+    apiViewsDeleteDefaultView,
     apiViewsDeleteView,
     apiViewsGetViewById,
     apiViewsGetViewsList,
     apiViewsPatchView,
+    apiViewsSetDefaultView,
 
 
 };
