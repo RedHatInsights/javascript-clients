@@ -2,8 +2,8 @@
   "name": "@redhat-cloud-services/javascript-clients",
   "version": "0.0.1",
   "engines": {
-    "node": ">=24.20.0",
-    "npm": ">=11.19.0"
+    "node": ">=24.11.0",
+    "npm": ">=11.6.0"
   },
   "packageManager": "npm@11.19.0",
   "private": true,
