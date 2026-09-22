@@ -23,10 +23,10 @@ runs:
         distribution: 'temurin'
         java-version-file: '.java-version'
         cache: 'maven'
-    # Keep this Node/npm toolchain aligned with MintMaker's Renovate image
-    # quay.io/konflux-ci/mintmaker-renovate-image so
-    # locally regenerated lockfiles, CI, and Renovate artifact updates agree.
-    # See README.md#node-and-npm-toolchain for the current image reference.
+    # Use the latest Node/npm development-toolchain pins from .nvmrc and
+    # package.json. The package.json engine minimums remain compatible with
+    # MintMaker's Renovate image: quay.io/konflux-ci/mintmaker-renovate-image.
+    # See README.md#node-and-npm-toolchain for details.
     - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
       with:
         node-version-file: '.nvmrc'
