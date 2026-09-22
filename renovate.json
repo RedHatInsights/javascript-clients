@@ -18,8 +18,8 @@
       "semanticCommitScope": "ci"
     },
     {
-      "description": "Handle all Node.js updates (.nvmrc, engines.node)",
-      "matchManagers": ["nvm", "npm"],
+      "description": "Handle Node.js updates in .nvmrc (latest dev toolchain)",
+      "matchManagers": ["nvm"],
       "matchDepNames": ["node"],
       "enabled": true,
       "semanticCommitType": "chore",
@@ -27,13 +27,28 @@
       "automerge": false
     },
     {
-      "description": "Handle all npm updates (engines.npm, packageManager)",
+      "description": "Disable engines.node updates (pinned to MintMaker's minimum supported version)",
+      "matchManagers": ["npm"],
+      "matchDepNames": ["node"],
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    },
+    {
+      "description": "Handle npm packageManager updates (latest dev toolchain)",
       "matchManagers": ["npm"],
       "matchDepNames": ["npm"],
+      "matchDepTypes": ["packageManager"],
       "enabled": true,
       "semanticCommitType": "chore",
       "semanticCommitScope": "npm",
       "automerge": false
+    },
+    {
+      "description": "Disable engines.npm updates (pinned to MintMaker's minimum supported version)",
+      "matchManagers": ["npm"],
+      "matchDepNames": ["npm"],
+      "matchDepTypes": ["engines"],
+      "enabled": false
     }
   ]
 }
