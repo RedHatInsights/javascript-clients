@@ -17,9 +17,9 @@ We are using Java to install and build this generator. Please install Java and p
 
 #### Node and npm toolchain
 
-This project pins Node.js in `.nvmrc` and npm in the root `package.json` `packageManager` field. The versions are intentionally aligned with MintMaker's Renovate image, [`quay.io/konflux-ci/mintmaker-renovate-image`](https://quay.io/repository/konflux-ci/mintmaker-renovate-image), so locally regenerated lockfiles, GitHub Actions CI, and Renovate artifact updates use the same toolchain. Update these pins together after confirming the image's installed `node --version` and `npm --version`.
+The `engines` in the root `package.json` specify the minimum Node.js and npm versions supported by MintMaker's Renovate image, [`quay.io/konflux-ci/mintmaker-renovate-image`](https://quay.io/repository/konflux-ci/mintmaker-renovate-image). The development toolchain is pinned separately: `.nvmrc` contains the latest Node.js version we use, and the `packageManager` field in `package.json` contains the latest npm version. When updating the toolchain, confirm the versions in the MintMaker image and keep the engine minimums compatible with it.
 
-This project uses nvm to manage Node.js versions. The required version is in `.nvmrc`.
+This project uses nvm to manage Node.js versions. The preferred version is in `.nvmrc`.
 
 **Check version match:**
 ```bash

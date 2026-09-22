@@ -129,7 +129,7 @@ See [docs/testing-guidelines.md](docs/testing-guidelines.md) for details on test
 
 Renovate is configured to automatically create PRs for dependency updates using `fix(deps):` commit format for production dependencies and `chore(deps-dev):` for dev dependencies.
 
-The Node and npm versions pinned in `.nvmrc` and `package.json` are intentionally aligned with MintMaker's Renovate image (`quay.io/konflux-ci/mintmaker-renovate-image`). Keep those pins aligned when updating either toolchain so Renovate can regenerate `package-lock.json` artifacts that GitHub Actions CI can install.
+The root `package.json` `engines` specify the minimum Node.js and npm versions supported by MintMaker's Renovate image (`quay.io/konflux-ci/mintmaker-renovate-image`). The development toolchain uses the latest versions pinned in `.nvmrc` for Node.js and the `packageManager` field in `package.json` for npm. Keep the engine minimums compatible with MintMaker when updating either toolchain so Renovate can regenerate `package-lock.json` artifacts that GitHub Actions CI can install.
 
 **Production dependencies** (touches `packages/<name>/package.json`):
 - Renovate creates PR with title: `fix(deps): bump axios from 1.17.0 to 1.18.0`
