@@ -5,7 +5,7 @@
     "node": ">=24.11.0",
     "npm": ">=11.6.0"
   },
-  "packageManager": "npm@11.19.0",
+  "packageManager": "npm@11.19.1",
   "private": true,
   "workspaces": [
     "packages/*",
