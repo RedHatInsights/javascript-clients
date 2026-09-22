@@ -123,7 +123,7 @@ export type ApiHostViewsGetHostViewsParams = {
   */
   staleness?: Array<ApiHostViewsGetHostViewsStalenessEnum>,
   /**
-  * Filters systems by tag(s). Specify multiple tags as a comma-separated list (e.g. insights-client/security=strict,env/type=prod).
+  * Filters systems by tag(s). Specify multiple tags as a comma-separated list (e.g. insights-client/security=strict,env/type=prod). Tags with the same namespace and key (their identity) are OR\'d (match any value); tags with different identities are AND\'d (must match all).
   * @type { Array<string> }
   * @memberof ApiHostViewsGetHostViewsApi
   */
@@ -187,6 +187,9 @@ export const ApiHostViewsGetHostViewsOrderByEnum = {
     VulnerabilitytotalCves: 'vulnerability:total_cves',
     VulnerabilitycriticalCves: 'vulnerability:critical_cves',
     VulnerabilityimportantCves: 'vulnerability:important_cves',
+    VulnerabilitymoderateCves: 'vulnerability:moderate_cves',
+    VulnerabilitylowCves: 'vulnerability:low_cves',
+    VulnerabilityseverityPriority: 'vulnerability:severity_priority',
     VulnerabilitycvesWithSecurityRules: 'vulnerability:cves_with_security_rules',
     VulnerabilitycvesWithKnownExploits: 'vulnerability:cves_with_known_exploits',
     PatchadvisoriesTotalInstallable: 'patch:advisories_total_installable',

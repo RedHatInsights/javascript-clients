@@ -98,7 +98,7 @@ export interface AdvisorAppData {
     'low'?: number | null;
 }
 /**
- * Application data fields available for sorting in the /hosts-view endpoint. Use format `app_name:field_name` with the `order_by` parameter.  **Advisor** - `advisor:recommendations` - Number of Advisor recommendations - `advisor:incidents` - Number of Advisor incidents - `advisor:critical` - Critical severity recommendations - `advisor:important` - Important severity recommendations - `advisor:moderate` - Moderate severity recommendations - `advisor:low` - Low severity recommendations - `advisor:severity_priority` - Priority sort by severity (critical > important > moderate > low)  **Vulnerability** - `vulnerability:total_cves` - Total CVE count - `vulnerability:critical_cves` - Critical severity CVEs - `vulnerability:important_cves` - Important severity CVEs - `vulnerability:cves_with_security_rules` - CVEs with security rules - `vulnerability:cves_with_known_exploits` - CVEs with known exploits  **Patch** - `patch:advisories_total_installable` - Total installable advisories (sum of all types) - `patch:advisories_total_applicable` - Total applicable advisories (sum of all types) - `patch:advisories_rhsa_installable` - Number of RHSA installable advisories - `patch:advisories_rhba_installable` - Number of RHBA installable advisories - `patch:advisories_rhea_installable` - Number of RHEA installable advisories - `patch:advisories_other_installable` - Number of other installable advisories - `patch:advisories_rhsa_applicable` - Number of RHSA applicable advisories - `patch:advisories_rhba_applicable` - Number of RHBA applicable advisories - `patch:advisories_rhea_applicable` - Number of RHEA applicable advisories - `patch:advisories_other_applicable` - Number of other applicable advisories - `patch:packages_installable` - Number of installable packages - `patch:packages_applicable` - Number of applicable packages - `patch:packages_installed` - Number of installed packages - `patch:template_name` - Patch template name  **Remediations** - `remediations:remediations_plans` - Active remediation plans count  **Compliance** - `compliance:last_scan` - Last compliance scan timestamp - `compliance:policies_count` - Number of compliance policies  **Malware** - `malware:last_matches` - Malware matches count - `malware:total_matches` - Total malware matches count - `malware:last_scan` - Last malware scan timestamp - `malware:last_status` - Last malware detection status
+ * Application data fields available for sorting in the /hosts-view endpoint. Use format `app_name:field_name` with the `order_by` parameter.  **Advisor** - `advisor:recommendations` - Number of Advisor recommendations - `advisor:incidents` - Number of Advisor incidents - `advisor:critical` - Critical severity recommendations - `advisor:important` - Important severity recommendations - `advisor:moderate` - Moderate severity recommendations - `advisor:low` - Low severity recommendations - `advisor:severity_priority` - Priority sort by severity (critical > important > moderate > low)  **Vulnerability** - `vulnerability:total_cves` - Total CVE count - `vulnerability:critical_cves` - Critical severity CVEs - `vulnerability:important_cves` - Important severity CVEs - `vulnerability:moderate_cves` - Moderate severity CVEs - `vulnerability:low_cves` - Low severity CVEs - `vulnerability:severity_priority` - Priority sort by severity (critical > important > moderate > low) - `vulnerability:cves_with_security_rules` - CVEs with security rules - `vulnerability:cves_with_known_exploits` - CVEs with known exploits  **Patch** - `patch:advisories_total_installable` - Total installable advisories (sum of all types) - `patch:advisories_total_applicable` - Total applicable advisories (sum of all types) - `patch:advisories_rhsa_installable` - Number of RHSA installable advisories - `patch:advisories_rhba_installable` - Number of RHBA installable advisories - `patch:advisories_rhea_installable` - Number of RHEA installable advisories - `patch:advisories_other_installable` - Number of other installable advisories - `patch:advisories_rhsa_applicable` - Number of RHSA applicable advisories - `patch:advisories_rhba_applicable` - Number of RHBA applicable advisories - `patch:advisories_rhea_applicable` - Number of RHEA applicable advisories - `patch:advisories_other_applicable` - Number of other applicable advisories - `patch:packages_installable` - Number of installable packages - `patch:packages_applicable` - Number of applicable packages - `patch:packages_installed` - Number of installed packages - `patch:template_name` - Patch template name  **Remediations** - `remediations:remediations_plans` - Active remediation plans count  **Compliance** - `compliance:last_scan` - Last compliance scan timestamp - `compliance:policies_count` - Number of compliance policies  **Malware** - `malware:last_matches` - Malware matches count - `malware:total_matches` - Total malware matches count - `malware:last_scan` - Last malware scan timestamp - `malware:last_status` - Last malware detection status
  * @export
  * @enum {string}
  */
@@ -114,6 +114,9 @@ export const AppSortableFields = {
     VulnerabilitytotalCves: 'vulnerability:total_cves',
     VulnerabilitycriticalCves: 'vulnerability:critical_cves',
     VulnerabilityimportantCves: 'vulnerability:important_cves',
+    VulnerabilitymoderateCves: 'vulnerability:moderate_cves',
+    VulnerabilitylowCves: 'vulnerability:low_cves',
+    VulnerabilityseverityPriority: 'vulnerability:severity_priority',
     VulnerabilitycvesWithSecurityRules: 'vulnerability:cves_with_security_rules',
     VulnerabilitycvesWithKnownExploits: 'vulnerability:cves_with_known_exploits',
     PatchadvisoriesTotalInstallable: 'patch:advisories_total_installable',
@@ -3725,6 +3728,18 @@ export interface VulnerabilityAppData {
      * @memberof VulnerabilityAppData
      */
     'important_cves'?: number | null;
+    /**
+     *
+     * @type {number}
+     * @memberof VulnerabilityAppData
+     */
+    'moderate_cves'?: number | null;
+    /**
+     *
+     * @type {number}
+     * @memberof VulnerabilityAppData
+     */
+    'low_cves'?: number | null;
     /**
      *
      * @type {number}
