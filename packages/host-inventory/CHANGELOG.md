@@ -1,3 +1,13 @@
+## 7.3.0 (2026-09-23)
+
+### 🚀 Features
+
+- **@redhat-cloud-services/host-inventory-client:** update host-inventory client ([#614](https://github.com/RedHatInsights/javascript-clients/pull/614))
+
+### ❤️ Thank You
+
+- Zhamilya Abikenova
+
 ## 7.2.1 (2026-09-21)
 
 ### 🩹 Fixes
