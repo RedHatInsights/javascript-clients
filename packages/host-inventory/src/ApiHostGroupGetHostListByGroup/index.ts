@@ -69,7 +69,7 @@ export type ApiHostGroupGetHostListByGroupParams = {
   */
   staleness?: Array<ApiHostGroupGetHostListByGroupStalenessEnum>,
   /**
-  * Filters systems by tag(s). Specify multiple tags as a comma-separated list (e.g. insights-client/security=strict,env/type=prod).
+  * Filters systems by tag(s). Specify multiple tags as a comma-separated list (e.g. insights-client/security=strict,env/type=prod). Tags with the same namespace and key (their identity) are OR\'d (match any value); tags with different identities are AND\'d (must match all).
   * @type { Array<string> }
   * @memberof ApiHostGroupGetHostListByGroupApi
   */
