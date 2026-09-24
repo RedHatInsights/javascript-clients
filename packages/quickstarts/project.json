@@ -8,8 +8,11 @@
     "clean-generate": {
       "command": "rm -rf packages/quickstarts/src"
     },
+    "configure-secret-scanning": {
+      "command": "node utils/add-secret-scanning-exclusion.js quickstarts"
+    },
     "generate": {
-      "dependsOn": ["clean-generate"],
+      "dependsOn": ["clean-generate", "configure-secret-scanning"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
         "outputPath": "packages/quickstarts/src",

@@ -5,20 +5,33 @@
   "projectType": "library",
   "tags": [],
   "targets": {
+    "clean-generate": {
+      "command": "rm -rf packages/CLIENTNAME/src"
+    },
+    "configure-secret-scanning": {
+      "command": "node utils/add-secret-scanning-exclusion.js CLIENTNAME"
+    },
     "generate": {
+      "dependsOn": ["clean-generate", "configure-secret-scanning"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
+        "outputPath": "packages/CLIENTNAME/src",
         "specs": {
           "default": "path-to-your-openAPI-spec"
         },
         "clientName": "CLIENTNAMEClient"
       }
     },
+    "clean-build": {
+      "command": "rm -rf packages/CLIENTNAME/dist"
+    },
     "build": {
+      "dependsOn": ["clean-build", "^build"],
       "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
+        "inputPath": "packages/CLIENTNAME/src",
         "outputPath": "packages/CLIENTNAME/dist",
-        "main": "packages/CLIENTNAME/index.ts",
+        "main": "packages/CLIENTNAME/src/index.ts",
         "esmTsConfig": "packages/CLIENTNAME/tsconfig.esm.json",
         "cjsTsConfig": "packages/CLIENTNAME/tsconfig.cjs.json"
       }

@@ -10,3 +10,6 @@ runs:
     - name: Test affected
       shell: bash
       run: npx nx affected -t test --configuration=ci --exclude=@redhat-cloud-services/CLIENTNAME-client
+    - name: Test client scaffolding utilities
+      shell: bash
+      run: npm run test:create-client

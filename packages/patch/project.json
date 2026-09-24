@@ -8,9 +8,12 @@
     "clean-generate": {
       "command": "rm -rf packages/patch/src"
     },
+    "configure-secret-scanning": {
+      "command": "node utils/add-secret-scanning-exclusion.js patch"
+    },
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
-      "dependsOn": ["clean-generate"],
+      "dependsOn": ["clean-generate", "configure-secret-scanning"],
       "options": {
         "outputPath": "packages/patch/src",
         "specs": {
