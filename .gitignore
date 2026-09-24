@@ -54,3 +54,4 @@ target/typescript-axios-webpack-module-federation-openapi-generator-*-tests*
 
 # Goose
 .goose_prompt_temp.md
+/thoughts
