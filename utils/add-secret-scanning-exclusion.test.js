@@ -1,6 +1,7 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const { Worker } = require('worker_threads');
 
 const {
   START_MARKER,
@@ -8,25 +9,71 @@ const {
   buildEntry,
   assertValidClientName,
   insertClientExclusion,
+  insertMultipleClientExclusions,
   addClientExclusion,
+  addClientExclusions,
+  findStandardClientDirs,
+  extractFilePathFromArgs,
+  resolveClientsFromArgs,
+  cleanStaleLock,
+  acquireLock,
+  releaseLock,
+  withFileLock,
 } = require('./add-secret-scanning-exclusion');
 
+function fixtureHeader() {
+  return '# GitHub Secret Scanning Exclusions\n\npaths-ignore:\n  - "package-lock.json"\n\n  # Auto-generated clients\n';
+}
+
 function fixtureYaml(blockLines) {
-  return [
-    '# GitHub Secret Scanning Exclusions',
-    '',
-    'paths-ignore:',
-    '  - "package-lock.json"',
-    '',
-    '  # Auto-generated clients',
-    `  ${START_MARKER}`,
-    ...blockLines.map((line) => `  ${line}`),
-    `  ${END_MARKER}`,
-    '',
-    '  # Legacy / special-cased exclusions',
-    '  - "packages/vulnerabilities/api.ts"',
-    '',
-  ].join('\n');
+  const content = blockLines.map((line) => `  ${line}`).join('\n');
+  const legacy = '\n\n  # Legacy\n  - "packages/vulnerabilities/api.ts"\n';
+  return `${fixtureHeader()}  ${START_MARKER}\n${content}\n  ${END_MARKER}${legacy}`;
+}
+
+function createTempFixture(blockLines = ['- "packages/compliance/src/**"']) {
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'secret-scanning-'));
+  const tmpFile = path.join(tmpDir, 'secret_scanning.yml');
+  fs.writeFileSync(tmpFile, fixtureYaml(blockLines), 'utf8');
+  return { tmpDir, tmpFile };
+}
+
+function runConcurrentClientRegistration(clientName, filePath) {
+  return new Promise((resolve, reject) => {
+    const scriptPath = path.resolve(__dirname, 'add-secret-scanning-exclusion');
+    const workerScript = `
+      const { addClientExclusion } = require(${JSON.stringify(scriptPath)});
+      addClientExclusion(${JSON.stringify(clientName)}, ${JSON.stringify(filePath)});
+    `;
+    const worker = new Worker(workerScript, { eval: true });
+    worker.on('exit', (code) => {
+      code === 0 ? resolve() : reject(new Error(`Worker exited with code ${code}`));
+    });
+    worker.on('error', reject);
+  });
+}
+
+function verifyClientsPresentInFile(filePath, clientNames) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  for (const clientName of clientNames) {
+    expect(content).toContain(`- "packages/${clientName}/src/**"`);
+  }
+}
+
+function extractBlockOrder(yamlContent, names) {
+  const blockStart = yamlContent.indexOf(START_MARKER);
+  const blockEnd = yamlContent.indexOf(END_MARKER);
+  const block = yamlContent.slice(blockStart, blockEnd);
+  return names.map((name) => block.indexOf(`packages/${name}/src`));
+}
+
+function extractOutsideBlock(yamlContent) {
+  const start = yamlContent.indexOf(START_MARKER);
+  const end = yamlContent.indexOf(END_MARKER) + END_MARKER.length;
+  return {
+    before: yamlContent.slice(0, start),
+    after: yamlContent.slice(end),
+  };
 }
 
 describe('buildEntry', () => {
@@ -71,16 +118,10 @@ describe('insertClientExclusion', () => {
       '- "packages/compliance/src/**"',
       '- "packages/rbac/src/**"',
     ]);
+    const names = ['compliance', 'notifications', 'rbac'];
 
     const updated = insertClientExclusion(original, 'notifications');
-
-    const blockStart = updated.indexOf(START_MARKER);
-    const blockEnd = updated.indexOf(END_MARKER);
-    const block = updated.slice(blockStart, blockEnd);
-
-    const order = ['compliance', 'notifications', 'rbac'].map(
-      (name) => block.indexOf(`packages/${name}/src`)
-    );
+    const order = extractBlockOrder(updated, names);
 
     expect(order).toEqual([...order].sort((a, b) => a - b));
   });
@@ -114,18 +155,11 @@ describe('insertClientExclusion', () => {
     const original = fixtureYaml(['- "packages/compliance/src/**"']);
 
     const updated = insertClientExclusion(original, 'scheduler');
+    const origOutside = extractOutsideBlock(original);
+    const updatedOutside = extractOutsideBlock(updated);
 
-    const originalBefore = original.slice(0, original.indexOf(START_MARKER));
-    const originalAfter = original.slice(
-      original.indexOf(END_MARKER) + END_MARKER.length
-    );
-    const updatedBefore = updated.slice(0, updated.indexOf(START_MARKER));
-    const updatedAfter = updated.slice(
-      updated.indexOf(END_MARKER) + END_MARKER.length
-    );
-
-    expect(updatedBefore).toBe(originalBefore);
-    expect(updatedAfter).toBe(originalAfter);
+    expect(updatedOutside.before).toBe(origOutside.before);
+    expect(updatedOutside.after).toBe(origOutside.after);
   });
 
   it('throws a descriptive error when markers are missing', () => {
@@ -145,18 +179,36 @@ describe('insertClientExclusion', () => {
   });
 });
 
+describe('insertMultipleClientExclusions', () => {
+  it('inserts multiple clients in alphabetical order in one call', () => {
+    const original = fixtureYaml(['- "packages/compliance/src/**"']);
+    const clients = ['zebra-service', 'alpha-service'];
+
+    const updated = insertMultipleClientExclusions(original, clients);
+
+    expect(updated).toContain('- "packages/alpha-service/src/**"');
+    expect(updated).toContain('- "packages/zebra-service/src/**"');
+    expect(updated.indexOf('alpha-service')).toBeLessThan(updated.indexOf('zebra-service'));
+  });
+
+  it('handles existing and new clients idempotently', () => {
+    const original = fixtureYaml(['- "packages/compliance/src/**"']);
+    const clients = ['compliance', 'notifications'];
+
+    const updated = insertMultipleClientExclusions(original, clients);
+
+    expect(updated).toContain('- "packages/notifications/src/**"');
+    const occurrences = (updated.match(/packages\/compliance\/src/g) || []).length;
+    expect(occurrences).toBe(1);
+  });
+});
+
 describe('addClientExclusion (filesystem integration)', () => {
   let tmpDir;
   let tmpFile;
 
   beforeEach(() => {
-    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'secret-scanning-'));
-    tmpFile = path.join(tmpDir, 'secret_scanning.yml');
-    fs.writeFileSync(
-      tmpFile,
-      fixtureYaml(['- "packages/compliance/src/**"']),
-      'utf8'
-    );
+    ({ tmpDir, tmpFile } = createTempFixture());
   });
 
   afterEach(() => {
@@ -197,22 +249,129 @@ describe('addClientExclusion (filesystem integration)', () => {
   });
 });
 
-describe('against the real .github/secret_scanning.yml', () => {
-  it('contains the markers this script depends on', () => {
-    const realPath = path.resolve(__dirname, '..', '.github', 'secret_scanning.yml');
-    const content = fs.readFileSync(realPath, 'utf8');
+describe('addClientExclusions (batch registration)', () => {
+  let tmpDir;
+  let tmpFile;
 
-    expect(content).toContain(START_MARKER);
-    expect(content).toContain(END_MARKER);
+  beforeEach(() => {
+    ({ tmpDir, tmpFile } = createTempFixture());
+  });
+
+  afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  it('adds multiple clients in a single pass', () => {
+    const clients = ['client-one', 'client-two'];
+    const changed = addClientExclusions(clients, tmpFile);
+
+    expect(changed).toBe(true);
+    verifyClientsPresentInFile(tmpFile, clients);
+  });
+
+  it('returns false when all requested clients are already present', () => {
+    addClientExclusions(['client-one'], tmpFile);
+
+    const secondCallResult = addClientExclusions(['client-one'], tmpFile);
+
+    expect(secondCallResult).toBe(false);
+  });
+});
+
+describe('file locking and synchronization', () => {
+  let tmpDir;
+  let tmpFile;
+
+  beforeEach(() => {
+    ({ tmpDir, tmpFile } = createTempFixture());
+  });
+
+  afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  it('cleans up stale locks older than maxAgeMs', () => {
+    const lockPath = `${tmpFile}.lock`;
+    fs.writeFileSync(lockPath, 'stale-pid');
+    const pastTime = (Date.now() - 25000) / 1000;
+    fs.utimesSync(lockPath, pastTime, pastTime);
+
+    cleanStaleLock(lockPath, 15000);
+
+    expect(fs.existsSync(lockPath)).toBe(false);
+  });
+
+  it('throws timeout error when lock remains held beyond timeout', () => {
+    const lockPath = `${tmpFile}.lock`;
+    fs.writeFileSync(lockPath, String(process.pid));
+
+    expect(() => acquireLock(lockPath, 100, 20)).toThrow(/Timeout waiting for lock/);
+
+    releaseLock(lockPath);
+  });
+
+  it('handles concurrent registrations without losing entries', async () => {
+    const clients = ['concurrent-a', 'concurrent-b', 'concurrent-c', 'concurrent-d'];
+
+    await Promise.all(
+      clients.map((client) => runConcurrentClientRegistration(client, tmpFile))
+    );
+
+    verifyClientsPresentInFile(tmpFile, clients);
+  });
+});
+
+describe('CLI argument resolution', () => {
+  it('extracts custom file path when --file is provided', () => {
+    const args = ['my-client', '--file', '/custom/path/secret_scanning.yml'];
+    const resolvedPath = extractFilePathFromArgs(args);
+    expect(resolvedPath).toBe(path.resolve('/custom/path/secret_scanning.yml'));
+  });
+
+  it('filters out flags and flag values from client name list', () => {
+    const args = ['client-a', '--file', '/custom/path', 'client-b'];
+    const packagesDir = path.resolve(__dirname, '..', 'packages');
+    const clients = resolveClientsFromArgs(args, packagesDir);
+    expect(clients).toEqual(['client-a', 'client-b']);
+  });
+
+  it('resolves standard client dirs when --all is specified', () => {
+    const packagesDir = path.resolve(__dirname, '..', 'packages');
+    const clients = resolveClientsFromArgs(['--all'], packagesDir);
+    expect(clients).toContain('rbac');
+    expect(clients).toContain('compliance');
+    expect(clients).not.toContain('vulnerabilities');
+  });
+});
+
+describe('against the real .github/secret_scanning.yml', () => {
+  let realContent;
+
+  beforeAll(() => {
+    const realPath = path.resolve(__dirname, '..', '.github', 'secret_scanning.yml');
+    realContent = fs.readFileSync(realPath, 'utf8');
+  });
+
+  it('contains the auto-managed exclusion markers', () => {
+    expect(realContent).toContain(START_MARKER);
+    expect(realContent).toContain(END_MARKER);
+  });
+
+  it('does not exclude docs/** to preserve handwritten guide scanning', () => {
+    expect(realContent).not.toMatch(/^\s*-\s*["']docs\/\*\*["']/m);
+  });
+
+  it('excludes root package-lock.json without redundant wildcard', () => {
+    expect(realContent).toMatch(/^\s*-\s*["']package-lock\.json["']/m);
+    expect(realContent).not.toMatch(/^\s*-\s*["']\*\*\/package-lock\.json["']/m);
+  });
+
+  it('excludes generated typedoc documentation under packages', () => {
+    expect(realContent).toMatch(/^\s*-\s*["']packages\/\*\*\/doc\/\*\*["']/m);
   });
 
   it('adding an already-scaffolded client is a no-op', () => {
-    const realPath = path.resolve(__dirname, '..', '.github', 'secret_scanning.yml');
-    const content = fs.readFileSync(realPath, 'utf8');
-
-    // "rbac" is one of the packages already scaffolded in this repo.
-    const updated = insertClientExclusion(content, 'rbac');
-
-    expect(updated).toBe(content);
+    const updated = insertClientExclusion(realContent, 'rbac');
+    expect(updated).toBe(realContent);
   });
 });
