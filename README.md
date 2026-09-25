@@ -100,6 +100,10 @@ By default NX caches the build results of the clients upon initial build. Consec
 ### Creating a new client
 Run `npm run create-client` and enter your new client name (e.g. entering `notifications` will generate `notifications-client`). All the necessary TS and NX config files will be created for you.
 
+In the same PR, add `- "packages/<name>/src/**"` to `.github/secret_scanning.yml` in alphabetical order, using the new package directory name. Run `npm run test:secret-scanning-exclusions` to check coverage; PR CI fails until the entry is present. Generation does not edit the YAML.
+
+For client source, exclude only generated `src/**` paths. Handwritten packages and repository docs remain scanned; a broad `packages/*/src/**` exclusion would also hide handwritten code.
+
 ### Specifying your OpenAPI spec locations
 After client creation, add your OpenAPI spec locations as an object entries in your client's `project.json` NX configuration for the `client-generator` executor. The `client-generator` supports multiple spec entries. Entries should follow the pattern below.
 ```
@@ -121,14 +125,7 @@ After client creation, add your OpenAPI spec locations as an object entries in y
   }
 }
 ```
-Note: every client's `generate` target also depends on a
-`configure-secret-scanning` target, which registers the client's generated
-`src/` directory as excluded from GitHub secret scanning (see
-`.github/secret_scanning.yml` and `utils/add-secret-scanning-exclusion.js`).
-This is scaffolded automatically by `npm run create-client` — don't remove
-it when customizing your `generate` target.
-
-where the `specs` object keys are the directories to export your endpoints and the corresponding key values as the location to the spec itself. For keys, `default` will export all your endpoints at the root level of the client and any key other than `default` will export to that path instead. An example import for the above `default` spec entry as well as the `v2` spec entry can be seen in the following examples
+The `specs` object keys are the directories to export your endpoints and the corresponding key values as the location to the spec itself. For keys, `default` will export all your endpoints at the root level of the client and any key other than `default` will export to that path instead. An example import for the above `default` spec entry as well as the `v2` spec entry can be seen in the following examples
 
 default:
 

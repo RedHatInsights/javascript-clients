@@ -50,9 +50,13 @@ npm install
 
 1. Run `npm run create-client` and enter the service name
 2. Add OpenAPI spec URLs to `packages/<service>/project.json` under `generate.options.specs`
-3. Run `npm run generate` to create TypeScript source
-4. Run `npm run build` to create distributable output
-5. Add integration tests in `packages/<service>/tests/integration/`
+3. Add `- "packages/<service>/src/**"` alphabetically to `.github/secret_scanning.yml` in the same PR
+4. Run `npm run test:secret-scanning-exclusions` (PR CI also checks this entry)
+5. Run `npm run generate` to create TypeScript source
+6. Run `npm run build` to create distributable output
+7. Add integration tests in `packages/<service>/tests/integration/`
+
+Generation does not edit the YAML. For client source, only generated `src/**` paths are excluded from secret scanning. Handwritten packages and repository docs remain scanned; do not replace the explicit entries with `packages/*/src/**`.
 
 ### Modifying Generated Output
 

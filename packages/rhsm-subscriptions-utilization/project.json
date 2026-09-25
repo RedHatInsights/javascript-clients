@@ -8,11 +8,8 @@
     "clean-generate": {
       "command": "rm -rf packages/rhsm-subscriptions-utilization/src"
     },
-    "configure-secret-scanning": {
-      "command": "node utils/add-secret-scanning-exclusion.js rhsm-subscriptions-utilization"
-    },
     "generate": {
-      "dependsOn": ["clean-generate", "configure-secret-scanning"],
+      "dependsOn": ["clean-generate"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
         "outputPath": "packages/rhsm-subscriptions-utilization/src",

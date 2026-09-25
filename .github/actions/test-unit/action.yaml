@@ -10,6 +10,6 @@ runs:
     - name: Test affected
       shell: bash
       run: npx nx affected -t test --configuration=ci --exclude=@redhat-cloud-services/CLIENTNAME-client
-    - name: Test client scaffolding utilities
+    - name: Check secret-scanning exclusions
       shell: bash
-      run: npm run test:create-client
+      run: npm run test:secret-scanning-exclusions

@@ -8,12 +8,9 @@
     "clean-generate": {
       "command": "rm -rf packages/scheduler/src"
     },
-    "configure-secret-scanning": {
-      "command": "node utils/add-secret-scanning-exclusion.js scheduler"
-    },
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
-      "dependsOn": ["clean-generate", "configure-secret-scanning"],
+      "dependsOn": ["clean-generate"],
       "options": {
         "outputPath": "packages/scheduler/src",
         "specs": {

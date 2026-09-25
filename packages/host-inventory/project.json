@@ -8,11 +8,8 @@
     "clean-generate": {
       "command": "rm -rf packages/host-inventory/src"
     },
-    "configure-secret-scanning": {
-      "command": "node utils/add-secret-scanning-exclusion.js host-inventory"
-    },
     "generate": {
-      "dependsOn": ["clean-generate", "configure-secret-scanning"],
+      "dependsOn": ["clean-generate"],
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
         "outputPath": "packages/host-inventory/src",
