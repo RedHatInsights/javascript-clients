@@ -18,6 +18,13 @@
  * in parallel (e.g. `npm run generate`), each registration safely waits for
  * the lock and reads the latest file state, preventing lost updates.
  *
+ * Stale-lock recovery is ownership-aware: a lock is only reclaimed once it
+ * is both older than STALE_LOCK_MAX_AGE_MS *and* its recorded owner PID is
+ * no longer alive (process.kill(pid, 0)), and the actual reclaim is gated by
+ * an atomic fs.renameSync so at most one concurrent waiter can ever perform
+ * it. This prevents stealing a lock from a slow-but-alive holder and
+ * prevents two waiters from both "recovering" the same stale lock.
+ *
  * This runs automatically as the `configure-secret-scanning` target that
  * every standard client's `generate` target depends on (see
  * packages/<name>/project.json), so it fires on every `nx run <pkg>:generate`
@@ -110,14 +117,58 @@ function sleepSync(delayMs) {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, delayMs);
 }
 
-function cleanStaleLock(lockPath, maxAgeMs = STALE_LOCK_MAX_AGE_MS) {
+function isProcessAlive(pid) {
+  if (!Number.isInteger(pid) || pid <= 0) return false;
   try {
-    const stats = fs.statSync(lockPath);
-    if (Date.now() - stats.mtimeMs > maxAgeMs) {
-      fs.unlinkSync(lockPath);
-    }
+    // Signal 0 does no harm; it only checks whether the pid is reachable.
+    process.kill(pid, 0);
+    return true;
+  } catch (err) {
+    // EPERM means the process exists but is owned by someone else: alive.
+    return err.code === 'EPERM';
+  }
+}
+
+function readLockOwnerPid(lockPath) {
+  try {
+    return parseInt(fs.readFileSync(lockPath, 'utf8').trim(), 10);
   } catch {
-    // Lock file might have been removed concurrently
+    return NaN;
+  }
+}
+
+function isLockStale(lockPath, maxAgeMs) {
+  let stats;
+  try {
+    stats = fs.statSync(lockPath);
+  } catch {
+    return false; // Already released concurrently; nothing to reclaim.
+  }
+  const isOldEnough = Date.now() - stats.mtimeMs > maxAgeMs;
+  return isOldEnough && !isProcessAlive(readLockOwnerPid(lockPath));
+}
+
+// Atomically hands the lock file to a single "reclaimer" so that concurrent
+// waiters can never both decide a lock is stale and both remove/recreate it.
+// fs.renameSync is atomic: exactly one concurrent rename of the same source
+// path can succeed, every other one fails with ENOENT.
+function reclaimStaleLock(lockPath) {
+  const reclaimPath = `${lockPath}.reclaim.${process.pid}.${Date.now()}`;
+  try {
+    fs.renameSync(lockPath, reclaimPath);
+  } catch {
+    return; // Another waiter already reclaimed (or the owner released) it.
+  }
+  try {
+    fs.unlinkSync(reclaimPath);
+  } catch {
+    // Already gone; nothing left to do.
+  }
+}
+
+function cleanStaleLock(lockPath, maxAgeMs = STALE_LOCK_MAX_AGE_MS) {
+  if (isLockStale(lockPath, maxAgeMs)) {
+    reclaimStaleLock(lockPath);
   }
 }
 
@@ -303,6 +354,10 @@ module.exports = {
   extractFilePathFromArgs,
   resolveClientsFromArgs,
   sleepSync,
+  isProcessAlive,
+  readLockOwnerPid,
+  isLockStale,
+  reclaimStaleLock,
   cleanStaleLock,
   acquireLock,
   releaseLock,

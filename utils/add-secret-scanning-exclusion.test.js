@@ -16,10 +16,17 @@ const {
   extractFilePathFromArgs,
   resolveClientsFromArgs,
   cleanStaleLock,
+  isLockStale,
+  reclaimStaleLock,
   acquireLock,
   releaseLock,
   withFileLock,
 } = require('./add-secret-scanning-exclusion');
+
+function backdateLock(lockPath, ageMs) {
+  const past = (Date.now() - ageMs) / 1000;
+  fs.utimesSync(lockPath, past, past);
+}
 
 function fixtureHeader() {
   return '# GitHub Secret Scanning Exclusions\n\npaths-ignore:\n  - "package-lock.json"\n\n  # Auto-generated clients\n';
@@ -290,11 +297,10 @@ describe('file locking and synchronization', () => {
     fs.rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  it('cleans up stale locks older than maxAgeMs', () => {
+  it('cleans up stale locks whose owner pid is no longer alive', () => {
     const lockPath = `${tmpFile}.lock`;
     fs.writeFileSync(lockPath, 'stale-pid');
-    const pastTime = (Date.now() - 25000) / 1000;
-    fs.utimesSync(lockPath, pastTime, pastTime);
+    backdateLock(lockPath, 25000);
 
     cleanStaleLock(lockPath, 15000);
 
@@ -308,6 +314,32 @@ describe('file locking and synchronization', () => {
     expect(() => acquireLock(lockPath, 100, 20)).toThrow(/Timeout waiting for lock/);
 
     releaseLock(lockPath);
+  });
+
+  it('does not reclaim an old lock whose owner pid is still alive', () => {
+    const lockPath = `${tmpFile}.lock`;
+    fs.writeFileSync(lockPath, String(process.pid));
+    backdateLock(lockPath, 25000);
+
+    expect(isLockStale(lockPath, 15000)).toBe(false);
+    expect(() => acquireLock(lockPath, 100, 20)).toThrow(/Timeout waiting for lock/);
+    expect(fs.existsSync(lockPath)).toBe(true);
+
+    releaseLock(lockPath);
+  });
+
+  it('lets only one of two concurrent reclaimers win over the same stale lock', () => {
+    const lockPath = `${tmpFile}.lock`;
+    fs.writeFileSync(lockPath, '999999'); // pid unlikely to be alive
+    backdateLock(lockPath, 25000);
+
+    reclaimStaleLock(lockPath);
+    expect(() => reclaimStaleLock(lockPath)).not.toThrow();
+
+    const staleArtifacts = fs
+      .readdirSync(tmpDir)
+      .filter((name) => name.includes('.lock.reclaim.'));
+    expect(staleArtifacts).toEqual([]);
   });
 
   it('handles concurrent registrations without losing entries', async () => {
