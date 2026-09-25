@@ -82,9 +82,13 @@ Package exports use conditional exports:
 
 1. Run `npm run create-client` and enter the service name
 2. Add spec URLs to the generated `project.json`
-3. Run `npm run generate` to create `src/`
-4. Run `npm run build` to create `dist/`
-5. Add integration tests if the service has stable APIs
+3. Add `- "packages/<service>/src/**"` alphabetically to `.github/secret_scanning.yml` in the same PR
+4. Run `npm run test:secret-scanning-exclusions` (PR CI also checks this entry)
+5. Run `npm run generate` to create `src/`
+6. Run `npm run build` to create `dist/`
+7. Add integration tests if the service has stable APIs
+
+Generation does not edit the YAML. For client source, only generated `src/**` paths are excluded from secret scanning; handwritten packages and repository docs remain scanned. Keep explicit entries rather than using `packages/*/src/**`.
 
 ## Shared Package
 

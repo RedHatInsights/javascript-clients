@@ -31,7 +31,8 @@
     "generate": "nx run-many -t generate --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "lint": "nx run-many -t lint --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "lint:fix": "nx run-many -t lint --fix --exclude=@redhat-cloud-services/CLIENTNAME-client",
-    "test:commitlint": "NODE_OPTIONS=--experimental-vm-modules jest --config=commitlint.jest.config.js"
+    "test:commitlint": "NODE_OPTIONS=--experimental-vm-modules jest --config=commitlint.jest.config.js",
+    "test:secret-scanning-exclusions": "jest --config=utils/secret-scanning-exclusions.jest.config.js"
   },
   "repository": {
     "type": "git",
