@@ -1,3 +1,9 @@
+## 1.1.9 (2026-09-29)
+
+### 🩹 Fixes
+
+- **@redhat-cloud-services/build-utils:** update dependency fs-extra to ^11.4.1 ([#620](https://github.com/RedHatInsights/javascript-clients/pull/620))
+
 ## 1.1.8 (2026-09-21)
 
 ### 🩹 Fixes
