@@ -12,7 +12,7 @@ permissions:
 jobs:
   call-stale-workflow:
     if: github.ref == 'refs/heads/main'
-    uses: RedHatInsights/shared-workflows/.github/workflows/stale.yml@49179c048ff6c47ee4ff8f8722168bbfa1b00fee
+    uses: RedHatInsights/shared-workflows/.github/workflows/stale.yml@49179c048ff6c47ee4ff8f8722168bbfa1b00fee # master
     # Optional: customize inputs
     # with:
     #   days-before-stale: 60
