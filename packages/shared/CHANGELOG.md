@@ -1,3 +1,7 @@
+## 2.0.19 (2026-10-06)
+
+This was a version bump only for @redhat-cloud-services/javascript-clients-shared to align it with other projects, there were no code changes.
+
 ## 2.0.18 (2026-09-29)
 
 This was a version bump only for @redhat-cloud-services/javascript-clients-shared to align it with other projects, there were no code changes.
