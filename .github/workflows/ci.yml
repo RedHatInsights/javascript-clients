@@ -112,7 +112,6 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_BOT_TOKEN }}
-      - uses: './.github/actions/setup-environment'
       - uses: './.github/actions/release'
         with:
           gh_token: ${{ secrets.GH_BOT_TOKEN }}
