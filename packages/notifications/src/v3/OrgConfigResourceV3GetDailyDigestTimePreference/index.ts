@@ -1,0 +1,53 @@
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
+
+import type {  } from '../types';
+
+
+export type OrgConfigResourceV3GetDailyDigestTimePreferenceParams = {
+  options?: AxiosRequestConfig
+}
+
+export type OrgConfigResourceV3GetDailyDigestTimePreferenceReturnType = any;
+
+const isOrgConfigResourceV3GetDailyDigestTimePreferenceObjectParams = (params: [OrgConfigResourceV3GetDailyDigestTimePreferenceParams] | unknown[]): params is [OrgConfigResourceV3GetDailyDigestTimePreferenceParams] => {
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true
+  }
+  return false
+}
+/**
+* Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
+* @summary Retrieve the daily digest time
+* @param {OrgConfigResourceV3GetDailyDigestTimePreferenceParams} config with all available params.
+* @param {*} [options] Override http request option.
+* @throws {RequiredError}
+*/
+export const orgConfigResourceV3GetDailyDigestTimePreferenceParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([OrgConfigResourceV3GetDailyDigestTimePreferenceParams] | [AxiosRequestConfig])) => {
+    const params = isOrgConfigResourceV3GetDailyDigestTimePreferenceObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as OrgConfigResourceV3GetDailyDigestTimePreferenceParams;
+    const { options = {} } = params;
+    const localVarPath = `/org-config/daily-digest/time-preference`;
+    // use dummy base URL string because the URL constructor only accepts absolute URLs.
+    const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
+    const localVarHeaderParameter = {} as any;
+    const localVarQueryParameter = {} as any;
+
+
+
+    setSearchParams(localVarUrlObj, localVarQueryParameter);
+    localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+
+    const args = {
+        urlObj: localVarUrlObj,
+        options: localVarRequestOptions,
+    };
+
+    return sendRequest<OrgConfigResourceV3GetDailyDigestTimePreferenceReturnType>(Promise.resolve(args));
+}
+
+export default orgConfigResourceV3GetDailyDigestTimePreferenceParamCreator;
