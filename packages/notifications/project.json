@@ -15,7 +15,8 @@
         "outputPath": "packages/notifications/src",
         "specs": {
           "default": "https://console.redhat.com/api/notifications/v1.0/openapi.json",
-          "v2": "https://console.redhat.com/api/notifications/v2/openapi.json"
+          "v2": "https://console.redhat.com/api/notifications/v2/openapi.json",
+          "v3": "https://console.redhat.com/api/notifications/v3/openapi.json"
         },
         "clientName": "NotificationsClient"
       }

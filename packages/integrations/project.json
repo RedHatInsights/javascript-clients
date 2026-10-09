@@ -15,7 +15,8 @@
         "outputPath": "packages/integrations/src",
         "specs": {
           "default": "https://console.redhat.com/api/integrations/v1.0/openapi.json",
-          "v2": "https://console.redhat.com/api/integrations/v2/openapi.json"
+          "v2": "https://console.redhat.com/api/integrations/v2/openapi.json",
+          "v3": "https://console.redhat.com/api/integrations/v3/openapi.json"
         },
         "clientName": "IntegrationsClient"
       }

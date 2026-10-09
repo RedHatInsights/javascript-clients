@@ -1,0 +1,60 @@
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
+
+import type {  } from '../types';
+
+
+export type EndpointResourceV3DisableEndpointParams = {
+  /**
+  *
+  * @type { any }
+  * @memberof EndpointResourceV3DisableEndpointApi
+  */
+  id: any,
+  options?: AxiosRequestConfig
+}
+
+export type EndpointResourceV3DisableEndpointReturnType = void;
+
+const isEndpointResourceV3DisableEndpointObjectParams = (params: [EndpointResourceV3DisableEndpointParams] | unknown[]): params is [EndpointResourceV3DisableEndpointParams] => {
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true && Object.prototype.hasOwnProperty.call(params[0], 'id')
+  }
+  return false
+}
+/**
+* Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
+* @summary Disable an endpoint
+* @param {EndpointResourceV3DisableEndpointParams} config with all available params.
+* @param {*} [options] Override http request option.
+* @throws {RequiredError}
+*/
+export const endpointResourceV3DisableEndpointParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([EndpointResourceV3DisableEndpointParams] | [any, AxiosRequestConfig])) => {
+    const params = isEndpointResourceV3DisableEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV3DisableEndpointParams;
+    const { id, options = {} } = params;
+    const localVarPath = `/endpoints/{id}/enable`
+        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+    // use dummy base URL string because the URL constructor only accepts absolute URLs.
+    const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+    const localVarRequestOptions = { method: 'DELETE' as Method, ...options};
+    const localVarHeaderParameter = {} as any;
+    const localVarQueryParameter = {} as any;
+
+
+
+    setSearchParams(localVarUrlObj, localVarQueryParameter);
+    localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+
+    const args = {
+        urlObj: localVarUrlObj,
+        options: localVarRequestOptions,
+    };
+
+    return sendRequest<EndpointResourceV3DisableEndpointReturnType>(Promise.resolve(args));
+}
+
+export default endpointResourceV3DisableEndpointParamCreator;
