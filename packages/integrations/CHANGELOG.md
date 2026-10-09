@@ -1,3 +1,17 @@
+# 7.0.0 (2026-10-09)
+
+### 🚀 Features
+
+- ⚠️  **@redhat-cloud-services/notifications-client,@redhat-cloud-services/integrations-client:** regenerate clients from v3 OpenAPI specs ([#631](https://github.com/RedHatInsights/javascript-clients/pull/631))
+
+### ⚠️  Breaking Changes
+
+- **@redhat-cloud-services/notifications-client,@redhat-cloud-services/integrations-client:** regenerate clients from v3 OpenAPI specs  ([#631](https://github.com/RedHatInsights/javascript-clients/pull/631))
+
+### ❤️ Thank You
+
+- alex @aferd
+
 ## 6.0.16 (2026-10-06)
 
 ### 🧱 Updated Dependencies
