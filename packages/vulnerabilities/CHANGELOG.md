@@ -1,3 +1,7 @@
+## 4.0.4 (2026-10-09)
+
+This was a version bump only for @redhat-cloud-services/vulnerabilities-client to align it with other projects, there were no code changes.
+
 ## 4.0.3 (2026-10-06)
 
 This was a version bump only for @redhat-cloud-services/vulnerabilities-client to align it with other projects, there were no code changes.
