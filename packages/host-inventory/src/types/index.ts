@@ -662,6 +662,18 @@ export interface HostFilters {
      * @memberof HostFilters
      */
     'system_type'?: Array<HostFiltersSystemTypeEnum>;
+    /**
+     * Filter by Advisor recommendation severity (OR logic).
+     * @type {Array<string>}
+     * @memberof HostFilters
+     */
+    'recommendation_severity'?: Array<HostFiltersRecommendationSeverityEnum>;
+    /**
+     * Filter by Advisor incident status.
+     * @type {string}
+     * @memberof HostFilters
+     */
+    'incident_status'?: HostFiltersIncidentStatusEnum;
 }
 
 export const HostFiltersStalenessEnum = {
@@ -680,6 +692,20 @@ export const HostFiltersSystemTypeEnum = {
 } as const;
 
 export type HostFiltersSystemTypeEnum = typeof HostFiltersSystemTypeEnum[keyof typeof HostFiltersSystemTypeEnum];
+export const HostFiltersRecommendationSeverityEnum = {
+    Critical: 'critical',
+    Important: 'important',
+    Moderate: 'moderate',
+    Low: 'low'
+} as const;
+
+export type HostFiltersRecommendationSeverityEnum = typeof HostFiltersRecommendationSeverityEnum[keyof typeof HostFiltersRecommendationSeverityEnum];
+export const HostFiltersIncidentStatusEnum = {
+    Incident: 'incident',
+    NoIncident: 'no_incident'
+} as const;
+
+export type HostFiltersIncidentStatusEnum = typeof HostFiltersIncidentStatusEnum[keyof typeof HostFiltersIncidentStatusEnum];
 
 /**
  * A single Host ID that belongs to a host.
