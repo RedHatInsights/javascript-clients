@@ -1,3 +1,13 @@
+## 7.4.0 (2026-10-19)
+
+### 🚀 Features
+
+- **@redhat-cloud-services/host-inventory-client:** add recommendation_severity and incident_status filters ([#638](https://github.com/RedHatInsights/javascript-clients/pull/638))
+
+### ❤️ Thank You
+
+- Zhamilya Abikenova
+
 ## 7.3.3 (2026-10-09)
 
 ### 🧱 Updated Dependencies
