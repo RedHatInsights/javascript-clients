@@ -20,7 +20,7 @@
     "doc": "npm run doc --workspaces",
     "nx": "nx",
     "nx:reset": "nx reset",
-    "prepare": "husky install",
+    "prepare": "husky",
     "dev": "nx run test-app:serve",
     "test:unit": "nx run-many -t test --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "test:unit:affected": "nx affected -t test --exclude=@redhat-cloud-services/CLIENTNAME-client",
