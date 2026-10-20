@@ -55,6 +55,12 @@
       "matchUpdateTypes": ["lockFileMaintenance"],
       "semanticCommitType": "chore",
       "semanticCommitScope": "deps"
+    },
+    {
+      "description": "Maven deps are build tooling (OpenAPI generator) — no package release should be triggered",
+      "matchManagers": ["maven"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps"
     }
   ]
 }
