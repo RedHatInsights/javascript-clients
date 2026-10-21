@@ -112,7 +112,9 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_BOT_TOKEN }}
-          persist-credentials: false
+          # The release action pushes the release commit and tags over HTTPS in a later step;
+          # the token must stay in .git/config for that push to authenticate.
+          persist-credentials: true
       - uses: './.github/actions/release'
         with:
           gh_token: ${{ secrets.GH_BOT_TOKEN }}
