@@ -1,3 +1,9 @@
+## 1.0.11 (2026-10-21)
+
+### 🧱 Updated Dependencies
+
+- Updated @redhat-cloud-services/javascript-clients-shared to 2.0.21
+
 ## 1.0.10 (2026-10-09)
 
 ### 🧱 Updated Dependencies

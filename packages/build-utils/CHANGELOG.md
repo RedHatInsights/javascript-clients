@@ -1,3 +1,13 @@
+## 1.1.12 (2026-10-21)
+
+### 🩹 Fixes
+
+- **deps:** update npm minor and patch dependencies ([#635](https://github.com/RedHatInsights/javascript-clients/pull/635))
+
+### ❤️ Thank You
+
+- Charles Mulder @charlesmulder
+
 ## 1.1.11 (2026-10-09)
 
 This was a version bump only for @redhat-cloud-services/build-utils to align it with other projects, there were no code changes.
