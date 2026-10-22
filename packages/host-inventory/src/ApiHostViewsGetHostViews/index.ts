@@ -164,6 +164,18 @@ export type ApiHostViewsGetHostViewsParams = {
   * @memberof ApiHostViewsGetHostViewsApi
   */
   incidentStatus?: ApiHostViewsGetHostViewsIncidentStatusEnum,
+  /**
+  * Filters hosts by Vulnerability CVE severity. Only hosts with at least one CVE of the specified severity are returned. Multiple values use OR logic (e.g. critical + low returns hosts with either).
+  * @type { Array<ApiHostViewsGetHostViewsCveSeverityEnum> }
+  * @memberof ApiHostViewsGetHostViewsApi
+  */
+  cveSeverity?: Array<ApiHostViewsGetHostViewsCveSeverityEnum>,
+  /**
+  * Filters hosts by Vulnerability known exploit status. Mutually exclusive: only one value may be provided. \"has_known_exploit\" returns hosts with cves_with_known_exploits > 0. \"no_known_exploit\" returns hosts with cves_with_known_exploits = 0 (excludes hosts with no Vulnerability data).
+  * @type { ApiHostViewsGetHostViewsKnownExploitEnum }
+  * @memberof ApiHostViewsGetHostViewsApi
+  */
+  knownExploit?: ApiHostViewsGetHostViewsKnownExploitEnum,
   options?: AxiosRequestConfig
 }
 /**
@@ -289,6 +301,26 @@ export const ApiHostViewsGetHostViewsIncidentStatusEnum = {
     NoIncident: 'no_incident'
 } as const;
 export type ApiHostViewsGetHostViewsIncidentStatusEnum = typeof ApiHostViewsGetHostViewsIncidentStatusEnum[keyof typeof ApiHostViewsGetHostViewsIncidentStatusEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const ApiHostViewsGetHostViewsCveSeverityEnum = {
+    Critical: 'critical',
+    Important: 'important',
+    Moderate: 'moderate',
+    Low: 'low'
+} as const;
+export type ApiHostViewsGetHostViewsCveSeverityEnum = typeof ApiHostViewsGetHostViewsCveSeverityEnum[keyof typeof ApiHostViewsGetHostViewsCveSeverityEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const ApiHostViewsGetHostViewsKnownExploitEnum = {
+    HasKnownExploit: 'has_known_exploit',
+    NoKnownExploit: 'no_known_exploit'
+} as const;
+export type ApiHostViewsGetHostViewsKnownExploitEnum = typeof ApiHostViewsGetHostViewsKnownExploitEnum[keyof typeof ApiHostViewsGetHostViewsKnownExploitEnum];
 
 export type ApiHostViewsGetHostViewsReturnType = HostViewQueryOutput;
 
@@ -306,9 +338,9 @@ const isApiHostViewsGetHostViewsObjectParams = (params: [ApiHostViewsGetHostView
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostViewsGetHostViewsParams] | [string, string, string, string, string, string, ApiHostViewsGetHostViewsProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, string, number, number, ApiHostViewsGetHostViewsOrderByEnum, string, Array<ApiHostViewsGetHostViewsStalenessEnum>, Array<string>, Array<ApiHostViewsGetHostViewsRegisteredWithEnum>, Array<ApiHostViewsGetHostViewsSystemTypeEnum>, { [key: string]: HostViewCombinedFilterValue; }, HostViewCombinedFields, Array<ApiHostViewsGetHostViewsRecommendationSeverityEnum>, ApiHostViewsGetHostViewsIncidentStatusEnum, AxiosRequestConfig])) => {
-    const params = isApiHostViewsGetHostViewsObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'workspaceName', 'workspaceId', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'recommendationSeverity', 'incidentStatus', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostViewsGetHostViewsParams;
-    const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, workspaceName, workspaceId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, recommendationSeverity, incidentStatus, options = {} } = params;
+export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostViewsGetHostViewsParams] | [string, string, string, string, string, string, ApiHostViewsGetHostViewsProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, string, number, number, ApiHostViewsGetHostViewsOrderByEnum, string, Array<ApiHostViewsGetHostViewsStalenessEnum>, Array<string>, Array<ApiHostViewsGetHostViewsRegisteredWithEnum>, Array<ApiHostViewsGetHostViewsSystemTypeEnum>, { [key: string]: HostViewCombinedFilterValue; }, HostViewCombinedFields, Array<ApiHostViewsGetHostViewsRecommendationSeverityEnum>, ApiHostViewsGetHostViewsIncidentStatusEnum, Array<ApiHostViewsGetHostViewsCveSeverityEnum>, ApiHostViewsGetHostViewsKnownExploitEnum, AxiosRequestConfig])) => {
+    const params = isApiHostViewsGetHostViewsObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'workspaceName', 'workspaceId', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'recommendationSeverity', 'incidentStatus', 'cveSeverity', 'knownExploit', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostViewsGetHostViewsParams;
+    const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, workspaceName, workspaceId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, recommendationSeverity, incidentStatus, cveSeverity, knownExploit, options = {} } = params;
     const localVarPath = `/beta/hosts-view`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -426,6 +458,14 @@ export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI[
 
     if (incidentStatus !== undefined) {
         localVarQueryParameter['incident_status'] = incidentStatus;
+    }
+
+    if (cveSeverity) {
+        localVarQueryParameter['cve_severity'] = cveSeverity;
+    }
+
+    if (knownExploit !== undefined) {
+        localVarQueryParameter['known_exploit'] = knownExploit;
     }
 
 

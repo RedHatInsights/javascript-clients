@@ -674,6 +674,18 @@ export interface HostFilters {
      * @memberof HostFilters
      */
     'incident_status'?: HostFiltersIncidentStatusEnum;
+    /**
+     * Filter by Vulnerability CVE severity (OR logic).
+     * @type {Array<string>}
+     * @memberof HostFilters
+     */
+    'cve_severity'?: Array<HostFiltersCveSeverityEnum>;
+    /**
+     * Filter by Vulnerability known exploit status.
+     * @type {string}
+     * @memberof HostFilters
+     */
+    'known_exploit'?: HostFiltersKnownExploitEnum;
 }
 
 export const HostFiltersStalenessEnum = {
@@ -706,6 +718,20 @@ export const HostFiltersIncidentStatusEnum = {
 } as const;
 
 export type HostFiltersIncidentStatusEnum = typeof HostFiltersIncidentStatusEnum[keyof typeof HostFiltersIncidentStatusEnum];
+export const HostFiltersCveSeverityEnum = {
+    Critical: 'critical',
+    Important: 'important',
+    Moderate: 'moderate',
+    Low: 'low'
+} as const;
+
+export type HostFiltersCveSeverityEnum = typeof HostFiltersCveSeverityEnum[keyof typeof HostFiltersCveSeverityEnum];
+export const HostFiltersKnownExploitEnum = {
+    HasKnownExploit: 'has_known_exploit',
+    NoKnownExploit: 'no_known_exploit'
+} as const;
+
+export type HostFiltersKnownExploitEnum = typeof HostFiltersKnownExploitEnum[keyof typeof HostFiltersKnownExploitEnum];
 
 /**
  * A single Host ID that belongs to a host.
