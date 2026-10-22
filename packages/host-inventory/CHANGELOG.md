@@ -1,3 +1,17 @@
+# 8.0.0 (2026-10-22)
+
+### 🚀 Features
+
+- ⚠️  **@redhat-cloud-services/host-inventory-client:** add cveSeverity and knownExploit filters ([#646](https://github.com/RedHatInsights/javascript-clients/pull/646))
+
+### ⚠️  Breaking Changes
+
+- **@redhat-cloud-services/host-inventory-client:** add cveSeverity and knownExploit filters  ([#646](https://github.com/RedHatInsights/javascript-clients/pull/646))
+
+### ❤️ Thank You
+
+- Zhamilya Abikenova
+
 ## 7.4.1 (2026-10-21)
 
 ### 🧱 Updated Dependencies
