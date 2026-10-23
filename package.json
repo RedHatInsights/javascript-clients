@@ -59,7 +59,7 @@
     "@nx/web": "23.3.0",
     "@nx/webpack": "23.3.0",
     "@nx/workspace": "23.3.0",
-    "@openapitools/openapi-generator-cli": "^2.41.0",
+    "@openapitools/openapi-generator-cli": "^2.42.0",
     "@stoplight/prism-cli": "^5.16.0",
     "@swc-node/register": "1.12.1",
     "@swc/cli": "0.8.1",
