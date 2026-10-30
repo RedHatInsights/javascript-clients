@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@redhat-cloud-services/javascript-clients-shared": "^1.2.7",
-    "axios": "^1.20.0",
+    "axios": "^1.21.0",
     "tslib": "^2.8.1"
   }
 }
