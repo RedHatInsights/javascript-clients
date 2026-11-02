@@ -4,7 +4,7 @@ import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shar
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-import type { NotFoundErrorResponse, SystemProfileByHostOut, SystemProfileNestedObjectValue } from '../types';
+import type { NotFoundErrorResponse, SystemProfileByHostOut } from '../types';
 
 
 export type ApiHostGetHostSystemProfileByIdParams = {
@@ -39,17 +39,17 @@ export type ApiHostGetHostSystemProfileByIdParams = {
   */
   orderHow?: string,
   /**
-  * Filter by branch_id
+  * Accepted for compatibility. The value is ignored and does not filter the result.
   * @type { string }
   * @memberof ApiHostGetHostSystemProfileByIdApi
   */
   branchId?: string,
   /**
   * Fetches only mentioned system_profile fields. For example, <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": [\"arch\", \"host_type\"]} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?fields[system_profile]=arch,host_type\"
-  * @type { { [key: string]: SystemProfileNestedObjectValue; } }
+  * @type { { [key: string]: any; } }
   * @memberof ApiHostGetHostSystemProfileByIdApi
   */
-  fields?: { [key: string]: SystemProfileNestedObjectValue; },
+  fields?: { [key: string]: any; },
   options?: AxiosRequestConfig
 }
 /**
@@ -81,7 +81,7 @@ const isApiHostGetHostSystemProfileByIdObjectParams = (params: [ApiHostGetHostSy
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostSystemProfileByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostSystemProfileByIdParams] | [Array<string>, number, number, ApiHostGetHostSystemProfileByIdOrderByEnum, string, string, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
+export const apiHostGetHostSystemProfileByIdParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostSystemProfileByIdParams] | [Array<string>, number, number, ApiHostGetHostSystemProfileByIdOrderByEnum, string, string, { [key: string]: any; }, AxiosRequestConfig])) => {
     const params = isApiHostGetHostSystemProfileByIdObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'branchId', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostSystemProfileByIdParams;
     const { hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/system_profile`

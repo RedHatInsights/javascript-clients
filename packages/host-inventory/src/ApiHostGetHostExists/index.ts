@@ -14,6 +14,12 @@ export type ApiHostGetHostExistsParams = {
   * @memberof ApiHostGetHostExistsApi
   */
   insightsId?: string,
+  /**
+  * Accepted for compatibility. The value is ignored and does not filter the result.
+  * @type { string }
+  * @memberof ApiHostGetHostExistsApi
+  */
+  branchId?: string,
   options?: AxiosRequestConfig
 }
 
@@ -33,9 +39,9 @@ const isApiHostGetHostExistsObjectParams = (params: [ApiHostGetHostExistsParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostExistsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostExistsParams] | [string, AxiosRequestConfig])) => {
-    const params = isApiHostGetHostExistsObjectParams(config) ? config[0] : ['insightsId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostExistsParams;
-    const { insightsId, options = {} } = params;
+export const apiHostGetHostExistsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGetHostExistsParams] | [string, string, AxiosRequestConfig])) => {
+    const params = isApiHostGetHostExistsObjectParams(config) ? config[0] : ['insightsId', 'branchId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostExistsParams;
+    const { insightsId, branchId, options = {} } = params;
     const localVarPath = `/host_exists`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -45,6 +51,10 @@ export const apiHostGetHostExistsParamCreator = async (sendRequest: BaseAPI["sen
 
     if (insightsId !== undefined) {
         localVarQueryParameter['insights_id'] = insightsId;
+    }
+
+    if (branchId !== undefined) {
+        localVarQueryParameter['branch_id'] = branchId;
     }
 
 

@@ -21,7 +21,7 @@ export type ApiHostPatchHostByIdParams = {
   */
   patchHostIn: PatchHostIn,
   /**
-  * Filter by branch_id
+  * Accepted for compatibility. The value is ignored and does not filter the result.
   * @type { string }
   * @memberof ApiHostPatchHostByIdApi
   */

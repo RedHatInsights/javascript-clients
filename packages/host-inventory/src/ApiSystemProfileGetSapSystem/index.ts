@@ -4,7 +4,7 @@ import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shar
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-import type { SystemProfileNestedObjectValue, SystemProfileSapSystemOut } from '../types';
+import type { SystemProfileSapSystemOut } from '../types';
 
 
 export type ApiSystemProfileGetSapSystemParams = {
@@ -40,10 +40,10 @@ export type ApiSystemProfileGetSapSystemParams = {
   registeredWith?: Array<ApiSystemProfileGetSapSystemRegisteredWithEnum>,
   /**
   * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"workloads\": {\"sap\": {\"sap_system\": {\"eq\": \"true\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][workloads][sap][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with a specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][operating_system][name][eq]=rhel\" <br /><br /> To get hosts with a specific operating system version, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"rhel\": {\"version\": {\"eq\": \"9\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][operating_system][rhel][version][eq]=9\"
-  * @type { { [key: string]: SystemProfileNestedObjectValue; } }
+  * @type { { [key: string]: any; } }
   * @memberof ApiSystemProfileGetSapSystemApi
   */
-  filter?: { [key: string]: SystemProfileNestedObjectValue; },
+  filter?: { [key: string]: any; },
   options?: AxiosRequestConfig
 }
 /**
@@ -94,7 +94,7 @@ const isApiSystemProfileGetSapSystemObjectParams = (params: [ApiSystemProfileGet
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiSystemProfileGetSapSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiSystemProfileGetSapSystemParams] | [Array<string>, number, number, Array<ApiSystemProfileGetSapSystemStalenessEnum>, Array<ApiSystemProfileGetSapSystemRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
+export const apiSystemProfileGetSapSystemParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiSystemProfileGetSapSystemParams] | [Array<string>, number, number, Array<ApiSystemProfileGetSapSystemStalenessEnum>, Array<ApiSystemProfileGetSapSystemRegisteredWithEnum>, { [key: string]: any; }, AxiosRequestConfig])) => {
     const params = isApiSystemProfileGetSapSystemObjectParams(config) ? config[0] : ['tags', 'perPage', 'page', 'staleness', 'registeredWith', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiSystemProfileGetSapSystemParams;
     const { tags, perPage, page, staleness, registeredWith, filter, options = {} } = params;
     const localVarPath = `/system_profile/sap_system`;

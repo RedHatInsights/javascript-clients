@@ -14,6 +14,12 @@ export type ApiHostHostCheckinParams = {
   * @memberof ApiHostHostCheckinApi
   */
   createCheckIn: CreateCheckIn,
+  /**
+  * Accepted for compatibility. The value is ignored and does not filter the result.
+  * @type { string }
+  * @memberof ApiHostHostCheckinApi
+  */
+  branchId?: string,
   options?: AxiosRequestConfig
 }
 
@@ -33,15 +39,19 @@ const isApiHostHostCheckinObjectParams = (params: [ApiHostHostCheckinParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostHostCheckinParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostHostCheckinParams] | [CreateCheckIn, AxiosRequestConfig])) => {
-    const params = isApiHostHostCheckinObjectParams(config) ? config[0] : ['createCheckIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostHostCheckinParams;
-    const { createCheckIn, options = {} } = params;
+export const apiHostHostCheckinParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostHostCheckinParams] | [CreateCheckIn, string, AxiosRequestConfig])) => {
+    const params = isApiHostHostCheckinObjectParams(config) ? config[0] : ['createCheckIn', 'branchId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostHostCheckinParams;
+    const { createCheckIn, branchId, options = {} } = params;
     const localVarPath = `/hosts/checkin`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'POST' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
+
+    if (branchId !== undefined) {
+        localVarQueryParameter['branch_id'] = branchId;
+    }
 
 
 
