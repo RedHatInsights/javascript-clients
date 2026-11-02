@@ -1,3 +1,13 @@
+## 8.1.0 (2026-11-02)
+
+### 🚀 Features
+
+- **@redhat-cloud-services/host-inventory-client:** generate new host-inventory client ([#657](https://github.com/RedHatInsights/javascript-clients/pull/657))
+
+### ❤️ Thank You
+
+- Zhamilya Abikenova
+
 # 8.0.0 (2026-10-22)
 
 ### 🚀 Features
