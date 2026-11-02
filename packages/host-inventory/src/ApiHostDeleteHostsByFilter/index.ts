@@ -4,7 +4,7 @@ import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shar
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-import type { SystemProfileNestedObjectValue } from '../types';
+import type {  } from '../types';
 
 
 export type ApiHostDeleteHostsByFilterParams = {
@@ -118,10 +118,10 @@ export type ApiHostDeleteHostsByFilterParams = {
   tags?: Array<string>,
   /**
   * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"workloads\": {\"sap\": {\"sap_system\": {\"eq\": \"true\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][workloads][sap][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with a specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][operating_system][name][eq]=rhel\" <br /><br /> To get hosts with a specific operating system version, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"rhel\": {\"version\": {\"eq\": \"9\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][operating_system][rhel][version][eq]=9\"
-  * @type { { [key: string]: SystemProfileNestedObjectValue; } }
+  * @type { { [key: string]: any; } }
   * @memberof ApiHostDeleteHostsByFilterApi
   */
-  filter?: { [key: string]: SystemProfileNestedObjectValue; },
+  filter?: { [key: string]: any; },
   /**
   * Filter by subscription_manager_id
   * @type { string }
@@ -202,7 +202,7 @@ const isApiHostDeleteHostsByFilterObjectParams = (params: [ApiHostDeleteHostsByF
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostDeleteHostsByFilterParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostDeleteHostsByFilterParams] | [string, string, string, string, string, ApiHostDeleteHostsByFilterProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, Array<string>, Array<string>, Array<ApiHostDeleteHostsByFilterRegisteredWithEnum>, Array<ApiHostDeleteHostsByFilterSystemTypeEnum>, Array<ApiHostDeleteHostsByFilterStalenessEnum>, Array<string>, { [key: string]: SystemProfileNestedObjectValue; }, string, AxiosRequestConfig])) => {
+export const apiHostDeleteHostsByFilterParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostDeleteHostsByFilterParams] | [string, string, string, string, string, ApiHostDeleteHostsByFilterProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, Array<string>, Array<string>, Array<ApiHostDeleteHostsByFilterRegisteredWithEnum>, Array<ApiHostDeleteHostsByFilterSystemTypeEnum>, Array<ApiHostDeleteHostsByFilterStalenessEnum>, Array<string>, { [key: string]: any; }, string, AxiosRequestConfig])) => {
     const params = isApiHostDeleteHostsByFilterObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'workspaceName', 'groupId', 'workspaceId', 'registeredWith', 'systemType', 'staleness', 'tags', 'filter', 'subscriptionManagerId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostDeleteHostsByFilterParams;
     const { displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, workspaceName, groupId, workspaceId, registeredWith, systemType, staleness, tags, filter, subscriptionManagerId, options = {} } = params;
     const localVarPath = `/hosts`;

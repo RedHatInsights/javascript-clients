@@ -686,6 +686,12 @@ export interface HostFilters {
      * @memberof HostFilters
      */
     'known_exploit'?: HostFiltersKnownExploitEnum;
+    /**
+     * Filter by Vulnerability security rule status.
+     * @type {string}
+     * @memberof HostFilters
+     */
+    'security_rule'?: HostFiltersSecurityRuleEnum;
 }
 
 export const HostFiltersStalenessEnum = {
@@ -732,6 +738,12 @@ export const HostFiltersKnownExploitEnum = {
 } as const;
 
 export type HostFiltersKnownExploitEnum = typeof HostFiltersKnownExploitEnum[keyof typeof HostFiltersKnownExploitEnum];
+export const HostFiltersSecurityRuleEnum = {
+    Present: 'present',
+    NotPresent: 'not_present'
+} as const;
+
+export type HostFiltersSecurityRuleEnum = typeof HostFiltersSecurityRuleEnum[keyof typeof HostFiltersSecurityRuleEnum];
 
 /**
  * A single Host ID that belongs to a host.
@@ -903,6 +915,12 @@ export interface HostOut {
      * @memberof HostOut
      */
     'system_profile'?: SystemProfile;
+    /**
+     * Tags associated with the host.
+     * @type {Array<StructuredTag>}
+     * @memberof HostOut
+     */
+    'tags'?: Array<StructuredTag>;
     /**
      *
      * @type {string}
@@ -1296,6 +1314,12 @@ export interface HostViewHost {
      * @memberof HostViewHost
      */
     'system_profile'?: SystemProfile;
+    /**
+     * Tags associated with the host.
+     * @type {Array<StructuredTag>}
+     * @memberof HostViewHost
+     */
+    'tags'?: Array<StructuredTag>;
     /**
      *
      * @type {string}
@@ -2578,11 +2602,11 @@ export interface SystemProfileDiskDevice {
      */
     'label'?: string;
     /**
-     * An arbitrary object that does not allow empty string keys.
-     * @type {{ [key: string]: SystemProfileNestedObjectValue; }}
+     * An arbitrary object that allows any additional properties.
+     * @type {{ [key: string]: any; }}
      * @memberof SystemProfileDiskDevice
      */
-    'options'?: { [key: string]: SystemProfileNestedObjectValue; };
+    'options'?: { [key: string]: any; };
     /**
      * The mount point
      * @type {string}
@@ -2738,12 +2762,6 @@ export interface SystemProfileMssql {
     'version'?: string;
 }
 /**
- * @type SystemProfileNestedObjectValue
- * @export
- */
-export type SystemProfileNestedObjectValue = { [key: string]: SystemProfileNestedObjectValue; };
-
-/**
  * Representation of one network interface
  * @export
  * @interface SystemProfileNetworkInterface
@@ -2844,6 +2862,18 @@ export interface SystemProfileOperatingSystemOut {
      * @memberof SystemProfileOperatingSystemOut
      */
     'count'?: number;
+    /**
+     * The page number
+     * @type {number}
+     * @memberof SystemProfileOperatingSystemOut
+     */
+    'page'?: number;
+    /**
+     * The number of items to return per page
+     * @type {number}
+     * @memberof SystemProfileOperatingSystemOut
+     */
+    'per_page'?: number;
     /**
      * The list of operating_system values on the account
      * @type {Array<SystemProfileOperatingSystemOutResultsInner>}
@@ -3049,6 +3079,18 @@ export interface SystemProfileSapSystemOut {
      * @memberof SystemProfileSapSystemOut
      */
     'count'?: number;
+    /**
+     * The page number
+     * @type {number}
+     * @memberof SystemProfileSapSystemOut
+     */
+    'page'?: number;
+    /**
+     * The number of items to return per page
+     * @type {number}
+     * @memberof SystemProfileSapSystemOut
+     */
+    'per_page'?: number;
     /**
      * The list of sap_system values on the account
      * @type {Array<SystemProfileSapSystemOutResultsInner>}

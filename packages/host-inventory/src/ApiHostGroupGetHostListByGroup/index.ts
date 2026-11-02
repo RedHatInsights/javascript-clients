@@ -4,7 +4,7 @@ import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shar
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
-import type { HostQueryOutput, SystemProfileNestedObjectValue } from '../types';
+import type { HostQueryOutput } from '../types';
 
 
 export type ApiHostGroupGetHostListByGroupParams = {
@@ -82,16 +82,16 @@ export type ApiHostGroupGetHostListByGroupParams = {
   registeredWith?: Array<ApiHostGroupGetHostListByGroupRegisteredWithEnum>,
   /**
   * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"workloads\": {\"sap\": {\"sap_system\": {\"eq\": \"true\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][workloads][sap][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with a specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][operating_system][name][eq]=rhel\" <br /><br /> To get hosts with a specific operating system version, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"rhel\": {\"version\": {\"eq\": \"9\"}}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][operating_system][rhel][version][eq]=9\"
-  * @type { { [key: string]: SystemProfileNestedObjectValue; } }
+  * @type { { [key: string]: any; } }
   * @memberof ApiHostGroupGetHostListByGroupApi
   */
-  filter?: { [key: string]: SystemProfileNestedObjectValue; },
+  filter?: { [key: string]: any; },
   /**
   * Fetches only mentioned system_profile fields. For example, <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": [\"arch\", \"host_type\"]} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?fields[system_profile]=arch,host_type\"
-  * @type { { [key: string]: SystemProfileNestedObjectValue; } }
+  * @type { { [key: string]: any; } }
   * @memberof ApiHostGroupGetHostListByGroupApi
   */
-  fields?: { [key: string]: SystemProfileNestedObjectValue; },
+  fields?: { [key: string]: any; },
   options?: AxiosRequestConfig
 }
 /**
@@ -154,7 +154,7 @@ const isApiHostGroupGetHostListByGroupObjectParams = (params: [ApiHostGroupGetHo
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGroupGetHostListByGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGroupGetHostListByGroupParams] | [string, string, string, string, string, number, number, ApiHostGroupGetHostListByGroupOrderByEnum, string, Array<ApiHostGroupGetHostListByGroupStalenessEnum>, Array<string>, Array<ApiHostGroupGetHostListByGroupRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])) => {
+export const apiHostGroupGetHostListByGroupParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostGroupGetHostListByGroupParams] | [string, string, string, string, string, number, number, ApiHostGroupGetHostListByGroupOrderByEnum, string, Array<ApiHostGroupGetHostListByGroupStalenessEnum>, Array<string>, Array<ApiHostGroupGetHostListByGroupRegisteredWithEnum>, { [key: string]: any; }, { [key: string]: any; }, AxiosRequestConfig])) => {
     const params = isApiHostGroupGetHostListByGroupObjectParams(config) ? config[0] : ['groupId', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'filter', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGroupGetHostListByGroupParams;
     const { groupId, displayName, fqdn, hostnameOrId, insightsId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options = {} } = params;
     const localVarPath = `/groups/{group_id}/hosts`
