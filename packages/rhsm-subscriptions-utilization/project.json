@@ -30,8 +30,7 @@
         "outputPath": "packages/rhsm-subscriptions-utilization/dist",
         "main": "packages/rhsm-subscriptions-utilization/src/index.ts",
         "esmTsConfig": "packages/rhsm-subscriptions-utilization/tsconfig.esm.json",
-        "cjsTsConfig": "packages/rhsm-subscriptions-utilization/tsconfig.cjs.json",
-        "assets": [".npmignore"]
+        "cjsTsConfig": "packages/rhsm-subscriptions-utilization/tsconfig.cjs.json"
       }
     },
     "publish": {

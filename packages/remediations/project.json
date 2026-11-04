@@ -30,8 +30,7 @@
         "outputPath": "packages/remediations/dist",
         "main": "packages/remediations/src/index.ts",
         "esmTsConfig": "packages/remediations/tsconfig.esm.json",
-        "cjsTsConfig": "packages/remediations/tsconfig.cjs.json",
-        "assets": [".npmignore"]
+        "cjsTsConfig": "packages/remediations/tsconfig.cjs.json"
       }
     },
     "publish": {
