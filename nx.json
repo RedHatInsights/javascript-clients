@@ -7,7 +7,7 @@
     "build": {
       "cache": true,
       "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
+      "inputs": ["production", "^production", "{workspaceRoot}/.npmignore"]
     },
     "lint": {
       "cache": true,

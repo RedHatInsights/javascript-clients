@@ -16,8 +16,12 @@
 # --- Git hooks & commit tooling ---
 /.husky/ @RedHatInsights/experience-services-package-admins
 /commitlint.config.js @RedHatInsights/experience-services-package-admins
-/commitlint.config.test.js @RedHatInsights/experience-services-package-admins
+/commitlint.config.test.mjs @RedHatInsights/experience-services-package-admins
 /commitlint.jest.config.js @RedHatInsights/experience-services-package-admins
+
+# --- Toolchain versions ---
+/.nvmrc @RedHatInsights/experience-services-package-admins
+/.java-version @RedHatInsights/experience-services-package-admins
 
 # --- Package lifecycle, publish & dependency control ---
 /package.json @RedHatInsights/experience-services-package-admins
@@ -25,6 +29,8 @@
 /.npmrc @RedHatInsights/experience-services-package-admins
 /.npmignore @RedHatInsights/experience-services-package-admins
 /renovate.json @RedHatInsights/experience-services-package-admins
+/packages/*/package.json @RedHatInsights/experience-services-package-admins
+/packages/*/project.json @RedHatInsights/experience-services-package-admins
 
 # --- Build / codegen / task orchestration ---
 /nx.json @RedHatInsights/experience-services-package-admins

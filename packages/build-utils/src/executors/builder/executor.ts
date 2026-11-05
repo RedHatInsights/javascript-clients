@@ -48,12 +48,14 @@ export default async function runExecutor(options: BuilderExecutorSchemaType, co
   const outputDir = `${projectRoot}/${options.outputPath}`;
   const inputDir = options.inputPath ? `${options.inputPath}` : currentProjectRoot;
 
-  const assets = [...(options.assets ?? []), projectPackageJsonPath];
+  const rootNpmignorePath = `${context.root}/.npmignore`;
+  const assets = [...(options.assets ?? []), projectPackageJsonPath, rootNpmignorePath];
 
   await Promise.all([
     validateExistingFile(options.esmTsConfig),
     validateExistingFile(options.cjsTsConfig),
     validateExistingFile(projectPackageJsonPath),
+    validateExistingFile(rootNpmignorePath),
   ]);
   await Promise.all([runTSC(options.esmTsConfig, `${outputDir}/esm`, inputDir), runTSC(options.cjsTsConfig, outputDir, inputDir)]);
   await copyAssets(assets, outputDir);
