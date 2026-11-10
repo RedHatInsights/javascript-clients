@@ -663,35 +663,35 @@ export interface HostFilters {
      */
     'system_type'?: Array<HostFiltersSystemTypeEnum>;
     /**
-     * Filter by Advisor recommendation severity (OR logic).
+     * Filter by Advisor recommendation severity. Values are OR. not_analyzed matches hosts with no Advisor data.
      * @type {Array<string>}
      * @memberof HostFilters
      */
     'recommendation_severity'?: Array<HostFiltersRecommendationSeverityEnum>;
     /**
-     * Filter by Advisor incident status.
-     * @type {string}
+     * Filter by Advisor incident status. Values are OR. present matches incidents greater than 0. not_present matches incidents equal to 0. not_analyzed matches hosts with no Advisor data.
+     * @type {Array<string>}
      * @memberof HostFilters
      */
-    'incident_status'?: HostFiltersIncidentStatusEnum;
+    'incident_status'?: Array<HostFiltersIncidentStatusEnum>;
     /**
-     * Filter by Vulnerability CVE severity (OR logic).
+     * Filter by Vulnerability CVE severity. Values are OR. not_evaluated matches hosts with no Vulnerability data.
      * @type {Array<string>}
      * @memberof HostFilters
      */
     'cve_severity'?: Array<HostFiltersCveSeverityEnum>;
     /**
-     * Filter by Vulnerability known exploit status.
-     * @type {string}
+     * Filter by CVEs with known exploits. Values are OR. present matches a count greater than 0. not_present matches a count equal to 0. not_evaluated matches hosts with no Vulnerability data.
+     * @type {Array<string>}
      * @memberof HostFilters
      */
-    'known_exploit'?: HostFiltersKnownExploitEnum;
+    'known_exploit'?: Array<HostFiltersKnownExploitEnum>;
     /**
-     * Filter by Vulnerability security rule status.
-     * @type {string}
+     * Filter by CVEs with security rules. Values are OR. present matches a count greater than 0. not_present matches a count equal to 0. not_evaluated matches hosts with no Vulnerability data.
+     * @type {Array<string>}
      * @memberof HostFilters
      */
-    'security_rule'?: HostFiltersSecurityRuleEnum;
+    'security_rule'?: Array<HostFiltersSecurityRuleEnum>;
 }
 
 export const HostFiltersStalenessEnum = {
@@ -714,13 +714,15 @@ export const HostFiltersRecommendationSeverityEnum = {
     Critical: 'critical',
     Important: 'important',
     Moderate: 'moderate',
-    Low: 'low'
+    Low: 'low',
+    NotAnalyzed: 'not_analyzed'
 } as const;
 
 export type HostFiltersRecommendationSeverityEnum = typeof HostFiltersRecommendationSeverityEnum[keyof typeof HostFiltersRecommendationSeverityEnum];
 export const HostFiltersIncidentStatusEnum = {
-    Incident: 'incident',
-    NoIncident: 'no_incident'
+    Present: 'present',
+    NotPresent: 'not_present',
+    NotAnalyzed: 'not_analyzed'
 } as const;
 
 export type HostFiltersIncidentStatusEnum = typeof HostFiltersIncidentStatusEnum[keyof typeof HostFiltersIncidentStatusEnum];
@@ -728,19 +730,22 @@ export const HostFiltersCveSeverityEnum = {
     Critical: 'critical',
     Important: 'important',
     Moderate: 'moderate',
-    Low: 'low'
+    Low: 'low',
+    NotEvaluated: 'not_evaluated'
 } as const;
 
 export type HostFiltersCveSeverityEnum = typeof HostFiltersCveSeverityEnum[keyof typeof HostFiltersCveSeverityEnum];
 export const HostFiltersKnownExploitEnum = {
-    HasKnownExploit: 'has_known_exploit',
-    NoKnownExploit: 'no_known_exploit'
+    Present: 'present',
+    NotPresent: 'not_present',
+    NotEvaluated: 'not_evaluated'
 } as const;
 
 export type HostFiltersKnownExploitEnum = typeof HostFiltersKnownExploitEnum[keyof typeof HostFiltersKnownExploitEnum];
 export const HostFiltersSecurityRuleEnum = {
     Present: 'present',
-    NotPresent: 'not_present'
+    NotPresent: 'not_present',
+    NotEvaluated: 'not_evaluated'
 } as const;
 
 export type HostFiltersSecurityRuleEnum = typeof HostFiltersSecurityRuleEnum[keyof typeof HostFiltersSecurityRuleEnum];
@@ -3547,11 +3552,17 @@ export interface TagsOut {
  */
 export interface ViewColumnConfig {
     /**
-     * The column key identifier. Core fields use bare names (e.g. \"display_name\", \"last_check_in\"). App fields use colon-delimited format (e.g. \"compliance:last_scan\", \"advisor:recommendations\"). Validated server-side against the field registry.
+     * The column key identifier. Core fields use bare names (e.g. \"display_name\", \"last_check_in\"). App fields use colon-delimited format (e.g. \"compliance:last_scan\", \"advisor:recommendations\"). Tag columns use a \"tag:\" prefix plus the namespace/key identity (e.g. \"tag:insights-client/env\", \"tag:owner\"). Core and app keys are validated server-side against the field registry. A tag column is accepted when the identity is non-empty.
      * @type {string}
      * @memberof ViewColumnConfig
      */
     'key': string;
+    /**
+     * Whether the column is visible. Omitted or true means shown. False is used for a tag column the user added and then unchecked. Hidden service columns are omitted from the list instead.
+     * @type {boolean}
+     * @memberof ViewColumnConfig
+     */
+    'shown'?: boolean;
 }
 /**
  * The full visual configuration for an inventory view, including column layout, sort order, and active filters.
