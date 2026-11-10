@@ -1,3 +1,13 @@
+## 8.2.0 (2026-11-10)
+
+### 🚀 Features
+
+- **@redhat-cloud-services/host-inventory-client:** update advisor and vulnerability filter params ([#662](https://github.com/RedHatInsights/javascript-clients/pull/662))
+
+### ❤️ Thank You
+
+- Zhamilya Abikenova
+
 ## 8.1.0 (2026-11-02)
 
 ### 🚀 Features
