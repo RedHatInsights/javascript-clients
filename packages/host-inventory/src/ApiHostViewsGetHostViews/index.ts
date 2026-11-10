@@ -153,35 +153,35 @@ export type ApiHostViewsGetHostViewsParams = {
   */
   fields?: HostViewCombinedFields,
   /**
-  * Filters hosts by Advisor recommendation severity. Only hosts with at least one recommendation of the specified severity are returned. Multiple values use OR logic (e.g. critical + low returns hosts with either).
+  * Filters hosts by Advisor recommendation severity. Repeat the parameter for multiple values (recommendation_severity=critical&recommendation_severity=low). Values are OR. critical, important, moderate, and low match hosts whose count for that severity is greater than 0. not_analyzed matches hosts with no Advisor data.
   * @type { Array<ApiHostViewsGetHostViewsRecommendationSeverityEnum> }
   * @memberof ApiHostViewsGetHostViewsApi
   */
   recommendationSeverity?: Array<ApiHostViewsGetHostViewsRecommendationSeverityEnum>,
   /**
-  * Filters hosts by Advisor incident status. Mutually exclusive: only one value may be provided. \"incident\" returns hosts with incidents > 0. \"no_incident\" returns hosts with incidents = 0 (excludes hosts with no Advisor data).
-  * @type { ApiHostViewsGetHostViewsIncidentStatusEnum }
+  * Filters hosts by Advisor incident status. Repeat the parameter for multiple values (incident_status=present&incident_status=not_analyzed). Values are OR. present matches incidents greater than 0. not_present matches a published Advisor row with incidents equal to 0. not_analyzed matches hosts with no Advisor data.
+  * @type { Array<ApiHostViewsGetHostViewsIncidentStatusEnum> }
   * @memberof ApiHostViewsGetHostViewsApi
   */
-  incidentStatus?: ApiHostViewsGetHostViewsIncidentStatusEnum,
+  incidentStatus?: Array<ApiHostViewsGetHostViewsIncidentStatusEnum>,
   /**
-  * Filters hosts by Vulnerability CVE severity. Only hosts with at least one CVE of the specified severity are returned. Multiple values use OR logic (e.g. critical + low returns hosts with either).
+  * Filters hosts by Vulnerability CVE severity. Repeat the parameter for multiple values (cve_severity=critical&cve_severity=low). Values are OR. critical, important, moderate, and low match hosts whose count for that severity is greater than 0. not_evaluated matches hosts with no Vulnerability data.
   * @type { Array<ApiHostViewsGetHostViewsCveSeverityEnum> }
   * @memberof ApiHostViewsGetHostViewsApi
   */
   cveSeverity?: Array<ApiHostViewsGetHostViewsCveSeverityEnum>,
   /**
-  * Filters hosts by Vulnerability known exploit status. Mutually exclusive: only one value may be provided. \"has_known_exploit\" returns hosts with cves_with_known_exploits > 0. \"no_known_exploit\" returns hosts with cves_with_known_exploits = 0 (excludes hosts with no Vulnerability data).
-  * @type { ApiHostViewsGetHostViewsKnownExploitEnum }
+  * Filters hosts by CVEs with known exploits. Repeat the parameter for multiple values (known_exploit=present&known_exploit=not_evaluated). Values are OR. present matches cves_with_known_exploits greater than 0. not_present matches a published Vulnerability row with that count equal to 0. not_evaluated matches hosts with no Vulnerability data.
+  * @type { Array<ApiHostViewsGetHostViewsKnownExploitEnum> }
   * @memberof ApiHostViewsGetHostViewsApi
   */
-  knownExploit?: ApiHostViewsGetHostViewsKnownExploitEnum,
+  knownExploit?: Array<ApiHostViewsGetHostViewsKnownExploitEnum>,
   /**
-  * Filters hosts by Vulnerability security rule status. Mutually exclusive: only one value may be provided. \"present\" returns hosts with cves_with_security_rules > 0. \"not_present\" returns hosts with cves_with_security_rules = 0 (excludes hosts with no Vulnerability data).
-  * @type { ApiHostViewsGetHostViewsSecurityRuleEnum }
+  * Filters hosts by CVEs with security rules. Repeat the parameter for multiple values (security_rule=present&security_rule=not_evaluated). Values are OR. present matches cves_with_security_rules greater than 0. not_present matches a published Vulnerability row with that count equal to 0. not_evaluated matches hosts with no Vulnerability data.
+  * @type { Array<ApiHostViewsGetHostViewsSecurityRuleEnum> }
   * @memberof ApiHostViewsGetHostViewsApi
   */
-  securityRule?: ApiHostViewsGetHostViewsSecurityRuleEnum,
+  securityRule?: Array<ApiHostViewsGetHostViewsSecurityRuleEnum>,
   options?: AxiosRequestConfig
 }
 /**
@@ -295,7 +295,8 @@ export const ApiHostViewsGetHostViewsRecommendationSeverityEnum = {
     Critical: 'critical',
     Important: 'important',
     Moderate: 'moderate',
-    Low: 'low'
+    Low: 'low',
+    NotAnalyzed: 'not_analyzed'
 } as const;
 export type ApiHostViewsGetHostViewsRecommendationSeverityEnum = typeof ApiHostViewsGetHostViewsRecommendationSeverityEnum[keyof typeof ApiHostViewsGetHostViewsRecommendationSeverityEnum];
 /**
@@ -303,8 +304,9 @@ export type ApiHostViewsGetHostViewsRecommendationSeverityEnum = typeof ApiHostV
   * @enum {string}
   */
 export const ApiHostViewsGetHostViewsIncidentStatusEnum = {
-    Incident: 'incident',
-    NoIncident: 'no_incident'
+    Present: 'present',
+    NotPresent: 'not_present',
+    NotAnalyzed: 'not_analyzed'
 } as const;
 export type ApiHostViewsGetHostViewsIncidentStatusEnum = typeof ApiHostViewsGetHostViewsIncidentStatusEnum[keyof typeof ApiHostViewsGetHostViewsIncidentStatusEnum];
 /**
@@ -315,7 +317,8 @@ export const ApiHostViewsGetHostViewsCveSeverityEnum = {
     Critical: 'critical',
     Important: 'important',
     Moderate: 'moderate',
-    Low: 'low'
+    Low: 'low',
+    NotEvaluated: 'not_evaluated'
 } as const;
 export type ApiHostViewsGetHostViewsCveSeverityEnum = typeof ApiHostViewsGetHostViewsCveSeverityEnum[keyof typeof ApiHostViewsGetHostViewsCveSeverityEnum];
 /**
@@ -323,8 +326,9 @@ export type ApiHostViewsGetHostViewsCveSeverityEnum = typeof ApiHostViewsGetHost
   * @enum {string}
   */
 export const ApiHostViewsGetHostViewsKnownExploitEnum = {
-    HasKnownExploit: 'has_known_exploit',
-    NoKnownExploit: 'no_known_exploit'
+    Present: 'present',
+    NotPresent: 'not_present',
+    NotEvaluated: 'not_evaluated'
 } as const;
 export type ApiHostViewsGetHostViewsKnownExploitEnum = typeof ApiHostViewsGetHostViewsKnownExploitEnum[keyof typeof ApiHostViewsGetHostViewsKnownExploitEnum];
 /**
@@ -333,7 +337,8 @@ export type ApiHostViewsGetHostViewsKnownExploitEnum = typeof ApiHostViewsGetHos
   */
 export const ApiHostViewsGetHostViewsSecurityRuleEnum = {
     Present: 'present',
-    NotPresent: 'not_present'
+    NotPresent: 'not_present',
+    NotEvaluated: 'not_evaluated'
 } as const;
 export type ApiHostViewsGetHostViewsSecurityRuleEnum = typeof ApiHostViewsGetHostViewsSecurityRuleEnum[keyof typeof ApiHostViewsGetHostViewsSecurityRuleEnum];
 
@@ -347,13 +352,13 @@ const isApiHostViewsGetHostViewsObjectParams = (params: [ApiHostViewsGetHostView
   return false
 }
 /**
-* Read a combined view of hosts with optional application data such as Advisor, Vulnerability, Compliance, Patch, and others. Application joins are opt-in and controlled through the fields parameter.<br /><br /> Required permissions: inventory:hosts:read. App data is filtered by per-service permissions — services the user lacks read access for are omitted from app_data and listed in denied_services. Sorting or filtering by a denied service returns 403.
+* Read a combined view of hosts with optional application data such as Advisor, Vulnerability, Compliance, Patch, and others. Each result includes the host\'s tags. Application joins are opt-in and controlled through the fields parameter.<br /><br /> Required permissions: inventory:hosts:read. App data is filtered by per-service permissions — services the user lacks read access for are omitted from app_data and listed in denied_services. Sorting or filtering by a denied service returns 403.
 * @summary Read aggregated host and application data
 * @param {ApiHostViewsGetHostViewsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostViewsGetHostViewsParams] | [string, string, string, string, string, string, ApiHostViewsGetHostViewsProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, string, number, number, ApiHostViewsGetHostViewsOrderByEnum, string, Array<ApiHostViewsGetHostViewsStalenessEnum>, Array<string>, Array<ApiHostViewsGetHostViewsRegisteredWithEnum>, Array<ApiHostViewsGetHostViewsSystemTypeEnum>, { [key: string]: HostViewCombinedFilterValue; }, HostViewCombinedFields, Array<ApiHostViewsGetHostViewsRecommendationSeverityEnum>, ApiHostViewsGetHostViewsIncidentStatusEnum, Array<ApiHostViewsGetHostViewsCveSeverityEnum>, ApiHostViewsGetHostViewsKnownExploitEnum, ApiHostViewsGetHostViewsSecurityRuleEnum, AxiosRequestConfig])) => {
+export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostViewsGetHostViewsParams] | [string, string, string, string, string, string, ApiHostViewsGetHostViewsProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, string, number, number, ApiHostViewsGetHostViewsOrderByEnum, string, Array<ApiHostViewsGetHostViewsStalenessEnum>, Array<string>, Array<ApiHostViewsGetHostViewsRegisteredWithEnum>, Array<ApiHostViewsGetHostViewsSystemTypeEnum>, { [key: string]: HostViewCombinedFilterValue; }, HostViewCombinedFields, Array<ApiHostViewsGetHostViewsRecommendationSeverityEnum>, Array<ApiHostViewsGetHostViewsIncidentStatusEnum>, Array<ApiHostViewsGetHostViewsCveSeverityEnum>, Array<ApiHostViewsGetHostViewsKnownExploitEnum>, Array<ApiHostViewsGetHostViewsSecurityRuleEnum>, AxiosRequestConfig])) => {
     const params = isApiHostViewsGetHostViewsObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'workspaceName', 'workspaceId', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'recommendationSeverity', 'incidentStatus', 'cveSeverity', 'knownExploit', 'securityRule', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostViewsGetHostViewsParams;
     const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, workspaceName, workspaceId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, recommendationSeverity, incidentStatus, cveSeverity, knownExploit, securityRule, options = {} } = params;
     const localVarPath = `/beta/hosts-view`;
@@ -471,7 +476,7 @@ export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI[
         localVarQueryParameter['recommendation_severity'] = recommendationSeverity;
     }
 
-    if (incidentStatus !== undefined) {
+    if (incidentStatus) {
         localVarQueryParameter['incident_status'] = incidentStatus;
     }
 
@@ -479,11 +484,11 @@ export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI[
         localVarQueryParameter['cve_severity'] = cveSeverity;
     }
 
-    if (knownExploit !== undefined) {
+    if (knownExploit) {
         localVarQueryParameter['known_exploit'] = knownExploit;
     }
 
-    if (securityRule !== undefined) {
+    if (securityRule) {
         localVarQueryParameter['security_rule'] = securityRule;
     }
 
