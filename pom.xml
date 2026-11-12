@@ -29,7 +29,7 @@
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
-                                    <version>2.2.0</version>
+                                    <version>3.9.0</version>
                                 </requireMavenVersion>
                             </rules>
                         </configuration>

@@ -7,7 +7,7 @@ This repository is set up as a monorepo for all API clients to use one configura
 
 ### Local development
 
-We are using Java to install and build this generator. Please install Java and preferably Maven as well so you don't have any issues when building this new generator.
+We are using Java to install and build this generator. Please install Java and Maven 3.9.0 or later so you don't have any issues when building this new generator.
 
 * Once you have Java and Maven installed you can install dependencies by running `npm install`
 
