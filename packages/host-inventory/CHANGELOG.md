@@ -1,3 +1,13 @@
+## 8.2.1 (2026-11-12)
+
+### 🩹 Fixes
+
+- **deps:** update npm minor and patch dependencies ([#654](https://github.com/RedHatInsights/javascript-clients/pull/654))
+
+### 🧱 Updated Dependencies
+
+- Updated @redhat-cloud-services/javascript-clients-shared to 2.0.22
+
 ## 8.2.0 (2026-11-10)
 
 ### 🚀 Features

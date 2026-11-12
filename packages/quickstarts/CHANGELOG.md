@@ -1,3 +1,13 @@
+## 4.0.26 (2026-11-12)
+
+### 🩹 Fixes
+
+- **deps:** update npm minor and patch dependencies ([#654](https://github.com/RedHatInsights/javascript-clients/pull/654))
+
+### 🧱 Updated Dependencies
+
+- Updated @redhat-cloud-services/javascript-clients-shared to 2.0.22
+
 ## 4.0.25 (2026-10-21)
 
 ### 🧱 Updated Dependencies

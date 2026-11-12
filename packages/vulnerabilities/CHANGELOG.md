@@ -1,3 +1,9 @@
+## 4.0.6 (2026-11-12)
+
+### 🩹 Fixes
+
+- **deps:** update npm minor and patch dependencies ([#654](https://github.com/RedHatInsights/javascript-clients/pull/654))
+
 ## 4.0.5 (2026-10-21)
 
 This was a version bump only for @redhat-cloud-services/vulnerabilities-client to align it with other projects, there were no code changes.

@@ -1,3 +1,9 @@
+## 1.1.13 (2026-11-12)
+
+### 🩹 Fixes
+
+- **deps:** update npm minor and patch dependencies ([#654](https://github.com/RedHatInsights/javascript-clients/pull/654))
+
 ## 1.1.12 (2026-10-21)
 
 ### 🩹 Fixes
