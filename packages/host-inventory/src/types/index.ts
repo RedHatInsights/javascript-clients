@@ -633,6 +633,12 @@ export interface HostFilters {
      */
     'workspace_name'?: Array<string>;
     /**
+     * Filter by workspace ID (UUID format).
+     * @type {Array<string>}
+     * @memberof HostFilters
+     */
+    'workspace_id'?: Array<string>;
+    /**
      * Start of last check-in date range (ISO 8601).
      * @type {string}
      * @memberof HostFilters
@@ -692,6 +698,18 @@ export interface HostFilters {
      * @memberof HostFilters
      */
     'security_rule'?: Array<HostFiltersSecurityRuleEnum>;
+    /**
+     * Filter by Content installable advisory type. Values are OR. not_evaluated matches hosts with no Content data.
+     * @type {Array<string>}
+     * @memberof HostFilters
+     */
+    'installable_advisory_type'?: Array<HostFiltersInstallableAdvisoryTypeEnum>;
+    /**
+     * Filter by Content template assignment. present matches a template_uuid. not_present matches a published Content row with no template_uuid.
+     * @type {string}
+     * @memberof HostFilters
+     */
+    'template'?: HostFiltersTemplateEnum;
 }
 
 export const HostFiltersStalenessEnum = {
@@ -749,6 +767,21 @@ export const HostFiltersSecurityRuleEnum = {
 } as const;
 
 export type HostFiltersSecurityRuleEnum = typeof HostFiltersSecurityRuleEnum[keyof typeof HostFiltersSecurityRuleEnum];
+export const HostFiltersInstallableAdvisoryTypeEnum = {
+    Security: 'security',
+    Bugfix: 'bugfix',
+    Enhancement: 'enhancement',
+    Other: 'other',
+    NotEvaluated: 'not_evaluated'
+} as const;
+
+export type HostFiltersInstallableAdvisoryTypeEnum = typeof HostFiltersInstallableAdvisoryTypeEnum[keyof typeof HostFiltersInstallableAdvisoryTypeEnum];
+export const HostFiltersTemplateEnum = {
+    Present: 'present',
+    NotPresent: 'not_present'
+} as const;
+
+export type HostFiltersTemplateEnum = typeof HostFiltersTemplateEnum[keyof typeof HostFiltersTemplateEnum];
 
 /**
  * A single Host ID that belongs to a host.
