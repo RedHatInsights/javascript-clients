@@ -182,6 +182,18 @@ export type ApiHostViewsGetHostViewsParams = {
   * @memberof ApiHostViewsGetHostViewsApi
   */
   securityRule?: Array<ApiHostViewsGetHostViewsSecurityRuleEnum>,
+  /**
+  * Filters hosts by Content installable advisory type. Repeat the parameter for multiple values (installable_advisory_type=security&installable_advisory_type=bugfix). Values are OR. security, bugfix, enhancement, and other match hosts whose installable count for that type is greater than 0. not_evaluated matches hosts with no Content data.
+  * @type { Array<ApiHostViewsGetHostViewsInstallableAdvisoryTypeEnum> }
+  * @memberof ApiHostViewsGetHostViewsApi
+  */
+  installableAdvisoryType?: Array<ApiHostViewsGetHostViewsInstallableAdvisoryTypeEnum>,
+  /**
+  * Filters hosts by Content template assignment. present matches a published Content row whose template_uuid is set. not_present matches a published Content row whose template_uuid is null. A host with no Content data matches neither value.
+  * @type { ApiHostViewsGetHostViewsTemplateEnum }
+  * @memberof ApiHostViewsGetHostViewsApi
+  */
+  template?: ApiHostViewsGetHostViewsTemplateEnum,
   options?: AxiosRequestConfig
 }
 /**
@@ -341,6 +353,27 @@ export const ApiHostViewsGetHostViewsSecurityRuleEnum = {
     NotEvaluated: 'not_evaluated'
 } as const;
 export type ApiHostViewsGetHostViewsSecurityRuleEnum = typeof ApiHostViewsGetHostViewsSecurityRuleEnum[keyof typeof ApiHostViewsGetHostViewsSecurityRuleEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const ApiHostViewsGetHostViewsInstallableAdvisoryTypeEnum = {
+    Security: 'security',
+    Bugfix: 'bugfix',
+    Enhancement: 'enhancement',
+    Other: 'other',
+    NotEvaluated: 'not_evaluated'
+} as const;
+export type ApiHostViewsGetHostViewsInstallableAdvisoryTypeEnum = typeof ApiHostViewsGetHostViewsInstallableAdvisoryTypeEnum[keyof typeof ApiHostViewsGetHostViewsInstallableAdvisoryTypeEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const ApiHostViewsGetHostViewsTemplateEnum = {
+    Present: 'present',
+    NotPresent: 'not_present'
+} as const;
+export type ApiHostViewsGetHostViewsTemplateEnum = typeof ApiHostViewsGetHostViewsTemplateEnum[keyof typeof ApiHostViewsGetHostViewsTemplateEnum];
 
 export type ApiHostViewsGetHostViewsReturnType = HostViewQueryOutput;
 
@@ -358,9 +391,9 @@ const isApiHostViewsGetHostViewsObjectParams = (params: [ApiHostViewsGetHostView
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostViewsGetHostViewsParams] | [string, string, string, string, string, string, ApiHostViewsGetHostViewsProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, string, number, number, ApiHostViewsGetHostViewsOrderByEnum, string, Array<ApiHostViewsGetHostViewsStalenessEnum>, Array<string>, Array<ApiHostViewsGetHostViewsRegisteredWithEnum>, Array<ApiHostViewsGetHostViewsSystemTypeEnum>, { [key: string]: HostViewCombinedFilterValue; }, HostViewCombinedFields, Array<ApiHostViewsGetHostViewsRecommendationSeverityEnum>, Array<ApiHostViewsGetHostViewsIncidentStatusEnum>, Array<ApiHostViewsGetHostViewsCveSeverityEnum>, Array<ApiHostViewsGetHostViewsKnownExploitEnum>, Array<ApiHostViewsGetHostViewsSecurityRuleEnum>, AxiosRequestConfig])) => {
-    const params = isApiHostViewsGetHostViewsObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'workspaceName', 'workspaceId', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'recommendationSeverity', 'incidentStatus', 'cveSeverity', 'knownExploit', 'securityRule', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostViewsGetHostViewsParams;
-    const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, workspaceName, workspaceId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, recommendationSeverity, incidentStatus, cveSeverity, knownExploit, securityRule, options = {} } = params;
+export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI["sendRequest"], ...config: ([ApiHostViewsGetHostViewsParams] | [string, string, string, string, string, string, ApiHostViewsGetHostViewsProviderTypeEnum, string, string, string, string, Array<string>, Array<string>, string, number, number, ApiHostViewsGetHostViewsOrderByEnum, string, Array<ApiHostViewsGetHostViewsStalenessEnum>, Array<string>, Array<ApiHostViewsGetHostViewsRegisteredWithEnum>, Array<ApiHostViewsGetHostViewsSystemTypeEnum>, { [key: string]: HostViewCombinedFilterValue; }, HostViewCombinedFields, Array<ApiHostViewsGetHostViewsRecommendationSeverityEnum>, Array<ApiHostViewsGetHostViewsIncidentStatusEnum>, Array<ApiHostViewsGetHostViewsCveSeverityEnum>, Array<ApiHostViewsGetHostViewsKnownExploitEnum>, Array<ApiHostViewsGetHostViewsSecurityRuleEnum>, Array<ApiHostViewsGetHostViewsInstallableAdvisoryTypeEnum>, ApiHostViewsGetHostViewsTemplateEnum, AxiosRequestConfig])) => {
+    const params = isApiHostViewsGetHostViewsObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'workspaceName', 'workspaceId', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'recommendationSeverity', 'incidentStatus', 'cveSeverity', 'knownExploit', 'securityRule', 'installableAdvisoryType', 'template', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostViewsGetHostViewsParams;
+    const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, workspaceName, workspaceId, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, recommendationSeverity, incidentStatus, cveSeverity, knownExploit, securityRule, installableAdvisoryType, template, options = {} } = params;
     const localVarPath = `/beta/hosts-view`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -490,6 +523,14 @@ export const apiHostViewsGetHostViewsParamCreator = async (sendRequest: BaseAPI[
 
     if (securityRule) {
         localVarQueryParameter['security_rule'] = securityRule;
+    }
+
+    if (installableAdvisoryType) {
+        localVarQueryParameter['installable_advisory_type'] = installableAdvisoryType;
+    }
+
+    if (template !== undefined) {
+        localVarQueryParameter['template'] = template;
     }
 
 
