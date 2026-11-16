@@ -1,3 +1,13 @@
+## 8.3.0 (2026-11-16)
+
+### 🚀 Features
+
+- **@redhat-cloud-services/host-inventory-client:** add content filters ([#667](https://github.com/RedHatInsights/javascript-clients/pull/667))
+
+### ❤️ Thank You
+
+- Zhamilya Abikenova
+
 ## 8.2.1 (2026-11-12)
 
 ### 🩹 Fixes
