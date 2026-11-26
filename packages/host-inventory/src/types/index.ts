@@ -710,6 +710,24 @@ export interface HostFilters {
      * @memberof HostFilters
      */
     'template'?: HostFiltersTemplateEnum;
+    /**
+     * Filter by Malware last scan result. Values are OR. present matches last_matches greater than 0. not_present matches a published row with last_matches equal to 0. not_scanned matches hosts with no Malware data.
+     * @type {Array<string>}
+     * @memberof HostFilters
+     */
+    'last_scan_result'?: Array<HostFiltersLastScanResultEnum>;
+    /**
+     * Only show hosts whose Malware last_scan is at or after this time.
+     * @type {string}
+     * @memberof HostFilters
+     */
+    'last_scan_start'?: string;
+    /**
+     * Only show hosts whose Malware last_scan is at or before this time.
+     * @type {string}
+     * @memberof HostFilters
+     */
+    'last_scan_end'?: string;
 }
 
 export const HostFiltersStalenessEnum = {
@@ -782,6 +800,13 @@ export const HostFiltersTemplateEnum = {
 } as const;
 
 export type HostFiltersTemplateEnum = typeof HostFiltersTemplateEnum[keyof typeof HostFiltersTemplateEnum];
+export const HostFiltersLastScanResultEnum = {
+    Present: 'present',
+    NotPresent: 'not_present',
+    NotScanned: 'not_scanned'
+} as const;
+
+export type HostFiltersLastScanResultEnum = typeof HostFiltersLastScanResultEnum[keyof typeof HostFiltersLastScanResultEnum];
 
 /**
  * A single Host ID that belongs to a host.
