@@ -1,3 +1,13 @@
+## 8.4.0 (2026-11-26)
+
+### 🚀 Features
+
+- **@redhat-cloud-services/host-inventory-client:** add malware filters ([#675](https://github.com/RedHatInsights/javascript-clients/pull/675))
+
+### ❤️ Thank You
+
+- Zhamilya Abikenova @computercamplove
+
 ## 8.3.0 (2026-11-16)
 
 ### 🚀 Features
